@@ -1,0 +1,58 @@
+{
+  "images_to_download": {
+    "local_assets": [
+      {
+        "current_path": "/src/assets/hero-mediterranean-cove.jpg",
+        "recommended_wp_path": "wp-content/uploads/2024/09/hero-mediterranean-cove.jpg",
+        "alt_text": "Crique méditerranéenne paradisiaque",
+        "usage": "Image hero principale, destinations"
+      },
+      {
+        "current_path": "/src/assets/couple-travel-portrait.jpg", 
+        "recommended_wp_path": "wp-content/uploads/2024/09/couple-travel-portrait.jpg",
+        "alt_text": "Portrait couple de voyageurs",
+        "usage": "À propos, tests produits"
+      }
+    ],
+    "external_images": [
+      {
+        "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "recommended_wp_path": "wp-content/uploads/2024/09/islande-paysage.jpg",
+        "alt_text": "Paysage Islande avec aurores boréales",
+        "usage": "Article Islande",
+        "license": "Unsplash - libre de droits"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "recommended_wp_path": "wp-content/uploads/2024/09/bali-temple.jpg", 
+        "alt_text": "Temple Bali avec rizières",
+        "usage": "Article Bali",
+        "license": "Unsplash - libre de droits"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "recommended_wp_path": "wp-content/uploads/2024/09/patagonie-montagne.jpg",
+        "alt_text": "Montagnes Patagonie Torres del Paine", 
+        "usage": "Article Patagonie",
+        "license": "Unsplash - libre de droits"
+      }
+    ]
+  },
+  "favicon_logo": {
+    "current_path": "public/favicon.ico",
+    "recommended_wp_path": "wp-content/uploads/2024/09/favicon.ico",
+    "additional_formats_needed": [
+      "logo-header.png (format PNG transparent pour header)",
+      "logo-footer.png (format PNG blanc pour footer sombre)"
+    ]
+  },
+  "placeholder_replacements": {
+    "note": "Les images placeholder devront être remplacées par de vraies photos de voyage",
+    "needed_images": [
+      "Photo portrait couple fondateurs (À propos)",
+      "Photos Vietnam : Hanoï, Ha Long, Hoi An, Ho Chi Minh", 
+      "Photos produits testés : oreiller Tempur, smartphone Xiaomi, valise Samsonite",
+      "Photos guides pratiques : préparation voyage, sécurité, famille"
+    ]
+  }
+}

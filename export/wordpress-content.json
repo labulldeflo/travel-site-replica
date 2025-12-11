@@ -1,0 +1,410 @@
+{
+  "site_info": {
+    "name": "CapSurLeMonde",
+    "description": "Blog de voyage - Récits, guides et conseils pour vos aventures autour du monde",
+    "url": "https://yoursite.com",
+    "language": "fr-FR"
+  },
+  "pages": [
+    {
+      "title": "Accueil",
+      "slug": "accueil",
+      "type": "page",
+      "status": "publish",
+      "content": "Page d'accueil avec hero, welcome, voyages, preparation, conseils, famille et about sections",
+      "meta": {
+        "template": "page-home",
+        "seo_title": "CapSurLeMonde - Blog Voyage & Conseils",
+        "meta_description": "Découvrez nos récits de voyage, guides pratiques et conseils pour préparer vos aventures à travers le monde.",
+        "featured_image": "/assets/hero-mediterranean-cove.jpg"
+      }
+    },
+    {
+      "title": "Destinations",
+      "slug": "destinations", 
+      "type": "page",
+      "status": "publish",
+      "content": "Page hub des destinations avec filtres par région",
+      "meta": {
+        "seo_title": "Destinations Voyage - Guides Complets | CapSurLeMonde",
+        "meta_description": "Découvrez nos destinations voyage avec guides détaillés, budgets, itinéraires et conseils pratiques pour chaque pays.",
+        "featured_image": "/assets/hero-mediterranean-cove.jpg"
+      }
+    },
+    {
+      "title": "Vietnam - Guide Complet",
+      "slug": "destinations/vietnam",
+      "type": "page", 
+      "status": "publish",
+      "content": "Page pilier Vietnam avec villes, itinéraires, infos pratiques",
+      "meta": {
+        "seo_title": "Vietnam - Guide Voyage Complet 2025 | Itinéraires & Conseils",
+        "meta_description": "Guide complet du Vietnam : visas, budget 25-50€/jour, itinéraires 7-21 jours, meilleures destinations de Hanoï à Ho Chi Minh.",
+        "featured_image": "/assets/hero-mediterranean-cove.jpg"
+      }
+    },
+    {
+      "title": "Guides & Conseils",
+      "slug": "guides",
+      "type": "page",
+      "status": "publish", 
+      "content": "Hub des guides pratiques avec filtres par catégorie",
+      "meta": {
+        "seo_title": "Guides Voyage & Conseils Pratiques - Préparer son Voyage",
+        "meta_description": "Tous nos guides voyage : préparation, budget, sécurité, famille. Conseils basés sur notre expérience terrain.",
+        "featured_image": "/assets/hero-mediterranean-cove.jpg"
+      }
+    },
+    {
+      "title": "Tests & Matériel",
+      "slug": "tests",
+      "type": "page",
+      "status": "publish",
+      "content": "Tests produits voyage avec comparatifs et liens affiliés",
+      "meta": {
+        "seo_title": "Tests Matériel Voyage - Avis Produits Testés | Comparatifs 2025",
+        "meta_description": "Tests honnêtes du matériel de voyage : oreillers, valises, tech, outdoor. Comparatifs détaillés et liens affiliés transparents.",
+        "featured_image": "/assets/hero-mediterranean-cove.jpg"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "title": "Islande - Terre de feu et de glace",
+      "slug": "islande-terre-feu-glace",
+      "type": "post",
+      "category": "Destinations",
+      "tags": ["Islande", "Road trip", "Aurores boréales", "15 jours"],
+      "status": "publish",
+      "excerpt": "Un road trip époustouflant à travers les paysages lunaires de l'Islande, entre geysers, aurores boréales et cascades majestueuses.",
+      "content": "Récit de voyage détaillé en Islande sur 15 jours avec 2 personnes. Points forts : Aurores boréales, Sources chaudes, Cascades spectaculaires.",
+      "meta": {
+        "duration": "15 jours", 
+        "travelers": "2 personnes",
+        "location": "Islande",
+        "highlights": ["Aurores boréales", "Sources chaudes", "Cascades spectaculaires"],
+        "featured_image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "seo_title": "Islande Road Trip 15 Jours - Guide Complet Aurores Boréales",
+        "meta_description": "Récit de notre road trip Islande 15 jours : aurores boréales, geysers, cascades. Itinéraire détaillé, budget et conseils pratiques."
+      }
+    },
+    {
+      "title": "Bali - L'île des Dieux", 
+      "slug": "bali-ile-des-dieux",
+      "type": "post",
+      "category": "Destinations",
+      "tags": ["Bali", "Indonésie", "Culture", "21 jours", "Temples"],
+      "status": "publish",
+      "excerpt": "Découverte de la culture balinaise authentique, entre rizières en terrasses, temples sacrés et plages paradisiaques.",
+      "content": "Voyage Bali 21 jours pour 2 personnes. Immersion dans la culture locale, visite des temples hindous, rizières d'Ubud et plages de rêve.",
+      "meta": {
+        "duration": "21 jours",
+        "travelers": "2 personnes", 
+        "location": "Indonésie",
+        "highlights": ["Temples hindous", "Rizières d'Ubud", "Plages de rêve"],
+        "featured_image": "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "seo_title": "Bali Guide Voyage 21 Jours - Temples, Rizières et Culture Locale",
+        "meta_description": "Guide Bali 21 jours : temples hindous, rizières d'Ubud, plages. Découverte authentique de la culture balinaise et conseils voyage."
+      }
+    },
+    {
+      "title": "Patagonie - Au bout du monde",
+      "slug": "patagonie-bout-du-monde", 
+      "type": "post",
+      "category": "Destinations",
+      "tags": ["Patagonie", "Argentine", "Chili", "28 jours", "Glaciers"],
+      "status": "publish",
+      "excerpt": "Aventure extraordinaire dans les terres sauvages de Patagonie, avec glaciers, montagnes et faune exceptionnelle.",
+      "content": "Expédition Patagonie 28 jours entre Argentine et Chili. Découverte du glacier Perito Moreno, Torres del Paine et observation des manchots de Magellan.",
+      "meta": {
+        "duration": "28 jours",
+        "travelers": "2 personnes",
+        "location": "Argentine & Chili", 
+        "highlights": ["Glacier Perito Moreno", "Torres del Paine", "Manchots de Magellan"],
+        "featured_image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "seo_title": "Patagonie Voyage 28 Jours - Glaciers, Torres del Paine, Faune",
+        "meta_description": "Aventure Patagonie 28 jours : glacier Perito Moreno, Torres del Paine, manchots. Guide complet Argentine-Chili avec itinéraire détaillé."
+      }
+    }
+  ],
+  "guides": [
+    {
+      "title": "Guide complet pour préparer son voyage au Vietnam",
+      "slug": "guide-voyage-vietnam-preparation",
+      "type": "post", 
+      "category": "Guides",
+      "subcategory": "Préparation",
+      "tags": ["Vietnam", "Visa", "Préparation", "Guide"],
+      "status": "publish",
+      "excerpt": "Tout ce qu'il faut savoir avant de partir : visa, vaccins, assurance, bagages...",
+      "difficulty": "Débutant",
+      "read_time": "15 min",
+      "featured": true,
+      "meta": {
+        "seo_title": "Préparer Voyage Vietnam 2025 - Visa, Budget, Vaccins [Guide Complet]", 
+        "meta_description": "Guide complet préparation Vietnam : visa e-visa 25$, vaccins, budget 25-50€/jour, assurance voyage. Checklist complète avant départ.",
+        "featured_image": "/assets/hero-mediterranean-cove.jpg"
+      }
+    },
+    {
+      "title": "Budget voyage Vietnam : nos astuces pour économiser",
+      "slug": "budget-voyage-vietnam-conseils",
+      "type": "post",
+      "category": "Guides", 
+      "subcategory": "Budget & Itinéraires",
+      "tags": ["Budget", "Vietnam", "Économies", "Conseils"],
+      "status": "publish",
+      "excerpt": "Comment voyager au Vietnam avec différents budgets, de 25€ à 100€ par jour.",
+      "difficulty": "Débutant",
+      "read_time": "12 min", 
+      "featured": true,
+      "meta": {
+        "seo_title": "Budget Vietnam 2025 - 25€ à 100€/jour [Conseils + Astuces]",
+        "meta_description": "Budget voyage Vietnam détaillé : 25-50€/jour budget routard, 50-100€ confort. Astuces économies, prix hébergement, transport, nourriture.",
+        "featured_image": "/assets/couple-travel-portrait.jpg"
+      }
+    },
+    {
+      "title": "Sécurité au Vietnam : guide pour voyageuses solo",
+      "slug": "securite-vietnam-femme-solo",
+      "type": "post",
+      "category": "Guides",
+      "subcategory": "Sécurité", 
+      "tags": ["Sécurité", "Solo", "Femme", "Vietnam"],
+      "status": "publish",
+      "excerpt": "Conseils spécifiques pour voyager en sécurité en tant que femme seule au Vietnam.",
+      "difficulty": "Intermédiaire",
+      "read_time": "10 min",
+      "featured": false,
+      "meta": {
+        "seo_title": "Vietnam Femme Solo - Sécurité, Conseils et Précautions 2025",
+        "meta_description": "Voyager seule au Vietnam en sécurité : conseils femme solo, précautions, arnaques à éviter, hébergements sûrs, transport recommandé.",
+        "featured_image": "/assets/hero-mediterranean-cove.jpg"
+      }
+    }
+  ],
+  "products": [
+    {
+      "title": "Test Oreiller Tempur Travel - Notre Avis Complet 2024",
+      "slug": "test-oreiller-tempur-travel",
+      "type": "post",
+      "category": "Tests", 
+      "subcategory": "Confort & Sommeil",
+      "tags": ["Oreiller", "Confort", "Transport", "Test"],
+      "status": "publish",
+      "excerpt": "L'oreiller de voyage qui a révolutionné nos nuits en transport",
+      "product_info": {
+        "name": "Oreiller ergonomique Tempur Travel",
+        "rating": 4.5,
+        "price": "89€",
+        "original_price": "120€",
+        "tested": true,
+        "favorite": true,
+        "pros": ["Confort exceptionnel", "Compact", "Lavable", "Durable"],
+        "cons": ["Prix élevé", "Un peu lourd"],
+        "verdict": "Notre coup de cœur pour les longs trajets",
+        "test_date": "2024-03-15"
+      },
+      "meta": {
+        "seo_title": "Test Oreiller Tempur Travel 2024 - Avis Complet [Prix 89€]",
+        "meta_description": "Test complet oreiller Tempur Travel : confort, prix 89€, avantages/inconvénients. Notre avis après 6 mois d'utilisation en voyage.",
+        "featured_image": "/assets/hero-mediterranean-cove.jpg"
+      }
+    },
+    {
+      "title": "Xiaomi Redmi Note 12 Pro Voyage - Test Photo & Autonomie",
+      "slug": "test-xiaomi-redmi-note-12-pro-voyage", 
+      "type": "post",
+      "category": "Tests",
+      "subcategory": "Tech & Électronique",
+      "tags": ["Smartphone", "Photo", "Xiaomi", "Budget"],
+      "status": "publish",
+      "excerpt": "Un smartphone photo abordable pour immortaliser vos voyages",
+      "product_info": {
+        "name": "Smartphone Xiaomi Redmi Note 12 Pro",
+        "rating": 4.2,
+        "price": "299€", 
+        "original_price": "399€",
+        "tested": true,
+        "favorite": false,
+        "pros": ["Excellent rapport qualité-prix", "Photo correcte", "Batterie longue durée"],
+        "cons": ["Interface MIUI", "Pas de protection IP"],
+        "verdict": "Parfait pour les budgets serrés",
+        "test_date": "2024-02-28"
+      },
+      "meta": {
+        "seo_title": "Test Xiaomi Redmi Note 12 Pro Voyage - Photo & Prix 299€ [2024]",
+        "meta_description": "Test Xiaomi Redmi Note 12 Pro voyage : qualité photo, autonomie, prix 299€. Parfait smartphone voyage budget avec bon rapport qualité-prix.",
+        "featured_image": "/assets/couple-travel-portrait.jpg"
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "name": "Vietnam",
+      "slug": "vietnam",
+      "region": "Asie du Sud-Est", 
+      "description": "Un pays fascinant entre tradition et modernité, des rizières en terrasses aux baies paradisiaques.",
+      "duration": "2-4 semaines",
+      "budget": "€€ (25-50€/jour)",
+      "highlights": ["Baie d'Ha Long", "Hoi An", "Ho Chi Minh", "Sapa"],
+      "best_time": "Oct-Mar",
+      "difficulty": "Facile",
+      "practical_info": {
+        "visa": "E-visa 30 jours : 25$",
+        "currency": "Dong vietnamien (VND)", 
+        "budget": "25-50€/jour",
+        "language": "Vietnamien (Anglais courant en ville)",
+        "climate": "Tropical - Saison sèche Oct-Mar",
+        "transport": "Bus, train, moto, avion domestique"
+      },
+      "cities": [
+        {
+          "name": "Hanoï",
+          "region": "Nord", 
+          "description": "Capitale millénaire aux mille visages, entre tradition et modernité.",
+          "highlights": ["Vieille ville", "Lac Hoan Kiem", "Temple de la Littérature", "Street food"],
+          "duration": "2-3 jours"
+        },
+        {
+          "name": "Baie d'Ha Long",
+          "region": "Nord",
+          "description": "Merveille naturelle classée UNESCO avec ses 3000 îlots karstiques.", 
+          "highlights": ["Croisière", "Îles flottantes", "Grottes", "Kayak"],
+          "duration": "1-2 jours"
+        },
+        {
+          "name": "Hoi An", 
+          "region": "Centre",
+          "description": "Ville-musée aux lanternes colorées et à l'architecture préservée.",
+          "highlights": ["Vieille ville", "Pont japonais", "Tailleurs", "Plages An Bang"],
+          "duration": "2-3 jours"
+        },
+        {
+          "name": "Hô-Chi-Minh-Ville",
+          "region": "Sud",
+          "description": "Métropole dynamique, ancien Saigon au rythme effréné.",
+          "highlights": ["District 1", "Tunnels Cu Chi", "Delta du Mékong", "Marchés"], 
+          "duration": "2-3 jours"
+        }
+      ],
+      "itineraries": [
+        {
+          "duration": "7 jours",
+          "title": "Vietnam Express", 
+          "description": "L'essentiel en une semaine",
+          "stops": ["Hanoï (2j)", "Baie d'Ha Long (1j)", "Hoi An (2j)", "Hô-Chi-Minh (2j)"],
+          "budget": "€€"
+        },
+        {
+          "duration": "15 jours",
+          "title": "Grand Tour Classique",
+          "description": "Du Nord au Sud en profondeur", 
+          "stops": ["Hanoï (3j)", "Sapa (2j)", "Ha Long (2j)", "Hoi An (3j)", "Dalat (2j)", "Hô-Chi-Minh (3j)"],
+          "budget": "€€€"
+        },
+        {
+          "duration": "21 jours", 
+          "title": "Vietnam Complet",
+          "description": "Immersion totale hors des sentiers battus",
+          "stops": ["Hanoï (3j)", "Ha Giang (3j)", "Sapa (2j)", "Ha Long (2j)", "Phong Nha (2j)", "Hoi An (4j)", "Dalat (2j)", "Phu Quoc (3j)"],
+          "budget": "€€€€"
+        }
+      ]
+    },
+    {
+      "name": "Cambodge",
+      "slug": "cambodge", 
+      "region": "Asie du Sud-Est",
+      "description": "Temples millénaires d'Angkor, sourire khmer et nature préservée.",
+      "duration": "10-15 jours",
+      "budget": "€ (15-35€/jour)",
+      "highlights": ["Angkor Wat", "Phnom Penh", "Kampot", "Sihanoukville"],
+      "best_time": "Nov-Mar", 
+      "difficulty": "Facile"
+    }
+  ],
+  "travel_tips": {
+    "conseils_categories": [
+      {
+        "icon": "Luggage",
+        "title": "Préparer ses bagages", 
+        "description": "L'art de voyager léger sans rien oublier d'essentiel",
+        "tips": [
+          "Faire une liste détaillée selon la destination",
+          "Privilégier les vêtements polyvalents et techniques", 
+          "Prévoir une trousse de secours adaptée",
+          "Numériser tous vos documents importants"
+        ]
+      },
+      {
+        "icon": "Plane",
+        "title": "Réserver ses vols",
+        "description": "Nos astuces pour dénicher les meilleurs prix",
+        "tips": [
+          "Utiliser les comparateurs en navigation privée",
+          "Être flexible sur les dates et aéroports",
+          "Réserver 6-8 semaines à l'avance pour l'international", 
+          "Considérer les vols avec escales pour économiser"
+        ]
+      }
+    ],
+    "famille_conseils": [
+      {
+        "icon": "Baby", 
+        "title": "À partir de quel âge ?",
+        "description": "Conseils pour voyager selon l'âge des enfants",
+        "tips": [
+          "Dès 3 mois pour les destinations proches",
+          "Attendre 6 mois pour les longs courriers",
+          "Privilégier des destinations family-friendly pour débuter"
+        ]
+      },
+      {
+        "icon": "Car",
+        "title": "Choisir son transport", 
+        "description": "Les modes de transport adaptés en famille",
+        "tips": [
+          "Avion : prévoir divertissements et collations",
+          "Train : plus confortable avec enfants en bas âge",
+          "Voiture : flexibilité mais prévoir pauses fréquentes"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "title": "Notre Histoire",
+    "subtitle": "Les Deux Petits Baroudeurs", 
+    "description": "Nous sommes Sarah et Tom, un couple passionné de voyage qui a décidé de partager ses aventures et conseils avec vous.",
+    "story": "Depuis notre premier voyage ensemble en 2018, nous avons parcouru plus de 30 pays à travers 4 continents. Notre mission : vous inspirer et vous aider à préparer vos propres aventures grâce à nos récits authentiques et conseils pratiques basés sur notre expérience terrain.",
+    "stats": [
+      { "number": "30+", "label": "Pays visités" },
+      { "number": "4", "label": "Continents" },
+      { "number": "150+", "label": "Articles publiés" },
+      { "number": "50k+", "label": "Lecteurs mensuels" }
+    ],
+    "timeline": [
+      { "year": "2018", "title": "Premiers pas", "description": "Notre premier voyage ensemble en Islande" },
+      { "year": "2019", "title": "Naissance du blog", "description": "Création des Deux Petits Baroudeurs" }, 
+      { "year": "2020", "title": "Communauté", "description": "10 000 lecteurs nous font confiance" },
+      { "year": "2024", "title": "Expertise reconnue", "description": "Partenariats avec les plus grandes marques voyage" }
+    ],
+    "values": [
+      {
+        "icon": "Heart", 
+        "title": "Authenticité",
+        "description": "Nous partageons uniquement nos expériences réelles et conseils testés sur le terrain."
+      },
+      {
+        "icon": "Users",
+        "title": "Communauté",
+        "description": "Nous créons une communauté bienveillante de voyageurs passionnés."
+      },
+      {
+        "icon": "Leaf", 
+        "title": "Voyage responsable", 
+        "description": "Nous promouvons un tourisme respectueux des cultures et de l'environnement."
+      }
+    ]
+  }
+}

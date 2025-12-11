@@ -1,0 +1,466 @@
+{
+  "header": {
+    "home": "ACCUEIL",
+    "destinations": "DESTINATIONS",
+    "guides": "GUIDES & CONSEILS",
+    "tests": "TESTS & MATÉRIEL",
+    "deals": "BONS PLANS",
+    "about": "À PROPOS",
+    "contact": "CONTACT",
+    "allGuides": "Tous les guides",
+    "allTests": "Tous les tests"
+  },
+  "hero": {
+    "title": "Cap sur le Monde",
+    "subtitle": "EXPLOREZ LE MONDE AUTREMENT, AVEC CURIOSITÉ ET ÉMERVEILLEMENT"
+  },
+  "welcome": {
+    "title": "Bienvenue aux futurs voyageurs curieux 🌎",
+    "p1": "Bienvenue sur notre blog de voyage ! Ici, on partage nos coups de cœur, nos itinéraires et nos découvertes aux quatre coins du monde.",
+    "p2": "Depuis plusieurs années, nous parcourons la planète sac au dos, à la recherche de paysages grandioses et de rencontres authentiques. Notre mission ? Vous inspirer à explorer le monde autrement à travers nos récits et nos guides pratiques.",
+    "p3": "Que vous prépariez votre prochain départ ou que vous rêviez simplement d'évasion, Cap Sur Le Monde est votre point de départ vers de nouveaux horizons.",
+    "discoverBtn": "Découvrir nos voyages",
+    "tipsBtn": "Conseils voyage"
+  },
+  "about": {
+    "title": "Qui sommes-nous ?",
+    "subtitle": "Nous sommes Marion et Cris, deux baroudeurs passionnés qui ont fait du voyage leur mode de vie. Découvrez notre histoire et notre vision du voyage.",
+    "ourStory": "Notre histoire d'amour... avec le voyage !",
+    "p1": "Tout a commencé en 2016 lors d'un voyage en Asie du Sud-Est qui devait durer 3 mois... et qui nous a complètement transformés ! Nous avons découvert une passion commune pour l'aventure, les rencontres authentiques et les paysages à couper le souffle.",
+    "p2": "Depuis, nous n'avons jamais cessé d'explorer le monde ensemble. Notre blog est né du désir de partager nos découvertes et d'inspirer d'autres voyageurs à se lancer dans leurs propres aventures.",
+    "p3": "Aujourd'hui, nous continuons de voyager avec la même passion, en adaptant nos aventures à notre vie de famille, car l'exploration n'a pas d'âge !",
+    "stats": {
+      "countries": "Pays visités",
+      "years": "Années de voyage",
+      "readers": "Lecteurs mensuels",
+      "articles": "Articles publiés"
+    },
+    "timeline": {
+      "title": "Notre parcours",
+      "2016": {
+        "title": "Le déclic",
+        "desc": "Première grande aventure : 3 mois en Asie du Sud-Est qui ont tout changé."
+      },
+      "2017": {
+        "title": "Tour du monde",
+        "desc": "18 mois autour du globe, 42 pays visités et des milliers de souvenirs."
+      },
+      "2019": {
+        "title": "Naissance du blog",
+        "desc": "Création de CapSurLeMonde pour partager nos aventures."
+      },
+      "2021": {
+        "title": "Voyage en famille",
+        "desc": "Nouveaux défis : voyager avec des enfants et adapter nos aventures."
+      },
+      "2024": {
+        "title": "Communauté grandissante",
+        "desc": "Plus de 50 000 lecteurs nous suivent dans nos aventures mensuelles."
+      }
+    },
+    "values": {
+      "title": "Nos valeurs",
+      "responsible": {
+        "title": "Voyage responsable",
+        "desc": "Nous privilégions un tourisme respectueux des populations locales et de l'environnement."
+      },
+      "authentic": {
+        "title": "Partage authentique",
+        "desc": "Nos récits sont vrais, sans filtre, avec les galères comme les moments magiques."
+      },
+      "creative": {
+        "title": "Inspiration créative",
+        "desc": "Nous capturons l'essence de chaque destination pour vous faire voyager avec nous."
+      },
+      "authenticity": {
+        "title": "Authenticité",
+        "desc": "Partager des expériences réelles et des conseils pratiques testés sur le terrain"
+      },
+      "passion": {
+        "title": "Passion",
+        "desc": "Transmettre notre amour du voyage et de la découverte culturelle"
+      },
+      "inspiration": {
+        "title": "Inspiration",
+        "desc": "Donner envie de partir à la découverte du monde avec nos photos et récits"
+      },
+      "community": {
+        "title": "Communauté",
+        "desc": "Créer une communauté de voyageurs qui s'entraident et partagent"
+      }
+    },
+    "cta": {
+      "title": "Envie d'échanger avec nous ?",
+      "desc": "Nous adorons échanger avec notre communauté ! N'hésitez pas à nous poser vos questions ou partager vos propres aventures.",
+      "contactBtn": "Nous contacter",
+      "followBtn": "Suivre sur Instagram"
+    },
+    "aboutPage": {
+      "title": "À propos de nous",
+      "subtitle": "Découvrez qui nous sommes et pourquoi nous voyageons",
+      "ourStoryTitle": "Notre histoire",
+      "contactTitle": "Restons en contact",
+      "contactDesc": "Vous avez des questions ? Envie de partager votre expérience ? N'hésitez pas à nous contacter !"
+    }
+  },
+  "destinations": {
+    "title": "Nos Destinations",
+    "subtitle": "Découvrez les pays que nous avons explorés et laissez-vous inspirer pour vos prochaines aventures",
+    "duration": "Durée",
+    "difficulty": "Difficulté",
+    "budget": "Budget",
+    "bestTime": "Meilleure période",
+    "highlights": "Points forts",
+    "discover": "Découvrir",
+    "easy": "Facile",
+    "moderate": "Modérée",
+    "newsletter": {
+      "title": "Ne ratez aucune nouvelle destination !",
+      "desc": "Inscrivez-vous à notre newsletter pour recevoir nos derniers guides de voyage et bons plans.",
+      "placeholder": "Votre email...",
+      "btn": "S'inscrire"
+    }
+  },
+  "europe": {
+    "title": "Destinations Europe",
+    "subtitle": "Découvrez les plus beaux pays européens, de la Méditerranée aux fjords du Nord",
+    "backToDestinations": "Retour aux destinations"
+  },
+  "afrique": {
+    "title": "Destinations Afrique",
+    "subtitle": "Safaris, déserts mythiques et cultures ancestrales du continent africain",
+    "backToDestinations": "Retour aux destinations",
+    "tabs": {
+      "cities": "Villes & Régions",
+      "itineraries": "Itinéraires",
+      "practical": "Infos Pratiques",
+      "guides": "Nos Guides"
+    }
+  },
+  "amerique": {
+    "title": "Destinations Amérique",
+    "subtitle": "Des gratte-ciels nord-américains aux merveilles du Sud, explorez le Nouveau Monde",
+    "backToDestinations": "Retour aux destinations",
+    "tabs": {
+      "cities": "Villes & Régions",
+      "itineraries": "Itinéraires",
+      "practical": "Infos Pratiques",
+      "guides": "Nos Guides"
+    }
+  },
+  "guides": {
+    "title": "Guides & Conseils",
+    "subtitle": "Tous nos conseils pratiques pour préparer et réussir vos voyages, basés sur notre expérience terrain.",
+    "search": "Rechercher un guide...",
+    "categories": {
+      "all": "Tous les guides",
+      "preparation": "Préparation",
+      "budget": "Budget & Itinéraires",
+      "security": "Sécurité",
+      "family": "Famille",
+      "photo": "Photographie"
+    },
+    "featured": "📚 Nos Guides Incontournables",
+    "incontournable": "⭐ Incontournable",
+    "readTime": "min",
+    "difficulty": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "readGuide": "Lire le guide",
+    "allGuides": "Tous nos Guides",
+    "noResults": "Aucun guide trouvé pour votre recherche. Essayez d'autres mots-clés !",
+    "newsletter": {
+      "title": "📧 Restez informé de nos nouveaux guides",
+      "desc": "Recevez nos derniers conseils de voyage et guides pratiques directement dans votre boîte mail.",
+      "btn": "S'abonner"
+    },
+    "backpack": "Préparer son sac à dos",
+    "insurance": "Assurance voyage",
+    "health": "Santé & sécurité"
+  },
+  "tests": {
+    "title": "Tests & Matériel",
+    "subtitle": "Nos tests honnêtes et détaillés des meilleurs produits voyage. Nous testons tout sur le terrain !",
+    "search": "Rechercher un produit...",
+    "categories": {
+      "all": "Tous les tests",
+      "comfort": "Confort & Sommeil",
+      "tech": "Tech & Électronique",
+      "baggage": "Bagages & Transport",
+      "outdoor": "Outdoor & Sport",
+      "accessories": "Accessoires voyage"
+    },
+    "favorites": "⭐ Nos Coups de Cœur",
+    "favorite": "💝 Coup de cœur",
+    "tested": "✓ Testé",
+    "pros": "Points forts :",
+    "cons": "Points faibles :",
+    "verdict": "Notre verdict :",
+    "readTest": "Lire le test complet",
+    "seeTest": "Voir le test",
+    "buy": "Acheter",
+    "allTests": "Tous nos Tests Produits",
+    "noResults": "Aucun produit trouvé pour votre recherche.",
+    "comparisons": "📊 Nos Comparatifs",
+    "winner": "Gagnant :",
+    "seeComparison": "Voir le comparatif complet",
+    "disclosure": "Transparence : Certains liens sont affiliés. Nous ne recommandons que les produits que nous avons vraiment testés et approuvés. Ces commissions nous aident à financer nos voyages et nos tests, sans coût supplémentaire pour vous.",
+    "shoes": "Chaussures de rando",
+    "tents": "Tentes & sacs de couchage",
+    "tech": "Accessoires tech"
+  },
+  "footer": {
+    "about": "Nous partageons nos aventures autour du monde pour vous inspirer dans vos futurs voyages. Suivez-nous pour prendre-en plein les mirettes !",
+    "navigation": "Navigation",
+    "home": "Accueil",
+    "trips": "Nos voyages",
+    "tips": "Conseils",
+    "whoWeAre": "Qui sommes-nous",
+    "contact": "Contact",
+    "email": "Email",
+    "newsletter": "Newsletter",
+    "partnerships": "Partenariats",
+    "rights": "© 2024 CapSurLeMonde. Tous droits réservés.",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "CGU"
+  },
+  "regions": {
+    "southeastAsia": "Asie du Sud-Est",
+    "europe": "Europe",
+    "africa": "Afrique",
+    "america": "Amérique",
+    "comingSoon": "(à venir)"
+  },
+  "countries": {
+    "vietnam": "Vietnam",
+    "thailand": "Thaïlande",
+    "cambodia": "Cambodge",
+    "laos": "Laos",
+    "myanmar": "Birmanie",
+    "malaysia": "Malaisie",
+    "singapore": "Singapour",
+    "indonesia": "Indonésie",
+    "philippines": "Philippines",
+    "brunei": "Brunei",
+    "eastTimor": "Timor oriental",
+    "france": "France",
+    "italy": "Italie",
+    "spain": "Espagne",
+    "greece": "Grèce",
+    "portugal": "Portugal",
+    "croatia": "Croatie",
+    "switzerland": "Suisse",
+    "austria": "Autriche",
+    "iceland": "Islande",
+    "ireland": "Irlande",
+    "norway": "Norvège",
+    "hungary": "Hongrie",
+    "morocco": "Maroc",
+    "egypt": "Égypte",
+    "kenya": "Kenya",
+    "tanzania": "Tanzanie",
+    "southafrica": "Afrique du Sud",
+    "madagascar": "Madagascar",
+    "usa": "États-Unis",
+    "canada": "Canada",
+    "mexico": "Mexique",
+    "peru": "Pérou",
+    "brazil": "Brésil",
+    "argentina": "Argentine",
+    "chile": "Chili",
+    "colombia": "Colombie"
+  },
+  "deals": {
+    "flights": "Billets d'avion",
+    "accommodation": "Hébergements",
+    "sim": "Cartes SIM & Internet"
+  },
+  "voyages": {
+    "title": "Nos Aventures",
+    "subtitle": "Découvrez nos récits de voyage à travers le monde, nos coups de cœur et tous nos conseils pour préparer vos propres aventures.",
+    "destinations": {
+      "iceland": {
+        "title": "Islande - Terre de feu et de glace",
+        "location": "Islande",
+        "duration": "15 jours",
+        "travelers": "2 personnes",
+        "description": "Un road trip époustouflant à travers les paysages lunaires de l'Islande, entre geysers, aurores boréales et cascades majestueuses.",
+        "highlights": ["Aurores boréales", "Sources chaudes", "Cascades spectaculaires"]
+      },
+      "bali": {
+        "title": "Bali - L'île des Dieux",
+        "location": "Indonésie",
+        "duration": "21 jours",
+        "travelers": "2 personnes",
+        "description": "Découverte de la culture balinaise authentique, entre rizières en terrasses, temples sacrés et plages paradisiaques.",
+        "highlights": ["Temples hindous", "Rizières d'Ubud", "Plages de rêve"]
+      },
+      "patagonia": {
+        "title": "Patagonie - Au bout du monde",
+        "location": "Argentine & Chili",
+        "duration": "28 jours",
+        "travelers": "2 personnes",
+        "description": "Aventure extraordinaire dans les terres sauvages de Patagonie, avec glaciers, montagnes et faune exceptionnelle.",
+        "highlights": ["Glacier Perito Moreno", "Torres del Paine", "Manchots de Magellan"]
+      }
+    },
+    "readMore": "Lire la suite",
+    "viewAll": "Voir tous nos voyages"
+  },
+  "preparer": {
+    "title": "Préparer son Tour du Monde",
+    "subtitle": "Le guide complet pour organiser votre tour du monde étape par étape. De l'idée au départ, nous vous accompagnons dans tous vos préparatifs.",
+    "stats": {
+      "months": "Mois de voyage",
+      "countries": "Pays visités",
+      "budget": "Budget pour 2",
+      "preparation": "Mois de préparation"
+    },
+    "steps": {
+      "destinations": {
+        "title": "1. Choisir ses destinations",
+        "description": "Définir son itinéraire en fonction de ses envies, du climat et de son budget.",
+        "details": ["Recherche destinations", "Climat et saisons", "Coût de la vie", "Visa requis"]
+      },
+      "dates": {
+        "title": "2. Planifier les dates",
+        "description": "Optimiser son planning pour profiter des meilleures conditions météo.",
+        "details": ["Haute/basse saison", "Événements locaux", "Durée optimale", "Flexibilité dates"]
+      },
+      "budget": {
+        "title": "3. Établir son budget",
+        "description": "Calculer le budget nécessaire et prévoir les dépenses sur place.",
+        "details": ["Transport international", "Logements", "Nourriture", "Activités et visites"]
+      },
+      "formalities": {
+        "title": "4. Formalités administratives",
+        "description": "Préparer tous les documents nécessaires bien à l'avance.",
+        "details": ["Passeport valide", "Visas nécessaires", "Assurance voyage", "Vaccinations"]
+      },
+      "bookings": {
+        "title": "5. Réservations essentielles",
+        "description": "Sécuriser transport et premiers logements pour commencer sereinement.",
+        "details": ["Vols internationaux", "Premiers hébergements", "Transport sur place", "Activités populaires"]
+      },
+      "equipment": {
+        "title": "6. Équipement et départ",
+        "description": "Finaliser son matériel et se préparer mentalement au grand départ.",
+        "details": ["Sac à dos adapté", "Vêtements techniques", "Trousse de secours", "Applications utiles"]
+      }
+    },
+    "cta": {
+      "title": "Prêt pour l'aventure ?",
+      "description": "Téléchargez notre guide complet gratuit avec toutes les étapes détaillées, nos outils de planification et notre budget prévisionnel.",
+      "button": "Télécharger le guide gratuit"
+    }
+  },
+  "conseils": {
+    "title": "Nos meilleurs conseils",
+    "subtitle": "Préparez chaque aventure comme un pro grâce à nos astuces testées sur le terrain.",
+    "categories": [
+      {
+        "title": "Préparer son sac",
+        "description": "Tous nos conseils pour faire son sac à dos comme un pro et ne rien oublier d'essentiel.",
+        "tips": ["Liste matériel", "Poids optimal", "Vêtements techniques"]
+      },
+      {
+        "title": "Réserver ses vols",
+        "description": "Comment trouver les meilleurs prix et optimiser ses itinéraires pour économiser.",
+        "tips": ["Comparateurs", "Dates flexibles", "Escales stratégiques"]
+      },
+      {
+        "title": "Planifier son itinéraire",
+        "description": "Nos méthodes pour créer un parcours optimisé selon ses envies et son budget.",
+        "tips": ["Outils planning", "Durées recommandées", "Transport local"]
+      },
+      {
+        "title": "Assurance voyage",
+        "description": "Guide complet pour choisir la bonne assurance et voyager l'esprit tranquille.",
+        "tips": ["Comparatif assurances", "Garanties essentielles", "Démarches urgences"]
+      },
+      {
+        "title": "Matériel photo",
+        "description": "Sélection d'équipement photo pour capturer vos plus beaux souvenirs de voyage.",
+        "tips": ["Appareils compacts", "Accessoires utiles", "Sauvegarde photos"]
+      },
+      {
+        "title": "Santé en voyage",
+        "description": "Préparer sa trousse de secours et se protéger des risques sanitaires à l'étranger.",
+        "tips": ["Vaccinations", "Trousse de secours", "Assurance santé"]
+      }
+    ],
+    "cta": {
+      "title": "Ne ratez aucun conseil !",
+      "text": "Inscrivez-vous à notre newsletter pour recevoir nos derniers guides pratiques et bons plans voyage directement dans votre boîte mail.",
+      "placeholder": "Votre adresse email",
+      "button": "S'inscrire",
+      "guide": "Voir le guide complet →"
+    }
+  },
+  "famille": {
+    "title": "Voyager en Famille",
+    "subtitle": "L'aventure n'attend pas ! Découvrez comment voyager avec vos enfants et créer des souvenirs inoubliables en famille aux quatre coins du monde.",
+    "stats": {
+      "countries": "Pays visités en famille",
+      "families": "Familles accompagnées",
+      "smiles": "Sourires garantis"
+    },
+    "categories": {
+      "age": {
+        "title": "Âge idéal pour voyager",
+        "description": "Nos conseils pour déterminer le bon moment selon l'âge de vos enfants.",
+        "tips": ["0-2 ans : Avantages et défis", "3-7 ans : L'âge de la découverte", "8+ ans : Voyageurs autonomes"]
+      },
+      "transport": {
+        "title": "Transport avec enfants",
+        "description": "Comment rendre les longs trajets agréables pour toute la famille.",
+        "tips": ["Préparer l'avion", "Road trips famille", "Transport local sécurisé"]
+      },
+      "security": {
+        "title": "Sécurité et santé",
+        "description": "Protéger sa famille et prévenir les risques sanitaires en voyage.",
+        "tips": ["Trousse de secours", "Assurance famille", "Vaccinations enfants"]
+      },
+      "food": {
+        "title": "Alimentation des enfants",
+        "description": "Conseils nutrition et découverte culinaire adaptée aux plus jeunes.",
+        "tips": ["Découvrir sans risquer", "Lait et petits pots", "Restaurants family-friendly"]
+      },
+      "activities": {
+        "title": "Activités familiales",
+        "description": "Sélectionner des expériences qui plairont à toute la famille.",
+        "tips": ["Activités par âge", "Temps de repos", "Impliquer les enfants"]
+      },
+      "memories": {
+        "title": "Créer des souvenirs",
+        "description": "Immortaliser le voyage et créer des souvenirs durables ensemble.",
+        "tips": ["Carnet de voyage", "Photos famille", "Traditions voyage"]
+      }
+    },
+    "testimonials": {
+      "title": "Ils ont voyagé avec nous",
+      "martin": {
+        "family": "Famille Martin",
+        "children": "Léa (5 ans) et Tom (8 ans)",
+        "destination": "Tour d'Europe",
+        "text": "Nos enfants ont adoré découvrir l'Europe en camping-car ! Les conseils des Baroudeurs nous ont permis de préparer un itinéraire adapté avec des activités pour tous les âges."
+      },
+      "dubois": {
+        "family": "Famille Dubois",
+        "children": "Emma (3 ans)",
+        "destination": "Costa Rica",
+        "text": "Le Costa Rica avec notre petite Emma a été magique ! Grâce aux conseils santé et logistique, nous avons pu profiter sereinement de cette aventure tropicale."
+      }
+    },
+    "cta": {
+      "title": "Prêts pour l'aventure en famille ?",
+      "description": "Rejoignez notre communauté de familles baroudeuses et recevez nos meilleurs conseils pour voyager avec vos enfants en toute sérénité.",
+      "button1": "Guide famille gratuit",
+      "button2": "Rejoindre la communauté"
+    },
+    "guide": "Voir nos conseils"
+  }
+}

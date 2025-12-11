@@ -1,0 +1,466 @@
+{
+  "header": {
+    "home": "HOME",
+    "destinations": "DESTINATIONS",
+    "guides": "GUIDES & TIPS",
+    "tests": "GEAR & REVIEWS",
+    "deals": "DEALS",
+    "about": "ABOUT",
+    "contact": "CONTACT",
+    "allGuides": "All guides",
+    "allTests": "All reviews"
+  },
+  "hero": {
+    "title": "Cap sur le Monde",
+    "subtitle": "EXPLORE THE WORLD DIFFERENTLY, WITH CURIOSITY AND WONDER"
+  },
+  "welcome": {
+    "title": "Welcome to curious future travelers 🌎",
+    "p1": "Welcome to our travel blog! Here, we share our favorite spots, itineraries, and discoveries from around the world.",
+    "p2": "For several years, we've been traveling the planet with our backpacks, seeking breathtaking landscapes and authentic encounters. Our mission? To inspire you to explore the world differently through our stories and practical guides.",
+    "p3": "Whether you're preparing your next trip or simply dreaming of escape, Cap Sur Le Monde is your starting point to new horizons.",
+    "discoverBtn": "Discover our travels",
+    "tipsBtn": "Travel tips"
+  },
+  "about": {
+    "title": "Who are we?",
+    "subtitle": "We are Marion and Cris, two passionate adventurers who made travel their lifestyle. Discover our story and our vision of travel.",
+    "ourStory": "Our love story... with travel!",
+    "p1": "It all started in 2016 during a trip to Southeast Asia that was supposed to last 3 months... and completely transformed us! We discovered a common passion for adventure, authentic encounters, and breathtaking landscapes.",
+    "p2": "Since then, we've never stopped exploring the world together. Our blog was born from the desire to share our discoveries and inspire other travelers to embark on their own adventures.",
+    "p3": "Today, we continue to travel with the same passion, adapting our adventures to our family life, because exploration has no age!",
+    "stats": {
+      "countries": "Countries visited",
+      "years": "Years of travel",
+      "readers": "Monthly readers",
+      "articles": "Published articles"
+    },
+    "timeline": {
+      "title": "Our journey",
+      "2016": {
+        "title": "The revelation",
+        "desc": "First big adventure: 3 months in Southeast Asia that changed everything."
+      },
+      "2017": {
+        "title": "Around the world",
+        "desc": "18 months around the globe, 42 countries visited and thousands of memories."
+      },
+      "2019": {
+        "title": "Birth of the blog",
+        "desc": "Creation of CapSurLeMonde to share our adventures."
+      },
+      "2021": {
+        "title": "Family travel",
+        "desc": "New challenges: traveling with children and adapting our adventures."
+      },
+      "2024": {
+        "title": "Growing community",
+        "desc": "Over 50,000 readers follow us in our monthly adventures."
+      }
+    },
+    "values": {
+      "title": "Our values",
+      "responsible": {
+        "title": "Responsible travel",
+        "desc": "We favor tourism that respects local populations and the environment."
+      },
+      "authentic": {
+        "title": "Authentic sharing",
+        "desc": "Our stories are true, unfiltered, with the struggles as well as the magical moments."
+      },
+      "creative": {
+        "title": "Creative inspiration",
+        "desc": "We capture the essence of each destination to make you travel with us."
+      },
+      "authenticity": {
+        "title": "Authenticity",
+        "desc": "Sharing real experiences and practical advice tested in the field"
+      },
+      "passion": {
+        "title": "Passion",
+        "desc": "Conveying our love of travel and cultural discovery"
+      },
+      "inspiration": {
+        "title": "Inspiration",
+        "desc": "Inspiring you to discover the world with our photos and stories"
+      },
+      "community": {
+        "title": "Community",
+        "desc": "Creating a community of travelers who help and share with each other"
+      }
+    },
+    "cta": {
+      "title": "Want to chat with us?",
+      "desc": "We love connecting with our community! Don't hesitate to ask us questions or share your own adventures.",
+      "contactBtn": "Contact us",
+      "followBtn": "Follow on Instagram"
+    },
+    "aboutPage": {
+      "title": "About us",
+      "subtitle": "Discover who we are and why we travel",
+      "ourStoryTitle": "Our story",
+      "contactTitle": "Stay in touch",
+      "contactDesc": "Have questions? Want to share your experience? Feel free to contact us!"
+    }
+  },
+  "destinations": {
+    "title": "Our Destinations",
+    "subtitle": "Discover the countries we've explored and get inspired for your next adventures",
+    "duration": "Duration",
+    "difficulty": "Difficulty",
+    "budget": "Budget",
+    "bestTime": "Best time",
+    "highlights": "Highlights",
+    "discover": "Discover",
+    "easy": "Easy",
+    "moderate": "Moderate",
+    "newsletter": {
+      "title": "Don't miss any new destination!",
+      "desc": "Subscribe to our newsletter to receive our latest travel guides and deals.",
+      "placeholder": "Your email...",
+      "btn": "Subscribe"
+    }
+  },
+  "europe": {
+    "title": "Europe Destinations",
+    "subtitle": "Discover the most beautiful European countries, from the Mediterranean to the Norwegian fjords",
+    "backToDestinations": "Back to destinations"
+  },
+  "afrique": {
+    "title": "Africa Destinations",
+    "subtitle": "Safaris, legendary deserts and ancestral cultures of the African continent",
+    "backToDestinations": "Back to destinations",
+    "tabs": {
+      "cities": "Cities & Regions",
+      "itineraries": "Itineraries",
+      "practical": "Practical Info",
+      "guides": "Our Guides"
+    }
+  },
+  "amerique": {
+    "title": "Americas Destinations",
+    "subtitle": "From North American skyscrapers to South American wonders, explore the New World",
+    "backToDestinations": "Back to destinations",
+    "tabs": {
+      "cities": "Cities & Regions",
+      "itineraries": "Itineraries",
+      "practical": "Practical Info",
+      "guides": "Our Guides"
+    }
+  },
+  "guides": {
+    "title": "Guides & Tips",
+    "subtitle": "All our practical tips to prepare and succeed your travels, based on our field experience.",
+    "search": "Search for a guide...",
+    "categories": {
+      "all": "All guides",
+      "preparation": "Preparation",
+      "budget": "Budget & Itineraries",
+      "security": "Security",
+      "family": "Family",
+      "photo": "Photography"
+    },
+    "featured": "📚 Our Essential Guides",
+    "incontournable": "⭐ Essential",
+    "readTime": "min",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "readGuide": "Read guide",
+    "allGuides": "All our Guides",
+    "noResults": "No guide found for your search. Try other keywords!",
+    "newsletter": {
+      "title": "📧 Stay informed of our new guides",
+      "desc": "Receive our latest travel tips and practical guides directly in your inbox.",
+      "btn": "Subscribe"
+    },
+    "backpack": "Packing your backpack",
+    "insurance": "Travel insurance",
+    "health": "Health & safety"
+  },
+  "tests": {
+    "title": "Gear & Reviews",
+    "subtitle": "Our honest and detailed reviews of the best travel products. We test everything in the field!",
+    "search": "Search for a product...",
+    "categories": {
+      "all": "All reviews",
+      "comfort": "Comfort & Sleep",
+      "tech": "Tech & Electronics",
+      "baggage": "Luggage & Transport",
+      "outdoor": "Outdoor & Sports",
+      "accessories": "Travel accessories"
+    },
+    "favorites": "⭐ Our Favorites",
+    "favorite": "💝 Favorite",
+    "tested": "✓ Tested",
+    "pros": "Pros:",
+    "cons": "Cons:",
+    "verdict": "Our verdict:",
+    "readTest": "Read full review",
+    "seeTest": "See review",
+    "buy": "Buy",
+    "allTests": "All our Product Reviews",
+    "noResults": "No product found for your search.",
+    "comparisons": "📊 Our Comparisons",
+    "winner": "Winner:",
+    "seeComparison": "See full comparison",
+    "disclosure": "Transparency: Some links are affiliate links. We only recommend products we've actually tested and approved. These commissions help us fund our travels and tests, at no extra cost to you.",
+    "shoes": "Hiking shoes",
+    "tents": "Tents & sleeping bags",
+    "tech": "Tech accessories"
+  },
+  "footer": {
+    "about": "We share our adventures around the world to inspire you in your future travels. Follow us for amazing experiences!",
+    "navigation": "Navigation",
+    "home": "Home",
+    "trips": "Our travels",
+    "tips": "Tips",
+    "whoWeAre": "About us",
+    "contact": "Contact",
+    "email": "Email",
+    "newsletter": "Newsletter",
+    "partnerships": "Partnerships",
+    "rights": "© 2024 CapSurLeMonde. All rights reserved.",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use"
+  },
+  "regions": {
+    "southeastAsia": "Southeast Asia",
+    "europe": "Europe",
+    "africa": "Africa",
+    "america": "America",
+    "comingSoon": "(coming soon)"
+  },
+  "countries": {
+    "vietnam": "Vietnam",
+    "thailand": "Thailand",
+    "cambodia": "Cambodia",
+    "laos": "Laos",
+    "myanmar": "Myanmar",
+    "malaysia": "Malaysia",
+    "singapore": "Singapore",
+    "indonesia": "Indonesia",
+    "philippines": "Philippines",
+    "brunei": "Brunei",
+    "eastTimor": "East Timor",
+    "france": "France",
+    "italy": "Italy",
+    "spain": "Spain",
+    "greece": "Greece",
+    "portugal": "Portugal",
+    "croatia": "Croatia",
+    "switzerland": "Switzerland",
+    "austria": "Austria",
+    "iceland": "Iceland",
+    "ireland": "Ireland",
+    "norway": "Norway",
+    "hungary": "Hungary",
+    "morocco": "Morocco",
+    "egypt": "Egypt",
+    "kenya": "Kenya",
+    "tanzania": "Tanzania",
+    "southafrica": "South Africa",
+    "madagascar": "Madagascar",
+    "usa": "United States",
+    "canada": "Canada",
+    "mexico": "Mexico",
+    "peru": "Peru",
+    "brazil": "Brazil",
+    "argentina": "Argentina",
+    "chile": "Chile",
+    "colombia": "Colombia"
+  },
+  "deals": {
+    "flights": "Flight tickets",
+    "accommodation": "Accommodation",
+    "sim": "SIM cards & Internet"
+  },
+  "voyages": {
+    "title": "Our Adventures",
+    "subtitle": "Discover our travel stories from around the world, our favorites and all our tips to prepare your own adventures.",
+    "destinations": {
+      "iceland": {
+        "title": "Iceland - Land of Fire and Ice",
+        "location": "Iceland",
+        "duration": "15 days",
+        "travelers": "2 people",
+        "description": "A breathtaking road trip through Iceland's lunar landscapes, between geysers, northern lights and majestic waterfalls.",
+        "highlights": ["Northern Lights", "Hot Springs", "Spectacular Waterfalls"]
+      },
+      "bali": {
+        "title": "Bali - Island of the Gods",
+        "location": "Indonesia",
+        "duration": "21 days",
+        "travelers": "2 people",
+        "description": "Discovery of authentic Balinese culture, between terraced rice fields, sacred temples and paradise beaches.",
+        "highlights": ["Hindu Temples", "Ubud Rice Fields", "Dream Beaches"]
+      },
+      "patagonia": {
+        "title": "Patagonia - At the End of the World",
+        "location": "Argentina & Chile",
+        "duration": "28 days",
+        "travelers": "2 people",
+        "description": "Extraordinary adventure in the wild lands of Patagonia, with glaciers, mountains and exceptional wildlife.",
+        "highlights": ["Perito Moreno Glacier", "Torres del Paine", "Magellanic Penguins"]
+      }
+    },
+    "readMore": "Read more",
+    "viewAll": "View all our trips"
+  },
+  "preparer": {
+    "title": "Planning Your World Tour",
+    "subtitle": "The complete guide to organize your world tour step by step. From idea to departure, we accompany you in all your preparations.",
+    "stats": {
+      "months": "Months of travel",
+      "countries": "Countries visited",
+      "budget": "Budget for 2",
+      "preparation": "Months of preparation"
+    },
+    "steps": {
+      "destinations": {
+        "title": "1. Choose your destinations",
+        "description": "Define your itinerary according to your desires, climate and budget.",
+        "details": ["Research destinations", "Climate and seasons", "Cost of living", "Visa required"]
+      },
+      "dates": {
+        "title": "2. Plan the dates",
+        "description": "Optimize your planning to enjoy the best weather conditions.",
+        "details": ["High/low season", "Local events", "Optimal duration", "Date flexibility"]
+      },
+      "budget": {
+        "title": "3. Set your budget",
+        "description": "Calculate the necessary budget and plan for on-site expenses.",
+        "details": ["International transport", "Accommodation", "Food", "Activities and visits"]
+      },
+      "formalities": {
+        "title": "4. Administrative formalities",
+        "description": "Prepare all necessary documents well in advance.",
+        "details": ["Valid passport", "Required visas", "Travel insurance", "Vaccinations"]
+      },
+      "bookings": {
+        "title": "5. Essential reservations",
+        "description": "Secure transport and first accommodations to start peacefully.",
+        "details": ["International flights", "First accommodations", "Local transport", "Popular activities"]
+      },
+      "equipment": {
+        "title": "6. Equipment and departure",
+        "description": "Finalize your equipment and prepare mentally for the big departure.",
+        "details": ["Adapted backpack", "Technical clothing", "First aid kit", "Useful apps"]
+      }
+    },
+    "cta": {
+      "title": "Ready for adventure?",
+      "description": "Download our complete free guide with all detailed steps, our planning tools and our budget forecast.",
+      "button": "Download free guide"
+    }
+  },
+  "conseils": {
+    "title": "Our Best Tips",
+    "subtitle": "Prepare each adventure like a pro with our field-tested tips.",
+    "categories": [
+      {
+        "title": "Pack Your Bag",
+        "description": "All our tips to pack your backpack like a pro and not forget anything essential.",
+        "tips": ["Equipment list", "Optimal weight", "Technical clothing"]
+      },
+      {
+        "title": "Book Your Flights",
+        "description": "How to find the best prices and optimize your itineraries to save money.",
+        "tips": ["Price comparators", "Flexible dates", "Strategic layovers"]
+      },
+      {
+        "title": "Plan Your Itinerary",
+        "description": "Our methods to create an optimized route according to your wishes and budget.",
+        "tips": ["Planning tools", "Recommended durations", "Local transport"]
+      },
+      {
+        "title": "Travel Insurance",
+        "description": "Complete guide to choosing the right insurance and traveling with peace of mind.",
+        "tips": ["Insurance comparison", "Essential guarantees", "Emergency procedures"]
+      },
+      {
+        "title": "Camera Equipment",
+        "description": "Selection of photo equipment to capture your most beautiful travel memories.",
+        "tips": ["Compact cameras", "Useful accessories", "Photo backup"]
+      },
+      {
+        "title": "Travel Health",
+        "description": "Prepare your first aid kit and protect yourself from health risks abroad.",
+        "tips": ["Vaccinations", "First aid kit", "Health insurance"]
+      }
+    ],
+    "cta": {
+      "title": "Don't miss any tips!",
+      "text": "Subscribe to our newsletter to receive our latest practical guides and travel deals directly in your inbox.",
+      "placeholder": "Your email address",
+      "button": "Subscribe",
+      "guide": "See the full guide →"
+    }
+  },
+  "famille": {
+    "title": "Family Travel",
+    "subtitle": "Adventure awaits! Discover how to travel with your children and create unforgettable family memories around the world.",
+    "stats": {
+      "countries": "Countries visited as a family",
+      "families": "Families accompanied",
+      "smiles": "Guaranteed smiles"
+    },
+    "categories": {
+      "age": {
+        "title": "Ideal age to travel",
+        "description": "Our advice to determine the right time according to your children's age.",
+        "tips": ["0-2 years: Advantages and challenges", "3-7 years: Discovery age", "8+ years: Autonomous travelers"]
+      },
+      "transport": {
+        "title": "Transport with children",
+        "description": "How to make long trips enjoyable for the whole family.",
+        "tips": ["Prepare the flight", "Family road trips", "Secure local transport"]
+      },
+      "security": {
+        "title": "Safety and health",
+        "description": "Protect your family and prevent health risks while traveling.",
+        "tips": ["First aid kit", "Family insurance", "Children's vaccinations"]
+      },
+      "food": {
+        "title": "Children's nutrition",
+        "description": "Nutrition advice and culinary discovery adapted to the youngest.",
+        "tips": ["Discover without risk", "Milk and baby food", "Family-friendly restaurants"]
+      },
+      "activities": {
+        "title": "Family activities",
+        "description": "Select experiences that will please the whole family.",
+        "tips": ["Activities by age", "Rest time", "Involve children"]
+      },
+      "memories": {
+        "title": "Create memories",
+        "description": "Immortalize the trip and create lasting memories together.",
+        "tips": ["Travel journal", "Family photos", "Travel traditions"]
+      }
+    },
+    "testimonials": {
+      "title": "They traveled with us",
+      "martin": {
+        "family": "Martin Family",
+        "children": "Lea (5 years) and Tom (8 years)",
+        "destination": "Europe Tour",
+        "text": "Our children loved discovering Europe in a camper van! The Adventurers' advice allowed us to prepare a suitable itinerary with activities for all ages."
+      },
+      "dubois": {
+        "family": "Dubois Family",
+        "children": "Emma (3 years)",
+        "destination": "Costa Rica",
+        "text": "Costa Rica with our little Emma was magical! Thanks to the health and logistics advice, we were able to peacefully enjoy this tropical adventure."
+      }
+    },
+    "cta": {
+      "title": "Ready for family adventure?",
+      "description": "Join our community of adventurous families and receive our best tips to travel with your children in complete serenity.",
+      "button1": "Free family guide",
+      "button2": "Join the community"
+    },
+    "guide": "View our tips"
+  }
+}

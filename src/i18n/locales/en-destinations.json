@@ -1,0 +1,298 @@
+{
+  "vietnam": {
+    "description": "A fascinating country between tradition and modernity, from terraced rice fields to paradise bays.",
+    "duration": "2-4 weeks",
+    "budget": "€€",
+    "highlights": ["Ha Long Bay", "Hoi An", "Ho Chi Minh", "Sapa"],
+    "bestTime": "Oct-Mar",
+    "difficulty": "Easy"
+  },
+  "cambodia": {
+    "description": "Ancient Angkor temples, Khmer smiles and preserved nature.",
+    "duration": "10-15 days",
+    "budget": "€",
+    "highlights": ["Angkor Wat", "Phnom Penh", "Kampot", "Sihanoukville"],
+    "bestTime": "Nov-Mar",
+    "difficulty": "Easy"
+  },
+  "thailand": {
+    "description": "Idyllic beaches, golden temples and incomparable cuisine, Thailand offers an immersion between spirituality and celebration.",
+    "duration": "2-3 weeks",
+    "budget": "€€",
+    "highlights": ["Bangkok", "Chiang Mai", "Phuket", "Krabi"],
+    "bestTime": "Nov-Apr",
+    "difficulty": "Easy"
+  },
+  "laos": {
+    "description": "A peaceful and authentic country, crossed by the Mekong, where time seems to have stopped.",
+    "duration": "10-15 days",
+    "budget": "€",
+    "highlights": ["Luang Prabang", "Vang Vieng", "Pakse", "Vientiane"],
+    "bestTime": "Nov-Mar",
+    "difficulty": "Easy"
+  },
+  "myanmar": {
+    "description": "Between golden pagodas, peaceful lakes and warm smiles, Myanmar reveals a timeless Asia.",
+    "duration": "2-3 weeks",
+    "budget": "€",
+    "highlights": ["Bagan", "Inle Lake", "Yangon", "Mandalay"],
+    "bestTime": "Nov-Feb",
+    "difficulty": "Moderate"
+  },
+  "malaysia": {
+    "description": "A fascinating blend of modernity and tropical nature, from Kuala Lumpur's skyscrapers to paradise islands.",
+    "duration": "2-3 weeks",
+    "budget": "€€",
+    "highlights": ["Kuala Lumpur", "Langkawi", "Borneo", "Penang"],
+    "bestTime": "Dec-Mar",
+    "difficulty": "Easy"
+  },
+  "singapore": {
+    "description": "Futuristic and green city-state, Singapore impresses with its cleanliness, safety and cultural blend.",
+    "duration": "4-6 days",
+    "budget": "€€€",
+    "highlights": ["Marina Bay Sands", "Gardens by the Bay", "Chinatown", "Sentosa"],
+    "bestTime": "Year-round",
+    "difficulty": "Easy"
+  },
+  "indonesia": {
+    "description": "An archipelago of a thousand faces, Indonesia combines volcanoes, beaches and spirituality in a spectacular natural setting.",
+    "duration": "3-4 weeks",
+    "budget": "€€",
+    "highlights": ["Bali", "Java", "Komodo", "Lombok"],
+    "bestTime": "May-Oct",
+    "difficulty": "Moderate"
+  },
+  "philippines": {
+    "description": "An archipelago with turquoise waters, perfect for diving, dream beaches and warm encounters.",
+    "duration": "2-3 weeks",
+    "budget": "€€",
+    "highlights": ["Palawan", "Cebu", "Bohol", "Manila"],
+    "bestTime": "Nov-May",
+    "difficulty": "Easy"
+  },
+  "brunei": {
+    "description": "Small but wealthy, Brunei captivates with its golden mosques and lush preserved nature.",
+    "duration": "5-7 days",
+    "budget": "€€€",
+    "highlights": ["Bandar Seri Begawan", "Kampong Ayer", "Ulu Temburong", "Mosques"],
+    "bestTime": "Nov-Mar",
+    "difficulty": "Easy"
+  },
+  "eastTimor": {
+    "description": "A confidential, wild and authentic destination, between mountains, beaches and Portuguese culture.",
+    "duration": "10-12 days",
+    "budget": "€",
+    "highlights": ["Dili", "Atauro", "Maubisse", "Jaco"],
+    "bestTime": "May-Nov",
+    "difficulty": "Moderate"
+  },
+  "france": {
+    "description": "Between art, gastronomy and varied landscapes — from the Alps to the Côte d'Azur, France charms at every corner.",
+    "duration": "1-3 weeks",
+    "budget": "€€",
+    "highlights": ["Paris", "Provence", "Loire Castles"],
+    "bestTime": "Apr-Oct",
+    "difficulty": "Easy"
+  },
+  "italy": {
+    "description": "A journey between history, art and dolce vita: from Rome to Tuscany, Italy is a living masterpiece.",
+    "duration": "1-3 weeks",
+    "budget": "€€",
+    "highlights": ["Rome", "Venice", "Tuscany"],
+    "bestTime": "Apr-Oct",
+    "difficulty": "Easy"
+  },
+  "spain": {
+    "description": "Sunny atmosphere, tapas and flamenco: Spain combines culture, celebration and authenticity.",
+    "duration": "1-2 weeks",
+    "budget": "€€",
+    "highlights": ["Barcelona", "Andalusia", "Madrid"],
+    "bestTime": "Mar-Oct",
+    "difficulty": "Easy"
+  },
+  "greece": {
+    "description": "Blue and white islands, ancient ruins and the Aegean Sea: Greece embodies the perfect Mediterranean journey.",
+    "duration": "10-20 days",
+    "budget": "€€",
+    "highlights": ["Santorini", "Athens", "Crete"],
+    "bestTime": "May-Oct",
+    "difficulty": "Easy"
+  },
+  "portugal": {
+    "description": "Sun, music and sweet living: Portugal charms with its colorful cities and golden beaches.",
+    "duration": "1-2 weeks",
+    "budget": "€",
+    "highlights": ["Lisbon", "Porto", "Algarve"],
+    "bestTime": "Mar-Oct",
+    "difficulty": "Easy"
+  },
+  "croatia": {
+    "description": "Between turquoise sea, medieval towns and natural parks, Croatia is a jewel of the Adriatic coast.",
+    "duration": "1-2 weeks",
+    "budget": "€€",
+    "highlights": ["Dubrovnik", "Split", "Plitvice"],
+    "bestTime": "May-Sep",
+    "difficulty": "Easy"
+  },
+  "switzerland": {
+    "description": "Mountains, lakes and fresh air: Switzerland is a paradise for nature and tranquility lovers.",
+    "duration": "7-10 days",
+    "budget": "€€€",
+    "highlights": ["Zermatt", "Interlaken", "Lake Geneva"],
+    "bestTime": "Year-round",
+    "difficulty": "Moderate"
+  },
+  "austria": {
+    "description": "Country of music and mountains, Austria combines imperial culture and Alpine hiking.",
+    "duration": "1-2 weeks",
+    "budget": "€€",
+    "highlights": ["Vienna", "Salzburg", "Tyrol"],
+    "bestTime": "Apr-Oct",
+    "difficulty": "Easy"
+  },
+  "iceland": {
+    "description": "A land of fire and ice where volcanoes, geysers and northern lights create a unique spectacle.",
+    "duration": "1-2 weeks",
+    "budget": "€€€",
+    "highlights": ["Reykjavik", "Blue Lagoon", "Geysir"],
+    "bestTime": "Jun-Sep",
+    "difficulty": "Moderate"
+  },
+  "ireland": {
+    "description": "Between cliffs, castles and pubs, Ireland charms with its friendliness and green landscapes.",
+    "duration": "10-15 days",
+    "budget": "€€",
+    "highlights": ["Dublin", "Cliffs of Moher", "Galway"],
+    "bestTime": "May-Sep",
+    "difficulty": "Easy"
+  },
+  "norway": {
+    "description": "Majestic fjords, untouched nature and scenic routes: Norway offers a grandiose journey.",
+    "duration": "2-3 weeks",
+    "budget": "€€€",
+    "highlights": ["Oslo", "Bergen", "Lofoten"],
+    "bestTime": "May-Sep",
+    "difficulty": "Moderate"
+  },
+  "hungary": {
+    "description": "Thermal baths, architecture and gastronomy: Budapest shines between tradition and modernity.",
+    "duration": "5-10 days",
+    "budget": "€",
+    "highlights": ["Budapest", "Balaton", "Eger"],
+    "bestTime": "May-Sep",
+    "difficulty": "Easy"
+  },
+  "morocco": {
+    "description": "From Marrakech souks to the Sahara desert, discover a country of a thousand colors.",
+    "duration": "10-15 days",
+    "budget": "€€",
+    "highlights": ["Marrakech", "Sahara", "Chefchaouen", "Fez"],
+    "bestTime": "March to May, September to November",
+    "difficulty": "Easy"
+  },
+  "egypt": {
+    "description": "Pyramids, ancient temples and Nile cruises in the cradle of civilization.",
+    "duration": "10-14 days",
+    "budget": "€€",
+    "highlights": ["Pyramids", "Cairo", "Luxor", "Red Sea"],
+    "bestTime": "October to April",
+    "difficulty": "Easy"
+  },
+  "kenya": {
+    "description": "Exceptional safaris and paradisiacal beaches of the Indian Ocean.",
+    "duration": "12-15 days",
+    "budget": "€€€",
+    "highlights": ["Masai Mara", "Amboseli", "Mombasa", "Lake Nakuru"],
+    "bestTime": "June to October, January to February",
+    "difficulty": "Easy"
+  },
+  "tanzania": {
+    "description": "Kilimanjaro, Serengeti and Zanzibar: the essence of East Africa.",
+    "duration": "12-18 days",
+    "budget": "€€€",
+    "highlights": ["Serengeti", "Kilimanjaro", "Zanzibar", "Ngorongoro"],
+    "bestTime": "June to October",
+    "difficulty": "Moderate"
+  },
+  "southafrica": {
+    "description": "Safaris, Cape vineyards and spectacular landscapes of the Garden Route.",
+    "duration": "14-21 days",
+    "budget": "€€€",
+    "highlights": ["Cape Town", "Kruger", "Garden Route", "Durban"],
+    "bestTime": "November to March",
+    "difficulty": "Easy"
+  },
+  "madagascar": {
+    "description": "Endemic fauna, baobabs and isolated beaches on the island continent.",
+    "duration": "15-20 days",
+    "budget": "€€",
+    "highlights": ["Avenue of Baobabs", "Tsingy", "Nosy Be", "Andasibe"],
+    "bestTime": "April to November",
+    "difficulty": "Moderate"
+  },
+  "usa": {
+    "description": "Grandiose national parks, iconic cities and legendary road trips.",
+    "duration": "14-21 days",
+    "budget": "€€€",
+    "highlights": ["Grand Canyon", "New York", "California", "Yellowstone"],
+    "bestTime": "Year-round depending on region",
+    "difficulty": "Easy"
+  },
+  "canada": {
+    "description": "Wild nature, turquoise lakes and cosmopolitan cities between modernity and wilderness.",
+    "duration": "14-21 days",
+    "budget": "€€€",
+    "highlights": ["Rockies", "Toronto", "Quebec", "Niagara Falls"],
+    "bestTime": "May to September",
+    "difficulty": "Easy"
+  },
+  "mexico": {
+    "description": "Caribbean beaches, Mayan sites and colorful colonial cities.",
+    "duration": "12-18 days",
+    "budget": "€€",
+    "highlights": ["Cancún", "Chichén Itzá", "Mexico City", "Oaxaca"],
+    "bestTime": "November to April",
+    "difficulty": "Easy"
+  },
+  "peru": {
+    "description": "Machu Picchu, Lake Titicaca and the Inca civilization in the heart of the Andes.",
+    "duration": "12-18 days",
+    "budget": "€€",
+    "highlights": ["Machu Picchu", "Cusco", "Lake Titicaca", "Lima"],
+    "bestTime": "May to September",
+    "difficulty": "Moderate"
+  },
+  "brazil": {
+    "description": "Rio de Janeiro, Amazon and paradisiacal beaches in South America's largest country.",
+    "duration": "14-21 days",
+    "budget": "€€€",
+    "highlights": ["Rio", "Amazon", "Iguazu", "Salvador"],
+    "bestTime": "September to March",
+    "difficulty": "Easy"
+  },
+  "argentina": {
+    "description": "Buenos Aires, Patagonian glaciers and Mendoza vineyards.",
+    "duration": "14-21 days",
+    "budget": "€€€",
+    "highlights": ["Buenos Aires", "Patagonia", "Iguazu", "Mendoza"],
+    "bestTime": "October to April",
+    "difficulty": "Easy"
+  },
+  "chile": {
+    "description": "Atacama Desert, vineyards and spectacular end-of-the-world landscapes.",
+    "duration": "12-18 days",
+    "budget": "€€€",
+    "highlights": ["Atacama", "Valparaíso", "Torres del Paine", "Santiago"],
+    "bestTime": "October to April",
+    "difficulty": "Moderate"
+  },
+  "colombia": {
+    "description": "Colonial Cartagena, Andean coffee and exceptional biodiversity.",
+    "duration": "10-15 days",
+    "budget": "€€",
+    "highlights": ["Cartagena", "Bogotá", "Medellín", "Tayrona"],
+    "bestTime": "December to March",
+    "difficulty": "Easy"
+  }
+}
