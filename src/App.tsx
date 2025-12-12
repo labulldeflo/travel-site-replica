@@ -120,6 +120,21 @@ const CountryGuides = {
   BudgetMaroc: lazy(() => import("./pages/guides/BudgetMaroc")),
   StreetFoodMaroc: lazy(() => import("./pages/guides/StreetFoodMaroc")),
   TransportMaroc: lazy(() => import("./pages/guides/TransportMaroc")),
+  // Portugal
+  GuideCompletPortugal: lazy(() => import("./pages/guides/GuideCompletPortugal")),
+  BudgetPortugal: lazy(() => import("./pages/guides/BudgetPortugal")),
+  StreetFoodPortugal: lazy(() => import("./pages/guides/StreetFoodPortugal")),
+  TransportPortugal: lazy(() => import("./pages/guides/TransportPortugal")),
+  // Espagne
+  GuideCompletEspagne: lazy(() => import("./pages/guides/GuideCompletEspagne")),
+  BudgetEspagne: lazy(() => import("./pages/guides/BudgetEspagne")),
+  StreetFoodEspagne: lazy(() => import("./pages/guides/StreetFoodEspagne")),
+  TransportEspagne: lazy(() => import("./pages/guides/TransportEspagne")),
+  // Italie
+  GuideCompletItalie: lazy(() => import("./pages/guides/GuideCompletItalie")),
+  BudgetItalie: lazy(() => import("./pages/guides/BudgetItalie")),
+  StreetFoodItalie: lazy(() => import("./pages/guides/StreetFoodItalie")),
+  TransportItalie: lazy(() => import("./pages/guides/TransportItalie")),
 };
 
 // ARTICLES DE BLOG
@@ -426,6 +441,24 @@ const AppRoutes = () => {
       <Route path="/guides/budget-maroc" element={<CountryGuides.BudgetMaroc />} />
       <Route path="/guides/street-food-maroc" element={<CountryGuides.StreetFoodMaroc />} />
       <Route path="/guides/transport-maroc" element={<CountryGuides.TransportMaroc />} />
+
+      {/* GUIDES - Portugal */}
+      <Route path="/guides/guide-complet-portugal" element={<CountryGuides.GuideCompletPortugal />} />
+      <Route path="/guides/budget-portugal" element={<CountryGuides.BudgetPortugal />} />
+      <Route path="/guides/street-food-portugal" element={<CountryGuides.StreetFoodPortugal />} />
+      <Route path="/guides/transport-portugal" element={<CountryGuides.TransportPortugal />} />
+
+      {/* GUIDES - Espagne */}
+      <Route path="/guides/guide-complet-espagne" element={<CountryGuides.GuideCompletEspagne />} />
+      <Route path="/guides/budget-espagne" element={<CountryGuides.BudgetEspagne />} />
+      <Route path="/guides/street-food-espagne" element={<CountryGuides.StreetFoodEspagne />} />
+      <Route path="/guides/transport-espagne" element={<CountryGuides.TransportEspagne />} />
+
+      {/* GUIDES - Italie */}
+      <Route path="/guides/guide-complet-italie" element={<CountryGuides.GuideCompletItalie />} />
+      <Route path="/guides/budget-italie" element={<CountryGuides.BudgetItalie />} />
+      <Route path="/guides/street-food-italie" element={<CountryGuides.StreetFoodItalie />} />
+      <Route path="/guides/transport-italie" element={<CountryGuides.TransportItalie />} />
 
       {/* ========== ARTICLES PAR DESTINATION ========== */}
       
