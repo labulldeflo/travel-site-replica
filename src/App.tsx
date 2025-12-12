@@ -101,6 +101,25 @@ const CountryGuides = {
   TransportThailande: lazy(() => import("./pages/guides/TransportThailande")),
   ThailandeFamille: lazy(() => import("./pages/guides/ThailandeFamille")),
   PhotoThailande: lazy(() => import("./pages/guides/PhotoThailande")),
+  // Cambodge
+  GuideCompletCambodge: lazy(() => import("./pages/guides/GuideCompletCambodge")),
+  BudgetCambodge: lazy(() => import("./pages/guides/BudgetCambodge")),
+  StreetFoodCambodge: lazy(() => import("./pages/guides/StreetFoodCambodge")),
+  TransportCambodge: lazy(() => import("./pages/guides/TransportCambodge")),
+  // Laos
+  GuideCompletLaos: lazy(() => import("./pages/guides/GuideCompletLaos")),
+  BudgetLaos: lazy(() => import("./pages/guides/BudgetLaos")),
+  TransportLaos: lazy(() => import("./pages/guides/TransportLaos")),
+  // Indonésie
+  GuideCompletIndonesie: lazy(() => import("./pages/guides/GuideCompletIndonesie")),
+  BudgetIndonesie: lazy(() => import("./pages/guides/BudgetIndonesie")),
+  StreetFoodIndonesie: lazy(() => import("./pages/guides/StreetFoodIndonesie")),
+  TransportIndonesie: lazy(() => import("./pages/guides/TransportIndonesie")),
+  // Maroc
+  GuideCompletMaroc: lazy(() => import("./pages/guides/GuideCompletMaroc")),
+  BudgetMaroc: lazy(() => import("./pages/guides/BudgetMaroc")),
+  StreetFoodMaroc: lazy(() => import("./pages/guides/StreetFoodMaroc")),
+  TransportMaroc: lazy(() => import("./pages/guides/TransportMaroc")),
 };
 
 // ARTICLES DE BLOG
@@ -376,6 +395,37 @@ const AppRoutes = () => {
       <Route path="/guides/transport-vietnam" element={<CountryGuides.TransportVietnam />} />
       <Route path="/guides/vietnam-famille" element={<CountryGuides.VietnamFamille />} />
       <Route path="/guides/photo-vietnam" element={<CountryGuides.PhotoVietnam />} />
+
+      {/* GUIDES - Thaïlande */}
+      <Route path="/guides/guide-complet-thailande" element={<CountryGuides.GuideCompletThailande />} />
+      <Route path="/guides/budget-thailande" element={<CountryGuides.BudgetThailande />} />
+      <Route path="/guides/street-food-thailande" element={<CountryGuides.StreetFoodThailande />} />
+      <Route path="/guides/transport-thailande" element={<CountryGuides.TransportThailande />} />
+      <Route path="/guides/thailande-famille" element={<CountryGuides.ThailandeFamille />} />
+      <Route path="/guides/photo-thailande" element={<CountryGuides.PhotoThailande />} />
+
+      {/* GUIDES - Cambodge */}
+      <Route path="/guides/guide-complet-cambodge" element={<CountryGuides.GuideCompletCambodge />} />
+      <Route path="/guides/budget-cambodge" element={<CountryGuides.BudgetCambodge />} />
+      <Route path="/guides/street-food-cambodge" element={<CountryGuides.StreetFoodCambodge />} />
+      <Route path="/guides/transport-cambodge" element={<CountryGuides.TransportCambodge />} />
+
+      {/* GUIDES - Laos */}
+      <Route path="/guides/guide-complet-laos" element={<CountryGuides.GuideCompletLaos />} />
+      <Route path="/guides/budget-laos" element={<CountryGuides.BudgetLaos />} />
+      <Route path="/guides/transport-laos" element={<CountryGuides.TransportLaos />} />
+
+      {/* GUIDES - Indonésie */}
+      <Route path="/guides/guide-complet-indonesie" element={<CountryGuides.GuideCompletIndonesie />} />
+      <Route path="/guides/budget-indonesie" element={<CountryGuides.BudgetIndonesie />} />
+      <Route path="/guides/street-food-indonesie" element={<CountryGuides.StreetFoodIndonesie />} />
+      <Route path="/guides/transport-indonesie" element={<CountryGuides.TransportIndonesie />} />
+
+      {/* GUIDES - Maroc */}
+      <Route path="/guides/guide-complet-maroc" element={<CountryGuides.GuideCompletMaroc />} />
+      <Route path="/guides/budget-maroc" element={<CountryGuides.BudgetMaroc />} />
+      <Route path="/guides/street-food-maroc" element={<CountryGuides.StreetFoodMaroc />} />
+      <Route path="/guides/transport-maroc" element={<CountryGuides.TransportMaroc />} />
 
       {/* ========== ARTICLES PAR DESTINATION ========== */}
       
