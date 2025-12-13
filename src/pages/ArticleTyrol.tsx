@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import tyrolImg from "@/assets/cities/tyrol.jpg";
 const ArticleTyrol = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleTyrol = () => {
       author="Cap sur le Monde"
       date="27 janvier 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=2000&q=80"
+      heroImage={tyrolImg}
       introduction="Le Tyrol autrichien est un **paradis pour les amoureux de montagne**. Entre sommets enneigés, vallées verdoyantes et villages typiques aux balcons fleuris, cette région alpine offre un concentré de beauté naturelle. Que vous soyez randonneur, skieur ou simplement en quête de paysages à couper le souffle, le Tyrol vous séduira par son authenticité préservée."
       contentSections={[
         {

@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import coteDazurImg from "@/assets/cities/cote-azur.jpg";
 const ArticleCoteDazur = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleCoteDazur = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=1200"
+      heroImage={coteDazurImg}
       introduction="La Côte d'Azur incarne le rêve méditerranéen français. De la Promenade des Anglais à Nice aux casinos de Monte-Carlo, des criques turquoise aux villages perchés de l'arrière-pays, cette riviera légendaire a inspiré les plus grands artistes du 20ème siècle. Matisse, Chagall, Picasso ont tous été captivés par cette lumière unique qui baigne le littoral."
       contentSections={[
         {

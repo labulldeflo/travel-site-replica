@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import fjordsImg from "@/assets/cities/fjords.jpg";
 const ArticleFjords = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleFjords = () => {
       author="Cap sur le Monde"
       date="15 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=1200"
+      heroImage={fjordsImg}
       introduction="Naviguer sur les fjords norvégiens reste l'une de nos plus belles expériences de voyage. Les parois rocheuses s'élèvent à plus de 1400 mètres au-dessus de l'eau turquoise, créant un sentiment d'insignifiance face à la **puissance de la nature**. Un voyage au cœur du sublime."
       contentSections={[
         {

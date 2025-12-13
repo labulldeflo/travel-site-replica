@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import madridImg from "@/assets/cities/madrid.jpg";
 const ArticleMadrid = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleMadrid = () => {
       author="Cap sur le Monde"
       date="15 avril 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=2000&q=80"
+      heroImage={madridImg}
       introduction="Madrid, capitale espagnole au **cœur géographique du pays**, incarne l'élégance et la vitalité. Ses musées de renommée mondiale, ses places majestueuses et ses quartiers animés en font une destination culturelle incontournable. C'est une ville qui vit intensément, où l'on dîne à 22h et où la nuit ne s'achève jamais vraiment."
       contentSections={[
         {

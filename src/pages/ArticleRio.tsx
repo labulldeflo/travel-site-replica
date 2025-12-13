@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import rioImg from "@/assets/cities/rio.jpg";
 const ArticleRio = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleRio = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1200"
+      heroImage={rioImg}
       introduction="Rio de Janeiro, c'est la **ville qui célèbre la vie**. Entre montagnes verdoyantes et plages légendaires, Rio nous a éblouis par sa beauté naturelle spectaculaire, son énergie contagieuse et cette façon unique de célébrer la vie à chaque instant. Nous avons passé cinq jours à explorer cette métropole fascinante, du Christ Rédempteur aux plages mythiques, en passant par les favelas vibrantes."
       contentSections={[
         {

@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import galwayImg from "@/assets/cities/galway.jpg";
 const ArticleGalway = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleGalway = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1590086782792-42dd2350140d?w=1200"
+      heroImage={galwayImg}
       introduction="Galway, capitale culturelle de l'Irlande de l'Ouest, nous a charmés par son **authenticité vibrante**. Les rues pavées résonnent de musique traditionnelle jour et nuit, les pubs débordent de convivialité, et le Connemara sauvage commence à 30 minutes. C'est l'Irlande authentique dans toute sa splendeur."
       contentSections={[
         {

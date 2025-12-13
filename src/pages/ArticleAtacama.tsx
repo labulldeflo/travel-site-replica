@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import atacamaImg from "@/assets/cities/atacama.jpg";
 const ArticleAtacama = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleAtacama = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1589802829985-817e51171b92?w=1200"
+      heroImage={atacamaImg}
       introduction="Le désert d'Atacama, c'est **Mars sur Terre**. Le désert le plus aride de la planète nous a stupéfiés par ses paysages surréalistes, ses lagunes colorées peuplées de flamants roses et ce ciel nocturne où la Voie lactée s'étale dans une pureté absolue. Nous avons passé cinq jours à explorer ces paysages lunaires depuis San Pedro d'Atacama."
       contentSections={[
         {

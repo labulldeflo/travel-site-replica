@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import alsaceImg from "@/assets/cities/alsace.jpg";
 const ArticleAlsace = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleAlsace = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1583225542661-1d5acb35bc40?w=1200"
+      heroImage={alsaceImg}
       introduction="L'Alsace est une région unique en France, à la croisée des cultures française et germanique. Ses villages aux maisons à colombages fleuries, ses vignobles centenaires et sa gastronomie généreuse en font une destination de charme incontournable, sublimée par la magie des marchés de Noël."
       contentSections={[
         {

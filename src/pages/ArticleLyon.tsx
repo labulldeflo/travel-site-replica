@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import lyonImg from "@/assets/cities/lyon.jpg";
 const ArticleLyon = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleLyon = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1581103405949-d5ca4afcafb6?w=1200"
+      heroImage={lyonImg}
       introduction="Lyon, capitale des Gaules et capitale gourmande, est une ville où chaque rue cache un bouchon, chaque quartier une histoire, et chaque repas devient un moment de culte. Entre Rhône et Saône, cette métropole française séduit par son patrimoine Renaissance, sa scène gastronomique légendaire et son art de vivre unique."
       contentSections={[
         {

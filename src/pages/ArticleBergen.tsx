@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import bergenImg from "@/assets/cities/bergen.jpg";
 const ArticleBergen = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleBergen = () => {
       author="Cap sur le Monde"
       date="15 Novembre 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1580709732551-e513ee34d205?w=1200"
+      heroImage={bergenImg}
       introduction="Impossible de ne pas tomber sous le charme de Bergen, perle de la côte norvégienne. Cette cité historique, porte d'entrée vers les fjords, séduit par son quartier hanséatique coloré, ses marchés aux poissons animés et ses panoramas montagneux spectaculaires. Bergen se targue d'être la 'ville entre sept montagnes', créant un amphithéâtre naturel unique."
       contentSections={[
         {

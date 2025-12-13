@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import geneveImg from "@/assets/cities/geneve.jpg";
 const ArticleGeneve = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleGeneve = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1581274780942-a93a312df4e8?w=1200"
+      heroImage={geneveImg}
       introduction="Genève, capitale internationale au bord du **Léman**, nous a séduits par son cosmopolitisme raffiné. Cette ville-monde siège de l'ONU et de la Croix-Rouge offre un cadre exceptionnel entre lac, vignobles et Alpes. L'excellence suisse s'exprime ici dans l'horlogerie de prestige, la gastronomie et un art de vivre unique."
       contentSections={[
         {

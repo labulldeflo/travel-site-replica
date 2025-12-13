@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import medellinImg from "@/assets/cities/medellin.jpg";
 const ArticleMedellin = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleMedellin = () => {
       author="Cap sur le Monde"
       date="16 novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?w=1200"
+      heroImage={medellinImg}
       introduction="La Comuna 13, quartier pauvre accroché à flanc de montagne, fut le théâtre de violences extrêmes liées au narcotrafic dans les années 90-2000. Aujourd'hui, les escaliers mécaniques publics connectent les habitations isolées au métro, les façades se parent de fresques monumentales racontant l'histoire du quartier, les jeunes guides expliquent la transformation avec fierté et émotion. Le street art n'est pas qu'esthétique : il raconte les douleurs, célèbre la paix retrouvée, dénonce les injustices."
       contentSections={[
         {

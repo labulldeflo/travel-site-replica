@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import andalousieImg from "@/assets/cities/andalousie.jpg";
 const ArticleAndalousie = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleAndalousie = () => {
       author="Cap sur le Monde"
       date="10 Avril 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?w=1200"
+      heroImage={andalousieImg}
       introduction="L'Andalousie est une terre de contrastes et de passions. Des palais mauresques de Grenade aux arènes de Séville, des villages blancs perchés aux plages dorées de la Costa del Sol, cette région du sud de l'Espagne enchante par sa richesse culturelle et son art de vivre."
       contentSections={[
         {

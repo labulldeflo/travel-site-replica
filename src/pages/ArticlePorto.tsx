@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import portoImg from "@/assets/cities/porto.jpg";
 const ArticlePorto = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticlePorto = () => {
       author="Cap sur le Monde"
       date="20 Avril 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1200"
+      heroImage={portoImg}
       introduction="Porto, deuxième ville du Portugal, est une cité de caractère nichée sur les rives escarpées du fleuve Douro. Surnommée 'Cidade Invicta' (la ville invaincue), elle séduit par son centre historique classé UNESCO, ses maisons colorées de Ribeira, ses caves de vin légendaires, et son authenticité préservée."
       contentSections={[
         {
