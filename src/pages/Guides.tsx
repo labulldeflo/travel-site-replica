@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, Filter, Clock, User, Star, BookOpen, Map, Shield, Heart, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -33,7 +34,8 @@ const Guides = () => {
       difficulty: 'Débutant',
       featured: true,
       image: '/src/assets/hero-mediterranean-cove.jpg',
-      tags: ['Vietnam', 'Visa', 'Préparation']
+      tags: ['Vietnam', 'Visa', 'Préparation'],
+      link: '/guides/guide-complet-vietnam'
     },
     {
       id: 2,
@@ -44,51 +46,104 @@ const Guides = () => {
       difficulty: 'Débutant',
       featured: true,
       image: '/src/assets/couple-travel-portrait.jpg',
-      tags: ['Budget', 'Vietnam', 'Économies']
+      tags: ['Budget', 'Vietnam', 'Économies'],
+      link: '/guides/budget-vietnam'
     },
     {
       id: 3,
-      title: 'Sécurité au Vietnam : guide pour voyageuses solo',
+      title: 'Sécurité en voyage : guide pour voyageuses solo',
       category: 'security',
-      description: 'Conseils spécifiques pour voyager en sécurité en tant que femme seule au Vietnam.',
+      description: 'Conseils spécifiques pour voyager en sécurité en tant que femme seule.',
       readTime: '10 min',
       difficulty: 'Intermédiaire',
       featured: false,
       image: '/src/assets/hero-mediterranean-cove.jpg',
-      tags: ['Sécurité', 'Solo', 'Femme']
+      tags: ['Sécurité', 'Solo', 'Femme'],
+      link: '/guides/securite'
     },
     {
       id: 4,
-      title: 'Itinéraire Vietnam 15 jours : notre parcours testé',
+      title: 'Guide Budget : maîtriser ses dépenses en voyage',
       category: 'budget',
-      description: 'Notre itinéraire détaillé jour par jour pour découvrir l\'essentiel du Vietnam.',
+      description: 'Tous nos conseils pour établir et gérer votre budget voyage efficacement.',
       readTime: '20 min',
       difficulty: 'Intermédiaire',
       featured: false,
       image: '/src/assets/couple-travel-portrait.jpg',
-      tags: ['Itinéraire', '15 jours', 'Vietnam']
+      tags: ['Budget', 'Économies', 'Planification'],
+      link: '/guides/budget'
     },
     {
       id: 5,
-      title: 'Voyager au Vietnam en famille avec des enfants',
+      title: 'Voyager en Thaïlande en famille avec des enfants',
       category: 'family',
-      description: 'Tous nos conseils pour un voyage réussi avec des enfants au Vietnam.',
+      description: 'Tous nos conseils pour un voyage réussi avec des enfants en Thaïlande.',
       readTime: '8 min',
       difficulty: 'Débutant',
       featured: false,
       image: '/src/assets/hero-mediterranean-cove.jpg',
-      tags: ['Famille', 'Enfants', 'Vietnam']
+      tags: ['Famille', 'Enfants', 'Thaïlande'],
+      link: '/guides/thailande-famille'
     },
     {
       id: 6,
-      title: 'Photographier le Vietnam : spots et techniques',
+      title: 'Photographier vos voyages : spots et techniques',
       category: 'photo',
-      description: 'Les plus beaux spots photo du Vietnam et nos conseils techniques.',
+      description: 'Guide complet de la photographie de voyage : conseils et techniques.',
       readTime: '12 min',
       difficulty: 'Avancé',
       featured: false,
       image: '/src/assets/couple-travel-portrait.jpg',
-      tags: ['Photo', 'Paysages', 'Technique']
+      tags: ['Photo', 'Paysages', 'Technique'],
+      link: '/guides/photo'
+    },
+    {
+      id: 7,
+      title: 'Voyager en couple : conseils pour une expérience harmonieuse',
+      category: 'preparation',
+      description: 'Comment organiser un voyage en duo réussi et éviter les tensions.',
+      readTime: '10 min',
+      difficulty: 'Débutant',
+      featured: false,
+      image: '/src/assets/couple-travel-portrait.jpg',
+      tags: ['Couple', 'Organisation', 'Conseils'],
+      link: '/guides/couple'
+    },
+    {
+      id: 8,
+      title: 'Planifier son voyage étape par étape',
+      category: 'preparation',
+      description: 'Guide complet de planification : de l\'idée au départ.',
+      readTime: '15 min',
+      difficulty: 'Débutant',
+      featured: false,
+      image: '/src/assets/hero-mediterranean-cove.jpg',
+      tags: ['Planification', 'Organisation', 'Préparation'],
+      link: '/guides/planification'
+    },
+    {
+      id: 9,
+      title: 'Street Food Thaïlande : les plats incontournables',
+      category: 'preparation',
+      description: 'Découvrez les meilleurs plats de rue thaïlandais à ne pas manquer.',
+      readTime: '8 min',
+      difficulty: 'Débutant',
+      featured: false,
+      image: '/src/assets/hero-mediterranean-cove.jpg',
+      tags: ['Street Food', 'Thaïlande', 'Gastronomie'],
+      link: '/guides/street-food-thailande'
+    },
+    {
+      id: 10,
+      title: 'Transport au Vietnam : se déplacer facilement',
+      category: 'preparation',
+      description: 'Guide complet des transports au Vietnam : train, bus, moto, avion.',
+      readTime: '12 min',
+      difficulty: 'Intermédiaire',
+      featured: false,
+      image: '/src/assets/couple-travel-portrait.jpg',
+      tags: ['Transport', 'Vietnam', 'Déplacements'],
+      link: '/guides/transport-vietnam'
     }
   ];
 
@@ -197,8 +252,8 @@ const Guides = () => {
                             ))}
                           </div>
                         </div>
-                        <Button className="w-full">
-                          {t('guides.readGuide')}
+                        <Button asChild className="w-full">
+                          <Link to={guide.link}>{t('guides.readGuide')}</Link>
                         </Button>
                       </div>
                     </CardContent>
@@ -273,8 +328,8 @@ const Guides = () => {
                           </Badge>
                         ))}
                       </div>
-                      <Button className="w-full">
-                        {t('guides.readGuide')}
+                      <Button asChild className="w-full">
+                        <Link to={guide.link}>{t('guides.readGuide')}</Link>
                       </Button>
                     </div>
                   </CardContent>

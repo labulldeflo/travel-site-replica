@@ -85,6 +85,14 @@ const DestinationsList = {
   Colombie: lazy(() => import("./pages/Colombie")),
 };
 
+// GUIDES THÉMATIQUES GÉNÉRAUX
+const GuideBudget = lazy(() => import("./pages/GuideBudget"));
+const GuideCouple = lazy(() => import("./pages/GuideCouple"));
+const GuidePhoto = lazy(() => import("./pages/GuidePhoto"));
+const GuidePlanification = lazy(() => import("./pages/GuidePlanification"));
+const GuideSecurite = lazy(() => import("./pages/GuideSecurite"));
+const GuideVol = lazy(() => import("./pages/GuideVol"));
+
 // GUIDES THÉMATIQUES PAR PAYS
 const CountryGuides = {
   // Vietnam
@@ -401,7 +409,15 @@ const AppRoutes = () => {
       <Route path="/destinations/chili" element={<DestinationsList.Chili />} />
       <Route path="/destinations/colombie" element={<DestinationsList.Colombie />} />
 
-      {/* ========== GUIDES THÉMATIQUES ========== */}
+      {/* ========== GUIDES THÉMATIQUES GÉNÉRAUX ========== */}
+      <Route path="/guides/budget" element={<GuideBudget />} />
+      <Route path="/guides/couple" element={<GuideCouple />} />
+      <Route path="/guides/photo" element={<GuidePhoto />} />
+      <Route path="/guides/planification" element={<GuidePlanification />} />
+      <Route path="/guides/securite" element={<GuideSecurite />} />
+      <Route path="/guides/vol" element={<GuideVol />} />
+
+      {/* ========== GUIDES THÉMATIQUES PAR PAYS ========== */}
       
       {/* GUIDES - Vietnam */}
       <Route path="/guides/guide-complet-vietnam" element={<CountryGuides.GuideCompletVietnam />} />
