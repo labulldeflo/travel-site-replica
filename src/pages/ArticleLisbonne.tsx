@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import lisbonneImg from "@/assets/cities/lisbonne.jpg";
 const ArticleLisbonne = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleLisbonne = () => {
       author="Cap sur le Monde"
       date="18 avril 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1585208798174-6cedd86e019a?auto=format&fit=crop&w=2000&q=80"
+      heroImage={lisbonneImg}
       introduction="Lisbonne, capitale du Portugal, est une **ville envoûtante** qui mêle charme d'antan et modernité vibrante. Construite sur sept collines bordant l'estuaire du Tage, elle séduit par ses ruelles pavées, ses tramways jaunes iconiques, ses azulejos colorés et ses miradouros offrant des vues spectaculaires. C'est une ville de lumière, de nostalgie et de renaissance."
       contentSections={[
         {

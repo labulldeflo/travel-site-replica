@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import splitImg from "@/assets/cities/split.jpg";
 const ArticleSplit = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleSplit = () => {
       author="Cap sur le Monde"
       date="18 Mars 2025"
       readingTime="5 min"
-      heroImage="https://images.unsplash.com/photo-1555990538-1e7a0a3a1e3b?w=1200"
+      heroImage={splitImg}
       introduction="Split est une ville unique où le passé et le présent coexistent harmonieusement. Son cœur historique est construit à l'intérieur même du palais de Dioclétien, un monument romain du IVe siècle classé au patrimoine mondial de l'UNESCO. Des milliers de personnes vivent et travaillent aujourd'hui dans ce palais impérial, créant une atmosphère fascinante où l'histoire se vit au quotidien."
       contentSections={[
         {

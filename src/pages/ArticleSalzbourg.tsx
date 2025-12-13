@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import salzbourgImg from "@/assets/cities/salzbourg.jpg";
 const ArticleSalzbourg = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleSalzbourg = () => {
       author="Cap sur le Monde"
       date="26 Janvier 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1595867818082-083862f3d630?w=1200"
+      heroImage={salzbourgImg}
       introduction="Salzbourg, ville natale de Mozart, est un chef-d'œuvre d'architecture baroque niché au cœur des Alpes autrichiennes. Son centre historique classé UNESCO, sa forteresse médiévale et ses jardins royaux créent un décor de conte de fées. La ville vibre toute l'année au rythme de la musique classique, culminant avec son festival d'été mondialement célèbre."
       contentSections={[
         {

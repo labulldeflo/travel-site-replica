@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import budapestImg from "@/assets/cities/budapest.jpg";
 const ArticleBudapest = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleBudapest = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1541849546-216549ae216d?w=1200"
+      heroImage={budapestImg}
       introduction="Budapest, la **perle du Danube**, nous a séduits par son architecture grandiose et ses bains thermaux légendaires. Cette capitale d'Europe centrale allie magnificence impériale et vie nocturne alternative dans les célèbres ruin bars. Entre Buda historique et Pest dynamique, le Danube coule majestueusement."
       contentSections={[
         {

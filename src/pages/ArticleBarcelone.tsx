@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import barceloneImg from "@/assets/cities/barcelone.jpg";
 const ArticleBarcelone = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleBarcelone = () => {
       author="Cap sur le Monde"
       date="12 avril 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=2000&q=80"
+      heroImage={barceloneImg}
       introduction="Barcelone est une **ville fascinante** où l'architecture moderniste de Gaudí côtoie des quartiers gothiques millénaires. Entre la mer Méditerranée et les collines, la capitale catalane séduit par son énergie créative, sa gastronomie innovante et son atmosphère cosmopolite. C'est une ville qui respire la créativité, où chaque coin de rue révèle une surprise architecturale ou culturelle."
       contentSections={[
         {

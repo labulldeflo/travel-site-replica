@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import vienneImg from "@/assets/cities/vienne.jpg";
 const ArticleVienne = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleVienne = () => {
       author="Cap sur le Monde"
       date="25 janvier 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=2000&q=80"
+      heroImage={vienneImg}
       introduction="Vienne, c'est l'élégance incarnée. Les façades baroques se reflètent dans les vitrines des cafés historiques, tandis que les notes de Mozart flottent dans l'air. Cette ville où l'art de vivre se conjugue au passé glorieux des Habsbourg ne se visite pas, elle se **savoure lentement**. Nous avons passé cinq jours dans cette capitale impériale, à flâner dans ses palais dorés, à nous perdre dans ses musées et à comprendre pourquoi Vienne reste l'une des villes les plus élégantes d'Europe."
       contentSections={[
         {

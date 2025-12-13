@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import dublinImg from "@/assets/cities/dublin.jpg";
 const ArticleDublin = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleDublin = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1549918864-48ac978761a4?w=1200"
+      heroImage={dublinImg}
       introduction="Dublin nous a accueillis avec son légendaire **Céad míle fáilte** (cent mille fois bienvenue). Cette capitale à taille humaine mêle histoire littéraire prestigieuse, pubs centenaires où résonne la musique traditionnelle et hospitalité légendaire des Irlandais."
       contentSections={[
         {

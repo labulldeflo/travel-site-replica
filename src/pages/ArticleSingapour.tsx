@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import singapourImg from "@/assets/cities/singapour.jpg";
 const ArticleSingapour = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleSingapour = () => {
       author="Cap sur le Monde"
       date="15 mars 2024"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200"
+      heroImage={singapourImg}
       introduction="Singapour est une cité-État unique où l'**ultra-modernité fusionne avec des traditions asiatiques ancestrales**. Gratte-ciels futuristes, jardins verticaux, gastronomie multiculturelle et efficacité légendaire : bienvenue dans l'une des villes les plus fascinantes d'Asie."
       contentSections={[
         {

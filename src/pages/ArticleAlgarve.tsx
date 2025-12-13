@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import algarveImg from "@/assets/cities/algarve.jpg";
 const ArticleAlgarve = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleAlgarve = () => {
       author="Cap sur le Monde"
       date="22 Avril 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200"
+      heroImage={algarveImg}
       introduction="L'Algarve, région la plus méridionale du Portugal, est une destination balnéaire de rêve baignée par l'Atlantique et le soleil 300 jours par an. Connue pour ses falaises ocre spectaculaires, ses plages de sable doré, ses grottes marines mystérieuses et ses villages blancs traditionnels, l'Algarve offre un mélange parfait entre beauté naturelle, culture authentique et infrastructures modernes."
       contentSections={[
         {

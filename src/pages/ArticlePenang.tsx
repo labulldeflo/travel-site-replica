@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import penangImg from "@/assets/cities/penang.jpg";
 const ArticlePenang = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticlePenang = () => {
       author="Cap sur le Monde"
       date="2 février 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&w=2000&q=80"
+      heroImage={penangImg}
       introduction="Penang, île de Malaisie occidentale, fascine par sa richesse culturelle unique. Georgetown, classée UNESCO, concentre architecture coloniale, temples colorés et street art mondialement célèbre. Mais Penang brille surtout par sa gastronomie : unanimement reconnue comme le paradis de la street food malaisienne. Nous avons passé quatre jours à explorer cette perle de l'Orient, de ses ruelles historiques à ses plages tropicales."
       contentSections={[
         {

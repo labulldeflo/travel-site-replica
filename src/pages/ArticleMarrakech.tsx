@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import marrakechImg from "@/assets/cities/marrakech.jpg";
 const ArticleMarrakech = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleMarrakech = () => {
       author="Cap sur le Monde"
       date="15 janvier 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1517409815499-0b5c127c42e2"
+      heroImage={marrakechImg}
       introduction="Le cœur battant de Marrakech est sans conteste la place Jemaa el-Fna. Dès la tombée de la nuit, elle se transforme en un spectacle vivant où charmeurs de serpents, conteurs, musiciens et stands de nourriture créent une atmosphère unique au monde. Les souks qui entourent la place forment un véritable labyrinthe où l'on peut se perdre pendant des heures."
       contentSections={[
         {

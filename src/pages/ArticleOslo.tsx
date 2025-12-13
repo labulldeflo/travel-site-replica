@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import osloImg from "@/assets/cities/oslo.jpg";
 const ArticleOslo = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleOslo = () => {
       author="Cap sur le Monde"
       date="15 Novembre 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1200"
+      heroImage={osloImg}
       introduction="Dès notre arrivée à Oslo, nous avons été frappés par l'omniprésence de la nature. Contrairement à d'autres capitales européennes, Oslo se fond dans son environnement naturel : le fjord d'Oslofjord au sud, des collines boisées tout autour. On peut facilement faire du ski l'hiver ou se baigner l'été sans quitter les limites de la ville. Cette harmonie unique entre urbanité et nature sauvage définit l'âme d'Oslo."
       contentSections={[
         {

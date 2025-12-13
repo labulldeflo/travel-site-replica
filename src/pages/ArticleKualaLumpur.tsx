@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import kualaLumpurImg from "@/assets/cities/kuala-lumpur.jpg";
 const ArticleKualaLumpur = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleKualaLumpur = () => {
       author="Cap sur le Monde"
       date="1 février 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=2000&q=80"
+      heroImage={kualaLumpurImg}
       introduction="Kuala Lumpur fascine par ses **contrastes saisissants** : les Petronas Towers futuristes côtoient les temples hindous colorés, les marchés traditionnels vibrent à côté des centres commerciaux ultramodernes. Cette métropole multiculturelle où cohabitent Malais, Chinois et Indiens offre une richesse culturelle et gastronomique exceptionnelle."
       contentSections={[
         {

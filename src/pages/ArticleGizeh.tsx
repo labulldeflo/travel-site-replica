@@ -1,6 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
-
+import gizaImg from "@/assets/cities/giza.jpg";
 const ArticleGizeh = () => {
   return (
     <ArticleTemplate
@@ -11,7 +11,7 @@ const ArticleGizeh = () => {
       author="Cap sur le Monde"
       date="3 Février 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=1200"
+      heroImage={gizaImg}
       introduction="Le plateau de Gizeh, aux portes du Caire, abrite l'une des Sept Merveilles du monde antique encore debout. Ces monuments colossaux, construits il y a 4500 ans, témoignent de la grandeur de la civilisation égyptienne et continuent de fasciner le monde entier par leurs mystères et leur perfection architecturale."
       contentSections={[
         {
