@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import yangonImage from "@/assets/cities/yangon.jpg";
 
 const ArticleYangon = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleYangon = () => {
       author="Cap sur le Monde"
       date="15 mars 2024"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=2000&q=80"
+      heroImage={yangonImage}
       introduction="Yangon, ancienne capitale de la Birmanie, est une ville où le temps semble s'être arrêté. Entre **pagodes dorées**, architecture coloniale et marchés animés, elle offre un voyage authentique dans l'âme birmane, loin des circuits touristiques traditionnels. Ici, la ferveur spirituelle côtoie l'héritage britannique dans une atmosphère unique en Asie du Sud-Est."
       contentSections={[
         {

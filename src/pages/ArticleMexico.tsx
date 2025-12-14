@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import mexicoImg from "@/assets/cities/mexico.jpg";
 
 const ArticleMexico = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleMexico = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1518659526872-fae6d3aa4e6b?w=1200"
+      heroImage={mexicoImg}
       introduction="Mexico City, c'est un choc sensoriel permanent. Les sirènes des taxis jaunes, les gratte-ciels qui griffent le ciel, les odeurs de hot-dogs et de bagels, la rumeur incessante de la foule. Manhattan vibre d'une énergie unique, enivrante, épuisante. Ici, tout est démesuré, intense, vivant. Nous avons passé cinq jours à explorer cette métropole fascinante."
       contentSections={[
         {

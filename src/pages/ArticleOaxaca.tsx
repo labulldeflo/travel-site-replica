@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import oaxacaImg from "@/assets/cities/oaxaca.jpg";
 
 const ArticleOaxaca = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleOaxaca = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=1200"
+      heroImage={oaxacaImg}
       introduction="Le Zócalo d'Oaxaca, ombragé par des lauriers géants, est le cœur battant de la ville. Les portales (arcades) qui l'entourent abritent cafés et restaurants où déguster un chocolate caliente oaxaqueño (chocolat chaud local épicé) en observant la vie locale. Les vendeurs de ballons, musiciens mariachis et familles oaxaqueñas créent une ambiance conviviale unique."
       contentSections={[
         {

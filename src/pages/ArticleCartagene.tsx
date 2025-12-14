@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import cartageneImg from "@/assets/cities/cartagene.jpg";
 
 const ArticleCartagene = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleCartagene = () => {
       author="Cap sur le Monde"
       date="16 novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1568632234200-34384a37a58a?w=1200"
+      heroImage={cartageneImg}
       introduction="La vieille ville fortifiée de Carthagène se découvre à pied dans ses ruelles étroites bordées de maisons coloniales jaunes, oranges, roses et bleues. Les balcons en bois débordent de bougainvilliers. La Plaza Santo Domingo avec sa statue de Botero, la cathédrale Santa Catalina, le palais de l'Inquisition témoignent de la richesse architecturale du XVIe siècle. Carthagène fut le port principal de l'empire espagnol en Amérique du Sud."
       contentSections={[
         {

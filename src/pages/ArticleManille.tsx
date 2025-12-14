@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import manilleImage from "@/assets/cities/manille.jpg";
 
 const ArticleManille = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleManille = () => {
       author="Cap sur le Monde"
       date="Mars 2024"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=1200"
+      heroImage={manilleImage}
       introduction="Manille, capitale des Philippines, est une mégapole chaotique et fascinante. Entre patrimoine colonial espagnol, gratte-ciels modernes et énergie tropicale, elle offre un mélange unique d'histoire, de culture et de vie urbaine intense. Porte d'entrée des Philippines, elle mérite qu'on s'y attarde."
       contentSections={[
         {

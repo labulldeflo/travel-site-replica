@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import bogotaImg from "@/assets/cities/bogota.jpg";
 
 const ArticleBogota = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleBogota = () => {
       author="Cap sur le Monde"
       date="16 novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=1200"
+      heroImage={bogotaImg}
       introduction="Le quartier de La Candelaria, centre historique de Bogotá, déploie ses ruelles pavées bordées de maisons coloniales aux façades jaunes, bleues et roses. La Plaza Bolívar concentre les édifices gouvernementaux : Capitole, Cathédrale Primada, Palais de Justice. Les musées d'or et Botero exposent des collections exceptionnelles dans des bâtiments coloniaux restaurés. Flâner dans La Candelaria offre une plongée dans l'histoire coloniale espagnole."
       contentSections={[
         {
