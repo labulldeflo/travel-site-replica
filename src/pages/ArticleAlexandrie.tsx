@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import alexandrieImage from "@/assets/cities/alexandrie.jpg";
 
 const ArticleAlexandrie = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleAlexandrie = () => {
       author="Cap sur le Monde"
       date="8 février 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&w=2000&q=80"
+      heroImage={alexandrieImage}
       introduction="Alexandrie, deuxième ville d'Égypte, respire un **air différent du reste du pays**. Fondée par Alexandre le Grand en 331 av. J.-C., elle fut pendant des siècles la capitale intellectuelle du monde antique, abritant la légendaire Bibliothèque. Tournée vers la Méditerranée, cosmopolite et nostalgique de son passé glorieux, Alexandrie offre une atmosphère unique entre Orient et Occident."
       contentSections={[
         {

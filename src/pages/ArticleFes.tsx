@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import fesImage from "@/assets/cities/fes.jpg";
 
 const ArticleFes = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleFes = () => {
       author="Cap sur le Monde"
       date="18 janvier 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1570829460005-c840387bb1ca"
+      heroImage={fesImage}
       introduction="La médina de Fès el-Bali n'a pas changé depuis le Moyen Âge. Plus de 9 000 ruelles étroites serpentent entre les maisons en pisé, les palais cachés et les mosquées anciennes. Ici, le temps semble s'être arrêté. L'université Al Quaraouiyine, fondée en 859, est considérée comme la plus ancienne université du monde encore en activité."
       contentSections={[
         {

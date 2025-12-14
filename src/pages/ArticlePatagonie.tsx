@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign, Mountain } from "lucide-react";
+import patagonieImage from "@/assets/cities/patagonie.jpg";
 
 const ArticlePatagonie = () => {
   return (
@@ -11,7 +12,7 @@ const ArticlePatagonie = () => {
       author="Cap sur le Monde"
       date="26 janvier 2025"
       readingTime="11 min"
-      heroImage="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80"
+      heroImage={patagonieImage}
       introduction="La Patagonie, c'est la **nature à l'état brut**. Des glaciers qui craquent sous le soleil, des steppes balayées par le vent, des pics enneigés qui percent le ciel… Ici, l'humain se fait tout petit face à l'immensité. Nous avons parcouru la Patagonie pendant trois semaines, de El Calafate à Torres del Paine, en passant par Ushuaïa et Puerto Natales."
       contentSections={[
         {

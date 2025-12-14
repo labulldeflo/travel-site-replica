@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import santiagoImage from "@/assets/cities/santiago.jpg";
 
 const ArticleSantiago = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleSantiago = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1518467896795-91a3f0af7820?w=1200"
+      heroImage={santiagoImage}
       introduction="Santiago, c'est la **modernité andine**. Entre la cordillère enneigée et les quartiers branchés, Santiago nous a surpris par son dynamisme, ses vignobles proches et cette capacité chilienne à allier tradition et modernité. Nous avons passé quatre jours à découvrir cette capitale cosmopolite de 7 millions d'habitants, du cerro San Cristóbal aux vignobles de la vallée de Maipo."
       contentSections={[
         {

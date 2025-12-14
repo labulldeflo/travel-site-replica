@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import arequipaImage from "@/assets/cities/arequipa.jpg";
 
 const ArticleArequipa = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleArequipa = () => {
       author="Cap sur le Monde"
       date="29 janvier 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=2000&q=80"
+      heroImage={arequipaImage}
       introduction="Arequipa, c'est la **beauté coloniale préservée**. Bâtie en pierre volcanique blanche (sillar), la deuxième ville du Pérou rayonne sous le soleil andin, dominée par trois volcans majestueux. Son centre historique, classé UNESCO, et son monastère Santa Catalina font d'Arequipa une étape incontournable. Nous avons passé trois jours à explorer cette ville de caractère, entre architecture baroque-mestizo, gastronomie créole et excursion au Canyon de Colca."
       contentSections={[
         {

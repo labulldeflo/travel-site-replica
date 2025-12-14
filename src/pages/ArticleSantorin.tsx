@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import santorinImage from "@/assets/cities/santorin.jpg";
 
 const ArticleSantorin = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleSantorin = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=2000"
+      heroImage={santorinImage}
       introduction="Santorin, c'est LA carte postale de la Grèce. Celle qu'on voit partout, avec ses maisons blanches étincelantes, ses **dômes bleus azur**, ses escaliers qui serpentent dans la falaise. J'avais peur d'être déçu par tant de photos vues mille fois. Mais en posant le pied sur l'île, j'ai compris : aucune photo ne rend justice à la beauté surréelle de Santorin."
       contentSections={[
         {

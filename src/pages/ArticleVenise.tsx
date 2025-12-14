@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import veniseImage from "@/assets/cities/venise.jpg";
 
 const ArticleVenise = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleVenise = () => {
       author="Cap sur le Monde"
       date="15 juin 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=2000&q=80"
+      heroImage={veniseImage}
       introduction="Venise défie les lois de la gravité et du temps, posée sur l'eau comme un rêve fragile. Ses 118 îles reliées par 400 ponts créent un labyrinthe aquatique unique. Nous avons navigué entre palais gothiques et ruelles silencieuses pendant trois jours, découvrant une ville hors du temps."
       contentSections={[
         {

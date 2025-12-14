@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Droplets, DollarSign } from "lucide-react";
+import iguazuImage from "@/assets/cities/iguazu.jpg";
 
 const ArticleIguazu = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleIguazu = () => {
       author="Cap sur le Monde"
       date="29 janvier 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1589802829985-817e51171b92?auto=format&fit=crop&w=2000&q=80"
+      heroImage={iguazuImage}
       introduction="Les Chutes d'Iguazu offrent un spectacle naturel grandiose. 275 cascades reparties sur 2,7 km deversent 1500 metres cubes par seconde dans un fracas assourdissant. Nous avons passe trois jours entre les cotes argentin et bresilien, immerges dans cette cathedrale naturelle."
       contentSections={[
         {

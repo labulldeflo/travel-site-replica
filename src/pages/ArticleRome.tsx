@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import romeImage from "@/assets/cities/rome.jpg";
 
 const ArticleRome = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleRome = () => {
       author="Cap sur le Monde"
       date="20 mai 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=2000&q=80"
+      heroImage={romeImage}
       introduction="Rome n'est pas une ville, c'est un musée à ciel ouvert où l'Histoire se mêle au quotidien. Du Colisée majestueux aux ruelles du Trastevere, des chefs-d'œuvre du Vatican aux places baroques ornées de fontaines sculptées, chaque coin de rue révèle un trésor. Nous avons passé cinq jours à explorer cette capitale envoûtante, entre vestiges antiques et dolce vita."
       contentSections={[
         {

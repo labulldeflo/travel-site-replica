@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import vancouverImage from "@/assets/cities/vancouver.jpg";
 
 const ArticleVancouver = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleVancouver = () => {
       author="Cap sur le Monde"
       date="25 janvier 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1559511260-66a68e7c23b5?auto=format&fit=crop&w=2000&q=80"
+      heroImage={vancouverImage}
       introduction="Vancouver, c'est le mariage parfait entre urbanité et nature. Les gratte-ciels scintillent face à l'océan Pacifique, les montagnes enneigées encadrent la ville, et les forêts tempérées humides bordent les quartiers. Ici, on peut **skier le matin et faire du kayak l'après-midi**. Nous avons passé quatre jours à découvrir cette ville unique, de Stanley Park au marché de Granville Island."
       contentSections={[
         {
