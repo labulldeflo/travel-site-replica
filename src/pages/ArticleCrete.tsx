@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import creteImage from "@/assets/cities/crete.jpg";
 
 const ArticleCrete = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleCrete = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1580837119756-563d608dd119?q=80&w=2000"
+      heroImage={creteImage}
       introduction="La Crète n'est pas qu'une île grecque parmi d'autres. C'est la plus grande, la plus montagneuse, la plus sauvage. C'est ici que naquit **Zeus** selon la mythologie, c'est ici que s'épanouit la **civilisation minoenne** il y a 4000 ans. La Crète a une identité forte, presque à part dans l'archipel grec."
       contentSections={[
         {

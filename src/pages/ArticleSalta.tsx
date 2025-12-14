@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Mountain, DollarSign } from "lucide-react";
+import saltaImage from "@/assets/cities/salta.jpg";
 
 const ArticleSalta = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleSalta = () => {
       author="Cap sur le Monde"
       date="29 janvier 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1618083707368-b3823daa2726?auto=format&fit=crop&w=2000&q=80"
+      heroImage={saltaImage}
       introduction="Salta rayonne par son architecture coloniale preservee et sa position de porte d'entree vers les paysages spectaculaires du Nord-Ouest argentin. Des montagnes multicolores aux vignobles d'altitude, Salta fascine les voyageurs."
       contentSections={[
         {

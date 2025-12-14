@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import titicacaImage from "@/assets/cities/titicaca.jpg";
 
 const ArticleTiticaca = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleTiticaca = () => {
       author="Cap sur le Monde"
       date="30 janvier 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=2000&q=80"
+      heroImage={titicacaImage}
       introduction="Le Lac Titicaca, c'est **l'Altiplano mystique**. Perché à 3812m d'altitude, ce lac gigantesque (8562 km²) marque la frontière entre Pérou et Bolivie. Selon la légende inca, c'est ici que Manco Cápac et Mama Ocllo, enfants du Soleil, émergèrent pour fonder l'Empire inca. Nous avons passé trois jours à naviguer sur ce lac sacré, de Puno aux îles Uros, Taquile et Amantaní."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import parisImage from "@/assets/cities/paris.jpg";
 
 const ArticleParis = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleParis = () => {
       author="Cap sur le Monde"
       date="5 Mai 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200"
+      heroImage={parisImage}
       introduction="Paris n'a pas besoin de présentation. Ville des amoureux, des artistes et des rêveurs, elle captive par son élégance intemporelle. De la Tour Eiffel au Louvre, des Champs-Élysées à Montmartre, chaque quartier raconte une histoire unique. Flâner le long de la Seine, s'attabler dans un café avec vue sur la rue, déguster des pâtisseries dans une boulangerie traditionnelle... Chaque instant parisien est un petit moment de bonheur."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import borneoImage from "@/assets/cities/borneo.jpg";
 
 const ArticleBorneo = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleBorneo = () => {
       author="Cap sur le Monde"
       date="3 Février 2025"
       readingTime="11 min"
-      heroImage="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=2000&q=80"
+      heroImage={borneoImage}
       introduction="Bornéo est un **sanctuaire de biodiversité** où la nature règne en maître. Entre jungle primaire habitée par les orangs-outans, fonds marins spectaculaires à Sipadan et sommets du Mont Kinabalu, cette île partagée entre la Malaisie et l'Indonésie offre des expériences d'aventure uniques au monde."
       contentSections={[
         {

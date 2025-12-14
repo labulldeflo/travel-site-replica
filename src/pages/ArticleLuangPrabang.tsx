@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import luangPrabangImage from "@/assets/cities/luang-prabang.jpg";
 
 const ArticleLuangPrabang = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleLuangPrabang = () => {
       author="Cap sur le Monde"
       date="15 janvier 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&q=80&w=1200"
+      heroImage={luangPrabangImage}
       introduction="Classée au patrimoine mondial de l'UNESCO, Luang Prabang est une ville hors du temps où la **spiritualité bouddhiste** imprègne chaque rue, chaque temple, chaque lever du jour. Cette ancienne capitale royale du Laos séduit par son atmosphère paisible et ses traditions vivantes."
       contentSections={[
         {

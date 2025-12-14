@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import vangViengImage from "@/assets/cities/vang-vieng.jpg";
 
 const ArticleVangVieng = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleVangVieng = () => {
       author="Cap sur le Monde"
       date="15 janvier 2025"
       readingTime="6 min"
-      heroImage="https://images.unsplash.com/photo-1598974357801-cbfb48f8850b?auto=format&fit=crop&w=2000&q=80"
+      heroImage={vangViengImage}
       introduction="Nichée au cœur de paysages karstiques spectaculaires, Vang Vieng est devenue une **destination nature incontournable** au Laos. Ancienne capitale du tourisme festif, elle s'est réinventée en paradis des activités outdoor. Entre lagunes turquoise, grottes mystérieuses et rivière paisible, c'est une étape rafraîchissante."
       contentSections={[
         {

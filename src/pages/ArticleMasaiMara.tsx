@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import masaiMaraImage from "@/assets/cities/masai-mara.jpg";
 
 const ArticleMasaiMara = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleMasaiMara = () => {
       author="Cap sur le Monde"
       date="18 Mars 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200"
+      heroImage={masaiMaraImage}
       introduction="Le Masai Mara incarne le safari africain absolu. Ici, les plaines dorées s'étendent à l'infini, ponctuées d'acacias solitaires et animées par des milliers d'animaux sauvages. Chaque année, la Grande Migration transforme cette réserve en théâtre naturel où se jouent les scènes les plus spectaculaires de la vie sauvage."
       contentSections={[
         {

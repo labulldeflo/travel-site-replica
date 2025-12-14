@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import vietnamImage from "@/assets/cities/vietnam.jpg";
 
 const ArticleVietnam = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleVietnam = () => {
       author="Cap sur le Monde"
       date="15 janvier 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&q=80"
+      heroImage={vietnamImage}
       introduction="Le Vietnam est une destination envoûtante qui combine harmonieusement **tradition ancestrale et modernité dynamique**. Des plages paradisiaques du sud aux montagnes majestueuses du nord, en passant par les villes animées et les villages traditionnels, ce pays d'Asie du Sud-Est offre une diversité incomparable."
       contentSections={[
         {

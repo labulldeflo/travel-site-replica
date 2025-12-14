@@ -1,10 +1,11 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign, Clock, Calendar } from "lucide-react";
+import losAngelesImage from "@/assets/cities/los-angeles.jpg";
 
 const ArticleLosAngeles = () => {
   return (
     <ArticleTemplate
-      heroImage="https://images.unsplash.com/photo-1534190239940-9ba8944ea261?auto=format&fit=crop&w=2000&q=80"
+      heroImage={losAngelesImage}
       title="Los Angeles : La Cité des Anges"
       subtitle="Entre glamour hollywoodien et plages ensoleillées, la mégalopole californienne qui fait rêver le monde entier"
       category="Amérique"

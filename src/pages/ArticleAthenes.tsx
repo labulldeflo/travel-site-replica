@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import athenesImage from "@/assets/cities/athenes.jpg";
 
 const ArticleAthenes = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleAthenes = () => {
       author="Cap sur le Monde"
       date="Mars 2024"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1555993539-1732b0258235?q=80&w=2000"
+      heroImage={athenesImage}
       introduction="Athènes m'a toujours fasciné bien avant d'y poser les pieds. Cette ville où est née la démocratie, où Socrate philosophait sous les portiques, où le Parthénon domine depuis 2500 ans... Je m'attendais à un musée à ciel ouvert. J'ai découvert une **métropole vibrante** où l'Antiquité dialogue avec la modernité."
       contentSections={[
         {

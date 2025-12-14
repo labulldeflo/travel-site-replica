@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import luangPrabangImage from "@/assets/cities/luang-prabang.jpg";
 
 const ArticleLaos = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleLaos = () => {
       author="Cap sur le Monde"
       date="Janvier 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=2000&q=80"
+      heroImage={luangPrabangImage}
       introduction="Le Laos est le remède parfait à l'agitation du monde moderne. Dans ce pays encore authentique et préservé du tourisme de masse, le temps semble s'écouler différemment. Entre montagnes brumeuses, rivières paisibles et temples bouddhistes, nous avons retrouvé le sens du voyage lent. Notre périple de 14 jours nous a menés de Luang Prabang à Vientiane en passant par les paysages karstiques de Vang Vieng."
       contentSections={[
         {

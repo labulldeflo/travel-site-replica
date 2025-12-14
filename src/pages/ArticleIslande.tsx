@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import islandeImage from "@/assets/cities/islande.jpg";
 
 const ArticleIslande = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleIslande = () => {
       author="Cap sur le Monde"
       date="10 Mars 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1520769945061-0a448c463865?w=1200"
+      heroImage={islandeImage}
       introduction="L'Islande est une destination unique au monde, où la nature règne en maître absolu. Entre geysers bouillonnants, cascades spectaculaires, glaciers millénaires et volcans actifs, cette île nordique offre des paysages à couper le souffle. Notre voyage de 10 jours nous a permis de faire le tour complet de l'île en suivant la mythique Route 1."
       contentSections={[
         {

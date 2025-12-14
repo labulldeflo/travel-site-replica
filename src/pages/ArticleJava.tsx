@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import javaImage from "@/assets/cities/java.jpg";
 
 const ArticleJava = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleJava = () => {
       author="Cap sur le Monde"
       date="31 janvier 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1555400038-63f5ba517a47?auto=format&fit=crop&w=2000&q=80"
+      heroImage={javaImage}
       introduction="Java, c'est le cœur culturel de l'Indonésie. Les temples millénaires se dressent dans la brume matinale, les volcans fument à l'horizon, et les traditions javanaises imprègnent chaque rue. Yogyakarta vibre d'une énergie créative, tandis que les rizières en terrasses dessinent des paysages d'une beauté irréelle. Nous avons passé dix jours à explorer Java, de l'aube brumeuse à Borobudur jusqu'aux nuits animées de Yogyakarta."
       contentSections={[
         {
