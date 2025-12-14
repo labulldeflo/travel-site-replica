@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import timorOrientalImage from "@/assets/cities/timor-oriental.jpg";
 
 const ArticleTimorOriental = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleTimorOriental = () => {
       author="Cap sur le Monde"
       date="15 mars 2024"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1200"
+      heroImage={timorOrientalImage}
       introduction="Le Timor Oriental (Timor-Leste) est l'un des pays les **plus jeunes et méconnus du monde**. Indépendant depuis 2002 après des décennies de conflit, il offre aux voyageurs aventureux des plages désertes, une plongée exceptionnelle, des montagnes sauvages et une culture authentique loin du tourisme de masse."
       contentSections={[
         {

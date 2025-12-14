@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import grandCanyonImg from "@/assets/cities/grand-canyon.jpg";
 
 const ArticleGrandCanyon = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleGrandCanyon = () => {
       author="Cap sur le Monde"
       date="21 janvier 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=1200"
+      heroImage={grandCanyonImg}
       introduction="Le Grand Canyon, c'est **l'humilité face à l'immensité**. Imaginez : 1,6 km de profondeur, des strates rocheuses qui racontent 2 milliards d'années d'histoire de la Terre, et cette lumière qui change d'heure en heure, peignant les falaises en rouge, orange, violet… C'est à couper le souffle. Nous avons passé quatre jours à explorer les rives Nord et Sud, à randonner jusqu'au fond du canyon, et à contempler les levers de soleil depuis les points de vue mythiques."
       contentSections={[
         {

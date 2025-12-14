@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import bruneiImage from "@/assets/cities/brunei.jpg";
 
 const ArticleBrunei = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleBrunei = () => {
       author="Cap sur le Monde"
       date="15 mars 2024"
       readingTime="6 min"
-      heroImage="https://images.unsplash.com/photo-1578469550956-0e16b69c6a3d?auto=format&fit=crop&w=1200"
+      heroImage={bruneiImage}
       introduction="Brunei, petit sultanat enclavé dans la Malaisie sur l'île de Bornéo, est l'un des pays les **plus riches et méconnus d'Asie**. Mosquées somptueuses, villages flottants, jungle primaire et pétrole : découverte d'un État unique, profondément musulman et paisible."
       contentSections={[
         {

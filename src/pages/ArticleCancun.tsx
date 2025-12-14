@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import cancunImg from "@/assets/cities/cancun.jpg";
 
 const ArticleCancun = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleCancun = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1552879890-3a06dd3a06c2?w=1200"
+      heroImage={cancunImg}
       introduction="La zone hôtelière de Cancún s'étire sur 22km le long d'une bande de sable blanc bordée par les eaux turquoise des Caraïbes. Playa Delfines, plage publique moins fréquentée, offre des vagues parfaites pour le bodysurf et un sable poudreux immaculé. L'eau y est chaude toute l'année (26-28°C) et d'une clarté cristalline."
       contentSections={[
         {
