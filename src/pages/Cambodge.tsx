@@ -6,6 +6,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import cambodgeImg from '@/assets/destinations/cambodge.jpg';
+import siemReapImg from '@/assets/cities/siem-reap.jpg';
+import phnomPenhImg from '@/assets/cities/phnom-penh.jpg';
+import sihanoukvilleImg from '@/assets/cities/sihanoukville.jpg';
 
 const Cambodge = () => {
   const cities = [
@@ -13,7 +16,7 @@ const Cambodge = () => {
       name: 'Siem Reap',
       slug: 'siem-reap',
       region: 'Nord',
-      image: 'https://images.unsplash.com/photo-1579156412485-06ce0d3c5955?auto=format&fit=crop&q=80&w=800',
+      image: siemReapImg,
       description: 'Porte d\'entrée vers les temples d\'Angkor, ville touristique animée.',
       highlights: ['Angkor Wat', 'Angkor Thom', 'Ta Prohm', 'Pub Street'],
       duration: '3-4 jours'
@@ -22,7 +25,7 @@ const Cambodge = () => {
       name: 'Phnom Penh',
       slug: 'phnom-penh',
       region: 'Centre',
-      image: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&q=80&w=800',
+      image: phnomPenhImg,
       description: 'Capitale dynamique aux boulevards français et palais royaux.',
       highlights: ['Palais Royal', 'Musée génocide', 'Quais du Mékong', 'Marchés'],
       duration: '2 jours'
@@ -31,7 +34,7 @@ const Cambodge = () => {
       name: 'Sihanoukville',
       slug: 'sihanoukville',
       region: 'Sud',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&q=80&w=800',
+      image: sihanoukvilleImg,
       description: 'Station balnéaire et point de départ vers les îles.',
       highlights: ['Îles paradisiaques', 'Plages', 'Plongée', 'Vie nocturne'],
       duration: '2-3 jours'

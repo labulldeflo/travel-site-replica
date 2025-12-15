@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import saoPauloImg from "@/assets/cities/sao-paulo.jpg";
 
 const ArticleSaoPaulo = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleSaoPaulo = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200"
+      heroImage={saoPauloImg}
       introduction="São Paulo, c'est l'**énergie créative débordante**. Mégapole de 22 millions d'habitants, São Paulo nous a fascinés par sa scène gastronomique de classe mondiale et son identité multiculturelle unique. Cette ville-monde où se côtoient Italiens, Japonais, Libanais et Brésiliens de toutes origines pulse 24h/24."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import provenceImg from "@/assets/cities/provence.jpg";
 
 const ArticleProvence = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleProvence = () => {
       author="Cap sur le Monde"
       date="8 Mai 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1499856871958-5b9627545d1a"
+      heroImage={provenceImg}
       introduction="La Provence est une région qui célèbre la **beauté simple de la vie**. Le soleil généreux, les cigales chantant dans les pins, les marchés provençaux débordant de produits locaux... Ici, le temps semble ralentir pour laisser place à la douceur de vivre méditerranéenne."
       contentSections={[
         {

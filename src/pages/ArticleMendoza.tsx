@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Wine, DollarSign } from "lucide-react";
+import mendozaImg from "@/assets/cities/mendoza.jpg";
 
 const ArticleMendoza = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleMendoza = () => {
       author="Cap sur le Monde"
       date="29 janvier 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
+      heroImage={mendozaImg}
       introduction="Mendoza, c'est le **paradis des amateurs de vin**. Au pied de la cordillère des Andes, cette oasis viticole produit 70% des vins argentins, dont le célèbre Malbec. Entre dégustations raffinées, paysages de haute montagne et culture cuyana chaleureuse, Mendoza séduit. Nous avons passé quatre jours à explorer cette région bénie des dieux, pédalant entre vignobles, grimpant vers l'Aconcagua et savourant l'art de vivre mendocino."
       contentSections={[
         {

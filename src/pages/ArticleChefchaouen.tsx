@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import chefchaouenImg from "@/assets/cities/chefchaouen.jpg";
 
 const ArticleChefchaouen = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleChefchaouen = () => {
       author="Cap sur le Monde"
       date="25 janvier 2025"
       readingTime="6 min"
-      heroImage="https://images.unsplash.com/photo-1539037116277-4db20889f2d4"
+      heroImage={chefchaouenImg}
       introduction="Les murs peints dans différentes nuances de bleu créent une atmosphère unique au monde. La tradition de peindre les maisons en bleu remonterait aux réfugiés juifs qui se sont installés ici dans les années 1930. Se perdre dans les ruelles étroites est un plaisir en soi : partout, des portes colorées, des escaliers pittoresques, des chats endormis au soleil et des habitants chaleureux. C'est le paradis des photographes et des artistes."
       contentSections={[
         {

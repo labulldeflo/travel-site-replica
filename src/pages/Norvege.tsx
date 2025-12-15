@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import norvegeImg from "@/assets/cities/norvege.jpg";
 
 const Norvege = () => {
   const cities = [
@@ -71,7 +72,7 @@ const Norvege = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=80&w=2070')",
+                backgroundImage: `url(${norvegeImg})`,
               }}
             >
               <div className="absolute inset-0 bg-black/40" />

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import baliImg from "@/assets/cities/bali.jpg";
 
 const ArticleBali = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleBali = () => {
       author="Cap sur le Monde"
       date="30 janvier 2025"
       readingTime="11 min"
-      heroImage="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=80"
+      heroImage={baliImg}
       introduction="**Ubud**, nichée dans les montagnes centrales, est l'âme spirituelle de Bali. Dès notre arrivée, nous avons été happés par l'atmosphère paisible des rizières en terrasses qui entourent la ville. La **Forêt des Singes** abrite des centaines de macaques espiègles dans un sanctuaire sacré où les temples anciens se cachent sous la végétation luxuriante."
       contentSections={[
         {
