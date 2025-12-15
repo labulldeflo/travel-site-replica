@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import lasVegasImg from "@/assets/cities/las-vegas.jpg";
 
 const ArticleLasVegas = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleLasVegas = () => {
       author="Cap sur le Monde"
       date="18 janvier 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=2000&q=80"
+      heroImage={lasVegasImg}
       introduction="Las Vegas, c'est **l'Amérique à son paroxysme**. Casinos pharaoniques, répliques de la Tour Eiffel et de Venise, spectacles du Cirque du Soleil, fontaines dansantes... Ici, tout est excessif, clinquant et addictif. On y vient pour vivre l'incroyable, tenter sa chance, assister à des shows époustouflants. Vegas est une bulle hors du temps plantée en plein désert du Nevada. Nous avons passé trois jours et trois nuits à arpenter le Strip pour vous livrer nos meilleurs conseils."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import zurichImg from "@/assets/cities/zurich.jpg";
 
 const ArticleZurich = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleZurich = () => {
       author="Cap sur le Monde"
       date="16 novembre 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80"
+      heroImage={zurichImg}
       introduction="Zurich, métropole financière et culturelle de Suisse, nous a surpris par sa **douceur de vivre**. La vieille ville médiévale côtoie un lac majestueux, avec les Alpes en toile de fond. Ici, on peut skier le matin et se baigner dans le lac l'après-midi. C'est l'excellence suisse dans toute sa splendeur."
       contentSections={[
         {

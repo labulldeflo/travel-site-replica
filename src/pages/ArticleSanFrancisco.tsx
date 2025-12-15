@@ -1,10 +1,11 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import sanFranciscoImg from "@/assets/cities/san-francisco.jpg";
 
 const ArticleSanFrancisco = () => {
   return (
     <ArticleTemplate
-      heroImage="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=2000&q=80"
+      heroImage={sanFranciscoImg}
       title="San Francisco : La Perle de la Baie Californienne"
       subtitle="Entre Golden Gate, collines mythiques et innovation technologique, découvrez la ville emblématique de la côte Ouest"
       category="Amérique"

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import sihanoukvilleImg from "@/assets/cities/sihanoukville.jpg";
 
 const ArticleSihanoukville = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleSihanoukville = () => {
       author="Cap sur le Monde"
       date="15 janvier 2025"
       readingTime="6 min"
-      heroImage="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=1200"
+      heroImage={sihanoukvilleImg}
       introduction="Sihanoukville est la **porte d'entrée vers les îles paradisiaques du Cambodge**. Si la ville elle-même a perdu de son charme, les îles environnantes offrent des plages de rêve et une atmosphère décontractée. Koh Rong et Koh Rong Samloem sont encore relativement préservées du tourisme de masse."
       contentSections={[
         {

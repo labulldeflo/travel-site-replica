@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import siemReapImg from "@/assets/cities/siem-reap.jpg";
 
 const ArticleSiemReap = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleSiemReap = () => {
       author="Cap sur le Monde"
       date="15 janvier 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1579156412485-06ce0d3c5955?auto=format&fit=crop&w=1200"
+      heroImage={siemReapImg}
       introduction="Siem Reap n'est pas seulement la porte d'entrée vers les temples d'Angkor. C'est une **ville vibrante** qui conjugue patrimoine khmer millénaire et énergie contemporaine. Entre lever de soleil sur Angkor Wat et marchés nocturnes animés, cette destination cambodgienne promet des moments inoubliables."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import toscaneImg from "@/assets/cities/toscane.jpg";
 
 const ArticleToscane = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleToscane = () => {
       author="Cap sur le Monde"
       date="22 mai 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=2000&q=80"
+      heroImage={toscaneImg}
       introduction="La Toscane incarne l'Italie éternelle : art, gastronomie et paysages de carte postale. Entre Florence, capitale de la Renaissance, et les collines du Chianti parsemées de cyprès, cette région fascine par son élégance intemporelle. Nous avons parcouru ses routes sinueuses pendant une semaine, de palais Renaissance en villages médiévaux perchés."
       contentSections={[
         {
