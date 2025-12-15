@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import vientianeImg from "@/assets/cities/vientiane.jpg";
 
 const ArticleVientiane = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleVientiane = () => {
       author="Cap sur le Monde"
       date="15 janvier 2025"
       readingTime="5 min"
-      heroImage="https://images.unsplash.com/photo-1570475754286-3c1a5e8e0c6c?auto=format&fit=crop&w=2000&q=80"
+      heroImage={vientianeImg}
       introduction="Vientiane est probablement la **capitale la plus décontractée d'Asie du Sud-Est**. Pas de gratte-ciels ni d'embouteillages, juste des temples dorés, des boulevards ombragés et le Mékong qui coule paisiblement. Une parenthèse apaisante dans un voyage au Laos."
       contentSections={[
         {

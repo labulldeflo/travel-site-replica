@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import salvadorImg from "@/assets/cities/salvador.jpg";
 
 const ArticleSalvador = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleSalvador = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1587840810256-875d2423e8c3?w=1200"
+      heroImage={salvadorImg}
       introduction="Salvador de Bahia, c'est l'**âme afro-brésilienne**. Première capitale du Brésil, Salvador nous a envoûtés par son Pelourinho coloré, ses rythmes hypnotiques de capoeira et cette culture afro-brésilienne vibrante qui imprègne chaque rue. Nous avons passé quatre jours à explorer cette ville où l'héritage africain s'exprime dans toute sa splendeur."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import amazonieImg from "@/assets/cities/amazonie.jpg";
 
 const ArticleAmazonie = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleAmazonie = () => {
       author="Cap sur le Monde"
       date="16 novembre 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1200"
+      heroImage={amazonieImg}
       introduction="Manaus, capitale de l'État d'Amazonas, est une ville de 2 millions d'habitants au cœur de la forêt. Le Théâtre Amazonas, opéra somptueux construit pendant la période faste du caoutchouc, témoigne de la richesse passée. Le Mercado Municipal vend poissons d'Amazonie, fruits exotiques inconnus et plantes médicinales utilisées par les populations indigènes. La rencontre des eaux, où le Rio Negro noir comme de l'encre rejoint l'Amazone couleur café au lait sans se mélanger sur 6km, est un spectacle naturel fascinant."
       contentSections={[
         {

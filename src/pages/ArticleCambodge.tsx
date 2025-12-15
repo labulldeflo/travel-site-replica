@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import cambodgeImg from "@/assets/cities/cambodge.jpg";
 
 const ArticleCambodge = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleCambodge = () => {
       author="Cap sur le Monde"
       date="Février 2025"
       readingTime="12 min"
-      heroImage="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=2000&q=80"
+      heroImage={cambodgeImg}
       introduction="Le Cambodge nous a cueillis par sa douceur. Dans la lumière dorée du matin, les visages sculptés du Bayon souriaient au silence des arbres. Le soir, le Mékong ralentissait nos pas. Entre ces deux temps, nous avons trouvé un pays généreux, simple et intense. Nous avons passé 14 jours à explorer le Cambodge, des temples d'Angkor aux îles du Sud, en passant par Phnom Penh et la côte paisible de Kampot."
       contentSections={[
         {

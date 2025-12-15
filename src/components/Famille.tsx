@@ -41,13 +41,13 @@ const Famille = () => {
     enfants: "Léa (5 ans) et Tom (8 ans)",
     destination: "Tour d'Europe",
     temoignage: "Nos enfants ont adoré découvrir l'Europe en camping-car ! Les conseils des Baroudeurs nous ont permis de préparer un itinéraire adapté avec des activités pour tous les âges.",
-    avatar: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+    avatar: "/placeholder.svg"
   }, {
     famille: "Famille Dubois",
     enfants: "Emma (3 ans)",
     destination: "Costa Rica",
     temoignage: "Le Costa Rica avec notre petite Emma a été magique ! Grâce aux conseils santé et logistique, nous avons pu profiter sereinement de cette aventure tropicale.",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+    avatar: "/placeholder.svg"
   }];
   return <section id="famille" className="py-20 bg-background">
       <div className="container mx-auto px-4">

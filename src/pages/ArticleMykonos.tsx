@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import mykonosImg from "@/assets/cities/mykonos.jpg";
 
 const ArticleMykonos = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleMykonos = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1601581987809-a874a81309c9?q=80&w=2000"
+      heroImage={mykonosImg}
       introduction="Mykonos a une réputation : celle d'une île festive, chère, jet-set. On imagine les yachts, les beach clubs huppés, les soirées jusqu'à l'aube. Tout cela est vrai. Mais Mykonos, c'est aussi des **ruelles blanches immaculées**, des moulins iconiques face à la mer, et une beauté cycladique authentique qui survit sous le vernis glamour."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Fish, DollarSign } from "lucide-react";
+import peninsulaValdesImg from "@/assets/cities/peninsula-valdes.jpg";
 
 const ArticlePeninsulaValdes = () => {
   return (
@@ -11,7 +12,7 @@ const ArticlePeninsulaValdes = () => {
       author="Cap sur le Monde"
       date="29 janvier 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=2000&q=80"
+      heroImage={peninsulaValdesImg}
       introduction="La Péninsule Valdés, c'est le **rendez-vous des géants marins**. Chaque année, des centaines de baleines franches australes rejoignent ces eaux protégées pour s'accoupler et mettre bas. Le spectacle est grandiose : sauts, souffles, nageoires qui claquent… Nous avons passé quatre jours dans cette Patagonie atlantique balayée par les vents, entre observation de baleines, colonies de manchots et steppes infinies."
       contentSections={[
         {

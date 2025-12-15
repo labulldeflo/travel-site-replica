@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign, Mountain } from "lucide-react";
+import torresDelPaineImg from "@/assets/cities/torres-del-paine.jpg";
 
 const ArticleTorresDelPaine = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleTorresDelPaine = () => {
       author="Cap sur le Monde"
       date="16 Novembre 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1542223616-9de9adb5e3e8?w=1200"
+      heroImage={torresDelPaineImg}
       introduction="Torres del Paine, c'est la **Patagonie dans toute sa grandeur**. Au bout du monde, les tours de granit dressées face aux vents patagoniens nous ont offert l'un des plus beaux treks de notre vie, entre glaciers millénaires et pampas sauvages. Le Parc National Torres del Paine est considéré comme l'un des plus beaux parcs au monde, et nous comprenons pourquoi."
       contentSections={[
         {

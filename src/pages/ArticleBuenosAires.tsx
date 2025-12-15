@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import buenosAiresImg from "@/assets/cities/buenos-aires.jpg";
 
 const ArticleBuenosAires = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleBuenosAires = () => {
       author="Cap sur le Monde"
       date="31 janvier 2025"
       readingTime="10 min"
-      heroImage="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=2000&q=80"
+      heroImage={buenosAiresImg}
       introduction="Buenos Aires, c'est l'**Europe sous les tropiques**. Larges avenues bordées de jacarandas, façades haussmanniennes, cafés littéraires, tango sensuel… Cette capitale de 15 millions d'habitants vibre d'une énergie contagieuse, mêlant élégance européenne et passion latine débridée. Nous avons passé cinq jours à arpenter cette métropole fascinante, de La Boca colorée aux librairies d'El Ateneo, en passant par les milongas authentiques de San Telmo."
       contentSections={[
         {
