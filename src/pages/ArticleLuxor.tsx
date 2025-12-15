@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import luxorImg from "@/assets/cities/luxor.jpg";
 
 const ArticleLuxor = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleLuxor = () => {
       author="Cap sur le Monde"
       date="5 Février 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1568322445389-f64ac2515020?w=1200"
+      heroImage={luxorImg}
       introduction="Louxor, l'ancienne Thèbes, fut pendant des siècles la capitale de l'Égypte pharaonique. Cette ville-musée concentre une densité exceptionnelle de monuments antiques : temples gigantesques sur la rive est, nécropoles royales sur la rive ouest. Un voyage dans le temps au cœur de la civilisation des pharaons."
       contentSections={[
         {

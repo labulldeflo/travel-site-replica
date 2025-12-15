@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import phnomPenhImg from "@/assets/cities/phnom-penh.jpg";
 
 const ArticlePhnomPenh = () => {
   return (
@@ -11,7 +12,7 @@ const ArticlePhnomPenh = () => {
       author="Cap sur le Monde"
       date="15 janvier 2025"
       readingTime="6 min"
-      heroImage="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200"
+      heroImage={phnomPenhImg}
       introduction="Phnom Penh, surnommée la Perle de l'Asie dans les années 1920, est une **capitale en pleine renaissance** qui mêle charme colonial français, spiritualité khmère et énergie urbaine contemporaine. C'est une ville de contrastes saisissants où temples dorés côtoient boulevards ombragés."
       contentSections={[
         {

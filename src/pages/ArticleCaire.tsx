@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import cairoImg from "@/assets/cities/cairo.jpg";
 
 const ArticleCaire = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleCaire = () => {
       author="Cap sur le Monde"
       date="1 février 2025"
       readingTime="8 min"
-      heroImage="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=2000&q=80"
+      heroImage={cairoImg}
       introduction="Le Caire, c'est **5000 ans d'histoire concentrés** dans une mégapole de 20 millions d'habitants. Capitale de l'Égypte, elle abrite les dernières merveilles du monde antique encore debout : les Pyramides de Gizeh. Mais Le Caire est bien plus que ses vestiges pharaoniques. C'est une ville vibrante, chaotique et fascinante qui mêle héritage islamique, architecture coloniale et modernité."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import limaImg from "@/assets/cities/lima.jpg";
 
 const ArticleLima = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleLima = () => {
       author="Cap sur le Monde"
       date="28 janvier 2025"
       readingTime="9 min"
-      heroImage="https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=2000&q=80"
+      heroImage={limaImg}
       introduction="Lima, c'est la **révolution culinaire sud-américaine**. Cette capitale face au Pacifique abrite les meilleurs restaurants du continent, où les chefs réinventent la cuisine péruvienne avec des produits d'exception. Mais Lima, c'est aussi l'histoire coloniale, les falaises de Miraflores et l'effervescence cosmopolite. Nous avons passé quatre jours à explorer cette métropole de 10 millions d'habitants, de la Plaza de Armas historique aux falaises romantiques de Miraflores."
       contentSections={[
         {

@@ -1,5 +1,6 @@
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { MapPin, Coffee, DollarSign } from "lucide-react";
+import alpesImg from "@/assets/cities/alpes.jpg";
 
 const ArticleAlpes = () => {
   return (
@@ -11,7 +12,7 @@ const ArticleAlpes = () => {
       author="Cap sur le Monde"
       date="12 Mai 2025"
       readingTime="7 min"
-      heroImage="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200"
+      heroImage={alpesImg}
       introduction="Les Alpes françaises offrent un terrain de jeu exceptionnel pour les amoureux de nature et de montagne. Du massif du Mont Blanc aux stations alpines réputées, en passant par les lacs d'Annecy et du Bourget, cette région allie beauté sauvage et patrimoine montagnard."
       contentSections={[
         {
