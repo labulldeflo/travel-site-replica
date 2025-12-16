@@ -2,6 +2,9 @@ import { MapPin, Calendar, Users } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import islandeImg from '@/assets/cities/islande.jpg';
+import baliImg from '@/assets/cities/bali.jpg';
+import patagonieImg from '@/assets/cities/patagonie.jpg';
 
 const Voyages = () => {
   const { t } = useTranslation();
@@ -9,7 +12,7 @@ const Voyages = () => {
     {
       id: 1,
       title: t('voyages.destinations.iceland.title'),
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: islandeImg,
       location: t('voyages.destinations.iceland.location'),
       duration: t('voyages.destinations.iceland.duration'),
       travelers: t('voyages.destinations.iceland.travelers'),
@@ -20,7 +23,7 @@ const Voyages = () => {
     {
       id: 2,
       title: t('voyages.destinations.bali.title'),
-      image: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: baliImg,
       location: t('voyages.destinations.bali.location'),
       duration: t('voyages.destinations.bali.duration'),
       travelers: t('voyages.destinations.bali.travelers'),
@@ -31,7 +34,7 @@ const Voyages = () => {
     {
       id: 3,
       title: t('voyages.destinations.patagonia.title'),
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: patagonieImg,
       location: t('voyages.destinations.patagonia.location'),
       duration: t('voyages.destinations.patagonia.duration'),
       travelers: t('voyages.destinations.patagonia.travelers'),

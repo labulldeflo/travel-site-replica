@@ -5,8 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-// TODO: Importer l'image de la ville/région
-// import cityImage from "@/assets/cities/nom-ville.jpg";
+import defaultCityImage from "@/assets/cities/rome.jpg";
 
 // =================================================================
 // COMPOSANT RÉUTILISABLE - Ne pas modifier
@@ -52,8 +51,7 @@ const ArticleTemplate = () => {
         <header
           className="relative h-[65vh] md:h-[75vh] bg-cover bg-center"
           style={{ 
-            // TODO: Remplacer par l'image importée
-            backgroundImage: "url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9')" 
+            backgroundImage: `url(${defaultCityImage})` 
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10"></div>

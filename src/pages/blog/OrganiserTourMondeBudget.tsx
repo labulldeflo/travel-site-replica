@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import AffiliateWidget from '@/components/AffiliateWidget';
+import tourMondeBudgetImg from '@/assets/blog/tour-monde-budget.jpg';
 
 const OrganiserTourMondeBudget = () => {
   return (
@@ -19,7 +20,7 @@ const OrganiserTourMondeBudget = () => {
         <main className="pt-24">
           <header
             className="relative h-[65vh] bg-cover bg-center"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1488646953014-85cb44e25828')" }}
+            style={{ backgroundImage: `url(${tourMondeBudgetImg})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
             <div className="relative container mx-auto px-4 h-full flex items-end pb-16">
