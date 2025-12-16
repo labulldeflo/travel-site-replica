@@ -6,6 +6,9 @@ import { Clock, MapPin, Star, Users, Camera, Utensils, Building } from 'lucide-r
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import laosImg from '@/assets/destinations/laos.jpg';
+import luangPrabangImg from '@/assets/cities/luang-prabang.jpg';
+import vangViengImg from '@/assets/cities/vang-vieng.jpg';
+import vientianeImg from '@/assets/cities/vientiane.jpg';
 
 const Laos = () => {
   const cities = [
@@ -13,7 +16,7 @@ const Laos = () => {
       name: 'Luang Prabang',
       slug: 'luang-prabang',
       region: 'Nord',
-      image: 'https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&q=80&w=800',
+      image: luangPrabangImg,
       description: 'Joyau spirituel classé UNESCO, entre Mékong et montagnes.',
       highlights: ['Temples bouddhistes', 'Cascades Kuang Si', 'Marché de nuit', 'Aumône des moines'],
       duration: '3-4 jours'
@@ -22,7 +25,7 @@ const Laos = () => {
       name: 'Vang Vieng',
       slug: 'vang-vieng',
       region: 'Centre',
-      image: 'https://images.unsplash.com/photo-1598974357801-cbfb48f8850b?auto=format&fit=crop&q=80&w=800',
+      image: vangViengImg,
       description: 'Paysages karstiques spectaculaires et activités nature.',
       highlights: ['Tubing', 'Grottes', 'Montgolfière', 'Lagunes bleues'],
       duration: '2-3 jours'
@@ -31,7 +34,7 @@ const Laos = () => {
       name: 'Vientiane',
       slug: 'vientiane',
       region: 'Sud',
-      image: 'https://images.unsplash.com/photo-1570475754286-3c1a5e8e0c6c?auto=format&fit=crop&q=80&w=800',
+      image: vientianeImg,
       description: 'Capitale paisible aux temples dorés et ambiance décontractée.',
       highlights: ['Pha That Luang', 'Patuxai', 'Bouddha Park', 'Bords du Mékong'],
       duration: '1-2 jours'

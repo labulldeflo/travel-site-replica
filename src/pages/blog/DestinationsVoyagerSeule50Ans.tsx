@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import voyagerSeuleImg from '@/assets/blog/voyager-seule-50-ans.jpg';
 
 const DestinationsVoyagerSeule50Ans = () => {
   return (
@@ -18,7 +19,7 @@ const DestinationsVoyagerSeule50Ans = () => {
         <main className="pt-24">
           <header
             className="relative h-[65vh] bg-cover bg-center"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1502920917128-1aa500764cbd')" }}
+            style={{ backgroundImage: `url(${voyagerSeuleImg})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
             <div className="relative container mx-auto px-4 h-full flex items-end pb-16">

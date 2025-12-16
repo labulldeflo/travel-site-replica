@@ -2,6 +2,15 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Clock, DollarSign, Compass, Calendar } from "lucide-react";
+import thailandeImg from "@/assets/destinations/thailande.jpg";
+import laosImg from "@/assets/destinations/laos.jpg";
+import birmanieImg from "@/assets/destinations/birmanie.jpg";
+import malaisieImg from "@/assets/destinations/malaisie.jpg";
+import singapourImg from "@/assets/destinations/singapour.jpg";
+import indonesieImg from "@/assets/destinations/indonesie.jpg";
+import philippinesImg from "@/assets/destinations/philippines.jpg";
+import bruneiImg from "@/assets/destinations/brunei.jpg";
+import timorOrientalImg from "@/assets/destinations/timor-oriental.jpg";
 
 const countries = [
   {
@@ -14,8 +23,7 @@ const countries = [
     difficulty: "Facile",
     season: "Nov-Avr",
     highlights: ["Bangkok", "Chiang Mai", "Phuket", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    image: thailandeImg,
   },
   {
     name: "Laos",
@@ -27,8 +35,7 @@ const countries = [
     difficulty: "Facile",
     season: "Nov-Mar",
     highlights: ["Luang Prabang", "Vang Vieng", "Pakse", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1603297631964-facdccb9a4d2?auto=format&fit=crop&w=800&q=80",
+    image: laosImg,
   },
   {
     name: "Birmanie (Myanmar)",
@@ -40,8 +47,7 @@ const countries = [
     difficulty: "Modérée",
     season: "Nov-Fév",
     highlights: ["Bagan", "Lac Inle", "Yangon", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80",
+    image: birmanieImg,
   },
   {
     name: "Malaisie",
@@ -53,8 +59,7 @@ const countries = [
     difficulty: "Facile",
     season: "Déc-Mar",
     highlights: ["Kuala Lumpur", "Langkawi", "Bornéo", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1562767058-f84a1b1b9b2d?auto=format&fit=crop&w=800&q=80",
+    image: malaisieImg,
   },
   {
     name: "Singapour",
@@ -66,8 +71,7 @@ const countries = [
     difficulty: "Facile",
     season: "Toute l'année",
     highlights: ["Marina Bay Sands", "Gardens by the Bay", "Chinatown", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1494600153360-9d7c748b103e?auto=format&fit=crop&w=800&q=80",
+    image: singapourImg,
   },
   {
     name: "Indonésie",
@@ -79,8 +83,7 @@ const countries = [
     difficulty: "Modérée",
     season: "Mai-Oct",
     highlights: ["Bali", "Java", "Komodo", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    image: indonesieImg,
   },
   {
     name: "Philippines",
@@ -92,8 +95,7 @@ const countries = [
     difficulty: "Facile",
     season: "Nov-Mai",
     highlights: ["Palawan", "Cebu", "Bohol", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=800&q=80",
+    image: philippinesImg,
   },
   {
     name: "Brunei",
@@ -105,8 +107,7 @@ const countries = [
     difficulty: "Facile",
     season: "Nov-Mar",
     highlights: ["Bandar Seri Begawan", "Kampong Ayer", "Ulu Temburong", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1577806712664-2d19b6bce9f0?auto=format&fit=crop&w=800&q=80",
+    image: bruneiImg,
   },
   {
     name: "Timor oriental",
@@ -118,8 +119,7 @@ const countries = [
     difficulty: "Modérée",
     season: "Mai-Nov",
     highlights: ["Dili", "Atauro", "Maubisse", "+1"],
-    image:
-      "https://images.unsplash.com/photo-1611213384898-8b0c3c2d7ef3?auto=format&fit=crop&w=800&q=80",
+    image: timorOrientalImg,
   },
 ];
 

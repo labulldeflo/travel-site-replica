@@ -14,13 +14,13 @@
 
 import ArticleTemplate from "@/components/ArticleTemplate";
 import { Calendar, Clock, DollarSign, MapPin } from "lucide-react";
-// import villeImg from "@/assets/cities/votre-ville.jpg"; // Importer votre image
+import tokyoImg from "@/assets/cities/bangkok.jpg"; // Using Bangkok as a placeholder for Tokyo
 
 const ArticleTemplateExample = () => {
   return (
     <ArticleTemplate
       // === HERO SECTION ===
-      heroImage="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600"
+      heroImage={tokyoImg}
       heroImageAlt="Vue panoramique de la ville avec ses monuments emblématiques"
       title="Tokyo : entre modernité et tradition"
       subtitle="La capitale nippone nous a fascinés par ses contrastes saisissants."

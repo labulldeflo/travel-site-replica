@@ -7,6 +7,12 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import tourMondeBudgetImg from '@/assets/blog/tour-monde-budget.jpg';
+import voyagerSeuleImg from '@/assets/blog/voyager-seule-50-ans.jpg';
+import roadTripEuropeImg from '@/assets/blog/road-trip-europe.jpg';
+import asieSudEstImg from '@/assets/blog/asie-sud-est-budget.jpg';
+import destinations2025Img from '@/assets/blog/destinations-2025.jpg';
+import checklistVoyageImg from '@/assets/blog/checklist-voyage.jpg';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Tous');
@@ -28,7 +34,7 @@ const Blog = () => {
       slug: 'organiser-tour-monde-budget-limite',
       excerpt: 'Découvrez nos astuces pour réaliser votre rêve de tour du monde sans vous ruiner. Budget, itinéraires et conseils pratiques.',
       category: 'Organisation & Budget',
-      image: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=800',
+      image: tourMondeBudgetImg,
       date: '2025-01-15',
       readTime: '8 min',
       featured: true
@@ -39,7 +45,7 @@ const Blog = () => {
       slug: 'destinations-voyager-seule-50-ans',
       excerpt: 'Des destinations sûres, enrichissantes et parfaitement adaptées aux femmes qui souhaitent voyager en solo.',
       category: 'Voyager seule à 50 ans',
-      image: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&q=80&w=800',
+      image: voyagerSeuleImg,
       date: '2025-01-12',
       readTime: '6 min',
       featured: true
@@ -50,7 +56,7 @@ const Blog = () => {
       slug: 'road-trip-europe-itineraires',
       excerpt: 'Parcourez l\'Europe en voiture avec nos 3 itinéraires testés et approuvés : côte adriatique, fjords norvégiens et route des châteaux.',
       category: 'Road Trips & Aventures',
-      image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800',
+      image: roadTripEuropeImg,
       date: '2025-01-10',
       readTime: '10 min',
       featured: false
@@ -61,7 +67,7 @@ const Blog = () => {
       slug: 'asie-sud-est-budget-30-euros',
       excerpt: 'L\'Asie du Sud-Est reste la destination la plus abordable. Voici comment optimiser votre budget sans sacrifier le confort.',
       category: 'Destinations abordables',
-      image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=800',
+      image: asieSudEstImg,
       date: '2025-01-08',
       readTime: '7 min',
       featured: false
@@ -72,7 +78,7 @@ const Blog = () => {
       slug: 'destinations-coup-de-coeur-2025',
       excerpt: 'Découvrez mes 5 destinations préférées pour cette année : authenticité, beauté et expériences inoubliables garanties.',
       category: 'Inspiration Voyage',
-      image: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=800',
+      image: destinations2025Img,
       date: '2025-01-05',
       readTime: '5 min',
       featured: false
@@ -83,7 +89,7 @@ const Blog = () => {
       slug: 'checklist-preparer-voyage',
       excerpt: 'Ne rien oublier avant le départ ! Notre check-list complète couvre tous les aspects de la préparation voyage.',
       category: 'Organisation & Budget',
-      image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800',
+      image: checklistVoyageImg,
       date: '2025-01-03',
       readTime: '6 min',
       featured: false
