@@ -23,7 +23,7 @@ const Hero = () => {
       {/* ✨ Contenu */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <div className="mb-8">
-          <h1 className="font-script text-6xl md:text-8xl font-bold mb-4 drop-shadow-lg text-sky-500 px-[52px] py-0 mx-0">
+          <h1 className="font-script text-4xl sm:text-6xl md:text-8xl font-bold mb-4 drop-shadow-lg text-sky-500 px-4 md:px-0">
             {t("hero.title")}
           </h1>
 
