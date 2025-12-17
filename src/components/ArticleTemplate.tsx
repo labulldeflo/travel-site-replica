@@ -205,7 +205,10 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                     {section.title}
                   </h2>
                   {typeof section.content === 'string' ? (
-                    <p className="text-gray-700 leading-relaxed">{section.content}</p>
+                    <div 
+                      className="text-gray-700 leading-relaxed space-y-4"
+                      dangerouslySetInnerHTML={{ __html: section.content }}
+                    />
                   ) : (
                     section.content
                   )}
@@ -266,7 +269,10 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                   {practicalTips.map((tip, index) => (
                     <div key={index}>
                       <h3 className="font-bold text-ocean text-xl mb-2">{tip.title}</h3>
-                      <p className="text-gray-700 leading-relaxed">{tip.content}</p>
+                      <div 
+                        className="text-gray-700 leading-relaxed"
+                        dangerouslySetInnerHTML={{ __html: tip.content }}
+                      />
                     </div>
                   ))}
                 </div>
