@@ -61,12 +61,12 @@ const Conseils = () => {
                   {/* Read More Link */}
                   <Link 
                     to={
-                      index === 0 ? '/guide-budget' :
-                      index === 1 ? '/guide-vol' :
-                      index === 2 ? '/guide-planification' :
-                      index === 3 ? '/guide-securite' :
-                      index === 4 ? '/guide-photo' :
-                      '/guide-couple'
+                      index === 0 ? '/guides/budget' :
+                      index === 1 ? '/guides/vol' :
+                      index === 2 ? '/guides/planification' :
+                      index === 3 ? '/guides/securite' :
+                      index === 4 ? '/guides/photo' :
+                      '/guides/couple'
                     }
                     className="text-ocean font-semibold text-sm hover:underline group-hover:translate-x-2 transition-transform duration-300 inline-block"
                   >
