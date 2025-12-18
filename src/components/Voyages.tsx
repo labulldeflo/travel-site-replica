@@ -18,7 +18,7 @@ const Voyages = () => {
       travelers: t('voyages.destinations.iceland.travelers'),
       description: t('voyages.destinations.iceland.description'),
       highlights: t('voyages.destinations.iceland.highlights', { returnObjects: true }) as string[],
-      link: "/article-islande"
+      link: "/destinations/islande/reykjavik"
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ const Voyages = () => {
       travelers: t('voyages.destinations.bali.travelers'),
       description: t('voyages.destinations.bali.description'),
       highlights: t('voyages.destinations.bali.highlights', { returnObjects: true }) as string[],
-      link: "/article-indonesie"
+      link: "/destinations/indonesie/bali"
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const Voyages = () => {
       travelers: t('voyages.destinations.patagonia.travelers'),
       description: t('voyages.destinations.patagonia.description'),
       highlights: t('voyages.destinations.patagonia.highlights', { returnObjects: true }) as string[],
-      link: "/article-patagonie"
+      link: "/destinations/argentine/patagonie"
     }
   ];
 
