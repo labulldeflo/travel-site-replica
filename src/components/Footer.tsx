@@ -1,11 +1,13 @@
 import { Instagram, Facebook, Youtube, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import travelGlobe from '@/assets/travel-globe.jpg';
+
 const Footer = () => {
-  const {
-    t
-  } = useTranslation();
-  return <footer className="bg-sand py-16">
+  const { t } = useTranslation();
+  
+  return (
+    <footer className="bg-sand py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Main Footer Content */}
@@ -67,10 +69,10 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold text-foreground mb-4">{t('footer.navigation')}</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.home')}</a></li>
-                <li><a href="#voyages" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.trips')}</a></li>
-                <li><a href="#conseils" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.tips')}</a></li>
-                <li><a href="#about" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.whoWeAre')}</a></li>
+                <li><Link to="/" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.home')}</Link></li>
+                <li><Link to="/destinations" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.trips')}</Link></li>
+                <li><Link to="/guides" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.tips')}</Link></li>
+                <li><Link to="/a-propos" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.whoWeAre')}</Link></li>
               </ul>
             </div>
 
@@ -79,8 +81,8 @@ const Footer = () => {
               <h4 className="text-lg font-semibold text-foreground mb-4">{t('footer.contact')}</h4>
               <ul className="space-y-2">
                 <li><a href="mailto:contact@lesdeuxpetitsbaroudeurs.com" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.email')}</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.newsletter')}</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.partnerships')}</a></li>
+                <li><Link to="/ressources-gratuites" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.newsletter')}</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.partnerships')}</Link></li>
               </ul>
             </div>
           </div>
@@ -92,14 +94,16 @@ const Footer = () => {
                 {t('footer.rights')}
               </p>
               <div className="flex space-x-6 text-sm">
-                <a href="#" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.legal')}</a>
-                <a href="#" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.privacy')}</a>
-                <a href="#" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.terms')}</a>
+                <Link to="/a-propos" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.legal')}</Link>
+                <Link to="/a-propos" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.privacy')}</Link>
+                <Link to="/a-propos" className="text-muted-foreground hover:text-ocean transition-colors duration-300">{t('footer.terms')}</Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

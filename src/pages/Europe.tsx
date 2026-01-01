@@ -222,9 +222,9 @@ const Europe = () => {
 
                       {/* CTA */}
                       <Button className="w-full mt-4" asChild>
-                        <a href={`/destinations/${destination.slug}`}>
+                        <Link to={`/destinations/${destination.slug}`}>
                           {t('destinations.discover')} {destination.name}
-                        </a>
+                        </Link>
                       </Button>
                     </div>
                   </CardContent>
