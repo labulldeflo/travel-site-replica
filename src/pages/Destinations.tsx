@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
@@ -153,21 +154,21 @@ const Destinations = () => {
                 if (region.key === 'europe') {
                   return (
                     <Button key={region.key} variant="outline" asChild className="mb-2">
-                      <a href="/europe">{t(`regions.${region.key}`)}</a>
+                      <Link to="/europe">{t(`regions.${region.key}`)}</Link>
                     </Button>
                   );
                 }
                 if (region.key === 'america') {
                   return (
                     <Button key={region.key} variant="outline" asChild className="mb-2">
-                      <a href="/amerique">{t(`regions.${region.key}`)}</a>
+                      <Link to="/amerique">{t(`regions.${region.key}`)}</Link>
                     </Button>
                   );
                 }
                 if (region.key === 'africa') {
                   return (
                     <Button key={region.key} variant="outline" asChild className="mb-2">
-                      <a href="/afrique">{t(`regions.${region.key}`)}</a>
+                      <Link to="/afrique">{t(`regions.${region.key}`)}</Link>
                     </Button>
                   );
                 }
@@ -240,9 +241,9 @@ const Destinations = () => {
 
                       {/* CTA */}
                       <Button className="w-full mt-4" asChild>
-                        <a href={`/destinations/${destination.slug}`}>
+                        <Link to={`/destinations/${destination.slug}`}>
                           {t('destinations.discover')} {destination.name}
-                        </a>
+                        </Link>
                       </Button>
                     </div>
                   </CardContent>
