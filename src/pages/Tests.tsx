@@ -557,14 +557,14 @@ const Tests = () => {
                       </div>
 
                       {/* Price & CTA */}
-                      <div className="flex items-center justify-between pt-2">
+                      <div className="flex flex-col items-center gap-3 pt-2">
                         <span className="text-2xl font-bold text-ocean">{product.price}</span>
                         <Button 
-                          className="bg-[#FF9900] hover:bg-[#FF9900]/90 text-black font-semibold"
+                          className="w-full bg-[#FF9900] hover:bg-[#FF9900]/90 text-black font-semibold"
                           onClick={() => window.open(product.amazonLink, '_blank')}
                         >
                           <ShoppingCart className="h-4 w-4 mr-1" />
-                          Amazon
+                          Voir sur Amazon
                           <ExternalLink className="h-3 w-3 ml-1" />
                         </Button>
                       </div>
