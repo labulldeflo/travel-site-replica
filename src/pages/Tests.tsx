@@ -9,15 +9,26 @@ import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-// Import images
-import chaussuresImg from '@/assets/tests/chaussures-voyage.jpg';
-import sacImg from '@/assets/tests/sac-voyage.jpg';
-import oreillerImg from '@/assets/tests/oreiller-voyage.jpg';
-import batterieImg from '@/assets/tests/batterie-externe.jpg';
-import vesteImg from '@/assets/tests/veste-pluie.jpg';
-import cubesImg from '@/assets/tests/cubes-rangement.jpg';
-import casqueImg from '@/assets/tests/casque-audio.jpg';
-import appareilImg from '@/assets/tests/appareil-photo.jpg';
+// Import images - Chaussures
+import salomonImg from '@/assets/tests/salomon-ultra-4.jpg';
+import merrellImg from '@/assets/tests/merrell-moab-3.jpg';
+import columbiaImg from '@/assets/tests/columbia-redmond.jpg';
+// Import images - Sacs
+import ospreyImg from '@/assets/tests/osprey-farpoint.jpg';
+import decathlonSacImg from '@/assets/tests/decathlon-travel-100.jpg';
+import patagoniaBlackholeImg from '@/assets/tests/patagonia-blackhole.jpg';
+// Import images - Confort
+import cabeauImg from '@/assets/tests/cabeau-evolution.jpg';
+import trtlImg from '@/assets/tests/trtl-pillow.jpg';
+import basicPillowImg from '@/assets/tests/basic-pillow.jpg';
+// Import images - Electronique
+import ankerImg from '@/assets/tests/anker-powercore.jpg';
+import sonyHeadphonesImg from '@/assets/tests/sony-wh1000xm5.jpg';
+import sonyCameraImg from '@/assets/tests/sony-zve10.jpg';
+// Import images - Vêtements
+import arcteryxImg from '@/assets/tests/arcteryx-beta.jpg';
+import patagoniaTorrentshellImg from '@/assets/tests/patagonia-torrentshell.jpg';
+import eagleCreekImg from '@/assets/tests/eagle-creek-cubes.jpg';
 
 const Tests = () => {
   const { t } = useTranslation();
@@ -36,7 +47,7 @@ const Tests = () => {
       {
         id: 1,
         name: 'Salomon X Ultra 4 GTX',
-        image: chaussuresImg,
+        image: salomonImg,
         rating: 4.8,
         price: '149,00€',
         amazonLink: 'https://www.amazon.fr/dp/B08YNDM95G?tag=capsurlemonde-21',
@@ -51,7 +62,7 @@ const Tests = () => {
       {
         id: 2,
         name: 'Merrell Moab 3 Mid',
-        image: chaussuresImg,
+        image: merrellImg,
         rating: 4.5,
         price: '119,00€',
         amazonLink: 'https://www.amazon.fr/dp/B09V1Z5YCT?tag=capsurlemonde-21',
@@ -66,7 +77,7 @@ const Tests = () => {
       {
         id: 3,
         name: 'Columbia Redmond III',
-        image: chaussuresImg,
+        image: columbiaImg,
         rating: 4.2,
         price: '89,00€',
         amazonLink: 'https://www.amazon.fr/dp/B08XWPZ5C8?tag=capsurlemonde-21',
@@ -83,7 +94,7 @@ const Tests = () => {
       {
         id: 4,
         name: 'Osprey Farpoint 40',
-        image: sacImg,
+        image: ospreyImg,
         rating: 4.9,
         price: '169,00€',
         amazonLink: 'https://www.amazon.fr/dp/B07P8YQDZ5?tag=capsurlemonde-21',
@@ -98,7 +109,7 @@ const Tests = () => {
       {
         id: 5,
         name: 'Decathlon Forclaz Travel 100 40L',
-        image: sacImg,
+        image: decathlonSacImg,
         rating: 4.3,
         price: '59,00€',
         amazonLink: 'https://www.amazon.fr/dp/B09KPYQVWM?tag=capsurlemonde-21',
@@ -113,7 +124,7 @@ const Tests = () => {
       {
         id: 6,
         name: 'Patagonia Black Hole 40L',
-        image: sacImg,
+        image: patagoniaBlackholeImg,
         rating: 4.6,
         price: '159,00€',
         amazonLink: 'https://www.amazon.fr/dp/B09FDJGJM9?tag=capsurlemonde-21',
@@ -130,7 +141,7 @@ const Tests = () => {
       {
         id: 7,
         name: 'Cabeau Evolution S3',
-        image: oreillerImg,
+        image: cabeauImg,
         rating: 4.7,
         price: '49,00€',
         amazonLink: 'https://www.amazon.fr/dp/B07PMSM1XY?tag=capsurlemonde-21',
@@ -145,7 +156,7 @@ const Tests = () => {
       {
         id: 8,
         name: 'Trtl Pillow Plus',
-        image: oreillerImg,
+        image: trtlImg,
         rating: 4.4,
         price: '59,00€',
         amazonLink: 'https://www.amazon.fr/dp/B08CXM4HJ5?tag=capsurlemonde-21',
@@ -160,7 +171,7 @@ const Tests = () => {
       {
         id: 9,
         name: 'Amazon Basics Coussin Voyage',
-        image: oreillerImg,
+        image: basicPillowImg,
         rating: 3.8,
         price: '12,00€',
         amazonLink: 'https://www.amazon.fr/dp/B01KGRVPCE?tag=capsurlemonde-21',
@@ -177,7 +188,7 @@ const Tests = () => {
       {
         id: 10,
         name: 'Anker PowerCore 26800mAh',
-        image: batterieImg,
+        image: ankerImg,
         rating: 4.8,
         price: '65,00€',
         amazonLink: 'https://www.amazon.fr/dp/B07XRJZXKY?tag=capsurlemonde-21',
@@ -192,7 +203,7 @@ const Tests = () => {
       {
         id: 11,
         name: 'Sony WH-1000XM5',
-        image: casqueImg,
+        image: sonyHeadphonesImg,
         rating: 4.9,
         price: '349,00€',
         amazonLink: 'https://www.amazon.fr/dp/B0B6QL9VCN?tag=capsurlemonde-21',
@@ -207,7 +218,7 @@ const Tests = () => {
       {
         id: 12,
         name: 'Sony ZV-E10',
-        image: appareilImg,
+        image: sonyCameraImg,
         rating: 4.7,
         price: '699,00€',
         amazonLink: 'https://www.amazon.fr/dp/B09DTL2V86?tag=capsurlemonde-21',
@@ -224,7 +235,7 @@ const Tests = () => {
       {
         id: 13,
         name: 'Arc\'teryx Beta LT',
-        image: vesteImg,
+        image: arcteryxImg,
         rating: 4.9,
         price: '500,00€',
         amazonLink: 'https://www.amazon.fr/dp/B09K7DJPYM?tag=capsurlemonde-21',
@@ -239,7 +250,7 @@ const Tests = () => {
       {
         id: 14,
         name: 'Patagonia Torrentshell 3L',
-        image: vesteImg,
+        image: patagoniaTorrentshellImg,
         rating: 4.5,
         price: '179,00€',
         amazonLink: 'https://www.amazon.fr/dp/B08DHYNMWC?tag=capsurlemonde-21',
@@ -254,7 +265,7 @@ const Tests = () => {
       {
         id: 15,
         name: 'Eagle Creek Pack-It Cubes',
-        image: cubesImg,
+        image: eagleCreekImg,
         rating: 4.6,
         price: '35,00€',
         amazonLink: 'https://www.amazon.fr/dp/B06XGT66FK?tag=capsurlemonde-21',
