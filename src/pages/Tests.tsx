@@ -376,11 +376,11 @@ const Tests = () => {
               
               <Card className="max-w-4xl mx-auto overflow-hidden border-2 border-sunset/30 shadow-elegant">
                 <div className="md:flex">
-                  <div className="md:w-2/5 relative">
+                  <div className="md:w-2/5 relative bg-white">
                     <img 
                       src={favoriteProduct.image} 
                       alt={favoriteProduct.name}
-                      className="w-full h-64 md:h-full object-cover"
+                      className="w-full h-64 md:h-full object-contain p-4"
                     />
                     <Badge className="absolute top-4 left-4 bg-sunset text-white">
                       ❤️ Favori
@@ -396,14 +396,14 @@ const Tests = () => {
                     <h3 className="text-2xl font-elegant font-bold mb-2">{favoriteProduct.name}</h3>
                     <p className="text-muted-foreground mb-4">{favoriteProduct.shortDesc}</p>
                     
-                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 text-sm">
                       <div>
                         <h4 className="font-semibold text-green-600 mb-2 flex items-center gap-1">
                           <CheckCircle className="h-4 w-4" /> Points forts
                         </h4>
                         <ul className="space-y-1">
-                          {favoriteProduct.pros.map((pro, i) => (
-                            <li key={i} className="text-muted-foreground">• {pro}</li>
+                          {favoriteProduct.pros.slice(0, 3).map((pro, i) => (
+                            <li key={i} className="text-muted-foreground text-xs sm:text-sm">• {pro}</li>
                           ))}
                         </ul>
                       </div>
@@ -413,7 +413,7 @@ const Tests = () => {
                         </h4>
                         <ul className="space-y-1">
                           {favoriteProduct.cons.map((con, i) => (
-                            <li key={i} className="text-muted-foreground">• {con}</li>
+                            <li key={i} className="text-muted-foreground text-xs sm:text-sm">• {con}</li>
                           ))}
                         </ul>
                       </div>
@@ -424,11 +424,11 @@ const Tests = () => {
                       <p className="text-xs text-muted-foreground mt-1">— Testé par {favoriteProduct.testedBy}</p>
                     </div>
                     
-                    <div className="flex items-center justify-between">
-                      <span className="text-3xl font-bold text-ocean">{favoriteProduct.price}</span>
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+                      <span className="text-2xl sm:text-3xl font-bold text-ocean">{favoriteProduct.price}</span>
                       <Button 
                         size="lg" 
-                        className="bg-[#FF9900] hover:bg-[#FF9900]/90 text-black font-bold"
+                        className="w-full sm:w-auto bg-[#FF9900] hover:bg-[#FF9900]/90 text-black font-bold"
                         onClick={() => window.open(favoriteProduct.amazonLink, '_blank')}
                       >
                         <ShoppingCart className="h-5 w-5 mr-2" />
@@ -443,124 +443,69 @@ const Tests = () => {
           </section>
         )}
 
-        {/* Comparison Table */}
-        {currentComparison && (
-          <section className="py-12 bg-background">
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <TrendingUp className="h-6 w-6 text-ocean" />
-                <h2 className="text-2xl font-elegant font-bold">{currentComparison.title}</h2>
-              </div>
-              
-              <Card className="max-w-4xl mx-auto overflow-hidden">
-                <div className="overflow-x-auto">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead className="font-bold">Produit</TableHead>
-                        {currentComparison.criteria.map((criterion) => (
-                          <TableHead key={criterion} className="text-center">{criterion}</TableHead>
-                        ))}
-                        <TableHead className="text-center font-bold">Note</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {currentComparison.products.map((product) => (
-                        <TableRow key={product.name} className={product.winner ? 'bg-sunset/10' : ''}>
-                          <TableCell className="font-medium">
-                            {product.winner && <span className="mr-2">🏆</span>}
-                            {product.name}
-                          </TableCell>
-                          {product.scores.map((score, i) => (
-                            <TableCell key={i} className="text-center">
-                              <span className={`px-2 py-1 rounded ${
-                                score >= 5 ? 'bg-green-100 text-green-800' :
-                                score >= 4 ? 'bg-blue-100 text-blue-800' :
-                                score >= 3 ? 'bg-yellow-100 text-yellow-800' :
-                                'bg-red-100 text-red-800'
-                              }`}>
-                                {score}/5
-                              </span>
-                            </TableCell>
-                          ))}
-                          <TableCell className="text-center">
-                            <Badge className={product.winner ? 'bg-sunset text-white' : 'bg-muted'}>
-                              {product.total}
-                            </Badge>
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </div>
-              </Card>
-            </div>
-          </section>
-        )}
-
         {/* All Products Grid */}
-        <section className="py-12 bg-muted/30">
+        <section className="py-8 sm:py-12 bg-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-elegant font-bold text-center mb-8">
+            <h2 className="text-xl sm:text-2xl font-elegant font-bold text-center mb-6 sm:mb-8">
               Tous nos tests {categories.find(c => c.id === selectedCategory)?.name}
             </h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {currentProducts.map((product) => (
                 <Card key={product.id} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
-                  <div className="aspect-video overflow-hidden relative">
+                  <div className="aspect-square sm:aspect-video overflow-hidden relative bg-white">
                     <img 
                       src={product.image} 
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain p-2 sm:p-4 group-hover:scale-105 transition-transform duration-300"
                     />
                     {product.favorite && (
-                      <Badge className="absolute top-3 left-3 bg-sunset text-white">
+                      <Badge className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-sunset text-white text-xs">
                         ❤️ Favori
                       </Badge>
                     )}
-                    <Badge className="absolute top-3 right-3 bg-green-600 text-white">
+                    <Badge className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-green-600 text-white text-xs">
                       ✓ Testé
                     </Badge>
                   </div>
                   
-                  <CardHeader className="pb-2">
+                  <CardHeader className="pb-2 p-3 sm:p-6 sm:pb-2">
                     <div className="flex justify-between items-start mb-1">
                       <div className="flex items-center gap-1">
                         {renderStars(product.rating)}
                         <span className="text-sm font-semibold ml-1">{product.rating}</span>
                       </div>
                     </div>
-                    <CardTitle className="text-lg font-elegant group-hover:text-ocean transition-colors">
+                    <CardTitle className="text-base sm:text-lg font-elegant group-hover:text-ocean transition-colors">
                       {product.name}
                     </CardTitle>
-                    <CardDescription>{product.shortDesc}</CardDescription>
+                    <CardDescription className="text-xs sm:text-sm">{product.shortDesc}</CardDescription>
                   </CardHeader>
                   
-                  <CardContent>
-                    <div className="space-y-3">
+                  <CardContent className="p-3 sm:p-6 pt-0 sm:pt-0">
+                    <div className="space-y-2 sm:space-y-3">
                       {/* Quick pros/cons */}
-                      <div className="text-sm">
+                      <div className="text-xs sm:text-sm">
                         <div className="flex items-start gap-1 text-green-600">
-                          <CheckCircle className="h-4 w-4 mt-0.5 shrink-0" />
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 shrink-0" />
                           <span className="text-muted-foreground">{product.pros[0]}</span>
                         </div>
                         <div className="flex items-start gap-1 text-red-600 mt-1">
-                          <XCircle className="h-4 w-4 mt-0.5 shrink-0" />
+                          <XCircle className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 shrink-0" />
                           <span className="text-muted-foreground">{product.cons[0]}</span>
                         </div>
                       </div>
                       
-                      {/* Verdict */}
-                      <div className="p-2 bg-muted/50 rounded text-xs italic">
+                      {/* Verdict - hidden on mobile for space */}
+                      <div className="hidden sm:block p-2 bg-muted/50 rounded text-xs italic">
                         "{product.verdict.substring(0, 80)}..."
                       </div>
 
                       {/* Price & CTA */}
-                      <div className="flex flex-col items-center gap-3 pt-2">
-                        <span className="text-2xl font-bold text-ocean">{product.price}</span>
+                      <div className="flex flex-col items-center gap-2 sm:gap-3 pt-2">
+                        <span className="text-xl sm:text-2xl font-bold text-ocean">{product.price}</span>
                         <Button 
-                          className="w-full bg-[#FF9900] hover:bg-[#FF9900]/90 text-black font-semibold"
+                          className="w-full bg-[#FF9900] hover:bg-[#FF9900]/90 text-black font-semibold text-sm"
                           onClick={() => window.open(product.amazonLink, '_blank')}
                         >
                           <ShoppingCart className="h-4 w-4 mr-1" />
@@ -580,11 +525,67 @@ const Tests = () => {
           </div>
         </section>
 
+        {/* Comparison Table - Moved to bottom */}
+        {currentComparison && (
+          <section className="py-8 sm:py-12 bg-background">
+            <div className="container mx-auto px-4">
+              <div className="flex items-center justify-center gap-2 mb-4 sm:mb-6">
+                <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-ocean" />
+                <h2 className="text-xl sm:text-2xl font-elegant font-bold">{currentComparison.title}</h2>
+              </div>
+              
+              <Card className="max-w-4xl mx-auto overflow-hidden">
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="font-bold text-xs sm:text-sm min-w-[120px]">Produit</TableHead>
+                        {currentComparison.criteria.map((criterion) => (
+                          <TableHead key={criterion} className="text-center text-xs sm:text-sm">{criterion}</TableHead>
+                        ))}
+                        <TableHead className="text-center font-bold text-xs sm:text-sm">Note</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {currentComparison.products.map((product) => (
+                        <TableRow key={product.name} className={product.winner ? 'bg-sunset/10' : ''}>
+                          <TableCell className="font-medium text-xs sm:text-sm">
+                            {product.winner && <span className="mr-1 sm:mr-2">🏆</span>}
+                            <span className="hidden sm:inline">{product.name}</span>
+                            <span className="sm:hidden">{product.name.split(' ').slice(0, 2).join(' ')}</span>
+                          </TableCell>
+                          {product.scores.map((score, i) => (
+                            <TableCell key={i} className="text-center p-1 sm:p-4">
+                              <span className={`px-1 sm:px-2 py-0.5 sm:py-1 rounded text-xs sm:text-sm ${
+                                score >= 5 ? 'bg-green-100 text-green-800' :
+                                score >= 4 ? 'bg-blue-100 text-blue-800' :
+                                score >= 3 ? 'bg-yellow-100 text-yellow-800' :
+                                'bg-red-100 text-red-800'
+                              }`}>
+                                {score}/5
+                              </span>
+                            </TableCell>
+                          ))}
+                          <TableCell className="text-center">
+                            <Badge className={`text-xs ${product.winner ? 'bg-sunset text-white' : 'bg-muted'}`}>
+                              {product.total}
+                            </Badge>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </Card>
+            </div>
+          </section>
+        )}
+
         {/* Disclosure */}
-        <section className="py-8 bg-muted/50 border-t border-border">
+        <section className="py-6 sm:py-8 bg-muted/50 border-t border-border">
           <div className="container mx-auto px-4 text-center max-w-3xl">
-            <h3 className="font-semibold mb-2">💡 Transparence Affiliation</h3>
-            <p className="text-sm text-muted-foreground">
+            <h3 className="font-semibold mb-2 text-sm sm:text-base">💡 Transparence Affiliation</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground">
               Les liens vers Amazon sont des liens affiliés. Si vous achetez via ces liens, 
               nous touchons une petite commission <strong>sans surcoût pour vous</strong>. 
               Cela nous aide à financer nos voyages et à continuer de tester du matériel pour vous. 
