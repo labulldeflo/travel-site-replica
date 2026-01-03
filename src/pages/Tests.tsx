@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Star, ShoppingCart, ExternalLink, CheckCircle, XCircle, Award, TrendingUp, Shield, Filter, ArrowUpDown } from 'lucide-react';
+import { Star, ShoppingCart, ExternalLink, CheckCircle, XCircle, Award, TrendingUp, Shield, Filter, ArrowUpDown, ClipboardList, Check, Square } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -42,6 +42,7 @@ const Tests = () => {
   const [priceFilter, setPriceFilter] = useState<string>('all');
   const [ratingFilter, setRatingFilter] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('default');
+  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({});
 
   const categories = [
     { id: 'chaussures', name: 'Chaussures', icon: '👟' },
@@ -718,7 +719,329 @@ const Tests = () => {
           </section>
         )}
 
-        {/* Disclosure */}
+        {/* Travel Essentials Checklist */}
+        <section className="py-10 sm:py-16 bg-gradient-to-b from-ocean/5 to-sunset/5">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <ClipboardList className="h-6 w-6 text-ocean" />
+              <h2 className="text-2xl sm:text-3xl font-elegant font-bold">Checklist Voyage Indispensable</h2>
+            </div>
+            <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Notre sélection des équipements essentiels testés et approuvés pour voyager léger et serein. Cochez au fur et à mesure de votre préparation !
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {/* Chaussures */}
+              <Card className="overflow-hidden border-2 border-transparent hover:border-ocean/30 transition-colors">
+                <CardHeader className="bg-ocean/10 pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <span className="text-2xl">👟</span>
+                    Chaussures
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4">
+                  <ul className="space-y-3">
+                    {products.chaussures.map((product) => (
+                      <li key={product.id} className="flex items-start gap-3">
+                        <button
+                          onClick={() => setCheckedItems(prev => ({ ...prev, [`shoe-${product.id}`]: !prev[`shoe-${product.id}`] }))}
+                          className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                            checkedItems[`shoe-${product.id}`] 
+                              ? 'bg-green-500 border-green-500 text-white' 
+                              : 'border-muted-foreground/30 hover:border-ocean'
+                          }`}
+                        >
+                          {checkedItems[`shoe-${product.id}`] && <Check className="h-3 w-3" />}
+                        </button>
+                        <div className={`flex-1 ${checkedItems[`shoe-${product.id}`] ? 'line-through text-muted-foreground' : ''}`}>
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium text-sm">{product.name}</span>
+                            {product.favorite && <Badge className="bg-sunset text-white text-[10px] px-1">❤️</Badge>}
+                          </div>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <span className="text-ocean font-semibold">{product.price}</span>
+                            <span>•</span>
+                            <div className="flex items-center">
+                              <Star className="h-3 w-3 text-yellow-500 fill-current" />
+                              <span className="ml-0.5">{product.rating}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-7 px-2 text-[#FF9900] hover:text-[#FF9900] hover:bg-[#FF9900]/10"
+                          onClick={() => window.open(product.amazonLink, '_blank')}
+                        >
+                          <ExternalLink className="h-3 w-3" />
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Sacs */}
+              <Card className="overflow-hidden border-2 border-transparent hover:border-ocean/30 transition-colors">
+                <CardHeader className="bg-sunset/10 pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <span className="text-2xl">🎒</span>
+                    Sacs à dos
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4">
+                  <ul className="space-y-3">
+                    {products.sacs.map((product) => (
+                      <li key={product.id} className="flex items-start gap-3">
+                        <button
+                          onClick={() => setCheckedItems(prev => ({ ...prev, [`bag-${product.id}`]: !prev[`bag-${product.id}`] }))}
+                          className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                            checkedItems[`bag-${product.id}`] 
+                              ? 'bg-green-500 border-green-500 text-white' 
+                              : 'border-muted-foreground/30 hover:border-ocean'
+                          }`}
+                        >
+                          {checkedItems[`bag-${product.id}`] && <Check className="h-3 w-3" />}
+                        </button>
+                        <div className={`flex-1 ${checkedItems[`bag-${product.id}`] ? 'line-through text-muted-foreground' : ''}`}>
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium text-sm">{product.name}</span>
+                            {product.favorite && <Badge className="bg-sunset text-white text-[10px] px-1">❤️</Badge>}
+                          </div>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <span className="text-ocean font-semibold">{product.price}</span>
+                            <span>•</span>
+                            <div className="flex items-center">
+                              <Star className="h-3 w-3 text-yellow-500 fill-current" />
+                              <span className="ml-0.5">{product.rating}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-7 px-2 text-[#FF9900] hover:text-[#FF9900] hover:bg-[#FF9900]/10"
+                          onClick={() => window.open(product.amazonLink, '_blank')}
+                        >
+                          <ExternalLink className="h-3 w-3" />
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Confort */}
+              <Card className="overflow-hidden border-2 border-transparent hover:border-ocean/30 transition-colors">
+                <CardHeader className="bg-purple-500/10 pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <span className="text-2xl">😴</span>
+                    Confort
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4">
+                  <ul className="space-y-3">
+                    {products.confort.map((product) => (
+                      <li key={product.id} className="flex items-start gap-3">
+                        <button
+                          onClick={() => setCheckedItems(prev => ({ ...prev, [`comfort-${product.id}`]: !prev[`comfort-${product.id}`] }))}
+                          className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                            checkedItems[`comfort-${product.id}`] 
+                              ? 'bg-green-500 border-green-500 text-white' 
+                              : 'border-muted-foreground/30 hover:border-ocean'
+                          }`}
+                        >
+                          {checkedItems[`comfort-${product.id}`] && <Check className="h-3 w-3" />}
+                        </button>
+                        <div className={`flex-1 ${checkedItems[`comfort-${product.id}`] ? 'line-through text-muted-foreground' : ''}`}>
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium text-sm">{product.name}</span>
+                            {product.favorite && <Badge className="bg-sunset text-white text-[10px] px-1">❤️</Badge>}
+                          </div>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <span className="text-ocean font-semibold">{product.price}</span>
+                            <span>•</span>
+                            <div className="flex items-center">
+                              <Star className="h-3 w-3 text-yellow-500 fill-current" />
+                              <span className="ml-0.5">{product.rating}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-7 px-2 text-[#FF9900] hover:text-[#FF9900] hover:bg-[#FF9900]/10"
+                          onClick={() => window.open(product.amazonLink, '_blank')}
+                        >
+                          <ExternalLink className="h-3 w-3" />
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Électronique */}
+              <Card className="overflow-hidden border-2 border-transparent hover:border-ocean/30 transition-colors">
+                <CardHeader className="bg-blue-500/10 pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <span className="text-2xl">🔋</span>
+                    Électronique
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4">
+                  <ul className="space-y-3">
+                    {products.electronique.map((product) => (
+                      <li key={product.id} className="flex items-start gap-3">
+                        <button
+                          onClick={() => setCheckedItems(prev => ({ ...prev, [`elec-${product.id}`]: !prev[`elec-${product.id}`] }))}
+                          className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                            checkedItems[`elec-${product.id}`] 
+                              ? 'bg-green-500 border-green-500 text-white' 
+                              : 'border-muted-foreground/30 hover:border-ocean'
+                          }`}
+                        >
+                          {checkedItems[`elec-${product.id}`] && <Check className="h-3 w-3" />}
+                        </button>
+                        <div className={`flex-1 ${checkedItems[`elec-${product.id}`] ? 'line-through text-muted-foreground' : ''}`}>
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium text-sm">{product.name}</span>
+                            {product.favorite && <Badge className="bg-sunset text-white text-[10px] px-1">❤️</Badge>}
+                          </div>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <span className="text-ocean font-semibold">{product.price}</span>
+                            <span>•</span>
+                            <div className="flex items-center">
+                              <Star className="h-3 w-3 text-yellow-500 fill-current" />
+                              <span className="ml-0.5">{product.rating}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-7 px-2 text-[#FF9900] hover:text-[#FF9900] hover:bg-[#FF9900]/10"
+                          onClick={() => window.open(product.amazonLink, '_blank')}
+                        >
+                          <ExternalLink className="h-3 w-3" />
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Vêtements */}
+              <Card className="overflow-hidden border-2 border-transparent hover:border-ocean/30 transition-colors">
+                <CardHeader className="bg-green-500/10 pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <span className="text-2xl">🧥</span>
+                    Vêtements & Organisation
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4">
+                  <ul className="space-y-3">
+                    {products.vetements.map((product) => (
+                      <li key={product.id} className="flex items-start gap-3">
+                        <button
+                          onClick={() => setCheckedItems(prev => ({ ...prev, [`clothes-${product.id}`]: !prev[`clothes-${product.id}`] }))}
+                          className={`mt-0.5 flex-shrink-0 w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                            checkedItems[`clothes-${product.id}`] 
+                              ? 'bg-green-500 border-green-500 text-white' 
+                              : 'border-muted-foreground/30 hover:border-ocean'
+                          }`}
+                        >
+                          {checkedItems[`clothes-${product.id}`] && <Check className="h-3 w-3" />}
+                        </button>
+                        <div className={`flex-1 ${checkedItems[`clothes-${product.id}`] ? 'line-through text-muted-foreground' : ''}`}>
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium text-sm">{product.name}</span>
+                            {product.favorite && <Badge className="bg-sunset text-white text-[10px] px-1">❤️</Badge>}
+                          </div>
+                          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <span className="text-ocean font-semibold">{product.price}</span>
+                            <span>•</span>
+                            <div className="flex items-center">
+                              <Star className="h-3 w-3 text-yellow-500 fill-current" />
+                              <span className="ml-0.5">{product.rating}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-7 px-2 text-[#FF9900] hover:text-[#FF9900] hover:bg-[#FF9900]/10"
+                          onClick={() => window.open(product.amazonLink, '_blank')}
+                        >
+                          <ExternalLink className="h-3 w-3" />
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Résumé Budget */}
+              <Card className="overflow-hidden border-2 border-ocean/30 bg-gradient-to-br from-ocean/5 to-sunset/5">
+                <CardHeader className="bg-ocean/20 pb-3">
+                  <CardTitle className="flex items-center gap-2 text-lg">
+                    <span className="text-2xl">💰</span>
+                    Budget Total Estimé
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4">
+                  <div className="space-y-3 text-sm">
+                    <div className="flex justify-between items-center pb-2 border-b border-border">
+                      <span>Kit Essentiel (favoris)</span>
+                      <span className="font-bold text-ocean">~930€</span>
+                    </div>
+                    <ul className="space-y-1 text-xs text-muted-foreground">
+                      <li className="flex justify-between">
+                        <span>Salomon X Ultra 4 GTX</span>
+                        <span>149€</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Osprey Farpoint 40</span>
+                        <span>169€</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Cabeau Evolution S3</span>
+                        <span>49€</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Anker PowerCore 26800</span>
+                        <span>65€</span>
+                      </li>
+                      <li className="flex justify-between">
+                        <span>Arc'teryx Beta LT</span>
+                        <span>500€</span>
+                      </li>
+                    </ul>
+                    <div className="pt-3 border-t border-border">
+                      <p className="text-xs text-muted-foreground italic">
+                        💡 Un investissement durable pour voyager serein pendant des années !
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Progress indicator */}
+            <div className="mt-8 text-center">
+              <div className="inline-flex items-center gap-3 bg-background rounded-full px-6 py-3 shadow-sm border border-border">
+                <Check className="h-5 w-5 text-green-500" />
+                <span className="text-sm font-medium">
+                  {Object.values(checkedItems).filter(Boolean).length} / 15 articles cochés
+                </span>
+                {Object.values(checkedItems).filter(Boolean).length === 15 && (
+                  <Badge className="bg-green-500 text-white">Prêt à partir ! 🎉</Badge>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-6 sm:py-8 bg-muted/50 border-t border-border">
           <div className="container mx-auto px-4 text-center max-w-3xl">
             <h3 className="font-semibold mb-2 text-sm sm:text-base">💡 Transparence Affiliation</h3>
