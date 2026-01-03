@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import { Star, ShoppingCart, ExternalLink, CheckCircle, XCircle, Award, TrendingUp, Shield } from 'lucide-react';
+import { useState, useMemo } from 'react';
+import { Star, ShoppingCart, ExternalLink, CheckCircle, XCircle, Award, TrendingUp, Shield, Filter, ArrowUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -30,9 +31,17 @@ import arcteryxImg from '@/assets/tests/arcteryx-beta.jpg';
 import patagoniaTorrentshellImg from '@/assets/tests/patagonia-torrentshell.jpg';
 import eagleCreekImg from '@/assets/tests/eagle-creek-cubes.jpg';
 
+// Helper to parse price string to number
+const parsePrice = (priceStr: string): number => {
+  return parseFloat(priceStr.replace('€', '').replace(',', '.').replace(/\s/g, ''));
+};
+
 const Tests = () => {
   const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState('chaussures');
+  const [priceFilter, setPriceFilter] = useState<string>('all');
+  const [ratingFilter, setRatingFilter] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('default');
 
   const categories = [
     { id: 'chaussures', name: 'Chaussures', icon: '👟' },
@@ -321,7 +330,65 @@ const Tests = () => {
 
   const currentProducts = products[selectedCategory as keyof typeof products] || [];
   const currentComparison = comparisons[selectedCategory as keyof typeof comparisons];
+
+  // Filter and sort products
+  const filteredProducts = useMemo(() => {
+    let filtered = [...currentProducts];
+
+    // Apply price filter
+    if (priceFilter !== 'all') {
+      filtered = filtered.filter(product => {
+        const price = parsePrice(product.price);
+        switch (priceFilter) {
+          case 'under50': return price < 50;
+          case '50-100': return price >= 50 && price < 100;
+          case '100-200': return price >= 100 && price < 200;
+          case 'over200': return price >= 200;
+          default: return true;
+        }
+      });
+    }
+
+    // Apply rating filter
+    if (ratingFilter !== 'all') {
+      filtered = filtered.filter(product => {
+        switch (ratingFilter) {
+          case '4.5+': return product.rating >= 4.5;
+          case '4+': return product.rating >= 4;
+          case '3.5+': return product.rating >= 3.5;
+          default: return true;
+        }
+      });
+    }
+
+    // Apply sorting
+    switch (sortBy) {
+      case 'price-asc':
+        filtered.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+        break;
+      case 'price-desc':
+        filtered.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+        break;
+      case 'rating-desc':
+        filtered.sort((a, b) => b.rating - a.rating);
+        break;
+      case 'rating-asc':
+        filtered.sort((a, b) => a.rating - b.rating);
+        break;
+    }
+
+    return filtered;
+  }, [currentProducts, priceFilter, ratingFilter, sortBy]);
+
   const favoriteProduct = currentProducts.find(p => p.favorite);
+
+  // Reset filters when category changes
+  const handleCategoryChange = (newCategory: string) => {
+    setSelectedCategory(newCategory);
+    setPriceFilter('all');
+    setRatingFilter('all');
+    setSortBy('default');
+  };
 
   return (
     <div className="min-h-screen">
@@ -348,7 +415,7 @@ const Tests = () => {
         {/* Categories Navigation */}
         <section className="py-6 bg-muted/30 sticky top-16 z-40 border-b border-border">
           <div className="container mx-auto px-4">
-            <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
+            <Tabs value={selectedCategory} onValueChange={handleCategoryChange} className="w-full">
               <TabsList className="grid w-full grid-cols-5 h-auto">
                 {categories.map((category) => (
                   <TabsTrigger 
@@ -446,12 +513,82 @@ const Tests = () => {
         {/* All Products Grid */}
         <section className="py-8 sm:py-12 bg-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-xl sm:text-2xl font-elegant font-bold text-center mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl font-elegant font-bold text-center mb-4 sm:mb-6">
               Tous nos tests {categories.find(c => c.id === selectedCategory)?.name}
             </h2>
+
+            {/* Filters Bar */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 p-4 bg-background rounded-lg border border-border">
+              <div className="flex items-center gap-2">
+                <Filter className="h-4 w-4 text-muted-foreground" />
+                <span className="text-sm font-medium">Filtres :</span>
+              </div>
+              
+              <div className="flex flex-wrap gap-3 flex-1">
+                {/* Price Filter */}
+                <Select value={priceFilter} onValueChange={setPriceFilter}>
+                  <SelectTrigger className="w-full sm:w-[160px] h-9">
+                    <SelectValue placeholder="Prix" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Tous les prix</SelectItem>
+                    <SelectItem value="under50">Moins de 50€</SelectItem>
+                    <SelectItem value="50-100">50€ - 100€</SelectItem>
+                    <SelectItem value="100-200">100€ - 200€</SelectItem>
+                    <SelectItem value="over200">Plus de 200€</SelectItem>
+                  </SelectContent>
+                </Select>
+
+                {/* Rating Filter */}
+                <Select value={ratingFilter} onValueChange={setRatingFilter}>
+                  <SelectTrigger className="w-full sm:w-[140px] h-9">
+                    <SelectValue placeholder="Note" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">Toutes notes</SelectItem>
+                    <SelectItem value="4.5+">⭐ 4.5+</SelectItem>
+                    <SelectItem value="4+">⭐ 4+</SelectItem>
+                    <SelectItem value="3.5+">⭐ 3.5+</SelectItem>
+                  </SelectContent>
+                </Select>
+
+                {/* Sort By */}
+                <Select value={sortBy} onValueChange={setSortBy}>
+                  <SelectTrigger className="w-full sm:w-[180px] h-9">
+                    <ArrowUpDown className="h-3 w-3 mr-1" />
+                    <SelectValue placeholder="Trier par" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="default">Par défaut</SelectItem>
+                    <SelectItem value="price-asc">Prix croissant</SelectItem>
+                    <SelectItem value="price-desc">Prix décroissant</SelectItem>
+                    <SelectItem value="rating-desc">Meilleures notes</SelectItem>
+                    <SelectItem value="rating-asc">Notes croissantes</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Results count */}
+              <div className="text-sm text-muted-foreground self-center">
+                {filteredProducts.length} produit{filteredProducts.length > 1 ? 's' : ''}
+              </div>
+            </div>
+
+            {/* No results message */}
+            {filteredProducts.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground mb-4">Aucun produit ne correspond à vos critères.</p>
+                <Button 
+                  variant="outline" 
+                  onClick={() => { setPriceFilter('all'); setRatingFilter('all'); setSortBy('default'); }}
+                >
+                  Réinitialiser les filtres
+                </Button>
+              </div>
+            )}
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {currentProducts.map((product) => (
+              {filteredProducts.map((product) => (
                 <Card key={product.id} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
                   <div className="aspect-square sm:aspect-video overflow-hidden relative bg-white">
                     <img 
