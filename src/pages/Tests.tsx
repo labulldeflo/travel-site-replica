@@ -1,11 +1,12 @@
 import { useState, useMemo } from 'react';
-import { Star, ShoppingCart, ExternalLink, CheckCircle, XCircle, Award, TrendingUp, Shield, Filter, ArrowUpDown, ClipboardList, Check, Square } from 'lucide-react';
+import { Star, ShoppingCart, ExternalLink, CheckCircle, XCircle, Award, TrendingUp, Shield, Filter, ArrowUpDown, ClipboardList, Check, Square, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Input } from '@/components/ui/input';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -43,6 +44,7 @@ const Tests = () => {
   const [ratingFilter, setRatingFilter] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('default');
   const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({});
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   const categories = [
     { id: 'chaussures', name: 'Chaussures', icon: '👟' },
@@ -336,6 +338,18 @@ const Tests = () => {
   const filteredProducts = useMemo(() => {
     let filtered = [...currentProducts];
 
+    // Apply search filter
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase().trim();
+      filtered = filtered.filter(product => 
+        product.name.toLowerCase().includes(query) ||
+        product.shortDesc.toLowerCase().includes(query) ||
+        product.verdict.toLowerCase().includes(query) ||
+        product.pros.some(pro => pro.toLowerCase().includes(query)) ||
+        product.cons.some(con => con.toLowerCase().includes(query))
+      );
+    }
+
     // Apply price filter
     if (priceFilter !== 'all') {
       filtered = filtered.filter(product => {
@@ -379,7 +393,27 @@ const Tests = () => {
     }
 
     return filtered;
-  }, [currentProducts, priceFilter, ratingFilter, sortBy]);
+  }, [currentProducts, priceFilter, ratingFilter, sortBy, searchQuery]);
+
+  // Search across all categories
+  const allProductsSearchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    
+    const query = searchQuery.toLowerCase().trim();
+    const allProducts = [
+      ...products.chaussures.map(p => ({ ...p, category: 'chaussures', categoryName: 'Chaussures', icon: '👟' })),
+      ...products.sacs.map(p => ({ ...p, category: 'sacs', categoryName: 'Sacs à dos', icon: '🎒' })),
+      ...products.confort.map(p => ({ ...p, category: 'confort', categoryName: 'Confort', icon: '😴' })),
+      ...products.electronique.map(p => ({ ...p, category: 'electronique', categoryName: 'Électronique', icon: '🔋' })),
+      ...products.vetements.map(p => ({ ...p, category: 'vetements', categoryName: 'Vêtements', icon: '🧥' })),
+    ];
+    
+    return allProducts.filter(product => 
+      product.name.toLowerCase().includes(query) ||
+      product.shortDesc.toLowerCase().includes(query) ||
+      product.verdict.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
 
   const favoriteProduct = currentProducts.find(p => p.favorite);
 
@@ -410,6 +444,69 @@ const Tests = () => {
               Nous testons chaque produit pendant nos voyages. Nos avis sont 100% honnêtes, 
               avec liens Amazon affiliés pour nous soutenir.
             </p>
+          </div>
+        </section>
+
+        {/* Search Bar */}
+        <section className="py-4 bg-background border-b border-border">
+          <div className="container mx-auto px-4">
+            <div className="max-w-xl mx-auto relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Rechercher un produit (ex: Salomon, batterie, oreiller...)"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-10 h-11"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
+            
+            {/* Global Search Results */}
+            {searchQuery.trim() && allProductsSearchResults.length > 0 && (
+              <div className="max-w-xl mx-auto mt-3">
+                <p className="text-sm text-muted-foreground mb-2">
+                  {allProductsSearchResults.length} résultat{allProductsSearchResults.length > 1 ? 's' : ''} dans toutes les catégories :
+                </p>
+                <div className="bg-muted/50 rounded-lg p-3 space-y-2 max-h-64 overflow-y-auto">
+                  {allProductsSearchResults.map((product) => (
+                    <button
+                      key={product.id}
+                      onClick={() => {
+                        setSelectedCategory(product.category);
+                        setSearchQuery('');
+                      }}
+                      className="w-full flex items-center gap-3 p-2 rounded-lg hover:bg-background transition-colors text-left"
+                    >
+                      <span className="text-lg">{product.icon}</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium text-sm truncate">{product.name}</p>
+                        <p className="text-xs text-muted-foreground truncate">{product.categoryName} • {product.price}</p>
+                      </div>
+                      <div className="flex items-center gap-1 text-xs">
+                        <Star className="h-3 w-3 text-yellow-500 fill-current" />
+                        <span>{product.rating}</span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {searchQuery.trim() && allProductsSearchResults.length === 0 && (
+              <div className="max-w-xl mx-auto mt-3 text-center">
+                <p className="text-sm text-muted-foreground">
+                  Aucun produit trouvé pour "{searchQuery}"
+                </p>
+              </div>
+            )}
           </div>
         </section>
 
