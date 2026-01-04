@@ -145,13 +145,19 @@ const Header = () => {
                       {t('header.allTests')}
                     </Link>
                     <Link to="/tests#chaussures" className="block px-4 py-2 hover:bg-sand/10 rounded-md text-sm">
-                      • {t('tests.shoes')}
+                      • Chaussures
                     </Link>
-                    <Link to="/tests#tentes" className="block px-4 py-2 hover:bg-sand/10 rounded-md text-sm">
-                      • {t('tests.tents')}
+                    <Link to="/tests#sacs" className="block px-4 py-2 hover:bg-sand/10 rounded-md text-sm">
+                      • Sacs à dos
                     </Link>
-                    <Link to="/tests#accessoires-tech" className="block px-4 py-2 hover:bg-sand/10 rounded-md text-sm">
-                      • {t('tests.tech')}
+                    <Link to="/tests#confort" className="block px-4 py-2 hover:bg-sand/10 rounded-md text-sm">
+                      • Confort
+                    </Link>
+                    <Link to="/tests#electronique" className="block px-4 py-2 hover:bg-sand/10 rounded-md text-sm">
+                      • Électronique
+                    </Link>
+                    <Link to="/tests#vetements" className="block px-4 py-2 hover:bg-sand/10 rounded-md text-sm">
+                      • Vêtements
                     </Link>
                   </div>
                 </NavigationMenuContent>
@@ -311,9 +317,11 @@ const Header = () => {
               {openSubmenu === 'tests' && (
                 <div className="pl-4 space-y-1 mt-2">
                   <Link to="/tests" className="block py-1 text-sm hover:text-ocean font-semibold" onClick={() => setIsMenuOpen(false)}>{t('header.allTests')}</Link>
-                  <Link to="/tests#chaussures" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>↳ {t('tests.shoes')}</Link>
-                  <Link to="/tests#tentes" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>↳ {t('tests.tents')}</Link>
-                  <Link to="/tests#accessoires-tech" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>↳ {t('tests.tech')}</Link>
+                  <Link to="/tests#chaussures" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>↳ Chaussures</Link>
+                  <Link to="/tests#sacs" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>↳ Sacs à dos</Link>
+                  <Link to="/tests#confort" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>↳ Confort</Link>
+                  <Link to="/tests#electronique" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>↳ Électronique</Link>
+                  <Link to="/tests#vetements" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>↳ Vêtements</Link>
                 </div>
               )}
             </div>

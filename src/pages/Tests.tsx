@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Star, ShoppingCart, ExternalLink, CheckCircle, XCircle, Award, TrendingUp, Shield, Filter, ArrowUpDown, ClipboardList, Check, Square, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -39,12 +40,22 @@ const parsePrice = (priceStr: string): number => {
 
 const Tests = () => {
   const { t } = useTranslation();
+  const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState('chaussures');
   const [priceFilter, setPriceFilter] = useState<string>('all');
   const [ratingFilter, setRatingFilter] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('default');
   const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({});
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  // Handle URL hash to select category
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    const validCategories = ['chaussures', 'sacs', 'confort', 'electronique', 'vetements'];
+    if (hash && validCategories.includes(hash)) {
+      setSelectedCategory(hash);
+    }
+  }, [location.hash]);
 
   const categories = [
     { id: 'chaussures', name: 'Chaussures', icon: '👟' },
