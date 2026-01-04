@@ -10,6 +10,18 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 
+// Import guide images
+import guideVietnamPreparation from '@/assets/guides/guide-vietnam-preparation.jpg';
+import guideBudgetVietnam from '@/assets/guides/guide-budget-vietnam.jpg';
+import guideSecuriteSolo from '@/assets/guides/guide-securite-solo.jpg';
+import guideBudgetGeneral from '@/assets/guides/guide-budget-general.jpg';
+import guideThailandeFamille from '@/assets/guides/guide-thailande-famille.jpg';
+import guidePhotoVoyage from '@/assets/guides/guide-photo-voyage.jpg';
+import guideVoyageCouple from '@/assets/guides/guide-voyage-couple.jpg';
+import guidePlanification from '@/assets/guides/guide-planification.jpg';
+import guideStreetFoodThailande from '@/assets/guides/guide-street-food-thailande.jpg';
+import guideTransportVietnam from '@/assets/guides/guide-transport-vietnam.jpg';
+
 const Guides = () => {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
@@ -33,7 +45,7 @@ const Guides = () => {
       readTime: '15 min',
       difficulty: 'Débutant',
       featured: true,
-      image: '/src/assets/hero-mediterranean-cove.jpg',
+      image: guideVietnamPreparation,
       tags: ['Vietnam', 'Visa', 'Préparation'],
       link: '/guides/guide-complet-vietnam'
     },
@@ -45,7 +57,7 @@ const Guides = () => {
       readTime: '12 min',
       difficulty: 'Débutant',
       featured: true,
-      image: '/src/assets/couple-travel-portrait.jpg',
+      image: guideBudgetVietnam,
       tags: ['Budget', 'Vietnam', 'Économies'],
       link: '/guides/budget-vietnam'
     },
@@ -57,7 +69,7 @@ const Guides = () => {
       readTime: '10 min',
       difficulty: 'Intermédiaire',
       featured: false,
-      image: '/src/assets/hero-mediterranean-cove.jpg',
+      image: guideSecuriteSolo,
       tags: ['Sécurité', 'Solo', 'Femme'],
       link: '/guides/securite'
     },
@@ -69,7 +81,7 @@ const Guides = () => {
       readTime: '20 min',
       difficulty: 'Intermédiaire',
       featured: false,
-      image: '/src/assets/couple-travel-portrait.jpg',
+      image: guideBudgetGeneral,
       tags: ['Budget', 'Économies', 'Planification'],
       link: '/guides/budget'
     },
@@ -81,7 +93,7 @@ const Guides = () => {
       readTime: '8 min',
       difficulty: 'Débutant',
       featured: false,
-      image: '/src/assets/hero-mediterranean-cove.jpg',
+      image: guideThailandeFamille,
       tags: ['Famille', 'Enfants', 'Thaïlande'],
       link: '/guides/thailande-famille'
     },
@@ -93,7 +105,7 @@ const Guides = () => {
       readTime: '12 min',
       difficulty: 'Avancé',
       featured: false,
-      image: '/src/assets/couple-travel-portrait.jpg',
+      image: guidePhotoVoyage,
       tags: ['Photo', 'Paysages', 'Technique'],
       link: '/guides/photo'
     },
@@ -105,7 +117,7 @@ const Guides = () => {
       readTime: '10 min',
       difficulty: 'Débutant',
       featured: false,
-      image: '/src/assets/couple-travel-portrait.jpg',
+      image: guideVoyageCouple,
       tags: ['Couple', 'Organisation', 'Conseils'],
       link: '/guides/couple'
     },
@@ -117,7 +129,7 @@ const Guides = () => {
       readTime: '15 min',
       difficulty: 'Débutant',
       featured: false,
-      image: '/src/assets/hero-mediterranean-cove.jpg',
+      image: guidePlanification,
       tags: ['Planification', 'Organisation', 'Préparation'],
       link: '/guides/planification'
     },
@@ -129,7 +141,7 @@ const Guides = () => {
       readTime: '8 min',
       difficulty: 'Débutant',
       featured: false,
-      image: '/src/assets/hero-mediterranean-cove.jpg',
+      image: guideStreetFoodThailande,
       tags: ['Street Food', 'Thaïlande', 'Gastronomie'],
       link: '/guides/street-food-thailande'
     },
@@ -141,7 +153,7 @@ const Guides = () => {
       readTime: '12 min',
       difficulty: 'Intermédiaire',
       featured: false,
-      image: '/src/assets/couple-travel-portrait.jpg',
+      image: guideTransportVietnam,
       tags: ['Transport', 'Vietnam', 'Déplacements'],
       link: '/guides/transport-vietnam'
     }
