@@ -13,7 +13,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 // Import images - Chaussures
-import salomonImg from '@/assets/tests/salomon-ultra-4.jpg';
+import lowaImg from '@/assets/tests/lowa-renegade.jpg';
 import merrellImg from '@/assets/tests/merrell-moab-3.jpg';
 import columbiaImg from '@/assets/tests/columbia-redmond.jpg';
 // Import images - Sacs
@@ -69,15 +69,15 @@ const Tests = () => {
     chaussures: [
       {
         id: 1,
-        name: 'Salomon X Ultra 4 GTX',
-        image: salomonImg,
+        name: 'Lowa Renegade GTX Mid',
+        image: lowaImg,
         rating: 4.8,
-        price: '149,00€',
-        amazonLink: 'https://www.amazon.fr/dp/B08YNDM95G?tag=capsurlemonde-21',
-        shortDesc: 'La référence pour la randonnée toutes conditions',
-        pros: ['Imperméable Gore-Tex', 'Excellent maintien cheville', 'Accroche parfaite', 'Légères pour la catégorie'],
-        cons: ['Prix élevé', 'Taille un peu petit'],
-        verdict: "Notre coup de cœur absolu pour les randonnées et trekkings. Testées en Patagonie et dans les Alpes.",
+        price: '219,00€',
+        amazonLink: 'https://www.amazon.fr/dp/B003YJEGW6?tag=capsurlemonde-21',
+        shortDesc: 'La légende allemande du trekking haut de gamme',
+        pros: ['Qualité allemande exceptionnelle', 'Confort dès le premier jour', 'Durabilité légendaire', 'Imperméable Gore-Tex'],
+        cons: ['Prix premium', 'Style classique'],
+        verdict: "La référence absolue pour les trekkings exigeants. Testées sur plus de 500km en montagne sans aucune usure.",
         testDate: '2025-11-15',
         favorite: true,
         testedBy: 'Sophie & Marc'
@@ -308,7 +308,7 @@ const Tests = () => {
       title: 'Comparatif Chaussures Randonnée 2025',
       criteria: ['Confort', 'Imperméabilité', 'Durabilité', 'Légèreté', 'Prix'],
       products: [
-        { name: 'Salomon X Ultra 4 GTX', scores: [5, 5, 5, 4, 3], total: 4.8, winner: true },
+        { name: 'Lowa Renegade GTX Mid', scores: [5, 5, 5, 4, 3], total: 4.8, winner: true },
         { name: 'Merrell Moab 3 Mid', scores: [5, 3, 4, 4, 4], total: 4.5, winner: false },
         { name: 'Columbia Redmond III', scores: [4, 3, 3, 5, 5], total: 4.2, winner: false }
       ]
@@ -1105,8 +1105,8 @@ const Tests = () => {
                     </div>
                     <ul className="space-y-1 text-xs text-muted-foreground">
                       <li className="flex justify-between">
-                        <span>Salomon X Ultra 4 GTX</span>
-                        <span>149€</span>
+                        <span>Lowa Renegade GTX Mid</span>
+                        <span>219€</span>
                       </li>
                       <li className="flex justify-between">
                         <span>Osprey Farpoint 40</span>
