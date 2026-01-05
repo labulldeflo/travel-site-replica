@@ -19,7 +19,7 @@ const Autriche = () => {
       description: 'Capitale impériale aux palais baroques et cafés historiques.',
       highlights: ['Schönbrunn', 'Hofburg', 'Opéra', 'Cafés viennois'],
       duration: '3-4 jours',
-      link: '/article/vienne'
+      link: '/destinations/autriche/vienne'
     },
     {
       name: 'Salzbourg',
@@ -27,7 +27,7 @@ const Autriche = () => {
       description: 'Ville de Mozart entre baroque et Alpes, patrimoine UNESCO.',
       highlights: ['Vieille ville', 'Forteresse', 'Mirabell', 'Sound of Music'],
       duration: '2 jours',
-      link: '/article/salzbourg'
+      link: '/destinations/autriche/salzbourg'
     },
     {
       name: 'Tyrol',
@@ -35,7 +35,7 @@ const Autriche = () => {
       description: 'Alpes autrichiennes, paradis de la randonnée et du ski.',
       highlights: ['Innsbruck', 'Hallstatt', 'Randonnées', 'Ski'],
       duration: '4-5 jours',
-      link: '/article/tyrol'
+      link: '/destinations/autriche/tyrol'
     }
   ];
 

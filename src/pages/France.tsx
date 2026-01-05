@@ -15,21 +15,21 @@ const France = () => {
       description: 'Capitale mondiale de l\'art et de la gastronomie.',
       highlights: ['Tour Eiffel', 'Louvre', 'Versailles', 'Montmartre'],
       duration: '4-5 jours',
-      link: '/article/paris'
+      link: '/destinations/france/paris'
     },
     {
       name: 'Provence',
       description: 'Lavandes, villages perchés et cuisine méditerranéenne.',
       highlights: ['Avignon', 'Gordes', 'Luberon', 'Marchés'],
       duration: '5-7 jours',
-      link: '/article/provence'
+      link: '/destinations/france/provence'
     },
     {
       name: 'Côte d\'Azur',
       description: 'Riviera française entre mer azur et villages de caractère.',
       highlights: ['Nice', 'Cannes', 'Monaco', 'Antibes'],
       duration: '4-6 jours',
-      link: '/article/cote-azur'
+      link: '/destinations/france/cote-azur'
     }
   ];
 
