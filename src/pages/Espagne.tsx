@@ -19,7 +19,7 @@ const Espagne = () => {
       description: 'Architecture Gaudí, plages urbaines et culture catalane vibrante.',
       highlights: ['Sagrada Familia', 'Park Güell', 'Ramblas', 'Gótico'],
       duration: '3-4 jours',
-      link: '/article/barcelone'
+      link: '/destinations/espagne/barcelone'
     },
     {
       name: 'Andalousie',
@@ -27,7 +27,7 @@ const Espagne = () => {
       description: 'Flamenco, tapas et héritage mauresque entre Séville et Grenade.',
       highlights: ['Alhambra', 'Séville', 'Cordoue', 'Ronda'],
       duration: '7-10 jours',
-      link: '/article/andalousie'
+      link: '/destinations/espagne/andalousie'
     },
     {
       name: 'Madrid',
@@ -35,7 +35,7 @@ const Espagne = () => {
       description: 'Capitale royale aux musées prestigieux et vie nocturne légendaire.',
       highlights: ['Prado', 'Retiro', 'Plaza Mayor', 'Palais Royal'],
       duration: '2-3 jours',
-      link: '/article/madrid'
+      link: '/destinations/espagne/madrid'
     }
   ];
 

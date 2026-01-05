@@ -15,21 +15,21 @@ const Grece = () => {
       description: 'Île volcanique emblématique aux maisons blanches et couchers de soleil magiques.',
       highlights: ['Oia', 'Fira', 'Plages rouges', 'Vins'],
       duration: '3-4 jours',
-      link: '/article/santorin'
+      link: '/destinations/grece/santorin'
     },
     {
       name: 'Athènes',
       description: 'Berceau de la civilisation avec l\'Acropole et ses trésors antiques.',
       highlights: ['Acropole', 'Plaka', 'Musées', 'Marchés'],
       duration: '2-3 jours',
-      link: '/article/athenes'
+      link: '/destinations/grece/athenes'
     },
     {
       name: 'Crète',
       description: 'Plus grande île grecque entre plages, montagnes et sites archéologiques.',
       highlights: ['Knossos', 'Chania', 'Gorges Samaria', 'Plages'],
       duration: '5-7 jours',
-      link: '/article/crete'
+      link: '/destinations/grece/crete'
     }
   ];
 

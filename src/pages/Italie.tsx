@@ -15,21 +15,21 @@ const Italie = () => {
       description: 'Capitale éternelle entre vestiges antiques et art baroque.',
       highlights: ['Colisée', 'Vatican', 'Trevi', 'Panthéon'],
       duration: '3-4 jours',
-      link: '/article/rome'
+      link: '/destinations/italie/rome'
     },
     {
       name: 'Toscane',
       description: 'Collines ondoyantes, vins prestigieux et villes d\'art.',
       highlights: ['Florence', 'Sienne', 'Pise', 'Chianti'],
       duration: '5-7 jours',
-      link: '/article/toscane'
+      link: '/destinations/italie/toscane'
     },
     {
       name: 'Venise & Vénétie',
       description: 'Cité des Doges entre canaux romantiques et palais somptueux.',
       highlights: ['San Marco', 'Rialto', 'Burano', 'Gondoles'],
       duration: '2-3 jours',
-      link: '/article/venise'
+      link: '/destinations/italie/venise'
     }
   ];
 

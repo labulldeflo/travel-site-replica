@@ -19,7 +19,7 @@ const Croatie = () => {
       description: 'Perle de l\'Adriatique aux remparts médiévaux et mer turquoise.',
       highlights: ['Vieille ville', 'Remparts', 'Lokrum', 'Game of Thrones'],
       duration: '2-3 jours',
-      link: '/article/dubrovnik'
+      link: '/destinations/croatie/dubrovnik'
     },
     {
       name: 'Split',
@@ -27,7 +27,7 @@ const Croatie = () => {
       description: 'Ville antique construite autour du palais de Dioclétien.',
       highlights: ['Palais Dioclétien', 'Riva', 'Marjan', 'Îles'],
       duration: '2-3 jours',
-      link: '/article/split'
+      link: '/destinations/croatie/split'
     },
     {
       name: 'Parc Plitvice',
@@ -35,7 +35,7 @@ const Croatie = () => {
       description: 'Cascades et lacs d\'un bleu irréel au cœur de la nature.',
       highlights: ['Lacs', 'Cascades', 'Randonnées', 'Faune'],
       duration: '1-2 jours',
-      link: '/article/plitvice'
+      link: '/destinations/croatie/plitvice'
     }
   ];
 

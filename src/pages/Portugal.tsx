@@ -15,21 +15,21 @@ const Portugal = () => {
       description: 'Capitale lumineuse aux sept collines et tramways jaunes.',
       highlights: ['Alfama', 'Belém', 'Tramway 28', 'Pastéis'],
       duration: '3-4 jours',
-      link: '/article/lisbonne'
+      link: '/destinations/portugal/lisbonne'
     },
     {
       name: 'Porto',
       description: 'Ville du vin sur les bords du Douro, classée UNESCO.',
       highlights: ['Ribeira', 'Caves Porto', 'Pont Dom Luis', 'Azulejos'],
       duration: '2-3 jours',
-      link: '/article/porto'
+      link: '/destinations/portugal/porto'
     },
     {
       name: 'Algarve',
       description: 'Côte sud aux falaises dorées et plages paradisiaques.',
       highlights: ['Lagos', 'Benagil', 'Sagres', 'Plages'],
       duration: '4-6 jours',
-      link: '/article/algarve'
+      link: '/destinations/portugal/algarve'
     }
   ];
 
