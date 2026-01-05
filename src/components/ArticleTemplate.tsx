@@ -8,6 +8,13 @@ import Footer from "@/components/Footer";
 import AffiliateWidget from "@/components/AffiliateWidget";
 import { Link } from "react-router-dom";
 
+// Fonction utilitaire pour parser le markdown simple (gras, italique)
+const parseSimpleMarkdown = (text: string): string => {
+  if (!text) return "";
+  return text
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>") // **gras**
+    .replace(/\*([^*]+)\*/g, "<em>$1</em>"); // *italique*
+};
 // =================================================================
 // --- Types pour le Template ---
 // =================================================================
@@ -193,9 +200,10 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
             {/* Article Content */}
             <article className="md:col-span-2 prose prose-lg max-w-none">
               {/* Introduction */}
-              <p className="text-lg leading-relaxed text-gray-700 first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left">
-                {finalIntro}
-              </p>
+              <p 
+                className="text-lg leading-relaxed text-gray-700 first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left"
+                dangerouslySetInnerHTML={{ __html: parseSimpleMarkdown(finalIntro || "") }}
+              />
 
               {/* Content Sections */}
               {contentSections.map((section, index) => (
@@ -278,11 +286,11 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                 </div>
               </section>
 
-              {/* Conclusion */}
               <section className="mt-10 p-6 bg-sand/30 rounded-lg border-l-4 border-ocean">
-                <p className="text-lg text-gray-800 italic leading-relaxed">
-                  {finalConclusion}
-                </p>
+                <p 
+                  className="text-lg text-gray-800 italic leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: parseSimpleMarkdown(finalConclusion || "") }}
+                />
               </section>
 
               {/* CTA Bottom */}
