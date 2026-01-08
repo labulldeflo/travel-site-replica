@@ -7,11 +7,16 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import franceImg from '@/assets/destinations/france.jpg';
+import parisImg from '@/assets/cities/paris.jpg';
+import provenceImg from '@/assets/cities/provence.jpg';
+import coteAzurImg from '@/assets/cities/cote-azur.jpg';
 
 const France = () => {
   const regions = [
     {
       name: 'Paris & Île-de-France',
+      region: 'Île-de-France',
+      image: parisImg,
       description: 'Capitale mondiale de l\'art et de la gastronomie.',
       highlights: ['Tour Eiffel', 'Louvre', 'Versailles', 'Montmartre'],
       duration: '4-5 jours',
@@ -19,6 +24,8 @@ const France = () => {
     },
     {
       name: 'Provence',
+      region: 'Sud-Est',
+      image: provenceImg,
       description: 'Lavandes, villages perchés et cuisine méditerranéenne.',
       highlights: ['Avignon', 'Gordes', 'Luberon', 'Marchés'],
       duration: '5-7 jours',
@@ -26,6 +33,8 @@ const France = () => {
     },
     {
       name: 'Côte d\'Azur',
+      region: 'Sud-Est',
+      image: coteAzurImg,
       description: 'Riviera française entre mer azur et villages de caractère.',
       highlights: ['Nice', 'Cannes', 'Monaco', 'Antibes'],
       duration: '4-6 jours',
@@ -71,14 +80,24 @@ const France = () => {
               <TabsContent value="regions" className="mt-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {regions.map((region, index) => (
-                    <Card key={index} className="hover:shadow-elegant transition-all">
+                    <Card key={index} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
+                      <div className="aspect-video overflow-hidden">
+                        <img 
+                          src={region.image} 
+                          alt={region.name} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                        />
+                      </div>
                       <CardHeader>
-                        <CardTitle className="text-xl font-elegant">{region.name}</CardTitle>
+                        <div className="flex justify-between items-start mb-2">
+                          <CardTitle className="text-xl font-elegant">{region.name}</CardTitle>
+                          <Badge variant="secondary">{region.region}</Badge>
+                        </div>
                         <CardDescription>{region.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <div className="space-y-4">
-                          <div className="flex items-center gap-2 text-sm">
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Clock className="h-4 w-4" />
                             <span>{region.duration}</span>
                           </div>
@@ -90,8 +109,8 @@ const France = () => {
                               ))}
                             </div>
                           </div>
-                          <Link to={region.link}>
-                            <Button variant="outline" className="w-full mt-4">Lire l'article</Button>
+                          <Link to={region.link} onClick={() => window.scrollTo(0, 0)}>
+                            <Button className="w-full mt-4">Lire l'article</Button>
                           </Link>
                         </div>
                       </CardContent>
