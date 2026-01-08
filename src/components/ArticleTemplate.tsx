@@ -250,11 +250,13 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                   </p>
                 )}
 
-                <div className="mt-6 text-center">
-                  <Button asChild className="bg-ocean hover:bg-ocean/90">
-                    <Link to="/guide-gratuit">📥 Télécharge le guide gratuit du Vietnam</Link>
-                  </Button>
-                </div>
+                {destinationLink && !destinationLink.includes('/france') && (
+                  <div className="mt-6 text-center">
+                    <Button asChild className="bg-ocean hover:bg-ocean/90">
+                      <Link to="/ressources-gratuites">📥 Télécharge nos guides gratuits</Link>
+                    </Button>
+                  </div>
+                )}
               </section>
 
               {/* Affiliate Widget */}
