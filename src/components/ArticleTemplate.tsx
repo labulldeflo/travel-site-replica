@@ -299,12 +299,12 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 {relatedArticles?.map((article, index) => (
                   <Button key={index} asChild variant="outline" className="flex-1">
-                    <Link to={article.url}>{article.title}</Link>
+                    <Link to={article.url} onClick={() => window.scrollTo(0, 0)}>{article.title}</Link>
                   </Button>
                 ))}
                 {destinationLink && (
                   <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">
-                    <Link to={destinationLink}>{ctaTitle || "Voir toutes les destinations"}</Link>
+                    <Link to={destinationLink} onClick={() => window.scrollTo(0, 0)}>{ctaTitle || "Voir toutes les destinations"}</Link>
                   </Button>
                 )}
               </div>
