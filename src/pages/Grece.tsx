@@ -7,11 +7,16 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import greceImg from '@/assets/destinations/grece.jpg';
+import santorinImg from '@/assets/cities/santorin.jpg';
+import athenesImg from '@/assets/cities/athenes.jpg';
+import creteImg from '@/assets/cities/crete.jpg';
 
 const Grece = () => {
   const destinations = [
     {
       name: 'Santorin',
+      region: 'Cyclades',
+      image: santorinImg,
       description: 'Île volcanique emblématique aux maisons blanches et couchers de soleil magiques.',
       highlights: ['Oia', 'Fira', 'Plages rouges', 'Vins'],
       duration: '3-4 jours',
@@ -19,6 +24,8 @@ const Grece = () => {
     },
     {
       name: 'Athènes',
+      region: 'Attique',
+      image: athenesImg,
       description: 'Berceau de la civilisation avec l\'Acropole et ses trésors antiques.',
       highlights: ['Acropole', 'Plaka', 'Musées', 'Marchés'],
       duration: '2-3 jours',
@@ -26,6 +33,8 @@ const Grece = () => {
     },
     {
       name: 'Crète',
+      region: 'Crète',
+      image: creteImg,
       description: 'Plus grande île grecque entre plages, montagnes et sites archéologiques.',
       highlights: ['Knossos', 'Chania', 'Gorges Samaria', 'Plages'],
       duration: '5-7 jours',
@@ -71,14 +80,24 @@ const Grece = () => {
               <TabsContent value="destinations" className="mt-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {destinations.map((dest, index) => (
-                    <Card key={index} className="hover:shadow-elegant transition-all">
+                    <Card key={index} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
+                      <div className="aspect-video overflow-hidden">
+                        <img 
+                          src={dest.image} 
+                          alt={dest.name} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                        />
+                      </div>
                       <CardHeader>
-                        <CardTitle className="text-xl font-elegant">{dest.name}</CardTitle>
+                        <div className="flex justify-between items-start mb-2">
+                          <CardTitle className="text-xl font-elegant">{dest.name}</CardTitle>
+                          <Badge variant="secondary">{dest.region}</Badge>
+                        </div>
                         <CardDescription>{dest.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <div className="space-y-4">
-                          <div className="flex items-center gap-2 text-sm">
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Clock className="h-4 w-4" />
                             <span>{dest.duration}</span>
                           </div>
@@ -90,8 +109,8 @@ const Grece = () => {
                               ))}
                             </div>
                           </div>
-                          <Link to={dest.link}>
-                            <Button variant="outline" className="w-full mt-4">Lire l'article</Button>
+                          <Link to={dest.link} onClick={() => window.scrollTo(0, 0)}>
+                            <Button className="w-full mt-4">Lire l'article</Button>
                           </Link>
                         </div>
                       </CardContent>
