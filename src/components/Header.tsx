@@ -235,7 +235,7 @@ const Header = () => {
                 <ChevronDown className={`h-4 w-4 transition-transform ${openSubmenu === 'destinations' ? 'rotate-180' : ''}`} />
               </button>
               {openSubmenu === 'destinations' && (
-                <div className="pl-4 space-y-1 mt-2">
+                <div className="pl-4 space-y-1 mt-2 max-h-[60vh] overflow-y-auto">
                   <div className="font-semibold text-sm py-1">↳ {t('regions.southeastAsia')}</div>
                   <Link to="/destinations/vietnam" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>• Vietnam</Link>
                   <Link to="/destinations/thailande" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>• Thaïlande</Link>
