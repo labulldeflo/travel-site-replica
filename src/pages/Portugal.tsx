@@ -7,11 +7,16 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import portugalImg from '@/assets/destinations/portugal.jpg';
+import lisbonneImg from '@/assets/cities/lisbonne.jpg';
+import portoImg from '@/assets/cities/porto.jpg';
+import algarveImg from '@/assets/cities/algarve.jpg';
 
 const Portugal = () => {
   const cities = [
     {
       name: 'Lisbonne',
+      region: 'Centre',
+      image: lisbonneImg,
       description: 'Capitale lumineuse aux sept collines et tramways jaunes.',
       highlights: ['Alfama', 'Belém', 'Tramway 28', 'Pastéis'],
       duration: '3-4 jours',
@@ -19,6 +24,8 @@ const Portugal = () => {
     },
     {
       name: 'Porto',
+      region: 'Nord',
+      image: portoImg,
       description: 'Ville du vin sur les bords du Douro, classée UNESCO.',
       highlights: ['Ribeira', 'Caves Porto', 'Pont Dom Luis', 'Azulejos'],
       duration: '2-3 jours',
@@ -26,6 +33,8 @@ const Portugal = () => {
     },
     {
       name: 'Algarve',
+      region: 'Sud',
+      image: algarveImg,
       description: 'Côte sud aux falaises dorées et plages paradisiaques.',
       highlights: ['Lagos', 'Benagil', 'Sagres', 'Plages'],
       duration: '4-6 jours',
@@ -71,14 +80,24 @@ const Portugal = () => {
               <TabsContent value="cities" className="mt-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {cities.map((city, index) => (
-                    <Card key={index} className="hover:shadow-elegant transition-all">
+                    <Card key={index} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
+                      <div className="aspect-video overflow-hidden">
+                        <img 
+                          src={city.image} 
+                          alt={city.name} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                        />
+                      </div>
                       <CardHeader>
-                        <CardTitle className="text-xl font-elegant">{city.name}</CardTitle>
+                        <div className="flex justify-between items-start mb-2">
+                          <CardTitle className="text-xl font-elegant">{city.name}</CardTitle>
+                          <Badge variant="secondary">{city.region}</Badge>
+                        </div>
                         <CardDescription>{city.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <div className="space-y-4">
-                          <div className="flex items-center gap-2 text-sm">
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Clock className="h-4 w-4" />
                             <span>{city.duration}</span>
                           </div>
@@ -90,8 +109,8 @@ const Portugal = () => {
                               ))}
                             </div>
                           </div>
-                          <Link to={city.link}>
-                            <Button variant="outline" className="w-full mt-4">Lire l'article</Button>
+                          <Link to={city.link} onClick={() => window.scrollTo(0, 0)}>
+                            <Button className="w-full mt-4">Lire l'article</Button>
                           </Link>
                         </div>
                       </CardContent>

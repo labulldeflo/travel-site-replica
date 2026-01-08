@@ -6,6 +6,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import indonesieImg from '@/assets/destinations/indonesie.jpg';
+import baliImg from '@/assets/cities/bali.jpg';
+import javaImg from '@/assets/cities/java.jpg';
+import borneoImg from '@/assets/cities/borneo.jpg';
 
 const Indonesie = () => {
   const islands = [
@@ -13,6 +16,7 @@ const Indonesie = () => {
       name: 'Bali',
       slug: 'bali',
       region: 'Petites Îles de la Sonde',
+      image: baliImg,
       description: 'Île des dieux avec temples, rizières et plages paradisiaques.',
       highlights: ['Ubud', 'Temples', 'Rizières', 'Plages'],
       duration: '7-10 jours'
@@ -21,17 +25,19 @@ const Indonesie = () => {
       name: 'Java',
       slug: 'java',
       region: 'Grandes Îles de la Sonde',
+      image: javaImg,
       description: 'Cœur culturel avec Borobudur et volcans majestueux.',
       highlights: ['Borobudur', 'Mont Bromo', 'Yogyakarta', 'Prambanan'],
       duration: '5-7 jours'
     },
     {
-      name: 'Komodo',
-      slug: 'komodo',
-      region: 'Petites Îles de la Sonde',
-      description: 'Dragons de Komodo et plongée exceptionnelle.',
-      highlights: ['Dragons', 'Pink Beach', 'Plongée', 'Padar Island'],
-      duration: '3-5 jours'
+      name: 'Bornéo',
+      slug: 'borneo',
+      region: 'Grandes Îles de la Sonde',
+      image: borneoImg,
+      description: 'Jungle sauvage, orangs-outans et biodiversité exceptionnelle.',
+      highlights: ['Orangs-outans', 'Jungle', 'Plongée', 'Rivières'],
+      duration: '5-7 jours'
     }
   ];
 
@@ -97,7 +103,14 @@ const Indonesie = () => {
               <TabsContent value="islands" className="mt-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {islands.map((island) => (
-                    <Card key={island.slug} className="group hover:shadow-elegant transition-all duration-300">
+                    <Card key={island.slug} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
+                      <div className="aspect-video overflow-hidden">
+                        <img 
+                          src={island.image} 
+                          alt={island.name} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                        />
+                      </div>
                       <CardHeader>
                         <div className="flex justify-between items-start mb-2">
                           <CardTitle className="text-xl font-elegant">{island.name}</CardTitle>

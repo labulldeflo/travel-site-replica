@@ -7,11 +7,16 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import italieImg from '@/assets/destinations/italie.jpg';
+import romeImg from '@/assets/cities/rome.jpg';
+import toscaneImg from '@/assets/cities/toscane.jpg';
+import veniseImg from '@/assets/cities/venise.jpg';
 
 const Italie = () => {
   const regions = [
     {
       name: 'Rome & Latium',
+      region: 'Centre',
+      image: romeImg,
       description: 'Capitale éternelle entre vestiges antiques et art baroque.',
       highlights: ['Colisée', 'Vatican', 'Trevi', 'Panthéon'],
       duration: '3-4 jours',
@@ -19,6 +24,8 @@ const Italie = () => {
     },
     {
       name: 'Toscane',
+      region: 'Centre',
+      image: toscaneImg,
       description: 'Collines ondoyantes, vins prestigieux et villes d\'art.',
       highlights: ['Florence', 'Sienne', 'Pise', 'Chianti'],
       duration: '5-7 jours',
@@ -26,6 +33,8 @@ const Italie = () => {
     },
     {
       name: 'Venise & Vénétie',
+      region: 'Nord',
+      image: veniseImg,
       description: 'Cité des Doges entre canaux romantiques et palais somptueux.',
       highlights: ['San Marco', 'Rialto', 'Burano', 'Gondoles'],
       duration: '2-3 jours',
@@ -71,14 +80,24 @@ const Italie = () => {
               <TabsContent value="regions" className="mt-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {regions.map((region, index) => (
-                    <Card key={index} className="hover:shadow-elegant transition-all">
+                    <Card key={index} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
+                      <div className="aspect-video overflow-hidden">
+                        <img 
+                          src={region.image} 
+                          alt={region.name} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                        />
+                      </div>
                       <CardHeader>
-                        <CardTitle className="text-xl font-elegant">{region.name}</CardTitle>
+                        <div className="flex justify-between items-start mb-2">
+                          <CardTitle className="text-xl font-elegant">{region.name}</CardTitle>
+                          <Badge variant="secondary">{region.region}</Badge>
+                        </div>
                         <CardDescription>{region.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <div className="space-y-4">
-                          <div className="flex items-center gap-2 text-sm">
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
                             <Clock className="h-4 w-4" />
                             <span>{region.duration}</span>
                           </div>
@@ -90,8 +109,8 @@ const Italie = () => {
                               ))}
                             </div>
                           </div>
-                          <Link to={region.link}>
-                            <Button variant="outline" className="w-full mt-4">Lire l'article</Button>
+                          <Link to={region.link} onClick={() => window.scrollTo(0, 0)}>
+                            <Button className="w-full mt-4">Lire l'article</Button>
                           </Link>
                         </div>
                       </CardContent>
