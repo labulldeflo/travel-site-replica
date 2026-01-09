@@ -6,6 +6,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import argentineImg from '@/assets/destinations/argentine.jpg';
+import buenosAiresImg from '@/assets/cities/buenos-aires.jpg';
+import patagonieImg from '@/assets/cities/patagonie.jpg';
+import mendozaImg from '@/assets/cities/mendoza.jpg';
+import saltaImg from '@/assets/cities/salta.jpg';
+import iguazuImg from '@/assets/cities/iguazu.jpg';
+import valdesImg from '@/assets/cities/peninsula-valdes.jpg';
 
 const Argentine = () => {
   const cities = [
@@ -13,6 +19,7 @@ const Argentine = () => {
       name: 'Buenos Aires',
       slug: 'buenos-aires',
       region: 'Centre',
+      image: buenosAiresImg,
       description: 'Capitale élégante surnommée le "Paris de l\'Amérique du Sud".',
       highlights: ['Tango', 'La Boca', 'San Telmo', 'Recoleta'],
       duration: '3-4 jours'
@@ -21,6 +28,7 @@ const Argentine = () => {
       name: 'Patagonie',
       slug: 'patagonie',
       region: 'Sud',
+      image: patagonieImg,
       description: 'Terre sauvage de glaciers, montagnes et paysages à couper le souffle.',
       highlights: ['Perito Moreno', 'El Chaltén', 'Ushuaia', 'Torres del Paine'],
       duration: '7-10 jours'
@@ -29,6 +37,7 @@ const Argentine = () => {
       name: 'Mendoza',
       slug: 'mendoza',
       region: 'Ouest',
+      image: mendozaImg,
       description: 'Capitale du vin argentin au pied de la Cordillère des Andes.',
       highlights: ['Vignobles', 'Aconcagua', 'Dégustation', 'Andes'],
       duration: '2-3 jours'
@@ -37,6 +46,7 @@ const Argentine = () => {
       name: 'Salta',
       slug: 'salta',
       region: 'Nord-Ouest',
+      image: saltaImg,
       description: 'Région colorée aux paysages désertiques et villages coloniaux.',
       highlights: ['Quebrada de Humahuaca', 'Cafayate', 'Salinas Grandes', 'Architecture coloniale'],
       duration: '3-4 jours'
@@ -45,6 +55,7 @@ const Argentine = () => {
       name: 'Iguazú',
       slug: 'iguazu',
       region: 'Nord-Est',
+      image: iguazuImg,
       description: 'Chutes spectaculaires à la frontière avec le Brésil.',
       highlights: ['Garganta del Diablo', '275 cascades', 'Jungle subtropicale', 'Faune'],
       duration: '2 jours'
@@ -53,6 +64,7 @@ const Argentine = () => {
       name: 'Péninsule Valdés',
       slug: 'valdes',
       region: 'Côte Atlantique',
+      image: valdesImg,
       description: 'Réserve naturelle pour observer baleines, lions de mer et manchots.',
       highlights: ['Baleines', 'Manchots', 'Lions de mer', 'Nature sauvage'],
       duration: '2-3 jours'
@@ -226,7 +238,14 @@ const Argentine = () => {
               <TabsContent value="cities" className="mt-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {cities.map((city) => (
-                    <Card key={city.slug} className="group hover:shadow-elegant transition-all duration-300">
+                    <Card key={city.slug} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
+                      <div className="aspect-video overflow-hidden">
+                        <img 
+                          src={city.image} 
+                          alt={city.name} 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                        />
+                      </div>
                       <CardHeader>
                         <div className="flex justify-between items-start mb-2">
                           <CardTitle className="text-xl font-elegant">{city.name}</CardTitle>
