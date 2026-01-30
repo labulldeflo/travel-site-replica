@@ -3,6 +3,8 @@ name: Export static site
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *'  # Tous les jours à 6h UTC (8h Paris)
 
 jobs:
   build-and-upload:
