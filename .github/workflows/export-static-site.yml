@@ -15,6 +15,9 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install zip (needed to create site-dist.zip)
+        run: sudo apt-get update && sudo apt-get install -y zip
+
       - name: Install dependencies
         run: npm ci
 
