@@ -22,7 +22,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y zip
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Build production
         run: npm run build
