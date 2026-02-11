@@ -3,17 +3,12 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 
 const RessourcesGratuites = () => {
   const { t } = useTranslation();
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const resources = [
     {
@@ -26,21 +21,24 @@ const RessourcesGratuites = () => {
           description: 'Liste complète de tout ce qu\'il faut prévoir avant, pendant et après votre voyage.',
           format: 'PDF',
           pages: '4 pages',
-          featured: true
+          featured: true,
+          downloadUrl: '/checklist-voyageuse-organisee.pdf'
         },
         {
           title: 'Check-list documents de voyage',
           description: 'Tous les papiers importants à ne pas oublier : passeport, visas, assurances...',
           format: 'PDF',
           pages: '2 pages',
-          featured: false
+          featured: false,
+          downloadUrl: '/checklist-documents-voyage.pdf'
         },
         {
           title: 'Check-list valise selon la destination',
           description: 'Adaptez votre valise selon le climat et le type de voyage.',
           format: 'PDF',
           pages: '3 pages',
-          featured: false
+          featured: false,
+          downloadUrl: '/checklist-voyageuse-organisee.pdf'
         }
       ]
     },
@@ -54,28 +52,32 @@ const RessourcesGratuites = () => {
           description: 'Les essentiels pour voyager en Asie : budget, transport, visa, culture.',
           format: 'PDF',
           pages: '8 pages',
-          featured: true
+          featured: true,
+          downloadUrl: '/guide-asie-sud-est.pdf'
         },
         {
           title: 'Guide Express Europe',
           description: 'Conseils pratiques pour explorer l\'Europe facilement et à petit budget.',
           format: 'PDF',
           pages: '6 pages',
-          featured: false
+          featured: false,
+          downloadUrl: '/guide-europe.pdf'
         },
         {
           title: 'Guide Express Afrique',
           description: 'Préparez votre safari ou votre road trip africain en toute sérénité.',
           format: 'PDF',
           pages: '7 pages',
-          featured: false
+          featured: false,
+          downloadUrl: '/guide-afrique.pdf'
         },
         {
-          title: 'Guide Express Amérique',
+          title: 'Guide Tour du Monde',
           description: 'Du Canada à la Patagonie : infos clés pour voyager sur le continent américain.',
           format: 'PDF',
           pages: '8 pages',
-          featured: false
+          featured: false,
+          downloadUrl: '/Guide-tour-du-monde.pdf'
         }
       ]
     },
@@ -89,73 +91,12 @@ const RessourcesGratuites = () => {
           description: 'Nos applications préférées pour organiser, traduire, naviguer et économiser.',
           format: 'PDF',
           pages: '5 pages',
-          featured: false
-        },
-        {
-          title: 'Comparateur de prix vols et hébergements',
-          description: 'Liste des meilleurs sites pour trouver les meilleurs deals.',
-          format: 'PDF',
-          pages: '3 pages',
-          featured: false
-        },
-        {
-          title: 'Kit de survie linguistique',
-          description: 'Phrases essentielles en 10 langues pour voyager sans stress.',
-          format: 'PDF',
-          pages: '6 pages',
-          featured: false
+          featured: false,
+          downloadUrl: '/top-applis-voyage.pdf'
         }
       ]
     }
   ];
-
-  const handleDownload = (title: string) => {
-    toast({
-      title: "Inscription requise",
-      description: `Pour télécharger "${title}", inscrivez-vous à notre newsletter ci-dessous !`,
-    });
-    // Scroll to newsletter section
-    document.querySelector('#newsletter-section')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email || !email.includes('@')) {
-      toast({
-        title: "Erreur",
-        description: "Veuillez entrer une adresse email valide.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const { data, error } = await supabase.functions.invoke('newsletter-signup', {
-        body: { email },
-      });
-
-      if (error) throw error;
-
-      toast({
-        title: "🎉 Inscription réussie !",
-        description: "Vérifie ta boîte mail pour recevoir ta check-list gratuite.",
-      });
-      
-      setEmail('');
-    } catch (error: any) {
-      console.error('Newsletter signup error:', error);
-      toast({
-        title: "Erreur",
-        description: error.message || "Une erreur est survenue. Réessayez plus tard.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <>
@@ -179,7 +120,7 @@ const RessourcesGratuites = () => {
                 Téléchargez gratuitement nos outils, check-lists et mini-guides pour organiser vos voyages sereinement.
               </p>
               <Badge className="bg-white/20 text-white hover:bg-white/30 text-lg px-6 py-2">
-                ✨ 100% Gratuit - Aucune carte bancaire requise
+                ✨ 100% Gratuit - Téléchargement direct
               </Badge>
             </div>
           </section>
@@ -228,11 +169,13 @@ const RessourcesGratuites = () => {
                           </div>
                           
                           <Button 
+                            asChild
                             className="w-full bg-ocean hover:bg-ocean/90"
-                            onClick={() => handleDownload(item.title)}
                           >
-                            <Download className="h-4 w-4 mr-2" />
-                            Télécharger gratuitement
+                            <a href={item.downloadUrl} download>
+                              <Download className="h-4 w-4 mr-2" />
+                              Télécharger gratuitement
+                            </a>
                           </Button>
                         </div>
                       </CardContent>
@@ -242,83 +185,6 @@ const RessourcesGratuites = () => {
               </div>
             </section>
           ))}
-
-          {/* Newsletter CTA Section */}
-          <section id="newsletter-section" className="py-16 bg-gradient-sand">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl font-elegant font-bold mb-4">
-                💌 Rejoins la Newsletter Voyageuse
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Reçois chaque semaine des idées d'escapades, des guides exclusifs et des bons plans pour voyager sereinement.
-              </p>
-              <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-6">
-                <input 
-                  type="email" 
-                  placeholder="Ton adresse e-mail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={isSubmitting}
-                  className="flex-1 px-4 py-3 rounded-lg border border-sand-dark focus:outline-none focus:ring-2 focus:ring-ocean disabled:opacity-50"
-                  required
-                />
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="px-8 bg-ocean hover:bg-ocean/90 disabled:opacity-50"
-                >
-                  {isSubmitting ? 'Inscription...' : "Je m'inscris gratuitement"}
-                </Button>
-              </form>
-              <p className="text-sm text-muted-foreground">
-                🎁 En bonus : reçois immédiatement la check-list ultime de la voyageuse organisée (PDF)
-              </p>
-            </div>
-          </section>
-
-          {/* Access Info */}
-          <section className="py-16">
-            <div className="container mx-auto px-4 max-w-4xl">
-              <Card className="bg-muted/30 border-2 border-ocean/20">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-elegant text-center">
-                    💎 Comment accéder aux ressources ?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-3 gap-6 text-center">
-                    <div>
-                      <div className="bg-ocean/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-ocean">1</span>
-                      </div>
-                      <h3 className="font-semibold mb-2">Inscris-toi</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Entre ton email dans le formulaire ci-dessus
-                      </p>
-                    </div>
-                    <div>
-                      <div className="bg-sunset/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-sunset">2</span>
-                      </div>
-                      <h3 className="font-semibold mb-2">Reçois ton e-mail</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Check ta boîte mail (et les spams !)
-                      </p>
-                    </div>
-                    <div>
-                      <div className="bg-ocean/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-ocean">3</span>
-                      </div>
-                      <h3 className="font-semibold mb-2">Télécharge</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Accède à toutes les ressources gratuitement
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
         </main>
 
         <Footer />
