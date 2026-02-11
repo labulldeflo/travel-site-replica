@@ -165,7 +165,6 @@ const RessourcesGratuites = () => {
                         <div className="space-y-4">
                           <div className="flex gap-2">
                             <Badge variant="secondary">{item.format}</Badge>
-                            <Badge variant="outline">{item.pages}</Badge>
                           </div>
                           
                           <Button 
