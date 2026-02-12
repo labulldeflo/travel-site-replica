@@ -1,4 +1,5 @@
 import { MapPin, Clock, Star, Users, Camera, Utensils, Building, Wine } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,6 +15,7 @@ import iguazuImg from '@/assets/cities/iguazu.jpg';
 import valdesImg from '@/assets/cities/peninsula-valdes.jpg';
 
 const Argentine = () => {
+  const navigate = useNavigate();
   const cities = [
     {
       name: 'Buenos Aires',
@@ -271,7 +273,7 @@ const Argentine = () => {
                           </div>
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/guides/argentine-${city.slug}`}
+                            onClick={() => navigate(`/guides/argentine-${city.slug}`)}
                           >
                             En savoir plus
                           </Button>
@@ -418,7 +420,7 @@ const Argentine = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>

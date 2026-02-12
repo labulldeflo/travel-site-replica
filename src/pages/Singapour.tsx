@@ -1,4 +1,5 @@
 import { MapPin, Clock, Star, Users, Camera, Utensils, Building } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,6 +9,7 @@ import Footer from '@/components/Footer';
 import singapourImg from '@/assets/destinations/singapour.jpg';
 
 const Singapour = () => {
+  const navigate = useNavigate();
   const districts = [
     {
       name: 'Marina Bay',
@@ -116,7 +118,7 @@ const Singapour = () => {
                           </div>
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/destinations/singapour/${district.slug}`}
+                            onClick={() => navigate(`/destinations/singapour/${district.slug}`)}
                           >
                             Lire l'article
                           </Button>
@@ -156,7 +158,7 @@ const Singapour = () => {
                           </ul>
                           <Button 
                             className="w-full mt-4"
-                            onClick={() => window.location.href = `/destinations/singapour/itineraire-${itinerary.duration.replace(' ', '-')}`}
+                            onClick={() => navigate(`/destinations/singapour/itineraire-${itinerary.duration.replace(' ', '-')}`)}
                           >
                             Voir l'itinéraire détaillé
                           </Button>
@@ -269,7 +271,7 @@ const Singapour = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>

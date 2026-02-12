@@ -1,4 +1,5 @@
 import { MapPin, Clock, Star, Users, Camera, Utensils, Building, Music } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -13,6 +14,7 @@ import amazonieImg from '@/assets/cities/amazonie.jpg';
 import iguazuImg from '@/assets/cities/iguazu.jpg';
 
 const Bresil = () => {
+  const navigate = useNavigate();
   const cities = [
     {
       name: 'Rio de Janeiro',
@@ -261,7 +263,7 @@ const Bresil = () => {
                           </div>
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/guides/bresil-${city.slug}`}
+                            onClick={() => navigate(`/guides/bresil-${city.slug}`)}
                           >
                             En savoir plus
                           </Button>
@@ -408,7 +410,7 @@ const Bresil = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>

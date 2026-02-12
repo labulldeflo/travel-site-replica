@@ -1,4 +1,5 @@
 import { MapPin, Clock, Star, Users, Camera, Utensils, Building } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,6 +12,7 @@ import chiangmaiImg from '@/assets/cities/chiangmai.jpg';
 import ilesSudImg from '@/assets/cities/iles-sud-thailande.jpg';
 
 const Thailande = () => {
+  const navigate = useNavigate();
   const cities = [
     {
       name: 'Bangkok',
@@ -136,7 +138,7 @@ const Thailande = () => {
                           </div>
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/destinations/thailande/${city.slug}`}
+                            onClick={() => navigate(`/destinations/thailande/${city.slug}`)}
                           >
                             Lire l'article
                           </Button>
@@ -177,7 +179,7 @@ const Thailande = () => {
                           </ul>
                           <Button 
                             className="w-full mt-4"
-                            onClick={() => window.location.href = `/destinations/thailande/itineraire-${itinerary.duration.replace(' ', '-')}`}
+                            onClick={() => navigate(`/destinations/thailande/itineraire-${itinerary.duration.replace(' ', '-')}`)}
                           >
                             Voir l'itinéraire détaillé
                           </Button>
@@ -292,7 +294,7 @@ const Thailande = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>
