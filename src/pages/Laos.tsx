@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Clock, MapPin, Star, Users, Camera, Utensils, Building } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import laosImg from '@/assets/destinations/laos.jpg';
@@ -11,6 +12,7 @@ import vangViengImg from '@/assets/cities/vang-vieng.jpg';
 import vientianeImg from '@/assets/cities/vientiane.jpg';
 
 const Laos = () => {
+  const navigate = useNavigate();
   const cities = [
     {
       name: 'Luang Prabang',
@@ -136,7 +138,7 @@ const Laos = () => {
                           </div>
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/destinations/laos/${city.slug}`}
+                            onClick={() => navigate(`/destinations/laos/${city.slug}`)}
                           >
                             Lire l'article
                           </Button>
@@ -176,7 +178,7 @@ const Laos = () => {
                           </ul>
                           <Button 
                             className="w-full mt-4"
-                            onClick={() => window.location.href = `/destinations/laos/itineraire-${itinerary.duration.replace(' ', '-')}`}
+                            onClick={() => navigate(`/destinations/laos/itineraire-${itinerary.duration.replace(' ', '-')}`)}
                           >
                             Voir l'itinéraire détaillé
                           </Button>
@@ -289,7 +291,7 @@ const Laos = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>

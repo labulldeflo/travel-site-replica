@@ -1,4 +1,5 @@
 import { MapPin, Clock, Star, Users, Camera, Utensils, Building } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,6 +10,7 @@ import mexicoImg from '@/assets/destinations/mexique.jpg';
 import chichenItzaImg from '@/assets/cities/chichen-itza.jpg';
 
 const Mexique = () => {
+  const navigate = useNavigate();
   const cities = [
     {
       name: 'Mexico City',
@@ -166,7 +168,7 @@ const Mexique = () => {
 
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/destinations/mexique/${city.slug}`}
+                            onClick={() => navigate(`/destinations/mexique/${city.slug}`)}
                           >
                             Lire l'article
                           </Button>
@@ -208,7 +210,7 @@ const Mexique = () => {
                           </ul>
                           <Button 
                             className="w-full mt-4"
-                            onClick={() => window.location.href = `/destinations/mexique/itineraire-${itinerary.duration.replace(' ', '-')}`}
+                            onClick={() => navigate(`/destinations/mexique/itineraire-${itinerary.duration.replace(' ', '-')}`)}
                           >
                             Voir l'itinéraire détaillé
                           </Button>
@@ -323,7 +325,7 @@ const Mexique = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>

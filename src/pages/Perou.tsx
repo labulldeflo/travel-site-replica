@@ -1,4 +1,5 @@
 import { MapPin, Clock, Star, Users, Camera, Utensils, Building } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,6 +10,7 @@ import peruImg from '@/assets/destinations/perou.jpg';
 import machuPicchuImg from '@/assets/cities/machu-picchu.jpg';
 
 const Perou = () => {
+  const navigate = useNavigate();
   const cities = [
     {
       name: 'Cusco',
@@ -166,7 +168,7 @@ const Perou = () => {
 
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/destinations/perou/${city.slug}`}
+                            onClick={() => navigate(`/destinations/perou/${city.slug}`)}
                           >
                             Lire l'article
                           </Button>
@@ -208,7 +210,7 @@ const Perou = () => {
                           </ul>
                           <Button 
                             className="w-full mt-4"
-                            onClick={() => window.location.href = `/destinations/perou/itineraire-${itinerary.duration.replace(' ', '-')}`}
+                            onClick={() => navigate(`/destinations/perou/itineraire-${itinerary.duration.replace(' ', '-')}`)}
                           >
                             Voir l'itinéraire détaillé
                           </Button>
@@ -323,7 +325,7 @@ const Perou = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>

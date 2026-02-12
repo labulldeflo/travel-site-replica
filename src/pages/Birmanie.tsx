@@ -1,4 +1,5 @@
 import { MapPin, Clock, Star, Users, Camera, Utensils, Building } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,6 +9,7 @@ import Footer from '@/components/Footer';
 import birmanieImg from '@/assets/destinations/birmanie.jpg';
 
 const Birmanie = () => {
+  const navigate = useNavigate();
   const cities = [
     {
       name: 'Bagan',
@@ -123,7 +125,7 @@ const Birmanie = () => {
                           </div>
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/destinations/birmanie/${city.slug}`}
+                            onClick={() => navigate(`/destinations/birmanie/${city.slug}`)}
                           >
                             Lire l'article
                           </Button>
@@ -163,7 +165,7 @@ const Birmanie = () => {
                           </ul>
                           <Button 
                             className="w-full mt-4"
-                            onClick={() => window.location.href = `/destinations/birmanie/itineraire-${itinerary.duration.replace(' ', '-')}`}
+                            onClick={() => navigate(`/destinations/birmanie/itineraire-${itinerary.duration.replace(' ', '-')}`)}
                           >
                             Voir l'itinéraire détaillé
                           </Button>
@@ -276,7 +278,7 @@ const Birmanie = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>

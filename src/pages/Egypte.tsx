@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import egyptHero from '@/assets/destinations/egypte.jpg';
@@ -78,6 +78,7 @@ const practicalInfo = {
 };
 
 const Egypte = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen">
       <Header />

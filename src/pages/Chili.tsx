@@ -1,4 +1,5 @@
 import { MapPin, Clock, Star, Users, Camera, Utensils, Building } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,6 +9,7 @@ import Footer from '@/components/Footer';
 import chiliImg from '@/assets/destinations/chili.jpg';
 
 const Chili = () => {
+  const navigate = useNavigate();
   const cities = [
     {
       name: 'Santiago',
@@ -162,7 +164,7 @@ const Chili = () => {
 
                           <Button 
                             className="w-full" 
-                            onClick={() => window.location.href = `/destinations/chili/${city.slug}`}
+                            onClick={() => navigate(`/destinations/chili/${city.slug}`)}
                           >
                             Lire l'article
                           </Button>
@@ -203,7 +205,7 @@ const Chili = () => {
                           </ul>
                           <Button 
                             className="w-full mt-4"
-                            onClick={() => window.location.href = `/destinations/chili/itineraire-${itinerary.duration.replace(' ', '-')}`}
+                            onClick={() => navigate(`/destinations/chili/itineraire-${itinerary.duration.replace(' ', '-')}`)}
                           >
                             Voir l'itinéraire détaillé
                           </Button>
@@ -316,7 +318,7 @@ const Chili = () => {
                       <CardContent>
                         <Button 
                           className="w-full"
-                          onClick={() => window.location.href = `/guides/${guide.slug}`}
+                          onClick={() => navigate(`/guides/${guide.slug}`)}
                         >
                           Lire l'article
                         </Button>
