@@ -33,7 +33,6 @@
   <url><loc>https://www.cap-sur-le-monde.com/destinations/philippines</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/brunei</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/timor-oriental</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
   <url><loc>https://www.cap-sur-le-monde.com/destinations/france</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/italie</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/espagne</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -46,14 +45,12 @@
   <url><loc>https://www.cap-sur-le-monde.com/destinations/irlande</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/norvege</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/hongrie</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
   <url><loc>https://www.cap-sur-le-monde.com/destinations/maroc</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/egypte</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/kenya</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/tanzanie</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/afrique-du-sud</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/madagascar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-
   <url><loc>https://www.cap-sur-le-monde.com/destinations/usa</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/canada</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/mexique</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -67,4 +64,5 @@
   <url><loc>https://www.cap-sur-le-monde.com/guides/couple</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/guides/photo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/guides/planification</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>
+  <url><loc>https://www.cap-sur-le-monde.com/guides/securite</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
