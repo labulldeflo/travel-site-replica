@@ -20,12 +20,16 @@ serve(async (req) => {
     const { email, firstName }: NewsletterRequest = await req.json();
 
     // Validation
-    if (!email || !email.includes('@')) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email) || email.length > 255) {
       return new Response(
         JSON.stringify({ error: 'Email invalide' }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
+
+    // Sanitize firstName
+    const safeName = (firstName || '').replace(/[<>"'&]/g, '').slice(0, 100);
 
     console.log('Processing newsletter signup for:', email);
 
@@ -38,7 +42,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         email,
-        firstName: firstName || '',
+        firstName: safeName,
         tags: ['Newsletter Voyageuse'],
         listIds: [Deno.env.get('SYSTEME_IO_LIST_ID')],
       }),
@@ -55,7 +59,7 @@ serve(async (req) => {
         console.log('Email already subscribed to Systeme.io');
         isAlreadySubscribed = true;
       } else {
-        throw new Error(`Erreur lors de l'ajout à Systeme.io: ${errorText}`);
+        throw new Error('Erreur lors de l\'inscription. Veuillez réessayer.');
       }
     } else {
       console.log('Successfully added to Systeme.io');
@@ -77,7 +81,7 @@ serve(async (req) => {
         subject: '🌍 Bienvenue ! Tes ressources gratuites sont prêtes',
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h1 style="color: #0891b2;">Bienvenue ${firstName || 'Voyageuse'} ! 🎉</h1>
+            <h1 style="color: #0891b2;">Bienvenue ${safeName || 'Voyageuse'} ! 🎉</h1>
             <p style="font-size: 16px; line-height: 1.6;">
               Merci de rejoindre notre communauté de voyageuses passionnées !
             </p>
@@ -197,7 +201,7 @@ serve(async (req) => {
     console.error('Error in newsletter-signup function:', error);
     return new Response(
       JSON.stringify({ 
-        error: error.message || 'Une erreur est survenue' 
+        error: 'Une erreur est survenue lors de l\'inscription. Veuillez réessayer.' 
       }),
       { 
         status: 500, 
