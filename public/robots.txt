@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.labulledeflo.com/sitemap.xml
+Sitemap: https://www.cap-sur-le-monde.com/sitemap.xml

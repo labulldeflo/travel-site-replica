@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet";
 
 // --- À CONFIGURER ---
 // Mettez ici le nom de votre site et son URL de base
-const SITE_NAME = "la bulle de flo";
-const SITE_URL = "https://www.labulledeflo.com";
+const SITE_NAME = "Cap sur le Monde";
+const SITE_URL = "https://www.cap-sur-le-monde.com";
 // --------------------
 
 // Définit les "props" que notre composant SEO acceptera
