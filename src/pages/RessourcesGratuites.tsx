@@ -1,15 +1,11 @@
-import { Download, CheckSquare, Map, Smartphone, Gift, ListChecks } from 'lucide-react';
+import { Download, CheckSquare, Map, Smartphone, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
-import ChecklistVoyageuseOrganisee from '@/components/checklists/ChecklistVoyageuseOrganisee';
-import ChecklistDocumentsVoyage from '@/components/checklists/ChecklistDocumentsVoyage';
-import ChecklistValiseDestination from '@/components/checklists/ChecklistValiseDestination';
 
 const RessourcesGratuites = () => {
   const { t } = useTranslation();
@@ -23,29 +19,26 @@ const RessourcesGratuites = () => {
         {
           title: 'La check-list ultime de la voyageuse organisée',
           description: 'Liste complète de tout ce qu\'il faut prévoir avant, pendant et après votre voyage.',
-          format: 'PDF + Interactif',
+          format: 'PDF',
           pages: '4 pages',
           featured: true,
-          downloadUrl: '/checklist-voyageuse-organisee.pdf',
-          interactiveComponent: 'voyageuse'
+          downloadUrl: '/checklist-voyageuse-organisee.pdf'
         },
         {
           title: 'Check-list documents de voyage',
           description: 'Tous les papiers importants à ne pas oublier : passeport, visas, assurances...',
-          format: 'PDF + Interactif',
+          format: 'PDF',
           pages: '2 pages',
           featured: false,
-          downloadUrl: '/checklist-documents-voyage.pdf',
-          interactiveComponent: 'documents'
+          downloadUrl: '/checklist-documents-voyage.pdf'
         },
         {
           title: 'Check-list valise selon la destination',
           description: 'Adaptez votre valise selon le climat et le type de voyage.',
-          format: 'PDF + Interactif',
+          format: 'PDF',
           pages: '3 pages',
           featured: false,
-          downloadUrl: '/checklist-voyageuse-organisee.pdf',
-          interactiveComponent: 'valise'
+          downloadUrl: '/checklist-voyageuse-organisee.pdf'
         }
       ]
     },
@@ -169,38 +162,18 @@ const RessourcesGratuites = () => {
                       </CardHeader>
                       
                       <CardContent>
-                        <div className="space-y-3">
+                        <div className="space-y-4">
                           <div className="flex gap-2">
                             <Badge variant="secondary">{item.format}</Badge>
                           </div>
                           
-                          {'interactiveComponent' in item && item.interactiveComponent && (
-                            <Dialog>
-                              <DialogTrigger asChild>
-                                <Button variant="default" className="w-full gap-2 bg-sunset hover:bg-sunset/90">
-                                  <ListChecks className="h-4 w-4" />
-                                  Ouvrir la check-list interactive
-                                </Button>
-                              </DialogTrigger>
-                              <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-                                <DialogHeader>
-                                  <DialogTitle>{item.title}</DialogTitle>
-                                </DialogHeader>
-                                {item.interactiveComponent === 'voyageuse' && <ChecklistVoyageuseOrganisee />}
-                                {item.interactiveComponent === 'documents' && <ChecklistDocumentsVoyage />}
-                                {item.interactiveComponent === 'valise' && <ChecklistValiseDestination />}
-                              </DialogContent>
-                            </Dialog>
-                          )}
-
                           <Button 
                             asChild
-                            variant="outline"
-                            className="w-full"
+                            className="w-full bg-ocean hover:bg-ocean/90"
                           >
                             <a href={item.downloadUrl} download>
                               <Download className="h-4 w-4 mr-2" />
-                              Télécharger le PDF
+                              Télécharger gratuitement
                             </a>
                           </Button>
                         </div>
