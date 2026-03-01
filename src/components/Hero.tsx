@@ -14,7 +14,7 @@ const Hero = () => {
           width={1200}
           height={577}
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero"></div>
