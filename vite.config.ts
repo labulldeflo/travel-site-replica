@@ -21,8 +21,9 @@ export default defineConfig(({ mode }) => ({
     react(),
     imagetools({
       defaultDirectives: (url) => {
-        // Auto-optimize all .jpg images from cities directory
-        if (url.pathname.includes('/cities/') && url.pathname.endsWith('.jpg')) {
+        // Auto-optimize all .jpg images from assets subdirectories
+        const optimizeDirs = ['/cities/', '/destinations/', '/tests/', '/guides/', '/blog/'];
+        if (optimizeDirs.some(dir => url.pathname.includes(dir)) && url.pathname.endsWith('.jpg')) {
           return new URLSearchParams('w=800&format=webp&quality=75');
         }
         return new URLSearchParams();
