@@ -8,7 +8,7 @@ import Famille from "@/components/Famille";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import heroImage from "@/assets/hero-mediterranean-cove.jpg";
+import heroImage from "@/assets/hero-mediterranean-cover.webp";
 
 const Index = () => {
   return (
