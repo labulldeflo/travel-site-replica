@@ -7,21 +7,6 @@
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="canonical" href="https://www.cap-sur-le-monde.com/" />
 
-    <!-- Google Analytics -->
-  <script>
-  window.addEventListener('load', function() {
-    var script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-LESCLW87FV";
-    script.async = true;
-    document.head.appendChild(script);
-  });
-</script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-LESCLW87FV');
-    </script>
-
     <title>Cap sur le Monde - Blog Voyage & Conseils</title>
     <meta
       name="description"
@@ -40,6 +25,24 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Google Analytics chargé après le rendu -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      window.addEventListener('load', function () {
+        var script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-LESCLW87FV";
+        script.async = true;
+        document.head.appendChild(script);
+
+        gtag('js', new Date());
+        gtag('config', 'G-LESCLW87FV', {
+          anonymize_ip: true
+        });
+      });
+    </script>
 
     <script type="module" src="/src/main.tsx"></script>
   </head>
