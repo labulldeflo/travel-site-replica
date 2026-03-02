@@ -1,56 +1,91 @@
-import { useTranslation } from 'react-i18next';
-import coupleImage from '@/assets/couple-travel-portrait.jpg';
+import { Wallet, Map, Bed, Shield, Train, Utensils } from 'lucide-react';
+import { Card } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
+
+const services = [
+  {
+    icon: Map,
+    title: "Guides par destination",
+    description: "Des guides complets pour chaque pays : itinéraires, incontournables, conseils locaux.",
+    link: "/destinations",
+    color: "bg-ocean/10 text-ocean",
+  },
+  {
+    icon: Wallet,
+    title: "Budgets détaillés",
+    description: "Combien coûte un voyage ? Hébergement, repas, transport — tout est chiffré.",
+    link: "/guides/budget",
+    color: "bg-sunset/10 text-sunset",
+  },
+  {
+    icon: Bed,
+    title: "Où dormir",
+    description: "Nos recommandations d'hébergements par quartier, budget et style de voyage.",
+    link: "/bons-plans/hebergement",
+    color: "bg-ocean/10 text-ocean",
+  },
+  {
+    icon: Train,
+    title: "Se déplacer",
+    description: "Transports locaux, vols intérieurs, trains : comment se déplacer efficacement.",
+    link: "/guides",
+    color: "bg-sunset/10 text-sunset",
+  },
+  {
+    icon: Shield,
+    title: "Assurance & Santé",
+    description: "Comparatifs d'assurances, vaccins, sécurité : voyagez l'esprit tranquille.",
+    link: "/guides/securite",
+    color: "bg-ocean/10 text-ocean",
+  },
+  {
+    icon: Utensils,
+    title: "Street food & Gastronomie",
+    description: "Les spécialités locales à ne pas manquer et où les trouver.",
+    link: "/guides",
+    color: "bg-sunset/10 text-sunset",
+  },
+];
 
 const Welcome = () => {
-  const { t } = useTranslation();
-  
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Profile Image */}
-          <div className="mb-12">
-            <div className="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-elegant ring-4 ring-sand/30">
-              <img 
-                src={coupleImage} 
-                alt="Marion et Cris - CapSurLeMonde" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          {/* Welcome Title */}
-          <h2 className="text-4xl md:text-5xl font-script font-bold text-foreground mb-8">
-            {t('welcome.title')}
-          </h2>
-
-          {/* Welcome Text */}
-          <div className="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              {t('welcome.p1')}
-            </p>
-            <p>
-              {t('welcome.p2')}
-            </p>
-            <p>
-              {t('welcome.p3')}
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <span className="text-sm uppercase tracking-[0.2em] text-ocean font-semibold mb-3 block">
+              Ce que vous trouverez ici
+            </span>
+            <h2 className="text-3xl md:text-5xl font-elegant font-bold text-foreground mb-4">
+              Tout pour organiser votre voyage
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Des informations pratiques, vérifiées et structurées pour vous aider 
+              à préparer chaque étape de votre prochain voyage.
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="#voyages"
-              className="px-8 py-3 bg-gradient-ocean text-white font-semibold rounded-full hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-1 text-center"
-            >
-              {t('welcome.discoverBtn')}
-            </a>
-            <a 
-              href="#conseils"
-              className="px-8 py-3 border-2 border-ocean text-ocean font-semibold rounded-full hover:bg-ocean hover:text-white transition-all duration-300 transform hover:-translate-y-1 text-center"
-            >
-              {t('welcome.tipsBtn')}
-            </a>
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <Link to={service.link} key={index}>
+                  <Card className="p-6 h-full group hover:shadow-elegant transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-ocean/20">
+                    <div className={`w-12 h-12 rounded-lg ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-lg font-elegant font-semibold text-foreground mb-2 group-hover:text-ocean transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
