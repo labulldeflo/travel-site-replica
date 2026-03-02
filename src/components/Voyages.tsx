@@ -1,130 +1,143 @@
-import { MapPin, Calendar, Users } from 'lucide-react';
+import { MapPin, Wallet, Clock } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import islandeImg from '@/assets/cities/islande.jpg';
 import baliImg from '@/assets/cities/bali.jpg';
-import patagonieImg from '@/assets/cities/patagonie.jpg';
+import bangkokImg from '@/assets/cities/bangkok.jpg';
+import marrakechImg from '@/assets/cities/marrakech.jpg';
+import lisbonneImg from '@/assets/cities/lisbonne.jpg';
+import romeImg from '@/assets/cities/rome.jpg';
+
+const destinations = [
+  {
+    title: "Thaïlande",
+    image: bangkokImg,
+    budget: "25-40€/jour",
+    duration: "2-4 semaines",
+    description: "Budget détaillé, itinéraires par région, street food et hébergements testés.",
+    link: "/destinations/thailande",
+    badge: "Populaire",
+  },
+  {
+    title: "Bali, Indonésie",
+    image: baliImg,
+    budget: "30-50€/jour",
+    duration: "2-3 semaines",
+    description: "Guide complet : temples, rizières, plages et budget réel jour par jour.",
+    link: "/destinations/indonesie/bali",
+    badge: "Guide complet",
+  },
+  {
+    title: "Portugal",
+    image: lisbonneImg,
+    budget: "50-80€/jour",
+    duration: "1-2 semaines",
+    description: "Lisbonne, Porto, Algarve : itinéraires, transports et bonnes adresses.",
+    link: "/destinations/portugal",
+    badge: "Europe",
+  },
+  {
+    title: "Maroc",
+    image: marrakechImg,
+    budget: "25-45€/jour",
+    duration: "1-2 semaines",
+    description: "Marrakech, Fès, désert du Sahara : budget, riads et conseils pratiques.",
+    link: "/destinations/maroc",
+    badge: "Afrique",
+  },
+  {
+    title: "Islande",
+    image: islandeImg,
+    budget: "100-150€/jour",
+    duration: "10-15 jours",
+    description: "Road trip, aurores boréales, sources chaudes : guide complet et budget.",
+    link: "/destinations/islande",
+    badge: "Aventure",
+  },
+  {
+    title: "Italie",
+    image: romeImg,
+    budget: "60-100€/jour",
+    duration: "1-3 semaines",
+    description: "Rome, Florence, Venise : itinéraires culturels, gastronomie et budget.",
+    link: "/destinations/italie",
+    badge: "Europe",
+  },
+];
 
 const Voyages = () => {
-  const { t } = useTranslation();
-  const destinations = [
-    {
-      id: 1,
-      title: t('voyages.destinations.iceland.title'),
-      image: islandeImg,
-      location: t('voyages.destinations.iceland.location'),
-      duration: t('voyages.destinations.iceland.duration'),
-      travelers: t('voyages.destinations.iceland.travelers'),
-      description: t('voyages.destinations.iceland.description'),
-      highlights: t('voyages.destinations.iceland.highlights', { returnObjects: true }) as string[],
-      link: "/destinations/islande/reykjavik"
-    },
-    {
-      id: 2,
-      title: t('voyages.destinations.bali.title'),
-      image: baliImg,
-      location: t('voyages.destinations.bali.location'),
-      duration: t('voyages.destinations.bali.duration'),
-      travelers: t('voyages.destinations.bali.travelers'),
-      description: t('voyages.destinations.bali.description'),
-      highlights: t('voyages.destinations.bali.highlights', { returnObjects: true }) as string[],
-      link: "/destinations/indonesie/bali"
-    },
-    {
-      id: 3,
-      title: t('voyages.destinations.patagonia.title'),
-      image: patagonieImg,
-      location: t('voyages.destinations.patagonia.location'),
-      duration: t('voyages.destinations.patagonia.duration'),
-      travelers: t('voyages.destinations.patagonia.travelers'),
-      description: t('voyages.destinations.patagonia.description'),
-      highlights: t('voyages.destinations.patagonia.highlights', { returnObjects: true }) as string[],
-      link: "/destinations/argentine/patagonie"
-    }
-  ];
-
   return (
     <section id="voyages" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-script font-bold text-foreground mb-4">
-              {t('voyages.title')}
+            <span className="text-sm uppercase tracking-[0.2em] text-ocean font-semibold mb-3 block">
+              Destinations
+            </span>
+            <h2 className="text-3xl md:text-5xl font-elegant font-bold text-foreground mb-4">
+              Nos guides les plus consultés
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('voyages.subtitle')}
+              Des guides pratiques avec budgets réels, itinéraires testés et conseils concrets
+              pour chaque destination.
             </p>
           </div>
 
           {/* Destinations Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {destinations.map((destination) => (
-              <Card key={destination.id} className="group overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 cursor-pointer transform hover:-translate-y-2">
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={destination.image} 
-                    alt={destination.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-elegant font-semibold text-foreground mb-3 group-hover:text-ocean transition-colors">
-                    {destination.title}
-                  </h3>
-                  
-                  {/* Meta Info */}
-                  <div className="flex items-center justify-between mb-4 text-sm text-muted-foreground">
-                    <div className="flex items-center space-x-1">
-                      <MapPin className="w-4 h-4" />
-                      <span>{destination.location}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{destination.duration}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Users className="w-4 h-4" />
-                      <span>{destination.travelers}</span>
-                    </div>
+            {destinations.map((destination, index) => (
+              <Link to={destination.link} key={index}>
+                <Card className="group overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 cursor-pointer transform hover:-translate-y-2 h-full">
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={destination.image} 
+                      alt={`Guide voyage ${destination.title}`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <span className="absolute top-3 left-3 px-3 py-1 bg-ocean/90 text-white text-xs font-semibold rounded-full">
+                      {destination.badge}
+                    </span>
                   </div>
 
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {destination.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {destination.highlights.map((highlight, index) => (
-                        <span 
-                          key={index}
-                          className="px-3 py-1 bg-ocean/10 text-ocean text-xs rounded-full border border-ocean/20"
-                        >
-                          {highlight}
-                        </span>
-                      ))}
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-elegant font-semibold text-foreground mb-2 group-hover:text-ocean transition-colors">
+                      {destination.title}
+                    </h3>
+                    
+                    {/* Meta Info */}
+                    <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1">
+                        <Wallet className="w-4 h-4 text-ocean" />
+                        <span>{destination.budget}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4 text-sunset" />
+                        <span>{destination.duration}</span>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Read More Button */}
-                  <Link to={destination.link} className="block w-full py-2 bg-gradient-ocean text-white rounded-lg hover:shadow-elegant transition-all duration-300 transform group-hover:scale-105 text-center">
-                    {t('voyages.readMore')}
-                  </Link>
-                </div>
-              </Card>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {destination.description}
+                    </p>
+                  </div>
+                </Card>
+              </Link>
             ))}
           </div>
 
           {/* View All Button */}
           <div className="text-center mt-12">
-            <Link to="/destinations" className="inline-block px-8 py-3 border-2 border-ocean text-ocean font-semibold rounded-full hover:bg-ocean hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-              {t('voyages.viewAll')}
+            <Link 
+              to="/destinations" 
+              className="inline-flex items-center gap-2 px-8 py-3 border-2 border-ocean text-ocean font-semibold rounded-lg hover:bg-ocean hover:text-white transition-all duration-300"
+            >
+              <MapPin className="w-5 h-5" />
+              Voir toutes les destinations
             </Link>
           </div>
         </div>

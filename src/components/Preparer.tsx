@@ -1,155 +1,114 @@
-import { Globe, Calendar, CreditCard, FileText, Users2, Compass } from 'lucide-react';
+import { Globe, Calendar, CreditCard, FileText, Compass, CheckCircle } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-const Preparer = () => {
-  const {
-    t
-  } = useTranslation();
-  const etapes = [{
+
+const etapes = [
+  {
     icon: Globe,
-    title: t('preparer.steps.destinations.title'),
-    description: t('preparer.steps.destinations.description'),
-    details: t('preparer.steps.destinations.details', {
-      returnObjects: true
-    }) as string[]
-  }, {
+    title: "1. Choisir sa destination",
+    description: "Climat, budget, visa, sécurité : les critères essentiels pour bien choisir.",
+    details: ["Recherche destinations", "Climat et saisons", "Coût de la vie", "Visa requis"],
+  },
+  {
     icon: Calendar,
-    title: t('preparer.steps.dates.title'),
-    description: t('preparer.steps.dates.description'),
-    details: t('preparer.steps.dates.details', {
-      returnObjects: true
-    }) as string[]
-  }, {
+    title: "2. Planifier les dates",
+    description: "Haute ou basse saison ? Optimisez votre planning pour le meilleur rapport qualité-prix.",
+    details: ["Haute/basse saison", "Événements locaux", "Durée optimale", "Flexibilité dates"],
+  },
+  {
     icon: CreditCard,
-    title: t('preparer.steps.budget.title'),
-    description: t('preparer.steps.budget.description'),
-    details: t('preparer.steps.budget.details', {
-      returnObjects: true
-    }) as string[]
-  }, {
+    title: "3. Établir son budget",
+    description: "Hébergement, repas, transports, activités : anticipez chaque poste de dépense.",
+    details: ["Transport international", "Logements", "Nourriture", "Activités et visites"],
+  },
+  {
     icon: FileText,
-    title: t('preparer.steps.formalities.title'),
-    description: t('preparer.steps.formalities.description'),
-    details: t('preparer.steps.formalities.details', {
-      returnObjects: true
-    }) as string[]
-  }, {
-    icon: Users2,
-    title: t('preparer.steps.bookings.title'),
-    description: t('preparer.steps.bookings.description'),
-    details: t('preparer.steps.bookings.details', {
-      returnObjects: true
-    }) as string[]
-  }, {
+    title: "4. Formalités administratives",
+    description: "Passeport, visa, assurance, vaccins : la checklist complète avant le départ.",
+    details: ["Passeport valide", "Visas nécessaires", "Assurance voyage", "Vaccinations"],
+  },
+  {
     icon: Compass,
-    title: t('preparer.steps.equipment.title'),
-    description: t('preparer.steps.equipment.description'),
-    details: t('preparer.steps.equipment.details', {
-      returnObjects: true
-    }) as string[]
-  }];
-  return <section id="preparer" className="py-20 bg-muted/30">
+    title: "5. Réservations essentielles",
+    description: "Vols, hébergements, transports sur place : sécurisez l'essentiel.",
+    details: ["Vols internationaux", "Premiers hébergements", "Transport sur place", "Activités populaires"],
+  },
+];
+
+const Preparer = () => {
+  return (
+    <section id="preparer" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-script font-bold text-foreground mb-4">
-              {t('preparer.title')}
+            <span className="text-sm uppercase tracking-[0.2em] text-ocean font-semibold mb-3 block">
+              Organiser son voyage
+            </span>
+            <h2 className="text-3xl md:text-5xl font-elegant font-bold text-foreground mb-4">
+              Les 5 étapes pour bien préparer son voyage
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              {t('preparer.subtitle')}
+              Un processus simple et structuré pour ne rien oublier et partir l'esprit tranquille.
             </p>
-          </div>
-
-          {/* Hero Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            <div className="text-center p-6 bg-background rounded-xl shadow-soft">
-              <div className="text-3xl font-bold text-ocean mb-2">18</div>
-              <div className="text-sm text-muted-foreground">{t('preparer.stats.months')}</div>
-            </div>
-            <div className="text-center p-6 bg-background rounded-xl shadow-soft">
-              <div className="text-3xl font-bold text-sunset mb-2">37</div>
-              <div className="text-sm text-muted-foreground">{t('preparer.stats.countries')}</div>
-            </div>
-            <div className="text-center p-6 bg-background rounded-xl shadow-soft">
-              <div className="text-3xl font-bold text-ocean mb-2">25k€</div>
-              <div className="text-sm text-muted-foreground">{t('preparer.stats.budget')}</div>
-            </div>
-            <div className="text-center p-6 bg-background rounded-xl shadow-soft">
-              <div className="text-3xl font-bold text-sunset mb-2">6</div>
-              <div className="text-sm text-muted-foreground">{t('preparer.stats.preparation')}</div>
-            </div>
           </div>
 
           {/* Étapes */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {etapes.map((etape, index) => {
-            const IconComponent = etape.icon;
-            const isEven = index % 2 === 0;
-            return <Card key={index} className={`overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                  <div className="lg:flex w-full">
-                    {/* Content */}
-                    <div className="flex-1 p-8">
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0">
-                          <div className="w-16 h-16 bg-gradient-ocean rounded-full flex items-center justify-center">
-                            <IconComponent className="w-8 h-8 text-white" />
-                          </div>
-                        </div>
-                        
-                        <div className="flex-1">
-                          <h3 className="text-2xl font-elegant font-semibold text-foreground mb-3">
-                            {etape.title}
-                          </h3>
-                          
-                          <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                            {etape.description}
-                          </p>
-
-                          {/* Checklist */}
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            {etape.details.map((detail, detailIndex) => <div key={detailIndex} className="flex items-center space-x-3">
-                                <div className="w-2 h-2 bg-sunset rounded-full flex-shrink-0"></div>
-                                <span className="text-sm text-muted-foreground">{detail}</span>
-                              </div>)}
-                          </div>
-                        </div>
+              const IconComponent = etape.icon;
+              return (
+                <Card key={index} className="overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-300">
+                  <div className="flex flex-col md:flex-row">
+                    {/* Icon side */}
+                    <div className="md:w-20 flex items-center justify-center p-6 bg-ocean/5">
+                      <div className="w-14 h-14 bg-ocean/10 rounded-xl flex items-center justify-center">
+                        <IconComponent className="w-7 h-7 text-ocean" />
                       </div>
                     </div>
-
-                    {/* Visual Element */}
-                    <div className="lg:w-1/3 p-8 bg-gradient-sand flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-24 h-24 bg-white/50 rounded-full flex items-center justify-center mb-4 mx-auto">
-                          <IconComponent className="w-12 h-12 text-ocean" />
-                        </div>
-                        <div className="text-6xl font-bold text-ocean/20 font-script">
-                          {String(index + 1).padStart(2, '0')}
-                        </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1 p-6">
+                      <h3 className="text-xl font-elegant font-semibold text-foreground mb-2">
+                        {etape.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        {etape.description}
+                      </p>
+                      <div className="flex flex-wrap gap-3">
+                        {etape.details.map((detail, i) => (
+                          <span key={i} className="inline-flex items-center gap-1.5 text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full">
+                            <CheckCircle className="w-3.5 h-3.5 text-ocean" />
+                            {detail}
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </div>
-                </Card>;
-          })}
+                </Card>
+              );
+            })}
           </div>
 
           {/* CTA Section */}
-          <div className="mt-16 text-center bg-gradient-ocean rounded-2xl p-12 text-white">
-            <h3 className="text-3xl font-script font-bold mb-4">
-              {t('preparer.cta.title')}
+          <div className="mt-16 text-center bg-ocean rounded-2xl p-12 text-white">
+            <h3 className="text-2xl md:text-3xl font-elegant font-bold mb-4">
+              Besoin d'un guide complet ?
             </h3>
             <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-              {t('preparer.cta.description')}
+              Téléchargez notre checklist gratuite avec toutes les étapes détaillées
+              pour organiser votre voyage de A à Z.
             </p>
-            <Link to="/guide-gratuit">
-              <button className="px-8 py-4 bg-white text-ocean font-semibold rounded-full hover:bg-sand transition-all duration-300 transform hover:-translate-y-1 hover:shadow-elegant">
-                {t('preparer.cta.button')}
+            <Link to="/ressources-gratuites">
+              <button className="px-8 py-4 bg-white text-ocean font-semibold rounded-lg hover:bg-sand transition-all duration-300 shadow-lg">
+                Télécharger la checklist gratuite
               </button>
             </Link>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Preparer;

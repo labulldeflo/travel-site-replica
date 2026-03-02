@@ -8,15 +8,13 @@ import Famille from "@/components/Famille";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import heroImage from "@/assets/hero-mediterranean-cover.webp";
 
 const Index = () => {
   return (
     <>
       <SEO 
-        title="Cap sur le Monde - Blog Voyage au Féminin"
-        description="Inspiration voyage pour femmes de 30 à 60 ans. Guides, conseils pratiques, itinéraires et bons plans pour voyager sereinement à travers le monde."
-        image={heroImage}
+        title="Cap sur le Monde – Guides pratiques pour organiser vos voyages"
+        description="Guides complets, budgets détaillés et conseils pratiques pour préparer vos voyages. +40 destinations couvertes avec itinéraires testés."
         url="/"
       />
       <div className="min-h-screen">
