@@ -31,12 +31,13 @@ const Hero = () => {
             Organisez vos voyages simplement.
           </p>
 
-          <p className="text-base sm:text-lg text-white/80 font-light tracking-wide mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+          <p className="text-base sm:text-lg text-white/80 font-light tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
             Explorez le monde autrement
           </p>
+        </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* CTA Buttons - bottom of hero */}
+        <div className="absolute bottom-8 left-0 right-0 z-10 flex flex-row gap-4 justify-center items-center">
             <Link
               to="/destinations"
               className="inline-flex items-center gap-2 px-8 py-4 bg-ocean text-white font-semibold rounded-lg hover:bg-ocean/90 transition-all duration-300 shadow-lg hover:shadow-elegant"
@@ -51,7 +52,6 @@ const Hero = () => {
               <BookOpen className="w-5 h-5" />
               Voir les guides pratiques
             </Link>
-          </div>
         </div>
       </section>
 
