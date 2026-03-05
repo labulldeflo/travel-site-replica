@@ -27,8 +27,12 @@ const Hero = () => {
             Cap sur le Monde
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-light tracking-wide mb-12 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-light tracking-wide mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
             Organisez vos voyages simplement.
+          </p>
+
+          <p className="text-base sm:text-lg text-white/80 font-light tracking-wide mb-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+            Explorez le monde autrement
           </p>
 
           {/* CTA Buttons */}
