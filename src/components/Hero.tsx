@@ -52,7 +52,6 @@ const Hero = () => {
               <BookOpen className="w-5 h-5" />
               Voir les guides pratiques
             </Link>
-          </div>
         </div>
       </section>
 
