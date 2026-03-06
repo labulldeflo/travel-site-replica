@@ -11,6 +11,7 @@ const GuidePhoto = () => {
       <SEO 
         title="Guide Photo Voyage - Capturer vos Souvenirs"
         description="Conseils photo pour voyageurs : techniques, matériel, réglages et astuces pour immortaliser vos aventures."
+        hideH1={true}
       />
       <Header />
       

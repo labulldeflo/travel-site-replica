@@ -11,6 +11,7 @@ const GuideCouple = () => {
       <SEO 
         title="Guide Voyage en Couple - Destinations et Conseils Romantiques"
         description="Guide complet pour voyager en couple : destinations romantiques, conseils pour éviter les conflits et renforcer votre complicité."
+        hideH1={true}
       />
       <Header />
       

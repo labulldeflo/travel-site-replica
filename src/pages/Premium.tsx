@@ -77,6 +77,7 @@ const Premium = () => {
         title="Rejoins la Communauté Voyageuse - Gratuit"
         description="Rejoins gratuitement notre communauté de voyageuses et accède à des guides exclusifs, ressources PDF et conseils pour voyager sereinement."
         url="/premium"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />

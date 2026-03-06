@@ -11,6 +11,7 @@ const GuidePlanification = () => {
       <SEO 
         title="Guide Planification Voyage - Organiser son Itinéraire"
         description="Guide complet pour planifier votre voyage : créer un itinéraire, choisir vos dates, organiser vos activités et réserver au bon moment."
+        hideH1={true}
       />
       <Header />
       

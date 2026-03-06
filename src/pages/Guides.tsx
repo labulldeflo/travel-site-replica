@@ -184,6 +184,7 @@ const Guides = () => {
         title="Guides Voyage - Préparation, Budget, Sécurité et Conseils"
         description="Guides pratiques pour voyager sereinement : préparation, budget, sécurité, voyage en famille, photographie. Tous nos conseils d'experts."
         url="/guides"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />

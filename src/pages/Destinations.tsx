@@ -129,6 +129,7 @@ const Destinations = () => {
         title="Destinations - Asie, Europe, Afrique, Amérique"
         description="Découvrez nos destinations voyage : Asie du Sud-Est, Europe, Afrique, Amérique. Guides complets, itinéraires et conseils pour chaque pays."
         url="/destinations"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />

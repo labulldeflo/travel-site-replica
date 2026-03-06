@@ -12,6 +12,7 @@ const DestinationsVoyagerSeule50Ans = () => {
         title="10 destinations parfaites pour voyager seule"
         description="Des destinations sûres, enrichissantes et parfaitement adaptées aux femmes qui souhaitent voyager en solo."
         url="/blog/destinations-voyager-seule-50-ans"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />

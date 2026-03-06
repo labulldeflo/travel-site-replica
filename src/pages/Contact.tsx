@@ -37,6 +37,7 @@ const Contact = () => {
         title="Contact - Cap sur le Monde"
         description="Contactez-nous pour toute question sur vos projets de voyage. Nous sommes là pour vous aider à planifier votre prochaine aventure."
         url="/contact"
+        h1="Contactez Cap sur le Monde – Questions et projets de voyage"
       />
       <Header />
 

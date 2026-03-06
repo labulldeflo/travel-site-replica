@@ -75,6 +75,7 @@ const BonsPlansCartesSIM = () => {
       <SEO 
         title="Bons Plans Cartes SIM & eSIM - Restez connecté"
         description="Découvrez les meilleures solutions de cartes SIM et eSIM internationales pour voyager connecté partout dans le monde."
+        hideH1={true}
       />
       <div className="min-h-screen flex flex-col bg-gradient-to-b from-sky/5 to-background">
         <Header />

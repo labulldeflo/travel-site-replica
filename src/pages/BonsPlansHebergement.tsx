@@ -89,6 +89,7 @@ const BonsPlansHebergement = () => {
       <SEO 
         title="Bons Plans Hébergement - Meilleurs deals"
         description="Trouvez les meilleurs hébergements pour votre voyage : hôtels, auberges, locations, chez l'habitant. Conseils et bons plans."
+        hideH1={true}
       />
       <div className="min-h-screen flex flex-col bg-gradient-to-b from-sand/5 to-background">
         <Header />

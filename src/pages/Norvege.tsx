@@ -64,6 +64,7 @@ const Norvege = () => {
       <SEO 
         title="Norvège : Guide de Voyage Complet | Fjords, Aurores Boréales & Nature"
         description="Découvrez la Norvège et ses fjords majestueux. Guide complet avec Oslo, Bergen, Îles Lofoten et conseils pratiques."
+        hideH1={true}
       />
       <div className="min-h-screen flex flex-col">
         <Header />
