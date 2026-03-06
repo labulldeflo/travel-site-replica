@@ -40,6 +40,7 @@ const GuideTemplate = ({
       <SEO 
         title={`${title} - Cap sur le Monde`}
         description={metaDescription}
+        hideH1={true}
       />
       <Header />
       
