@@ -7,13 +7,14 @@ const SITE_NAME = "Cap sur le Monde";
 const SITE_URL = "https://www.cap-sur-le-monde.com";
 // --------------------
 
-// Définit les "props" que notre composant SEO acceptera
 interface SEOProps {
-  title: string; // Le titre de la page (ex: "Mon Super Article")
-  description: string; // La description (pour Google et les réseaux sociaux)
-  image?: string; // L'image à afficher (URL complète)
-  url?: string; // L'URL de la page (ex: "/mon-super-article")
-  children?: React.ReactNode; // Pour ajouter des balises <Helmet> supplémentaires
+  title: string;
+  description: string;
+  image?: string;
+  url?: string;
+  h1?: string; // H1 discret pour le SEO (si absent, utilise title)
+  hideH1?: boolean; // Mettre true si la page a déjà un H1 visible
+  children?: React.ReactNode;
 }
 
 /**
