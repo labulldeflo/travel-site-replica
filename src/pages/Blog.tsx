@@ -112,6 +112,7 @@ const Blog = () => {
         title="Blog Voyage - Guides, Conseils et Inspiration pour Voyageuses"
         description="Découvrez nos articles pour organiser vos voyages : budget, destinations, conseils pratiques et inspiration pour voyager sereinement à tout âge."
         url="/blog"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />

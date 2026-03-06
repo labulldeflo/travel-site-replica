@@ -104,6 +104,7 @@ const RessourcesGratuites = () => {
         title="Ressources Gratuites - Check-lists, Guides et Outils Voyage"
         description="Téléchargez gratuitement nos check-lists voyage, mini-guides par continent et outils pratiques. Ressources exclusives pour voyageuses organisées."
         url="/ressources-gratuites"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />
