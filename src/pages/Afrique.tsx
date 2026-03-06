@@ -143,6 +143,7 @@ const Afrique = () => {
         title="Destinations Afrique - Maroc, Égypte, Kenya, Tanzanie et plus"
         description="Explorez l'Afrique avec nos guides voyage : Maroc, Égypte, Kenya, Afrique du Sud. Safaris, déserts, plages et cultures millénaires."
         url="/afrique"
+        hideH1={true}
       />
       <div className="min-h-screen flex flex-col">
         <Header />

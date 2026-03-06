@@ -13,6 +13,7 @@ const OrganiserTourMondeBudget = () => {
         title="Comment organiser un tour du monde avec un budget limité"
         description="Découvrez nos astuces pour réaliser votre rêve de tour du monde sans vous ruiner. Budget, itinéraires et conseils pratiques."
         url="/blog/organiser-tour-monde-budget-limite"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />

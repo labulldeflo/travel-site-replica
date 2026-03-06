@@ -71,6 +71,7 @@ const BonsPlansVols = () => {
       <SEO 
         title="Bons Plans Vols - Trouvez les meilleurs prix"
         description="Découvrez nos bons plans et conseils pour trouver des vols pas chers vers toutes les destinations du monde."
+        hideH1={true}
       />
       <div className="min-h-screen flex flex-col bg-gradient-to-b from-sky/5 to-background">
         <Header />

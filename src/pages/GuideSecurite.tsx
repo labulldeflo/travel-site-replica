@@ -11,6 +11,7 @@ const GuideSecurite = () => {
       <SEO 
         title="Guide Sécurité Voyage - Assurance et Santé"
         description="Conseils essentiels pour voyager en sécurité : assurances voyage, santé, vaccins, précautions et situations d'urgence."
+        hideH1={true}
       />
       <Header />
       

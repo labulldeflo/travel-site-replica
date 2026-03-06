@@ -11,6 +11,7 @@ const GuideVol = () => {
       <SEO 
         title="Guide Vols et Transport - Trouver les Meilleurs Prix"
         description="Conseils experts pour réserver vos vols moins cher, choisir vos dates et optimiser vos transports pendant le voyage."
+        hideH1={true}
       />
       <Header />
       

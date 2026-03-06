@@ -139,6 +139,7 @@ const Europe = () => {
         title="Destinations Europe - France, Italie, Espagne, Grèce et plus"
         description="Découvrez nos guides voyage Europe : France, Italie, Espagne, Croatie, Islande. Itinéraires, conseils pratiques et bons plans pour explorer l'Europe."
         url="/europe"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />

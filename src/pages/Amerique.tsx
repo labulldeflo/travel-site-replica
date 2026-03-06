@@ -172,6 +172,7 @@ const Amerique = () => {
         title="Destinations Amérique - USA, Canada, Pérou, Argentine et plus"
         description="Découvrez les Amériques : USA, Canada, Pérou, Brésil, Argentine. Parcs nationaux, villes cosmopolites et nature sauvage."
         url="/amerique"
+        hideH1={true}
       />
       <div className="min-h-screen flex flex-col">
         <Header />

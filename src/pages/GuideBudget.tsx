@@ -11,6 +11,7 @@ const GuideBudget = () => {
       <SEO 
         title="Guide Budget Voyage - Économiser et Planifier"
         description="Guide complet pour gérer votre budget voyage : astuces d'économie, outils de planification budgétaire et conseils pour voyager moins cher."
+        hideH1={true}
       />
       <Header />
       

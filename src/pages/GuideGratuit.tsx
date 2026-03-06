@@ -116,7 +116,7 @@ const GuideGratuit = () => {
     }]
   };
   return <div className="min-h-screen bg-background">
-      <SEO title="Guide Gratuit - Préparez votre Tour du Monde" description="Téléchargez notre guide complet pour préparer votre tour du monde : étapes détaillées, outils de planification et budget prévisionnel." />
+      <SEO title="Guide Gratuit - Préparez votre Tour du Monde" description="Téléchargez notre guide complet pour préparer votre tour du monde : étapes détaillées, outils de planification et budget prévisionnel." hideH1={true} />
       <Header />
       
       <main className="pt-24 pb-20">

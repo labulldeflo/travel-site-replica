@@ -94,6 +94,7 @@ const Vietnam = () => {
         description="Guide complet Vietnam : Hanoï, Baie d'Ha Long, Hoi An, Saigon. Itinéraires 7-21 jours, budget, conseils pratiques et meilleures périodes."
         image={vietnamImg}
         url="/destinations/vietnam"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />
