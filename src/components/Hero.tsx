@@ -23,6 +23,10 @@ const Hero = () => {
 
         {/* Content */}
         <div className="relative z-10 text-center max-w-3xl mx-auto px-4 py-16">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-elegant font-bold text-white mb-6 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] leading-[1.1]">
+            Cap sur le Monde
+          </h1>
+
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
             Organisez vos voyages simplement.
           </p>
