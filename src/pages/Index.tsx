@@ -16,6 +16,7 @@ const Index = () => {
         title="Cap sur le Monde – Guides pratiques pour organiser vos voyages"
         description="Guides complets, budgets détaillés et conseils pratiques pour préparer vos voyages. +40 destinations couvertes avec itinéraires testés."
         url="/"
+        hideH1={true}
       />
       <div className="min-h-screen">
         <Header />

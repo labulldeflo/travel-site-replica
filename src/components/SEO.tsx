@@ -7,59 +7,49 @@ const SITE_NAME = "Cap sur le Monde";
 const SITE_URL = "https://www.cap-sur-le-monde.com";
 // --------------------
 
-// Définit les "props" que notre composant SEO acceptera
 interface SEOProps {
-  title: string; // Le titre de la page (ex: "Mon Super Article")
-  description: string; // La description (pour Google et les réseaux sociaux)
-  image?: string; // L'image à afficher (URL complète)
-  url?: string; // L'URL de la page (ex: "/mon-super-article")
-  children?: React.ReactNode; // Pour ajouter des balises <Helmet> supplémentaires
+  title: string;
+  description: string;
+  image?: string;
+  url?: string;
+  h1?: string; // H1 discret pour le SEO (si absent, utilise title)
+  hideH1?: boolean; // Mettre true si la page a déjà un H1 visible
+  children?: React.ReactNode;
 }
 
 /**
  * Un composant réutilisable pour gérer le SEO de chaque page.
  * Il utilise react-helmet pour injecter les balises <title>, <meta>, etc.
  */
-const SEO: React.FC<SEOProps> = ({ title, description, image, url, children }) => {
-  // Construit l'URL complète de la page
+const SEO: React.FC<SEOProps> = ({ title, description, image, url, h1, hideH1 = false, children }) => {
   const pageUrl = `${SITE_URL}${url || "/"}`;
-
-  // Construit l'URL complète de l'image (si elle est fournie)
   const imageUrl = image ? (image.startsWith("http") ? image : `${SITE_URL}${image}`) : undefined;
 
   return (
-    <Helmet
-      // titleTemplate permet de formater tous les titres.
-      // %s sera remplacé par la prop "title".
-      // Ex: "Mon Article | Le Nom de Votre Site"
-      titleTemplate={`%s | ${SITE_NAME}`}
-      // defaultTitle est utilisé si aucune prop "title" n'est fournie
-      defaultTitle={SITE_NAME}
-    >
-      {/* La prop "title" est passée ici */}
-      <title>{title}</title>
-
-      {/* --- Balises SEO principales --- */}
-      <meta name="description" content={description} />
-      <link rel="canonical" href={pageUrl} />
-
-      {/* --- Open Graph (pour Facebook, LinkedIn, etc.) --- */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={pageUrl} />
-      <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:type" content="website" />
-      {imageUrl && <meta property="og:image" content={imageUrl} />}
-
-      {/* --- Twitter Card --- */}
-      <meta name="twitter:card" content={imageUrl ? "summary_large_image" : "summary"} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      {imageUrl && <meta name="twitter:image" content={imageUrl} />}
-
-      {/* Permet de passer d'autres balises si besoin */}
-      {children}
-    </Helmet>
+    <>
+      <Helmet
+        titleTemplate={`%s | ${SITE_NAME}`}
+        defaultTitle={SITE_NAME}
+      >
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:type" content="website" />
+        {imageUrl && <meta property="og:image" content={imageUrl} />}
+        <meta name="twitter:card" content={imageUrl ? "summary_large_image" : "summary"} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+        {children}
+      </Helmet>
+      {!hideH1 && (
+        <h1 className="sr-only">{h1 || title}</h1>
+      )}
+    </>
   );
 };
 
