@@ -40,16 +40,16 @@ const Hero = () => {
         <div className="absolute bottom-8 left-0 right-0 z-10 flex flex-row gap-4 justify-center items-center">
             <Link
               to="/destinations"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-ocean text-white font-semibold rounded-lg hover:bg-ocean/90 transition-all duration-300 shadow-lg hover:shadow-elegant"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm bg-ocean text-white font-medium rounded-md hover:bg-ocean/90 transition-all duration-300 shadow-md"
             >
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-4 h-4" />
               Explorer les destinations
             </Link>
             <Link
               to="/guides"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 hover:bg-white/20 transition-all duration-300"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm bg-white/10 backdrop-blur-sm text-white font-medium rounded-md border border-white/30 hover:bg-white/20 transition-all duration-300"
             >
-              <BookOpen className="w-5 h-5" />
+              <BookOpen className="w-4 h-4" />
               Voir les guides pratiques
             </Link>
         </div>
