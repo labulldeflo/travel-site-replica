@@ -72,15 +72,11 @@ const Voyages = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <span className="text-sm uppercase tracking-[0.2em] text-ocean font-semibold mb-3 block">
-              Destinations
-            </span>
-            <h2 className="text-3xl md:text-5xl font-elegant font-bold text-foreground mb-4">
-              Nos guides les plus consultés
+            <h2 className="text-3xl md:text-4xl font-elegant font-bold text-foreground mb-3">
+              Destinations populaires
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Des guides pratiques avec budgets réels, itinéraires testés et conseils concrets
-              pour chaque destination.
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Guides complets avec budgets réels et itinéraires testés.
             </p>
           </div>
 
@@ -88,13 +84,13 @@ const Voyages = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {destinations.map((destination, index) => (
               <Link to={destination.link} key={index}>
-                <Card className="group overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 cursor-pointer transform hover:-translate-y-2 h-full">
+                <Card className="group overflow-hidden hover:shadow-md transition-shadow duration-200 cursor-pointer h-full">
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img 
                       src={destination.image} 
                       alt={`Guide voyage ${destination.title}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
