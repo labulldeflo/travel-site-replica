@@ -57,7 +57,8 @@ const GuideTemplate = ({
   affiliateCity,
   affiliateCountryCode,
   toolRecommendations,
-  internalLinks
+  internalLinks,
+  faqs
 }: GuideTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
