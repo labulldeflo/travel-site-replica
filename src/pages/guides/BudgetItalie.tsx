@@ -54,6 +54,12 @@ const BudgetItalie = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel budget prévoir par jour en Italie ?", answer: "Budget backpacker : 50-70€/jour (auberge, pizza, trains régionaux). Budget moyen : 80-140€/jour (hôtel, restaurants, visites). Budget confortable : 150-300€/jour (hôtels 4-5*, gastronomie, excursions). Venise et la côte amalfitaine sont les plus chers." },
+        { question: "Comment économiser sur les visites en Italie ?", answer: "Achetez les billets en ligne à l'avance (souvent moins chers et coupe-file). Le premier dimanche du mois, de nombreux musées publics sont gratuits. Les city pass (Roma Pass, Firenze Card) sont rentables si vous visitez 3+ sites. Les églises sont gratuites." },
+        { question: "L'Italie est-elle chère pour manger ?", answer: "Pas forcément ! Un pranzo (menu du midi) en trattoria coûte 10-15€ avec primo, secondo et café. La pizza al taglio coûte 2-4€, un gelato 2,50-3,50€. Évitez les restaurants des places touristiques (x2-3 le prix). Le 'coperto' (couvert) de 1-3€ est normal et légal." },
+        { question: "Faut-il réserver les visites à l'avance en Italie ?", answer: "Oui pour le Vatican, le Colisée, les Offices (Florence), la Cène (Milan) et l'Alhambra — réservez 2-4 semaines avant en haute saison. Pour les autres sites, l'achat en ligne 24-48h avant suffit. Sans réservation, vous risquez des files d'attente de 2-3h en été." }
+      ]}
     />
   );
 };

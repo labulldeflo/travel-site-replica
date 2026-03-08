@@ -54,6 +54,12 @@ const BudgetIndonesie = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel budget prévoir par jour en Indonésie ?", answer: "Budget backpacker : 20-35€/jour (guesthouse, warung, scooter). Budget moyen : 40-80€/jour (hôtel, restaurants, activités). Budget confort : 100-250€/jour (villa privée, restaurants haut de gamme, plongée). Bali est 30-50% plus cher que Java ou Lombok." },
+        { question: "Bali est-il cher pour les touristes ?", answer: "Les zones touristiques de Bali (Seminyak, Ubud centre, Canggu) sont plus chères que le reste de l'Indonésie mais restent abordables par rapport à l'Europe. Un warung local sert des plats à 1-3€, un restaurant occidental à 8-15€. L'hébergement va de 10€ (guesthouse) à 50€+ (villa)." },
+        { question: "Faut-il négocier les prix en Indonésie ?", answer: "Oui dans les marchés, boutiques de souvenirs et pour les taxis non-app. Non dans les restaurants, supermarchés et pour Grab/Gojek. Dans les marchés, commencez à 30-40% du prix demandé. Restez amical — la négociation est un jeu social en Indonésie." },
+        { question: "Quelle monnaie utiliser en Indonésie ?", answer: "La roupie indonésienne (IDR). 1€ ≈ 17 000 IDR. Attention aux gros billets (100 000 IDR ≈ 6€). Les distributeurs sont nombreux. Les cartes bancaires sont acceptées dans les zones touristiques mais gardez toujours du cash pour les warungs et les transports locaux." }
+      ]}
     />
   );
 };

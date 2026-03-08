@@ -54,6 +54,12 @@ const BudgetMaroc = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel budget prévoir par jour au Maroc ?", answer: "Budget backpacker : 25-40€/jour (hostel, street food, bus). Budget moyen : 50-80€/jour (riad, restaurants, activités). Budget confortable : 100-200€/jour (riad de luxe, restaurants gastronomiques, excursions privées). Marrakech et Fès sont les plus chers." },
+        { question: "Le Maroc est-il un pays cher ?", answer: "Non, le Maroc est très abordable pour les Européens. Un tagine coûte 3-8€, une nuit en riad 20-50€, un thé à la menthe 0,50-1€. Les principaux coûts sont les excursions organisées (désert, montagne) et les riads haut de gamme." },
+        { question: "Comment éviter les arnaques dans les souks marocains ?", answer: "Fixez votre prix maximum avant de négocier. Commencez à 30% du prix demandé. Refusez poliment les 'guides' non sollicités. Ne montrez pas trop d'enthousiasme pour un article. Les prix dans les boutiques fixes (ensemble artisanal) sont sans négociation et servent de référence." },
+        { question: "Faut-il donner des pourboires au Maroc ?", answer: "Le pourboire est attendu au Maroc. Comptez 10-15% dans les restaurants, 20-50 MAD pour les guides, 10-20 MAD pour les porteurs de bagages. Les gardiens de parking attendent 2-5 MAD. Pour les riads, un pourboire de 50-100 MAD pour le personnel est apprécié." }
+      ]}
     />
   );
 };

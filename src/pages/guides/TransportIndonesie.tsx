@@ -54,6 +54,12 @@ const TransportIndonesie = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Comment se déplacer entre les îles en Indonésie ?", answer: "Les vols intérieurs sont le moyen le plus rapide (Lion Air, AirAsia, Garuda). Les ferries relient les îles principales mais sont lents. Pour Bali-Lombok, le fast boat prend 1h30-2h. Utilisez 12go.asia pour comparer et réserver les options." },
+        { question: "Grab fonctionne-t-il en Indonésie ?", answer: "Oui, Grab et Gojek (l'alternative locale) fonctionnent dans toutes les grandes villes et à Bali. Les deux proposent des motos-taxis (GrabBike/GoRide) et des voitures. À Bali, Grab est parfois bloqué dans certaines zones par les chauffeurs locaux." },
+        { question: "Est-il sûr de prendre un scooter à Bali ?", answer: "Le scooter est le moyen de transport le plus populaire à Bali (100 000-150 000 IDR/jour). Les routes principales sont correctes mais le trafic est dense. Portez toujours un casque, ayez un permis international et vérifiez votre couverture assurance." },
+        { question: "Combien coûte un vol intérieur en Indonésie ?", answer: "Les vols intérieurs sont très abordables : Jakarta-Bali dès 30-50€, Bali-Yogyakarta dès 25-40€. Réservez 2-3 semaines à l'avance sur Traveloka ou directement sur les sites des compagnies. Lion Air et AirAsia sont les moins chères." }
+      ]}
     />
   );
 };

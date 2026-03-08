@@ -54,6 +54,12 @@ const BudgetCambodge = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel budget prévoir par jour au Cambodge ?", answer: "Budget backpacker : 20-35$/jour (dortoir, street food, tuk-tuk). Budget moyen : 40-70$/jour (hôtel, restaurants, activités). Budget confortable : 80-150$/jour (hôtels 4*, restaurants, excursions privées). Le Cambodge accepte les dollars américains partout." },
+        { question: "Le dollar américain est-il accepté au Cambodge ?", answer: "Oui, le dollar est la monnaie principale au Cambodge ! Les prix sont affichés en USD. Le riel cambodgien est utilisé pour les petites monnaies (1$ = 4000 riels). Emportez des petites coupures (1$, 5$). Les billets abîmés sont refusés." },
+        { question: "Combien coûte le pass Angkor Wat ?", answer: "Le pass 1 jour coûte 37$, 3 jours 62$ et 7 jours 72$. Le pass 3 jours est le plus populaire et offre le meilleur rapport qualité-prix. Les enfants de moins de 12 ans entrent gratuitement. Présentez-vous à la billetterie avec votre passeport." },
+        { question: "Le Cambodge est-il moins cher que la Thaïlande ?", answer: "Oui, le Cambodge est globalement 20-30% moins cher que la Thaïlande. L'hébergement et la nourriture sont particulièrement abordables. Seules les zones très touristiques (Pub Street à Siem Reap) approchent les prix thaïlandais." }
+      ]}
     />
   );
 };

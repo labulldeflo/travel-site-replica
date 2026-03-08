@@ -54,6 +54,12 @@ const BudgetLaos = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel budget prévoir par jour au Laos ?", answer: "Budget backpacker : 20-35€/jour (guesthouse, street food, bus local). Budget moyen : 40-70€/jour (hôtel, restaurants, activités). Budget confortable : 80-150€/jour (boutique-hôtel, excursions privées). Le Laos reste l'un des pays les plus abordables d'Asie du Sud-Est." },
+        { question: "Le Laos est-il moins cher que la Thaïlande ?", answer: "Oui, le Laos est 20-30% moins cher que la Thaïlande pour l'hébergement et la nourriture. Cependant, les transports sont plus chers car les distances sont longues et les infrastructures moins développées. Le nouveau train rapide a changé la donne pour le nord du pays." },
+        { question: "Quelle monnaie utiliser au Laos ?", answer: "Le kip laotien (LAK) est la monnaie officielle. Le baht thaïlandais et le dollar américain sont aussi acceptés dans les zones touristiques. Les distributeurs sont rares hors des grandes villes — retirez du cash à Vientiane ou Luang Prabang. 1€ ≈ 23 000 LAK." },
+        { question: "Quand partir au Laos pour un voyage pas cher ?", answer: "La saison sèche (novembre-février) est la haute saison avec les meilleurs prix en novembre et février. La saison des pluies (mai-octobre) offre des réductions de 30-50% mais certaines routes sont impraticables. Mars-avril est très chaud mais calme et abordable." }
+      ]}
     />
   );
 };

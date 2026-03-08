@@ -54,6 +54,12 @@ const TransportMaroc = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Comment aller de Marrakech à Fès ?", answer: "Le train ONCF est le plus confortable : 7h, 200-300 MAD (20-30€). Le bus CTM ou Supratours coûte 180-250 MAD et prend 8h. Les grands taxis partagés sont plus rapides mais moins confortables. Un vol Royal Air Maroc coûte 50-100€ pour 1h." },
+        { question: "Les taxis sont-ils fiables au Maroc ?", answer: "Les petits taxis (en ville) sont fiables mais insistez pour le compteur. Les grands taxis (interurbains) ont des tarifs fixes et partent quand ils sont pleins (6 passagers). Negociez toujours avant de monter dans un grand taxi pour une course privée." },
+        { question: "Peut-on conduire au Maroc avec un permis français ?", answer: "Oui, le permis français est valable au Maroc pendant 1 an. La conduite est à droite. Les autoroutes sont modernes et bien entretenues. Évitez de conduire la nuit hors autoroute (éclairage insuffisant, piétons, ânes). Le diesel coûte environ 1€/litre." },
+        { question: "Le train Al Boraq (TGV marocain) vaut-il le coup ?", answer: "Absolument ! Le TGV relie Casablanca à Tanger en 2h10 (contre 5h en train classique). Les billets coûtent 150-300 MAD (15-30€) en 2e classe. C'est le moyen le plus rapide et confortable pour relier les deux villes. Réservez sur oncf.ma." }
+      ]}
     />
   );
 };
