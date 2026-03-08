@@ -49,6 +49,13 @@ const QueFaireBangkok = lazy(() => import("./pages/blog/QueFaireBangkok"));
 const QueFaireParis = lazy(() => import("./pages/blog/QueFaireParis"));
 const QueFaireBarcelone = lazy(() => import("./pages/blog/QueFaireBarcelone"));
 
+// Blog - Meilleures Choses à Faire à [Ville]
+const MeilleuresChosesTokyo = lazy(() => import("./pages/blog/MeilleuresChosesTokyo"));
+const MeilleuresChosesRome = lazy(() => import("./pages/blog/MeilleuresChosesRome"));
+const MeilleuresChosesBangkok = lazy(() => import("./pages/blog/MeilleuresChosesBangkok"));
+const MeilleuresChosesParis = lazy(() => import("./pages/blog/MeilleuresChosesParis"));
+const MeilleuresChosesBarcelone = lazy(() => import("./pages/blog/MeilleuresChosesBarcelone"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // BONS PLANS
@@ -419,6 +426,13 @@ const AppRoutes = () => {
       <Route path="/blog/que-faire-bangkok" element={<QueFaireBangkok />} />
       <Route path="/blog/que-faire-paris" element={<QueFaireParis />} />
       <Route path="/blog/que-faire-barcelone" element={<QueFaireBarcelone />} />
+
+      {/* Blog - Meilleures Choses à Faire à [Ville] */}
+      <Route path="/blog/meilleures-choses-a-faire-tokyo" element={<MeilleuresChosesTokyo />} />
+      <Route path="/blog/meilleures-choses-a-faire-rome" element={<MeilleuresChosesRome />} />
+      <Route path="/blog/meilleures-choses-a-faire-bangkok" element={<MeilleuresChosesBangkok />} />
+      <Route path="/blog/meilleures-choses-a-faire-paris" element={<MeilleuresChosesParis />} />
+      <Route path="/blog/meilleures-choses-a-faire-barcelone" element={<MeilleuresChosesBarcelone />} />
 
       <Route path="/premium" element={<Premium />} />
 
