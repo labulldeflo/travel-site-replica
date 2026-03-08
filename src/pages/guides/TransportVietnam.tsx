@@ -69,6 +69,12 @@ const TransportVietnam = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel est le meilleur moyen de transport au Vietnam ?", answer: "Le train est idéal pour les longues distances (Hanoï-Hué-Hoi An-Saigon) avec des couchettes confortables. Grab est parfait en ville. Les bus de nuit sont économiques pour les budgets serrés. Les vols intérieurs (VietJet, Bamboo Airways) sont rapides et abordables." },
+        { question: "Peut-on louer un scooter au Vietnam ?", answer: "Oui, c'est très courant. Comptez 5-10$/jour. Le permis international est théoriquement obligatoire mais rarement contrôlé. Attention : la conduite au Vietnam est chaotique. Commencez par des zones calmes avant de vous lancer dans les grandes villes." },
+        { question: "Combien coûte le train Hanoï-Saigon ?", answer: "Le Reunification Express coûte entre 40 et 80€ selon la classe. Le trajet dure environ 33h. La plupart des voyageurs font des étapes : Hanoï-Hué (13h, 25-45€), Hué-Hoi An (3h en bus) puis Hoi An-Saigon (train ou vol)." },
+        { question: "L'application Grab fonctionne-t-elle partout au Vietnam ?", answer: "Grab fonctionne dans toutes les grandes villes (Hanoï, Saigon, Đà Nẵng, Hué, Nha Trang, etc.). Dans les zones rurales et les petites villes, vous devrez négocier avec les taxis locaux ou les motos-taxis traditionnels (xe ôm)." }
+      ]}
     />
   );
 };

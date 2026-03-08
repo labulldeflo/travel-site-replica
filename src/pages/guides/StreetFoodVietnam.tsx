@@ -70,6 +70,12 @@ const StreetFoodVietnam = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Combien coûte un repas de street food au Vietnam ?", answer: "Un plat de rue coûte entre 25 000 et 60 000 VND (1-2,50€). Un phở coûte 30 000-50 000 VND, un bánh mì 15 000-30 000 VND. On peut manger très bien pour 5-8€ par jour en street food." },
+        { question: "Le street food vietnamien est-il hygiénique ?", answer: "Globalement oui. Choisissez les stands fréquentés par les locaux (forte rotation), évitez la glace dans les petits stands ruraux, et privilégiez les plats cuits devant vous. Les soupes bouillantes (phở, bún) sont naturellement sûres." },
+        { question: "Quels sont les plats incontournables à goûter au Vietnam ?", answer: "Le phở (soupe de nouilles au bœuf ou poulet), le bánh mì (sandwich baguette), le bún chả (porc grillé de Hanoï), le cà phê sữa đá (café glacé) et les rouleaux de printemps frais (gỏi cuốn) sont les 5 essentiels." },
+        { question: "Y a-t-il des options végétariennes en street food vietnamien ?", answer: "Oui ! Cherchez les restaurants 'chay' (végétariens). Le Vietnam a une forte tradition bouddhiste et les options végétariennes sont nombreuses : phở chay, bánh mì chay, riz sauté aux légumes. Le 1er et 15e jour lunaire, de nombreux stands proposent des menus végétariens." }
+      ]}
     />
   );
 };

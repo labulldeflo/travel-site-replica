@@ -54,6 +54,12 @@ const TransportItalie = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Trenitalia ou Italo : lequel choisir ?", answer: "Italo est souvent plus moderne et confortable, avec du wifi gratuit fiable. Trenitalia a un réseau plus étendu et des trains régionaux. Comparez les deux sur leurs sites respectifs — les prix varient selon les horaires. Réservez tôt pour les meilleurs tarifs." },
+        { question: "Qu'est-ce qu'une ZTL en Italie ?", answer: "La ZTL (Zona a Traffico Limitato) est une zone de circulation restreinte dans les centres-villes historiques. Si vous entrez avec votre voiture de location, vous recevrez une amende de 80-100€ par caméra franchie. Rome, Florence, Bologne et la plupart des villes historiques en ont." },
+        { question: "Comment aller de Rome à la côte amalfitaine ?", answer: "Prenez le train rapide Rome-Naples (1h10, 20-50€), puis le Circumvesuviana jusqu'à Sorrento, et enfin le bus SITA ou le ferry vers Amalfi/Positano. Comptez 3-4h au total. En voiture, la route côtière est spectaculaire mais très étroite et embouteillée en été." },
+        { question: "Les ferries sont-ils fiables en Italie ?", answer: "Oui, les ferries italiens sont ponctuels et confortables. Réservez à l'avance en été pour la Sardaigne et la Sicile. Les hydroglisseurs Naples-Capri fonctionnent même par mauvais temps. Les compagnies Tirrenia, Grimaldi et Moby Lines sont les plus fiables." }
+      ]}
     />
   );
 };

@@ -73,6 +73,12 @@ const BudgetVietnam = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel budget prévoir par jour au Vietnam ?", answer: "Comptez 25-40€/jour pour un budget backpacker (dortoir, street food, transport local), 50-80€/jour pour un budget moyen (hôtel, restaurants, activités) et 100-200€/jour pour un séjour confortable (hôtels 4*, restaurants haut de gamme, excursions privées)." },
+        { question: "Le Vietnam est-il un pays cher ?", answer: "Non, le Vietnam reste l'un des pays les plus abordables d'Asie du Sud-Est. Un phở coûte 1-2€, une bière 0,50€, une nuit en hôtel correct 15-30€. Seules les excursions touristiques (croisière Halong Bay) représentent un budget plus conséquent." },
+        { question: "Comment payer au Vietnam : espèces ou carte ?", answer: "Les espèces (VND) sont indispensables pour les marchés, la street food et les petits commerces. Les cartes bancaires sont acceptées dans les hôtels, restaurants touristiques et grandes boutiques. Les distributeurs sont nombreux mais prélèvent souvent des frais (20 000-50 000 VND par retrait)." },
+        { question: "Quand partir au Vietnam pour un voyage pas cher ?", answer: "La basse saison (mai-septembre pour le nord, octobre-décembre pour le sud) offre des prix 20-40% inférieurs sur les hébergements et les vols. Évitez le Têt (Nouvel An vietnamien, janvier-février) où les prix explosent et les transports sont saturés." }
+      ]}
     />
   );
 };

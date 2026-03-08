@@ -54,6 +54,12 @@ const TransportLaos = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Le slow boat sur le Mékong vaut-il le coup ?", answer: "Absolument ! C'est l'une des expériences les plus mémorables d'Asie du Sud-Est. Le trajet Huay Xai-Luang Prabang dure 2 jours avec une nuit à Pak Beng. Les paysages sont spectaculaires. Apportez un coussin, des snacks et un bon livre. Coût : 30-40$." },
+        { question: "Le nouveau train Chine-Laos est-il pratique ?", answer: "Très pratique ! Depuis 2021, le train relie Vientiane à Luang Prabang en 2h seulement (contre 10h en bus). Les billets coûtent 10-30$ selon la classe. C'est rapide, confortable et ponctuel. Réservez vos billets en gare ou via une agence locale." },
+        { question: "Peut-on louer un scooter au Laos ?", answer: "Oui, c'est courant surtout à Luang Prabang, Vang Vieng et aux 4000 îles. Comptez 8-15$/jour. Les routes principales sont correctes mais les pistes rurales peuvent être en mauvais état. Le port du casque est obligatoire mais peu respecté." },
+        { question: "Comment se rendre aux 4000 îles depuis Vientiane ?", answer: "Prenez un bus de nuit VIP Vientiane-Paksé (10-12h, 15-25$), puis un minivan ou bus local jusqu'à Nakasong (2-3h, 5$), et enfin un bateau vers Don Det ou Don Khon (10-15 min, 2$). Le trajet total prend environ 15-18h." }
+      ]}
     />
   );
 };
