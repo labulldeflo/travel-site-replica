@@ -123,6 +123,12 @@ const GuideCompletCambodge = () => {
         { label: "Tous nos guides de voyage", url: "/guides" },
         { label: "Nos tests d'équipement voyage", url: "/tests" }
       ]}
+      faqs={[
+        { question: "Faut-il un visa pour le Cambodge ?", answer: "Oui, le visa touristique (30 jours) coûte 30$ à l'arrivée ou 36$ en e-visa. Préparez une photo d'identité et des dollars en espèces." },
+        { question: "Combien de temps pour visiter le Cambodge ?", answer: "10-14 jours suffisent pour Phnom Penh, Siem Reap (Angkor), Battambang et une plage (Koh Rong). 3 semaines permettent d'ajouter Kampot et les régions rurales." },
+        { question: "Le Cambodge est-il sûr ?", answer: "Oui, le Cambodge est sûr pour les touristes. Attention aux pickpockets à Phnom Penh et aux arnaques classiques près des temples d'Angkor." },
+        { question: "Quelle est la meilleure période pour visiter le Cambodge ?", answer: "Novembre à mars (saison sèche et fraîche). Évitez avril-mai (très chaud, 40°C+). La saison des pluies (juin-octobre) offre des prix bas et des paysages verdoyants." }
+      ]}
     />
   );
 };

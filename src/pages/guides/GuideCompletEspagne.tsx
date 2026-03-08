@@ -121,6 +121,12 @@ const GuideCompletEspagne = () => {
         { label: "Tous nos guides de voyage", url: "/guides" },
         { label: "Nos tests d'équipement voyage", url: "/tests" }
       ]}
+      faqs={[
+        { question: "Quelle est la meilleure période pour visiter l'Espagne ?", answer: "Avril-juin et septembre-octobre offrent le meilleur compromis météo/prix. L'été est très chaud en Andalousie (40°C+). Les îles Canaries se visitent toute l'année." },
+        { question: "Madrid ou Barcelone : que choisir ?", answer: "Madrid pour les musées (Prado, Reina Sofía), la vie nocturne et les tapas. Barcelone pour l'architecture (Gaudí), les plages et l'ambiance méditerranéenne. L'idéal est de combiner les deux avec le train AVE (2h30)." },
+        { question: "Combien de temps pour visiter l'Espagne ?", answer: "10-14 jours pour Madrid + Barcelone + une région (Andalousie ou Pays basque). 3 semaines pour un tour complet incluant les îles. L'Andalousie seule mérite 7-10 jours." },
+        { question: "L'Espagne est-elle chère ?", answer: "L'Espagne est 15-25% moins chère que la France. Les tapas sont un moyen économique de manger. Le sud et l'intérieur sont plus abordables que Barcelone et les îles Baléares." }
+      ]}
     />
   );
 };

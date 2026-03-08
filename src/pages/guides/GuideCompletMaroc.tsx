@@ -110,6 +110,12 @@ const GuideCompletMaroc = () => {
         { label: "Tous nos guides de voyage", url: "/guides" },
         { label: "Guide Sécurité pour voyageuses solo", url: "/guides/securite" }
       ]}
+      faqs={[
+        { question: "Faut-il un visa pour le Maroc ?", answer: "Non, les Français sont exemptés de visa pour un séjour de 90 jours maximum. Le passeport doit être valide 6 mois après l'entrée." },
+        { question: "Quelle est la meilleure période pour visiter le Maroc ?", answer: "Mars-mai et septembre-novembre offrent un climat idéal. L'été est très chaud à Marrakech (40°C+). L'hiver est doux sur la côte mais froid dans l'Atlas." },
+        { question: "Le Maroc est-il sûr pour les femmes seules ?", answer: "Le Maroc est globalement sûr mais les voyageuses solo peuvent recevoir de l'attention non désirée. Habillez-vous modestement, évitez les ruelles isolées la nuit et restez ferme face aux sollicitations." },
+        { question: "Comment éviter les arnaques au Maroc ?", answer: "Refusez poliment les faux guides, négociez les prix avant (taxi, souk), et fixez votre budget maximum. Les Marocains sont accueillants — la grande majorité des interactions sont sincères." }
+      ]}
     />
   );
 };

@@ -121,6 +121,12 @@ const GuideCompletItalie = () => {
         { label: "Tous nos guides de voyage", url: "/guides" },
         { label: "Nos tests d'équipement voyage", url: "/tests" }
       ]}
+      faqs={[
+        { question: "Combien de temps pour visiter l'Italie ?", answer: "10-14 jours pour Rome + Florence + Venise. 3 semaines pour ajouter Naples, la côte amalfitaine et la Sicile. Chaque région mérite un voyage dédié." },
+        { question: "Rome, Florence ou Venise : que choisir ?", answer: "Rome pour l'histoire antique et la gastronomie. Florence pour la Renaissance et la Toscane. Venise pour l'unique expérience des canaux. L'idéal est le triangle classique Rome-Florence-Venise relié par le train rapide." },
+        { question: "Quand partir en Italie ?", answer: "Avril-juin et septembre-octobre sont idéaux. L'été est bondé et chaud (35°C+ en Sicile). L'hiver est doux au sud mais froid au nord. Venise se visite aussi en hiver pour éviter les foules." },
+        { question: "Faut-il réserver à l'avance en Italie ?", answer: "Oui pour le Colisée, le Vatican, les Offices et la Cène de Vinci — réservez 2-4 semaines avant. Les restaurants populaires de Rome et Florence nécessitent aussi une réservation." }
+      ]}
     />
   );
 };
