@@ -79,7 +79,8 @@ const ArticleRome = () => {
       affiliateCountryCode="it"
       relatedArticles={[
         { title: "🎭 Découvrir Venise", url: "/destinations/italie/venise" },
-        { title: "🌻 Explorer la Toscane", url: "/destinations/italie/toscane" }
+        { title: "🌻 Explorer la Toscane", url: "/destinations/italie/toscane" },
+        { title: "📋 Que faire à Rome : activités et prix", url: "/blog/que-faire-rome" }
       ]}
       destinationLink="/destinations/italie"
       ctaTitle="🇮🇹 Tout sur l'Italie"
