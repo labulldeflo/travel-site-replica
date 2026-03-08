@@ -120,6 +120,12 @@ const GuideCompletLaos = () => {
         { label: "Tous nos guides de voyage", url: "/guides" },
         { label: "Guide Sécurité pour voyageuses solo", url: "/guides/securite" }
       ]}
+      faqs={[
+        { question: "Faut-il un visa pour le Laos ?", answer: "Oui, le visa touristique (30 jours) coûte 30-42$ à l'arrivée (selon la nationalité). Les Français paient 30$. Préparez une photo d'identité et des dollars en espèces." },
+        { question: "Combien de temps pour visiter le Laos ?", answer: "10-14 jours pour Vientiane + Vang Vieng + Luang Prabang + 4000 îles. 3 semaines pour un rythme relaxé avec des étapes hors des sentiers battus." },
+        { question: "Le Laos est-il sûr ?", answer: "Oui, le Laos est l'un des pays les plus paisibles d'Asie. Les Laotiens sont très accueillants. Attention aux UXO (bombes non explosées) dans certaines zones rurales de l'est — restez sur les sentiers balisés." },
+        { question: "Quelle est la meilleure période pour le Laos ?", answer: "Novembre-février (saison sèche et fraîche). Mars-mai est très chaud. La saison des pluies (juin-octobre) rend certaines routes impraticables mais les paysages sont magnifiques." }
+      ]}
     />
   );
 };

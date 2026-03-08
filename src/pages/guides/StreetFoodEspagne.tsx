@@ -54,6 +54,12 @@ const StreetFoodEspagne = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quelle est la différence entre tapas et pintxos ?", answer: "Les tapas sont des petites portions servies dans toute l'Espagne, souvent gratuites avec une boisson en Andalousie. Les pintxos sont spécifiques au Pays basque : des bouchées sur pain fixées par un cure-dent, servies sur le comptoir. On paie au nombre de cure-dents." },
+        { question: "À quelle heure mangent les Espagnols ?", answer: "Le déjeuner est servi entre 14h et 16h, le dîner entre 21h et 23h. Les tapas se dégustent en apéritif vers 13h ou 20h. Si vous arrivez dans un restaurant à 19h, il sera probablement vide — c'est normal !" },
+        { question: "Combien coûtent les tapas en Espagne ?", answer: "Une tapa coûte 2-5€ dans la plupart des villes. À Grenade et dans certaines villes d'Andalousie, les tapas sont gratuites avec chaque boisson commandée. San Sebastián est plus cher (2-4€ par pintxo). Comptez 15-25€ pour un repas complet de tapas." },
+        { question: "Quelles sont les meilleures villes pour les tapas en Espagne ?", answer: "San Sebastián est la capitale gastronomique avec ses pintxos. Grenade offre des tapas gratuites. Séville a une tradition de tapas authentique. Madrid et Barcelone ont un large choix. Le marché de La Boqueria à Barcelone et le Mercado de San Miguel à Madrid sont incontournables." }
+      ]}
     />
   );
 };

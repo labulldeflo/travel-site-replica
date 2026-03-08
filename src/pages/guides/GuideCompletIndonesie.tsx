@@ -123,6 +123,12 @@ const GuideCompletIndonesie = () => {
         { label: "Tous nos guides de voyage", url: "/guides" },
         { label: "Nos tests d'équipement voyage", url: "/tests" }
       ]}
+      faqs={[
+        { question: "Faut-il un visa pour l'Indonésie ?", answer: "Les Français obtiennent un visa à l'arrivée (VOA) de 30 jours pour 500 000 IDR (~30€), prolongeable une fois. Un e-visa est aussi disponible en ligne." },
+        { question: "Bali ou Java : que choisir ?", answer: "Bali pour les plages, les rizières et la vie nocturne. Java pour la culture (Borobudur, Yogyakarta) et les volcans. L'idéal est de combiner les deux en 2-3 semaines." },
+        { question: "Quand partir en Indonésie ?", answer: "La saison sèche (avril-octobre) est idéale. Juillet-août est la haute saison. La saison des pluies (novembre-mars) offre des prix bas avec des averses courtes quotidiennes." },
+        { question: "L'Indonésie est-elle sûre ?", answer: "Oui, l'Indonésie est globalement sûre. Bali et Java sont très touristiques. Attention aux courants marins sur certaines plages et à la conduite en scooter." }
+      ]}
     />
   );
 };

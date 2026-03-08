@@ -54,6 +54,12 @@ const BudgetEspagne = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel budget prévoir par jour en Espagne ?", answer: "Budget backpacker : 40-60€/jour (auberge, tapas, transport). Budget moyen : 70-120€/jour (hôtel, restaurants, activités). Budget confortable : 150-300€/jour (hôtels 4-5*, gastronomie, excursions). Barcelone et Madrid sont 20-30% plus chers que le sud." },
+        { question: "L'Espagne est-elle chère pour les Français ?", answer: "L'Espagne est globalement 15-25% moins chère que la France. La nourriture (tapas, marché) et les transports sont particulièrement abordables. L'hébergement varie beaucoup selon la saison — en haute saison (juillet-août), les prix doublent sur les côtes." },
+        { question: "Les tapas sont-elles gratuites en Espagne ?", answer: "Pas partout ! Les tapas gratuites avec une boisson sont une tradition surtout en Andalousie (Grenade est la plus généreuse), à León et dans certaines villes du centre. À Barcelone, Madrid et dans le nord, les tapas sont payantes (2-5€ pièce)." },
+        { question: "Quelle est la meilleure période pour voyager pas cher en Espagne ?", answer: "Les mois d'avril-mai et septembre-octobre offrent le meilleur rapport météo/prix. Les hébergements côtiers sont 30-50% moins chers qu'en juillet-août. Les vols sont aussi plus abordables hors vacances scolaires. L'Espagne intérieure (Madrid, Séville) est agréable toute l'année." }
+      ]}
     />
   );
 };

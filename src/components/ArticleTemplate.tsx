@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import AffiliateWidget from "@/components/AffiliateWidget";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
+import FAQSection, { FAQItem } from "@/components/FAQSection";
 
 // Fonction utilitaire pour parser le markdown simple (gras, italique)
 const parseSimpleMarkdown = (text: string): string => {
@@ -93,6 +94,9 @@ interface ArticleTemplateProps {
   relatedArticles?: Array<{ title: string; url: string }>;
   destinationLink?: string;
   ctaTitle?: string;
+
+  // FAQ
+  faqs?: FAQItem[];
 }
 
 // =================================================================
@@ -138,6 +142,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   relatedArticles,
   destinationLink,
   ctaTitle,
+  faqs,
 }) => {
   const finalIntro = introduction || introText;
   const finalConclusion = conclusion || conclusionText;
@@ -331,6 +336,12 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                   dangerouslySetInnerHTML={{ __html: parseSimpleMarkdown(finalConclusion || "") }}
                 />
               </section>
+
+              {faqs && faqs.length > 0 && (
+                <div className="mt-10">
+                  <FAQSection faqs={faqs} />
+                </div>
+              )}
 
               {/* CTA Bottom */}
               <div className="mt-10 flex flex-col sm:flex-row gap-4">

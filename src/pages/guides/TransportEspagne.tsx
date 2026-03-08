@@ -54,6 +54,12 @@ const TransportEspagne = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel est le meilleur moyen de transport en Espagne ?", answer: "Le train AVE est le meilleur choix pour les grandes distances (Madrid-Barcelone en 2h30, Madrid-Séville en 2h30). Les bus ALSA sont plus économiques. La voiture est idéale pour explorer l'Andalousie rurale ou la Galice. Les vols intérieurs sont intéressants vers les îles." },
+        { question: "Comment aller de Madrid à Barcelone pas cher ?", answer: "Le bus ALSA ou FlixBus est le moins cher (20-35€, 7h). Le train AVE coûte 60-120€ mais ne prend que 2h30 — réservez tôt sur renfe.com pour les meilleurs prix. Les vols low-cost (Vueling, Ryanair) coûtent 30-60€ mais avec les transferts aéroport, le train est souvent plus pratique." },
+        { question: "Les péages sont-ils chers en Espagne ?", answer: "L'Espagne a réduit ses péages ces dernières années. Beaucoup d'autoroutes sont désormais gratuites, notamment en Andalousie et au centre. La Catalogne et le nord conservent des tronçons payants. Comptez 20-40€ de péage pour un Madrid-Barcelone. Les apps Via-T permettent le paiement automatique." },
+        { question: "Uber fonctionne-t-il en Espagne ?", answer: "Uber est disponible à Madrid, Barcelone et dans les grandes villes. Cabify est l'alternative locale très populaire, souvent moins chère. Dans les petites villes, les taxis traditionnels restent la norme. Les tarifs sont réglementés et raisonnables." }
+      ]}
     />
   );
 };

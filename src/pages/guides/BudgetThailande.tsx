@@ -54,6 +54,12 @@ const BudgetThailande = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel budget prévoir par jour en Thaïlande ?", answer: "Budget backpacker : 30-50€/jour (dortoir, street food, transport local). Budget moyen : 60-100€/jour (hôtel, restaurants, activités). Budget confortable : 150-300€/jour (resort, restaurants haut de gamme, excursions privées)." },
+        { question: "La Thaïlande est-elle chère pour les touristes ?", answer: "La Thaïlande reste abordable mais les prix ont augmenté ces dernières années. Les îles (Koh Samui, Phuket) sont 30-50% plus chères que le nord (Chiang Mai, Chiang Rai). Bangkok offre un excellent rapport qualité-prix pour la nourriture et les transports." },
+        { question: "Faut-il négocier les prix en Thaïlande ?", answer: "Oui pour les marchés, tuk-tuks et souvenirs. Non pour les restaurants avec menu, les supermarchés et les transports publics (BTS, bus). Une bonne règle : commencez à 50% du prix demandé et visez 60-70% du prix initial." },
+        { question: "Quelle est la meilleure période pour voyager pas cher en Thaïlande ?", answer: "La basse saison (mai-octobre) offre des réductions de 30-50% sur les hébergements. Les épaules de saison (avril et novembre) offrent un bon compromis météo/prix. Évitez décembre-février (haute saison) et le Nouvel An thaï (Songkran, 13-15 avril) pour les meilleurs tarifs." }
+      ]}
     />
   );
 };

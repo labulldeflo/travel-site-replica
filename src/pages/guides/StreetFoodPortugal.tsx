@@ -54,6 +54,12 @@ const StreetFoodPortugal = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel est le plat typique à goûter au Portugal ?", answer: "Le pastel de nata (pastéis de nata au pluriel) est incontournable — cette tartelette à la crème est servie tiède, saupoudrée de cannelle. Les pastéis de Belém à Lisbonne sont les plus célèbres mais chaque pastelaria a sa recette." },
+        { question: "Le poisson est-il vraiment aussi bon au Portugal ?", answer: "Le Portugal est le plus grand consommateur de poisson par habitant en Europe. La morue (bacalhau) se prépare de 365 façons différentes selon la tradition. Les sardines grillées, les fruits de mer frais et le poulpe sont exceptionnels, surtout dans les villes côtières." },
+        { question: "Combien coûte un repas au Portugal ?", answer: "Le Portugal est l'un des pays les plus abordables d'Europe occidentale. Un plat du jour (prato do dia) coûte 7-12€ avec soupe et café inclus. Un pastel de nata coûte 1-1,50€, une bière (imperial) 1-2€. Comptez 20-35€/jour pour bien manger." },
+        { question: "Quelle est la différence entre Lisbonne et Porto pour la cuisine ?", answer: "Lisbonne excelle pour les fruits de mer et les pastéis de nata. Porto est la capitale des tripes (tripas à moda do Porto) et de la francesinha (sandwich géant gratné). Porto a aussi des vins uniques avec les caves de Vila Nova de Gaia. Les deux villes ont des marchés gastronomiques excellents." }
+      ]}
     />
   );
 };

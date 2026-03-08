@@ -120,6 +120,12 @@ const GuideCompletPortugal = () => {
         { label: "Tous nos guides de voyage", url: "/guides" },
         { label: "Nos tests d'équipement voyage", url: "/tests" }
       ]}
+      faqs={[
+        { question: "Combien de temps pour visiter le Portugal ?", answer: "7-10 jours pour Lisbonne + Porto + Algarve. 2 semaines pour ajouter Sintra, le Douro et les Açores. Lisbonne et Porto méritent 3-4 jours chacune." },
+        { question: "Lisbonne ou Porto : que choisir ?", answer: "Lisbonne pour les collines, le fado, Belém et la vie nocturne. Porto pour le vin de Porto, l'architecture azulejos et l'ambiance plus intime. Les deux villes sont reliées par le train en 2h30." },
+        { question: "Le Portugal est-il cher ?", answer: "Le Portugal est l'un des pays les plus abordables d'Europe occidentale. Le 'menu do dia' coûte 7-12€, les pastéis de nata 1-1,50€. L'Algarve est plus cher en été." },
+        { question: "Quand visiter le Portugal ?", answer: "Avril-juin et septembre-octobre sont parfaits. L'été est idéal pour l'Algarve mais Lisbonne peut être très chaude. L'hiver est doux mais pluvieux." }
+      ]}
     />
   );
 };

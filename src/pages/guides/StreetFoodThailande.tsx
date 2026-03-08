@@ -46,6 +46,13 @@ const StreetFoodThailande = () => {
           ]
         }
       ]}
+      faqs={[
+        { question: "Quel est le budget street food en Thaïlande ?", answer: "Comptez 100 à 200 bahts (3-6€) par repas dans un stand de rue. Un plat de Pad Thai coûte entre 40 et 80 bahts, une soupe Tom Yum entre 50 et 100 bahts. On peut facilement manger pour 10-15€ par jour." },
+        { question: "La street food thaïlandaise est-elle sûre ?", answer: "Oui, à condition de choisir des stands où il y a du monde (rotation rapide des aliments). Évitez les buffets exposés au soleil et privilégiez les plats cuits devant vous. La cuisine de rue thaïlandaise est généralement plus sûre que dans beaucoup d'autres pays d'Asie." },
+        { question: "Quels plats éviter si on ne supporte pas le piment ?", answer: "Demandez 'mai phet' (pas épicé). Évitez le Som Tam et le Larb si vous ne précisez pas. Le Pad Thai, le Khao Pad et le Massaman Curry sont naturellement peu épicés et adaptés aux palais sensibles." },
+        { question: "Où trouver la meilleure street food à Bangkok ?", answer: "Yaowarat (Chinatown) est le quartier le plus réputé, avec des stands ouverts tard le soir. Le marché de Chatuchak le week-end, Khao San Road pour l'ambiance, et les sois (ruelles) du quartier Silom offrent d'excellentes options." },
+        { question: "Peut-on être végétarien en street food thaïlandaise ?", answer: "Oui ! Dites 'jay' (végétalien) ou 'mangsawirat' (végétarien). De nombreux stands proposent du Pad Thai aux légumes, du riz sauté aux légumes et des soupes de nouilles sans viande. Les marchés ont souvent des stands dédiés 'jay'." }
+      ]}
     />
   );
 };

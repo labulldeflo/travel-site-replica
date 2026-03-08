@@ -135,6 +135,13 @@ const GuideCompletVietnam = () => {
         { label: "Nos tests d'équipement voyage", url: "/tests" },
         { label: "Guide Budget : maîtriser ses dépenses", url: "/guides/budget" }
       ]}
+      faqs={[
+        { question: "Combien de temps faut-il pour visiter le Vietnam ?", answer: "Minimum 2 semaines pour un aperçu nord-sud (Hanoï, Halong, Hué, Hoi An, Saigon). 3 semaines permettent d'ajouter Sapa, le delta du Mékong et des étapes relaxantes. 4 semaines offrent un rythme confortable avec les régions moins touristiques (Ha Giang, Phong Nha)." },
+        { question: "Faut-il un visa pour le Vietnam en 2025 ?", answer: "Les Français bénéficient d'une exemption de visa pour un séjour de 45 jours maximum. Au-delà, un e-visa (25$) permet un séjour de 90 jours. Le passeport doit être valide 6 mois après l'entrée. L'e-visa se fait en ligne en 3 jours ouvrables." },
+        { question: "Est-il facile de voyager seul(e) au Vietnam ?", answer: "Oui, le Vietnam est très accueillant pour les voyageurs solo. Les Vietnamiens sont curieux et chaleureux. Les auberges de jeunesse facilitent les rencontres. La barrière de la langue peut être un défi hors des zones touristiques — téléchargez Google Traduction hors ligne." },
+        { question: "Quels vaccins sont recommandés pour le Vietnam ?", answer: "Aucun vaccin n'est obligatoire mais les vaccins recommandés sont : hépatite A et B, typhoïde, encéphalite japonaise (si séjour rural prolongé) et rage (si zones reculées). Le traitement antipaludéen est conseillé pour certaines régions rurales du centre et du sud." },
+        { question: "Nord ou Sud du Vietnam : que choisir ?", answer: "Le Nord (Hanoï, Sapa, Halong) offre des paysages montagneux spectaculaires et une culture plus traditionnelle. Le Sud (Saigon, delta du Mékong) est plus tropical et dynamique. Le Centre (Hué, Hoi An) combine histoire impériale et plages magnifiques. L'idéal est de combiner les trois." }
+      ]}
     />
   );
 };

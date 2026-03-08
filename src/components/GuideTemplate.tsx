@@ -1,5 +1,6 @@
 import { ArrowLeft, ExternalLink, LucideIcon, Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import FAQSection, { FAQItem } from '@/components/FAQSection';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -42,6 +43,7 @@ interface GuideTemplateProps {
   affiliateCountryCode?: string;
   toolRecommendations?: ToolRecommendation[];
   internalLinks?: InternalLink[];
+  faqs?: FAQItem[];
 }
 
 const GuideTemplate = ({
@@ -55,7 +57,8 @@ const GuideTemplate = ({
   affiliateCity,
   affiliateCountryCode,
   toolRecommendations,
-  internalLinks
+  internalLinks,
+  faqs
 }: GuideTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
@@ -174,6 +177,10 @@ const GuideTemplate = ({
                 ))}
               </div>
             </Card>
+          )}
+
+          {faqs && faqs.length > 0 && (
+            <FAQSection faqs={faqs} className="mb-8" />
           )}
 
           {affiliateCity && affiliateCountryCode && (
