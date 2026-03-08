@@ -179,6 +179,10 @@ const GuideTemplate = ({
             </Card>
           )}
 
+          {faqs && faqs.length > 0 && (
+            <FAQSection faqs={faqs} className="mb-8" />
+          )}
+
           {affiliateCity && affiliateCountryCode && (
             <div className="mt-8">
               <AffiliateWidget 

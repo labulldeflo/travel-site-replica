@@ -337,6 +337,12 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                 />
               </section>
 
+              {faqs && faqs.length > 0 && (
+                <div className="mt-10">
+                  <FAQSection faqs={faqs} />
+                </div>
+              )}
+
               {/* CTA Bottom */}
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 {relatedArticles?.map((article, index) => (
