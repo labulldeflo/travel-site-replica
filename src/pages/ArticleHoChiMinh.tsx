@@ -140,7 +140,18 @@ const ArticleHoChiMinh = () => {
       ]}
       affiliateCity="Ho Chi Minh City"
       affiliateCountryCode="vn"
+      relatedArticles={[
+        { title: "🏙️ Découvrir Hanoï", url: "/destinations/vietnam/hanoi" },
+        { title: "🏮 Explorer Hoi An", url: "/destinations/vietnam/hoi-an" }
+      ]}
       destinationLink="/destinations/vietnam"
+      ctaTitle="🇻🇳 Tout sur le Vietnam"
+      internalLinks={[
+        { label: "Guide complet Vietnam 2025", url: "/guides/guide-complet-vietnam" },
+        { label: "Transport au Vietnam", url: "/guides/transport-vietnam" },
+        { label: "Budget Vietnam", url: "/guides/budget-vietnam" },
+        { label: "Baie d'Ha Long", url: "/destinations/vietnam/baie-d-halong" }
+      ]}
     />
   );
 };
