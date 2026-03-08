@@ -1,417 +1,461 @@
-import { MapPin, Clock, Star, Users, Camera, Utensils, Building } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { MapPin, Clock, Star, Users, Camera, Utensils, Building, Wallet, Calendar, Plane, Sun, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 import cambodgeImg from '@/assets/destinations/cambodge.jpg';
 import siemReapImg from '@/assets/cities/siem-reap.jpg';
 import phnomPenhImg from '@/assets/cities/phnom-penh.jpg';
 import sihanoukvilleImg from '@/assets/cities/sihanoukville.jpg';
 
 const Cambodge = () => {
-  const navigate = useNavigate();
   const cities = [
     {
       name: 'Siem Reap',
       slug: 'siem-reap',
-      region: 'Nord',
+      region: 'Nord-Ouest',
       image: siemReapImg,
-      description: 'Porte d\'entrée vers les temples d\'Angkor, ville touristique animée.',
+      description: 'Porte d\'entrée vers les légendaires temples d\'Angkor, Siem Reap est une ville vibrante qui mêle splendeur archéologique et vie nocturne animée.',
       highlights: ['Angkor Wat', 'Angkor Thom', 'Ta Prohm', 'Pub Street'],
-      duration: '3-4 jours'
+      duration: '3-5 jours',
+      budget: '25-50€/jour'
     },
     {
       name: 'Phnom Penh',
       slug: 'phnom-penh',
       region: 'Centre',
       image: phnomPenhImg,
-      description: 'Capitale dynamique aux boulevards français et palais royaux.',
-      highlights: ['Palais Royal', 'Musée génocide', 'Quais du Mékong', 'Marchés'],
-      duration: '2 jours'
+      description: 'Capitale dynamique au bord du Mékong, où palais royaux dorés et marchés effervescents côtoient une scène gastronomique en plein essor.',
+      highlights: ['Palais Royal', 'Musée S-21', 'Marché Central', 'Riverside'],
+      duration: '2-3 jours',
+      budget: '25-45€/jour'
     },
     {
-      name: 'Sihanoukville',
+      name: 'Sihanoukville & Îles',
       slug: 'sihanoukville',
       region: 'Sud',
       image: sihanoukvilleImg,
-      description: 'Station balnéaire et point de départ vers les îles.',
-      highlights: ['Îles paradisiaques', 'Plages', 'Plongée', 'Vie nocturne'],
-      duration: '2-3 jours'
+      description: 'Base côtière pour rejoindre les îles paradisiaques de Koh Rong et Koh Rong Samloem, aux eaux turquoise et plages de sable blanc.',
+      highlights: ['Koh Rong', 'Koh Rong Samloem', 'Plongée', 'Bioluminescence'],
+      duration: '3-5 jours',
+      budget: '30-60€/jour'
     }
   ];
 
   const itineraries = [
     {
       duration: '7 jours',
-      title: 'Cambodge Express',
-      description: 'L\'essentiel en une semaine',
-      stops: ['Phnom Penh (2j)', 'Siem Reap (4j)', 'Battambang (1j)'],
-      budget: '€'
+      title: 'Cambodge Express – Les Incontournables',
+      description: 'Les temples d\'Angkor et la capitale pour un premier voyage',
+      stops: ['Phnom Penh (2j)', 'Route vers Siem Reap (1j)', 'Siem Reap & Angkor (4j)'],
+      budget: '€€',
+      detail: 'Un itinéraire concentré sur les deux pôles majeurs du pays. Découverte historique intense entre les musées de la capitale et le plus grand complexe religieux du monde.'
     },
     {
-      duration: '12 jours',
-      title: 'Temples et Plages',
-      description: 'Culture khmère et détente balnéaire',
-      stops: ['Phnom Penh (2j)', 'Siem Reap (4j)', 'Battambang (2j)', 'Îles (4j)'],
-      budget: '€€'
+      duration: '14 jours',
+      title: 'Grand Tour du Cambodge',
+      description: 'Du patrimoine aux plages, la boucle complète',
+      stops: ['Phnom Penh (3j)', 'Kampot & Kep (2j)', 'Sihanoukville (1j)', 'Koh Rong (3j)', 'Battambang (2j)', 'Siem Reap (3j)'],
+      budget: '€€€',
+      detail: 'L\'itinéraire idéal pour combiner culture, nature et détente balnéaire. Battambang offre un Cambodge authentique loin du tourisme de masse, avec son train de bambou et ses grottes.'
     },
     {
-      duration: '15 jours',
-      title: 'Cambodge Complet',
-      description: 'Découverte approfondie du royaume khmer',
-      stops: ['Phnom Penh (3j)', 'Kampot (2j)', 'Siem Reap (5j)', 'Battambang (2j)', 'Koh Rong (3j)'],
-      budget: '€€'
+      duration: '21 jours',
+      title: 'Cambodge Complet – Immersion Totale',
+      description: 'Hors des sentiers battus, temples oubliés et communautés locales',
+      stops: ['Phnom Penh (3j)', 'Kratie (2j)', 'Ratanakiri (3j)', 'Preah Vihear (2j)', 'Siem Reap (4j)', 'Battambang (2j)', 'Kampot (2j)', 'Koh Rong Samloem (3j)'],
+      budget: '€€€€',
+      detail: 'Pour les voyageurs qui veulent aller au-delà des circuits classiques. Les dauphins de l\'Irrawaddy à Kratie, les minorités ethniques du Ratanakiri, et le temple spectaculaire de Preah Vihear à la frontière thaïlandaise.'
     }
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <>
+      <SEO 
+        title="Cambodge – Guide Voyage Complet 2025 : Angkor, Itinéraires et Budget"
+        description="Guide complet du Cambodge : temples d'Angkor, Phnom Penh, îles paradisiaques. Itinéraires 7 à 21 jours, budget détaillé, meilleure période et conseils pratiques."
+        image={cambodgeImg}
+        url="/destinations/cambodge"
+        hideH1={true}
+        breadcrumbs={[
+          { name: "Accueil", url: "/" },
+          { name: "Destinations", url: "/destinations" },
+          { name: "Cambodge", url: "/destinations/cambodge" },
+        ]}
+      />
+      <div className="min-h-screen">
+        <Header />
       
       <main className="pt-24">
+        {/* Hero Section */}
         <section 
-          className="relative h-96 bg-cover bg-center"
+          className="relative h-[28rem] bg-cover bg-center"
           style={{ backgroundImage: `url(${cambodgeImg})` }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="relative container mx-auto px-4 h-full flex items-center">
             <div className="text-white max-w-3xl">
-              <h1 className="text-4xl md:text-6xl font-elegant font-bold mb-6">Cambodge</h1>
+              <h1 className="text-4xl md:text-6xl font-elegant font-bold mb-6">
+                Cambodge : Guide Voyage Complet 2025
+              </h1>
               <p className="text-xl md:text-2xl text-white/90 mb-8">
-                Entre les temples majestueux d'Angkor et la douceur khmère, le Cambodge émeut par sa beauté et sa résilience.
+                Des temples millénaires d'Angkor aux plages cristallines de Koh Rong, le Cambodge offre un voyage entre grandeur passée et authenticité préservée.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Badge className="bg-white/20 text-white hover:bg-white/30">💰 Budget: €</Badge>
-                <Badge className="bg-white/20 text-white hover:bg-white/30">🕒 10-15 jours</Badge>
-                <Badge className="bg-white/20 text-white hover:bg-white/30">📅 Nov-Mar</Badge>
+              <div className="flex flex-wrap gap-3">
+                <Badge className="bg-white/20 text-white hover:bg-white/30 text-sm py-1.5">
+                  🏛️ Temples d'Angkor UNESCO
+                </Badge>
+                <Badge className="bg-white/20 text-white hover:bg-white/30 text-sm py-1.5">
+                  💰 20-45 €/jour
+                </Badge>
+                <Badge className="bg-white/20 text-white hover:bg-white/30 text-sm py-1.5">
+                  🕒 1-3 semaines recommandées
+                </Badge>
+                <Badge className="bg-white/20 text-white hover:bg-white/30 text-sm py-1.5">
+                  🌡️ Tropical, saison sèche Nov-Avr
+                </Badge>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-elegant font-bold mb-8 text-center">
-                Découvrez les trésors du Cambodge
-              </h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
-                <p>
-                  Le Cambodge est une destination qui marque les âmes. Ce royaume khmer, berceau de l'une des plus grandes civilisations de l'Asie du Sud-Est, vous transporte dans un monde où l'histoire millénaire côtoie la modernité naissante.
-                </p>
-                <p>
-                  Au cœur de ce pays se dressent les temples d'Angkor, merveille du monde et témoignage grandiose de l'empire khmer. Mais le Cambodge, c'est bien plus que ses temples : c'est la chaleur de son peuple, la beauté de ses paysages entre rizières verdoyantes et plages tropicales, et une cuisine savoureuse qui ravira vos papilles.
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6 my-8">
-                  <Card className="border-ocean/20">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-ocean">
-                        <Star className="h-5 w-5" />
-                        Patrimoine culturel
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm">
-                        Les temples d'Angkor Wat, Angkor Thom et Ta Prohm comptent parmi les sites archéologiques les plus impressionnants au monde. Chaque pierre raconte l'histoire d'une civilisation fascinante.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="border-ocean/20">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-ocean">
-                        <Users className="h-5 w-5" />
-                        Population chaleureuse
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm">
-                        Malgré une histoire douloureuse, les Cambodgiens accueillent les voyageurs avec des sourires authentiques et une gentillesse désarmante qui rendent ce pays si attachant.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="border-ocean/20">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-ocean">
-                        <MapPin className="h-5 w-5" />
-                        Diversité des paysages
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm">
-                        Du lac Tonlé Sap aux plages paradisiaques du sud, en passant par les montagnes du Mondulkiri, le Cambodge offre une variété de paysages étonnante pour sa taille.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="border-ocean/20">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2 text-ocean">
-                        <Utensils className="h-5 w-5" />
-                        Gastronomie authentique
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm">
-                        La cuisine khmère mélange influences indiennes et chinoises. Ne manquez pas l'amok, le lok lak ou les nouilles kuy teav dans les marchés locaux.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                <div className="bg-sunset/10 border border-sunset/20 rounded-lg p-6 my-8">
-                  <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                    <Camera className="h-5 w-5 text-sunset" />
-                    Pourquoi visiter le Cambodge ?
-                  </h3>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-start gap-2">
-                      <span className="text-sunset">▸</span>
-                      <span>Découvrir les temples d'Angkor au lever du soleil, une expérience spirituelle unique</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-sunset">▸</span>
-                      <span>Explorer Phnom Penh, capitale vibrante mêlant architecture coloniale et modernité</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-sunset">▸</span>
-                      <span>Se détendre sur les îles paradisiaques de Koh Rong et Koh Rong Samloem</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-sunset">▸</span>
-                      <span>Naviguer sur le lac Tonlé Sap et découvrir les villages flottants</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-sunset">▸</span>
-                      <span>Profiter d'un budget très accessible comparé à ses voisins</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+        {/* Introduction SEO */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-3xl font-elegant font-bold mb-6">Pourquoi visiter le Cambodge ?</h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Le Cambodge est bien plus que les temples d'Angkor, même si ce joyau archéologique suffirait à lui seul à justifier le voyage. Ce royaume d'Asie du Sud-Est, niché entre la Thaïlande, le Laos et le Vietnam, recèle une <strong>richesse culturelle fascinante</strong>, des <strong>paysages diversifiés</strong> allant des forêts tropicales aux plages paradisiaques, et un <strong>peuple d'une gentillesse désarmante</strong> qui force l'admiration.
+              </p>
+              <p>
+                L'Empire khmer, qui domina toute l'Asie du Sud-Est du IXe au XVe siècle, a laissé un héritage monumental sans équivalent au monde. Les temples d'Angkor, avec leurs tours sculptées et leurs bas-reliefs narratifs, représentent le plus grand édifice religieux jamais construit. Mais le Cambodge moderne se réinvente : Phnom Penh se transforme en métropole créative, les îles du sud rivalisent avec les plus belles plages thaïlandaises, et les provinces reculées offrent un tourisme communautaire authentique.
+              </p>
+              <p>
+                Avec un <strong>coût de la vie parmi les plus bas d'Asie</strong>, une cuisine savoureuse encore méconnue, et des paysages préservés du tourisme de masse, le Cambodge est la destination idéale pour les voyageurs en quête d'authenticité. Notre guide complet vous accompagne pour planifier un séjour inoubliable au pays du sourire khmer.
+              </p>
             </div>
           </div>
         </section>
 
-        <section className="py-8 bg-muted/30">
+        {/* Villes & Régions */}
+        <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-4">
-            <Tabs defaultValue="cities" className="w-full">
-              <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger value="cities">Villes & Régions</TabsTrigger>
-                <TabsTrigger value="itineraries">Itinéraires</TabsTrigger>
-                <TabsTrigger value="practical">Infos Pratiques</TabsTrigger>
-                <TabsTrigger value="guides">Nos Guides</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="cities" className="mt-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {cities.map((city) => (
-                    <Card key={city.slug} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
-                      <div className="aspect-video overflow-hidden">
-                        <img 
-                          src={city.image} 
-                          alt={city.name} 
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                        />
+            <h2 className="text-3xl font-elegant font-bold mb-3 text-center">Villes et Régions Incontournables</h2>
+            <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+              Des temples majestueux de Siem Reap aux eaux cristallines des îles du sud, explorez les destinations qui font la richesse du Cambodge.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {cities.map((city) => (
+                <Card key={city.slug} className="group overflow-hidden hover:shadow-elegant transition-all duration-300">
+                  <div className="aspect-video overflow-hidden">
+                    <img 
+                      src={city.image} 
+                      alt={`${city.name}, Cambodge – Guide voyage`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <CardHeader>
+                    <div className="flex justify-between items-start mb-2">
+                      <CardTitle className="text-xl font-elegant">{city.name}</CardTitle>
+                      <div className="flex gap-2">
+                        <Badge variant="secondary">{city.region}</Badge>
+                        <Badge variant="outline">{city.budget}</Badge>
                       </div>
-                      <CardHeader>
-                        <div className="flex justify-between items-start mb-2">
-                          <CardTitle className="text-xl font-elegant">{city.name}</CardTitle>
-                          <Badge variant="secondary">{city.region}</Badge>
-                        </div>
-                        <CardDescription>{city.description}</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Clock className="h-4 w-4" />
-                            <span>{city.duration}</span>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold mb-2 text-sm">À voir :</h4>
-                            <div className="flex flex-wrap gap-1">
-                              {city.highlights.map((highlight, index) => (
-                                <Badge key={index} variant="outline" className="text-xs">
-                                  {highlight}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-                          <Button 
-                            className="w-full" 
-                            onClick={() => navigate(`/destinations/cambodge/${city.slug}`)}
-                          >
-                            Lire l'article
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="itineraries" className="mt-8">
-                <p className="text-muted-foreground mb-6">
-                  Découvrez nos itinéraires pour explorer le Cambodge : temples d'Angkor, culture khmère et plages paradisiaques.
-                </p>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {itineraries.map((itinerary, index) => (
-                    <Card key={index}>
-                      <CardHeader>
-                        <CardTitle className="flex items-center justify-between">
-                          {itinerary.title}
-                          <Badge>{itinerary.budget}</Badge>
-                        </CardTitle>
-                        <CardDescription>
-                          <span className="font-semibold">{itinerary.duration}</span> - {itinerary.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="space-y-3">
-                          <h4 className="font-semibold text-sm">Étapes :</h4>
-                          <ul className="space-y-1">
-                            {itinerary.stops.map((stop, idx) => (
-                              <li key={idx} className="flex items-center gap-2 text-sm">
-                                <MapPin className="h-3 w-3 text-ocean" />
-                                {stop}
-                              </li>
-                            ))}
-                          </ul>
-                          <Button 
-                            className="w-full mt-4"
-                            onClick={() => navigate(`/destinations/cambodge/itineraire-${itinerary.duration.replace(' ', '-')}`)}
-                          >
-                            Voir l'itinéraire détaillé
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="practical" className="mt-8">
-                <p className="text-muted-foreground mb-6">
-                  Préparez votre voyage au Cambodge : toutes les informations essentielles pour un séjour réussi.
-                </p>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <Star className="h-5 w-5 text-sunset" />
-                        Informations essentielles
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="font-semibold">Visa</h4>
-                          <p className="text-sm text-muted-foreground">E-visa 30 jours : 36$</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">Monnaie</h4>
-                          <p className="text-sm text-muted-foreground">Riel et USD acceptés</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">Budget quotidien</h4>
-                          <p className="text-sm text-muted-foreground">15-40€/jour</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">Langue</h4>
-                          <p className="text-sm text-muted-foreground">Khmer (Anglais courant)</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">Climat</h4>
-                          <p className="text-sm text-muted-foreground">Tropical - Meilleure période Nov-Mar</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">Transport</h4>
-                          <p className="text-sm text-muted-foreground">Bus, tuk-tuk, bateau, scooter</p>
-                        </div>
+                    </div>
+                    <CardDescription className="text-base">{city.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                        <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {city.duration}</span>
                       </div>
-                    </CardContent>
-                  </Card>
+                      <div className="flex flex-wrap gap-1">
+                        {city.highlights.map((h, i) => (
+                          <Badge key={i} variant="outline" className="text-xs">{h}</Badge>
+                        ))}
+                      </div>
+                      <Button className="w-full" asChild>
+                        <Link to={`/destinations/cambodge/${city.slug}`}>
+                          Découvrir {city.name}
+                        </Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <Camera className="h-5 w-5 text-ocean" />
-                        Conseils de voyage
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3 text-sm">
-                        <li className="flex items-start gap-2">
-                          <span className="text-green-500">✓</span>
-                          Respectez les sites sacrés et l'histoire du pays
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-green-500">✓</span>
-                          Visitez Angkor tôt le matin pour éviter la foule
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-green-500">✓</span>
-                          Négociez toujours les prix des tuk-tuks
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-green-500">✓</span>
-                          Goûtez l'Amok et le Lok Lak
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-orange-500">⚠</span>
-                          Attention aux mines encore présentes hors des sentiers
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="text-orange-500">⚠</span>
-                          Évitez l'eau du robinet
-                        </li>
+        {/* Meilleure période */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-3xl font-elegant font-bold mb-6 flex items-center gap-3">
+              <Sun className="h-7 w-7 text-sunset" />
+              Quand partir au Cambodge ? Meilleure période par région
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Le Cambodge bénéficie d'un climat tropical avec deux saisons distinctes. La planification de votre voyage dépend de vos priorités : temples sans foule, plages ensoleillées ou paysages verdoyants.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">☀️ Saison sèche (Nov-Avr)</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p><strong>Idéal pour :</strong> Temples d'Angkor, plages</p>
+                  <p><strong>Climat :</strong> 25-35°C, ciel dégagé, humidité basse. Période la plus touristique, surtout déc-fév. Les temples sont accessibles facilement.</p>
+                  <p><strong>Attention :</strong> Mars-avril très chaud (38-40°C). Réservez vos hébergements à l'avance pour Noël/Nouvel An.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">🌧️ Saison des pluies (Mai-Oct)</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p><strong>Idéal pour :</strong> Photographie, prix bas</p>
+                  <p><strong>Climat :</strong> Averses quotidiennes de 1-2h (souvent l'après-midi). Températures agréables (28-32°C). Végétation luxuriante, douves d'Angkor remplies.</p>
+                  <p><strong>Avantage :</strong> -30 à -50% sur les hébergements. Moins de touristes aux temples. Tonlé Sap inondé : paysages spectaculaires.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">🏖️ Pour les plages</CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p><strong>Idéal :</strong> Novembre à Mars</p>
+                  <p><strong>Climat :</strong> Mer calme, visibilité excellente pour la plongée et le snorkeling. Les îles de Koh Rong sont à leur meilleur.</p>
+                  <p><strong>À éviter :</strong> Juillet-septembre : mer agitée, certaines liaisons en bateau annulées vers les îles.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Itinéraires */}
+        <section className="py-12 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-elegant font-bold mb-3 text-center">Itinéraires Recommandés</h2>
+            <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+              Trois itinéraires éprouvés pour découvrir le Cambodge, adaptés à votre durée de séjour et votre budget.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {itineraries.map((it, index) => (
+                <Card key={index} className="flex flex-col">
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      <span>{it.title}</span>
+                      <Badge>{it.budget}</Badge>
+                    </CardTitle>
+                    <CardDescription>
+                      <span className="font-semibold">{it.duration}</span> – {it.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <div className="space-y-4">
+                      <h4 className="font-semibold text-sm">Étapes :</h4>
+                      <ul className="space-y-1.5">
+                        {it.stops.map((stop, idx) => (
+                          <li key={idx} className="flex items-center gap-2 text-sm">
+                            <MapPin className="h-3 w-3 text-ocean flex-shrink-0" />
+                            {stop}
+                          </li>
+                        ))}
                       </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
+                      <p className="text-sm text-muted-foreground">{it.detail}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              <TabsContent value="guides" className="mt-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {[
-                    { title: 'Guide complet Cambodge 2025', icon: Building, desc: 'Votre ressource indispensable pour organiser votre voyage au Cambodge.', slug: 'guide-complet-cambodge' },
-                    { title: 'Budget détaillé Cambodge', icon: Star, desc: 'Nos astuces pour profiter du pays sans exploser votre budget.', slug: 'budget-cambodge' },
-                    { title: 'Temples d\'Angkor', icon: Camera, desc: 'Guide complet pour visiter les temples d\'Angkor et maximiser votre expérience.', slug: 'temples-angkor' },
-                    { title: 'Transport au Cambodge', icon: MapPin, desc: 'Tous nos conseils pour voyager facilement en bus, tuk-tuk ou bateau.', slug: 'transport-cambodge' },
-                    { title: 'Cambodge en famille', icon: Users, desc: 'Des itinéraires adaptés pour voyager avec vos enfants.', slug: 'cambodge-famille' },
-                    { title: 'Cuisine cambodgienne', icon: Utensils, desc: 'Les meilleures spécialités à goûter absolument.', slug: 'cuisine-cambodgienne' }
-                  ].map((guide, index) => (
-                    <Card key={index} className="group hover:shadow-elegant transition-all duration-300">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-2 text-lg">
-                          <guide.icon className="h-5 w-5 text-ocean" />
-                          {guide.title}
-                        </CardTitle>
-                        <CardDescription>{guide.desc}</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <Button 
-                          className="w-full"
-                          onClick={() => navigate(`/guides/${guide.slug}`)}
-                        >
-                          Lire l'article
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+        {/* Budget */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-3xl font-elegant font-bold mb-6 flex items-center gap-3">
+              <Wallet className="h-7 w-7 text-ocean" />
+              Budget Voyage au Cambodge : Combien Prévoir ?
+            </h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Le Cambodge est l'une des destinations les plus abordables d'Asie du Sud-Est, légèrement moins chère que la Thaïlande. Le dollar américain (USD) est la monnaie principale pour les touristes, bien que le riel cambodgien soit utilisé pour les petites transactions.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <Card className="border-l-4 border-l-green-500">
+                <CardHeader><CardTitle className="text-lg">🎒 Budget Backpacker</CardTitle></CardHeader>
+                <CardContent className="text-sm space-y-2">
+                  <p className="text-2xl font-bold text-green-600">15-30 €/jour</p>
+                  <ul className="text-muted-foreground space-y-1">
+                    <li>Dortoir ou guesthouse : 3-8 €</li>
+                    <li>Street food : 1-2 € par repas</li>
+                    <li>Bus locaux : 5-12 € longue distance</li>
+                    <li>Angkor Pass 1 jour : 37 $</li>
+                    <li>Bière locale : 0,50-1 €</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="border-l-4 border-l-blue-500">
+                <CardHeader><CardTitle className="text-lg">🏨 Confort Moyen</CardTitle></CardHeader>
+                <CardContent className="text-sm space-y-2">
+                  <p className="text-2xl font-bold text-blue-600">30-60 €/jour</p>
+                  <ul className="text-muted-foreground space-y-1">
+                    <li>Hôtel 2-3★ : 15-35 €</li>
+                    <li>Restaurant local : 3-8 € par repas</li>
+                    <li>Tuk-tuk privé à Angkor : 15-20 €/jour</li>
+                    <li>Angkor Pass 3 jours : 62 $</li>
+                    <li>Excursions guidées : 20-40 €</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="border-l-4 border-l-purple-500">
+                <CardHeader><CardTitle className="text-lg">✨ Haut de Gamme</CardTitle></CardHeader>
+                <CardContent className="text-sm space-y-2">
+                  <p className="text-2xl font-bold text-purple-600">80-200 €/jour</p>
+                  <ul className="text-muted-foreground space-y-1">
+                    <li>Hôtel 4-5★ ou boutique : 60-200 €</li>
+                    <li>Restaurant haut de gamme : 15-30 €</li>
+                    <li>Guide privé Angkor : 40-80 €/jour</li>
+                    <li>Vol intérieur : 50-100 €</li>
+                    <li>Spa et bien-être : 20-50 €</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+            <p className="text-sm text-muted-foreground mt-6">
+              💡 <strong>Astuce budget :</strong> Le dollar américain est accepté partout. Les distributeurs donnent des USD. Gardez des petites coupures (1-5$) pour les tuk-tuks et marchés. Le riel (KHR) est utilisé pour la monnaie : 1$ ≈ 4 000 KHR.
+            </p>
+          </div>
+        </section>
+
+        {/* Infos pratiques */}
+        <section className="py-12 bg-muted/30">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl font-elegant font-bold mb-8 text-center">Conseils Pratiques pour le Cambodge</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Plane className="h-5 w-5 text-ocean" />
+                    Visa et Formalités
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-3">
+                  <p><strong>Visa à l'arrivée :</strong> 30 $ USD pour 30 jours, disponible aux aéroports de Phnom Penh et Siem Reap. Prévoir une photo d'identité et un passeport valide 6 mois.</p>
+                  <p><strong>E-visa :</strong> 36 $ USD en ligne sur evisa.gov.kh. Traitement 3 jours ouvrés. Valable uniquement à certains postes frontières.</p>
+                  <p><strong>Extension :</strong> Prolongation de 30 jours possible au bureau d'immigration de Phnom Penh pour 45 $.</p>
+                  <p><strong>Assurance voyage :</strong> Indispensable. Les soins de qualité nécessitent souvent un transfert vers Bangkok.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Shield className="h-5 w-5 text-sunset" />
+                    Santé et Sécurité
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-3">
+                  <p><strong>Vaccins :</strong> Hépatite A/B, typhoïde recommandés. Rage conseillée si zones rurales. Traitement antipaludéen pour les forêts du nord-est.</p>
+                  <p><strong>Eau :</strong> Ne jamais boire l'eau du robinet. Eau en bouteille omniprésente : 0,25-0,50 €.</p>
+                  <p><strong>Sécurité :</strong> Pays globalement sûr. Attention aux vols à l'arraché à Phnom Penh (sacs et téléphones). Éviter les zones rurales isolées (mines antipersonnel).</p>
+                  <p><strong>Carte SIM :</strong> 2-5 € pour 10-30 Go chez Smart ou Cellcard, disponible à l'aéroport.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Utensils className="h-5 w-5 text-ocean" />
+                    Gastronomie à ne pas manquer
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p><strong>Amok :</strong> Le plat national – curry crémeux de poisson cuit à la vapeur dans une feuille de bananier. Doux et parfumé au lait de coco.</p>
+                  <p><strong>Lok Lak :</strong> Bœuf sauté au poivre de Kampot, servi avec un œuf au plat et du riz. Simple et délicieux.</p>
+                  <p><strong>Nom Banh Chok :</strong> Nouilles de riz au curry vert de poisson, le petit-déjeuner cambodgien par excellence.</p>
+                  <p><strong>Poivre de Kampot :</strong> Le meilleur poivre du monde, cultivé dans le sud du pays. À ramener en souvenir.</p>
+                  <p><strong>Insectes frillés :</strong> Tarentules de Skuon, criquets et vers à soie – pour les aventuriers culinaires.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-sunset" />
+                    Se déplacer au Cambodge
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground space-y-2">
+                  <p><strong>Bus :</strong> Giant Ibis et Mekong Express sont les compagnies les plus fiables. Phnom Penh–Siem Reap : 6h, 10-15 $.</p>
+                  <p><strong>Bateau :</strong> La liaison fluviale Phnom Penh–Siem Reap (6h) est pittoresque mais plus chère (35 $). Bateaux vers Koh Rong depuis Sihanoukville (45 min, 12-25 $).</p>
+                  <p><strong>Tuk-tuk :</strong> Omniprésent. Négociez avant de monter. PassApp et Grab fonctionnent dans les grandes villes.</p>
+                  <p><strong>Vol intérieur :</strong> Cambodia Angkor Air relie Phnom Penh à Siem Reap en 45 min (50-100 $).</p>
+                  <p><strong>Moto :</strong> Location possible (5-8 $/jour) mais routes dangereuses. Permis international requis en théorie.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Guides liés */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-elegant font-bold mb-3 text-center">Nos Guides Cambodge</h2>
+            <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+              Approfondissez votre préparation avec nos guides thématiques détaillés pour le Cambodge.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: 'Guide complet Cambodge', icon: Building, desc: 'Organisation étape par étape : visa, hébergement, itinéraire.', slug: 'guide-complet-cambodge' },
+                { title: 'Budget Cambodge', icon: Wallet, desc: 'Tous les prix et astuces pour économiser.', slug: 'budget-cambodge' },
+                { title: 'Street Food Cambodge', icon: Utensils, desc: 'Les plats incontournables et adresses locales.', slug: 'street-food-cambodge' },
+                { title: 'Transport Cambodge', icon: MapPin, desc: 'Comment se déplacer entre les villes.', slug: 'transport-cambodge' }
+              ].map((guide, index) => (
+                <Card key={index} className="group hover:shadow-elegant transition-all duration-300">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-lg">
+                      <guide.icon className="h-5 w-5 text-ocean" />
+                      {guide.title}
+                    </CardTitle>
+                    <CardDescription>{guide.desc}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button className="w-full" asChild>
+                      <Link to={`/guides/${guide.slug}`}>Lire le guide</Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Liens internes */}
+        <section className="py-12 bg-muted/30">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-2xl font-elegant font-bold mb-6">Explorer d'autres destinations en Asie du Sud-Est</h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button variant="outline" asChild><Link to="/destinations/vietnam">🇻🇳 Vietnam</Link></Button>
+              <Button variant="outline" asChild><Link to="/destinations/thailande">🇹🇭 Thaïlande</Link></Button>
+              <Button variant="outline" asChild><Link to="/destinations/laos">🇱🇦 Laos</Link></Button>
+              <Button variant="outline" asChild><Link to="/destinations/malaisie">🇲🇾 Malaisie</Link></Button>
+              <Button variant="outline" asChild><Link to="/destinations/indonesie">🇮🇩 Indonésie</Link></Button>
+              <Button variant="outline" asChild><Link to="/destinations/philippines">🇵🇭 Philippines</Link></Button>
+              <Button variant="outline" asChild><Link to="/destinations">Toutes les destinations</Link></Button>
+            </div>
           </div>
         </section>
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
