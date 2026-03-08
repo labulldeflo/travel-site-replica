@@ -19,6 +19,8 @@ import indonesieImg from '@/assets/destinations/indonesie.jpg';
 import philippinesImg from '@/assets/destinations/philippines.jpg';
 import bruneiImg from '@/assets/destinations/brunei.jpg';
 import timorImg from '@/assets/destinations/timor-oriental.jpg';
+import japonImg from '@/assets/destinations/japon.jpg';
+import coreeImg from '@/assets/destinations/coree-du-sud.jpg';
 
 const Destinations = () => {
   const { t } = useTranslation();
