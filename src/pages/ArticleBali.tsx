@@ -81,7 +81,19 @@ const ArticleBali = () => {
       ]}
       affiliateCity="Bali"
       affiliateCountryCode="id"
+      relatedArticles={[
+        { title: "🏛️ Découvrir Java", url: "/destinations/indonesie/java" },
+        { title: "🐒 Explorer Bornéo", url: "/destinations/indonesie/borneo" }
+      ]}
       destinationLink="/destinations/indonesie"
+      ctaTitle="🇮🇩 Tout sur l'Indonésie"
+      internalLinks={[
+        { label: "Guide complet Indonésie 2025", url: "/guides/guide-complet-indonesie" },
+        { label: "Budget détaillé Indonésie", url: "/guides/budget-indonesie" },
+        { label: "Street food Indonésie", url: "/guides/street-food-indonesie" },
+        { label: "Transport en Indonésie", url: "/guides/transport-indonesie" },
+        { label: "Bons plans cartes SIM", url: "/bons-plans/cartes-sim" }
+      ]}
     />
   );
 };

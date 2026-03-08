@@ -76,7 +76,19 @@ const ArticleBarcelone = () => {
       ]}
       affiliateCity="Barcelona"
       affiliateCountryCode="es"
+      relatedArticles={[
+        { title: "🏙️ Découvrir Madrid", url: "/destinations/espagne/madrid" },
+        { title: "☀️ Explorer l'Andalousie", url: "/destinations/espagne/andalousie" }
+      ]}
       destinationLink="/destinations/espagne"
+      ctaTitle="🇪🇸 Tout sur l'Espagne"
+      internalLinks={[
+        { label: "Guide complet Espagne 2025", url: "/guides/guide-complet-espagne" },
+        { label: "Budget détaillé Espagne", url: "/guides/budget-espagne" },
+        { label: "Street food Espagne : tapas & pintxos", url: "/guides/street-food-espagne" },
+        { label: "Transport en Espagne", url: "/guides/transport-espagne" },
+        { label: "Meilleurs sites de réservation voyage", url: "/guides/meilleurs-sites-reserver-voyage" }
+      ]}
     />
   );
 };

@@ -69,7 +69,19 @@ const ArticleMarrakech = () => {
       ]}
       affiliateCity="Marrakech"
       affiliateCountryCode="ma"
+      relatedArticles={[
+        { title: "🏛️ Découvrir Fès", url: "/destinations/maroc/fes" },
+        { title: "💙 Chefchaouen", url: "/destinations/maroc/chefchaouen" }
+      ]}
       destinationLink="/destinations/maroc"
+      ctaTitle="🇲🇦 Tout sur le Maroc"
+      internalLinks={[
+        { label: "Guide complet Maroc 2025", url: "/guides/guide-complet-maroc" },
+        { label: "Budget détaillé Maroc", url: "/guides/budget-maroc" },
+        { label: "Street food Maroc", url: "/guides/street-food-maroc" },
+        { label: "Transport au Maroc", url: "/guides/transport-maroc" },
+        { label: "Guide sécurité voyage", url: "/guides/securite" }
+      ]}
     />
   );
 };
