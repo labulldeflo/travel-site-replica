@@ -272,6 +272,18 @@ const Blog = () => {
       readTime: '8 min',
       featured: false
     },
+    // --- Japon ---
+    {
+      id: 32,
+      title: 'Quand Partir au Japon ? Sakura, Momiji et Meilleure Période',
+      slug: 'quand-partir-japon',
+      excerpt: 'Cerisiers en fleurs, érables d\'automne, mousson et ski : guide complet du climat japonais saison par saison.',
+      category: 'Quand Partir',
+      image: vietnamImg,
+      date: '2025-03-10',
+      readTime: '12 min',
+      featured: false
+    },
     // --- Que Faire à [Ville] ---
     {
       id: 22,

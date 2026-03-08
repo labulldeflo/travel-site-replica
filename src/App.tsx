@@ -420,6 +420,7 @@ const AppRoutes = () => {
       <Route path="/blog/itineraire-laos-10-jours" element={<ItineraireLaos10Jours />} />
       <Route path="/blog/budget-voyage-laos" element={<BudgetVoyageLaos />} />
       <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
+      <Route path="/blog/quand-partir-japon" element={<QuandPartirJapon />} />
 
       {/* Blog - Que Faire à [Ville] */}
       <Route path="/blog/que-faire-tokyo" element={<QueFaireTokyo />} />
