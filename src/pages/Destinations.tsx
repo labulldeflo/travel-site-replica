@@ -130,6 +130,10 @@ const Destinations = () => {
         description="Découvrez nos destinations voyage : Asie du Sud-Est, Europe, Afrique, Amérique. Guides complets, itinéraires et conseils pour chaque pays."
         url="/destinations"
         hideH1={true}
+        breadcrumbs={[
+          { name: "Accueil", url: "/" },
+          { name: "Destinations", url: "/destinations" },
+        ]}
       />
       <div className="min-h-screen">
         <Header />

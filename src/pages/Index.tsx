@@ -14,6 +14,7 @@ const Index = () => {
         description="Guides complets, budgets détaillés et itinéraires testés pour +40 destinations. Préparez votre prochain voyage avec des conseils pratiques et vérifiés."
         url="/"
         hideH1={true}
+        isHomePage={true}
       />
       <div className="min-h-screen">
         <Header />
