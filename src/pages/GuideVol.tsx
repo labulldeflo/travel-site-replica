@@ -23,10 +23,10 @@ const GuideVol = () => {
       { name: "BlaBlaCar", desc: "Covoiturage longue distance en Europe — économique et convivial", url: "https://www.blablacar.fr" },
     ],
     apps: [
-      { name: "Moovit", desc: "Transports en commun en temps réel dans plus de 3 400 villes", url: "https://moovit.com" },
-      { name: "Grab", desc: "VTC et livraison en Asie du Sud-Est — l'alternative locale à Uber", url: "https://www.grab.com" },
-      { name: "Bolt", desc: "VTC économique disponible en Europe, Afrique et Amérique latine", url: "https://www.bolt.eu" },
-      { name: "Citymapper", desc: "Navigation multimodale ultra-précise dans les grandes métropoles", url: "https://citymapper.com" },
+      { name: "Moovit", desc: "Transports en commun en temps réel dans plus de 3 400 villes", url: "https://moovit.com", badge: undefined },
+      { name: "Grab", desc: "VTC et livraison en Asie du Sud-Est — l'alternative locale à Uber", url: "https://www.grab.com", badge: "Asie" },
+      { name: "Bolt", desc: "VTC économique disponible en Europe, Afrique et Amérique latine", url: "https://www.bolt.eu", badge: undefined },
+      { name: "Citymapper", desc: "Navigation multimodale ultra-précise dans les grandes métropoles", url: "https://citymapper.com", badge: undefined },
     ]
   };
 
