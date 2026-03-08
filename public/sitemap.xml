@@ -59,6 +59,13 @@
   <url><loc>https://www.cap-sur-le-monde.com/destinations/argentine</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/chili</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/destinations/colombie</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/destinations/japon</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/destinations/japon/tokyo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/destinations/japon/kyoto</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/destinations/japon/osaka</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/destinations/coree-du-sud</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/destinations/coree-du-sud/seoul</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/destinations/coree-du-sud/busan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <url><loc>https://www.cap-sur-le-monde.com/guides/budget</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/guides/couple</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

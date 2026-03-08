@@ -19,6 +19,8 @@ import indonesieImg from '@/assets/destinations/indonesie.jpg';
 import philippinesImg from '@/assets/destinations/philippines.jpg';
 import bruneiImg from '@/assets/destinations/brunei.jpg';
 import timorImg from '@/assets/destinations/timor-oriental.jpg';
+import japonImg from '@/assets/destinations/japon.jpg';
+import coreeImg from '@/assets/destinations/coree-du-sud.jpg';
 
 const Destinations = () => {
   const { t } = useTranslation();
@@ -112,10 +114,35 @@ const Destinations = () => {
     region: t('regions.southeastAsia'),
     image: timorImg,
     ...getDestinationData('eastTimor')
+  }, {
+    id: 12,
+    name: 'Japon',
+    slug: 'japon',
+    region: 'Asie de l\'Est',
+    image: japonImg,
+    description: 'Entre traditions millénaires et modernité extrême, le Japon offre une expérience unique au monde.',
+    duration: '10-21 jours',
+    budget: '80-200€/jour',
+    highlights: ['Tokyo', 'Kyoto', 'Osaka', 'Mont Fuji', 'Nara'],
+    bestTime: 'Mars-Mai / Oct-Nov',
+    difficulty: 'Facile'
+  }, {
+    id: 13,
+    name: 'Corée du Sud',
+    slug: 'coree-du-sud',
+    region: 'Asie de l\'Est',
+    image: coreeImg,
+    description: 'Pays de la K-pop, des palais royaux et de la cuisine la plus addictive d\'Asie.',
+    duration: '7-14 jours',
+    budget: '40-100€/jour',
+    highlights: ['Séoul', 'Busan', 'Gyeongju', 'Jeju', 'DMZ'],
+    bestTime: 'Avril-Mai / Sept-Nov',
+    difficulty: 'Facile'
   }];
   
   const regions = [
     { key: 'southeastAsia', value: t('regions.southeastAsia') },
+    { key: 'eastAsia', value: 'Asie de l\'Est' },
     { key: 'europe', value: 'Europe' },
     { key: 'america', value: t('regions.america') },
     { key: 'africa', value: t('regions.africa') }

@@ -51,6 +51,8 @@ const DestinationsList = {
   Philippines: lazy(() => import("./pages/Philippines")),
   Brunei: lazy(() => import("./pages/Brunei")),
   TimorOriental: lazy(() => import("./pages/TimorOriental")),
+  Japon: lazy(() => import("./pages/Japon")),
+  CoreeDuSud: lazy(() => import("./pages/CoreeDuSud")),
 
   // Europe
   France: lazy(() => import("./pages/France")),
@@ -149,6 +151,15 @@ const CountryGuides = {
 const Articles = {
   // Articles par Pays
   ArticleVietnam: lazy(() => import("./pages/ArticleVietnam")),
+
+  // Articles Asie - Japon
+  ArticleTokyo: lazy(() => import("./pages/ArticleTokyo")),
+  ArticleKyoto: lazy(() => import("./pages/ArticleKyoto")),
+  ArticleOsaka: lazy(() => import("./pages/ArticleOsaka")),
+
+  // Articles Asie - Corée du Sud
+  ArticleSeoul: lazy(() => import("./pages/ArticleSeoul")),
+  ArticleBusan: lazy(() => import("./pages/ArticleBusan")),
   ArticleThailande: lazy(() => import("./pages/ArticleThailande")),
   ArticleCambodge: lazy(() => import("./pages/ArticleCambodge")),
   ArticleLaos: lazy(() => import("./pages/ArticleLaos")),
@@ -379,6 +390,8 @@ const AppRoutes = () => {
       <Route path="/destinations/philippines" element={<DestinationsList.Philippines />} />
       <Route path="/destinations/brunei" element={<DestinationsList.Brunei />} />
       <Route path="/destinations/timor-oriental" element={<DestinationsList.TimorOriental />} />
+      <Route path="/destinations/japon" element={<DestinationsList.Japon />} />
+      <Route path="/destinations/coree-du-sud" element={<DestinationsList.CoreeDuSud />} />
 
       <Route path="/destinations/france" element={<DestinationsList.France />} />
       <Route path="/destinations/italie" element={<DestinationsList.Italie />} />
@@ -492,6 +505,15 @@ const AppRoutes = () => {
       {/* ARTICLES - Indonésie */}
       <Route path="/destinations/indonesie/bali" element={<Articles.ArticleBali />} />
       <Route path="/destinations/indonesie/java" element={<Articles.ArticleJava />} />
+
+      {/* ARTICLES - Japon */}
+      <Route path="/destinations/japon/tokyo" element={<Articles.ArticleTokyo />} />
+      <Route path="/destinations/japon/kyoto" element={<Articles.ArticleKyoto />} />
+      <Route path="/destinations/japon/osaka" element={<Articles.ArticleOsaka />} />
+
+      {/* ARTICLES - Corée du Sud */}
+      <Route path="/destinations/coree-du-sud/seoul" element={<Articles.ArticleSeoul />} />
+      <Route path="/destinations/coree-du-sud/busan" element={<Articles.ArticleBusan />} />
 
       {/* ARTICLES - Malaisie */}
       <Route path="/destinations/malaisie/kuala-lumpur" element={<Articles.ArticleKualaLumpur />} />
