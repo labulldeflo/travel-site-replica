@@ -390,6 +390,8 @@ const AppRoutes = () => {
       <Route path="/destinations/philippines" element={<DestinationsList.Philippines />} />
       <Route path="/destinations/brunei" element={<DestinationsList.Brunei />} />
       <Route path="/destinations/timor-oriental" element={<DestinationsList.TimorOriental />} />
+      <Route path="/destinations/japon" element={<DestinationsList.Japon />} />
+      <Route path="/destinations/coree-du-sud" element={<DestinationsList.CoreeDuSud />} />
 
       <Route path="/destinations/france" element={<DestinationsList.France />} />
       <Route path="/destinations/italie" element={<DestinationsList.Italie />} />
