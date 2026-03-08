@@ -49,6 +49,13 @@ const QueFaireBangkok = lazy(() => import("./pages/blog/QueFaireBangkok"));
 const QueFaireParis = lazy(() => import("./pages/blog/QueFaireParis"));
 const QueFaireBarcelone = lazy(() => import("./pages/blog/QueFaireBarcelone"));
 
+// Blog - Meilleures Choses à Faire à [Ville]
+const MeilleuresChosesTokyo = lazy(() => import("./pages/blog/MeilleuresChosesTokyo"));
+const MeilleuresChosesRome = lazy(() => import("./pages/blog/MeilleuresChosesRome"));
+const MeilleuresChosesBangkok = lazy(() => import("./pages/blog/MeilleuresChosesBangkok"));
+const MeilleuresChosesParis = lazy(() => import("./pages/blog/MeilleuresChosesParis"));
+const MeilleuresChosesBarcelone = lazy(() => import("./pages/blog/MeilleuresChosesBarcelone"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // BONS PLANS
