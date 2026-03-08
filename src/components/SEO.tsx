@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const SITE_NAME = "Cap sur le Monde";
@@ -18,7 +18,6 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({ title, description, image, url, h1, hideH1 = false, children }) => {
   const location = useLocation();
-  // Use explicit url prop if provided, otherwise auto-detect from current route
   const pagePath = url ?? location.pathname;
   const pageUrl = `${SITE_URL}${pagePath}`;
   const imageUrl = image
