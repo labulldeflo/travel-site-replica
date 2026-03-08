@@ -41,6 +41,7 @@ const QuandPartirIndonesie = lazy(() => import("./pages/blog/QuandPartirIndonesi
 const ItineraireLaos10Jours = lazy(() => import("./pages/blog/ItineraireLaos10Jours"));
 const BudgetVoyageLaos = lazy(() => import("./pages/blog/BudgetVoyageLaos"));
 const QuandPartirLaos = lazy(() => import("./pages/blog/QuandPartirLaos"));
+const QuandPartirJapon = lazy(() => import("./pages/blog/QuandPartirJapon"));
 
 // Blog - Que Faire à [Ville]
 const QueFaireTokyo = lazy(() => import("./pages/blog/QueFaireTokyo"));
@@ -419,6 +420,7 @@ const AppRoutes = () => {
       <Route path="/blog/itineraire-laos-10-jours" element={<ItineraireLaos10Jours />} />
       <Route path="/blog/budget-voyage-laos" element={<BudgetVoyageLaos />} />
       <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
+      <Route path="/blog/quand-partir-japon" element={<QuandPartirJapon />} />
 
       {/* Blog - Que Faire à [Ville] */}
       <Route path="/blog/que-faire-tokyo" element={<QueFaireTokyo />} />
