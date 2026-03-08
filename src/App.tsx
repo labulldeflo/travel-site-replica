@@ -42,6 +42,13 @@ const ItineraireLaos10Jours = lazy(() => import("./pages/blog/ItineraireLaos10Jo
 const BudgetVoyageLaos = lazy(() => import("./pages/blog/BudgetVoyageLaos"));
 const QuandPartirLaos = lazy(() => import("./pages/blog/QuandPartirLaos"));
 
+// Blog - Que Faire à [Ville]
+const QueFaireTokyo = lazy(() => import("./pages/blog/QueFaireTokyo"));
+const QueFaireRome = lazy(() => import("./pages/blog/QueFaireRome"));
+const QueFaireBangkok = lazy(() => import("./pages/blog/QueFaireBangkok"));
+const QueFaireParis = lazy(() => import("./pages/blog/QueFaireParis"));
+const QueFaireBarcelone = lazy(() => import("./pages/blog/QueFaireBarcelone"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // BONS PLANS
@@ -405,6 +412,13 @@ const AppRoutes = () => {
       <Route path="/blog/itineraire-laos-10-jours" element={<ItineraireLaos10Jours />} />
       <Route path="/blog/budget-voyage-laos" element={<BudgetVoyageLaos />} />
       <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
+
+      {/* Blog - Que Faire à [Ville] */}
+      <Route path="/blog/que-faire-tokyo" element={<QueFaireTokyo />} />
+      <Route path="/blog/que-faire-rome" element={<QueFaireRome />} />
+      <Route path="/blog/que-faire-bangkok" element={<QueFaireBangkok />} />
+      <Route path="/blog/que-faire-paris" element={<QueFaireParis />} />
+      <Route path="/blog/que-faire-barcelone" element={<QueFaireBarcelone />} />
 
       <Route path="/premium" element={<Premium />} />
 
