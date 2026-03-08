@@ -1,58 +1,114 @@
-import { BookOpen, Calendar, MapPin, DollarSign, Heart, AlertTriangle } from 'lucide-react';
+import { Building, MapPin, Calendar, DollarSign, AlertTriangle, Search, Shield, Hotel, Ticket } from 'lucide-react';
 import GuideTemplate from '@/components/GuideTemplate';
 
 const GuideCompletMaroc = () => {
   return (
     <GuideTemplate
-      title="Guide Complet du Maroc"
+      title="Guide Complet Maroc 2025"
       description="Tout ce qu'il faut savoir pour découvrir le royaume chérifien"
-      metaDescription="Guide voyage Maroc 2025 : Marrakech, Fès, désert du Sahara. Itinéraires, budget et conseils."
+      metaDescription="Guide voyage Maroc 2025 : Marrakech, Fès, Sahara. Itinéraires, budget, conseils et outils pour organiser votre voyage."
       country="Maroc"
       countrySlug="maroc"
-      icon={BookOpen}
+      icon={Building}
       affiliateCity="Marrakech"
       affiliateCountryCode="ma"
       sections={[
-        { title: "Pourquoi le Maroc ?", icon: Heart, content: [
-            "Dépaysement garanti à quelques heures de l'Europe",
-            "Médinas historiques classées UNESCO",
-            "Désert du Sahara : expérience inoubliable",
-            "Gastronomie riche et savoureuse",
-            "Artisanat exceptionnel : tapis, cuir, céramique"
+        {
+          title: "Quand partir au Maroc ?",
+          icon: Calendar,
+          content: [
+            "Mars à mai : printemps idéal, températures douces (20-28°C), floraisons dans les vallées",
+            "Septembre à novembre : automne agréable, lumière magnifique pour la photo",
+            "Été (juin-août) : très chaud dans les terres (40°C+), bien pour la côte atlantique (Essaouira)",
+            "Hiver : froid dans l'Atlas (neige possible), doux sur la côte et dans le Sud",
+            "Ramadan : ambiance spéciale et spirituelle, certains restaurants fermés en journée",
+            "Conseil : comparez les vols directs sur Skyscanner — Ryanair et Royal Air Maroc proposent de bons tarifs"
           ]
         },
-        { title: "Meilleure période", icon: Calendar, content: [
-            "Mars à mai : printemps idéal, températures douces",
-            "Septembre à novembre : automne agréable",
-            "Été : très chaud dans les terres, bien pour la côte",
-            "Hiver : froid dans l'Atlas, doux sur la côte",
-            "Ramadan : ambiance spéciale, certains restos fermés"
+        {
+          title: "Itinéraires recommandés",
+          icon: MapPin,
+          content: [
+            "7 jours Express : Marrakech (3j) → Essaouira (2j) → Casablanca (2j)",
+            "14 jours Classique : Marrakech (3j) → Sahara/Merzouga (3j) → Fès (3j) → Chefchaouen (2j) → Tanger (2j)",
+            "21 jours Grand Tour : Ajoutez Ouarzazate, vallée du Dadès, Asilah et Rabat",
+            "Nuit dans le désert : bivouac sous les étoiles à Merzouga ou M'hamid — réservez sur GetYourGuide",
+            "Randonnée Atlas : trek au Toubkal (4167m) en 2-3 jours avec un guide local",
+            "Route des Kasbahs : Ouarzazate → Tinghir → Merzouga — décors de cinéma époustouflants"
           ]
         },
-        { title: "Itinéraire classique", icon: MapPin, content: [
-            "Marrakech (3-4 jours) : médina, palais, souks",
-            "Essaouira (2 jours) : port, plage, ambiance bohème",
-            "Désert Merzouga (2-3 jours) : nuit en bivouac, dromadaires",
-            "Fès (2-3 jours) : médina la plus grande au monde",
-            "Chefchaouen (2 jours) : ville bleue dans le Rif"
+        {
+          title: "Budget à prévoir",
+          icon: DollarSign,
+          content: [
+            "Budget backpacker : 30-50€/jour — riads basiques, street food, bus CTM",
+            "Budget confort : 60-100€/jour — riads de charme, restaurants, excursions guidées",
+            "Budget luxe : 120-250€/jour — riads de luxe, hammam, guides privés dans le désert",
+            "Pas de visa pour les Européens (90 jours) — passeport valide 6 mois suffit",
+            "Le Maroc est très abordable : un tajine coûte 3-6€, un thé à la menthe 0,50€",
+            "Hébergement : réservez vos riads sur Booking.com — Marrakech et Fès ont un choix incroyable",
+            "Assurance voyage conseillée : Chapka ou Heymondo pour la couverture médicale"
           ]
         },
-        { title: "Budget quotidien", icon: DollarSign, content: [
-            "Petit budget : 30-50€/jour",
-            "Budget moyen : 60-100€/jour",
-            "Budget confort : 120-200€/jour",
-            "Pas de visa pour les Européens (90 jours)",
-            "Le Maroc est très abordable"
-          ]
-        },
-        { title: "Conseils pratiques", icon: AlertTriangle, content: [
-            "Négociez tout dans les souks (commencez à 30% du prix)",
-            "Habillez-vous modestement (épaules, genoux couverts)",
-            "Méfiez-vous des faux guides",
-            "Évitez l'eau du robinet",
-            "Apprenez quelques mots d'arabe ou de français"
+        {
+          title: "Conseils pratiques",
+          icon: AlertTriangle,
+          content: [
+            "Négociez tout dans les souks : commencez à 30% du prix annoncé, visez 50-60%",
+            "Habillez-vous modestement : épaules et genoux couverts, surtout dans les médinas",
+            "Méfiez-vous des faux guides : ne suivez que les guides officiels (carte à demander)",
+            "Évitez l'eau du robinet : buvez de l'eau en bouteille ou utilisez une gourde filtrante",
+            "Apprenez quelques mots : salam (bonjour), choukrane (merci), bslama (au revoir)",
+            "Carte SIM locale : Maroc Telecom ou Orange (5-10€ pour un mois de data) à l'aéroport",
+            "Pourboire : 5-10 MAD dans les restaurants, 20-50 MAD pour les guides"
           ]
         }
+      ]}
+      toolRecommendations={[
+        {
+          category: "Comparateurs de vols",
+          icon: Search,
+          tools: [
+            { name: "Skyscanner", description: "Vols directs vers Marrakech, Fès, Casablanca et Agadir", url: "https://www.skyscanner.fr", badge: "Recommandé" },
+            { name: "Google Flights", description: "Carte des prix et comparaison des compagnies low-cost", url: "https://www.google.com/travel/flights" }
+          ]
+        },
+        {
+          category: "Hébergement",
+          icon: Hotel,
+          tools: [
+            { name: "Booking.com", description: "Riads authentiques et hôtels au Maroc — annulation gratuite", url: "https://www.booking.com/searchresults.html?ss=Morocco&lang=fr&aid=2311236", badge: "Partenaire" },
+            { name: "Hostelworld", description: "Auberges et riads économiques à Marrakech, Fès et Essaouira", url: "https://www.hostelworld.com" }
+          ]
+        },
+        {
+          category: "Activités & Excursions",
+          icon: Ticket,
+          tools: [
+            { name: "GetYourGuide", description: "Nuit dans le Sahara, excursions Atlas, cours de cuisine marocaine", url: "https://www.getyourguide.fr", badge: "Populaire" },
+            { name: "Civitatis", description: "Excursions en français au Maroc : médinas, désert, cascades", url: "https://www.civitatis.com/fr/maroc/" }
+          ]
+        },
+        {
+          category: "Assurance voyage",
+          icon: Shield,
+          tools: [
+            { name: "Chapka Assurance", description: "Couverture médicale et rapatriement pour le Maroc", url: "https://www.chapkadirect.fr", badge: "Recommandé" },
+            { name: "Heymondo", description: "Assurance simple et rapide avec app mobile", url: "https://www.heymondo.fr" }
+          ]
+        }
+      ]}
+      internalLinks={[
+        { label: "Budget détaillé Maroc", url: "/guides/budget-maroc" },
+        { label: "Transport au Maroc", url: "/guides/transport-maroc" },
+        { label: "Street Food Maroc", url: "/guides/street-food-maroc" },
+        { label: "Destination Marrakech", url: "/destinations/maroc/marrakech" },
+        { label: "Destination Fès", url: "/destinations/maroc/fes" },
+        { label: "Destination Chefchaouen", url: "/destinations/maroc/chefchaouen" },
+        { label: "Destination Sahara", url: "/destinations/maroc/sahara" },
+        { label: "Guide Complet Égypte", url: "/guides/guide-complet-egypte" },
+        { label: "Tous nos guides de voyage", url: "/guides" },
+        { label: "Guide Sécurité pour voyageuses solo", url: "/guides/securite" }
       ]}
     />
   );
