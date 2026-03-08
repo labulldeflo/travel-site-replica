@@ -151,6 +151,15 @@ const CountryGuides = {
 const Articles = {
   // Articles par Pays
   ArticleVietnam: lazy(() => import("./pages/ArticleVietnam")),
+
+  // Articles Asie - Japon
+  ArticleTokyo: lazy(() => import("./pages/ArticleTokyo")),
+  ArticleKyoto: lazy(() => import("./pages/ArticleKyoto")),
+  ArticleOsaka: lazy(() => import("./pages/ArticleOsaka")),
+
+  // Articles Asie - Corée du Sud
+  ArticleSeoul: lazy(() => import("./pages/ArticleSeoul")),
+  ArticleBusan: lazy(() => import("./pages/ArticleBusan")),
   ArticleThailande: lazy(() => import("./pages/ArticleThailande")),
   ArticleCambodge: lazy(() => import("./pages/ArticleCambodge")),
   ArticleLaos: lazy(() => import("./pages/ArticleLaos")),
