@@ -1,6 +1,7 @@
-import { ArrowLeft, Camera, Sun, Image, Settings } from 'lucide-react';
+import { ArrowLeft, Camera, Sun, Image, Settings, ExternalLink, Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
@@ -15,7 +16,7 @@ const GuidePhoto = () => {
       />
       <Header />
       
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 pt-24">
         <Link to="/#conseils" className="inline-flex items-center text-ocean hover:underline mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Retour aux conseils
@@ -43,62 +44,30 @@ const GuidePhoto = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Pour voyageurs débutants</h3>
                 <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Smartphone récent :</strong> iPhone 13+, Pixel 7+, Samsung S22+ - Suffisant pour 90% des voyageurs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Perche selfie :</strong> Pour photos de groupe et angles créatifs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Batterie externe :</strong> 20 000 mAh minimum</span>
-                  </li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Smartphone récent :</strong> iPhone 15+, Pixel 8+, Samsung S24+ — suffisant pour 90% des voyageurs</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Perche selfie/trépied :</strong> DJI OM ou Joby GripTight — pour photos de groupe et vidéos stabilisées</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Batterie externe :</strong> Anker PowerCore 20 000 mAh — consultez notre test dans la section Tests</span></li>
                 </ul>
               </div>
 
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Pour passionnés photo</h3>
                 <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Appareil hybride :</strong> Sony A7 III, Fujifilm X-T4 - Compact et performant</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Objectif polyvalent :</strong> 24-70mm f/2.8 ou 18-135mm</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Trépied voyage :</strong> Léger et pliable (Manfrotto Befree)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Cartes mémoire :</strong> 2-3 cartes de 64 Go minimum</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Sac photo :</strong> Protection et organisation (Peak Design)</span>
-                  </li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Appareil hybride :</strong> Sony ZV-E10 II (compact et vidéo), Fujifilm X-T5 (rendu couleur sublime) — voir nos tests</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Objectif polyvalent :</strong> 18-135mm pour tout couvrir en un seul objectif</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Trépied voyage :</strong> Manfrotto Befree ou Peak Design Travel Tripod — léger et compact</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Cartes mémoire :</strong> 2-3 cartes SanDisk Extreme Pro de 128 Go</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Sac photo :</strong> Peak Design Everyday Backpack — protection, accès rapide et style</span></li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="font-semibold text-foreground mb-2">Accessoires utiles</h3>
+                <h3 className="font-semibold text-foreground mb-2">Accessoires recommandés</h3>
                 <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Filtre polarisant (réduit les reflets, intensifie les couleurs)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Chiffon microfibre (poussière et gouttes)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Disque dur externe (sauvegarde)</span>
-                  </li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Filtre polarisant : réduit les reflets et intensifie les couleurs du ciel</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Chiffon microfibre et stylo nettoyant pour l'objectif</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>SSD portable Samsung T7 pour sauvegarder vos photos chaque soir</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Housse étanche : protégez votre matériel sous les tropiques</span></li>
                 </ul>
               </div>
             </div>
@@ -112,64 +81,21 @@ const GuidePhoto = () => {
             <div className="space-y-6 text-muted-foreground">
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Règle des tiers</h3>
-                <p className="mb-2">Divisez votre image en 9 parties égales (2 lignes horizontales, 2 verticales). Placez les éléments importants sur les lignes ou intersections.</p>
+                <p className="mb-2">Activez la grille sur votre appareil et placez les éléments importants sur les intersections :</p>
                 <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Activez la grille sur votre appareil</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Horizon sur la ligne du bas ou du haut (pas au centre)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Sujet principal aux points d'intersection</span>
-                  </li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Horizon sur la ligne du bas ou du haut (jamais au centre)</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Sujet principal aux points d'intersection</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Laissez de l'espace dans la direction du regard du sujet</span></li>
                 </ul>
               </div>
 
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Lumière - Golden Hours</h3>
                 <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Lever du soleil :</strong> 1h après l'aube - lumière douce et dorée</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Coucher du soleil :</strong> 1h avant le crépuscule - couleurs chaudes</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Blue Hour :</strong> Juste après coucher/avant lever - ambiance magique</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Évitez :</strong> Milieu de journée (11h-15h) - lumière dure et ombres marquées</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Profondeur et perspective</h3>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Incluez un premier plan (cadre naturel, personne)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Utilisez les lignes directrices (routes, ponts, escaliers)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Variez les angles (bas, haut, niveau des yeux)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Créez de la profondeur avec plusieurs plans</span>
-                  </li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Lever du soleil :</strong> 1h après l'aube — lumière dorée, idéale pour temples et paysages</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Coucher du soleil :</strong> 1h avant le crépuscule — couleurs chaudes et ombres dramatiques</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Blue Hour :</strong> Juste après coucher/avant lever — ambiance magique pour les villes</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>App PhotoPills :</strong> calcule l'heure exacte du golden hour selon votre position</span></li>
                 </ul>
               </div>
             </div>
@@ -178,130 +104,76 @@ const GuidePhoto = () => {
           <Card className="p-8 mb-8">
             <h2 className="text-2xl font-elegant font-semibold text-foreground mb-4 flex items-center">
               <Settings className="w-6 h-6 mr-2 text-ocean" />
-              Réglages essentiels
+              Réglages et applications
             </h2>
             <div className="space-y-6 text-muted-foreground">
               <div>
-                <h3 className="font-semibold text-foreground mb-2">Mode manuel (pour reflex/hybrides)</h3>
+                <h3 className="font-semibold text-foreground mb-2">Mode manuel (reflex/hybrides)</h3>
                 <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>ISO :</strong> 100-400 en plein jour, 800-3200 en basse lumière</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Ouverture (f/) :</strong> f/8-f/11 pour paysages nets, f/1.8-f/2.8 pour portraits floutés</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Vitesse :</strong> 1/125s minimum sans trépied, 1/30s pour poses longues</span>
-                  </li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>ISO :</strong> 100-400 en plein jour, 800-3200 en basse lumière</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Ouverture :</strong> f/8-f/11 pour paysages nets, f/1.8-f/2.8 pour portraits</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span><strong>Vitesse :</strong> 1/125s minimum sans trépied pour éviter le flou</span></li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="font-semibold text-foreground mb-2">Smartphone - Astuces pro</h3>
+                <h3 className="font-semibold text-foreground mb-2">Smartphone — Astuces pro</h3>
                 <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Shootez en mode RAW (DNG) pour plus de flexibilité</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Verrouillez l'exposition (appui long sur l'écran)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Utilisez le mode portrait pour arrière-plan flouté</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Nettoyez l'objectif régulièrement !</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Évitez le zoom numérique (rapprochez-vous plutôt)</span>
-                  </li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Shootez en RAW (ProRAW sur iPhone, DNG sur Android) — plus de flexibilité en retouche</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Verrouillez l'exposition (appui long sur l'écran) pour maîtriser la lumière</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Nettoyez l'objectif régulièrement — la cause n°1 des photos floues sur smartphone</span></li>
+                  <li className="flex items-start"><div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div><span>Évitez le zoom numérique — rapprochez-vous physiquement du sujet</span></li>
                 </ul>
               </div>
             </div>
           </Card>
 
-          <Card className="p-8">
+          <Card className="p-8 mb-8">
             <h2 className="text-2xl font-elegant font-semibold text-foreground mb-4 flex items-center">
               <Image className="w-6 h-6 mr-2 text-ocean" />
-              Post-traitement et organisation
+              Post-traitement et applications
             </h2>
-            <div className="space-y-6 text-muted-foreground">
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Applications de retouche</h3>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Lightroom Mobile :</strong> Professionnel et gratuit (version de base)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>VSCO :</strong> Filtres esthétiques et communauté</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Snapseed :</strong> Puissant et gratuit (Google)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>Photoshop Express :</strong> Retouches rapides</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="grid gap-4 sm:grid-cols-2 text-muted-foreground">
+              {[
+                { name: "Lightroom Mobile", desc: "Retouche professionnelle gratuite — ajustements précis, presets personnalisés", url: "https://lightroom.adobe.com", badge: "Recommandé" },
+                { name: "VSCO", desc: "Filtres esthétiques et communauté — parfait pour un style cohérent sur Instagram", url: "https://www.vsco.co" },
+                { name: "Snapseed", desc: "Gratuit (Google) — puissant avec outils de retouche sélective", url: "https://snapseed.online" },
+                { name: "PhotoPills", desc: "Planifiez vos shoots : golden hour, voie lactée, soleil, lune — indispensable", url: "https://www.photopills.com", badge: "Pro" }
+              ].map((tool, idx) => (
+                <a key={idx} href={tool.url} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-4 rounded-lg border border-border hover:border-ocean/40 hover:bg-muted/30 transition-all group">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-semibold text-foreground group-hover:text-ocean transition-colors">{tool.name}</span>
+                      {tool.badge && <Badge variant="secondary" className="text-xs">{tool.badge}</Badge>}
+                    </div>
+                    <p className="text-sm text-muted-foreground">{tool.desc}</p>
+                  </div>
+                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-ocean flex-shrink-0 mt-1" />
+                </a>
+              ))}
+            </div>
+          </Card>
 
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Ajustements de base</h3>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Exposition : +/- 0.3 à 0.5 maximum</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Contraste : Légère augmentation pour du punch</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Saturation : -5 à +10 (évitez l'excès)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Netteté : +10 à +20 pour les paysages</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Recadrage : Respectez la règle des tiers</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Organisation et sauvegarde</h3>
-                <ul className="space-y-2 ml-4">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span><strong>3-2-1 :</strong> 3 copies, 2 supports différents, 1 copie hors site</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Google Photos / iCloud : Sauvegarde automatique en voyage</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Triez et supprimez les ratés chaque soir</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-sunset rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span>Nommez par destination et date (ex: 2024-03-15_Bali)</span>
-                  </li>
-                </ul>
-              </div>
+          {/* Internal Links */}
+          <Card className="p-8 bg-muted/20">
+            <h2 className="text-2xl font-elegant font-semibold text-foreground mb-4 flex items-center">
+              <Compass className="w-6 h-6 mr-2 text-ocean" />
+              À lire aussi sur Cap sur le Monde
+            </h2>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                { label: "Photo Vietnam : meilleurs spots", url: "/guides/photo-vietnam" },
+                { label: "Photo Thaïlande : meilleurs spots", url: "/guides/photo-thailande" },
+                { label: "Nos tests d'appareils photo", url: "/tests" },
+                { label: "Guide Budget Voyage", url: "/guides/budget" },
+                { label: "Guide Sécurité Voyage", url: "/guides/securite" },
+                { label: "Tous nos guides de voyage", url: "/guides" }
+              ].map((link, idx) => (
+                <Link key={idx} to={link.url} className="flex items-center gap-2 p-3 rounded-lg border border-border hover:border-ocean/40 hover:bg-background transition-all text-foreground hover:text-ocean">
+                  <span className="text-ocean">→</span>
+                  <span className="text-sm font-medium">{link.label}</span>
+                </Link>
+              ))}
             </div>
           </Card>
         </div>
