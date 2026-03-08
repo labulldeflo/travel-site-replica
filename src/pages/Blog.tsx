@@ -327,6 +327,62 @@ const Blog = () => {
       date: '2025-03-05',
       readTime: '13 min',
       featured: false
+    },
+    // --- Meilleures Choses à Faire ---
+    {
+      id: 27,
+      title: 'Les Meilleures Choses à Faire à Tokyo en 2025',
+      slug: 'meilleures-choses-a-faire-tokyo',
+      excerpt: 'Top 20 des expériences incontournables à Tokyo : temples, gastronomie, quartiers uniques et excursions.',
+      category: 'Inspiration Voyage',
+      image: vietnamImg,
+      date: '2025-03-08',
+      readTime: '15 min',
+      featured: true
+    },
+    {
+      id: 28,
+      title: 'Les Meilleures Choses à Faire à Rome en 2025',
+      slug: 'meilleures-choses-a-faire-rome',
+      excerpt: 'Top 20 des expériences à Rome : Colisée, Vatican, Trastevere, gastronomie et trésors cachés.',
+      category: 'Inspiration Voyage',
+      image: vietnamImg,
+      date: '2025-03-08',
+      readTime: '15 min',
+      featured: false
+    },
+    {
+      id: 29,
+      title: 'Les Meilleures Choses à Faire à Bangkok en 2025',
+      slug: 'meilleures-choses-a-faire-bangkok',
+      excerpt: 'Top 20 des expériences à Bangkok : temples dorés, street food, marchés flottants et vie nocturne.',
+      category: 'Inspiration Voyage',
+      image: thailandeImg,
+      date: '2025-03-08',
+      readTime: '15 min',
+      featured: false
+    },
+    {
+      id: 30,
+      title: 'Les Meilleures Choses à Faire à Paris en 2025',
+      slug: 'meilleures-choses-a-faire-paris',
+      excerpt: 'Top 20 des expériences à Paris : tour Eiffel, Louvre, Montmartre, gastronomie et quartiers secrets.',
+      category: 'Inspiration Voyage',
+      image: vietnamImg,
+      date: '2025-03-08',
+      readTime: '15 min',
+      featured: true
+    },
+    {
+      id: 31,
+      title: 'Les Meilleures Choses à Faire à Barcelone en 2025',
+      slug: 'meilleures-choses-a-faire-barcelone',
+      excerpt: 'Top 20 des expériences à Barcelone : Sagrada Familia, quartier gothique, plages, tapas et Gaudí.',
+      category: 'Inspiration Voyage',
+      image: vietnamImg,
+      date: '2025-03-08',
+      readTime: '15 min',
+      featured: false
     }
   ];
 
