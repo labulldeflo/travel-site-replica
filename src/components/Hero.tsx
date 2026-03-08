@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, BookOpen } from "lucide-react";
-import heroImage from "@/assets/hero-mediterranean-cover.webp";
+import heroImage from "@/assets/hero-coastal-travel.jpg";
 
 const Hero = () => {
   return (
@@ -9,24 +9,24 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Paysage de voyage inspirant"
-          width={1200}
-          height={577}
+          alt="Vue aérienne d'une côte turquoise avec plage et falaises"
+          width={1920}
+          height={1080}
           loading="eager"
           fetchPriority="high"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/45"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-elegant font-bold text-white mb-4 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] leading-[1.1]">
-          Guides de voyage et conseils pour explorer le monde
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-elegant font-bold text-white mb-5 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] leading-[1.1]">
+          Explorez le monde simplement
         </h1>
 
-        <p className="text-lg sm:text-xl text-white/90 font-light mb-8 max-w-2xl mx-auto">
-          +40 destinations, budgets détaillés et itinéraires testés pour préparer votre prochain voyage.
+        <p className="text-lg sm:text-xl text-white/90 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
+          Guides de voyage, itinéraires et conseils pratiques pour préparer votre prochain départ.
         </p>
 
         <div className="flex flex-row gap-4 justify-center items-center">
@@ -42,7 +42,7 @@ const Hero = () => {
             className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm bg-white/10 backdrop-blur-sm text-white font-medium rounded-md border border-white/30 hover:bg-white/20 transition-colors duration-200"
           >
             <BookOpen className="w-4 h-4" />
-            Guides pratiques
+            Voir les guides
           </Link>
         </div>
       </div>
