@@ -360,6 +360,29 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                   </Button>
                 )}
               </div>
+
+              {/* Internal Links */}
+              {internalLinks && internalLinks.length > 0 && (
+                <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border">
+                  <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                    <Compass className="h-5 w-5 text-ocean" />
+                    À lire aussi sur Cap sur le Monde
+                  </h3>
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    {internalLinks.map((link, idx) => (
+                      <Link
+                        key={idx}
+                        to={link.url}
+                        onClick={() => window.scrollTo(0, 0)}
+                        className="flex items-center gap-2 p-2 rounded-md hover:bg-background transition-all text-muted-foreground hover:text-ocean text-sm"
+                      >
+                        <span className="text-ocean">→</span>
+                        <span>{link.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </article>
 
             {/* Sidebar */}
