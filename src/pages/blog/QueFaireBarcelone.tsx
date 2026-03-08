@@ -19,8 +19,8 @@ const QueFaireBarcelone = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Que Faire à Barcelone : 20 Activités et Visites Incontournables"
-        description="Guide complet de Barcelone : Sagrada Familia, Park Güell, tapas, plages. Les 20 meilleures activités avec itinéraire, budget et conseils pratiques."
+        title="Que Faire à Barcelone : 20 Activités avec Prix et Horaires Pratiques"
+        description="Liste pratique des 20 meilleures activités à Barcelone avec tarifs exacts, horaires d'ouverture, astuces de réservation Sagrada Familia et bons plans tapas."
         image={barceloneImage}
         ogType="article"
         hideH1
@@ -38,11 +38,11 @@ const QueFaireBarcelone = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
           <div className="relative container mx-auto px-4 h-full flex items-end pb-16 z-10">
             <div className="text-white max-w-4xl">
-              <span className="inline-block bg-ocean/80 text-white text-sm font-medium px-3 py-1 rounded mb-4">Guide Ville</span>
+              <span className="inline-block bg-ocean/80 text-white text-sm font-medium px-3 py-1 rounded mb-4">Guide Pratique</span>
               <h1 className="text-4xl md:text-6xl font-elegant font-extrabold mb-4 drop-shadow-lg">
-                Que Faire à Barcelone : 20 Activités et Visites Incontournables
+                Que Faire à Barcelone : 20 Activités avec Prix et Horaires Pratiques
               </h1>
-              <p className="text-xl text-white/90">Architecture, plages, tapas et art de vivre catalan</p>
+              <p className="text-xl text-white/90">Tarifs exacts, créneaux de réservation Gaudí et bons plans tapas</p>
               <div className="flex items-center gap-6 mt-6 pt-4 border-t border-white/30 text-sm text-white/90">
                 <span className="flex items-center gap-2"><Calendar className="h-4 w-4" /> 5 mars 2025</span>
                 <span className="flex items-center gap-2"><Clock className="h-4 w-4" /> 13 min de lecture</span>
@@ -52,8 +52,12 @@ const QueFaireBarcelone = () => {
         </header>
 
         <article className="container mx-auto px-4 py-12 max-w-4xl prose prose-lg">
+          <div className="not-prose mb-8 p-4 bg-muted/40 rounded-lg border border-border text-sm text-muted-foreground">
+            📖 Pour une présentation complète des quartiers et de l'ambiance de Barcelone, consultez notre <Link to="/destinations/espagne/barcelone" className="text-ocean hover:underline font-medium">guide de Barcelone</Link>. Cet article se concentre sur les <strong>activités concrètes</strong> avec prix, horaires et astuces de réservation.
+          </div>
+
           <p className="text-lg leading-relaxed text-muted-foreground first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left">
-            <Link to="/destinations/espagne/barcelone" className="text-ocean hover:underline font-medium">Barcelone</Link> est une ville qui <strong>ensorcelle dès le premier regard</strong>. Capitale de la Catalogne, elle marie l'architecture visionnaire de <strong>Gaudí</strong>, des plages méditerranéennes ensoleillées, une scène culinaire exceptionnelle et une vie nocturne légendaire. Des courbes organiques de la Sagrada Familia aux ruelles médiévales du Barri Gòtic, voici <strong>20 expériences incontournables</strong> dans la ville la plus créative d'<Link to="/destinations/espagne" className="text-ocean hover:underline font-medium">Espagne</Link>.
+            Barcelone offre tellement de possibilités qu'il est facile de passer à côté de l'essentiel. Ce guide classe <strong>20 activités concrètes</strong> avec pour chacune le <strong>tarif exact, les horaires et les astuces de réservation</strong> — indispensables surtout pour les sites de Gaudí. Utilisez cette check-list pour planifier votre séjour en <Link to="/destinations/espagne" className="text-ocean hover:underline font-medium">Espagne</Link>.
           </p>
 
           <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
