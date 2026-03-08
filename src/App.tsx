@@ -51,6 +51,8 @@ const DestinationsList = {
   Philippines: lazy(() => import("./pages/Philippines")),
   Brunei: lazy(() => import("./pages/Brunei")),
   TimorOriental: lazy(() => import("./pages/TimorOriental")),
+  Japon: lazy(() => import("./pages/Japon")),
+  CoreeDuSud: lazy(() => import("./pages/CoreeDuSud")),
 
   // Europe
   France: lazy(() => import("./pages/France")),
