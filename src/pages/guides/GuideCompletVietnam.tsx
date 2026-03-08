@@ -1,4 +1,4 @@
-import { Building, MapPin, Calendar, DollarSign, Plane, AlertTriangle } from 'lucide-react';
+import { Building, MapPin, Calendar, DollarSign, Plane, AlertTriangle, Search, Shield, Hotel, Ticket, Backpack } from 'lucide-react';
 import GuideTemplate from '@/components/GuideTemplate';
 
 const GuideCompletVietnam = () => {
@@ -17,57 +17,123 @@ const GuideCompletVietnam = () => {
           title: "Quand partir au Vietnam ?",
           icon: Calendar,
           content: [
-            "Nord (Hanoï, Sapa, Ha Long) : Octobre à Avril - Climat frais et sec",
-            "Centre (Hoi An, Huế) : Février à Mai - Avant la mousson",
-            "Sud (Saigon, Delta du Mékong) : Décembre à Avril - Saison sèche",
-            "Évitez Juillet-Août : mousson intense dans tout le pays",
-            "Meilleure période globale : Mars-Avril ou Octobre-Novembre"
+            "Nord (Hanoï, Sapa, Ha Long) : Octobre à Avril — Climat frais et sec, idéal pour les treks à Sapa et les croisières dans la baie",
+            "Centre (Hoi An, Huế) : Février à Mai — Avant la mousson, températures agréables pour explorer les vestiges impériaux",
+            "Sud (Saigon, Delta du Mékong) : Décembre à Avril — Saison sèche, parfait pour naviguer dans les marchés flottants",
+            "Évitez Juillet-Août : mousson intense dans tout le pays, risques d'inondations dans le Centre",
+            "Meilleure période globale : Mars-Avril ou Octobre-Novembre pour combiner Nord et Sud",
+            "Astuce : utilisez Skyscanner ou Google Flights pour trouver les vols les moins chers selon la saison"
           ]
         },
         {
           title: "Itinéraires recommandés",
           icon: MapPin,
           content: [
-            "7 jours Express : Hanoï (2j) → Ha Long (1j) → Hoi An (2j) → Saigon (2j)",
-            "15 jours Classique : Ajoutez Sapa (3j), Huế (2j) et Delta du Mékong (2j)",
-            "21 jours Complet : Incluez Ha Giang, Phong Nha et Phu Quoc",
-            "Privilégiez les vols intérieurs pour gagner du temps (Hanoï-Danang, Danang-Saigon)",
-            "Le train de nuit Hanoï-Sapa ou Hanoï-Huế est une expérience à vivre"
+            "7 jours Express : Hanoï (2j) → Ha Long (1j) → Hoi An (2j) → Saigon (2j) — idéal pour un premier aperçu",
+            "15 jours Classique : Ajoutez Sapa (3j), Huế (2j) et Delta du Mékong (2j) — le meilleur rapport temps/découverte",
+            "21 jours Complet : Incluez Ha Giang, Phong Nha et Phu Quoc pour une immersion totale",
+            "Privilégiez les vols intérieurs pour gagner du temps (Hanoï-Danang, Danang-Saigon) — réservez sur VietJet ou Bamboo Airways",
+            "Le train de nuit Hanoï-Sapa ou Hanoï-Huế est une expérience à vivre, réservez sur 12go.asia",
+            "Réservez vos excursions à l'avance sur GetYourGuide ou Civitatis pour les activités populaires comme Ha Long ou les cours de cuisine"
           ]
         },
         {
           title: "Budget à prévoir",
           icon: DollarSign,
           content: [
-            "Budget backpacker : 25-35€/jour (dortoirs, street food, transports locaux)",
-            "Budget confort : 50-80€/jour (hôtels 3*, restaurants, quelques excursions)",
-            "Budget luxe : 100-200€/jour (hôtels 4-5*, guides privés, vols intérieurs)",
-            "Vols internationaux : 600-900€ A/R depuis la France",
-            "E-visa : 25$ (30 jours, entrée unique)"
+            "Budget backpacker : 25-35€/jour — dortoirs en auberge, street food, transports locaux en bus",
+            "Budget confort : 50-80€/jour — hôtels 3*, restaurants, quelques excursions organisées",
+            "Budget luxe : 100-200€/jour — hôtels 4-5*, guides privés, vols intérieurs, croisière de luxe Ha Long",
+            "Vols internationaux : 600-900€ A/R depuis la France — comparez sur Skyscanner et réservez 2-3 mois à l'avance",
+            "E-visa : 25$ (30 jours, entrée unique) — demande en ligne sur le site officiel",
+            "Astuce budget : réservez vos hébergements sur Booking.com ou Hostelworld pour comparer les prix et lire les avis vérifiés",
+            "Assurance voyage indispensable : Chapka ou ACS proposent des formules adaptées aux longs séjours en Asie"
           ]
         },
         {
           title: "Transports sur place",
           icon: Plane,
           content: [
-            "Vols intérieurs : VietJet, Bamboo Airways (20-60€ le trajet)",
-            "Train : Réseau Nord-Sud, réservez sur 12go.asia ou dsvn.vn",
-            "Bus couchettes : Nombreuses compagnies, confortable pour les longues distances",
-            "Grab : Application indispensable pour taxis et motos",
-            "Location scooter : 5-8€/jour (permis international recommandé)"
+            "Vols intérieurs : VietJet, Bamboo Airways (20-60€ le trajet) — comparez sur Skyscanner",
+            "Train : Réseau Nord-Sud, réservez sur 12go.asia ou dsvn.vn — le train de nuit en couchette molle est très confortable",
+            "Bus couchettes : Nombreuses compagnies (The Sinh Tourist, Futa Bus), pratiques pour les longues distances de nuit",
+            "Grab : Application indispensable pour taxis et motos — téléchargez-la avant votre arrivée",
+            "Location scooter : 5-8€/jour (permis international recommandé) — incontournable pour la boucle de Ha Giang",
+            "Conseil : utilisez Rome2Rio pour planifier vos trajets multimodaux et comparer les options"
           ]
         },
         {
           title: "Conseils pratiques",
           icon: AlertTriangle,
           content: [
-            "Négociez TOUT sauf dans les magasins à prix fixe",
-            "Apprenez quelques mots de vietnamien : xin chào (bonjour), cảm ơn (merci)",
-            "Évitez l'eau du robinet, buvez de l'eau en bouteille",
-            "Traversez la rue lentement et régulièrement, les motos vous éviteront",
-            "Protégez-vous du soleil : chapeau, crème solaire, vêtements légers"
+            "Négociez TOUT sauf dans les magasins à prix fixe — commencez par diviser le prix annoncé par 2 ou 3",
+            "Apprenez quelques mots de vietnamien : xin chào (bonjour), cảm ơn (merci) — les locaux apprécient énormément",
+            "Évitez l'eau du robinet, buvez de l'eau en bouteille — emportez une gourde filtrante LifeStraw ou Grayl",
+            "Traversez la rue lentement et régulièrement, les motos vous éviteront — ne vous arrêtez surtout pas",
+            "Protégez-vous du soleil : chapeau, crème solaire 50+, vêtements légers et respirants",
+            "Carte SIM locale : achetez une SIM Viettel ou Mobifone à l'aéroport (5-10€ pour 1 mois de data)",
+            "Équipement recommandé : consultez nos tests de sacs à dos et vestes de pluie dans notre section Tests"
           ]
         }
+      ]}
+      toolRecommendations={[
+        {
+          category: "Comparateurs de vols",
+          icon: Search,
+          tools: [
+            { name: "Skyscanner", description: "Comparateur de vols le plus complet, idéal pour trouver les meilleurs prix vers Hanoï ou Saigon", url: "https://www.skyscanner.fr", badge: "Recommandé" },
+            { name: "Google Flights", description: "Outil gratuit de Google pour suivre les prix et trouver les dates les moins chères", url: "https://www.google.com/travel/flights" },
+            { name: "Kayak", description: "Alertes de prix et prévisions pour réserver au meilleur moment", url: "https://www.kayak.fr" }
+          ]
+        },
+        {
+          category: "Hébergement",
+          icon: Hotel,
+          tools: [
+            { name: "Booking.com", description: "Large choix d'hôtels au Vietnam avec annulation gratuite sur la plupart des offres", url: "https://www.booking.com/searchresults.html?ss=Vietnam&lang=fr&aid=2311236", badge: "Partenaire" },
+            { name: "Hostelworld", description: "Spécialiste des auberges de jeunesse, parfait pour les backpackers au Vietnam", url: "https://www.hostelworld.com" },
+            { name: "Agoda", description: "Très populaire en Asie du Sud-Est, souvent les meilleurs prix pour le Vietnam", url: "https://www.agoda.com" }
+          ]
+        },
+        {
+          category: "Activités & Excursions",
+          icon: Ticket,
+          tools: [
+            { name: "GetYourGuide", description: "Réservez vos excursions à Ha Long, cours de cuisine à Hoi An et treks à Sapa", url: "https://www.getyourguide.fr", badge: "Populaire" },
+            { name: "Civitatis", description: "Visites guidées en français au Vietnam, idéal pour une première découverte", url: "https://www.civitatis.com/fr/vietnam/" },
+            { name: "Klook", description: "Spécialiste des activités en Asie : transferts, excursions, expériences locales", url: "https://www.klook.com" }
+          ]
+        },
+        {
+          category: "Assurance voyage",
+          icon: Shield,
+          tools: [
+            { name: "Chapka Assurance", description: "Cap Aventure : formule complète pour les voyages en Asie, rapatriement et frais médicaux inclus", url: "https://www.chapkadirect.fr", badge: "Recommandé" },
+            { name: "ACS", description: "Assurance voyage longue durée, idéale pour les tours du monde incluant le Vietnam", url: "https://www.acs-ami.com" },
+            { name: "Heymondo", description: "Assurance voyage en ligne avec assistance 24/7 et app mobile pratique", url: "https://www.heymondo.fr" }
+          ]
+        },
+        {
+          category: "Équipement de voyage",
+          icon: Backpack,
+          tools: [
+            { name: "Osprey Farpoint 40", description: "Le sac à dos idéal pour le Vietnam : format cabine, confortable et résistant", url: "/tests", badge: "Notre test" },
+            { name: "Gourde filtrante Grayl", description: "Purifiez l'eau n'importe où au Vietnam — essentiel pour les treks", url: "/tests" },
+            { name: "Carte SIM Holafly", description: "eSIM internationale avec data illimitée, activable avant le départ", url: "https://www.holafly.com" }
+          ]
+        }
+      ]}
+      internalLinks={[
+        { label: "Budget détaillé Vietnam", url: "/guides/budget-vietnam" },
+        { label: "Transport au Vietnam", url: "/guides/transport-vietnam" },
+        { label: "Street Food Vietnam", url: "/guides/street-food-vietnam" },
+        { label: "Photo Vietnam : les meilleurs spots", url: "/guides/photo-vietnam" },
+        { label: "Destination Hanoï", url: "/destinations/vietnam/hanoi" },
+        { label: "Destination Hoi An", url: "/destinations/vietnam/hoi-an" },
+        { label: "Destination Ho Chi Minh", url: "/destinations/vietnam/ho-chi-minh" },
+        { label: "Tous nos guides de voyage", url: "/guides" },
+        { label: "Nos tests d'équipement voyage", url: "/tests" },
+        { label: "Guide Budget : maîtriser ses dépenses", url: "/guides/budget" }
       ]}
     />
   );
