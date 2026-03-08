@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, User, Tag, Clock, Coffee, DollarSign, MapPin, LucideIcon } from "lucide-react";
+import { Calendar, User, Tag, Clock, Coffee, DollarSign, MapPin, Compass, LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
