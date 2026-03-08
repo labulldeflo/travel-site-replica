@@ -95,6 +95,10 @@ const GuidePlanification = lazy(() => import("./pages/GuidePlanification"));
 const GuideSecurite = lazy(() => import("./pages/GuideSecurite"));
 const GuideVol = lazy(() => import("./pages/GuideVol"));
 const GuideMeilleursSites = lazy(() => import("./pages/guides/GuideMeilleursSites"));
+const GuidePreparerVoyage = lazy(() => import("./pages/guides/GuidePreparerVoyage"));
+const GuideItineraireVoyage = lazy(() => import("./pages/guides/GuideItineraireVoyage"));
+const GuideBudgetVoyage = lazy(() => import("./pages/guides/GuideBudgetVoyage"));
+const GuideQueMettreValise = lazy(() => import("./pages/guides/GuideQueMettreValise"));
 
 // GUIDES THÉMATIQUES PAR PAYS
 const CountryGuides = {
