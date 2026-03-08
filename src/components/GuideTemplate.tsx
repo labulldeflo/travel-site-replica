@@ -41,6 +41,12 @@ const GuideTemplate = ({
         title={title}
         description={metaDescription}
         hideH1={true}
+        breadcrumbs={[
+          { name: "Accueil", url: "/" },
+          { name: "Destinations", url: "/destinations" },
+          { name: country, url: `/destinations/${countrySlug}` },
+          { name: title, url: "" },
+        ]}
       />
       <Header />
       

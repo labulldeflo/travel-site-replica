@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AffiliateWidget from "@/components/AffiliateWidget";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 
 // Fonction utilitaire pour parser le markdown simple (gras, italique)
@@ -59,6 +60,9 @@ interface ArticleTemplateProps {
   author?: string;
   date?: string;
   readingTime?: string;
+
+  // SEO
+  metaDescription?: string;
 
   // Content Sections
   introduction?: string;
@@ -114,9 +118,10 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   subtitle,
   category,
   keywords,
-  author = "Voyage Site Team",
+  author = "Cap sur le Monde",
   date = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }),
   readingTime = "7 min",
+  metaDescription,
   introduction,
   introText,
   contentSections,
@@ -136,9 +141,41 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
 }) => {
   const finalIntro = introduction || introText;
   const finalConclusion = conclusion || conclusionText;
-  
+  const seoDescription = metaDescription || subtitle || `${title} – Guide complet et conseils pratiques.`;
+
+  // Parse French date to ISO for schema.org
+  const parseDate = (d: string) => {
+    try {
+      const months: Record<string, string> = {
+        janvier: "01", février: "02", mars: "03", avril: "04", mai: "05", juin: "06",
+        juillet: "07", août: "08", septembre: "09", octobre: "10", novembre: "11", décembre: "12",
+      };
+      const parts = d.match(/(\d+)\s+(\w+)\s+(\d{4})/);
+      if (parts) {
+        return `${parts[3]}-${months[parts[2].toLowerCase()] || "01"}-${parts[1].padStart(2, "0")}`;
+      }
+    } catch {}
+    return undefined;
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title={title}
+        description={seoDescription}
+        image={typeof heroImage === "string" ? heroImage : undefined}
+        hideH1={true}
+        ogType="article"
+        articleMeta={{
+          author: author,
+          datePublished: parseDate(date),
+        }}
+        breadcrumbs={[
+          { name: "Accueil", url: "/" },
+          { name: "Destinations", url: "/destinations" },
+          { name: title, url: "" },
+        ]}
+      />
       <Header />
 
       <main className="flex-grow pt-24">
