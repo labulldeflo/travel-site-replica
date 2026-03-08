@@ -156,6 +156,18 @@ const Guides = () => {
       image: guideTransportVietnam,
       tags: ['Transport', 'Vietnam', 'Déplacements'],
       link: '/guides/transport-vietnam'
+    },
+    {
+      id: 11,
+      title: 'Les meilleurs sites pour réserver un voyage en 2025',
+      category: 'preparation',
+      description: 'Comparateurs de vols, hôtels, activités, assurances et eSIM : tous les outils pour organiser votre voyage.',
+      readTime: '18 min',
+      difficulty: 'Débutant',
+      featured: true,
+      image: guidePlanification,
+      tags: ['Réservation', 'Outils', 'Comparateurs'],
+      link: '/guides/meilleurs-sites-reserver-voyage'
     }
   ];
 
