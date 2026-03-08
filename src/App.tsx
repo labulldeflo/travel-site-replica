@@ -413,6 +413,13 @@ const AppRoutes = () => {
       <Route path="/blog/budget-voyage-laos" element={<BudgetVoyageLaos />} />
       <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
 
+      {/* Blog - Que Faire à [Ville] */}
+      <Route path="/blog/que-faire-tokyo" element={<QueFaireTokyo />} />
+      <Route path="/blog/que-faire-rome" element={<QueFaireRome />} />
+      <Route path="/blog/que-faire-bangkok" element={<QueFaireBangkok />} />
+      <Route path="/blog/que-faire-paris" element={<QueFaireParis />} />
+      <Route path="/blog/que-faire-barcelone" element={<QueFaireBarcelone />} />
+
       <Route path="/premium" element={<Premium />} />
 
       {/* BONS PLANS */}
