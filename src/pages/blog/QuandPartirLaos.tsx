@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sun, CloudRain, Calendar, Clock, Compass, Thermometer } from "lucide-react";
+import { Sun, CloudRain, Calendar, Clock, Compass, Thermometer, MapPin } from "lucide-react";
 import laosImage from "@/assets/destinations/laos.jpg";
 
 const QuandPartirLaos = () => {
