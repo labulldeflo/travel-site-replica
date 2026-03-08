@@ -1,6 +1,8 @@
-import { ArrowLeft, LucideIcon } from 'lucide-react';
+import { ArrowLeft, ExternalLink, LucideIcon, Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
@@ -10,6 +12,22 @@ interface GuideSection {
   title: string;
   icon: LucideIcon;
   content: string[];
+}
+
+interface ToolRecommendation {
+  category: string;
+  icon: LucideIcon;
+  tools: {
+    name: string;
+    description: string;
+    url: string;
+    badge?: string;
+  }[];
+}
+
+interface InternalLink {
+  label: string;
+  url: string;
 }
 
 interface GuideTemplateProps {
@@ -22,6 +40,8 @@ interface GuideTemplateProps {
   sections: GuideSection[];
   affiliateCity?: string;
   affiliateCountryCode?: string;
+  toolRecommendations?: ToolRecommendation[];
+  internalLinks?: InternalLink[];
 }
 
 const GuideTemplate = ({
@@ -33,7 +53,9 @@ const GuideTemplate = ({
   icon: MainIcon,
   sections,
   affiliateCity,
-  affiliateCountryCode
+  affiliateCountryCode,
+  toolRecommendations,
+  internalLinks
 }: GuideTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
@@ -87,6 +109,72 @@ const GuideTemplate = ({
               </div>
             </Card>
           ))}
+
+          {/* Tool Recommendations Section */}
+          {toolRecommendations && toolRecommendations.length > 0 && (
+            <div className="mt-12 mb-8">
+              <h2 className="text-3xl font-elegant font-bold text-foreground mb-8 text-center">
+                🧰 Outils & Services recommandés
+              </h2>
+              <div className="space-y-8">
+                {toolRecommendations.map((category, catIdx) => (
+                  <Card key={catIdx} className="p-8">
+                    <h3 className="text-xl font-elegant font-semibold text-foreground mb-6 flex items-center">
+                      <category.icon className="w-5 h-5 mr-2 text-ocean" />
+                      {category.category}
+                    </h3>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {category.tools.map((tool, toolIdx) => (
+                        <a
+                          key={toolIdx}
+                          href={tool.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-start gap-3 p-4 rounded-lg border border-border hover:border-ocean/40 hover:bg-muted/30 transition-all group"
+                        >
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="font-semibold text-foreground group-hover:text-ocean transition-colors">{tool.name}</span>
+                              {tool.badge && (
+                                <Badge variant="secondary" className="text-xs">{tool.badge}</Badge>
+                              )}
+                            </div>
+                            <p className="text-sm text-muted-foreground">{tool.description}</p>
+                          </div>
+                          <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-ocean flex-shrink-0 mt-1" />
+                        </a>
+                      ))}
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-4 text-center">
+                      Certains liens sont des liens affiliés • Nous touchons une petite commission sans surcoût pour vous
+                    </p>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Internal Links Section */}
+          {internalLinks && internalLinks.length > 0 && (
+            <Card className="p-8 mb-8 bg-muted/20">
+              <h2 className="text-2xl font-elegant font-semibold text-foreground mb-4 flex items-center">
+                <Compass className="w-6 h-6 mr-2 text-ocean" />
+                À lire aussi sur Cap sur le Monde
+              </h2>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {internalLinks.map((link, idx) => (
+                  <Link
+                    key={idx}
+                    to={link.url}
+                    className="flex items-center gap-2 p-3 rounded-lg border border-border hover:border-ocean/40 hover:bg-background transition-all text-foreground hover:text-ocean"
+                  >
+                    <span className="text-ocean">→</span>
+                    <span className="text-sm font-medium">{link.label}</span>
+                  </Link>
+                ))}
+              </div>
+            </Card>
+          )}
 
           {affiliateCity && affiliateCountryCode && (
             <div className="mt-8">
