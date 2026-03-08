@@ -142,6 +142,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   relatedArticles,
   destinationLink,
   ctaTitle,
+  faqs,
 }) => {
   const finalIntro = introduction || introText;
   const finalConclusion = conclusion || conclusionText;
