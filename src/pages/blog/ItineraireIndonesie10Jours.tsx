@@ -133,6 +133,24 @@ const ItineraireIndonesie10Jours = () => {
             </div>
           </div>
 
+          <div className="mt-10 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
+            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-ocean" /> 🗺️ Destinations mentionnées dans cet article
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { label: "🇮🇩 Indonésie", url: "/destinations/indonesie" },
+                { label: "Bali", url: "/destinations/indonesie/bali" },
+                { label: "Java", url: "/destinations/indonesie/java" },
+                { label: "Bornéo", url: "/destinations/indonesie/borneo" },
+              ].map((dest, idx) => (
+                <Link key={idx} to={dest.url} onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center gap-1 px-3 py-1.5 bg-background border border-border rounded-full text-sm hover:border-ocean hover:text-ocean transition-colors">
+                  {dest.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90"><Link to="/destinations/indonesie" onClick={() => window.scrollTo(0, 0)}>Découvrir l'Indonésie</Link></Button>
             <Button asChild variant="outline" className="flex-1"><Link to="/blog" onClick={() => window.scrollTo(0, 0)}>Retour au blog</Link></Button>
