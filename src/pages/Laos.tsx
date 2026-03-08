@@ -378,7 +378,7 @@ const Laos = () => {
         {/* Articles Blog Laos */}
         <section className="py-12 bg-ocean/5">
           <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-2xl font-elegant font-bold mb-6 text-center">📝 Articles Blog sur le Laos</h2>
+            <h2 className="text-2xl font-elegant font-bold mb-6 text-center">📚 Articles pour préparer votre voyage au Laos</h2>
             <div className="grid md:grid-cols-3 gap-4">
               <Button variant="outline" className="h-auto py-4 flex-col gap-1" asChild>
                 <Link to="/blog/itineraire-laos-10-jours">
