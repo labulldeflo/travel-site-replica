@@ -126,6 +126,13 @@ const GuideCompletThailande = () => {
         { label: "Nos tests d'équipement voyage", url: "/tests" },
         { label: "Guide Sécurité pour voyageuses solo", url: "/guides/securite" }
       ]}
+      faqs={[
+        { question: "Combien de temps faut-il pour visiter la Thaïlande ?", answer: "Minimum 2 semaines pour Bangkok + Chiang Mai + une île du sud. 3 semaines permettent d'explorer le nord et plusieurs îles. 4 semaines offrent un rythme confortable avec des étapes moins touristiques comme Kanchanaburi, Sukhothai ou Isaan." },
+        { question: "Faut-il un visa pour la Thaïlande ?", answer: "Les Français bénéficient d'une exemption de visa pour un séjour de 60 jours (depuis 2024). Le passeport doit être valide 6 mois après l'entrée. Une extension de 30 jours est possible au bureau d'immigration pour 1 900 bahts." },
+        { question: "La Thaïlande est-elle sûre pour les femmes seules ?", answer: "Oui, la Thaïlande est l'une des destinations les plus sûres d'Asie pour les voyageuses solo. Les Thaïlandais sont respectueux et accueillants. Prenez les précautions habituelles : évitez les zones isolées la nuit, ne laissez pas votre verre sans surveillance dans les bars." },
+        { question: "Quand partir en Thaïlande ?", answer: "La meilleure période est de novembre à février (saison sèche et fraîche). Mars-mai est très chaud. Juin-octobre est la saison des pluies (averses courtes, prix bas). Les îles du golfe (Koh Samui) ont un calendrier inversé : évitez octobre-décembre." },
+        { question: "Quelles îles choisir en Thaïlande ?", answer: "Pour la fête : Koh Phangan (Full Moon Party), Koh Phi Phi. Pour la plage tranquille : Koh Lanta, Koh Lipe, Koh Yao Noi. Pour la plongée : Koh Tao (formations pas chères), îles Similan. Pour le luxe : Koh Samui. Pour le combo plage+nature : Koh Chang." }
+      ]}
     />
   );
 };
