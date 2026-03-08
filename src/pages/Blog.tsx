@@ -271,6 +271,62 @@ const Blog = () => {
       date: '2025-02-20',
       readTime: '8 min',
       featured: false
+    },
+    // --- Que Faire à [Ville] ---
+    {
+      id: 22,
+      title: 'Que Faire à Tokyo : 25 Activités Incontournables',
+      slug: 'que-faire-tokyo',
+      excerpt: 'Temples, culture pop, gastronomie et jardins zen : les 25 meilleures activités pour découvrir la capitale japonaise.',
+      category: 'Que Faire',
+      image: vietnamImg,
+      date: '2025-03-01',
+      readTime: '14 min',
+      featured: true
+    },
+    {
+      id: 23,
+      title: 'Que Faire à Rome : 20 Activités Incontournables',
+      slug: 'que-faire-rome',
+      excerpt: 'Colisée, Vatican, Trastevere et gastronomie italienne : le guide complet de la Ville Éternelle.',
+      category: 'Que Faire',
+      image: vietnamImg,
+      date: '2025-03-02',
+      readTime: '13 min',
+      featured: false
+    },
+    {
+      id: 24,
+      title: 'Que Faire à Bangkok : 20 Activités Incontournables',
+      slug: 'que-faire-bangkok',
+      excerpt: 'Temples dorés, marchés flottants, street food et rooftop bars : le meilleur de Bangkok.',
+      category: 'Que Faire',
+      image: thailandeImg,
+      date: '2025-03-03',
+      readTime: '13 min',
+      featured: false
+    },
+    {
+      id: 25,
+      title: 'Que Faire à Paris : 25 Activités Incontournables',
+      slug: 'que-faire-paris',
+      excerpt: 'Tour Eiffel, Louvre, Montmartre et gastronomie : les 25 meilleures expériences de la Ville Lumière.',
+      category: 'Que Faire',
+      image: vietnamImg,
+      date: '2025-03-04',
+      readTime: '14 min',
+      featured: true
+    },
+    {
+      id: 26,
+      title: 'Que Faire à Barcelone : 20 Activités Incontournables',
+      slug: 'que-faire-barcelone',
+      excerpt: 'Sagrada Familia, Park Güell, tapas et plages : le guide ultime de Barcelone.',
+      category: 'Que Faire',
+      image: vietnamImg,
+      date: '2025-03-05',
+      readTime: '13 min',
+      featured: false
     }
   ];
 
