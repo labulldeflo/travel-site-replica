@@ -38,7 +38,7 @@ const GuideTemplate = ({
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title={`${title} - Cap sur le Monde`}
+        title={title}
         description={metaDescription}
         hideH1={true}
       />
