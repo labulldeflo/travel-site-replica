@@ -25,6 +25,23 @@ const Premium = lazy(() => import("./pages/Premium"));
 const OrganiserTourMondeBudget = lazy(() => import("./pages/blog/OrganiserTourMondeBudget"));
 const DestinationsVoyagerSeule50Ans = lazy(() => import("./pages/blog/DestinationsVoyagerSeule50Ans"));
 
+// Blog - Itinéraires, Budget, Quand Partir (Asie du Sud-Est)
+const ItineraireVietnam10Jours = lazy(() => import("./pages/blog/ItineraireVietnam10Jours"));
+const BudgetVoyageVietnam = lazy(() => import("./pages/blog/BudgetVoyageVietnam"));
+const QuandPartirVietnam = lazy(() => import("./pages/blog/QuandPartirVietnam"));
+const ItineraireThailande10Jours = lazy(() => import("./pages/blog/ItineraireThailande10Jours"));
+const BudgetVoyageThailande = lazy(() => import("./pages/blog/BudgetVoyageThailande"));
+const QuandPartirThailande = lazy(() => import("./pages/blog/QuandPartirThailande"));
+const ItineraireCambodge10Jours = lazy(() => import("./pages/blog/ItineraireCambodge10Jours"));
+const BudgetVoyageCambodge = lazy(() => import("./pages/blog/BudgetVoyageCambodge"));
+const QuandPartirCambodge = lazy(() => import("./pages/blog/QuandPartirCambodge"));
+const ItineraireIndonesie10Jours = lazy(() => import("./pages/blog/ItineraireIndonesie10Jours"));
+const BudgetVoyageIndonesie = lazy(() => import("./pages/blog/BudgetVoyageIndonesie"));
+const QuandPartirIndonesie = lazy(() => import("./pages/blog/QuandPartirIndonesie"));
+const ItineraireLaos10Jours = lazy(() => import("./pages/blog/ItineraireLaos10Jours"));
+const BudgetVoyageLaos = lazy(() => import("./pages/blog/BudgetVoyageLaos"));
+const QuandPartirLaos = lazy(() => import("./pages/blog/QuandPartirLaos"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // BONS PLANS
@@ -371,6 +388,24 @@ const AppRoutes = () => {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/organiser-tour-monde-budget-limite" element={<OrganiserTourMondeBudget />} />
       <Route path="/blog/destinations-voyager-seule-50-ans" element={<DestinationsVoyagerSeule50Ans />} />
+
+      {/* Blog - Itinéraires, Budget, Quand Partir (Asie du Sud-Est) */}
+      <Route path="/blog/itineraire-vietnam-10-jours" element={<ItineraireVietnam10Jours />} />
+      <Route path="/blog/budget-voyage-vietnam" element={<BudgetVoyageVietnam />} />
+      <Route path="/blog/quand-partir-vietnam" element={<QuandPartirVietnam />} />
+      <Route path="/blog/itineraire-thailande-10-jours" element={<ItineraireThailande10Jours />} />
+      <Route path="/blog/budget-voyage-thailande" element={<BudgetVoyageThailande />} />
+      <Route path="/blog/quand-partir-thailande" element={<QuandPartirThailande />} />
+      <Route path="/blog/itineraire-cambodge-10-jours" element={<ItineraireCambodge10Jours />} />
+      <Route path="/blog/budget-voyage-cambodge" element={<BudgetVoyageCambodge />} />
+      <Route path="/blog/quand-partir-cambodge" element={<QuandPartirCambodge />} />
+      <Route path="/blog/itineraire-indonesie-10-jours" element={<ItineraireIndonesie10Jours />} />
+      <Route path="/blog/budget-voyage-indonesie" element={<BudgetVoyageIndonesie />} />
+      <Route path="/blog/quand-partir-indonesie" element={<QuandPartirIndonesie />} />
+      <Route path="/blog/itineraire-laos-10-jours" element={<ItineraireLaos10Jours />} />
+      <Route path="/blog/budget-voyage-laos" element={<BudgetVoyageLaos />} />
+      <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
+
       <Route path="/premium" element={<Premium />} />
 
       {/* BONS PLANS */}

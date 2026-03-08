@@ -13,6 +13,11 @@ import roadTripEuropeImg from '@/assets/blog/road-trip-europe.jpg';
 import asieSudEstImg from '@/assets/blog/asie-sud-est-budget.jpg';
 import destinations2025Img from '@/assets/blog/destinations-2025.jpg';
 import checklistVoyageImg from '@/assets/blog/checklist-voyage.jpg';
+import vietnamImg from '@/assets/destinations/vietnam.jpg';
+import thailandeImg from '@/assets/destinations/thailande.jpg';
+import cambodgeImg from '@/assets/destinations/cambodge.jpg';
+import indonesieImg from '@/assets/destinations/indonesie.jpg';
+import laosImg from '@/assets/destinations/laos.jpg';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Tous');
@@ -24,7 +29,9 @@ const Blog = () => {
     'Organisation & Budget',
     'Voyager seule à 50 ans',
     'Destinations abordables',
-    'Road Trips & Aventures'
+    'Road Trips & Aventures',
+    'Itinéraires',
+    'Quand Partir'
   ];
 
   const articles = [
@@ -92,6 +99,176 @@ const Blog = () => {
       image: checklistVoyageImg,
       date: '2025-01-03',
       readTime: '6 min',
+      featured: false
+    },
+    // --- Vietnam ---
+    {
+      id: 7,
+      title: 'Itinéraire Vietnam 10 Jours : Du Nord au Sud',
+      slug: 'itineraire-vietnam-10-jours',
+      excerpt: 'De Hanoï à Hô Chi Minh en passant par la baie d\'Ha Long et Hoi An : notre programme jour par jour pour 10 jours au Vietnam.',
+      category: 'Itinéraires',
+      image: vietnamImg,
+      date: '2025-02-15',
+      readTime: '12 min',
+      featured: true
+    },
+    {
+      id: 8,
+      title: 'Budget Voyage Vietnam : Combien Coûte un Séjour ?',
+      slug: 'budget-voyage-vietnam',
+      excerpt: 'Guide complet du budget au Vietnam. Hébergement, nourriture, transport et activités : tous les prix détaillés.',
+      category: 'Organisation & Budget',
+      image: vietnamImg,
+      date: '2025-02-20',
+      readTime: '10 min',
+      featured: false
+    },
+    {
+      id: 9,
+      title: 'Quand Partir au Vietnam ? Climat et Meilleure Période',
+      slug: 'quand-partir-vietnam',
+      excerpt: 'Saison sèche, mousson, températures par région : tout savoir pour choisir la période idéale de votre voyage au Vietnam.',
+      category: 'Quand Partir',
+      image: vietnamImg,
+      date: '2025-02-25',
+      readTime: '11 min',
+      featured: false
+    },
+    // --- Thaïlande ---
+    {
+      id: 10,
+      title: 'Itinéraire Thaïlande 10 Jours : Bangkok, Chiang Mai et Îles',
+      slug: 'itineraire-thailande-10-jours',
+      excerpt: 'Le parfait mélange temples, montagnes et plages : notre itinéraire jour par jour pour 10 jours en Thaïlande.',
+      category: 'Itinéraires',
+      image: thailandeImg,
+      date: '2025-03-01',
+      readTime: '12 min',
+      featured: true
+    },
+    {
+      id: 11,
+      title: 'Budget Voyage Thaïlande : Tous les Prix Détaillés',
+      slug: 'budget-voyage-thailande',
+      excerpt: 'Combien coûte un voyage en Thaïlande ? Hébergement, food, transport, activités : tous les prix par profil.',
+      category: 'Organisation & Budget',
+      image: thailandeImg,
+      date: '2025-03-05',
+      readTime: '10 min',
+      featured: false
+    },
+    {
+      id: 12,
+      title: 'Quand Partir en Thaïlande ? Climat et Meilleure Période',
+      slug: 'quand-partir-thailande',
+      excerpt: 'Mousson, saison sèche, meilleure période par région : guide complet du climat en Thaïlande.',
+      category: 'Quand Partir',
+      image: thailandeImg,
+      date: '2025-03-08',
+      readTime: '9 min',
+      featured: false
+    },
+    // --- Cambodge ---
+    {
+      id: 13,
+      title: 'Itinéraire Cambodge 10 Jours : Angkor, Phnom Penh et Plages',
+      slug: 'itineraire-cambodge-10-jours',
+      excerpt: 'Des temples d\'Angkor aux plages de Koh Rong : itinéraire complet jour par jour pour 10 jours au Cambodge.',
+      category: 'Itinéraires',
+      image: cambodgeImg,
+      date: '2025-02-10',
+      readTime: '11 min',
+      featured: false
+    },
+    {
+      id: 14,
+      title: 'Budget Voyage Cambodge : Tous les Prix Détaillés',
+      slug: 'budget-voyage-cambodge',
+      excerpt: 'Combien coûte un séjour au Cambodge ? Prix détaillés hébergement, nourriture, transport et Angkor.',
+      category: 'Organisation & Budget',
+      image: cambodgeImg,
+      date: '2025-02-18',
+      readTime: '9 min',
+      featured: false
+    },
+    {
+      id: 15,
+      title: 'Quand Partir au Cambodge ? Meilleure Période et Climat',
+      slug: 'quand-partir-cambodge',
+      excerpt: 'Saison sèche, mousson, meilleure période pour Angkor : guide complet du climat au Cambodge.',
+      category: 'Quand Partir',
+      image: cambodgeImg,
+      date: '2025-02-22',
+      readTime: '8 min',
+      featured: false
+    },
+    // --- Indonésie ---
+    {
+      id: 16,
+      title: 'Itinéraire Indonésie 10 Jours : Bali, Java et Îles Gili',
+      slug: 'itineraire-indonesie-10-jours',
+      excerpt: 'Temples, volcans, rizières et plages : itinéraire complet jour par jour pour Bali et Java en 10 jours.',
+      category: 'Itinéraires',
+      image: indonesieImg,
+      date: '2025-02-28',
+      readTime: '12 min',
+      featured: false
+    },
+    {
+      id: 17,
+      title: 'Budget Voyage Indonésie : Combien Coûte un Séjour ?',
+      slug: 'budget-voyage-indonesie',
+      excerpt: 'Guide budget complet pour Bali, Java et Lombok. Prix détaillés hébergement, nourriture, transport et activités.',
+      category: 'Organisation & Budget',
+      image: indonesieImg,
+      date: '2025-03-02',
+      readTime: '10 min',
+      featured: false
+    },
+    {
+      id: 18,
+      title: 'Quand Partir en Indonésie ? Climat et Meilleure Période',
+      slug: 'quand-partir-indonesie',
+      excerpt: 'Saison sèche, mousson et meilleures périodes par île : Bali, Java, Lombok, Komodo.',
+      category: 'Quand Partir',
+      image: indonesieImg,
+      date: '2025-03-05',
+      readTime: '9 min',
+      featured: false
+    },
+    // --- Laos ---
+    {
+      id: 19,
+      title: 'Itinéraire Laos 10 Jours : Luang Prabang, Vang Vieng, Vientiane',
+      slug: 'itineraire-laos-10-jours',
+      excerpt: 'L\'Asie authentique loin du tourisme de masse : itinéraire jour par jour pour 10 jours au Laos.',
+      category: 'Itinéraires',
+      image: laosImg,
+      date: '2025-02-12',
+      readTime: '11 min',
+      featured: false
+    },
+    {
+      id: 20,
+      title: 'Budget Voyage Laos : Tous les Prix Détaillés',
+      slug: 'budget-voyage-laos',
+      excerpt: 'Le Laos est-il vraiment bon marché ? Tous les prix pour hébergement, nourriture, transport et activités.',
+      category: 'Organisation & Budget',
+      image: laosImg,
+      date: '2025-02-16',
+      readTime: '8 min',
+      featured: false
+    },
+    {
+      id: 21,
+      title: 'Quand Partir au Laos ? Climat et Meilleure Période',
+      slug: 'quand-partir-laos',
+      excerpt: 'Saison sèche, mousson et meilleures périodes pour Luang Prabang, Vang Vieng et Vientiane.',
+      category: 'Quand Partir',
+      image: laosImg,
+      date: '2025-02-20',
+      readTime: '8 min',
       featured: false
     }
   ];
