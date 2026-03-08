@@ -41,6 +41,7 @@ const QuandPartirIndonesie = lazy(() => import("./pages/blog/QuandPartirIndonesi
 const ItineraireLaos10Jours = lazy(() => import("./pages/blog/ItineraireLaos10Jours"));
 const BudgetVoyageLaos = lazy(() => import("./pages/blog/BudgetVoyageLaos"));
 const QuandPartirLaos = lazy(() => import("./pages/blog/QuandPartirLaos"));
+const QuandPartirJapon = lazy(() => import("./pages/blog/QuandPartirJapon"));
 
 // Blog - Que Faire à [Ville]
 const QueFaireTokyo = lazy(() => import("./pages/blog/QueFaireTokyo"));
