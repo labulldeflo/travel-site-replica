@@ -131,7 +131,19 @@ const ArticleHanoi = () => {
       ]}
       affiliateCity="Hanoi"
       affiliateCountryCode="vn"
+      relatedArticles={[
+        { title: "🏖️ Découvrir Hoi An", url: "/destinations/vietnam/hoi-an" },
+        { title: "🌊 Baie d'Ha Long", url: "/destinations/vietnam/baie-d-halong" }
+      ]}
       destinationLink="/destinations/vietnam"
+      ctaTitle="🇻🇳 Tout sur le Vietnam"
+      internalLinks={[
+        { label: "Guide complet Vietnam 2025", url: "/guides/guide-complet-vietnam" },
+        { label: "Budget détaillé Vietnam", url: "/guides/budget-vietnam" },
+        { label: "Street food Vietnam", url: "/guides/street-food-vietnam" },
+        { label: "Transport au Vietnam", url: "/guides/transport-vietnam" },
+        { label: "Hô-Chi-Minh-Ville", url: "/destinations/vietnam/ho-chi-minh" }
+      ]}
     />
   );
 };
