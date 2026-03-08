@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import AffiliateWidget from "@/components/AffiliateWidget";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
+import FAQSection, { FAQItem } from "@/components/FAQSection";
 
 // Fonction utilitaire pour parser le markdown simple (gras, italique)
 const parseSimpleMarkdown = (text: string): string => {
