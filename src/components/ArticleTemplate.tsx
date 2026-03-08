@@ -94,6 +94,9 @@ interface ArticleTemplateProps {
   relatedArticles?: Array<{ title: string; url: string }>;
   destinationLink?: string;
   ctaTitle?: string;
+
+  // FAQ
+  faqs?: FAQItem[];
 }
 
 // =================================================================
