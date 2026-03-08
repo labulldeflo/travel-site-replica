@@ -450,6 +450,20 @@ const Vietnam = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-12">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <FAQSection faqs={[
+              { question: "Faut-il un visa pour voyager au Vietnam ?", answer: "Les Français bénéficient d'une exemption de visa pour un séjour de 45 jours maximum. Au-delà, un e-visa (25$, obtenu en 3 jours ouvrables) permet un séjour de 90 jours. Votre passeport doit être valide au moins 6 mois après la date d'entrée." },
+              { question: "Quelle est la meilleure période pour visiter le Vietnam ?", answer: "Le Vietnam s'étend sur 1 600 km du nord au sud, avec des climats différents. Le nord est agréable d'octobre à avril (frais et sec). Le centre est idéal de février à mai. Le sud est agréable de décembre à avril (saison sèche). Novembre-mars est le meilleur compromis pour tout le pays." },
+              { question: "Quel budget prévoir pour 2 semaines au Vietnam ?", answer: "Comptez 700-1 000€/personne pour 2 semaines en mode backpacker (dortoirs, street food, bus), 1 200-2 000€ en budget moyen (hôtels, restaurants, quelques excursions) et 2 500-4 000€ en confort (hôtels 4*, croisière Halong Bay, vols intérieurs). Hors vol international." },
+              { question: "Le Vietnam est-il sûr pour les voyageurs ?", answer: "Le Vietnam est l'un des pays les plus sûrs d'Asie du Sud-Est. Les crimes violents sont très rares. Attention aux pickpockets dans les zones touristiques et aux arnaques classiques (taxi truqué, faux guides). Gardez vos affaires proches de vous dans les marchés bondés." },
+              { question: "Comment se déplacer au Vietnam ?", answer: "Le train Reunification Express relie Hanoï à Saigon avec des arrêts à Hué et Đà Nẵng. Les bus de nuit sont économiques. Les vols intérieurs (VietJet, Bamboo Airways) sont rapides et abordables. En ville, utilisez Grab (l'Uber local). Le scooter est populaire mais la conduite est chaotique." },
+              { question: "Quels plats goûter absolument au Vietnam ?", answer: "Le phở (soupe de nouilles), le bánh mì (sandwich baguette), le bún chả (porc grillé de Hanoï), les rouleaux de printemps frais (gỏi cuốn) et le cà phê sữa đá (café glacé au lait concentré). Chaque région a ses spécialités — le centre (Hué, Hoi An) est réputé pour sa gastronomie raffinée." }
+            ]} />
+          </div>
+        </section>
+
         {/* Liens internes */}
         <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-4 max-w-4xl text-center">
