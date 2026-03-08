@@ -13,6 +13,11 @@ import roadTripEuropeImg from '@/assets/blog/road-trip-europe.jpg';
 import asieSudEstImg from '@/assets/blog/asie-sud-est-budget.jpg';
 import destinations2025Img from '@/assets/blog/destinations-2025.jpg';
 import checklistVoyageImg from '@/assets/blog/checklist-voyage.jpg';
+import vietnamImg from '@/assets/destinations/vietnam.jpg';
+import thailandeImg from '@/assets/destinations/thailande.jpg';
+import cambodgeImg from '@/assets/destinations/cambodge.jpg';
+import indonesieImg from '@/assets/destinations/indonesie.jpg';
+import laosImg from '@/assets/destinations/laos.jpg';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Tous');
@@ -24,7 +29,9 @@ const Blog = () => {
     'Organisation & Budget',
     'Voyager seule à 50 ans',
     'Destinations abordables',
-    'Road Trips & Aventures'
+    'Road Trips & Aventures',
+    'Itinéraires',
+    'Quand Partir'
   ];
 
   const articles = [
