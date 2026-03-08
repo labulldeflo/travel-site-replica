@@ -388,6 +388,24 @@ const AppRoutes = () => {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/organiser-tour-monde-budget-limite" element={<OrganiserTourMondeBudget />} />
       <Route path="/blog/destinations-voyager-seule-50-ans" element={<DestinationsVoyagerSeule50Ans />} />
+
+      {/* Blog - Itinéraires, Budget, Quand Partir (Asie du Sud-Est) */}
+      <Route path="/blog/itineraire-vietnam-10-jours" element={<ItineraireVietnam10Jours />} />
+      <Route path="/blog/budget-voyage-vietnam" element={<BudgetVoyageVietnam />} />
+      <Route path="/blog/quand-partir-vietnam" element={<QuandPartirVietnam />} />
+      <Route path="/blog/itineraire-thailande-10-jours" element={<ItineraireThailande10Jours />} />
+      <Route path="/blog/budget-voyage-thailande" element={<BudgetVoyageThailande />} />
+      <Route path="/blog/quand-partir-thailande" element={<QuandPartirThailande />} />
+      <Route path="/blog/itineraire-cambodge-10-jours" element={<ItineraireCambodge10Jours />} />
+      <Route path="/blog/budget-voyage-cambodge" element={<BudgetVoyageCambodge />} />
+      <Route path="/blog/quand-partir-cambodge" element={<QuandPartirCambodge />} />
+      <Route path="/blog/itineraire-indonesie-10-jours" element={<ItineraireIndonesie10Jours />} />
+      <Route path="/blog/budget-voyage-indonesie" element={<BudgetVoyageIndonesie />} />
+      <Route path="/blog/quand-partir-indonesie" element={<QuandPartirIndonesie />} />
+      <Route path="/blog/itineraire-laos-10-jours" element={<ItineraireLaos10Jours />} />
+      <Route path="/blog/budget-voyage-laos" element={<BudgetVoyageLaos />} />
+      <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
+
       <Route path="/premium" element={<Premium />} />
 
       {/* BONS PLANS */}

@@ -394,6 +394,33 @@ const Thailande = () => {
             </div>
           </section>
 
+          {/* Articles Blog Thaïlande */}
+          <section className="py-12 bg-ocean/5">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <h2 className="text-2xl font-elegant font-bold mb-6 text-center">📝 Articles Blog sur la Thaïlande</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                <Button variant="outline" className="h-auto py-4 flex-col gap-1" asChild>
+                  <Link to="/blog/itineraire-thailande-10-jours">
+                    <span className="font-bold">Itinéraire 10 jours</span>
+                    <span className="text-xs text-muted-foreground">Bangkok, Chiang Mai et Îles</span>
+                  </Link>
+                </Button>
+                <Button variant="outline" className="h-auto py-4 flex-col gap-1" asChild>
+                  <Link to="/blog/budget-voyage-thailande">
+                    <span className="font-bold">Budget voyage</span>
+                    <span className="text-xs text-muted-foreground">Tous les prix détaillés</span>
+                  </Link>
+                </Button>
+                <Button variant="outline" className="h-auto py-4 flex-col gap-1" asChild>
+                  <Link to="/blog/quand-partir-thailande">
+                    <span className="font-bold">Quand partir</span>
+                    <span className="text-xs text-muted-foreground">Climat et meilleure période</span>
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </section>
+
           {/* Liens internes */}
           <section className="py-12 bg-muted/30">
             <div className="container mx-auto px-4 max-w-4xl text-center">
