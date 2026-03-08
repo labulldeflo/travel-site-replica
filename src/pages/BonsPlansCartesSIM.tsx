@@ -303,9 +303,11 @@ const BonsPlansCartesSIM = () => {
                   { label: "Guide Budget Voyage", url: "/guides/budget" },
                   { label: "Bons Plans Vols", url: "/bons-plans/vols" },
                   { label: "Bons Plans Hébergement", url: "/bons-plans/hebergement" },
+                  { label: "Meilleurs sites de réservation voyage", url: "/guides/meilleurs-sites-reserver-voyage" },
                   { label: "Guide Complet Vietnam", url: "/guides/guide-complet-vietnam" },
                   { label: "Guide Complet Thaïlande", url: "/guides/guide-complet-thailande" },
                   { label: "Destinations Asie du Sud-Est", url: "/destinations/asie" },
+                  { label: "Destinations Europe", url: "/destinations/europe" },
                   { label: "Guide Sécurité Voyage", url: "/guides/securite" },
                   { label: "Tous nos guides de voyage", url: "/guides" }
                 ].map((link, idx) => (

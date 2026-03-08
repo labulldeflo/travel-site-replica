@@ -245,9 +245,11 @@ const BonsPlansVols = () => {
                   { label: "Bons Plans Hébergement", url: "/bons-plans/hebergement" },
                   { label: "Bons Plans Cartes SIM", url: "/bons-plans/cartes-sim" },
                   { label: "Guide Sécurité et Assurance", url: "/guides/securite" },
+                  { label: "Meilleurs sites de réservation voyage", url: "/guides/meilleurs-sites-reserver-voyage" },
                   { label: "Destinations Asie du Sud-Est", url: "/destinations/asie" },
                   { label: "Destinations Europe", url: "/destinations/europe" },
-                  { label: "Destinations Afrique", url: "/destinations/afrique" },
+                  { label: "Vietnam : guide complet", url: "/guides/guide-complet-vietnam" },
+                  { label: "Thaïlande : guide complet", url: "/guides/guide-complet-thailande" },
                   { label: "Tous nos guides de voyage", url: "/guides" }
                 ].map((link, idx) => (
                   <Link key={idx} to={link.url} className="flex items-center gap-2 p-3 rounded-lg border border-border hover:border-ocean/40 hover:bg-background transition-all text-foreground hover:text-ocean">

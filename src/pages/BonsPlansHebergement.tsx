@@ -244,9 +244,11 @@ const BonsPlansHebergement = () => {
                   { label: "Guide Budget Voyage", url: "/guides/budget" },
                   { label: "Bons Plans Vols", url: "/bons-plans/vols" },
                   { label: "Bons Plans Cartes SIM", url: "/bons-plans/cartes-sim" },
+                  { label: "Meilleurs sites de réservation voyage", url: "/guides/meilleurs-sites-reserver-voyage" },
                   { label: "Budget Vietnam détaillé", url: "/guides/budget-vietnam" },
                   { label: "Budget Thaïlande détaillé", url: "/guides/budget-thailande" },
-                  { label: "Destinations Asie du Sud-Est", url: "/destinations/asie" },
+                  { label: "Budget Italie détaillé", url: "/guides/budget-italie" },
+                  { label: "Budget Portugal détaillé", url: "/guides/budget-portugal" },
                   { label: "Destinations Europe", url: "/destinations/europe" },
                   { label: "Tous nos guides de voyage", url: "/guides" }
                 ].map((link, idx) => (
