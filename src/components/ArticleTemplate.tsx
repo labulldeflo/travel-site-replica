@@ -61,6 +61,9 @@ interface ArticleTemplateProps {
   date?: string;
   readingTime?: string;
 
+  // SEO
+  metaDescription?: string;
+
   // Content Sections
   introduction?: string;
   introText?: string;
