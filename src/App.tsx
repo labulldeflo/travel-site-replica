@@ -480,7 +480,7 @@ const AppRoutes = () => {
       
       {/* ARTICLES - Vietnam */}
       <Route path="/destinations/vietnam/hanoi" element={<Articles.ArticleHanoi />} />
-      <Route path="/destinations/vietnam/ha-long" element={<Articles.ArticleHaLong />} />
+      <Route path="/destinations/vietnam/baie-d-halong" element={<Articles.ArticleHaLong />} />
       <Route path="/destinations/vietnam/hoi-an" element={<Articles.ArticleHoiAn />} />
       <Route path="/destinations/vietnam/ho-chi-minh" element={<Articles.ArticleHoChiMinh />} />
       
