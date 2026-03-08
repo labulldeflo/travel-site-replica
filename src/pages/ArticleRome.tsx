@@ -77,7 +77,19 @@ const ArticleRome = () => {
       ]}
       affiliateCity="Rome"
       affiliateCountryCode="it"
+      relatedArticles={[
+        { title: "🎭 Découvrir Venise", url: "/destinations/italie/venise" },
+        { title: "🌻 Explorer la Toscane", url: "/destinations/italie/toscane" }
+      ]}
       destinationLink="/destinations/italie"
+      ctaTitle="🇮🇹 Tout sur l'Italie"
+      internalLinks={[
+        { label: "Guide complet Italie 2025", url: "/guides/guide-complet-italie" },
+        { label: "Budget détaillé Italie", url: "/guides/budget-italie" },
+        { label: "Street food Italie", url: "/guides/street-food-italie" },
+        { label: "Transport en Italie", url: "/guides/transport-italie" },
+        { label: "Bons plans hébergement", url: "/bons-plans/hebergement" }
+      ]}
     />
   );
 };

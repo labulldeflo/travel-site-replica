@@ -49,7 +49,18 @@ const ArticleHoiAn = () => {
       ]}
       affiliateCity="Hoi An"
       affiliateCountryCode="vn"
+      relatedArticles={[
+        { title: "🏙️ Découvrir Hanoï", url: "/destinations/vietnam/hanoi" },
+        { title: "🌊 Baie d'Ha Long", url: "/destinations/vietnam/baie-d-halong" }
+      ]}
       destinationLink="/destinations/vietnam"
+      ctaTitle="🇻🇳 Tout sur le Vietnam"
+      internalLinks={[
+        { label: "Guide complet Vietnam 2025", url: "/guides/guide-complet-vietnam" },
+        { label: "Street food Vietnam", url: "/guides/street-food-vietnam" },
+        { label: "Budget Vietnam", url: "/guides/budget-vietnam" },
+        { label: "Hô-Chi-Minh-Ville", url: "/destinations/vietnam/ho-chi-minh" }
+      ]}
     />
   );
 };

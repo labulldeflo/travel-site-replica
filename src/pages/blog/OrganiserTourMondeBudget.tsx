@@ -1,9 +1,12 @@
-import { Calendar, User, Clock, MapPin } from 'lucide-react';
+import { Calendar, User, Clock, MapPin, Compass } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import AffiliateWidget from '@/components/AffiliateWidget';
+import FAQSection from '@/components/FAQSection';
 import tourMondeBudgetImg from '@/assets/blog/tour-monde-budget.jpg';
 
 const OrganiserTourMondeBudget = () => {
@@ -163,11 +166,42 @@ const OrganiserTourMondeBudget = () => {
                       variant="inline"
                     />
                   </div>
+              {/* Internal Links */}
+              <Card className="p-6 bg-muted/30 mt-10">
+                <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                  <Compass className="h-5 w-5 text-ocean" />
+                  À lire aussi sur Cap sur le Monde
+                </h3>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {[
+                    { label: "Guide Budget Voyage", url: "/guides/budget" },
+                    { label: "Guide Planification Voyage", url: "/guides/planification" },
+                    { label: "Guide Sécurité Voyage", url: "/guides/securite" },
+                    { label: "Meilleurs sites de réservation", url: "/guides/meilleurs-sites-reserver-voyage" },
+                    { label: "Bons plans vols", url: "/bons-plans/vols" },
+                    { label: "Bons plans hébergement", url: "/bons-plans/hebergement" },
+                    { label: "Vietnam : destination parfaite", url: "/destinations/vietnam" },
+                    { label: "Thaïlande : guide complet", url: "/guides/guide-complet-thailande" },
+                  ].map((link, idx) => (
+                    <Link key={idx} to={link.url} className="flex items-center gap-2 p-2 rounded-md hover:bg-background transition-all text-muted-foreground hover:text-ocean text-sm">
+                      <span className="text-ocean">→</span>
+                      <span>{link.label}</span>
+                    </Link>
+                  ))}
                 </div>
-              </article>
+              </Card>
+
+              <FAQSection faqs={[
+                { question: "Quel budget minimum pour un tour du monde ?", answer: "Comptez 15 000-25 000€ pour un an en mode backpacker. L'Asie du Sud-Est et l'Amérique latine sont les régions les plus abordables (20-40€/jour). L'Australie et l'Europe occidentale sont les plus chères." },
+                { question: "Combien de temps faut-il pour préparer un tour du monde ?", answer: "6-12 mois de préparation sont recommandés. Cela inclut l'économie du budget, les vaccins, les visas, l'assurance et la planification d'itinéraire." },
+                { question: "Faut-il une assurance pour un tour du monde ?", answer: "Absolument indispensable. Chapka Cap Aventure et ACS Globe Partner sont les assurances les plus adaptées aux voyages longs. Comptez 30-50€/mois." },
+                { question: "Peut-on travailler pendant un tour du monde ?", answer: "Oui avec un Working Holiday Visa (Australie, Nouvelle-Zélande, Canada, Japon). Le travail en ligne (freelance, digital nomad) est aussi possible dans de nombreux pays." }
+              ]} className="mt-8" />
             </div>
-          </section>
-        </main>
+          </article>
+        </div>
+      </section>
+    </main>
 
         <Footer />
       </div>

@@ -81,7 +81,19 @@ const ArticleParis = () => {
       ]}
       affiliateCity="Paris"
       affiliateCountryCode="fr"
+      relatedArticles={[
+        { title: "🏰 Découvrir Lyon", url: "/destinations/france/lyon" },
+        { title: "💜 Explorer la Provence", url: "/destinations/france/provence" }
+      ]}
       destinationLink="/destinations/france"
+      ctaTitle="🇫🇷 Tout sur la France"
+      internalLinks={[
+        { label: "Côte d'Azur", url: "/destinations/france/cote-d-azur" },
+        { label: "Alsace", url: "/destinations/france/alsace" },
+        { label: "Guide photo voyage", url: "/guides/photo" },
+        { label: "Guide planification voyage", url: "/guides/planification" },
+        { label: "Bons plans hébergement", url: "/bons-plans/hebergement" }
+      ]}
     />
   );
 };

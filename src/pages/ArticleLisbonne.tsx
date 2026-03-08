@@ -76,7 +76,19 @@ const ArticleLisbonne = () => {
       ]}
       affiliateCity="Lisbon"
       affiliateCountryCode="pt"
+      relatedArticles={[
+        { title: "🍷 Découvrir Porto", url: "/destinations/portugal/porto" },
+        { title: "🏖️ Explorer l'Algarve", url: "/destinations/portugal/algarve" }
+      ]}
       destinationLink="/destinations/portugal"
+      ctaTitle="🇵🇹 Tout sur le Portugal"
+      internalLinks={[
+        { label: "Guide complet Portugal 2025", url: "/guides/guide-complet-portugal" },
+        { label: "Budget détaillé Portugal", url: "/guides/budget-portugal" },
+        { label: "Street food Portugal", url: "/guides/street-food-portugal" },
+        { label: "Transport au Portugal", url: "/guides/transport-portugal" },
+        { label: "Bons plans vols", url: "/bons-plans/vols" }
+      ]}
     />
   );
 };

@@ -1,8 +1,11 @@
-import { Calendar, User, Clock, MapPin, Shield } from 'lucide-react';
+import { Calendar, User, Clock, MapPin, Shield, Compass } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import FAQSection from '@/components/FAQSection';
 import voyagerSeuleImg from '@/assets/blog/voyager-seule-50-ans.jpg';
 
 const DestinationsVoyagerSeule50Ans = () => {
@@ -175,11 +178,42 @@ const DestinationsVoyagerSeule50Ans = () => {
                       <li>• Faites confiance à votre instinct</li>
                     </ul>
                   </div>
+              {/* Internal Links */}
+              <Card className="p-6 bg-muted/30 mt-10">
+                <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                  <Compass className="h-5 w-5 text-ocean" />
+                  À lire aussi sur Cap sur le Monde
+                </h3>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {[
+                    { label: "Guide Sécurité Voyage", url: "/guides/securite" },
+                    { label: "Guide Planification Voyage", url: "/guides/planification" },
+                    { label: "Guide Budget Voyage", url: "/guides/budget" },
+                    { label: "Portugal : destination idéale", url: "/destinations/portugal" },
+                    { label: "Japon : guide complet", url: "/destinations/japon" },
+                    { label: "Islande", url: "/destinations/islande" },
+                    { label: "Bons plans hébergement", url: "/bons-plans/hebergement" },
+                    { label: "Bons plans cartes SIM", url: "/bons-plans/cartes-sim" },
+                  ].map((link, idx) => (
+                    <Link key={idx} to={link.url} className="flex items-center gap-2 p-2 rounded-md hover:bg-background transition-all text-muted-foreground hover:text-ocean text-sm">
+                      <span className="text-ocean">→</span>
+                      <span>{link.label}</span>
+                    </Link>
+                  ))}
                 </div>
-              </article>
+              </Card>
+
+              <FAQSection faqs={[
+                { question: "Quelles sont les destinations les plus sûres pour voyager seule ?", answer: "Le Japon, le Portugal, l'Islande, la Nouvelle-Zélande et la Suisse sont parmi les pays les plus sûrs au monde. En Asie, la Thaïlande et le Vietnam sont très accueillants pour les voyageuses solo." },
+                { question: "Quel budget prévoir pour voyager seule ?", answer: "Le budget est souvent 10-20% plus élevé en solo (pas de partage d'hébergement/taxi). Comptez 50-80€/jour en Europe, 25-50€/jour en Asie du Sud-Est. Les auberges de jeunesse permettent de réduire les coûts et de faire des rencontres." },
+                { question: "Comment rencontrer d'autres voyageurs quand on voyage seule ?", answer: "Les auberges de jeunesse, les free walking tours, les cours de cuisine locaux, les groupes Facebook de voyageuses et les apps comme Tourlina ou Couchsurfing sont d'excellents moyens de rencontrer des gens." },
+                { question: "Faut-il une assurance spéciale pour voyager seule ?", answer: "Une assurance voyage standard suffit (Chapka, Heymondo). Vérifiez qu'elle couvre le rapatriement, les soins médicaux et le vol de bagages. Pour les sports d'aventure, vérifiez les exclusions." }
+              ]} className="mt-8" />
             </div>
-          </section>
-        </main>
+          </article>
+        </div>
+      </section>
+    </main>
 
         <Footer />
       </div>

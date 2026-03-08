@@ -135,7 +135,18 @@ const ArticleHaLong = () => {
       ]}
       affiliateCity="Ha Long"
       affiliateCountryCode="vn"
+      relatedArticles={[
+        { title: "🏙️ Découvrir Hanoï", url: "/destinations/vietnam/hanoi" },
+        { title: "🏮 Explorer Hoi An", url: "/destinations/vietnam/hoi-an" }
+      ]}
       destinationLink="/destinations/vietnam"
+      ctaTitle="🇻🇳 Tout sur le Vietnam"
+      internalLinks={[
+        { label: "Guide complet Vietnam 2025", url: "/guides/guide-complet-vietnam" },
+        { label: "Budget Vietnam", url: "/guides/budget-vietnam" },
+        { label: "Transport au Vietnam", url: "/guides/transport-vietnam" },
+        { label: "Hô-Chi-Minh-Ville", url: "/destinations/vietnam/ho-chi-minh" }
+      ]}
     />
   );
 };
