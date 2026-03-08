@@ -95,6 +95,10 @@ const GuidePlanification = lazy(() => import("./pages/GuidePlanification"));
 const GuideSecurite = lazy(() => import("./pages/GuideSecurite"));
 const GuideVol = lazy(() => import("./pages/GuideVol"));
 const GuideMeilleursSites = lazy(() => import("./pages/guides/GuideMeilleursSites"));
+const GuidePreparerVoyage = lazy(() => import("./pages/guides/GuidePreparerVoyage"));
+const GuideItineraireVoyage = lazy(() => import("./pages/guides/GuideItineraireVoyage"));
+const GuideBudgetVoyage = lazy(() => import("./pages/guides/GuideBudgetVoyage"));
+const GuideQueMettreValise = lazy(() => import("./pages/guides/GuideQueMettreValise"));
 
 // GUIDES THÉMATIQUES PAR PAYS
 const CountryGuides = {
@@ -431,6 +435,10 @@ const AppRoutes = () => {
       <Route path="/guides/securite" element={<GuideSecurite />} />
       <Route path="/guides/vol" element={<GuideVol />} />
       <Route path="/guides/meilleurs-sites-reserver-voyage" element={<GuideMeilleursSites />} />
+      <Route path="/guides/preparer-voyage" element={<GuidePreparerVoyage />} />
+      <Route path="/guides/itineraire-voyage" element={<GuideItineraireVoyage />} />
+      <Route path="/guides/budget-voyage" element={<GuideBudgetVoyage />} />
+      <Route path="/guides/que-mettre-valise" element={<GuideQueMettreValise />} />
 
       {/* ========== GUIDES THÉMATIQUES PAR PAYS ========== */}
       

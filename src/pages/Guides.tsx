@@ -168,6 +168,54 @@ const Guides = () => {
       image: guidePlanification,
       tags: ['Réservation', 'Outils', 'Comparateurs'],
       link: '/guides/meilleurs-sites-reserver-voyage'
+    },
+    {
+      id: 12,
+      title: 'Préparer son voyage : le guide complet étape par étape',
+      category: 'preparation',
+      description: 'Passeport, visa, vaccins, assurance, budget, bagages : toutes les étapes pour partir sereinement.',
+      readTime: '20 min',
+      difficulty: 'Débutant',
+      featured: true,
+      image: guidePlanification,
+      tags: ['Préparation', 'Organisation', 'Débutant'],
+      link: '/guides/preparer-voyage'
+    },
+    {
+      id: 13,
+      title: 'Construire son itinéraire de voyage : guide pratique',
+      category: 'preparation',
+      description: 'Choix des étapes, durée idéale, transports, outils de planification pour un parcours optimisé.',
+      readTime: '18 min',
+      difficulty: 'Intermédiaire',
+      featured: false,
+      image: guidePlanification,
+      tags: ['Itinéraire', 'Planification', 'Transport'],
+      link: '/guides/itineraire-voyage'
+    },
+    {
+      id: 14,
+      title: 'Budget voyage : comment maîtriser ses dépenses',
+      category: 'budget',
+      description: 'Estimation des coûts par destination, astuces pour économiser et outils de suivi du budget.',
+      readTime: '20 min',
+      difficulty: 'Débutant',
+      featured: true,
+      image: guideBudgetGeneral,
+      tags: ['Budget', 'Économies', 'Carte bancaire'],
+      link: '/guides/budget-voyage'
+    },
+    {
+      id: 15,
+      title: 'Que mettre dans sa valise : checklist complète',
+      category: 'preparation',
+      description: 'Vêtements, électronique, santé, documents : tous les indispensables pour voyager léger.',
+      readTime: '15 min',
+      difficulty: 'Débutant',
+      featured: false,
+      image: guideVietnamPreparation,
+      tags: ['Valise', 'Bagages', 'Checklist'],
+      link: '/guides/que-mettre-valise'
     }
   ];
 
