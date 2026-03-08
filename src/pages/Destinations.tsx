@@ -142,6 +142,7 @@ const Destinations = () => {
   
   const regions = [
     { key: 'southeastAsia', value: t('regions.southeastAsia') },
+    { key: 'eastAsia', value: 'Asie de l\'Est' },
     { key: 'europe', value: 'Europe' },
     { key: 'america', value: t('regions.america') },
     { key: 'africa', value: t('regions.africa') }
