@@ -83,7 +83,8 @@ const ArticleParis = () => {
       affiliateCountryCode="fr"
       relatedArticles={[
         { title: "🏰 Découvrir Lyon", url: "/destinations/france/lyon" },
-        { title: "💜 Explorer la Provence", url: "/destinations/france/provence" }
+        { title: "💜 Explorer la Provence", url: "/destinations/france/provence" },
+        { title: "📋 Que faire à Paris : activités et prix", url: "/blog/que-faire-paris" }
       ]}
       destinationLink="/destinations/france"
       ctaTitle="🇫🇷 Tout sur la France"

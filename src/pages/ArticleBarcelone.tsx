@@ -78,7 +78,8 @@ const ArticleBarcelone = () => {
       affiliateCountryCode="es"
       relatedArticles={[
         { title: "🏙️ Découvrir Madrid", url: "/destinations/espagne/madrid" },
-        { title: "☀️ Explorer l'Andalousie", url: "/destinations/espagne/andalousie" }
+        { title: "☀️ Explorer l'Andalousie", url: "/destinations/espagne/andalousie" },
+        { title: "📋 Que faire à Barcelone : activités et prix", url: "/blog/que-faire-barcelone" }
       ]}
       destinationLink="/destinations/espagne"
       ctaTitle="🇪🇸 Tout sur l'Espagne"

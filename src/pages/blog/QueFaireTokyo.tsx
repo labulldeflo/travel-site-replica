@@ -20,8 +20,8 @@ const QueFaireTokyo = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Que Faire à Tokyo : 25 Activités et Visites Incontournables"
-        description="Découvrez les meilleures activités à Tokyo : temples, quartiers animés, gastronomie, culture pop et jardins zen. Guide complet avec itinéraire et conseils pratiques."
+        title="Que Faire à Tokyo : 25 Activités avec Prix, Horaires et Astuces"
+        description="Liste pratique des 25 meilleures activités à Tokyo avec prix exacts, horaires d'ouverture, astuces de réservation et conseils d'initiés. Guide actionnable 2025."
         image={tokyoImage}
         ogType="article"
         hideH1
@@ -39,11 +39,11 @@ const QueFaireTokyo = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
           <div className="relative container mx-auto px-4 h-full flex items-end pb-16 z-10">
             <div className="text-white max-w-4xl">
-              <span className="inline-block bg-ocean/80 text-white text-sm font-medium px-3 py-1 rounded mb-4">Guide Ville</span>
+              <span className="inline-block bg-ocean/80 text-white text-sm font-medium px-3 py-1 rounded mb-4">Guide Pratique</span>
               <h1 className="text-4xl md:text-6xl font-elegant font-extrabold mb-4 drop-shadow-lg">
-                Que Faire à Tokyo : 25 Activités et Visites Incontournables
+                Que Faire à Tokyo : 25 Activités avec Prix, Horaires et Astuces
               </h1>
-              <p className="text-xl text-white/90">Le guide ultime pour découvrir la capitale japonaise</p>
+              <p className="text-xl text-white/90">Prix exacts, créneaux optimaux et conseils d'initiés pour chaque activité</p>
               <div className="flex items-center gap-6 mt-6 pt-4 border-t border-white/30 text-sm text-white/90">
                 <span className="flex items-center gap-2"><Calendar className="h-4 w-4" /> 1 mars 2025</span>
                 <span className="flex items-center gap-2"><Clock className="h-4 w-4" /> 14 min de lecture</span>
@@ -53,8 +53,12 @@ const QueFaireTokyo = () => {
         </header>
 
         <article className="container mx-auto px-4 py-12 max-w-4xl prose prose-lg">
+          <div className="not-prose mb-8 p-4 bg-muted/40 rounded-lg border border-border text-sm text-muted-foreground">
+            📖 Pour une présentation complète des quartiers et de l'ambiance de Tokyo, consultez notre <Link to="/destinations/japon/tokyo" className="text-ocean hover:underline font-medium">guide de Tokyo</Link>. Cet article se concentre sur les <strong>activités concrètes</strong> avec prix, horaires et astuces de réservation.
+          </div>
+
           <p className="text-lg leading-relaxed text-muted-foreground first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left">
-            Tokyo est une ville qui défie l'imagination. Mégalopole de <strong>14 millions d'habitants</strong>, elle conjugue tradition millénaire et innovation futuriste avec une aisance déconcertante. Des temples séculaires de <Link to="/destinations/japon/tokyo" className="text-ocean hover:underline font-medium">Asakusa</Link> aux néons éblouissants de Shibuya, chaque quartier est un monde en soi. Voici notre sélection des <strong>25 meilleures activités</strong> pour une expérience inoubliable dans la capitale du <Link to="/destinations/japon" className="text-ocean hover:underline font-medium">Japon</Link>.
+            Vous avez décidé de visiter Tokyo, mais par où commencer face à l'immensité de cette métropole ? Ce guide liste <strong>25 activités concrètes</strong> avec pour chacune le <strong>prix exact, le créneau optimal et les astuces</strong> que les guides classiques ne mentionnent pas. Que vous ayez 3 jours ou une semaine, utilisez cette liste comme un menu à la carte pour composer votre séjour idéal au <Link to="/destinations/japon" className="text-ocean hover:underline font-medium">Japon</Link>.
           </p>
 
           <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">

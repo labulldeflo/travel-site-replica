@@ -19,8 +19,8 @@ const QueFaireParis = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Que Faire à Paris : 25 Activités et Visites Incontournables"
-        description="Guide complet de Paris : Tour Eiffel, Louvre, Montmartre, gastronomie française. Les 25 meilleures activités avec itinéraire et conseils pratiques."
+        title="Que Faire à Paris : 25 Activités avec Prix, Horaires et Bons Plans"
+        description="Liste pratique des 25 meilleures activités à Paris avec tarifs exacts, horaires d'ouverture, jours de gratuité et astuces pour éviter les files d'attente."
         image={parisImage}
         ogType="article"
         hideH1
@@ -38,11 +38,11 @@ const QueFaireParis = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
           <div className="relative container mx-auto px-4 h-full flex items-end pb-16 z-10">
             <div className="text-white max-w-4xl">
-              <span className="inline-block bg-ocean/80 text-white text-sm font-medium px-3 py-1 rounded mb-4">Guide Ville</span>
+              <span className="inline-block bg-ocean/80 text-white text-sm font-medium px-3 py-1 rounded mb-4">Guide Pratique</span>
               <h1 className="text-4xl md:text-6xl font-elegant font-extrabold mb-4 drop-shadow-lg">
-                Que Faire à Paris : 25 Activités et Visites Incontournables
+                Que Faire à Paris : 25 Activités avec Prix, Horaires et Bons Plans
               </h1>
-              <p className="text-xl text-white/90">Le guide ultime de la Ville Lumière</p>
+              <p className="text-xl text-white/90">Tarifs exacts, créneaux sans attente et jours de gratuité</p>
               <div className="flex items-center gap-6 mt-6 pt-4 border-t border-white/30 text-sm text-white/90">
                 <span className="flex items-center gap-2"><Calendar className="h-4 w-4" /> 4 mars 2025</span>
                 <span className="flex items-center gap-2"><Clock className="h-4 w-4" /> 14 min de lecture</span>
@@ -52,8 +52,12 @@ const QueFaireParis = () => {
         </header>
 
         <article className="container mx-auto px-4 py-12 max-w-4xl prose prose-lg">
+          <div className="not-prose mb-8 p-4 bg-muted/40 rounded-lg border border-border text-sm text-muted-foreground">
+            📖 Pour une présentation complète des quartiers et de l'art de vivre parisien, consultez notre <Link to="/destinations/france/paris" className="text-ocean hover:underline font-medium">guide de Paris</Link>. Cet article se concentre sur les <strong>activités concrètes</strong> avec prix, horaires et astuces pour éviter les files d'attente.
+          </div>
+
           <p className="text-lg leading-relaxed text-muted-foreground first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left">
-            <Link to="/destinations/france/paris" className="text-ocean hover:underline font-medium">Paris</Link> est bien plus qu'une carte postale. Derrière les clichés de la Tour Eiffel et des croissants au beurre se cache une ville <strong>vivante, créative et infiniment diverse</strong>. Chaque arrondissement a sa personnalité, chaque rue son histoire. Des trésors du <strong>Louvre</strong> aux terrasses animées de <strong>Montmartre</strong>, voici notre sélection des <strong>25 expériences incontournables</strong> dans la Ville Lumière.
+            Face aux centaines de choses à faire à Paris, comment prioriser ? Ce guide liste <strong>25 activités concrètes</strong> avec pour chacune le <strong>tarif exact, les horaires, les jours de gratuité et les astuces</strong> pour éviter les files d'attente. Utilisez cette check-list pour planifier votre séjour en <Link to="/destinations/france" className="text-ocean hover:underline font-medium">France</Link> jour par jour.
           </p>
 
           <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">

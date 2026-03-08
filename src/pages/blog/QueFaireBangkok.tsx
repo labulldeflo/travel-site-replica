@@ -19,8 +19,8 @@ const QueFaireBangkok = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Que Faire à Bangkok : 20 Activités et Visites Incontournables"
-        description="Découvrez les meilleures activités à Bangkok : temples dorés, marchés flottants, street food, rooftop bars. Guide complet avec itinéraire et budget."
+        title="Que Faire à Bangkok : 20 Activités avec Prix et Horaires Pratiques"
+        description="Liste actionnable des 20 meilleures activités à Bangkok avec tarifs en bahts/euros, horaires d'ouverture, astuces de réservation et alternatives hors des sentiers battus."
         image={bangkokImage}
         ogType="article"
         hideH1
@@ -38,11 +38,11 @@ const QueFaireBangkok = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
           <div className="relative container mx-auto px-4 h-full flex items-end pb-16 z-10">
             <div className="text-white max-w-4xl">
-              <span className="inline-block bg-ocean/80 text-white text-sm font-medium px-3 py-1 rounded mb-4">Guide Ville</span>
+              <span className="inline-block bg-ocean/80 text-white text-sm font-medium px-3 py-1 rounded mb-4">Guide Pratique</span>
               <h1 className="text-4xl md:text-6xl font-elegant font-extrabold mb-4 drop-shadow-lg">
-                Que Faire à Bangkok : 20 Activités et Visites Incontournables
+                Que Faire à Bangkok : 20 Activités avec Prix et Horaires Pratiques
               </h1>
-              <p className="text-xl text-white/90">Le guide ultime de la capitale thaïlandaise</p>
+              <p className="text-xl text-white/90">Tarifs exacts, créneaux optimaux et alternatives hors des sentiers battus</p>
               <div className="flex items-center gap-6 mt-6 pt-4 border-t border-white/30 text-sm text-white/90">
                 <span className="flex items-center gap-2"><Calendar className="h-4 w-4" /> 3 mars 2025</span>
                 <span className="flex items-center gap-2"><Clock className="h-4 w-4" /> 13 min de lecture</span>
@@ -52,8 +52,12 @@ const QueFaireBangkok = () => {
         </header>
 
         <article className="container mx-auto px-4 py-12 max-w-4xl prose prose-lg">
+          <div className="not-prose mb-8 p-4 bg-muted/40 rounded-lg border border-border text-sm text-muted-foreground">
+            📖 Pour une présentation complète de l'ambiance et des quartiers de Bangkok, consultez notre <Link to="/destinations/thailande/bangkok" className="text-ocean hover:underline font-medium">guide de Bangkok</Link>. Cet article se concentre sur les <strong>activités concrètes</strong> avec prix, horaires et astuces de réservation.
+          </div>
+
           <p className="text-lg leading-relaxed text-muted-foreground first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left">
-            <Link to="/destinations/thailande/bangkok" className="text-ocean hover:underline font-medium">Bangkok</Link> est une ville qui bouscule tous les sens. <strong>Capitale de la Thaïlande</strong> et mégalopole de 10 millions d'habitants, elle mêle temples dorés scintillants, gratte-ciels futuristes, marchés débordants et une scène culinaire parmi les meilleures du monde. De Khao San Road aux rooftop bars vertigineux, voici <strong>20 expériences incontournables</strong> pour apprivoiser la Cité des Anges.
+            Bangkok regorge de possibilités, mais lesquelles choisir en priorité ? Ce guide classe <strong>20 activités concrètes</strong> avec pour chacune le <strong>tarif exact (en bahts et euros), les horaires d'ouverture et les astuces</strong> pour optimiser votre temps. Utilisez cette liste comme check-list de voyage pour votre séjour en <Link to="/destinations/thailande" className="text-ocean hover:underline font-medium">Thaïlande</Link>.
           </p>
 
           <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">

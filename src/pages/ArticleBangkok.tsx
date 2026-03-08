@@ -12,12 +12,12 @@ const ArticleBangkok = () => {
       subtitle="La capitale thaïlandaise bouillonne d'énergie. Entre temples dorés, street food légendaire et tuk-tuks pétaradants, Bangkok éblouit et déroute à la fois."
       category="Asie du Sud-Est"
       keywords={["Bangkok", "Thaïlande", "Temples", "Street Food", "Grand Palais"]}
-      author="Voyage Site Team"
+      author="Cap sur le Monde"
       date="15 Janvier 2025"
       readingTime="8 min"
 
       // Introduction
-      introText="Bangkok, c'est un assaut sensoriel total. Dès la sortie de l'aéroport, l'air chaud et humide vous enveloppe, les klaxons résonnent et l'odeur de cuisine de rue flotte partout. Cette mégapole débordante de vie allie modernité frénétique et traditions ancestrales. Nous y avons passé cinq jours intenses, naviguant entre temples majestueux, marchés colorés et gratte-ciels futuristes. Bangkok se découvre en couches : la spiritualité bouddhiste, la street food incroyable, les centres commerciaux climatisés et les ruelles animées où tout se mélange."
+      introText="Bangkok est un assaut sensoriel total. L'air chaud et humide enveloppe dès la sortie de l'aéroport, les klaxons résonnent et l'odeur de cuisine de rue flotte partout. Cette mégapole débordante de vie allie modernité frénétique et traditions ancestrales. La spiritualité bouddhiste, la street food incroyable, les centres commerciaux climatisés et les ruelles animées où tout se mélange : Bangkok se découvre en couches successives."
 
       // Content Sections
       contentSections={[
@@ -164,7 +164,8 @@ const ArticleBangkok = () => {
       // Liens CTA
       relatedArticles={[
         { title: "🏔️ Découvrir Chiang Mai", url: "/destinations/thailande/chiang-mai" },
-        { title: "🏝️ Explorer les Îles du Sud", url: "/destinations/thailande/iles-sud" }
+        { title: "🏝️ Explorer les Îles du Sud", url: "/destinations/thailande/iles-sud" },
+        { title: "📋 Que faire à Bangkok : activités et prix", url: "/blog/que-faire-bangkok" }
       ]}
       destinationLink="/destinations/thailande"
       ctaTitle="🇹🇭 Tous nos guides Thaïlande"
