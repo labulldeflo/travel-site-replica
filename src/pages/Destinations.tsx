@@ -114,6 +114,30 @@ const Destinations = () => {
     region: t('regions.southeastAsia'),
     image: timorImg,
     ...getDestinationData('eastTimor')
+  }, {
+    id: 12,
+    name: 'Japon',
+    slug: 'japon',
+    region: 'Asie de l\'Est',
+    image: japonImg,
+    description: 'Entre traditions millénaires et modernité extrême, le Japon offre une expérience unique au monde.',
+    duration: '10-21 jours',
+    budget: '80-200€/jour',
+    highlights: ['Tokyo', 'Kyoto', 'Osaka', 'Mont Fuji', 'Nara'],
+    bestTime: 'Mars-Mai / Oct-Nov',
+    difficulty: 'Facile'
+  }, {
+    id: 13,
+    name: 'Corée du Sud',
+    slug: 'coree-du-sud',
+    region: 'Asie de l\'Est',
+    image: coreeImg,
+    description: 'Pays de la K-pop, des palais royaux et de la cuisine la plus addictive d\'Asie.',
+    duration: '7-14 jours',
+    budget: '40-100€/jour',
+    highlights: ['Séoul', 'Busan', 'Gyeongju', 'Jeju', 'DMZ'],
+    bestTime: 'Avril-Mai / Sept-Nov',
+    difficulty: 'Facile'
   }];
   
   const regions = [
