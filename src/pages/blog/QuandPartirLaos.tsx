@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sun, CloudRain, Calendar, Clock, Compass, Thermometer } from "lucide-react";
+import { Sun, CloudRain, Calendar, Clock, Compass, Thermometer, MapPin } from "lucide-react";
 import laosImage from "@/assets/destinations/laos.jpg";
 
 const QuandPartirLaos = () => {
@@ -111,6 +111,24 @@ const QuandPartirLaos = () => {
               ].map((link, idx) => (
                 <Link key={idx} to={link.url} onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 p-2 rounded-md hover:bg-background transition-all text-muted-foreground hover:text-ocean text-sm">
                   <span className="text-ocean">→</span><span>{link.label}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
+            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-ocean" /> 🗺️ Destinations mentionnées dans cet article
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { label: "🇱🇦 Laos", url: "/destinations/laos" },
+                { label: "Luang Prabang", url: "/destinations/laos/luang-prabang" },
+                { label: "Vang Vieng", url: "/destinations/laos/vang-vieng" },
+                { label: "Vientiane", url: "/destinations/laos/vientiane" },
+              ].map((dest, idx) => (
+                <Link key={idx} to={dest.url} onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center gap-1 px-3 py-1.5 bg-background border border-border rounded-full text-sm hover:border-ocean hover:text-ocean transition-colors">
+                  {dest.label}
                 </Link>
               ))}
             </div>

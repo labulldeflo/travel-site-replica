@@ -192,6 +192,27 @@ const ItineraireVietnam10Jours = () => {
             </div>
           </div>
 
+          {/* Destinations mentionnées */}
+          <div className="mt-10 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
+            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-ocean" /> 🗺️ Destinations mentionnées dans cet article
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                { label: "🇻🇳 Vietnam", url: "/destinations/vietnam" },
+                { label: "Hanoï", url: "/destinations/vietnam/hanoi" },
+                { label: "Baie d'Ha Long", url: "/destinations/vietnam/ha-long" },
+                { label: "Hoi An", url: "/destinations/vietnam/hoi-an" },
+                { label: "Huế", url: "/destinations/vietnam/hue" },
+                { label: "Hô Chi Minh", url: "/destinations/vietnam/ho-chi-minh" },
+              ].map((dest, idx) => (
+                <Link key={idx} to={dest.url} onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center gap-1 px-3 py-1.5 bg-background border border-border rounded-full text-sm hover:border-ocean hover:text-ocean transition-colors">
+                  {dest.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">
               <Link to="/destinations/vietnam" onClick={() => window.scrollTo(0, 0)}>Découvrir le Vietnam</Link>
