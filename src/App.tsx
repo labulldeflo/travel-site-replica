@@ -42,6 +42,13 @@ const ItineraireLaos10Jours = lazy(() => import("./pages/blog/ItineraireLaos10Jo
 const BudgetVoyageLaos = lazy(() => import("./pages/blog/BudgetVoyageLaos"));
 const QuandPartirLaos = lazy(() => import("./pages/blog/QuandPartirLaos"));
 
+// Blog - Que Faire à [Ville]
+const QueFaireTokyo = lazy(() => import("./pages/blog/QueFaireTokyo"));
+const QueFaireRome = lazy(() => import("./pages/blog/QueFaireRome"));
+const QueFaireBangkok = lazy(() => import("./pages/blog/QueFaireBangkok"));
+const QueFaireParis = lazy(() => import("./pages/blog/QueFaireParis"));
+const QueFaireBarcelone = lazy(() => import("./pages/blog/QueFaireBarcelone"));
+
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // BONS PLANS
