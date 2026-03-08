@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
-import logo from '@/assets/logo-cap-sur-le-monde.png';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +25,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Cap sur le Monde" className="h-14 w-auto" />
+            <span className="font-elegant text-xl sm:text-2xl font-bold text-ocean tracking-tight">
+              <span className="text-2xl sm:text-3xl">C</span>ap <span className="font-normal">sur le</span> Monde
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
