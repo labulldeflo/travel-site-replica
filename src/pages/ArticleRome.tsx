@@ -13,7 +13,7 @@ const ArticleRome = () => {
       date="20 mai 2025"
       readingTime="8 min"
       heroImage={romeImage}
-      introduction="Rome n'est pas une ville, c'est un musée à ciel ouvert où l'Histoire se mêle au quotidien. Du Colisée majestueux aux ruelles du Trastevere, des chefs-d'œuvre du Vatican aux places baroques ornées de fontaines sculptées, chaque coin de rue révèle un trésor. Nous avons passé cinq jours à explorer cette capitale envoûtante, entre vestiges antiques et dolce vita."
+      introduction="Rome n'est pas une ville, c'est un musée à ciel ouvert où l'Histoire se mêle au quotidien. Du Colisée majestueux aux ruelles du Trastevere, des chefs-d'œuvre du Vatican aux places baroques ornées de fontaines sculptées, chaque coin de rue révèle un trésor. Cette capitale envoûtante se découvre entre vestiges antiques et dolce vita."
       contentSections={[
         {
           icon: MapPin,

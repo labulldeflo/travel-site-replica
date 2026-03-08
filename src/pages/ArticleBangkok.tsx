@@ -164,7 +164,8 @@ const ArticleBangkok = () => {
       // Liens CTA
       relatedArticles={[
         { title: "🏔️ Découvrir Chiang Mai", url: "/destinations/thailande/chiang-mai" },
-        { title: "🏝️ Explorer les Îles du Sud", url: "/destinations/thailande/iles-sud" }
+        { title: "🏝️ Explorer les Îles du Sud", url: "/destinations/thailande/iles-sud" },
+        { title: "📋 Que faire à Bangkok : activités et prix", url: "/blog/que-faire-bangkok" }
       ]}
       destinationLink="/destinations/thailande"
       ctaTitle="🇹🇭 Tous nos guides Thaïlande"

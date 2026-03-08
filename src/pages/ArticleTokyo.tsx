@@ -112,7 +112,8 @@ const ArticleTokyo = () => {
       affiliateCountryCode="jp"
       relatedArticles={[
         { title: "🏯 Découvrir Kyoto", url: "/destinations/japon/kyoto" },
-        { title: "🍜 Explorer Osaka", url: "/destinations/japon/osaka" }
+        { title: "🍜 Explorer Osaka", url: "/destinations/japon/osaka" },
+        { title: "📋 Que faire à Tokyo : activités et prix", url: "/blog/que-faire-tokyo" }
       ]}
       destinationLink="/destinations/japon"
       ctaTitle="🇯🇵 Tous nos guides Japon"
