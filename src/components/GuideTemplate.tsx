@@ -43,6 +43,7 @@ interface GuideTemplateProps {
   affiliateCountryCode?: string;
   toolRecommendations?: ToolRecommendation[];
   internalLinks?: InternalLink[];
+  faqs?: FAQItem[];
 }
 
 const GuideTemplate = ({
