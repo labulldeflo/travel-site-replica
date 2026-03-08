@@ -506,6 +506,15 @@ const AppRoutes = () => {
       <Route path="/destinations/indonesie/bali" element={<Articles.ArticleBali />} />
       <Route path="/destinations/indonesie/java" element={<Articles.ArticleJava />} />
 
+      {/* ARTICLES - Japon */}
+      <Route path="/destinations/japon/tokyo" element={<Articles.ArticleTokyo />} />
+      <Route path="/destinations/japon/kyoto" element={<Articles.ArticleKyoto />} />
+      <Route path="/destinations/japon/osaka" element={<Articles.ArticleOsaka />} />
+
+      {/* ARTICLES - Corée du Sud */}
+      <Route path="/destinations/coree-du-sud/seoul" element={<Articles.ArticleSeoul />} />
+      <Route path="/destinations/coree-du-sud/busan" element={<Articles.ArticleBusan />} />
+
       {/* ARTICLES - Malaisie */}
       <Route path="/destinations/malaisie/kuala-lumpur" element={<Articles.ArticleKualaLumpur />} />
       <Route path="/destinations/malaisie/penang" element={<Articles.ArticlePenang />} />
