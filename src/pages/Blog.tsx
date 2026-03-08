@@ -31,7 +31,8 @@ const Blog = () => {
     'Destinations abordables',
     'Road Trips & Aventures',
     'Itinéraires',
-    'Quand Partir'
+    'Quand Partir',
+    'Que Faire'
   ];
 
   const articles = [
