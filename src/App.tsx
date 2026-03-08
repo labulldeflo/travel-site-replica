@@ -430,6 +430,7 @@ const AppRoutes = () => {
       <Route path="/guides/planification" element={<GuidePlanification />} />
       <Route path="/guides/securite" element={<GuideSecurite />} />
       <Route path="/guides/vol" element={<GuideVol />} />
+      <Route path="/guides/meilleurs-sites-reserver-voyage" element={<GuideMeilleursSites />} />
 
       {/* ========== GUIDES THÉMATIQUES PAR PAYS ========== */}
       
