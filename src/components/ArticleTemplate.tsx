@@ -97,6 +97,9 @@ interface ArticleTemplateProps {
 
   // FAQ
   faqs?: FAQItem[];
+
+  // Internal Links
+  internalLinks?: Array<{ label: string; url: string }>;
 }
 
 // =================================================================
