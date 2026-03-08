@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AffiliateWidget from "@/components/AffiliateWidget";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 
 // Fonction utilitaire pour parser le markdown simple (gras, italique)
