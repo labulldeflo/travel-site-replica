@@ -1,9 +1,12 @@
-import { Calendar, User, Clock, MapPin } from 'lucide-react';
+import { Calendar, User, Clock, MapPin, Compass } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import AffiliateWidget from '@/components/AffiliateWidget';
+import FAQSection from '@/components/FAQSection';
 import tourMondeBudgetImg from '@/assets/blog/tour-monde-budget.jpg';
 
 const OrganiserTourMondeBudget = () => {
