@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
@@ -20,25 +21,25 @@ const RessourcesGratuites = () => {
           title: 'La check-list ultime de la voyageuse organisée',
           description: 'Liste complète de tout ce qu\'il faut prévoir avant, pendant et après votre voyage.',
           format: 'PDF',
-          pages: '4 pages',
           featured: true,
-          downloadUrl: '/checklist-voyageuse-organisee.pdf'
+          downloadUrl: '/checklist-voyageuse-organisee.pdf',
+          isExternal: true,
         },
         {
           title: 'Check-list documents de voyage',
           description: 'Tous les papiers importants à ne pas oublier : passeport, visas, assurances...',
-          format: 'PDF',
-          pages: '2 pages',
+          format: 'Guide',
           featured: false,
-          downloadUrl: '/checklist-documents-voyage.pdf'
+          downloadUrl: '/ressources/checklist-documents-voyage',
+          isExternal: false,
         },
         {
           title: 'Check-list valise selon la destination',
           description: 'Adaptez votre valise selon le climat et le type de voyage.',
-          format: 'PDF',
-          pages: '3 pages',
+          format: 'Guide',
           featured: false,
-          downloadUrl: '/checklist-voyageuse-organisee.pdf'
+          downloadUrl: '/ressources/checklist-valise-destination',
+          isExternal: false,
         }
       ]
     },
@@ -50,34 +51,34 @@ const RessourcesGratuites = () => {
         {
           title: 'Guide Express Asie du Sud-Est',
           description: 'Les essentiels pour voyager en Asie : budget, transport, visa, culture.',
-          format: 'PDF',
-          pages: '8 pages',
+          format: 'Guide',
           featured: true,
-          downloadUrl: '/guide-asie-sud-est.pdf'
+          downloadUrl: '/ressources/guide-asie-sud-est',
+          isExternal: false,
         },
         {
           title: 'Guide Express Europe',
           description: 'Conseils pratiques pour explorer l\'Europe facilement et à petit budget.',
-          format: 'PDF',
-          pages: '6 pages',
+          format: 'Guide',
           featured: false,
-          downloadUrl: '/guide-europe.pdf'
+          downloadUrl: '/ressources/guide-europe',
+          isExternal: false,
         },
         {
           title: 'Guide Express Afrique',
           description: 'Préparez votre safari ou votre road trip africain en toute sérénité.',
-          format: 'PDF',
-          pages: '7 pages',
+          format: 'Guide',
           featured: false,
-          downloadUrl: '/guide-afrique.pdf'
+          downloadUrl: '/ressources/guide-afrique',
+          isExternal: false,
         },
         {
           title: 'Guide Tour du Monde',
-          description: 'Du Canada à la Patagonie : infos clés pour voyager sur le continent américain.',
-          format: 'PDF',
-          pages: '8 pages',
+          description: 'Tout ce qu\'il faut savoir pour organiser votre tour du monde : budget, itinéraire, logistique.',
+          format: 'Guide',
           featured: false,
-          downloadUrl: '/Guide-tour-du-monde.pdf'
+          downloadUrl: '/ressources/guide-tour-du-monde',
+          isExternal: false,
         }
       ]
     },
@@ -89,10 +90,10 @@ const RessourcesGratuites = () => {
         {
           title: 'Top 15 des applis voyage indispensables',
           description: 'Nos applications préférées pour organiser, traduire, naviguer et économiser.',
-          format: 'PDF',
-          pages: '5 pages',
+          format: 'Guide',
           featured: false,
-          downloadUrl: '/top-applis-voyage.pdf'
+          downloadUrl: '/ressources/top-applis-voyage',
+          isExternal: false,
         }
       ]
     }
@@ -121,7 +122,7 @@ const RessourcesGratuites = () => {
                 Téléchargez gratuitement nos outils, check-lists et mini-guides pour organiser vos voyages sereinement.
               </p>
               <Badge className="bg-white/20 text-white hover:bg-white/30 text-lg px-6 py-2">
-                ✨ 100% Gratuit - Téléchargement direct
+                ✨ 100% Gratuit - Accès direct
               </Badge>
             </div>
           </section>
@@ -168,15 +169,26 @@ const RessourcesGratuites = () => {
                             <Badge variant="secondary">{item.format}</Badge>
                           </div>
                           
-                          <Button 
-                            asChild
-                            className="w-full bg-ocean hover:bg-ocean/90"
-                          >
-                            <a href={item.downloadUrl} download>
-                              <Download className="h-4 w-4 mr-2" />
-                              Télécharger gratuitement
-                            </a>
-                          </Button>
+                          {item.isExternal ? (
+                            <Button 
+                              asChild
+                              className="w-full bg-ocean hover:bg-ocean/90"
+                            >
+                              <a href={item.downloadUrl} target="_blank" rel="noopener noreferrer">
+                                <Download className="h-4 w-4 mr-2" />
+                                Télécharger gratuitement
+                              </a>
+                            </Button>
+                          ) : (
+                            <Button 
+                              asChild
+                              className="w-full bg-ocean hover:bg-ocean/90"
+                            >
+                              <Link to={item.downloadUrl}>
+                                Lire le guide complet →
+                              </Link>
+                            </Button>
+                          )}
                         </div>
                       </CardContent>
                     </Card>
