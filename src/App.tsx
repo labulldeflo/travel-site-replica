@@ -21,6 +21,15 @@ const RessourcesGratuites = lazy(() => import("./pages/RessourcesGratuites"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Premium = lazy(() => import("./pages/Premium"));
 
+// RESSOURCES GRATUITES - Pages dédiées
+const ChecklistDocumentsVoyage = lazy(() => import("./pages/ressources/ChecklistDocumentsVoyage"));
+const ChecklistValiseDestination = lazy(() => import("./pages/ressources/ChecklistValiseDestination"));
+const GuideAsieSudEst = lazy(() => import("./pages/ressources/GuideAsieSudEst"));
+const GuideEurope = lazy(() => import("./pages/ressources/GuideEurope"));
+const GuideAfrique = lazy(() => import("./pages/ressources/GuideAfrique"));
+const GuideTourDuMonde = lazy(() => import("./pages/ressources/GuideTourDuMonde"));
+const TopApplisVoyage = lazy(() => import("./pages/ressources/TopApplisVoyage"));
+
 // BLOG ARTICLES
 const OrganiserTourMondeBudget = lazy(() => import("./pages/blog/OrganiserTourMondeBudget"));
 const DestinationsVoyagerSeule50Ans = lazy(() => import("./pages/blog/DestinationsVoyagerSeule50Ans"));
