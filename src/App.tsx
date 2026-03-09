@@ -409,6 +409,13 @@ const AppRoutes = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/guide-gratuit" element={<GuideGratuit />} />
       <Route path="/ressources-gratuites" element={<RessourcesGratuites />} />
+      <Route path="/ressources/checklist-documents-voyage" element={<ChecklistDocumentsVoyage />} />
+      <Route path="/ressources/checklist-valise-destination" element={<ChecklistValiseDestination />} />
+      <Route path="/ressources/guide-asie-sud-est" element={<GuideAsieSudEst />} />
+      <Route path="/ressources/guide-europe" element={<GuideEurope />} />
+      <Route path="/ressources/guide-afrique" element={<GuideAfrique />} />
+      <Route path="/ressources/guide-tour-du-monde" element={<GuideTourDuMonde />} />
+      <Route path="/ressources/top-applis-voyage" element={<TopApplisVoyage />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/organiser-tour-monde-budget-limite" element={<OrganiserTourMondeBudget />} />
       <Route path="/blog/destinations-voyager-seule-50-ans" element={<DestinationsVoyagerSeule50Ans />} />
