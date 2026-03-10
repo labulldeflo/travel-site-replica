@@ -420,6 +420,9 @@ const AppRoutes = () => {
       <Route path="/ressources/guide-afrique" element={<GuideAfrique />} />
       <Route path="/ressources/guide-tour-du-monde" element={<GuideTourDuMonde />} />
       <Route path="/ressources/top-applis-voyage" element={<TopApplisVoyage />} />
+      <Route path="/ressources-gratuites/planificateur-voyage" element={<PlanificateurVoyage />} />
+      <Route path="/ressources-gratuites/liste-valise-voyage" element={<ListeValiseVoyage />} />
+      <Route path="/ressources-gratuites/erreurs-voyage" element={<ErreursVoyage />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/organiser-tour-monde-budget-limite" element={<OrganiserTourMondeBudget />} />
       <Route path="/blog/destinations-voyager-seule-50-ans" element={<DestinationsVoyagerSeule50Ans />} />
