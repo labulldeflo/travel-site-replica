@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import FAQSection from '@/components/FAQSection';
 import { Link } from 'react-router-dom';
-import { Compass, Sun, Snowflake, Leaf, Flower2, Globe, Thermometer } from 'lucide-react';
+import { Compass, Sun, Snowflake, Leaf, Flower2, Globe, Thermometer, DollarSign, Clock } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const GuideOuVoyager = () => {
