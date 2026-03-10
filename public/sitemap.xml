@@ -17,6 +17,10 @@
   <url><loc>https://www.cap-sur-le-monde.com/ressources/guide-tour-du-monde</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/ressources/top-applis-voyage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/premium</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/ressources-gratuites/planificateur-voyage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/ressources-gratuites/liste-valise-voyage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/ressources-gratuites/erreurs-voyage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/guides/ou-voyager</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <url><loc>https://www.cap-sur-le-monde.com/blog/organiser-tour-monde-budget-limite</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/blog/destinations-voyager-seule-50-ans</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

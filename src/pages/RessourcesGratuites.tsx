@@ -96,6 +96,37 @@ const RessourcesGratuites = () => {
           isExternal: false,
         }
       ]
+    },
+    {
+      category: 'Guides Pratiques',
+      icon: CalendarDays,
+      color: 'text-sunset',
+      items: [
+        {
+          title: 'Planificateur de voyage complet',
+          description: 'Organisez votre prochain voyage étape par étape : budget, itinéraire, réservations.',
+          format: 'Guide',
+          featured: true,
+          downloadUrl: '/ressources-gratuites/planificateur-voyage',
+          isExternal: false,
+        },
+        {
+          title: 'Liste valise voyage par destination',
+          description: 'Que mettre dans sa valise selon la destination, le climat et le type de voyage.',
+          format: 'Guide',
+          featured: false,
+          downloadUrl: '/ressources-gratuites/liste-valise-voyage',
+          isExternal: false,
+        },
+        {
+          title: 'Les erreurs à éviter en voyage',
+          description: 'Les 10 fautes les plus fréquentes des voyageurs et comment les éviter.',
+          format: 'Guide',
+          featured: false,
+          downloadUrl: '/ressources-gratuites/erreurs-voyage',
+          isExternal: false,
+        }
+      ]
     }
   ];
 
