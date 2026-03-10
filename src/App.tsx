@@ -29,6 +29,9 @@ const GuideEurope = lazy(() => import("./pages/ressources/GuideEurope"));
 const GuideAfrique = lazy(() => import("./pages/ressources/GuideAfrique"));
 const GuideTourDuMonde = lazy(() => import("./pages/ressources/GuideTourDuMonde"));
 const TopApplisVoyage = lazy(() => import("./pages/ressources/TopApplisVoyage"));
+const PlanificateurVoyage = lazy(() => import("./pages/ressources/PlanificateurVoyage"));
+const ListeValiseVoyage = lazy(() => import("./pages/ressources/ListeValiseVoyage"));
+const ErreursVoyage = lazy(() => import("./pages/ressources/ErreursVoyage"));
 
 // BLOG ARTICLES
 const OrganiserTourMondeBudget = lazy(() => import("./pages/blog/OrganiserTourMondeBudget"));
