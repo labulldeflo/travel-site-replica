@@ -29,6 +29,9 @@ const GuideEurope = lazy(() => import("./pages/ressources/GuideEurope"));
 const GuideAfrique = lazy(() => import("./pages/ressources/GuideAfrique"));
 const GuideTourDuMonde = lazy(() => import("./pages/ressources/GuideTourDuMonde"));
 const TopApplisVoyage = lazy(() => import("./pages/ressources/TopApplisVoyage"));
+const PlanificateurVoyage = lazy(() => import("./pages/ressources/PlanificateurVoyage"));
+const ListeValiseVoyage = lazy(() => import("./pages/ressources/ListeValiseVoyage"));
+const ErreursVoyage = lazy(() => import("./pages/ressources/ErreursVoyage"));
 
 // BLOG ARTICLES
 const OrganiserTourMondeBudget = lazy(() => import("./pages/blog/OrganiserTourMondeBudget"));
@@ -140,6 +143,7 @@ const GuidePreparerVoyage = lazy(() => import("./pages/guides/GuidePreparerVoyag
 const GuideItineraireVoyage = lazy(() => import("./pages/guides/GuideItineraireVoyage"));
 const GuideBudgetVoyage = lazy(() => import("./pages/guides/GuideBudgetVoyage"));
 const GuideQueMettreValise = lazy(() => import("./pages/guides/GuideQueMettreValise"));
+const GuideOuVoyager = lazy(() => import("./pages/guides/GuideOuVoyager"));
 
 // GUIDES THÉMATIQUES PAR PAYS
 const CountryGuides = {
@@ -416,6 +420,9 @@ const AppRoutes = () => {
       <Route path="/ressources/guide-afrique" element={<GuideAfrique />} />
       <Route path="/ressources/guide-tour-du-monde" element={<GuideTourDuMonde />} />
       <Route path="/ressources/top-applis-voyage" element={<TopApplisVoyage />} />
+      <Route path="/ressources-gratuites/planificateur-voyage" element={<PlanificateurVoyage />} />
+      <Route path="/ressources-gratuites/liste-valise-voyage" element={<ListeValiseVoyage />} />
+      <Route path="/ressources-gratuites/erreurs-voyage" element={<ErreursVoyage />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/organiser-tour-monde-budget-limite" element={<OrganiserTourMondeBudget />} />
       <Route path="/blog/destinations-voyager-seule-50-ans" element={<DestinationsVoyagerSeule50Ans />} />
@@ -520,6 +527,7 @@ const AppRoutes = () => {
       <Route path="/guides/itineraire-voyage" element={<GuideItineraireVoyage />} />
       <Route path="/guides/budget-voyage" element={<GuideBudgetVoyage />} />
       <Route path="/guides/que-mettre-valise" element={<GuideQueMettreValise />} />
+      <Route path="/guides/ou-voyager" element={<GuideOuVoyager />} />
 
       {/* ========== GUIDES THÉMATIQUES PAR PAYS ========== */}
       
