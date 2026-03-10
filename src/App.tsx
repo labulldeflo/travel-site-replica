@@ -143,6 +143,7 @@ const GuidePreparerVoyage = lazy(() => import("./pages/guides/GuidePreparerVoyag
 const GuideItineraireVoyage = lazy(() => import("./pages/guides/GuideItineraireVoyage"));
 const GuideBudgetVoyage = lazy(() => import("./pages/guides/GuideBudgetVoyage"));
 const GuideQueMettreValise = lazy(() => import("./pages/guides/GuideQueMettreValise"));
+const GuideOuVoyager = lazy(() => import("./pages/guides/GuideOuVoyager"));
 
 // GUIDES THÉMATIQUES PAR PAYS
 const CountryGuides = {
