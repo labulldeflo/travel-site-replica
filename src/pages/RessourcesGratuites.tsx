@@ -1,4 +1,4 @@
-import { Download, CheckSquare, Map, Smartphone, Gift } from 'lucide-react';
+import { Download, CheckSquare, Map, Smartphone, Gift, AlertTriangle, Luggage, CalendarDays } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
