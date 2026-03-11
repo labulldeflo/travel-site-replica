@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import argentineImg from '@/assets/destinations/argentine.jpg';
 import buenosAiresImg from '@/assets/cities/buenos-aires.jpg';
 import patagonieImg from '@/assets/cities/patagonie.jpg';
