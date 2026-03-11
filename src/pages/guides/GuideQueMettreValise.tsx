@@ -209,6 +209,9 @@ const GuideQueMettreValise = () => {
             </div>
           </Card>
         </div>
+        <div className="max-w-4xl mx-auto px-4 pb-8">
+          <AffiliateBlock {...AFFILIATE_BLOCKS.equipement} variant="compact" />
+        </div>
       </div>
 
       <Footer />

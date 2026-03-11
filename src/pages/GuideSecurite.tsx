@@ -236,6 +236,10 @@ const GuideSecurite = () => {
             </div>
           </Card>
         </div>
+        <div className="max-w-4xl mx-auto px-4 pb-8">
+          <AffiliateBlock {...AFFILIATE_BLOCKS.assurance} variant="compact" />
+          <AffiliateBlock {...AFFILIATE_BLOCKS.esim} variant="compact" />
+        </div>
       </div>
 
       <Footer />
