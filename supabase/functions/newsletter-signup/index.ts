@@ -126,7 +126,7 @@ serve(async (req) => {
                   </a>
                 </li>
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/checklist-documents-voyage.pdf" 
+                  <a href="${storageBaseUrl}/checklist-documents-voyage.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📄 Check-list Documents de Voyage
                   </a>
