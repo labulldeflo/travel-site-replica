@@ -164,7 +164,7 @@ serve(async (req) => {
               <h3 style="color: #0891b2; margin-top: 20px;">📱 Outils Pratiques</h3>
               <ul style="list-style: none; padding: 0;">
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/top-applis-voyage.pdf" 
+                  <a href="${storageBaseUrl}/top-applis-voyage.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📱 Top 15 des Applis Voyage Indispensables
                   </a>
