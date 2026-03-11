@@ -331,6 +331,11 @@ const Chili = () => {
             </Tabs>
           </div>
         </section>
+        <section className="py-8">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <OrganiserVoyageBlock destination="Chili" showEsim showAssurance />
+          </div>
+        </section>
       </main>
 
       <Footer />
