@@ -148,7 +148,7 @@ serve(async (req) => {
                   </a>
                 </li>
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/guide-afrique.pdf" 
+                  <a href="${storageBaseUrl}/guide-afrique.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📚 Guide Express Afrique
                   </a>
