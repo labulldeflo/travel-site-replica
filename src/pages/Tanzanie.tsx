@@ -147,6 +147,13 @@ const Tanzanie = () => {
             </div>
           </section>
 
+          {/* Bloc affiliation */}
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <OrganiserVoyageBlock destination="Tanzanie" showEsim showAssurance />
+            </div>
+          </section>
+
           <section className="py-12 bg-muted/30">
             <div className="container mx-auto px-4 max-w-4xl text-center">
               <h2 className="text-2xl font-elegant font-bold mb-6">Explorer d'autres destinations en Afrique</h2>
