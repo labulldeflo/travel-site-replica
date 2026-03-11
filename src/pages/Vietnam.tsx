@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import FAQSection from '@/components/FAQSection';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import vietnamImg from '@/assets/destinations/vietnam.jpg';
 import hanoiImg from '@/assets/cities/hanoi.jpg';
 import halongImg from '@/assets/cities/halong.jpg';
@@ -488,6 +489,13 @@ const Vietnam = () => {
                 </Link>
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Bloc affiliation */}
+        <section className="py-8">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <OrganiserVoyageBlock destination="Vietnam" showEsim showAssurance />
           </div>
         </section>
 

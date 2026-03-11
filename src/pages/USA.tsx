@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import usaImg from '@/assets/destinations/usa.jpg';
 import newYorkImg from '@/assets/cities/new-york.jpg';
 import grandCanyonImg from '@/assets/cities/grand-canyon.jpg';
@@ -336,6 +337,11 @@ const USA = () => {
                 </div>
               </TabsContent>
             </Tabs>
+          </div>
+        </section>
+        <section className="py-8">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <OrganiserVoyageBlock destination="États-Unis" showEsim showAssurance />
           </div>
         </section>
       </main>

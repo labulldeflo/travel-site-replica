@@ -1,4 +1,6 @@
 import { ArrowLeft, Shield, AlertCircle, Heart as HeartPulse, FileText, ExternalLink, Compass, HelpCircle, Lock, Smartphone } from 'lucide-react';
+import { AffiliateBlock } from '@/components/affiliate';
+import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -233,6 +235,10 @@ const GuideSecurite = () => {
               ))}
             </div>
           </Card>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 pb-8">
+          <AffiliateBlock {...AFFILIATE_BLOCKS.assurance} variant="compact" />
+          <AffiliateBlock {...AFFILIATE_BLOCKS.esim} variant="compact" />
         </div>
       </div>
 

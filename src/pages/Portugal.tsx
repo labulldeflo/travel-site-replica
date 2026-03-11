@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import portugalImg from '@/assets/destinations/portugal.jpg';
 import lisbonneImg from '@/assets/cities/lisbonne.jpg';
 import portoImg from '@/assets/cities/porto.jpg';
@@ -120,6 +121,13 @@ const Portugal = () => {
               ))}
             </div>
           </div></section>
+
+          {/* Bloc affiliation */}
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <OrganiserVoyageBlock destination="Portugal" />
+            </div>
+          </section>
 
           <section className="py-12 bg-muted/30"><div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-2xl font-elegant font-bold mb-6">Explorer d'autres destinations en Europe</h2>

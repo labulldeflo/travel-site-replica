@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import colombieImg from '@/assets/destinations/colombie.jpg';
 
 const Colombie = () => {
@@ -328,6 +329,11 @@ const Colombie = () => {
                 </div>
               </TabsContent>
             </Tabs>
+          </div>
+        </section>
+        <section className="py-8">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <OrganiserVoyageBlock destination="Colombie" showEsim showAssurance />
           </div>
         </section>
       </main>

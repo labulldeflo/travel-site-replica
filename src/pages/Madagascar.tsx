@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import madagascarImg from '@/assets/destinations/madagascar.jpg';
 import antanImg from '@/assets/cities/antananarivo.jpg';
 import baobabImg from '@/assets/cities/baobab-madagascar.jpg';
@@ -142,6 +143,13 @@ const Madagascar = () => {
                   <Card key={index} className="group hover:shadow-elegant transition-all duration-300"><CardHeader><CardTitle className="flex items-center gap-2 text-lg"><guide.icon className="h-5 w-5 text-ocean" />{guide.title}</CardTitle><CardDescription>{guide.desc}</CardDescription></CardHeader><CardContent><Button className="w-full" asChild><Link to={`/guides/${guide.slug}`}>Lire le guide</Link></Button></CardContent></Card>
                 ))}
               </div>
+            </div>
+          </section>
+
+          {/* Bloc affiliation */}
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <OrganiserVoyageBlock destination="Madagascar" showEsim showAssurance />
             </div>
           </section>
 

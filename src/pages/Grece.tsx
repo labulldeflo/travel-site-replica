@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import greceImg from '@/assets/destinations/grece.jpg';
 import athenesImg from '@/assets/cities/athenes.jpg';
 import santorinImg from '@/assets/cities/santorin.jpg';
@@ -108,6 +109,13 @@ const Grece = () => {
               <Card><CardHeader><CardTitle className="flex items-center gap-2"><MapPin className="h-5 w-5 text-sunset" />Se déplacer en Grèce</CardTitle></CardHeader><CardContent className="text-sm text-muted-foreground space-y-2"><p><strong>Ferries :</strong> Blue Star, SeaJets, Hellenic Seaways. Réservez en été.</p><p><strong>Vols intérieurs :</strong> Aegean Airlines et Sky Express (30-80 €).</p><p><strong>Location scooter :</strong> Parfait pour les petites îles (15-30 €/jour).</p><p><strong>Bus KTEL :</strong> Réseau national pour le continent. Économique et fiable.</p></CardContent></Card>
             </div>
           </div></section>
+
+          {/* Bloc affiliation */}
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <OrganiserVoyageBlock destination="Grèce" />
+            </div>
+          </section>
 
           <section className="py-12 bg-background"><div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-2xl font-elegant font-bold mb-6">Explorer d'autres destinations en Europe</h2>

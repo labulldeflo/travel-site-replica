@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import canadaImg from '@/assets/destinations/canada.jpg';
 import banffImg from '@/assets/cities/banff.jpg';
 
@@ -335,6 +336,11 @@ const Canada = () => {
                 </div>
               </TabsContent>
             </Tabs>
+          </div>
+        </section>
+        <section className="py-8">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <OrganiserVoyageBlock destination="Canada" showEsim showAssurance />
           </div>
         </section>
       </main>

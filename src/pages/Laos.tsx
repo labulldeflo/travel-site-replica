@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import laosImg from '@/assets/destinations/laos.jpg';
 import luangPrabangImg from '@/assets/cities/luang-prabang.jpg';
 import vangViengImg from '@/assets/cities/vang-vieng.jpg';
@@ -399,6 +400,13 @@ const Laos = () => {
                 </Link>
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Bloc affiliation */}
+        <section className="py-8">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <OrganiserVoyageBlock destination="Laos" showEsim showAssurance />
           </div>
         </section>
 

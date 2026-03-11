@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import croatieImg from '@/assets/destinations/croatie.jpg';
 import dubrovnikImg from '@/assets/cities/dubrovnik.jpg';
 import splitImg from '@/assets/cities/split.jpg';
@@ -106,6 +107,13 @@ const Croatie = () => {
               <Card><CardHeader><CardTitle className="flex items-center gap-2"><MapPin className="h-5 w-5 text-sunset" />Se déplacer en Croatie</CardTitle></CardHeader><CardContent className="text-sm text-muted-foreground space-y-2"><p><strong>Bus :</strong> Zagreb-Split en 5h (15-25 €), Split-Dubrovnik en 4h.</p><p><strong>Ferry Jadrolinija :</strong> Split vers Hvar, Brač, Korčula. Réservez en été.</p><p><strong>Location voiture :</strong> Idéale pour la côte et l'Istrie.</p><p><strong>Catamaran :</strong> Rapide entre villes côtières et îles.</p></CardContent></Card>
             </div>
           </div></section>
+
+          {/* Bloc affiliation */}
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <OrganiserVoyageBlock destination="Croatie" />
+            </div>
+          </section>
 
           <section className="py-12 bg-background"><div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-2xl font-elegant font-bold mb-6">Explorer d'autres destinations en Europe</h2>

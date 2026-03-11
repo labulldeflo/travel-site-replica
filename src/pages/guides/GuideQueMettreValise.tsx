@@ -1,4 +1,6 @@
 import { ArrowLeft, Luggage, Shirt, Smartphone, Pill, Sun, Compass, HelpCircle, ShieldCheck, PackageCheck } from 'lucide-react';
+import { AffiliateBlock } from '@/components/affiliate';
+import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import Header from '@/components/Header';
@@ -206,6 +208,9 @@ const GuideQueMettreValise = () => {
               ))}
             </div>
           </Card>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 pb-8">
+          <AffiliateBlock {...AFFILIATE_BLOCKS.equipement} variant="compact" />
         </div>
       </div>
 

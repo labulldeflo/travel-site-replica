@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import malaisieImg from '@/assets/destinations/malaisie.jpg';
 import kualaLumpurImg from '@/assets/cities/kuala-lumpur.jpg';
 import penangImg from '@/assets/cities/penang.jpg';
@@ -329,6 +330,13 @@ const Malaisie = () => {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* Bloc affiliation */}
+        <section className="py-8">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <OrganiserVoyageBlock destination="Malaisie" showEsim showAssurance />
           </div>
         </section>
 
