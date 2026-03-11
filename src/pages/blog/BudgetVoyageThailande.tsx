@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import { AffiliateBlock } from '@/components/affiliate';
+import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DollarSign, MapPin, Clock, Calendar, Compass, Utensils, Home, Train } from "lucide-react";
