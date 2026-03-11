@@ -136,7 +136,7 @@ serve(async (req) => {
               <h3 style="color: #0891b2; margin-top: 20px;">🗺️ Mini-Guides par Continent</h3>
               <ul style="list-style: none; padding: 0;">
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/guide-asie-sud-est.pdf" 
+                  <a href="${storageBaseUrl}/guide-asie-sud-est.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📚 Guide Express Asie du Sud-Est
                   </a>
