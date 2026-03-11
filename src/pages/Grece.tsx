@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import greceImg from '@/assets/destinations/grece.jpg';
 import athenesImg from '@/assets/cities/athenes.jpg';
 import santorinImg from '@/assets/cities/santorin.jpg';
