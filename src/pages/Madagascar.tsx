@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import madagascarImg from '@/assets/destinations/madagascar.jpg';
 import antanImg from '@/assets/cities/antananarivo.jpg';
 import baobabImg from '@/assets/cities/baobab-madagascar.jpg';
