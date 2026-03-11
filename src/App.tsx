@@ -55,9 +55,46 @@ const BudgetVoyageLaos = lazy(() => import("./pages/blog/BudgetVoyageLaos"));
 const QuandPartirLaos = lazy(() => import("./pages/blog/QuandPartirLaos"));
 const QuandPartirJapon = lazy(() => import("./pages/blog/QuandPartirJapon"));
 
-// Blog - Clusters SEO : Japon (compléter), Maroc, Mexique, Pérou
+// Blog - Cluster SEO Japon complet
+const GuideCompletJapon = lazy(() => import("./pages/blog/GuideCompletJapon"));
+const ItineraireJapon7Jours = lazy(() => import("./pages/blog/ItineraireJapon7Jours"));
 const ItineraireJapon10Jours = lazy(() => import("./pages/blog/ItineraireJapon10Jours"));
 const BudgetVoyageJapon = lazy(() => import("./pages/blog/BudgetVoyageJapon"));
+const QueFaireKyoto = lazy(() => import("./pages/blog/QueFaireKyoto"));
+const QueFaireOsaka = lazy(() => import("./pages/blog/QueFaireOsaka"));
+const QueFaireHiroshima = lazy(() => import("./pages/blog/QueFaireHiroshima"));
+const QueFaireNara = lazy(() => import("./pages/blog/QueFaireNara"));
+const QueFaireSapporo = lazy(() => import("./pages/blog/QueFaireSapporo"));
+const QueFaireFukuoka = lazy(() => import("./pages/blog/QueFaireFukuoka"));
+const CommentDeplacerJapon = lazy(() => import("./pages/blog/CommentDeplacerJapon"));
+const JRPassJapon = lazy(() => import("./pages/blog/JRPassJapon"));
+const OuDormirJapon = lazy(() => import("./pages/blog/OuDormirJapon"));
+const QuartiersLogerTokyo = lazy(() => import("./pages/blog/QuartiersLogerTokyo"));
+const QuartiersLogerKyoto = lazy(() => import("./pages/blog/QuartiersLogerKyoto"));
+const TrainsJaponais = lazy(() => import("./pages/blog/TrainsJaponais"));
+const InternetEsimJapon = lazy(() => import("./pages/blog/InternetEsimJapon"));
+const AssuranceVoyageJapon = lazy(() => import("./pages/blog/AssuranceVoyageJapon"));
+const TemplesJapon = lazy(() => import("./pages/blog/TemplesJapon"));
+const PaysagesJapon = lazy(() => import("./pages/blog/PaysagesJapon"));
+const VillagesTraditionnelsJapon = lazy(() => import("./pages/blog/VillagesTraditionnelsJapon"));
+const ChateauxJapon = lazy(() => import("./pages/blog/ChateauxJapon"));
+const FestivalsJapon = lazy(() => import("./pages/blog/FestivalsJapon"));
+const JaponPrintemps = lazy(() => import("./pages/blog/JaponPrintemps"));
+const JaponEte = lazy(() => import("./pages/blog/JaponEte"));
+const JaponAutomne = lazy(() => import("./pages/blog/JaponAutomne"));
+const JaponHiver = lazy(() => import("./pages/blog/JaponHiver"));
+const CerisiersJapon = lazy(() => import("./pages/blog/CerisiersJapon"));
+const VoyageJaponPasCher = lazy(() => import("./pages/blog/VoyageJaponPasCher"));
+const CoutRepasJapon = lazy(() => import("./pages/blog/CoutRepasJapon"));
+const PrixHotelsJapon = lazy(() => import("./pages/blog/PrixHotelsJapon"));
+const BudgetTransportJapon = lazy(() => import("./pages/blog/BudgetTransportJapon"));
+const MeilleuresActivitesTokyo = lazy(() => import("./pages/blog/MeilleuresActivitesTokyo"));
+const ExcursionsDepuisTokyo = lazy(() => import("./pages/blog/ExcursionsDepuisTokyo"));
+const MeilleursHotelsTokyo = lazy(() => import("./pages/blog/MeilleursHotelsTokyo"));
+const MeilleursHotelsKyoto = lazy(() => import("./pages/blog/MeilleursHotelsKyoto"));
+const MeilleuresActivitesKyoto = lazy(() => import("./pages/blog/MeilleuresActivitesKyoto"));
+
+// Blog - Clusters SEO : Maroc, Mexique, Pérou
 const ItineraireMaroc10Jours = lazy(() => import("./pages/blog/ItineraireMaroc10Jours"));
 const BudgetVoyageMaroc = lazy(() => import("./pages/blog/BudgetVoyageMaroc"));
 const QuandPartirMaroc = lazy(() => import("./pages/blog/QuandPartirMaroc"));
@@ -476,9 +513,44 @@ const AppRoutes = () => {
       <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
       <Route path="/blog/quand-partir-japon" element={<QuandPartirJapon />} />
 
-      {/* Blog - Clusters SEO : Japon, Maroc, Mexique, Pérou */}
+      {/* Blog - Cluster SEO Japon complet */}
+      <Route path="/blog/guide-complet-japon" element={<GuideCompletJapon />} />
+      <Route path="/blog/itineraire-japon-7-jours" element={<ItineraireJapon7Jours />} />
       <Route path="/blog/itineraire-japon-10-jours" element={<ItineraireJapon10Jours />} />
       <Route path="/blog/budget-voyage-japon" element={<BudgetVoyageJapon />} />
+      <Route path="/blog/que-faire-kyoto" element={<QueFaireKyoto />} />
+      <Route path="/blog/que-faire-osaka" element={<QueFaireOsaka />} />
+      <Route path="/blog/que-faire-hiroshima" element={<QueFaireHiroshima />} />
+      <Route path="/blog/que-faire-nara" element={<QueFaireNara />} />
+      <Route path="/blog/que-faire-sapporo" element={<QueFaireSapporo />} />
+      <Route path="/blog/que-faire-fukuoka" element={<QueFaireFukuoka />} />
+      <Route path="/blog/comment-se-deplacer-japon" element={<CommentDeplacerJapon />} />
+      <Route path="/blog/jr-pass-japon" element={<JRPassJapon />} />
+      <Route path="/blog/ou-dormir-japon" element={<OuDormirJapon />} />
+      <Route path="/blog/quartiers-loger-tokyo" element={<QuartiersLogerTokyo />} />
+      <Route path="/blog/quartiers-loger-kyoto" element={<QuartiersLogerKyoto />} />
+      <Route path="/blog/trains-japonais" element={<TrainsJaponais />} />
+      <Route path="/blog/internet-esim-japon" element={<InternetEsimJapon />} />
+      <Route path="/blog/assurance-voyage-japon" element={<AssuranceVoyageJapon />} />
+      <Route path="/blog/temples-japon" element={<TemplesJapon />} />
+      <Route path="/blog/paysages-japon" element={<PaysagesJapon />} />
+      <Route path="/blog/villages-traditionnels-japon" element={<VillagesTraditionnelsJapon />} />
+      <Route path="/blog/chateaux-japon" element={<ChateauxJapon />} />
+      <Route path="/blog/festivals-japon" element={<FestivalsJapon />} />
+      <Route path="/blog/japon-printemps" element={<JaponPrintemps />} />
+      <Route path="/blog/japon-ete" element={<JaponEte />} />
+      <Route path="/blog/japon-automne" element={<JaponAutomne />} />
+      <Route path="/blog/japon-hiver" element={<JaponHiver />} />
+      <Route path="/blog/cerisiers-japon" element={<CerisiersJapon />} />
+      <Route path="/blog/voyage-japon-pas-cher" element={<VoyageJaponPasCher />} />
+      <Route path="/blog/cout-repas-japon" element={<CoutRepasJapon />} />
+      <Route path="/blog/prix-hotels-japon" element={<PrixHotelsJapon />} />
+      <Route path="/blog/budget-transport-japon" element={<BudgetTransportJapon />} />
+      <Route path="/blog/meilleures-activites-tokyo" element={<MeilleuresActivitesTokyo />} />
+      <Route path="/blog/excursions-depuis-tokyo" element={<ExcursionsDepuisTokyo />} />
+      <Route path="/blog/meilleurs-hotels-tokyo" element={<MeilleursHotelsTokyo />} />
+      <Route path="/blog/meilleurs-hotels-kyoto" element={<MeilleursHotelsKyoto />} />
+      <Route path="/blog/meilleures-activites-kyoto" element={<MeilleuresActivitesKyoto />} />
       <Route path="/blog/itineraire-maroc-10-jours" element={<ItineraireMaroc10Jours />} />
       <Route path="/blog/budget-voyage-maroc" element={<BudgetVoyageMaroc />} />
       <Route path="/blog/quand-partir-maroc" element={<QuandPartirMaroc />} />
