@@ -466,6 +466,7 @@ const AppRoutes = () => {
       <Route path="/bons-plans/vols" element={<BonsPlansVols />} />
       <Route path="/bons-plans/hebergement" element={<BonsPlansHebergement />} />
       <Route path="/bons-plans/cartes-sim" element={<BonsPlansCartesSIM />} />
+      <Route path="/ressources-voyage" element={<RessourcesVoyage />} />
 
       {/* REGIONS */}
       <Route path="/europe" element={<Europe />} />
