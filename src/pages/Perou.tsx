@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import perouImg from '@/assets/destinations/perou.jpg';
 import machuPicchuImg from '@/assets/cities/machu-picchu.jpg';
 import limaImg from '@/assets/cities/lima.jpg';
