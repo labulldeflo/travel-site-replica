@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import coreeImg from '@/assets/destinations/coree-du-sud.jpg';
 import seoulImg from '@/assets/cities/seoul.jpg';
 import busanImg from '@/assets/cities/busan.jpg';
