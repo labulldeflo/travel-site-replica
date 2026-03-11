@@ -219,6 +219,8 @@ const QueFaireBarcelone = () => {
             </div>
           </div>
 
+          <AffiliateBlock {...AFFILIATE_BLOCKS.activites} variant="compact" />
+
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">
               <Link to="/destinations/espagne" onClick={() => window.scrollTo(0, 0)}>Découvrir l'Espagne</Link>
