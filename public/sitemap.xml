@@ -28,6 +28,7 @@
   <url><loc>https://www.cap-sur-le-monde.com/bons-plans/vols</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/bons-plans/hebergement</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/bons-plans/cartes-sim</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.cap-sur-le-monde.com/ressources-voyage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <url><loc>https://www.cap-sur-le-monde.com/europe</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.cap-sur-le-monde.com/afrique</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

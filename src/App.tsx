@@ -75,6 +75,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const BonsPlansVols = lazy(() => import("./pages/BonsPlansVols"));
 const BonsPlansHebergement = lazy(() => import("./pages/BonsPlansHebergement"));
 const BonsPlansCartesSIM = lazy(() => import("./pages/BonsPlansCartesSIM"));
+const RessourcesVoyage = lazy(() => import("./pages/RessourcesVoyage"));
 
 // REGIONS (Continent/Sous-continents)
 const Europe = lazy(() => import("./pages/Europe"));
@@ -465,6 +466,7 @@ const AppRoutes = () => {
       <Route path="/bons-plans/vols" element={<BonsPlansVols />} />
       <Route path="/bons-plans/hebergement" element={<BonsPlansHebergement />} />
       <Route path="/bons-plans/cartes-sim" element={<BonsPlansCartesSIM />} />
+      <Route path="/ressources-voyage" element={<RessourcesVoyage />} />
 
       {/* REGIONS */}
       <Route path="/europe" element={<Europe />} />
