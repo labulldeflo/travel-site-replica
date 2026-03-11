@@ -359,6 +359,13 @@ const Japon = () => {
             </div>
           </section>
 
+          {/* Bloc affiliation */}
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <OrganiserVoyageBlock destination="Japon" showEsim showAssurance />
+            </div>
+          </section>
+
           {/* Liens internes */}
           <section className="py-12 bg-background">
             <div className="container mx-auto px-4 max-w-4xl text-center">
