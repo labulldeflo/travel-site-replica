@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import kenyaImg from '@/assets/destinations/kenya.jpg';
 import nairobiImg from '@/assets/cities/nairobi.jpg';
 import masaiMaraImg from '@/assets/cities/masai-mara.jpg';
