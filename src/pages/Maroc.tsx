@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import marocImg from '@/assets/destinations/maroc.jpg';
 import marrakechImg from '@/assets/cities/marrakech.jpg';
 import fesImg from '@/assets/cities/fes.jpg';
