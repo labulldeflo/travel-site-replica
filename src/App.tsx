@@ -55,9 +55,46 @@ const BudgetVoyageLaos = lazy(() => import("./pages/blog/BudgetVoyageLaos"));
 const QuandPartirLaos = lazy(() => import("./pages/blog/QuandPartirLaos"));
 const QuandPartirJapon = lazy(() => import("./pages/blog/QuandPartirJapon"));
 
-// Blog - Clusters SEO : Japon (compléter), Maroc, Mexique, Pérou
+// Blog - Cluster SEO Japon complet
+const GuideCompletJapon = lazy(() => import("./pages/blog/GuideCompletJapon"));
+const ItineraireJapon7Jours = lazy(() => import("./pages/blog/ItineraireJapon7Jours"));
 const ItineraireJapon10Jours = lazy(() => import("./pages/blog/ItineraireJapon10Jours"));
 const BudgetVoyageJapon = lazy(() => import("./pages/blog/BudgetVoyageJapon"));
+const QueFaireKyoto = lazy(() => import("./pages/blog/QueFaireKyoto"));
+const QueFaireOsaka = lazy(() => import("./pages/blog/QueFaireOsaka"));
+const QueFaireHiroshima = lazy(() => import("./pages/blog/QueFaireHiroshima"));
+const QueFaireNara = lazy(() => import("./pages/blog/QueFaireNara"));
+const QueFaireSapporo = lazy(() => import("./pages/blog/QueFaireSapporo"));
+const QueFaireFukuoka = lazy(() => import("./pages/blog/QueFaireFukuoka"));
+const CommentDeplacerJapon = lazy(() => import("./pages/blog/CommentDeplacerJapon"));
+const JRPassJapon = lazy(() => import("./pages/blog/JRPassJapon"));
+const OuDormirJapon = lazy(() => import("./pages/blog/OuDormirJapon"));
+const QuartiersLogerTokyo = lazy(() => import("./pages/blog/QuartiersLogerTokyo"));
+const QuartiersLogerKyoto = lazy(() => import("./pages/blog/QuartiersLogerKyoto"));
+const TrainsJaponais = lazy(() => import("./pages/blog/TrainsJaponais"));
+const InternetEsimJapon = lazy(() => import("./pages/blog/InternetEsimJapon"));
+const AssuranceVoyageJapon = lazy(() => import("./pages/blog/AssuranceVoyageJapon"));
+const TemplesJapon = lazy(() => import("./pages/blog/TemplesJapon"));
+const PaysagesJapon = lazy(() => import("./pages/blog/PaysagesJapon"));
+const VillagesTraditionnelsJapon = lazy(() => import("./pages/blog/VillagesTraditionnelsJapon"));
+const ChateauxJapon = lazy(() => import("./pages/blog/ChateauxJapon"));
+const FestivalsJapon = lazy(() => import("./pages/blog/FestivalsJapon"));
+const JaponPrintemps = lazy(() => import("./pages/blog/JaponPrintemps"));
+const JaponEte = lazy(() => import("./pages/blog/JaponEte"));
+const JaponAutomne = lazy(() => import("./pages/blog/JaponAutomne"));
+const JaponHiver = lazy(() => import("./pages/blog/JaponHiver"));
+const CerisiersJapon = lazy(() => import("./pages/blog/CerisiersJapon"));
+const VoyageJaponPasCher = lazy(() => import("./pages/blog/VoyageJaponPasCher"));
+const CoutRepasJapon = lazy(() => import("./pages/blog/CoutRepasJapon"));
+const PrixHotelsJapon = lazy(() => import("./pages/blog/PrixHotelsJapon"));
+const BudgetTransportJapon = lazy(() => import("./pages/blog/BudgetTransportJapon"));
+const MeilleuresActivitesTokyo = lazy(() => import("./pages/blog/MeilleuresActivitesTokyo"));
+const ExcursionsDepuisTokyo = lazy(() => import("./pages/blog/ExcursionsDepuisTokyo"));
+const MeilleursHotelsTokyo = lazy(() => import("./pages/blog/MeilleursHotelsTokyo"));
+const MeilleursHotelsKyoto = lazy(() => import("./pages/blog/MeilleursHotelsKyoto"));
+const MeilleuresActivitesKyoto = lazy(() => import("./pages/blog/MeilleuresActivitesKyoto"));
+
+// Blog - Clusters SEO : Maroc, Mexique, Pérou
 const ItineraireMaroc10Jours = lazy(() => import("./pages/blog/ItineraireMaroc10Jours"));
 const BudgetVoyageMaroc = lazy(() => import("./pages/blog/BudgetVoyageMaroc"));
 const QuandPartirMaroc = lazy(() => import("./pages/blog/QuandPartirMaroc"));
