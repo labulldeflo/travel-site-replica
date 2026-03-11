@@ -142,7 +142,7 @@ serve(async (req) => {
                   </a>
                 </li>
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/guide-europe.pdf" 
+                  <a href="${storageBaseUrl}/guide-europe.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📚 Guide Express Europe
                   </a>
