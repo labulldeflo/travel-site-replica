@@ -149,6 +149,9 @@ const BudgetVoyageLaos = () => {
             </div>
           </div>
 
+          <AffiliateBlock {...AFFILIATE_BLOCKS.vols} variant="compact" />
+          <AffiliateBlock {...AFFILIATE_BLOCKS.hebergement} variant="compact" />
+
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90"><Link to="/destinations/laos" onClick={() => window.scrollTo(0, 0)}>Découvrir le Laos</Link></Button>
             <Button asChild variant="outline" className="flex-1"><Link to="/blog" onClick={() => window.scrollTo(0, 0)}>Retour au blog</Link></Button>
