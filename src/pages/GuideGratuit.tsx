@@ -22,7 +22,7 @@ const GuideGratuit = () => {
   };
   const handleGuideDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Guide-tour-du-monde.pdf';
+    link.href = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/downloads/Guide-tour-du-monde.pdf`;
     link.download = 'Guide-tour-du-monde.pdf';
     document.body.appendChild(link);
     link.click();

@@ -120,7 +120,7 @@ serve(async (req) => {
               <h3 style="color: #0891b2; margin-top: 0;">✅ Check-lists Voyage</h3>
               <ul style="list-style: none; padding: 0;">
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/checklist-voyageuse-organisee.pdf" 
+                  <a href="${supabaseUrl}/storage/v1/object/public/downloads/checklist-voyageuse-organisee.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📄 Check-list Ultime de la Voyageuse Organisée
                   </a>
