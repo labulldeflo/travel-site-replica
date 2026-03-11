@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
+import { AffiliateBlock } from '@/components/affiliate';
+import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
