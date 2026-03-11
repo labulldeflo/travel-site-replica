@@ -154,7 +154,7 @@ serve(async (req) => {
                   </a>
                 </li>
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/Guide-tour-du-monde.pdf" 
+                  <a href="${storageBaseUrl}/Guide-tour-du-monde.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📚 Guide Complet Tour du Monde
                   </a>
