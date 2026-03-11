@@ -55,6 +55,36 @@ const BudgetVoyageLaos = lazy(() => import("./pages/blog/BudgetVoyageLaos"));
 const QuandPartirLaos = lazy(() => import("./pages/blog/QuandPartirLaos"));
 const QuandPartirJapon = lazy(() => import("./pages/blog/QuandPartirJapon"));
 
+// Blog - Clusters SEO : Japon (compléter), Maroc, Mexique, Pérou
+const ItineraireJapon10Jours = lazy(() => import("./pages/blog/ItineraireJapon10Jours"));
+const BudgetVoyageJapon = lazy(() => import("./pages/blog/BudgetVoyageJapon"));
+const ItineraireMaroc10Jours = lazy(() => import("./pages/blog/ItineraireMaroc10Jours"));
+const BudgetVoyageMaroc = lazy(() => import("./pages/blog/BudgetVoyageMaroc"));
+const QuandPartirMaroc = lazy(() => import("./pages/blog/QuandPartirMaroc"));
+const ItineraireMexique10Jours = lazy(() => import("./pages/blog/ItineraireMexique10Jours"));
+const BudgetVoyageMexique = lazy(() => import("./pages/blog/BudgetVoyageMexique"));
+const QuandPartirMexique = lazy(() => import("./pages/blog/QuandPartirMexique"));
+const ItinerairePerou10Jours = lazy(() => import("./pages/blog/ItinerairePerou10Jours"));
+const BudgetVoyagePerou = lazy(() => import("./pages/blog/BudgetVoyagePerou"));
+const QuandPartirPerou = lazy(() => import("./pages/blog/QuandPartirPerou"));
+
+// Blog - Clusters SEO : Europe du Sud (Grèce, Croatie, Portugal, Italie, Espagne)
+const ItineraireGrece10Jours = lazy(() => import("./pages/blog/ItineraireGrece10Jours"));
+const BudgetVoyageGrece = lazy(() => import("./pages/blog/BudgetVoyageGrece"));
+const QuandPartirGrece = lazy(() => import("./pages/blog/QuandPartirGrece"));
+const ItineraireCroatie10Jours = lazy(() => import("./pages/blog/ItineraireCroatie10Jours"));
+const BudgetVoyageCroatie = lazy(() => import("./pages/blog/BudgetVoyageCroatie"));
+const QuandPartirCroatie = lazy(() => import("./pages/blog/QuandPartirCroatie"));
+const ItinerairePortugal10Jours = lazy(() => import("./pages/blog/ItinerairePortugal10Jours"));
+const BudgetVoyagePortugal = lazy(() => import("./pages/blog/BudgetVoyagePortugal"));
+const QuandPartirPortugal = lazy(() => import("./pages/blog/QuandPartirPortugal"));
+const ItineraireItalie10Jours = lazy(() => import("./pages/blog/ItineraireItalie10Jours"));
+const BudgetVoyageItalie = lazy(() => import("./pages/blog/BudgetVoyageItalie"));
+const QuandPartirItalie = lazy(() => import("./pages/blog/QuandPartirItalie"));
+const ItineraireEspagne10Jours = lazy(() => import("./pages/blog/ItineraireEspagne10Jours"));
+const BudgetVoyageEspagne = lazy(() => import("./pages/blog/BudgetVoyageEspagne"));
+const QuandPartirEspagne = lazy(() => import("./pages/blog/QuandPartirEspagne"));
+
 // Blog - Que Faire à [Ville]
 const QueFaireTokyo = lazy(() => import("./pages/blog/QueFaireTokyo"));
 const QueFaireRome = lazy(() => import("./pages/blog/QueFaireRome"));
@@ -445,6 +475,36 @@ const AppRoutes = () => {
       <Route path="/blog/budget-voyage-laos" element={<BudgetVoyageLaos />} />
       <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
       <Route path="/blog/quand-partir-japon" element={<QuandPartirJapon />} />
+
+      {/* Blog - Clusters SEO : Japon, Maroc, Mexique, Pérou */}
+      <Route path="/blog/itineraire-japon-10-jours" element={<ItineraireJapon10Jours />} />
+      <Route path="/blog/budget-voyage-japon" element={<BudgetVoyageJapon />} />
+      <Route path="/blog/itineraire-maroc-10-jours" element={<ItineraireMaroc10Jours />} />
+      <Route path="/blog/budget-voyage-maroc" element={<BudgetVoyageMaroc />} />
+      <Route path="/blog/quand-partir-maroc" element={<QuandPartirMaroc />} />
+      <Route path="/blog/itineraire-mexique-10-jours" element={<ItineraireMexique10Jours />} />
+      <Route path="/blog/budget-voyage-mexique" element={<BudgetVoyageMexique />} />
+      <Route path="/blog/quand-partir-mexique" element={<QuandPartirMexique />} />
+      <Route path="/blog/itineraire-perou-10-jours" element={<ItinerairePerou10Jours />} />
+      <Route path="/blog/budget-voyage-perou" element={<BudgetVoyagePerou />} />
+      <Route path="/blog/quand-partir-perou" element={<QuandPartirPerou />} />
+
+      {/* Blog - Clusters SEO : Europe du Sud */}
+      <Route path="/blog/itineraire-grece-10-jours" element={<ItineraireGrece10Jours />} />
+      <Route path="/blog/budget-voyage-grece" element={<BudgetVoyageGrece />} />
+      <Route path="/blog/quand-partir-grece" element={<QuandPartirGrece />} />
+      <Route path="/blog/itineraire-croatie-10-jours" element={<ItineraireCroatie10Jours />} />
+      <Route path="/blog/budget-voyage-croatie" element={<BudgetVoyageCroatie />} />
+      <Route path="/blog/quand-partir-croatie" element={<QuandPartirCroatie />} />
+      <Route path="/blog/itineraire-portugal-10-jours" element={<ItinerairePortugal10Jours />} />
+      <Route path="/blog/budget-voyage-portugal" element={<BudgetVoyagePortugal />} />
+      <Route path="/blog/quand-partir-portugal" element={<QuandPartirPortugal />} />
+      <Route path="/blog/itineraire-italie-10-jours" element={<ItineraireItalie10Jours />} />
+      <Route path="/blog/budget-voyage-italie" element={<BudgetVoyageItalie />} />
+      <Route path="/blog/quand-partir-italie" element={<QuandPartirItalie />} />
+      <Route path="/blog/itineraire-espagne-10-jours" element={<ItineraireEspagne10Jours />} />
+      <Route path="/blog/budget-voyage-espagne" element={<BudgetVoyageEspagne />} />
+      <Route path="/blog/quand-partir-espagne" element={<QuandPartirEspagne />} />
 
       {/* Blog - Que Faire à [Ville] */}
       <Route path="/blog/que-faire-tokyo" element={<QueFaireTokyo />} />
