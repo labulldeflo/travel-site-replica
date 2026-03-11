@@ -364,6 +364,13 @@ const Autriche = () => {
             </div>
           </section>
 
+          {/* Bloc affiliation */}
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <OrganiserVoyageBlock destination="Autriche" />
+            </div>
+          </section>
+
           {/* Liens internes */}
           <section className="py-12 bg-muted/30">
             <div className="container mx-auto px-4 max-w-4xl text-center">
