@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import tanzanieImg from '@/assets/destinations/tanzanie.jpg';
 import serengetiImg from '@/assets/cities/serengeti.jpg';
 import kiliImg from '@/assets/cities/kilimandjaro.jpg';
