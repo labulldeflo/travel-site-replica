@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import birmanieImg from '@/assets/destinations/birmanie.jpg';
 import baganImg from '@/assets/cities/bagan.jpg';
 import mandalayImg from '@/assets/cities/mandalay.jpg';
