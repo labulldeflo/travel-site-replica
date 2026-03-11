@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
 import FAQSection from '@/components/FAQSection';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import vietnamImg from '@/assets/destinations/vietnam.jpg';
 import hanoiImg from '@/assets/cities/hanoi.jpg';
 import halongImg from '@/assets/cities/halong.jpg';
