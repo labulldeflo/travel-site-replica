@@ -91,8 +91,8 @@ serve(async (req) => {
     }
 
     // 2. Send welcome email via Resend with all resources
-    // Files are served from the deployed app's public folder
-    const siteUrl = 'https://slsewefciiilrwblqoje.lovable.app';
+    // Files are served from Supabase Storage
+    const storageBaseUrl = `${Deno.env.get('SUPABASE_URL')}/storage/v1/object/public/downloads`;
     
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
