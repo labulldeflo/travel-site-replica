@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import croatieImg from '@/assets/destinations/croatie.jpg';
 import dubrovnikImg from '@/assets/cities/dubrovnik.jpg';
 import splitImg from '@/assets/cities/split.jpg';
