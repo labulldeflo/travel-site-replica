@@ -22,7 +22,7 @@ const RessourcesGratuites = () => {
           description: 'Liste complète de tout ce qu\'il faut prévoir avant, pendant et après votre voyage.',
           format: 'PDF',
           featured: true,
-          downloadUrl: '/checklist-voyageuse-organisee.pdf',
+          downloadUrl: `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/downloads/checklist-voyageuse-organisee.pdf`,
           isExternal: true,
         },
         {

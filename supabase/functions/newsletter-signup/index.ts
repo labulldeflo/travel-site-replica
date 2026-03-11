@@ -91,8 +91,8 @@ serve(async (req) => {
     }
 
     // 2. Send welcome email via Resend with all resources
-    // Files are served from the deployed app's public folder
-    const siteUrl = 'https://slsewefciiilrwblqoje.lovable.app';
+    // Files are served from Supabase Storage
+    const storageBaseUrl = `${Deno.env.get('SUPABASE_URL')}/storage/v1/object/public/downloads`;
     
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -120,13 +120,13 @@ serve(async (req) => {
               <h3 style="color: #0891b2; margin-top: 0;">✅ Check-lists Voyage</h3>
               <ul style="list-style: none; padding: 0;">
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/checklist-voyageuse-organisee.pdf" 
+                  <a href="${storageBaseUrl}/checklist-voyageuse-organisee.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📄 Check-list Ultime de la Voyageuse Organisée
                   </a>
                 </li>
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/checklist-documents-voyage.pdf" 
+                  <a href="${storageBaseUrl}/checklist-documents-voyage.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📄 Check-list Documents de Voyage
                   </a>
@@ -136,25 +136,25 @@ serve(async (req) => {
               <h3 style="color: #0891b2; margin-top: 20px;">🗺️ Mini-Guides par Continent</h3>
               <ul style="list-style: none; padding: 0;">
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/guide-asie-sud-est.pdf" 
+                  <a href="${storageBaseUrl}/guide-asie-sud-est.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📚 Guide Express Asie du Sud-Est
                   </a>
                 </li>
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/guide-europe.pdf" 
+                  <a href="${storageBaseUrl}/guide-europe.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📚 Guide Express Europe
                   </a>
                 </li>
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/guide-afrique.pdf" 
+                  <a href="${storageBaseUrl}/guide-afrique.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📚 Guide Express Afrique
                   </a>
                 </li>
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/Guide-tour-du-monde.pdf" 
+                  <a href="${storageBaseUrl}/Guide-tour-du-monde.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📚 Guide Complet Tour du Monde
                   </a>
@@ -164,7 +164,7 @@ serve(async (req) => {
               <h3 style="color: #0891b2; margin-top: 20px;">📱 Outils Pratiques</h3>
               <ul style="list-style: none; padding: 0;">
                 <li style="margin: 10px 0;">
-                  <a href="${siteUrl}/top-applis-voyage.pdf" 
+                  <a href="${storageBaseUrl}/top-applis-voyage.pdf" 
                      style="color: #0891b2; text-decoration: none; font-weight: bold;">
                     📱 Top 15 des Applis Voyage Indispensables
                   </a>
