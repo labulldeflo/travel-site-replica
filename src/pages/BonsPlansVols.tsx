@@ -262,6 +262,10 @@ const BonsPlansVols = () => {
               </div>
             </Card>
 
+            {/* Cross-promo */}
+            <AffiliateBlock {...AFFILIATE_BLOCKS.hebergement} variant="compact" />
+            <AffiliateBlock {...AFFILIATE_BLOCKS.esim} variant="compact" />
+
             <p className="text-xs text-muted-foreground text-center mt-8">
               Certains liens sont des liens affiliés • Nous touchons une petite commission sans surcoût pour vous
             </p>
