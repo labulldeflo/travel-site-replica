@@ -476,6 +476,36 @@ const AppRoutes = () => {
       <Route path="/blog/quand-partir-laos" element={<QuandPartirLaos />} />
       <Route path="/blog/quand-partir-japon" element={<QuandPartirJapon />} />
 
+      {/* Blog - Clusters SEO : Japon, Maroc, Mexique, Pérou */}
+      <Route path="/blog/itineraire-japon-10-jours" element={<ItineraireJapon10Jours />} />
+      <Route path="/blog/budget-voyage-japon" element={<BudgetVoyageJapon />} />
+      <Route path="/blog/itineraire-maroc-10-jours" element={<ItineraireMaroc10Jours />} />
+      <Route path="/blog/budget-voyage-maroc" element={<BudgetVoyageMaroc />} />
+      <Route path="/blog/quand-partir-maroc" element={<QuandPartirMaroc />} />
+      <Route path="/blog/itineraire-mexique-10-jours" element={<ItineraireMexique10Jours />} />
+      <Route path="/blog/budget-voyage-mexique" element={<BudgetVoyageMexique />} />
+      <Route path="/blog/quand-partir-mexique" element={<QuandPartirMexique />} />
+      <Route path="/blog/itineraire-perou-10-jours" element={<ItinerairePerou10Jours />} />
+      <Route path="/blog/budget-voyage-perou" element={<BudgetVoyagePerou />} />
+      <Route path="/blog/quand-partir-perou" element={<QuandPartirPerou />} />
+
+      {/* Blog - Clusters SEO : Europe du Sud */}
+      <Route path="/blog/itineraire-grece-10-jours" element={<ItineraireGrece10Jours />} />
+      <Route path="/blog/budget-voyage-grece" element={<BudgetVoyageGrece />} />
+      <Route path="/blog/quand-partir-grece" element={<QuandPartirGrece />} />
+      <Route path="/blog/itineraire-croatie-10-jours" element={<ItineraireCroatie10Jours />} />
+      <Route path="/blog/budget-voyage-croatie" element={<BudgetVoyageCroatie />} />
+      <Route path="/blog/quand-partir-croatie" element={<QuandPartirCroatie />} />
+      <Route path="/blog/itineraire-portugal-10-jours" element={<ItinerairePortugal10Jours />} />
+      <Route path="/blog/budget-voyage-portugal" element={<BudgetVoyagePortugal />} />
+      <Route path="/blog/quand-partir-portugal" element={<QuandPartirPortugal />} />
+      <Route path="/blog/itineraire-italie-10-jours" element={<ItineraireItalie10Jours />} />
+      <Route path="/blog/budget-voyage-italie" element={<BudgetVoyageItalie />} />
+      <Route path="/blog/quand-partir-italie" element={<QuandPartirItalie />} />
+      <Route path="/blog/itineraire-espagne-10-jours" element={<ItineraireEspagne10Jours />} />
+      <Route path="/blog/budget-voyage-espagne" element={<BudgetVoyageEspagne />} />
+      <Route path="/blog/quand-partir-espagne" element={<QuandPartirEspagne />} />
+
       {/* Blog - Que Faire à [Ville] */}
       <Route path="/blog/que-faire-tokyo" element={<QueFaireTokyo />} />
       <Route path="/blog/que-faire-rome" element={<QueFaireRome />} />
