@@ -1,5 +1,5 @@
 import { ArrowLeft, Shield, AlertCircle, Heart as HeartPulse, FileText, ExternalLink, Compass, HelpCircle, Lock, Smartphone } from 'lucide-react';
-import { AffiliateBlock } from '@/components/affiliate';
+import { AffiliateBlock, ComparisonTable, RecommendationCard, ContextualEmailCapture, MoneyPageLinks } from '@/components/affiliate';
 import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
