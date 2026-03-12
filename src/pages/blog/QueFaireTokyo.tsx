@@ -136,7 +136,7 @@ const QueFaireTokyo = () => {
             Le musée dédié aux films du Studio Ghibli (Mon Voisin Totoro, Le Voyage de Chihiro) est un lieu magique à Mitaka. <strong>Réservation obligatoire</strong> des mois à l'avance sur le site officiel. Le bâtiment lui-même est une œuvre d'art conçue par Hayao Miyazaki.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="gastronomie" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Utensils className="h-7 w-7 text-ocean" /> Gastronomie Tokyoïte
           </h2>
 
