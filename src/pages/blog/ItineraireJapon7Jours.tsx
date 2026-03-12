@@ -152,7 +152,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 25-55€</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-6" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 6 : Excursion à Nara + Arrivée à Osaka
           </h2>
           <p>Nara est à <strong>45 minutes de Kyoto en train JR</strong> (couvert par le JR Pass).</p>
