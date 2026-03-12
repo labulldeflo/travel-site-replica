@@ -3,11 +3,33 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import TableOfContents from "@/components/TableOfContents";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { OrganiserVoyageBlock } from "@/components/affiliate";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Compass, Train, Camera, DollarSign } from "lucide-react";
 import japonImage from "@/assets/destinations/japon.jpg";
+
+const tocItems = [
+  { id: "resume", label: "Résumé de l'itinéraire" },
+  { id: "jour-1", label: "Jour 1 : Tokyo – Shibuya et Shinjuku" },
+  { id: "jour-2", label: "Jour 2 : Tokyo – Asakusa et Akihabara" },
+  { id: "jour-3", label: "Jour 3 : Tokyo – Harajuku et Meiji-jingu" },
+  { id: "jour-4", label: "Jour 4 : Shinkansen vers Kyoto" },
+  { id: "jour-5", label: "Jour 5 : Kyoto – Kinkaku-ji et Arashiyama" },
+  { id: "jour-6", label: "Jour 6 : Excursion à Nara + Osaka" },
+  { id: "jour-7", label: "Jour 7 : Osaka – Château et Street Food" },
+  { id: "budget", label: "Budget Récapitulatif" },
+  { id: "conseils", label: "Conseils Pratiques" },
+];
+
+const guideLinks = [
+  { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+  { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+  { label: "Itinéraire Japon 10 jours", to: "/blog/itineraire-japon-10-jours", icon: "itineraire" as const },
+  { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+];
 
 const ItineraireJapon7Jours = () => {
   const faqs = [
