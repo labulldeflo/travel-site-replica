@@ -2,8 +2,10 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import GuidesEssentiels from "@/components/GuidesEssentiels";
 import Voyages from "@/components/Voyages";
+import HomepageAffiliateBlock from "@/components/HomepageAffiliateBlock";
 import GuidesSection from "@/components/GuidesSection";
 import ArticlesRecents from "@/components/ArticlesRecents";
+import TrustSection from "@/components/TrustSection";
 import EmailCaptureBlock from "@/components/EmailCaptureBlock";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -24,8 +26,10 @@ const Index = () => {
           <Hero />
           <GuidesEssentiels />
           <Voyages />
+          <HomepageAffiliateBlock />
           <GuidesSection />
           <ArticlesRecents />
+          <TrustSection />
           <EmailCaptureBlock />
         </main>
         <Footer />
