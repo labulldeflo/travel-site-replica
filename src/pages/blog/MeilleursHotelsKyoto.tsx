@@ -174,11 +174,45 @@ const MeilleursHotelsKyoto = () => {
           </div>
         </section>
 
-        {/* Affiliation */}
-        <OrganiserVoyageBlock destination="Kyoto" showHotel showActivites={false} showVols={false} showAssurance variant="compact" />
+        {/* Conversion CTAs */}
+        <RecommendationCard
+          type="best"
+          name="Booking.com — Ryokan et hôtels Kyoto"
+          description="Le plus grand choix d'hébergements à Kyoto : ryokan, machiya et hôtels design avec annulation gratuite."
+          url="https://www.booking.com/?aid=2311236"
+          ctaType="hotel"
+          destination="Kyoto"
+          ctaLabel="Chercher un hébergement à Kyoto"
+        />
+        <RecommendationCard
+          type="simple"
+          name="Agoda — Prix Asie imbattables"
+          description="Offres exclusives pour le Japon. Interface simple avec comparaison rapide des prix par quartier."
+          url="https://www.agoda.com"
+          ctaType="hotel"
+          destination="Kyoto"
+          ctaLabel="Comparer sur Agoda"
+        />
+
+        <ContextualCTA type="activites" destination="Kyoto" />
+        <ContextualCTA type="esim" destination="Japon" />
+        <ContextualCTA type="assurance" />
+
+        <ContextualEmailCapture
+          leadMagnet="Guide hébergement Kyoto"
+          description="Ryokan, machiya ou hôtel design ? Recevez notre sélection par quartier avec les meilleures adresses."
+        />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />
+
+        <MoneyPageLinks destination="Japon" showVols={true} />
+        <GuideCompletBlock destination="Japon" links={[
+          { label: "Que faire à Kyoto", to: "/blog/que-faire-kyoto", icon: "guide" as const },
+          { label: "Activités à Kyoto", to: "/blog/meilleures-activites-kyoto", icon: "guide" as const },
+          { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+          { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+        ]} />
 
         {/* Articles liés */}
         <section className="mb-12">
@@ -200,6 +234,7 @@ const MeilleursHotelsKyoto = () => {
           </div>
         </section>
       </article>
+      <Footer />
     </div>
   );
 };

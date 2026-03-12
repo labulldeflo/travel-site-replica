@@ -963,6 +963,7 @@ const App = () => {
             <Suspense fallback={<LoadingPage />}>
               <AppRoutes />
             </Suspense>
+            <CookieConsent />
           </BrowserRouter>
         </TooltipProvider>
       </ThemeProvider>
