@@ -165,8 +165,7 @@ const BudgetVoyageJapon = () => {
           </div>
 
           <FAQSection faqs={faqs} className="mt-10" />
-
-          <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border">
+          <GuideCompletBlock destination="Japon" links={guideLinks} />
             <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
               <Compass className="h-5 w-5 text-ocean" /> À lire aussi
             </h3>
