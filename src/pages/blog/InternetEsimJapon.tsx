@@ -26,7 +26,18 @@ const InternetEsimJapon = () => {
           <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3"><Wifi className="h-7 w-7 text-ocean" /> Wi-Fi Gratuit</h2>
           <ul><li><strong>Konbini</strong> (7-Eleven, Lawson, FamilyMart) : Wi-Fi gratuit dans toutes les enseignes</li><li><strong>Gares et métro</strong> : accès limité en durée (15-30 min)</li><li><strong>Hôtels</strong> : presque tous offrent le Wi-Fi gratuit</li><li><strong>Japan Wi-Fi</strong> : app officielle avec 200 000+ hotspots</li></ul>
           <div className="mt-10 p-6 bg-accent/30 rounded-lg border-l-4 border-ocean"><p className="text-lg text-foreground italic leading-relaxed">Notre recommandation : <strong>une eSIM Airalo ou Holafly</strong> pour le meilleur rapport qualité-prix. Si vous voyagez en groupe, un pocket Wi-Fi est plus rentable. Le Wi-Fi gratuit seul ne suffit pas pour un voyage confortable.</p></div>
+          <RecommendationCard type="best" name="Holafly — Données illimitées" description="La tranquillité totale : données illimitées, activation en 2 min, assistance en français. Idéal si vous ne voulez pas compter vos Go." url="https://www.holafly.com/fr" ctaType="esim" destination="Japon" />
+          <RecommendationCard type="budget" name="Airalo — Meilleur rapport qualité/prix" description="À partir de 4,50€ pour 1 Go. Plus de 200 destinations, forfaits régionaux très économiques." url="https://www.airalo.com" ctaType="esim" destination="Japon" />
           <FAQSection faqs={faqs} className="mt-10" />
+          <ContextualCTA type="esim" destination="Japon" />
+          <ContextualCTA type="assurance" />
+          <MoneyPageLinks destination="Japon" showVols={true} />
+          <GuideCompletBlock destination="Japon" links={[
+            { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+            { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+            { label: "Comment se déplacer au Japon", to: "/blog/comment-se-deplacer-japon", icon: "guide" as const },
+            { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+          ]} />
           <OrganiserVoyageBlock destination="Japon" showEsim showVols />
           <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border"><h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2"><Compass className="h-5 w-5 text-ocean" /> À lire aussi</h3><div className="grid gap-2 sm:grid-cols-2">{[{ label: "Guide complet du Japon", url: "/blog/guide-complet-japon" }, { label: "Budget voyage Japon", url: "/blog/budget-voyage-japon" }, { label: "Comment se déplacer au Japon", url: "/blog/comment-se-deplacer-japon" }].map((link, idx) => (<Link key={idx} to={link.url} onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 p-2 rounded-md hover:bg-background transition-all text-muted-foreground hover:text-ocean text-sm"><span className="text-ocean">→</span><span>{link.label}</span></Link>))}</div></div>
           <div className="mt-10 p-6 bg-ocean/5 rounded-lg border border-ocean/20"><h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2"><MapPin className="h-5 w-5 text-ocean" /> 🗺️ Destinations</h3><div className="flex flex-wrap gap-2">{[{ label: "🇯🇵 Japon", url: "/destinations/japon" }].map((d, i) => (<Link key={i} to={d.url} onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center gap-1 px-3 py-1.5 bg-background border border-border rounded-full text-sm hover:border-ocean hover:text-ocean transition-colors">{d.label}</Link>))}</div></div>
