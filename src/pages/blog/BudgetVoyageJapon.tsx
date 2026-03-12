@@ -76,7 +76,9 @@ const BudgetVoyageJapon = () => {
             Le Japon a longtemps été perçu comme une <strong>destination hors de prix</strong>, mais la réalité est bien différente. Grâce à la street food abordable, aux <strong>konbini</strong> (supérettes ouvertes 24h/24), aux hôtels capsule et au <strong>Japan Rail Pass</strong>, un voyage au Japon peut être étonnamment accessible. Ce guide détaille chaque poste de dépense pour vous aider à <strong>planifier votre budget précisément</strong>.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <TableOfContents items={tocItems} />
+
+          <h2 id="hebergement" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Home className="h-7 w-7 text-ocean" /> Hébergement : 25 à 200€ par Nuit
           </h2>
           <h3 className="text-xl font-bold mt-6">Hôtels capsule (25-45€/nuit)</h3>
