@@ -20,6 +20,9 @@ const GuideGratuit = lazy(() => import("./pages/GuideGratuit"));
 const RessourcesGratuites = lazy(() => import("./pages/RessourcesGratuites"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Premium = lazy(() => import("./pages/Premium"));
+const PreparerVoyage = lazy(() => import("./pages/PreparerVoyage"));
+const EquipementVoyage = lazy(() => import("./pages/EquipementVoyage"));
+const BudgetVoyagePilier = lazy(() => import("./pages/BudgetVoyagePilier"));
 
 // RESSOURCES GRATUITES - Pages dédiées
 const ChecklistDocumentsVoyage = lazy(() => import("./pages/ressources/ChecklistDocumentsVoyage"));
@@ -491,6 +494,9 @@ const AppRoutes = () => {
       <Route path="/ressources-gratuites/planificateur-voyage" element={<PlanificateurVoyage />} />
       <Route path="/ressources-gratuites/liste-valise-voyage" element={<ListeValiseVoyage />} />
       <Route path="/ressources-gratuites/erreurs-voyage" element={<ErreursVoyage />} />
+      <Route path="/preparer-voyage" element={<PreparerVoyage />} />
+      <Route path="/equipement-voyage" element={<EquipementVoyage />} />
+      <Route path="/budget-voyage" element={<BudgetVoyagePilier />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/organiser-tour-monde-budget-limite" element={<OrganiserTourMondeBudget />} />
       <Route path="/blog/destinations-voyager-seule-50-ans" element={<DestinationsVoyagerSeule50Ans />} />
