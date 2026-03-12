@@ -90,7 +90,7 @@ const BudgetVoyageJapon = () => {
           <h3 className="text-xl font-bold mt-6">Airbnb et guesthouses (30-70€/nuit)</h3>
           <p>Bonne option pour les familles ou séjours prolongés. Les guesthouses à Kyoto offrent souvent un cadre traditionnel à prix raisonnable.</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="nourriture" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Utensils className="h-7 w-7 text-ocean" /> Nourriture : 15 à 60€ par Jour
           </h2>
           <h3 className="text-xl font-bold mt-6">Konbini (3-6€/repas)</h3>
