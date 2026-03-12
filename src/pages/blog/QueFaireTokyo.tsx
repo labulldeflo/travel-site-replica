@@ -155,7 +155,7 @@ const QueFaireTokyo = () => {
             L'ancien marché extérieur de Tsukiji reste un paradis de la street food. Goûtez les <strong>tamagoyaki</strong> (omelettes japonaises), les brochettes de poulpe grillé, les huîtres fraîches et les mochis artisanaux. Arrivez le matin pour la meilleure fraîcheur.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="experiences" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Compass className="h-7 w-7 text-ocean" /> Expériences Uniques
           </h2>
 
