@@ -112,7 +112,7 @@ const BudgetVoyageJapon = () => {
             <li><strong>Bus longue distance</strong> : 15-40€ (alternative économique aux trains, bus de nuit)</li>
           </ul>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="activites" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <MapPin className="h-7 w-7 text-ocean" /> Activités : 5 à 50€ par Jour
           </h2>
           <ul>
