@@ -10,7 +10,6 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
@@ -34,12 +33,6 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-1">
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem>
-                  <Link to="/" className="text-sm font-medium text-foreground hover:text-ocean transition-colors px-3 py-2">
-                    Accueil
-                  </Link>
-                </NavigationMenuItem>
-
                 {/* Destinations */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium">Destinations</NavigationMenuTrigger>
@@ -52,9 +45,8 @@ const Header = () => {
                             <Link to="/destinations/vietnam" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Vietnam</Link>
                             <Link to="/destinations/thailande" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Thaïlande</Link>
                             <Link to="/destinations/cambodge" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Cambodge</Link>
-                            <Link to="/destinations/laos" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Laos</Link>
                             <Link to="/destinations/indonesie" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Indonésie</Link>
-                            <Link to="/destinations/malaisie" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Malaisie</Link>
+                            <Link to="/destinations/japon" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Japon</Link>
                           </div>
                           <Link to="/europe" className="block px-3 py-2 hover:bg-sand/20 rounded-md font-semibold text-sm mt-2">Europe</Link>
                           <div className="pl-3 space-y-1">
@@ -62,7 +54,6 @@ const Header = () => {
                             <Link to="/destinations/espagne" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Espagne</Link>
                             <Link to="/destinations/portugal" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Portugal</Link>
                             <Link to="/destinations/grece" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Grèce</Link>
-                            <Link to="/destinations/islande" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Islande</Link>
                           </div>
                         </div>
                         <div className="space-y-2">
@@ -70,17 +61,12 @@ const Header = () => {
                           <div className="pl-3 space-y-1">
                             <Link to="/destinations/maroc" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Maroc</Link>
                             <Link to="/destinations/egypte" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Égypte</Link>
-                            <Link to="/destinations/kenya" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Kenya</Link>
-                            <Link to="/destinations/tanzanie" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Tanzanie</Link>
                           </div>
                           <Link to="/amerique" className="block px-3 py-2 hover:bg-sand/20 rounded-md font-semibold text-sm mt-2">Amérique</Link>
                           <div className="pl-3 space-y-1">
                             <Link to="/destinations/usa" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">États-Unis</Link>
-                            <Link to="/destinations/canada" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Canada</Link>
                             <Link to="/destinations/mexique" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Mexique</Link>
                             <Link to="/destinations/perou" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Pérou</Link>
-                            <Link to="/destinations/bresil" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Brésil</Link>
-                            <Link to="/destinations/argentine" className="block px-3 py-1 hover:bg-sand/10 rounded-md text-sm">Argentine</Link>
                           </div>
                         </div>
                       </div>
@@ -93,39 +79,39 @@ const Header = () => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                {/* Guides de voyage */}
+                {/* Préparer son voyage */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium">Guides de voyage</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-sm font-medium">Préparer son voyage</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[280px] p-4 bg-background border border-sand/20 rounded-lg shadow-lg space-y-1">
-                      <Link to="/guides/budget" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">💰 Budget & Coûts</Link>
+                      <Link to="/preparer-voyage" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm font-medium">📋 Checklist complète</Link>
+                      <Link to="/budget-voyage" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">💰 Budget par pays</Link>
                       <Link to="/guides/planification" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">🗺️ Itinéraires</Link>
                       <Link to="/guides/vol" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">✈️ Vols & Transports</Link>
                       <Link to="/guides/securite" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">🛡️ Assurance voyage</Link>
-                      <Link to="/guides/photo" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">📷 Photo voyage</Link>
                       <Link to="/guides" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm font-medium text-ocean">Tous les guides →</Link>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                {/* Conseils pratiques */}
+                {/* Équipement */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium">Conseils pratiques</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[280px] p-4 bg-background border border-sand/20 rounded-lg shadow-lg space-y-1">
-                      <Link to="/bons-plans/hebergement" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">🏨 Hébergements</Link>
-                      <Link to="/bons-plans/vols" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">✈️ Billets d'avion</Link>
-                      <Link to="/bons-plans/cartes-sim" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">📱 Cartes SIM</Link>
-                      <Link to="/tests" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">🎒 Tests matériel</Link>
-                      <Link to="/ressources-gratuites" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">📥 Ressources gratuites</Link>
-                      <Link to="/blog" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">📝 Blog</Link>
-                    </div>
-                  </NavigationMenuContent>
+                  <Link to="/equipement-voyage" className="text-sm font-medium text-foreground hover:text-ocean transition-colors px-3 py-2">
+                    Équipement
+                  </Link>
                 </NavigationMenuItem>
 
+                {/* Blog */}
                 <NavigationMenuItem>
-                  <Link to="/a-propos" className="text-sm font-medium text-foreground hover:text-ocean transition-colors px-3 py-2">
-                    À propos
+                  <Link to="/blog" className="text-sm font-medium text-foreground hover:text-ocean transition-colors px-3 py-2">
+                    Blog
+                  </Link>
+                </NavigationMenuItem>
+
+                {/* Ressources gratuites */}
+                <NavigationMenuItem>
+                  <Link to="/ressources-gratuites" className="text-sm font-medium text-foreground hover:text-ocean transition-colors px-3 py-2">
+                    Ressources gratuites
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
@@ -141,10 +127,6 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 space-y-2 pb-4">
-            <Link to="/" className="block py-2 text-sm font-medium text-foreground hover:text-ocean" onClick={() => setIsMenuOpen(false)}>
-              Accueil
-            </Link>
-            
             {/* Destinations Mobile */}
             <div>
               <button
@@ -156,68 +138,48 @@ const Header = () => {
               </button>
               {openSubmenu === 'destinations' && (
                 <div className="pl-4 space-y-1 mt-1 max-h-[50vh] overflow-y-auto">
-                  <div className="font-semibold text-sm py-1">Asie du Sud-Est</div>
-                  <Link to="/destinations/vietnam" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Vietnam</Link>
+                  <div className="font-semibold text-sm py-1">Asie</div>
                   <Link to="/destinations/thailande" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Thaïlande</Link>
-                  <Link to="/destinations/cambodge" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Cambodge</Link>
+                  <Link to="/destinations/vietnam" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Vietnam</Link>
+                  <Link to="/destinations/japon" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Japon</Link>
                   <Link to="/destinations/indonesie" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Indonésie</Link>
-                  
                   <div className="font-semibold text-sm py-1 mt-2">Europe</div>
                   <Link to="/destinations/italie" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Italie</Link>
                   <Link to="/destinations/espagne" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Espagne</Link>
                   <Link to="/destinations/portugal" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Portugal</Link>
-                  
-                  <div className="font-semibold text-sm py-1 mt-2">Afrique & Amérique</div>
-                  <Link to="/destinations/maroc" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Maroc</Link>
-                  <Link to="/destinations/usa" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>États-Unis</Link>
-                  <Link to="/destinations/mexique" className="block py-1 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Mexique</Link>
-                  
                   <Link to="/destinations" className="block py-1.5 text-sm text-ocean font-medium" onClick={() => setIsMenuOpen(false)}>Toutes les destinations →</Link>
                 </div>
               )}
             </div>
 
-            {/* Guides Mobile */}
+            {/* Préparer son voyage Mobile */}
             <div>
               <button
-                onClick={() => toggleSubmenu('guides')}
+                onClick={() => toggleSubmenu('preparer')}
                 className="flex items-center justify-between w-full py-2 text-sm font-medium text-foreground hover:text-ocean"
               >
-                Guides de voyage
-                <ChevronDown className={`h-4 w-4 transition-transform ${openSubmenu === 'guides' ? 'rotate-180' : ''}`} />
+                Préparer son voyage
+                <ChevronDown className={`h-4 w-4 transition-transform ${openSubmenu === 'preparer' ? 'rotate-180' : ''}`} />
               </button>
-              {openSubmenu === 'guides' && (
+              {openSubmenu === 'preparer' && (
                 <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/guides/budget" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Budget & Coûts</Link>
+                  <Link to="/preparer-voyage" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Checklist complète</Link>
+                  <Link to="/budget-voyage" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Budget par pays</Link>
                   <Link to="/guides/planification" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Itinéraires</Link>
-                  <Link to="/guides/vol" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Vols & Transports</Link>
                   <Link to="/guides/securite" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Assurance voyage</Link>
                   <Link to="/guides" className="block py-1.5 text-sm text-ocean font-medium" onClick={() => setIsMenuOpen(false)}>Tous les guides →</Link>
                 </div>
               )}
             </div>
 
-            {/* Conseils Mobile */}
-            <div>
-              <button
-                onClick={() => toggleSubmenu('conseils')}
-                className="flex items-center justify-between w-full py-2 text-sm font-medium text-foreground hover:text-ocean"
-              >
-                Conseils pratiques
-                <ChevronDown className={`h-4 w-4 transition-transform ${openSubmenu === 'conseils' ? 'rotate-180' : ''}`} />
-              </button>
-              {openSubmenu === 'conseils' && (
-                <div className="pl-4 space-y-1 mt-1">
-                  <Link to="/bons-plans/hebergement" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Hébergements</Link>
-                  <Link to="/bons-plans/vols" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Billets d'avion</Link>
-                  <Link to="/tests" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Tests matériel</Link>
-                  <Link to="/blog" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-                </div>
-              )}
-            </div>
-
-            <Link to="/a-propos" className="block py-2 text-sm font-medium text-foreground hover:text-ocean" onClick={() => setIsMenuOpen(false)}>
-              À propos
+            <Link to="/equipement-voyage" className="block py-2 text-sm font-medium text-foreground hover:text-ocean" onClick={() => setIsMenuOpen(false)}>
+              Équipement
+            </Link>
+            <Link to="/blog" className="block py-2 text-sm font-medium text-foreground hover:text-ocean" onClick={() => setIsMenuOpen(false)}>
+              Blog
+            </Link>
+            <Link to="/ressources-gratuites" className="block py-2 text-sm font-medium text-foreground hover:text-ocean" onClick={() => setIsMenuOpen(false)}>
+              Ressources gratuites
             </Link>
           </div>
         )}
