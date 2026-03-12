@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
-import OrganiserVoyageBlock from "@/components/affiliate/OrganiserVoyageBlock";
+import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture } from "@/components/affiliate";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Clock, DollarSign, Compass, Camera, TreePine, Palette } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import heroImg from "@/assets/cities/kyoto-activites.jpg";
 
 const MeilleuresActivitesKyoto = () => {
@@ -19,6 +22,7 @@ const MeilleuresActivitesKyoto = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <SEO
         title="Les 20 Meilleures Activités à Kyoto (2025)"
         description="Découvrez les meilleures activités à Kyoto : temples dorés, forêt de bambous, quartier des geishas, cérémonie du thé. Guide complet avec prix et conseils."
@@ -207,11 +211,36 @@ const MeilleuresActivitesKyoto = () => {
           </div>
         </section>
 
-        {/* Affiliation */}
-        <OrganiserVoyageBlock destination="Kyoto" showActivites showHotel showVols={false} showEsim variant="compact" />
+        {/* Conversion CTAs */}
+        <RecommendationCard
+          type="best"
+          name="GetYourGuide — Activités à Kyoto"
+          description="Cérémonie du thé, visite guidée des temples, cours de cuisine kaiseki : réservez avec annulation gratuite."
+          url="https://www.getyourguide.fr"
+          ctaType="activites"
+          destination="Kyoto"
+          ctaLabel="Voir les activités à Kyoto"
+        />
+
+        <ContextualCTA type="hotel" destination="Kyoto" />
+        <ContextualCTA type="esim" destination="Japon" />
+        <ContextualCTA type="assurance" />
+
+        <ContextualEmailCapture
+          leadMagnet="Checklist Kyoto gratuite"
+          description="Temples, geishas, marchés : recevez notre checklist des incontournables avec prix et horaires."
+        />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />
+
+        <MoneyPageLinks destination="Japon" showVols={true} />
+        <GuideCompletBlock destination="Japon" links={[
+          { label: "Meilleurs hôtels à Kyoto", to: "/blog/meilleurs-hotels-kyoto", icon: "guide" as const },
+          { label: "Que faire à Kyoto", to: "/blog/que-faire-kyoto", icon: "guide" as const },
+          { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+          { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+        ]} />
 
         {/* Articles liés */}
         <section className="mb-12">
@@ -233,6 +262,7 @@ const MeilleuresActivitesKyoto = () => {
           </div>
         </section>
       </article>
+      <Footer />
     </div>
   );
 };

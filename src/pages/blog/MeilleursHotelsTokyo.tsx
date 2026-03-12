@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
-import OrganiserVoyageBlock from "@/components/affiliate/OrganiserVoyageBlock";
+import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture } from "@/components/affiliate";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Hotel, DollarSign, Compass, Crown, Wallet, Heart } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import heroImg from "@/assets/cities/tokyo-hotels.jpg";
 
 const MeilleursHotelsTokyo = () => {
@@ -19,6 +22,7 @@ const MeilleursHotelsTokyo = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <SEO
         title="Meilleurs Hôtels à Tokyo – Notre Sélection 2025"
         description="Où dormir à Tokyo ? Sélection des meilleurs hôtels par quartier et budget : luxe, milieu de gamme, budget. Conseils pour réserver au meilleur prix."
@@ -171,11 +175,45 @@ const MeilleursHotelsTokyo = () => {
           </div>
         </section>
 
-        {/* Affiliation */}
-        <OrganiserVoyageBlock destination="Tokyo" showHotel showActivites={false} showVols={false} showAssurance variant="compact" />
+        {/* Conversion CTAs */}
+        <RecommendationCard
+          type="best"
+          name="Booking.com — Annulation gratuite"
+          description="Le plus grand choix d'hôtels à Tokyo avec annulation gratuite sur la majorité des offres. Programme Genius pour des réductions de 10-20%."
+          url="https://www.booking.com/?aid=2311236"
+          ctaType="hotel"
+          destination="Tokyo"
+          ctaLabel="Chercher un hôtel à Tokyo"
+        />
+        <RecommendationCard
+          type="budget"
+          name="Agoda — Meilleurs prix en Asie"
+          description="Souvent les prix les plus bas pour le Japon. Offres flash quotidiennes et programme fidélité AgodaCash."
+          url="https://www.agoda.com"
+          ctaType="hotel"
+          destination="Tokyo"
+          ctaLabel="Comparer sur Agoda"
+        />
+
+        <ContextualCTA type="activites" destination="Tokyo" />
+        <ContextualCTA type="esim" destination="Japon" />
+        <ContextualCTA type="assurance" />
+
+        <ContextualEmailCapture
+          leadMagnet="Checklist hôtels Tokyo"
+          description="Recevez notre sélection des meilleurs hôtels par quartier avec les prix et liens de réservation."
+        />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />
+
+        <MoneyPageLinks destination="Japon" showVols={true} />
+        <GuideCompletBlock destination="Japon" links={[
+          { label: "Que faire à Tokyo", to: "/blog/que-faire-tokyo", icon: "guide" as const },
+          { label: "Activités à Tokyo", to: "/blog/meilleures-activites-tokyo", icon: "guide" as const },
+          { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+          { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+        ]} />
 
         {/* Articles liés */}
         <section className="mb-12">
@@ -197,6 +235,7 @@ const MeilleursHotelsTokyo = () => {
           </div>
         </section>
       </article>
+      <Footer />
     </div>
   );
 };

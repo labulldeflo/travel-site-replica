@@ -1,4 +1,5 @@
 import React, { useEffect, Suspense, lazy } from "react";
+import CookieConsent from "@/components/CookieConsent";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -962,6 +963,7 @@ const App = () => {
             <Suspense fallback={<LoadingPage />}>
               <AppRoutes />
             </Suspense>
+            <CookieConsent />
           </BrowserRouter>
         </TooltipProvider>
       </ThemeProvider>
