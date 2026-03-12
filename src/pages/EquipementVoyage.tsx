@@ -67,8 +67,8 @@ const EquipementVoyage = () => {
   return (
     <>
       <SEO
-        title="Équipement voyage : comparatifs sacs, valises et accessoires"
-        description="Comparatifs et recommandations d'équipement voyage : sacs à dos, valises cabine, chaussures de randonnée et accessoires indispensables pour voyager léger."
+        title="Meilleur équipement voyage 2025 : sacs, valises et accessoires testés"
+        description="Quel sac à dos choisir ? Quelle valise cabine acheter ? Comparatifs et recommandations d'équipement voyage testés par des voyageurs expérimentés."
         url="/equipement-voyage"
         breadcrumbs={[
           { name: "Accueil", url: "/" },

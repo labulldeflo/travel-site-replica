@@ -21,8 +21,8 @@ const GuideSecurite = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Guide Sécurité Voyage 2025 – Assurance, Santé et Précautions"
-        description="Conseils essentiels pour voyager en sécurité : assurances voyage comparées, vaccins par destination, trousse à pharmacie, arnaques à éviter et outils de sécurité numérique."
+        title="Assurance voyage 2025 : laquelle choisir ? (Chapka vs Heymondo)"
+        description="Faut-il une assurance voyage ? Comparatif Chapka vs Heymondo : couverture, prix, rapatriement. + conseils vaccins, sécurité et trousse à pharmacie."
         url="/guides/securite"
         hideH1={true}
         breadcrumbs={[

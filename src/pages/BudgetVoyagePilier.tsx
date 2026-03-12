@@ -48,8 +48,8 @@ const BudgetVoyagePilier = () => {
   return (
     <>
       <SEO
-        title="Budget voyage : combien coûte un voyage par pays (2025)"
-        description="Budget détaillé par pays et par poste de dépense : hébergement, repas, transport, activités. Estimez le coût de votre prochain voyage avec nos données réelles."
+        title="Budget voyage 2025 : combien coûte vraiment un voyage par pays"
+        description="Combien coûte un voyage en Thaïlande, au Japon ou au Portugal ? Budget détaillé par jour et par pays : hébergement, repas, transport, activités."
         url="/budget-voyage"
         breadcrumbs={[
           { name: "Accueil", url: "/" },
