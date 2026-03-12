@@ -100,7 +100,7 @@ const BudgetVoyageJapon = () => {
           <h3 className="text-xl font-bold mt-6">Restaurants haut de gamme (30-100€/repas)</h3>
           <p>Un repas kaiseki coûte 50-150€, un restaurant étoilé Michelin 100-300€. Tokyo compte plus d'étoiles Michelin que Paris !</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="transport" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Train className="h-7 w-7 text-ocean" /> Transport : Le JR Pass Change Tout
           </h2>
           <p>Le transport est le poste le plus important mais aussi le plus optimisable grâce au <strong>Japan Rail Pass</strong>.</p>
