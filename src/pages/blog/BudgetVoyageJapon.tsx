@@ -166,22 +166,6 @@ const BudgetVoyageJapon = () => {
 
           <FAQSection faqs={faqs} className="mt-10" />
           <GuideCompletBlock destination="Japon" links={guideLinks} />
-            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-              <Compass className="h-5 w-5 text-ocean" /> À lire aussi
-            </h3>
-            <div className="grid gap-2 sm:grid-cols-2">
-              {[
-                { label: "Itinéraire Japon 10 jours", url: "/blog/itineraire-japon-10-jours" },
-                { label: "Quand partir au Japon", url: "/blog/quand-partir-japon" },
-                { label: "Que faire à Tokyo", url: "/blog/que-faire-tokyo" },
-                { label: "Préparer son voyage", url: "/guides/preparer-voyage" },
-              ].map((link, idx) => (
-                <Link key={idx} to={link.url} onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 p-2 rounded-md hover:bg-background transition-all text-muted-foreground hover:text-ocean text-sm">
-                  <span className="text-ocean">→</span><span>{link.label}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
 
           <div className="mt-10 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
             <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
