@@ -219,6 +219,7 @@ const ItineraireJapon7Jours = () => {
           </div>
 
           <FAQSection faqs={faqs} className="mt-10" />
+          <GuideCompletBlock destination="Japon" links={guideLinks} />
           <OrganiserVoyageBlock destination="Japon" showVols showHotel showActivites showEsim />
 
           <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border">
