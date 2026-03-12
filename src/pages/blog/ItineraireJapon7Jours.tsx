@@ -79,8 +79,10 @@ const ItineraireJapon7Jours = () => {
             Une semaine au Japon, c'est court mais <strong>largement suffisant pour tomber amoureux</strong> de ce pays extraordinaire. Cet itinéraire de 7 jours vous emmène à travers les <strong>trois villes incontournables</strong> : Tokyo la futuriste, Kyoto l'impériale et Osaka la gourmande. Optimisé pour les premiers voyages, ce programme maximise chaque journée tout en laissant de la place à la spontanéité.
           </p>
 
+          <TableOfContents items={tocItems} />
+
           <div className="my-8 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
-            <h2 className="text-xl font-bold text-foreground mt-0 mb-3">📋 Résumé de l'itinéraire</h2>
+            <h2 id="resume" className="text-xl font-bold text-foreground mt-0 mb-3">📋 Résumé de l'itinéraire</h2>
             <ul className="text-sm space-y-1 mb-0">
               <li><strong>Jours 1-3</strong> : Tokyo (Shibuya, Asakusa, Akihabara, Shinjuku)</li>
               <li><strong>Jour 4</strong> : Shinkansen vers Kyoto</li>
