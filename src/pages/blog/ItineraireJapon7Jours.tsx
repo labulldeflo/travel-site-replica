@@ -94,7 +94,7 @@ const ItineraireJapon7Jours = () => {
             </ul>
           </div>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-1" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 1 : Arrivée à Tokyo – Shibuya et Shinjuku
           </h2>
           <p>Après votre arrivée à l'aéroport de <strong>Narita</strong> (Narita Express, 36 min) ou <strong>Haneda</strong> (monorail, 20 min), direction votre hôtel à Shinjuku ou Shibuya. Après vous être installé :</p>
