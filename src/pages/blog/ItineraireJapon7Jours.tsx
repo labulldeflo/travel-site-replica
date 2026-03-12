@@ -141,7 +141,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 30-50€ (hors transport couvert par JR Pass)</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-5" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 5 : Kyoto – Kinkaku-ji, Arashiyama et Geishas
           </h2>
           <ul>
