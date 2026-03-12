@@ -20,6 +20,9 @@ const GuideGratuit = lazy(() => import("./pages/GuideGratuit"));
 const RessourcesGratuites = lazy(() => import("./pages/RessourcesGratuites"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Premium = lazy(() => import("./pages/Premium"));
+const PreparerVoyage = lazy(() => import("./pages/PreparerVoyage"));
+const EquipementVoyage = lazy(() => import("./pages/EquipementVoyage"));
+const BudgetVoyagePilier = lazy(() => import("./pages/BudgetVoyagePilier"));
 
 // RESSOURCES GRATUITES - Pages dédiées
 const ChecklistDocumentsVoyage = lazy(() => import("./pages/ressources/ChecklistDocumentsVoyage"));
