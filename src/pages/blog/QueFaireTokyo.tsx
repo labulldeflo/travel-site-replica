@@ -112,7 +112,7 @@ const QueFaireTokyo = () => {
             Avec ses <strong>634 mètres</strong>, c'est la plus haute tour du Japon et la deuxième structure autoportante la plus haute du monde. Le panorama à 360° sur Tokyo est époustouflant, surtout au coucher du soleil. Par temps clair, vous apercevrez le Mont Fuji.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="culture" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Culture et Art
           </h2>
 
