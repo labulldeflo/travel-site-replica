@@ -210,11 +210,36 @@ const MeilleuresActivitesKyoto = () => {
           </div>
         </section>
 
-        {/* Affiliation */}
-        <OrganiserVoyageBlock destination="Kyoto" showActivites showHotel showVols={false} showEsim variant="compact" />
+        {/* Conversion CTAs */}
+        <RecommendationCard
+          type="best"
+          name="GetYourGuide — Activités à Kyoto"
+          description="Cérémonie du thé, visite guidée des temples, cours de cuisine kaiseki : réservez avec annulation gratuite."
+          url="https://www.getyourguide.fr"
+          ctaType="activites"
+          destination="Kyoto"
+          ctaLabel="Voir les activités à Kyoto"
+        />
+
+        <ContextualCTA type="hotel" destination="Kyoto" />
+        <ContextualCTA type="esim" destination="Japon" />
+        <ContextualCTA type="assurance" />
+
+        <ContextualEmailCapture
+          leadMagnet="Checklist Kyoto gratuite"
+          description="Temples, geishas, marchés : recevez notre checklist des incontournables avec prix et horaires."
+        />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />
+
+        <MoneyPageLinks destination="Japon" showVols={true} />
+        <GuideCompletBlock destination="Japon" links={[
+          { label: "Meilleurs hôtels à Kyoto", to: "/blog/meilleurs-hotels-kyoto", icon: "guide" as const },
+          { label: "Que faire à Kyoto", to: "/blog/que-faire-kyoto", icon: "guide" as const },
+          { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+          { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+        ]} />
 
         {/* Articles liés */}
         <section className="mb-12">
@@ -236,6 +261,7 @@ const MeilleuresActivitesKyoto = () => {
           </div>
         </section>
       </article>
+      <Footer />
     </div>
   );
 };

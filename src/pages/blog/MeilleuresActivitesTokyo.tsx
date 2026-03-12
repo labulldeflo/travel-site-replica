@@ -232,11 +232,36 @@ const MeilleuresActivitesTokyo = () => {
           </div>
         </section>
 
-        {/* Affiliation */}
-        <OrganiserVoyageBlock destination="Tokyo" showActivites showHotel showVols={false} showEsim variant="compact" />
+        {/* Conversion CTAs */}
+        <RecommendationCard
+          type="best"
+          name="GetYourGuide — Réserver des activités à Tokyo"
+          description="Le plus grand choix d'activités à Tokyo avec annulation gratuite 24h avant. Cérémonie du thé, teamLab, food tours et plus."
+          url="https://www.getyourguide.fr"
+          ctaType="activites"
+          destination="Tokyo"
+          ctaLabel="Voir les activités à Tokyo"
+        />
+
+        <ContextualCTA type="hotel" destination="Tokyo" />
+        <ContextualCTA type="esim" destination="Japon" />
+        <ContextualCTA type="assurance" />
+
+        <ContextualEmailCapture
+          leadMagnet="Top 10 activités Tokyo (PDF)"
+          description="Recevez notre sélection des 10 activités incontournables avec prix, horaires et liens de réservation."
+        />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />
+
+        <MoneyPageLinks destination="Japon" showVols={true} />
+        <GuideCompletBlock destination="Japon" links={[
+          { label: "Meilleurs hôtels à Tokyo", to: "/blog/meilleurs-hotels-tokyo", icon: "guide" as const },
+          { label: "Que faire à Tokyo", to: "/blog/que-faire-tokyo", icon: "guide" as const },
+          { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+          { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+        ]} />
 
         {/* Articles liés */}
         <section className="mb-12">
@@ -258,6 +283,7 @@ const MeilleuresActivitesTokyo = () => {
           </div>
         </section>
       </article>
+      <Footer />
     </div>
   );
 };
