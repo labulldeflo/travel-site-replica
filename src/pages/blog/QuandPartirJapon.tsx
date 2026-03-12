@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
 import { ContextualCTA, MoneyPageLinks, ContextualEmailCapture } from "@/components/affiliate";
+import { Link } from "react-router-dom";
 import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Button } from "@/components/ui/button";
 import { Sun, CloudRain, Calendar, Clock, Compass, Thermometer, MapPin, Snowflake } from "lucide-react";
