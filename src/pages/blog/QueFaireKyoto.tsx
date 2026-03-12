@@ -3,7 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
-import { OrganiserVoyageBlock } from "@/components/affiliate";
+import { OrganiserVoyageBlock, ContextualCTA, MoneyPageLinks, ContextualEmailCapture } from "@/components/affiliate";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Compass, Camera, Coffee, Star, Utensils } from "lucide-react";
@@ -223,6 +224,18 @@ const QueFaireKyoto = () => {
               ))}
             </div>
           </div>
+
+          <ContextualCTA type="activites" destination="Kyoto" />
+          <ContextualCTA type="hotel" destination="Kyoto" />
+          <ContextualCTA type="esim" destination="Japon" />
+          <ContextualEmailCapture leadMagnet="Checklist Kyoto gratuite" description="Recevez notre checklist des incontournables de Kyoto avec prix et horaires." />
+          <MoneyPageLinks destination="Japon" showVols={true} />
+          <GuideCompletBlock destination="Japon" links={[
+            { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+            { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+            { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+            { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+          ]} />
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">

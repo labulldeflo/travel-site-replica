@@ -3,7 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import { ContextualCTA, MoneyPageLinks, ContextualEmailCapture } from "@/components/affiliate";
 import { Link } from "react-router-dom";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Button } from "@/components/ui/button";
 import { Sun, CloudRain, Calendar, Clock, Compass, Thermometer, MapPin, Snowflake } from "lucide-react";
 import japonImage from "@/assets/destinations/japon.jpg";
@@ -186,6 +188,18 @@ const QuandPartirJapon = () => {
               ))}
             </div>
           </div>
+
+          <ContextualCTA type="vol" destination="Japon" />
+          <ContextualCTA type="hotel" destination="Japon" />
+          <ContextualCTA type="assurance" />
+          <ContextualEmailCapture leadMagnet="Calendrier Japon 2025" description="Recevez notre calendrier des meilleures périodes, festivals et prix par mois." />
+          <MoneyPageLinks destination="Japon" showVols={true} />
+          <GuideCompletBlock destination="Japon" links={[
+            { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+            { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+            { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+            { label: "Où dormir au Japon", to: "/blog/ou-dormir-japon", icon: "guide" as const },
+          ]} />
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90"><Link to="/destinations/japon" onClick={() => window.scrollTo(0, 0)}>Découvrir le Japon</Link></Button>

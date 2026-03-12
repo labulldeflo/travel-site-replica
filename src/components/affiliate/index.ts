@@ -3,3 +3,6 @@ export { default as OrganiserVoyageBlock } from './OrganiserVoyageBlock';
 export { default as AffiliateDisclaimer } from './AffiliateDisclaimer';
 export { default as ContextualCTA } from './ContextualCTA';
 export { default as MoneyPageLinks } from './MoneyPageLinks';
+export { default as ComparisonTable } from './ComparisonTable';
+export { default as RecommendationCard } from './RecommendationCard';
+export { default as ContextualEmailCapture } from './ContextualEmailCapture';

@@ -3,7 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
-import { OrganiserVoyageBlock } from "@/components/affiliate";
+import { OrganiserVoyageBlock, ContextualCTA, MoneyPageLinks } from "@/components/affiliate";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Compass, Train, Car, DollarSign, Plane } from "lucide-react";
@@ -229,6 +230,17 @@ const CommentDeplacerJapon = () => {
               ))}
             </div>
           </div>
+
+          <ContextualCTA type="vol" destination="Japon" />
+          <ContextualCTA type="esim" destination="Japon" />
+          <ContextualCTA type="assurance" />
+          <MoneyPageLinks destination="Japon" showVols={true} />
+          <GuideCompletBlock destination="Japon" links={[
+            { label: "JR Pass Japon : guide complet", to: "/blog/jr-pass-japon", icon: "guide" as const },
+            { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+            { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+            { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+          ]} />
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">

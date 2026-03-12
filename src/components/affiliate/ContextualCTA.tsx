@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 import { AFFILIATE_LINKS } from '@/lib/affiliateData';
+import { trackAffiliateClick } from '@/lib/affiliateTracking';
 
 type CTAType = 'hotel' | 'assurance' | 'esim' | 'activites' | 'equipement' | 'vol';
 
@@ -89,7 +90,18 @@ const ctaConfig: Record<CTAType, {
 
 const ContextualCTA = ({ type, destination, className = '' }: ContextualCTAProps) => {
   const config = ctaConfig[type];
+  const location = useLocation();
   const title = destination ? `${config.title} — ${destination}` : config.title;
+
+  const handleClick = (provider: string) => {
+    trackAffiliateClick({
+      ctaType: type,
+      provider,
+      destination,
+      page: location.pathname,
+      position: 'inline',
+    });
+  };
 
   return (
     <div className={`not-prose my-8 p-5 rounded-xl border border-ocean/20 bg-ocean/5 ${className}`}>
@@ -105,6 +117,7 @@ const ContextualCTA = ({ type, destination, className = '' }: ContextualCTAProps
           href={config.primaryUrl}
           target="_blank"
           rel="noopener noreferrer nofollow"
+          onClick={() => handleClick(config.primaryLabel)}
           className="inline-flex items-center gap-1.5 px-4 py-2 bg-ocean text-white text-sm font-medium rounded-lg hover:bg-ocean/90 transition-colors"
         >
           {config.primaryLabel}
@@ -115,6 +128,7 @@ const ContextualCTA = ({ type, destination, className = '' }: ContextualCTAProps
             href={config.secondaryUrl}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            onClick={() => handleClick(config.secondaryLabel!)}
             className="inline-flex items-center gap-1.5 px-4 py-2 border border-border text-foreground text-sm font-medium rounded-lg hover:border-ocean/40 hover:text-ocean transition-colors"
           >
             {config.secondaryLabel}
