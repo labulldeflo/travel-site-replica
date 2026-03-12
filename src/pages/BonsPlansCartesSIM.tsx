@@ -321,6 +321,30 @@ const BonsPlansCartesSIM = () => {
               </div>
             </Card>
 
+            <RecommendationCard
+              type="best"
+              name="Holafly — Données illimitées"
+              description="La solution la plus simple : données illimitées, activation en 2 min, assistance en français 24/7. Idéal si vous ne voulez pas compter vos Go."
+              url="https://www.holafly.com/fr"
+              ctaType="esim"
+              ctaLabel="Voir les forfaits Holafly"
+            />
+            <RecommendationCard
+              type="budget"
+              name="Airalo — Le moins cher"
+              description="Dès 4,50$ pour 1 Go. Plus de 200 destinations, forfaits régionaux très économiques. Parfait pour les voyageurs réguliers."
+              url="https://www.airalo.com"
+              ctaType="esim"
+              ctaLabel="Voir les forfaits Airalo"
+            />
+
+            <ContextualEmailCapture
+              leadMagnet="Guide eSIM gratuit"
+              description="Recevez notre guide complet pour choisir la bonne eSIM selon votre destination et votre budget."
+            />
+
+            <MoneyPageLinks showVols={true} />
+
             {/* Cross-promo */}
             <AffiliateBlock {...AFFILIATE_BLOCKS.vols} variant="compact" />
             <AffiliateBlock {...AFFILIATE_BLOCKS.hebergement} variant="compact" />
