@@ -29,7 +29,7 @@ const services = [
   {
     icon: Wifi,
     title: 'eSIM',
-    description: 'Internet à l'étranger',
+    description: "Internet à l'étranger",
     link: '/bons-plans/cartes-sim',
   },
 ];
