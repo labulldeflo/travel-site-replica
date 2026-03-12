@@ -6,6 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import TableOfContents from "@/components/TableOfContents";
 import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { OrganiserVoyageBlock } from "@/components/affiliate";
+import { ContextualCTA, MoneyPageLinks } from "@/components/affiliate";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Compass, Train, Camera, DollarSign } from "lucide-react";
