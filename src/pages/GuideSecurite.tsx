@@ -71,36 +71,61 @@ const GuideSecurite = () => {
             </div>
           </Card>
 
-          {/* Assurances recommandées */}
-          <Card className="p-8 mb-8">
-            <h2 className="text-2xl font-elegant font-semibold text-foreground mb-4">
-              🛡️ Assurances voyage recommandées
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {[
-                { name: "Chapka Assurance", desc: "Cap Aventure (32€/mois) — couverture médicale complète, rapatriement, sports d'aventure inclus. Notre choix #1 pour les voyages.", url: "https://www.chapkadirect.fr", badge: "Recommandé" },
-                { name: "Heymondo", desc: "Assurance flexible avec app mobile intuitive et assistance médicale 24/7 en plusieurs langues. Devis en ligne en 2 minutes.", url: "https://www.heymondo.fr", badge: "Populaire" },
-                { name: "ACS", desc: "Globe Partner (35€/mois) — idéale pour les tours du monde et longs séjours de plus de 3 mois, couverture très complète.", url: "https://www.acs-ami.com" },
-                { name: "SafetyWing", desc: "Nomad Insurance (45$/mois) — conçue pour les nomades digitaux, paiement mensuel flexible sans engagement.", url: "https://www.safetywing.com" },
-                { name: "World Nomads", desc: "Assurance ajustable en cours de voyage — pratique si vos plans changent souvent ou si vous prolongez.", url: "https://www.worldnomads.com" },
-                { name: "Visa Premier / Gold", desc: "Assurance incluse gratuite mais limitée à 90 jours avec des plafonds bas — complétez avec une vraie assurance pour les longs voyages.", url: "#" }
-              ].map((tool, idx) => (
-                <a key={idx} href={tool.url} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-4 rounded-lg border border-border hover:border-ocean/40 hover:bg-muted/30 transition-all group">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold text-foreground group-hover:text-ocean transition-colors">{tool.name}</span>
-                      {tool.badge && <Badge variant="secondary" className="text-xs">{tool.badge}</Badge>}
-                    </div>
-                    <p className="text-sm text-muted-foreground">{tool.desc}</p>
-                  </div>
-                  <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-ocean flex-shrink-0 mt-1" />
-                </a>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground mt-4 text-center">
-              Certains liens sont des liens affiliés • Nous touchons une petite commission sans surcoût pour vous
-            </p>
-          </Card>
+          <ComparisonTable
+            title="Comparatif des meilleures assurances voyage 2025"
+            subtitle="Notre sélection testée et recommandée pour voyager sereinement."
+            ctaType="assurance"
+            items={[
+              {
+                name: "Chapka Cap Aventure",
+                url: "https://www.chapkadirecte.com",
+                badge: "Notre choix #1",
+                price: "Dès 32€/mois",
+                rating: "4.8/5",
+                pros: ["Couverture médicale 200 000€", "Sports d'aventure inclus", "Spécialiste français, processus simple"],
+                cons: ["Plafond médical inférieur à Heymondo", "Pas d'app mobile dédiée"],
+                bestFor: "Voyages de 1 à 12 mois, backpackers et aventuriers",
+              },
+              {
+                name: "Heymondo",
+                url: "https://www.heymondo.fr",
+                badge: "Meilleure couverture",
+                price: "Dès 37€/semaine",
+                rating: "4.6/5",
+                pros: ["Plafond médical 500 000€", "App mobile très pratique", "Assistance 24/7 multilingue"],
+                cons: ["Plus cher pour les longs séjours", "Moins spécialisé France"],
+                bestFor: "Destinations chères (USA, Japon, Canada) et voyages premium",
+              },
+              {
+                name: "SafetyWing Nomad",
+                url: "https://www.safetywing.com",
+                price: "Dès 45$/mois",
+                rating: "4.3/5",
+                pros: ["Paiement mensuel flexible, sans engagement", "Conçue pour les nomades digitaux", "Couverture mondiale continue"],
+                cons: ["Interface en anglais uniquement", "Franchise de 250$ par sinistre"],
+                bestFor: "Nomades digitaux et voyageurs longue durée",
+              },
+            ]}
+          />
+
+          <RecommendationCard
+            type="best"
+            name="Chapka Cap Aventure — Notre recommandation"
+            description="Le meilleur rapport qualité/prix pour 90% des voyageurs. Couverture complète, processus simple, spécialiste français. Dès 32€/mois."
+            url="https://www.chapkadirecte.com"
+            ctaType="assurance"
+            ctaLabel="Obtenir un devis gratuit"
+          />
+          <RecommendationCard
+            type="avoid"
+            name="Carte Visa Premier seule"
+            description="Plafond trop bas (11 000€), durée limitée à 90 jours, exclusions nombreuses (sports, scooter). Ne suffit pas comme assurance principale."
+          />
+
+          <ContextualEmailCapture
+            leadMagnet="Checklist assurance voyage gratuite"
+            description="Recevez notre checklist des garanties à vérifier avant de souscrire votre assurance."
+          />
 
           {/* Santé et vaccins */}
           <Card className="p-8 mb-8">
