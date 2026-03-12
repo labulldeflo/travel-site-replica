@@ -3,11 +3,33 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import TableOfContents from "@/components/TableOfContents";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { OrganiserVoyageBlock } from "@/components/affiliate";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Compass, Train, Camera, DollarSign } from "lucide-react";
 import japonImage from "@/assets/destinations/japon.jpg";
+
+const tocItems = [
+  { id: "resume", label: "Résumé de l'itinéraire" },
+  { id: "jour-1", label: "Jour 1 : Tokyo – Shibuya et Shinjuku" },
+  { id: "jour-2", label: "Jour 2 : Tokyo – Asakusa et Akihabara" },
+  { id: "jour-3", label: "Jour 3 : Tokyo – Harajuku et Meiji-jingu" },
+  { id: "jour-4", label: "Jour 4 : Shinkansen vers Kyoto" },
+  { id: "jour-5", label: "Jour 5 : Kyoto – Kinkaku-ji et Arashiyama" },
+  { id: "jour-6", label: "Jour 6 : Excursion à Nara + Osaka" },
+  { id: "jour-7", label: "Jour 7 : Osaka – Château et Street Food" },
+  { id: "budget", label: "Budget Récapitulatif" },
+  { id: "conseils", label: "Conseils Pratiques" },
+];
+
+const guideLinks = [
+  { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+  { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+  { label: "Itinéraire Japon 10 jours", to: "/blog/itineraire-japon-10-jours", icon: "itineraire" as const },
+  { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+];
 
 const ItineraireJapon7Jours = () => {
   const faqs = [
@@ -57,8 +79,10 @@ const ItineraireJapon7Jours = () => {
             Une semaine au Japon, c'est court mais <strong>largement suffisant pour tomber amoureux</strong> de ce pays extraordinaire. Cet itinéraire de 7 jours vous emmène à travers les <strong>trois villes incontournables</strong> : Tokyo la futuriste, Kyoto l'impériale et Osaka la gourmande. Optimisé pour les premiers voyages, ce programme maximise chaque journée tout en laissant de la place à la spontanéité.
           </p>
 
+          <TableOfContents items={tocItems} />
+
           <div className="my-8 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
-            <h2 className="text-xl font-bold text-foreground mt-0 mb-3">📋 Résumé de l'itinéraire</h2>
+            <h2 id="resume" className="text-xl font-bold text-foreground mt-0 mb-3">📋 Résumé de l'itinéraire</h2>
             <ul className="text-sm space-y-1 mb-0">
               <li><strong>Jours 1-3</strong> : Tokyo (Shibuya, Asakusa, Akihabara, Shinjuku)</li>
               <li><strong>Jour 4</strong> : Shinkansen vers Kyoto</li>
@@ -70,7 +94,7 @@ const ItineraireJapon7Jours = () => {
             </ul>
           </div>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-1" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 1 : Arrivée à Tokyo – Shibuya et Shinjuku
           </h2>
           <p>Après votre arrivée à l'aéroport de <strong>Narita</strong> (Narita Express, 36 min) ou <strong>Haneda</strong> (monorail, 20 min), direction votre hôtel à Shinjuku ou Shibuya. Après vous être installé :</p>
@@ -82,7 +106,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 40-70€ (transport + repas + Shibuya Sky)</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-2" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 2 : Tokyo – Asakusa, Akihabara et Ueno
           </h2>
           <ul>
@@ -94,7 +118,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 35-60€</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-3" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 3 : Tokyo – Harajuku, Meiji-jingu et Roppongi
           </h2>
           <ul>
@@ -106,7 +130,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 40-75€</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-4" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Train className="h-7 w-7 text-ocean" /> Jour 4 : Shinkansen vers Kyoto – Premiers temples
           </h2>
           <p>Activez votre <strong>JR Pass</strong> et prenez le <strong>Shinkansen Nozomi</strong> (couvert par le JR Pass avec le Hikari, 2h15). Arrivée à Kyoto en milieu de matinée.</p>
@@ -117,7 +141,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 30-50€ (hors transport couvert par JR Pass)</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-5" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 5 : Kyoto – Kinkaku-ji, Arashiyama et Geishas
           </h2>
           <ul>
@@ -128,7 +152,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 25-55€</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-6" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 6 : Excursion à Nara + Arrivée à Osaka
           </h2>
           <p>Nara est à <strong>45 minutes de Kyoto en train JR</strong> (couvert par le JR Pass).</p>
@@ -141,7 +165,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 30-50€</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="jour-7" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Jour 7 : Osaka – Château et Street Food
           </h2>
           <ul>
@@ -153,7 +177,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 25-50€</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="budget" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <DollarSign className="h-7 w-7 text-ocean" /> Budget Récapitulatif – 7 Jours
           </h2>
           <div className="overflow-x-auto">
@@ -176,7 +200,7 @@ const ItineraireJapon7Jours = () => {
             </table>
           </div>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="conseils" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Compass className="h-7 w-7 text-ocean" /> Conseils Pratiques
           </h2>
           <ul>
@@ -195,6 +219,7 @@ const ItineraireJapon7Jours = () => {
           </div>
 
           <FAQSection faqs={faqs} className="mt-10" />
+          <GuideCompletBlock destination="Japon" links={guideLinks} />
           <OrganiserVoyageBlock destination="Japon" showVols showHotel showActivites showEsim />
 
           <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border">

@@ -3,12 +3,30 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import TableOfContents from "@/components/TableOfContents";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { AffiliateBlock } from "@/components/affiliate";
 import { AFFILIATE_BLOCKS } from "@/lib/affiliateData";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DollarSign, MapPin, Clock, Calendar, Compass, Utensils, Home, Train } from "lucide-react";
 import japonImage from "@/assets/destinations/japon.jpg";
+
+const tocItems = [
+  { id: "hebergement", label: "Hébergement : 25 à 200€ par nuit" },
+  { id: "nourriture", label: "Nourriture : 15 à 60€ par jour" },
+  { id: "transport", label: "Transport : Le JR Pass" },
+  { id: "activites", label: "Activités : 5 à 50€ par jour" },
+  { id: "recapitulatif", label: "Récapitulatif budget par profil" },
+  { id: "conseils", label: "Conseils pour économiser" },
+];
+
+const guideLinks = [
+  { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+  { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+  { label: "Itinéraire Japon 10 jours", to: "/blog/itineraire-japon-10-jours", icon: "itineraire" as const },
+  { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+];
 
 const BudgetVoyageJapon = () => {
   const faqs = [
@@ -58,7 +76,9 @@ const BudgetVoyageJapon = () => {
             Le Japon a longtemps été perçu comme une <strong>destination hors de prix</strong>, mais la réalité est bien différente. Grâce à la street food abordable, aux <strong>konbini</strong> (supérettes ouvertes 24h/24), aux hôtels capsule et au <strong>Japan Rail Pass</strong>, un voyage au Japon peut être étonnamment accessible. Ce guide détaille chaque poste de dépense pour vous aider à <strong>planifier votre budget précisément</strong>.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <TableOfContents items={tocItems} />
+
+          <h2 id="hebergement" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Home className="h-7 w-7 text-ocean" /> Hébergement : 25 à 200€ par Nuit
           </h2>
           <h3 className="text-xl font-bold mt-6">Hôtels capsule (25-45€/nuit)</h3>
@@ -70,7 +90,7 @@ const BudgetVoyageJapon = () => {
           <h3 className="text-xl font-bold mt-6">Airbnb et guesthouses (30-70€/nuit)</h3>
           <p>Bonne option pour les familles ou séjours prolongés. Les guesthouses à Kyoto offrent souvent un cadre traditionnel à prix raisonnable.</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="nourriture" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Utensils className="h-7 w-7 text-ocean" /> Nourriture : 15 à 60€ par Jour
           </h2>
           <h3 className="text-xl font-bold mt-6">Konbini (3-6€/repas)</h3>
@@ -80,7 +100,7 @@ const BudgetVoyageJapon = () => {
           <h3 className="text-xl font-bold mt-6">Restaurants haut de gamme (30-100€/repas)</h3>
           <p>Un repas kaiseki coûte 50-150€, un restaurant étoilé Michelin 100-300€. Tokyo compte plus d'étoiles Michelin que Paris !</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="transport" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Train className="h-7 w-7 text-ocean" /> Transport : Le JR Pass Change Tout
           </h2>
           <p>Le transport est le poste le plus important mais aussi le plus optimisable grâce au <strong>Japan Rail Pass</strong>.</p>
@@ -92,7 +112,7 @@ const BudgetVoyageJapon = () => {
             <li><strong>Bus longue distance</strong> : 15-40€ (alternative économique aux trains, bus de nuit)</li>
           </ul>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="activites" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <MapPin className="h-7 w-7 text-ocean" /> Activités : 5 à 50€ par Jour
           </h2>
           <ul>
@@ -104,7 +124,7 @@ const BudgetVoyageJapon = () => {
             <li><strong>Location de kimono</strong> à Kyoto : 20-40€ pour la journée</li>
           </ul>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="recapitulatif" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <DollarSign className="h-7 w-7 text-ocean" /> Récapitulatif Budget par Profil
           </h2>
           <div className="overflow-x-auto">
@@ -126,7 +146,7 @@ const BudgetVoyageJapon = () => {
           </div>
           <p className="text-sm text-muted-foreground mt-4">* Hors vol international (500-900€ A/R). Consultez nos <Link to="/bons-plans/vols" className="text-ocean hover:underline">bons plans vols</Link> pour trouver les meilleurs tarifs.</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="conseils" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Compass className="h-7 w-7 text-ocean" /> Conseils pour Économiser
           </h2>
           <ul>
@@ -145,24 +165,7 @@ const BudgetVoyageJapon = () => {
           </div>
 
           <FAQSection faqs={faqs} className="mt-10" />
-
-          <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border">
-            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-              <Compass className="h-5 w-5 text-ocean" /> À lire aussi
-            </h3>
-            <div className="grid gap-2 sm:grid-cols-2">
-              {[
-                { label: "Itinéraire Japon 10 jours", url: "/blog/itineraire-japon-10-jours" },
-                { label: "Quand partir au Japon", url: "/blog/quand-partir-japon" },
-                { label: "Que faire à Tokyo", url: "/blog/que-faire-tokyo" },
-                { label: "Préparer son voyage", url: "/guides/preparer-voyage" },
-              ].map((link, idx) => (
-                <Link key={idx} to={link.url} onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 p-2 rounded-md hover:bg-background transition-all text-muted-foreground hover:text-ocean text-sm">
-                  <span className="text-ocean">→</span><span>{link.label}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
+          <GuideCompletBlock destination="Japon" links={guideLinks} />
 
           <div className="mt-10 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
             <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">

@@ -3,12 +3,30 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import TableOfContents from "@/components/TableOfContents";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { AffiliateBlock } from '@/components/affiliate';
 import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Compass, Camera, Coffee, Train, Star, Utensils } from "lucide-react";
 import tokyoImage from "@/assets/cities/tokyo.jpg";
+
+const tocItems = [
+  { id: "incontournables", label: "Les Incontournables de Tokyo" },
+  { id: "culture", label: "Culture et Art" },
+  { id: "gastronomie", label: "Gastronomie Tokyoïte" },
+  { id: "experiences", label: "Expériences Uniques" },
+  { id: "excursions", label: "Excursions depuis Tokyo" },
+  { id: "conseils", label: "Conseils Pratiques" },
+];
+
+const guideLinks = [
+  { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+  { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+  { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+  { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+];
 
 const QueFaireTokyo = () => {
   const faqs = [
@@ -63,7 +81,9 @@ const QueFaireTokyo = () => {
             Vous avez décidé de visiter Tokyo, mais par où commencer face à l'immensité de cette métropole ? Ce guide liste <strong>25 activités concrètes</strong> avec pour chacune le <strong>prix exact, le créneau optimal et les astuces</strong> que les guides classiques ne mentionnent pas. Que vous ayez 3 jours ou une semaine, utilisez cette liste comme un menu à la carte pour composer votre séjour idéal au <Link to="/destinations/japon" className="text-ocean hover:underline font-medium">Japon</Link>.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <TableOfContents items={tocItems} />
+
+          <h2 id="incontournables" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Star className="h-7 w-7 text-ocean" /> Les Incontournables de Tokyo
           </h2>
 
@@ -92,7 +112,7 @@ const QueFaireTokyo = () => {
             Avec ses <strong>634 mètres</strong>, c'est la plus haute tour du Japon et la deuxième structure autoportante la plus haute du monde. Le panorama à 360° sur Tokyo est époustouflant, surtout au coucher du soleil. Par temps clair, vous apercevrez le Mont Fuji.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="culture" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Camera className="h-7 w-7 text-ocean" /> Culture et Art
           </h2>
 
@@ -116,7 +136,7 @@ const QueFaireTokyo = () => {
             Le musée dédié aux films du Studio Ghibli (Mon Voisin Totoro, Le Voyage de Chihiro) est un lieu magique à Mitaka. <strong>Réservation obligatoire</strong> des mois à l'avance sur le site officiel. Le bâtiment lui-même est une œuvre d'art conçue par Hayao Miyazaki.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="gastronomie" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Utensils className="h-7 w-7 text-ocean" /> Gastronomie Tokyoïte
           </h2>
 
@@ -135,7 +155,7 @@ const QueFaireTokyo = () => {
             L'ancien marché extérieur de Tsukiji reste un paradis de la street food. Goûtez les <strong>tamagoyaki</strong> (omelettes japonaises), les brochettes de poulpe grillé, les huîtres fraîches et les mochis artisanaux. Arrivez le matin pour la meilleure fraîcheur.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="experiences" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Compass className="h-7 w-7 text-ocean" /> Expériences Uniques
           </h2>
 
@@ -163,7 +183,7 @@ const QueFaireTokyo = () => {
             <li><strong>Yanaka</strong> – Le quartier le plus authentique de Tokyo, préservé des bombardements, avec ses temples et chats errants</li>
           </ul>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="excursions" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Train className="h-7 w-7 text-ocean" /> Excursions depuis Tokyo
           </h2>
 
@@ -188,7 +208,7 @@ const QueFaireTokyo = () => {
             <li><strong>Yokohama</strong> – Chinatown, front de mer futuriste et musée Cup Noodles (30 min de train)</li>
           </ul>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="conseils" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Coffee className="h-7 w-7 text-ocean" /> Conseils Pratiques
           </h2>
 
@@ -218,6 +238,7 @@ const QueFaireTokyo = () => {
           </div>
 
           <FAQSection faqs={faqs} className="mt-10" />
+          <GuideCompletBlock destination="Japon" links={guideLinks} />
 
           <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border">
             <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
