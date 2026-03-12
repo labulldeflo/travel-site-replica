@@ -23,6 +23,8 @@ const Premium = lazy(() => import("./pages/Premium"));
 const PreparerVoyage = lazy(() => import("./pages/PreparerVoyage"));
 const EquipementVoyage = lazy(() => import("./pages/EquipementVoyage"));
 const BudgetVoyagePilier = lazy(() => import("./pages/BudgetVoyagePilier"));
+const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
+const PolitiqueConfidentialite = lazy(() => import("./pages/PolitiqueConfidentialite"));
 
 // RESSOURCES GRATUITES - Pages dédiées
 const ChecklistDocumentsVoyage = lazy(() => import("./pages/ressources/ChecklistDocumentsVoyage"));
@@ -599,6 +601,8 @@ const AppRoutes = () => {
       <Route path="/blog/meilleures-choses-a-faire-barcelone" element={<MeilleuresChosesBarcelone />} />
 
       <Route path="/premium" element={<Premium />} />
+      <Route path="/mentions-legales" element={<MentionsLegales />} />
+      <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
 
       {/* BONS PLANS */}
       <Route path="/bons-plans/vols" element={<BonsPlansVols />} />
