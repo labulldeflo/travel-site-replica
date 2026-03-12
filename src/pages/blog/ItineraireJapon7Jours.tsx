@@ -177,7 +177,7 @@ const ItineraireJapon7Jours = () => {
           </ul>
           <p><strong>Budget du jour</strong> : 25-50€</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="budget" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <DollarSign className="h-7 w-7 text-ocean" /> Budget Récapitulatif – 7 Jours
           </h2>
           <div className="overflow-x-auto">
