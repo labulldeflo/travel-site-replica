@@ -183,7 +183,7 @@ const QueFaireTokyo = () => {
             <li><strong>Yanaka</strong> – Le quartier le plus authentique de Tokyo, préservé des bombardements, avec ses temples et chats errants</li>
           </ul>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="excursions" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Train className="h-7 w-7 text-ocean" /> Excursions depuis Tokyo
           </h2>
 
