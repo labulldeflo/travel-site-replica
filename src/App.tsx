@@ -601,6 +601,8 @@ const AppRoutes = () => {
       <Route path="/blog/meilleures-choses-a-faire-barcelone" element={<MeilleuresChosesBarcelone />} />
 
       <Route path="/premium" element={<Premium />} />
+      <Route path="/mentions-legales" element={<MentionsLegales />} />
+      <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
 
       {/* BONS PLANS */}
       <Route path="/bons-plans/vols" element={<BonsPlansVols />} />
