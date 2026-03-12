@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
-import OrganiserVoyageBlock from "@/components/affiliate/OrganiserVoyageBlock";
+import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture } from "@/components/affiliate";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Hotel, DollarSign, Compass, Crown, Wallet, Heart } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import heroImg from "@/assets/cities/tokyo-hotels.jpg";
 
 const MeilleursHotelsTokyo = () => {
