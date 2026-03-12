@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
 import TableOfContents from "@/components/TableOfContents";
 import GuideCompletBlock from "@/components/GuideCompletBlock";
-import { AffiliateBlock } from "@/components/affiliate";
+import { AffiliateBlock, ContextualCTA, MoneyPageLinks } from "@/components/affiliate";
 import { AFFILIATE_BLOCKS } from "@/lib/affiliateData";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
