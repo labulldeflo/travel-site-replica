@@ -132,6 +132,18 @@ const OuDormirJapon = () => {
               ))}
             </div>
           </div>
+          <ContextualCTA type="hotel" destination="Japon" />
+          <ContextualCTA type="assurance" />
+          <ContextualCTA type="esim" destination="Japon" />
+          <ContextualEmailCapture leadMagnet="Checklist hébergement Japon" description="Ryokan, capsule, business hotel : notre guide pour bien choisir où dormir." />
+          <MoneyPageLinks destination="Japon" showVols={true} />
+          <GuideCompletBlock destination="Japon" links={[
+            { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+            { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+            { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+            { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+          ]} />
+
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90"><Link to="/destinations/japon" onClick={() => window.scrollTo(0, 0)}>Découvrir le Japon</Link></Button>
             <Button asChild variant="outline" className="flex-1"><Link to="/blog" onClick={() => window.scrollTo(0, 0)}>Retour au blog</Link></Button>

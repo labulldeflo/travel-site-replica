@@ -206,6 +206,17 @@ const JRPassJapon = () => {
             </div>
           </div>
 
+          <ContextualCTA type="vol" destination="Japon" />
+          <ContextualCTA type="hotel" destination="Japon" />
+          <ContextualCTA type="esim" destination="Japon" />
+          <MoneyPageLinks destination="Japon" showVols={true} />
+          <GuideCompletBlock destination="Japon" links={[
+            { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+            { label: "Comment se déplacer au Japon", to: "/blog/comment-se-deplacer-japon", icon: "guide" as const },
+            { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+            { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+          ]} />
+
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">
               <Link to="/destinations/japon" onClick={() => window.scrollTo(0, 0)}>Découvrir le Japon</Link>
