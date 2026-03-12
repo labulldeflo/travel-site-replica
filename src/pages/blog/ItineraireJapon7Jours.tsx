@@ -243,6 +243,11 @@ const ItineraireJapon7Jours = () => {
             </div>
           </div>
 
+          <ContextualCTA type="hotel" destination="Japon" />
+          <ContextualCTA type="activites" destination="Tokyo & Kyoto" />
+
+          <MoneyPageLinks destination="Japon" showVols={true} />
+
           <div className="mt-10 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
             <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
               <MapPin className="h-5 w-5 text-ocean" /> 🗺️ Destinations mentionnées
