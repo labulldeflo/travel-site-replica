@@ -146,7 +146,7 @@ const BudgetVoyageJapon = () => {
           </div>
           <p className="text-sm text-muted-foreground mt-4">* Hors vol international (500-900€ A/R). Consultez nos <Link to="/bons-plans/vols" className="text-ocean hover:underline">bons plans vols</Link> pour trouver les meilleurs tarifs.</p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <h2 id="conseils" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Compass className="h-7 w-7 text-ocean" /> Conseils pour Économiser
           </h2>
           <ul>
