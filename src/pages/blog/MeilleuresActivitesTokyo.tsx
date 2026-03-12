@@ -22,6 +22,7 @@ const MeilleuresActivitesTokyo = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <SEO
         title="Les 25 Meilleures Activités à Tokyo (2025)"
         description="Découvrez les meilleures activités à Tokyo : expériences culturelles, gastronomie, quartiers incontournables et activités insolites. Guide complet avec prix et conseils."

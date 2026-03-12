@@ -22,6 +22,7 @@ const MeilleursHotelsKyoto = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       <SEO
         title="Meilleurs Hôtels à Kyoto – Sélection 2025"
         description="Où dormir à Kyoto ? Les meilleurs hôtels, ryokan et machiya par quartier et budget. Guide complet avec prix, conseils et comparatif."
