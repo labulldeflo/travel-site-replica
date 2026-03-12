@@ -72,8 +72,8 @@ const BonsPlansVols = () => {
   return (
     <>
       <SEO
-        title="Comparatif Vols Pas Chers 2025 – Meilleurs Comparateurs et Astuces"
-        description="Comparatif des meilleurs comparateurs de vols 2025 : Skyscanner, Google Flights, Kayak, Momondo. Astuces pour trouver des billets d'avion pas chers."
+        title="Vols pas chers 2025 : 6 comparateurs testés (+ astuces pour économiser)"
+        description="Skyscanner, Google Flights, Kayak : quel comparateur de vols choisir ? Notre test comparatif avec astuces concrètes pour trouver des billets d'avion au meilleur prix."
         url="/bons-plans/vols"
         hideH1={true}
         breadcrumbs={[

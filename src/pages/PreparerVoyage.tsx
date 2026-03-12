@@ -29,8 +29,8 @@ const PreparerVoyage = () => {
   return (
     <>
       <SEO
-        title="Préparer son voyage : checklist complète et conseils pratiques"
-        description="Guide complet pour préparer un voyage : checklist, budget, assurance, transport, équipement et formalités. Tout ce qu'il faut savoir avant de partir."
+        title="Comment préparer son voyage : checklist complète 2025"
+        description="Checklist voyage complète en 8 étapes : documents, budget, assurance, transport et équipement. Tout organiser avant de partir, même pour un premier voyage."
         url="/preparer-voyage"
         breadcrumbs={[
           { name: "Accueil", url: "/" },

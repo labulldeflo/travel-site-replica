@@ -5,7 +5,7 @@ import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
 import TableOfContents from "@/components/TableOfContents";
 import GuideCompletBlock from "@/components/GuideCompletBlock";
-import { AffiliateBlock } from '@/components/affiliate';
+import { AffiliateBlock, ContextualCTA, MoneyPageLinks } from '@/components/affiliate';
 import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -276,7 +276,10 @@ const QueFaireTokyo = () => {
             </div>
           </div>
 
-          <AffiliateBlock {...AFFILIATE_BLOCKS.activites} variant="compact" />
+          <ContextualCTA type="activites" destination="Tokyo" />
+          <ContextualCTA type="hotel" destination="Tokyo" />
+
+          <MoneyPageLinks destination="Japon" showVols={true} />
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">

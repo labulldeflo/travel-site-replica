@@ -86,8 +86,8 @@ const BonsPlansHebergement = () => {
   return (
     <>
       <SEO
-        title="Comparatif Hébergement Voyage 2025 – Booking, Agoda, Airbnb, Hostelworld"
-        description="Comparatif des meilleures plateformes d'hébergement voyage 2025. Booking.com, Agoda, Airbnb, Hostelworld : avantages, inconvénients et conseils pour économiser."
+        title="Où réserver un hôtel pas cher ? 6 plateformes comparées (2025)"
+        description="Booking, Agoda, Airbnb ou Hostelworld : quelle plateforme d'hébergement choisir ? Comparatif détaillé avec avantages, inconvénients et astuces pour économiser."
         url="/bons-plans/hebergement"
         hideH1={true}
         breadcrumbs={[

@@ -100,8 +100,8 @@ const BonsPlansCartesSIM = () => {
   return (
     <>
       <SEO
-        title="Comparatif Cartes SIM & eSIM Voyage 2025 – Holafly, Airalo, SIM locales"
-        description="Comparatif des meilleures cartes SIM et eSIM pour voyager en 2025. Holafly, Airalo, SIM locales : prix, avantages et conseils par destination."
+        title="Meilleure eSIM voyage 2025 : Holafly vs Airalo (comparatif complet)"
+        description="Quelle eSIM choisir pour voyager ? Holafly, Airalo, Nomad : comparatif prix, couverture et data. Notre avis après test dans +15 pays."
         url="/bons-plans/cartes-sim"
         hideH1={true}
         breadcrumbs={[

@@ -6,6 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import TableOfContents from "@/components/TableOfContents";
 import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { OrganiserVoyageBlock } from "@/components/affiliate";
+import { ContextualCTA, MoneyPageLinks } from "@/components/affiliate";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Compass, Train, Camera, DollarSign } from "lucide-react";
@@ -241,6 +242,11 @@ const ItineraireJapon7Jours = () => {
               ))}
             </div>
           </div>
+
+          <ContextualCTA type="hotel" destination="Japon" />
+          <ContextualCTA type="activites" destination="Tokyo & Kyoto" />
+
+          <MoneyPageLinks destination="Japon" showVols={true} />
 
           <div className="mt-10 p-6 bg-ocean/5 rounded-lg border border-ocean/20">
             <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
