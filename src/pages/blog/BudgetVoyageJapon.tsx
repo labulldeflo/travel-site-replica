@@ -3,12 +3,30 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import TableOfContents from "@/components/TableOfContents";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { AffiliateBlock } from "@/components/affiliate";
 import { AFFILIATE_BLOCKS } from "@/lib/affiliateData";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DollarSign, MapPin, Clock, Calendar, Compass, Utensils, Home, Train } from "lucide-react";
 import japonImage from "@/assets/destinations/japon.jpg";
+
+const tocItems = [
+  { id: "hebergement", label: "Hébergement : 25 à 200€ par nuit" },
+  { id: "nourriture", label: "Nourriture : 15 à 60€ par jour" },
+  { id: "transport", label: "Transport : Le JR Pass" },
+  { id: "activites", label: "Activités : 5 à 50€ par jour" },
+  { id: "recapitulatif", label: "Récapitulatif budget par profil" },
+  { id: "conseils", label: "Conseils pour économiser" },
+];
+
+const guideLinks = [
+  { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+  { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+  { label: "Itinéraire Japon 10 jours", to: "/blog/itineraire-japon-10-jours", icon: "itineraire" as const },
+  { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+];
 
 const BudgetVoyageJapon = () => {
   const faqs = [
