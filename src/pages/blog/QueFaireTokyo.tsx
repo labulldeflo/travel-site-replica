@@ -3,12 +3,30 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import TableOfContents from "@/components/TableOfContents";
+import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { AffiliateBlock } from '@/components/affiliate';
 import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Clock, Compass, Camera, Coffee, Train, Star, Utensils } from "lucide-react";
 import tokyoImage from "@/assets/cities/tokyo.jpg";
+
+const tocItems = [
+  { id: "incontournables", label: "Les Incontournables de Tokyo" },
+  { id: "culture", label: "Culture et Art" },
+  { id: "gastronomie", label: "Gastronomie Tokyoïte" },
+  { id: "experiences", label: "Expériences Uniques" },
+  { id: "excursions", label: "Excursions depuis Tokyo" },
+  { id: "conseils", label: "Conseils Pratiques" },
+];
+
+const guideLinks = [
+  { label: "Guide complet du Japon", to: "/blog/guide-complet-japon", icon: "guide" as const },
+  { label: "Budget voyage Japon", to: "/blog/budget-voyage-japon", icon: "budget" as const },
+  { label: "Itinéraire Japon 7 jours", to: "/blog/itineraire-japon-7-jours", icon: "itineraire" as const },
+  { label: "Quand partir au Japon", to: "/blog/quand-partir-japon", icon: "quand" as const },
+];
 
 const QueFaireTokyo = () => {
   const faqs = [
