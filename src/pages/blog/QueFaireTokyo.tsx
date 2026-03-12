@@ -81,7 +81,9 @@ const QueFaireTokyo = () => {
             Vous avez décidé de visiter Tokyo, mais par où commencer face à l'immensité de cette métropole ? Ce guide liste <strong>25 activités concrètes</strong> avec pour chacune le <strong>prix exact, le créneau optimal et les astuces</strong> que les guides classiques ne mentionnent pas. Que vous ayez 3 jours ou une semaine, utilisez cette liste comme un menu à la carte pour composer votre séjour idéal au <Link to="/destinations/japon" className="text-ocean hover:underline font-medium">Japon</Link>.
           </p>
 
-          <h2 className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
+          <TableOfContents items={tocItems} />
+
+          <h2 id="incontournables" className="text-3xl font-elegant font-bold text-primary mt-10 flex items-center gap-3">
             <Star className="h-7 w-7 text-ocean" /> Les Incontournables de Tokyo
           </h2>
 
