@@ -48,10 +48,11 @@ const MeilleursHotelsKyoto = () => {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Résumé */}
+        {/* Intro */}
         <Card className="p-6 mb-10 border-l-4 border-ocean bg-muted/30">
-          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> En résumé</h2>
-          <p className="text-muted-foreground">Kyoto est LA ville où séjourner en ryokan ou machiya pour une immersion dans la culture japonaise traditionnelle. Le choix du quartier influence profondément votre expérience : Gion pour le charme des geishas, Higashiyama pour les temples, la gare pour la praticité. Budget : de 30 € en auberge à 1 000+ € en ryokan de luxe.</p>
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> Vous préparez votre séjour à Kyoto ?</h2>
+          <p className="text-muted-foreground mb-2">Kyoto est la seule ville au Japon où l'hébergement peut véritablement transformer votre voyage. Dormir dans un ryokan avec tatami et onsen, ou dans une machiya centenaire avec jardin zen, c'est vivre le Japon de l'intérieur — bien au-delà d'une simple nuit d'hôtel.</p>
+          <p className="text-sm text-muted-foreground">👉 <strong>Notre conseil :</strong> combinez 2-3 nuits en hôtel classique et 1-2 nuits en ryokan ou machiya. Choisissez votre quartier selon votre priorité : Gion pour le charme, la gare pour la praticité, Arashiyama pour la nature.</p>
         </Card>
 
         {/* Luxe */}
