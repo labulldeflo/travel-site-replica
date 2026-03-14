@@ -48,10 +48,11 @@ const MeilleursHotelsTokyo = () => {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Résumé */}
+        {/* Intro */}
         <Card className="p-6 mb-10 border-l-4 border-ocean bg-muted/30">
-          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> En résumé</h2>
-          <p className="text-muted-foreground">Tokyo offre un éventail d'hébergements pour tous les budgets, des hôtels capsule futuristes aux palaces cinq étoiles. Le choix du quartier est crucial : Shinjuku pour la praticité, Asakusa pour le charme traditionnel, Shibuya pour la tendance. Réservez via Booking.com ou Agoda pour les meilleurs tarifs avec annulation flexible.</p>
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> Vous cherchez où dormir à Tokyo ?</h2>
+          <p className="text-muted-foreground mb-2">Trouver le bon hôtel à Tokyo peut sembler intimidant : plus de 10 000 hébergements, des quartiers très différents et des prix qui varient du simple au décuple. Après plusieurs séjours sur place, nous avons sélectionné les adresses qui offrent le meilleur rapport qualité-prix-emplacement dans chaque gamme.</p>
+          <p className="text-sm text-muted-foreground">👉 <strong>Notre conseil :</strong> choisissez d'abord votre quartier (Shinjuku pour la praticité, Asakusa pour le charme, Shibuya pour l'ambiance), puis comparez les prix sur Booking.com avec annulation gratuite pour garder de la flexibilité.</p>
         </Card>
 
         {/* Hôtels de luxe */}
