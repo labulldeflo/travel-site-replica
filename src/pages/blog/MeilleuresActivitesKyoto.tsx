@@ -48,10 +48,11 @@ const MeilleuresActivitesKyoto = () => {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Résumé */}
+        {/* Intro */}
         <Card className="p-6 mb-10 border-l-4 border-ocean bg-muted/30">
-          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> En résumé</h2>
-          <p className="text-muted-foreground">Kyoto, avec ses 2 000 temples et sanctuaires, est le cœur culturel du Japon. L'ancienne capitale impériale offre une plongée dans les traditions millénaires : cérémonie du thé, quartier des geishas, jardins zen et cuisine kaiseki. La plupart des sites sont abordables (3-5 €) et accessibles en bus ou vélo.</p>
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> Que faire à Kyoto ? Nos coups de cœur</h2>
+          <p className="text-muted-foreground mb-2">Kyoto est la ville qui donne envie de ralentir. Avec ses 2 000 temples, ses ruelles pavées et ses geishas au crépuscule, l'ancienne capitale impériale concentre l'essence du Japon traditionnel dans un cadre d'une beauté à couper le souffle.</p>
+          <p className="text-sm text-muted-foreground">👉 <strong>Bonne nouvelle :</strong> la plupart des temples coûtent 3-5 € et les plus belles expériences (Fushimi Inari, forêt de bambous, Gion) sont gratuites. Réservez uniquement les expériences guidées (thé, cuisine, kimono) pour plus de confort.</p>
         </Card>
 
         {/* Temples et sanctuaires */}
