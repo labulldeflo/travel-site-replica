@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
-import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture } from "@/components/affiliate";
+import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture, AffiliateDisclaimer, ReassuranceBlock } from "@/components/affiliate";
 import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
@@ -48,10 +48,11 @@ const MeilleuresActivitesTokyo = () => {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Résumé */}
+        {/* Intro */}
         <Card className="p-6 mb-10 border-l-4 border-ocean bg-muted/30">
-          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> En résumé</h2>
-          <p className="text-muted-foreground">Tokyo offre une diversité d'activités incomparable : temples millénaires, quartiers ultramodernes, gastronomie de classe mondiale et expériences culturelles uniques. Prévoyez un budget de 30 à 80 € par jour pour les activités, et réservez en avance pour les expériences les plus populaires.</p>
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> Que faire à Tokyo ? Notre sélection testée</h2>
+          <p className="text-muted-foreground mb-2">Tokyo peut être écrasante : trop de choses à voir, trop de quartiers, trop de possibilités. Après plusieurs séjours, nous avons sélectionné les 25 activités qui valent vraiment le détour — des expériences culturelles authentiques aux aventures urbaines les plus mémorables.</p>
+          <p className="text-sm text-muted-foreground">👉 <strong>Astuce budget :</strong> beaucoup d'activités sont gratuites (temples, quartiers, parcs). Réservez uniquement les expériences guidées et les attractions populaires (teamLab, Ghibli) pour gagner du temps sur place.</p>
         </Card>
 
         {/* Expériences culturelles */}
@@ -233,25 +234,34 @@ const MeilleuresActivitesTokyo = () => {
           </div>
         </section>
 
+        {/* Conclusion */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-elegant font-bold text-foreground mb-4">Prêt à explorer Tokyo ?</h2>
+          <p className="text-muted-foreground mb-3">Tokyo se découvre en marchant, en goûtant et en se perdant. Chaque quartier est un monde à part entière, et la vraie magie opère souvent dans les moments imprévus — un izakaya découvert par hasard, un temple désert au petit matin, une vue inattendue depuis un rooftop.</p>
+          <p className="text-muted-foreground">Notre conseil : <strong>réservez uniquement les activités qui nécessitent une réservation</strong> (teamLab, Ghibli, cours de cuisine) et laissez le reste à l'improvisation. C'est comme ça qu'on vit le meilleur de Tokyo.</p>
+        </section>
+
         {/* Conversion CTAs */}
         <RecommendationCard
           type="best"
-          name="GetYourGuide — Réserver des activités à Tokyo"
-          description="Le plus grand choix d'activités à Tokyo avec annulation gratuite 24h avant. Cérémonie du thé, teamLab, food tours et plus."
+          name="GetYourGuide — Activités à Tokyo avec annulation gratuite"
+          description="Réservez vos billets teamLab, cérémonies du thé, food tours et excursions. Annulation gratuite 24h avant."
           url="https://www.getyourguide.fr"
           ctaType="activites"
           destination="Tokyo"
-          ctaLabel="Voir les activités à Tokyo"
+          ctaLabel="Réserver mes activités à Tokyo →"
         />
+        <ReassuranceBlock items={["Annulation gratuite 24h avant", "Billets mobiles instantanés", "Prix garanti sans supplément"]} />
 
         <ContextualCTA type="hotel" destination="Tokyo" />
         <ContextualCTA type="esim" destination="Japon" />
-        <ContextualCTA type="assurance" />
 
         <ContextualEmailCapture
           leadMagnet="Top 10 activités Tokyo (PDF)"
           description="Recevez notre sélection des 10 activités incontournables avec prix, horaires et liens de réservation."
         />
+
+        <AffiliateDisclaimer />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />

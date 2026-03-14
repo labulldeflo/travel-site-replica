@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
-import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture } from "@/components/affiliate";
+import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture, AffiliateDisclaimer, ReassuranceBlock } from "@/components/affiliate";
 import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
@@ -48,10 +48,11 @@ const MeilleuresActivitesKyoto = () => {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Résumé */}
+        {/* Intro */}
         <Card className="p-6 mb-10 border-l-4 border-ocean bg-muted/30">
-          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> En résumé</h2>
-          <p className="text-muted-foreground">Kyoto, avec ses 2 000 temples et sanctuaires, est le cœur culturel du Japon. L'ancienne capitale impériale offre une plongée dans les traditions millénaires : cérémonie du thé, quartier des geishas, jardins zen et cuisine kaiseki. La plupart des sites sont abordables (3-5 €) et accessibles en bus ou vélo.</p>
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> Que faire à Kyoto ? Nos coups de cœur</h2>
+          <p className="text-muted-foreground mb-2">Kyoto est la ville qui donne envie de ralentir. Avec ses 2 000 temples, ses ruelles pavées et ses geishas au crépuscule, l'ancienne capitale impériale concentre l'essence du Japon traditionnel dans un cadre d'une beauté à couper le souffle.</p>
+          <p className="text-sm text-muted-foreground">👉 <strong>Bonne nouvelle :</strong> la plupart des temples coûtent 3-5 € et les plus belles expériences (Fushimi Inari, forêt de bambous, Gion) sont gratuites. Réservez uniquement les expériences guidées (thé, cuisine, kimono) pour plus de confort.</p>
         </Card>
 
         {/* Temples et sanctuaires */}
@@ -211,25 +212,34 @@ const MeilleuresActivitesKyoto = () => {
           </div>
         </section>
 
+        {/* Conclusion */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-elegant font-bold text-foreground mb-4">Vivez Kyoto, pas seulement visitez</h2>
+          <p className="text-muted-foreground mb-3">Kyoto ne se visite pas, elle se vit. Prenez le temps de vous asseoir devant un jardin zen, de marcher sous les torii de Fushimi Inari au lever du jour, de savourer un matcha dans une maison de thé centenaire. Ce sont ces moments de lenteur qui rendront votre voyage inoubliable.</p>
+          <p className="text-muted-foreground">Notre conseil : <strong>prévoyez 3 à 5 jours complets</strong> et résistez à l'envie de tout voir. Mieux vaut savourer 5 expériences pleinement que d'en survoler 15.</p>
+        </section>
+
         {/* Conversion CTAs */}
         <RecommendationCard
           type="best"
-          name="GetYourGuide — Activités à Kyoto"
-          description="Cérémonie du thé, visite guidée des temples, cours de cuisine kaiseki : réservez avec annulation gratuite."
+          name="GetYourGuide — Expériences authentiques à Kyoto"
+          description="Cérémonie du thé, visite guidée des temples, cours de cuisine kaiseki : réservez avec annulation gratuite 24h avant."
           url="https://www.getyourguide.fr"
           ctaType="activites"
           destination="Kyoto"
-          ctaLabel="Voir les activités à Kyoto"
+          ctaLabel="Réserver mes activités à Kyoto →"
         />
+        <ReassuranceBlock items={["Annulation gratuite 24h avant", "Guides locaux francophones disponibles", "Billets mobiles instantanés"]} />
 
         <ContextualCTA type="hotel" destination="Kyoto" />
         <ContextualCTA type="esim" destination="Japon" />
-        <ContextualCTA type="assurance" />
 
         <ContextualEmailCapture
           leadMagnet="Checklist Kyoto gratuite"
           description="Temples, geishas, marchés : recevez notre checklist des incontournables avec prix et horaires."
         />
+
+        <AffiliateDisclaimer />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />

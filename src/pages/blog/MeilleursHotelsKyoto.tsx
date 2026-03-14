@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
-import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture } from "@/components/affiliate";
+import { ContextualCTA, MoneyPageLinks, RecommendationCard, ContextualEmailCapture, AffiliateDisclaimer, ReassuranceBlock } from "@/components/affiliate";
 import GuideCompletBlock from "@/components/GuideCompletBlock";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
@@ -48,10 +48,11 @@ const MeilleursHotelsKyoto = () => {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Résumé */}
+        {/* Intro */}
         <Card className="p-6 mb-10 border-l-4 border-ocean bg-muted/30">
-          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> En résumé</h2>
-          <p className="text-muted-foreground">Kyoto est LA ville où séjourner en ryokan ou machiya pour une immersion dans la culture japonaise traditionnelle. Le choix du quartier influence profondément votre expérience : Gion pour le charme des geishas, Higashiyama pour les temples, la gare pour la praticité. Budget : de 30 € en auberge à 1 000+ € en ryokan de luxe.</p>
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> Vous préparez votre séjour à Kyoto ?</h2>
+          <p className="text-muted-foreground mb-2">Kyoto est la seule ville au Japon où l'hébergement peut véritablement transformer votre voyage. Dormir dans un ryokan avec tatami et onsen, ou dans une machiya centenaire avec jardin zen, c'est vivre le Japon de l'intérieur — bien au-delà d'une simple nuit d'hôtel.</p>
+          <p className="text-sm text-muted-foreground">👉 <strong>Notre conseil :</strong> combinez 2-3 nuits en hôtel classique et 1-2 nuits en ryokan ou machiya. Choisissez votre quartier selon votre priorité : Gion pour le charme, la gare pour la praticité, Arashiyama pour la nature.</p>
         </Card>
 
         {/* Luxe */}
@@ -175,34 +176,43 @@ const MeilleursHotelsKyoto = () => {
           </div>
         </section>
 
+        {/* Conclusion */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-elegant font-bold text-foreground mb-4">Notre verdict</h2>
+          <p className="text-muted-foreground mb-3">Kyoto est la destination où votre hébergement compte autant que vos visites. Une nuit en ryokan avec repas kaiseki ou dans une machiya silencieuse au cœur de Gion sont des souvenirs à part entière.</p>
+          <p className="text-muted-foreground">Notre conseil : <strong>réservez un ryokan ou une machiya au moins 3 mois à l'avance</strong> (6 mois pour la saison des cerisiers). Pour le reste du séjour, un hôtel milieu de gamme bien placé fera parfaitement l'affaire.</p>
+        </section>
+
         {/* Conversion CTAs */}
         <RecommendationCard
           type="best"
-          name="Booking.com — Ryokan et hôtels Kyoto"
-          description="Le plus grand choix d'hébergements à Kyoto : ryokan, machiya et hôtels design avec annulation gratuite."
+          name="Booking.com — Ryokan, machiya et hôtels à Kyoto"
+          description="Le plus grand choix d'hébergements à Kyoto avec annulation gratuite. Filtrez par ryokan ou machiya pour trouver l'expérience parfaite."
           url="https://www.booking.com/?aid=2311236"
           ctaType="hotel"
           destination="Kyoto"
-          ctaLabel="Chercher un hébergement à Kyoto"
+          ctaLabel="Trouver mon hébergement à Kyoto →"
         />
+        <ReassuranceBlock items={["Annulation gratuite sur la plupart des offres", "Filtres ryokan et machiya disponibles", "Programme Genius : -10 à -20%"]} />
         <RecommendationCard
           type="simple"
-          name="Agoda — Prix Asie imbattables"
-          description="Offres exclusives pour le Japon. Interface simple avec comparaison rapide des prix par quartier."
+          name="Agoda — Tarifs compétitifs pour le Japon"
+          description="Souvent les meilleurs prix pour les ryokan et hôtels japonais. Interface simple et offres flash quotidiennes."
           url="https://www.agoda.com"
           ctaType="hotel"
           destination="Kyoto"
-          ctaLabel="Comparer sur Agoda"
+          ctaLabel="Comparer les prix sur Agoda →"
         />
 
         <ContextualCTA type="activites" destination="Kyoto" />
         <ContextualCTA type="esim" destination="Japon" />
-        <ContextualCTA type="assurance" />
 
         <ContextualEmailCapture
           leadMagnet="Guide hébergement Kyoto"
           description="Ryokan, machiya ou hôtel design ? Recevez notre sélection par quartier avec les meilleures adresses."
         />
+
+        <AffiliateDisclaimer />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />
