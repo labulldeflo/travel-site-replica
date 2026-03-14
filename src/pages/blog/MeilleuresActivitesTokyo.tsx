@@ -234,25 +234,34 @@ const MeilleuresActivitesTokyo = () => {
           </div>
         </section>
 
+        {/* Conclusion */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-elegant font-bold text-foreground mb-4">Prêt à explorer Tokyo ?</h2>
+          <p className="text-muted-foreground mb-3">Tokyo se découvre en marchant, en goûtant et en se perdant. Chaque quartier est un monde à part entière, et la vraie magie opère souvent dans les moments imprévus — un izakaya découvert par hasard, un temple désert au petit matin, une vue inattendue depuis un rooftop.</p>
+          <p className="text-muted-foreground">Notre conseil : <strong>réservez uniquement les activités qui nécessitent une réservation</strong> (teamLab, Ghibli, cours de cuisine) et laissez le reste à l'improvisation. C'est comme ça qu'on vit le meilleur de Tokyo.</p>
+        </section>
+
         {/* Conversion CTAs */}
         <RecommendationCard
           type="best"
-          name="GetYourGuide — Réserver des activités à Tokyo"
-          description="Le plus grand choix d'activités à Tokyo avec annulation gratuite 24h avant. Cérémonie du thé, teamLab, food tours et plus."
+          name="GetYourGuide — Activités à Tokyo avec annulation gratuite"
+          description="Réservez vos billets teamLab, cérémonies du thé, food tours et excursions. Annulation gratuite 24h avant."
           url="https://www.getyourguide.fr"
           ctaType="activites"
           destination="Tokyo"
-          ctaLabel="Voir les activités à Tokyo"
+          ctaLabel="Réserver mes activités à Tokyo →"
         />
+        <ReassuranceBlock items={["Annulation gratuite 24h avant", "Billets mobiles instantanés", "Prix garanti sans supplément"]} />
 
         <ContextualCTA type="hotel" destination="Tokyo" />
         <ContextualCTA type="esim" destination="Japon" />
-        <ContextualCTA type="assurance" />
 
         <ContextualEmailCapture
           leadMagnet="Top 10 activités Tokyo (PDF)"
           description="Recevez notre sélection des 10 activités incontournables avec prix, horaires et liens de réservation."
         />
+
+        <AffiliateDisclaimer />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />

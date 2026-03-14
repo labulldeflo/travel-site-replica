@@ -176,34 +176,43 @@ const MeilleursHotelsTokyo = () => {
           </div>
         </section>
 
+        {/* Conclusion */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-elegant font-bold text-foreground mb-4">Notre verdict</h2>
+          <p className="text-muted-foreground mb-3">Tokyo est une ville où l'hébergement fait partie intégrante de l'expérience. Que vous optiez pour un capsule hotel futuriste, un ryokan en plein centre ou un palace avec vue sur le Fuji, chaque nuit raconte une histoire différente.</p>
+          <p className="text-muted-foreground">Notre conseil : <strong>réservez avec annulation gratuite</strong> dès que vous avez vos dates, puis affinez votre choix en vous rapprochant du départ. Les meilleurs hébergements partent vite, surtout en saison des cerisiers.</p>
+        </section>
+
         {/* Conversion CTAs */}
         <RecommendationCard
           type="best"
-          name="Booking.com — Annulation gratuite"
-          description="Le plus grand choix d'hôtels à Tokyo avec annulation gratuite sur la majorité des offres. Programme Genius pour des réductions de 10-20%."
+          name="Booking.com — Le plus grand choix à Tokyo"
+          description="Plus de 4 000 hébergements à Tokyo avec annulation gratuite. Programme Genius pour -10 à -20% dès la 2e réservation."
           url="https://www.booking.com/?aid=2311236"
           ctaType="hotel"
           destination="Tokyo"
-          ctaLabel="Chercher un hôtel à Tokyo"
+          ctaLabel="Trouver mon hôtel à Tokyo →"
         />
+        <ReassuranceBlock />
         <RecommendationCard
           type="budget"
-          name="Agoda — Meilleurs prix en Asie"
-          description="Souvent les prix les plus bas pour le Japon. Offres flash quotidiennes et programme fidélité AgodaCash."
+          name="Agoda — Souvent les prix les plus bas au Japon"
+          description="Comparez les tarifs spécifiques au marché asiatique. Offres flash quotidiennes et programme AgodaCash."
           url="https://www.agoda.com"
           ctaType="hotel"
           destination="Tokyo"
-          ctaLabel="Comparer sur Agoda"
+          ctaLabel="Comparer les prix sur Agoda →"
         />
 
         <ContextualCTA type="activites" destination="Tokyo" />
         <ContextualCTA type="esim" destination="Japon" />
-        <ContextualCTA type="assurance" />
 
         <ContextualEmailCapture
           leadMagnet="Checklist hôtels Tokyo"
           description="Recevez notre sélection des meilleurs hôtels par quartier avec les prix et liens de réservation."
         />
+
+        <AffiliateDisclaimer />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />

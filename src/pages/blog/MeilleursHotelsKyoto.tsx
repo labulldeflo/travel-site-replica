@@ -176,34 +176,43 @@ const MeilleursHotelsKyoto = () => {
           </div>
         </section>
 
+        {/* Conclusion */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-elegant font-bold text-foreground mb-4">Notre verdict</h2>
+          <p className="text-muted-foreground mb-3">Kyoto est la destination où votre hébergement compte autant que vos visites. Une nuit en ryokan avec repas kaiseki ou dans une machiya silencieuse au cœur de Gion sont des souvenirs à part entière.</p>
+          <p className="text-muted-foreground">Notre conseil : <strong>réservez un ryokan ou une machiya au moins 3 mois à l'avance</strong> (6 mois pour la saison des cerisiers). Pour le reste du séjour, un hôtel milieu de gamme bien placé fera parfaitement l'affaire.</p>
+        </section>
+
         {/* Conversion CTAs */}
         <RecommendationCard
           type="best"
-          name="Booking.com — Ryokan et hôtels Kyoto"
-          description="Le plus grand choix d'hébergements à Kyoto : ryokan, machiya et hôtels design avec annulation gratuite."
+          name="Booking.com — Ryokan, machiya et hôtels à Kyoto"
+          description="Le plus grand choix d'hébergements à Kyoto avec annulation gratuite. Filtrez par ryokan ou machiya pour trouver l'expérience parfaite."
           url="https://www.booking.com/?aid=2311236"
           ctaType="hotel"
           destination="Kyoto"
-          ctaLabel="Chercher un hébergement à Kyoto"
+          ctaLabel="Trouver mon hébergement à Kyoto →"
         />
+        <ReassuranceBlock items={["Annulation gratuite sur la plupart des offres", "Filtres ryokan et machiya disponibles", "Programme Genius : -10 à -20%"]} />
         <RecommendationCard
           type="simple"
-          name="Agoda — Prix Asie imbattables"
-          description="Offres exclusives pour le Japon. Interface simple avec comparaison rapide des prix par quartier."
+          name="Agoda — Tarifs compétitifs pour le Japon"
+          description="Souvent les meilleurs prix pour les ryokan et hôtels japonais. Interface simple et offres flash quotidiennes."
           url="https://www.agoda.com"
           ctaType="hotel"
           destination="Kyoto"
-          ctaLabel="Comparer sur Agoda"
+          ctaLabel="Comparer les prix sur Agoda →"
         />
 
         <ContextualCTA type="activites" destination="Kyoto" />
         <ContextualCTA type="esim" destination="Japon" />
-        <ContextualCTA type="assurance" />
 
         <ContextualEmailCapture
           leadMagnet="Guide hébergement Kyoto"
           description="Ryokan, machiya ou hôtel design ? Recevez notre sélection par quartier avec les meilleures adresses."
         />
+
+        <AffiliateDisclaimer />
 
         {/* FAQ */}
         <FAQSection faqs={faqs} className="mb-12" />

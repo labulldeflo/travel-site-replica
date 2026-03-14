@@ -6,3 +6,4 @@ export { default as MoneyPageLinks } from './MoneyPageLinks';
 export { default as ComparisonTable } from './ComparisonTable';
 export { default as RecommendationCard } from './RecommendationCard';
 export { default as ContextualEmailCapture } from './ContextualEmailCapture';
+export { default as ReassuranceBlock } from './ReassuranceBlock';
