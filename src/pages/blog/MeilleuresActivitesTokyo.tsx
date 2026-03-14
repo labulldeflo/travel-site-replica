@@ -48,10 +48,11 @@ const MeilleuresActivitesTokyo = () => {
       </section>
 
       <article className="max-w-4xl mx-auto px-4 py-12">
-        {/* Résumé */}
+        {/* Intro */}
         <Card className="p-6 mb-10 border-l-4 border-ocean bg-muted/30">
-          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> En résumé</h2>
-          <p className="text-muted-foreground">Tokyo offre une diversité d'activités incomparable : temples millénaires, quartiers ultramodernes, gastronomie de classe mondiale et expériences culturelles uniques. Prévoyez un budget de 30 à 80 € par jour pour les activités, et réservez en avance pour les expériences les plus populaires.</p>
+          <h2 className="font-semibold text-foreground mb-2 flex items-center gap-2"><Compass className="w-5 h-5 text-ocean" /> Que faire à Tokyo ? Notre sélection testée</h2>
+          <p className="text-muted-foreground mb-2">Tokyo peut être écrasante : trop de choses à voir, trop de quartiers, trop de possibilités. Après plusieurs séjours, nous avons sélectionné les 25 activités qui valent vraiment le détour — des expériences culturelles authentiques aux aventures urbaines les plus mémorables.</p>
+          <p className="text-sm text-muted-foreground">👉 <strong>Astuce budget :</strong> beaucoup d'activités sont gratuites (temples, quartiers, parcs). Réservez uniquement les expériences guidées et les attractions populaires (teamLab, Ghibli) pour gagner du temps sur place.</p>
         </Card>
 
         {/* Expériences culturelles */}
