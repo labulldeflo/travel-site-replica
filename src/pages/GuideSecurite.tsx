@@ -73,18 +73,21 @@ const GuideSecurite = () => {
 
           <ComparisonTable
             title="Comparatif des meilleures assurances voyage 2025"
-            subtitle="Trois profils, trois assurances : trouvez celle qui correspond à votre voyage."
+            subtitle="Notre sélection selon votre profil : rapport qualité-prix, couverture maximale ou mode de vie nomade."
+            priceDisclaimer="Tarifs indicatifs selon profil et durée du voyage"
             ctaType="assurance"
             items={[
               {
                 name: "Chapka Cap Aventure",
                 url: "https://www.chapkadirecte.com",
                 badge: "Recommandé",
+                recommended: true,
                 price: "Dès 32€/mois",
+                priceNote: "~1€/jour",
                 rating: "4.8/5",
                 pros: ["200 000€ de frais médicaux", "Sports d'aventure inclus (trek, plongée, scooter)", "Spécialiste français depuis 2002, souscription en 5 min"],
                 cons: ["Plafond médical inférieur à Heymondo", "Pas d'app mobile dédiée"],
-                bestFor: "Le meilleur rapport qualité-prix — idéal pour la majorité des voyageurs",
+                bestFor: "La majorité des voyageurs — meilleur rapport qualité-prix",
                 ctaLabel: "Obtenir un devis Chapka →",
               },
               {
@@ -92,21 +95,25 @@ const GuideSecurite = () => {
                 url: "https://www.heymondo.fr",
                 badge: "Couverture max",
                 badgeColor: "outline" as const,
-                price: "Dès 37€/semaine",
+                price: "Dès 37€/sem.",
+                priceNote: "~5€/jour",
                 rating: "4.6/5",
                 pros: ["500 000€ de frais médicaux — le plafond le plus élevé", "App mobile pour déclarer un sinistre en 2 min", "Assistance 24/7 multilingue"],
                 cons: ["Plus cher sur les longs séjours", "Moins adapté aux petits budgets"],
-                bestFor: "Si vous allez dans un pays cher (USA, Japon, Canada) ou voulez le maximum de couverture",
+                bestFor: "Destinations chères (USA, Japon, Canada) ou besoin de couverture maximale",
                 ctaLabel: "Voir les offres Heymondo →",
               },
               {
                 name: "SafetyWing Nomad",
                 url: "https://www.safetywing.com",
-                price: "Dès 45$/mois",
+                badge: "Nomades",
+                badgeColor: "secondary" as const,
+                price: "Dès 42€/mois",
+                priceNote: "~1,40€/jour",
                 rating: "4.3/5",
                 pros: ["Paiement mensuel sans engagement", "Conçue pour les nomades digitaux", "Couverture mondiale renouvelable automatiquement"],
                 cons: ["Interface en anglais uniquement", "Franchise de 250$ par sinistre"],
-                bestFor: "Pour les nomades digitaux et voyageurs au long cours (6 mois+)",
+                bestFor: "Nomades digitaux et voyageurs au long cours (6 mois+)",
                 ctaLabel: "Découvrir SafetyWing →",
               },
             ]}
