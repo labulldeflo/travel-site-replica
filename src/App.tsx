@@ -144,6 +144,12 @@ const MeilleuresChosesBarcelone = lazy(() => import("./pages/blog/MeilleuresChos
 
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// COMPARATIFS
+const MeilleureEsimJapon = lazy(() => import("./pages/comparatifs/MeilleureEsimJapon"));
+const MeilleureValiseCabine = lazy(() => import("./pages/comparatifs/MeilleureValiseCabine"));
+const MeilleurSacADosCabine = lazy(() => import("./pages/comparatifs/MeilleurSacADosCabine"));
+const MeilleurOreillerVoyage = lazy(() => import("./pages/comparatifs/MeilleurOreillerVoyage"));
+
 // BONS PLANS
 const BonsPlansVols = lazy(() => import("./pages/BonsPlansVols"));
 const BonsPlansHebergement = lazy(() => import("./pages/BonsPlansHebergement"));
