@@ -933,6 +933,12 @@ const AppRoutes = () => {
       <Route path="/destinations/colombie/cartagene" element={<Articles.ArticleCartagene />} />
       <Route path="/destinations/colombie/medellin" element={<Articles.ArticleMedellin />} />
 
+      {/* ========== COMPARATIFS ========== */}
+      <Route path="/comparatifs/meilleure-esim-japon" element={<MeilleureEsimJapon />} />
+      <Route path="/comparatifs/meilleure-valise-cabine" element={<MeilleureValiseCabine />} />
+      <Route path="/comparatifs/meilleur-sac-a-dos-cabine" element={<MeilleurSacADosCabine />} />
+      <Route path="/comparatifs/meilleur-oreiller-voyage" element={<MeilleurOreillerVoyage />} />
+
       {/* ROUTE 404 (Doit être la dernière) */}
       <Route path="*" element={<NotFound />} />
     </Routes>
