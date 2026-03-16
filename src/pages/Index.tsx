@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import HeroStats from "@/components/HeroStats";
 import GuidesEssentiels from "@/components/GuidesEssentiels";
 import Voyages from "@/components/Voyages";
 import HomepageAffiliateBlock from "@/components/HomepageAffiliateBlock";
@@ -24,6 +25,7 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
+          <HeroStats />
           <GuidesEssentiels />
           <Voyages />
           <HomepageAffiliateBlock />
