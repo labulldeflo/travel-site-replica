@@ -5,7 +5,7 @@ import vietnamImage from "@/assets/cities/vietnam.jpg";
 const ArticleVietnam = () => {
   return (
     <ArticleTemplate
-      title="Vietnam : Guide Complet pour un Voyage Inoubliable"
+      title="Visiter le Vietnam : Itinéraire complet et Budget 2026"
       subtitle="Découvrez les merveilles du Vietnam, de la baie d'Ha Long aux rizières en terrasses de Sapa"
       category="Asie du Sud-Est"
       keywords={["Vietnam", "Hanoï", "Baie d'Ha Long", "Hoi An", "Saïgon"]}
