@@ -25,6 +25,7 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
+          <HeroStats />
           <GuidesEssentiels />
           <Voyages />
           <HomepageAffiliateBlock />
