@@ -20,12 +20,12 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-3xl mx-auto px-4 py-20">
-        <h1 className="font-script text-5xl sm:text-6xl md:text-7xl text-white mb-6 drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] leading-[1.2]">
+      <div className="relative z-10 text-center max-w-3xl mx-auto px-4 py-24 md:py-32">
+        <h1 className="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-4 drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)] leading-[1.15]">
           Cap sur le Monde
         </h1>
 
-        <p className="text-xl sm:text-2xl font-elegant text-white/90 font-light mb-10 tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+        <p className="text-base sm:text-lg font-elegant text-white/80 font-light mb-12 tracking-widest uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
           Organisez vos voyages simplement
         </p>
 

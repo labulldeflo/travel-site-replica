@@ -35,7 +35,7 @@ const GuidePlanification = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Guide Planification Voyage 2025 – Organiser son Itinéraire"
+        title="Comment planifier son voyage de A à Z : Le guide ultime"
         description="Guide complet pour planifier votre voyage : créer un itinéraire équilibré, choisir vos dates, timeline de préparation et outils de planification recommandés."
         url="/guides/planification"
         hideH1={true}

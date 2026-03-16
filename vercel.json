@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/index.htm",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

@@ -169,7 +169,7 @@ const Amerique = () => {
   return (
     <>
       <SEO 
-        title="Destinations Amérique - USA, Canada, Pérou, Argentine et plus"
+        title="Road Trip en Amérique : Nos conseils et préparatifs essentiels"
         description="Découvrez les Amériques : USA, Canada, Pérou, Brésil, Argentine. Parcs nationaux, villes cosmopolites et nature sauvage."
         url="/amerique"
         hideH1={true}
