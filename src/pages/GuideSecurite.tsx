@@ -72,36 +72,23 @@ const GuideSecurite = () => {
           </Card>
 
           <ComparisonTable
-            title="Comparatif des meilleures assurances voyage 2025"
-            subtitle="Notre sélection selon votre profil : rapport qualité-prix, couverture maximale ou mode de vie nomade."
+            title="Comparatif des meilleures assurances voyage 2026"
+            subtitle="Notre sélection : le plus populaire, le plus économique et le plus flexible."
             priceDisclaimer="Tarifs indicatifs selon profil et durée du voyage"
             ctaType="assurance"
             items={[
               {
                 name: "Chapka Cap Aventure",
                 url: "https://www.chapkadirecte.com",
-                badge: "Recommandé",
+                badge: "Le plus populaire",
                 recommended: true,
                 price: "Dès 32€/mois",
                 priceNote: "~1€/jour",
                 rating: "4.8/5",
                 pros: ["200 000€ de frais médicaux", "Sports d'aventure inclus (trek, plongée, scooter)", "Spécialiste français depuis 2002, souscription en 5 min"],
-                cons: ["Plafond médical inférieur à Heymondo", "Pas d'app mobile dédiée"],
+                cons: ["Plafond médical inférieur à certains concurrents", "Pas d'app mobile dédiée"],
                 bestFor: "La majorité des voyageurs — meilleur rapport qualité-prix",
                 ctaLabel: "Obtenir un devis Chapka →",
-              },
-              {
-                name: "Heymondo",
-                url: "https://www.heymondo.fr",
-                badge: "Couverture max",
-                badgeColor: "outline" as const,
-                price: "Dès 37€/sem.",
-                priceNote: "~5€/jour",
-                rating: "4.6/5",
-                pros: ["500 000€ de frais médicaux — le plafond le plus élevé", "App mobile pour déclarer un sinistre en 2 min", "Assistance 24/7 multilingue"],
-                cons: ["Plus cher sur les longs séjours", "Moins adapté aux petits budgets"],
-                bestFor: "Destinations chères (USA, Japon, Canada) ou besoin de couverture maximale",
-                ctaLabel: "Voir les offres Heymondo →",
               },
               {
                 name: "ACS Ami",
@@ -115,6 +102,19 @@ const GuideSecurite = () => {
                 cons: ["Plafond médical plus bas (150 000€)", "Délai de carence de 7 jours"],
                 bestFor: "Voyageurs au long cours et petits budgets (tours du monde, PVT, 3 mois+)",
                 ctaLabel: "Obtenir un devis ACS →",
+              },
+              {
+                name: "World Nomads",
+                url: "https://www.worldnomads.com",
+                badge: "Aventuriers",
+                badgeColor: "outline" as const,
+                price: "Dès 45€/sem.",
+                priceNote: "Variable selon destination",
+                rating: "4.3/5",
+                pros: ["Plus de 200 activités aventure couvertes", "Souscription possible même en voyage", "Couverture flexible prolongeable à tout moment"],
+                cons: ["Tarif plus élevé que la concurrence", "Service client en anglais uniquement"],
+                bestFor: "Baroudeurs et amateurs de sports extrêmes (escalade, surf, parapente)",
+                ctaLabel: "Voir les offres World Nomads →",
               },
             ]}
           />
