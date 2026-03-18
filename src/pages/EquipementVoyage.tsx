@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import FAQSection from "@/components/FAQSection";
+import ChecklistEquipement from "@/components/ChecklistEquipement";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Backpack, ExternalLink, ArrowRight, Camera, Droplets, Shirt } from "lucide-react";
