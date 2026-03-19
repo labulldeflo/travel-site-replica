@@ -54,51 +54,24 @@ const MeilleureValiseCabine = () => {
             </div>
 
             <ComparisonTable
-              title="Comparatif des meilleures valises cabine 2025"
-              subtitle="Notre sélection selon votre priorité : légèreté, rapport qualité-prix ou finition premium."
+              title="Comparatif des meilleures valises cabine 2026"
+              subtitle="Notre sélection selon votre priorité : solidité, extensibilité ou budget maîtrisé."
               priceDisclaimer="Prix constatés sur Amazon.fr — peuvent varier selon les coloris"
               ctaType="equipement"
-              items={[
-                {
-                  name: "Samsonite Lite-Shock",
-                  url: AFFILIATE_LINKS.amazonSearch("Samsonite Lite-Shock cabine"),
-                  badge: "Recommandé",
-                  recommended: true,
-                  price: "~230€",
-                  priceNote: "Investissement durable",
-                  rating: "4.8/5",
-                  pros: ["Ultra-légère : seulement 1,7 kg à vide", "Curv® : matériau quasi indestructible", "4 roues doubles silencieuses, serrure TSA"],
-                  cons: ["Prix élevé", "Design classique sans fantaisie"],
-                  bestFor: "Le meilleur rapport poids-solidité — idéal pour les voyageurs fréquents",
-                  ctaLabel: "Voir le prix sur Amazon →",
-                },
-                {
-                  name: "American Tourister Airconic",
-                  url: AFFILIATE_LINKS.amazonSearch("American Tourister Airconic cabine"),
-                  badge: "Meilleur rapport qualité-prix",
-                  badgeColor: "outline" as const,
-                  price: "~100€",
-                  priceNote: "Excellent prix",
-                  rating: "4.6/5",
-                  pros: ["Très bon rapport qualité-prix", "Légère (2,5 kg) et résistante en polypropylène", "Serrure TSA intégrée, coloris variés"],
-                  cons: ["Intérieur moins bien organisé que Samsonite", "Roues un peu moins fluides sur sol irrégulier"],
-                  bestFor: "Voyageurs occasionnels cherchant une valise fiable sans se ruiner",
-                  ctaLabel: "Voir le prix sur Amazon →",
-                },
-                {
-                  name: "Delsey Châtelet Air 2.0",
-                  url: AFFILIATE_LINKS.amazonSearch("Delsey Chatelet Air cabine"),
-                  badge: "Premium",
-                  badgeColor: "secondary" as const,
-                  price: "~280€",
-                  priceNote: "Haut de gamme",
-                  rating: "4.7/5",
-                  pros: ["Design élégant et finitions luxueuses", "Double roues ultra-silencieuses, intérieur matelassé", "Garantie 10 ans Delsey"],
-                  cons: ["Plus lourde (3,2 kg)", "Prix premium"],
-                  bestFor: "Voyageurs d'affaires ou amateurs de belles finitions",
-                  ctaLabel: "Voir le prix sur Amazon →",
-                },
-              ]}
+              items={VALISES_CABINE.map((p) => ({
+                name: p.name,
+                url: p.url,
+                badge: p.badge,
+                badgeColor: p.badgeColor,
+                recommended: p.recommended,
+                price: p.price || "",
+                priceNote: p.priceNote,
+                rating: p.rating,
+                pros: p.pros,
+                cons: p.cons,
+                bestFor: p.bestFor,
+                ctaLabel: p.ctaLabel,
+              }))}
             />
 
             <div className="text-center my-4">
