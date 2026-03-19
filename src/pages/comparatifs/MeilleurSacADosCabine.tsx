@@ -46,7 +46,7 @@ const MeilleurSacADosCabine = () => {
                 <Backpack className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-elegant font-bold text-foreground mb-4">
-                Meilleur sac à dos cabine 2025
+                Meilleur sac à dos cabine 2026
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Le bon sac à dos cabine change tout en voyage : accès facile, confort de portage et format avion garanti. Voici notre comparatif des modèles testés.
