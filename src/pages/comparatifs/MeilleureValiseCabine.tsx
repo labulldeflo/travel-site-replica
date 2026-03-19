@@ -46,7 +46,7 @@ const MeilleureValiseCabine = () => {
                 <Luggage className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-elegant font-bold text-foreground mb-4">
-                Meilleure valise cabine 2025
+                Meilleure valise cabine 2026
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Légère, solide et au bon format : choisir sa valise cabine est essentiel pour voyager sans stress. Voici notre comparatif après des mois de tests.
