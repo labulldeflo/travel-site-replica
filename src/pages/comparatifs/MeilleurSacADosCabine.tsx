@@ -7,6 +7,7 @@ import { ComparisonTable, RecommendationCard, AffiliateDisclaimer, MoneyPageLink
 import { Link } from "react-router-dom";
 import { ArrowLeft, Backpack } from "lucide-react";
 import { AFFILIATE_LINKS } from "@/lib/affiliateData";
+import { SACS_A_DOS } from "@/lib/productData";
 
 const MeilleurSacADosCabine = () => {
   const faqs = [
@@ -45,7 +46,7 @@ const MeilleurSacADosCabine = () => {
                 <Backpack className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl md:text-5xl font-elegant font-bold text-foreground mb-4">
-                Meilleur sac à dos cabine 2025
+                Meilleur sac à dos cabine 2026
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Le bon sac à dos cabine change tout en voyage : accès facile, confort de portage et format avion garanti. Voici notre comparatif des modèles testés.
@@ -53,51 +54,24 @@ const MeilleurSacADosCabine = () => {
             </div>
 
             <ComparisonTable
-              title="Comparatif des meilleurs sacs à dos cabine 2025"
-              subtitle="Notre sélection selon votre profil : polyvalence, organisation ou budget maîtrisé."
+              title="Comparatif des meilleurs sacs à dos cabine 2026"
+              subtitle="Notre sélection selon votre profil : polyvalence, long voyage ou budget maîtrisé."
               priceDisclaimer="Prix constatés sur Amazon.fr — peuvent varier selon les coloris et tailles"
               ctaType="equipement"
-              items={[
-                {
-                  name: "Osprey Farpoint 40",
-                  url: AFFILIATE_LINKS.amazonSearch("Osprey Farpoint 40"),
-                  badge: "Recommandé",
-                  recommended: true,
-                  price: "~140€",
-                  priceNote: "Référence voyage",
-                  rating: "4.8/5",
-                  pros: ["Format cabine parfait (55 x 35 x 25 cm)", "Ouverture frontale type valise, bretelles escamotables", "Confort de portage exceptionnel — ceinture ventrale rembourrée"],
-                  cons: ["Pas de compartiment laptop dédié sur le 40L", "Design sobre, peu de coloris"],
-                  bestFor: "Le sac à dos cabine de référence — idéal pour le backpacking et les voyages itinérants",
-                  ctaLabel: "Voir le prix sur Amazon →",
-                },
-                {
-                  name: "Cabin Zero Classic 44L",
-                  url: AFFILIATE_LINKS.amazonSearch("Cabin Zero Classic 44L"),
-                  badge: "Organisation",
-                  badgeColor: "outline" as const,
-                  price: "~70€",
-                  priceNote: "Très bon rapport qualité-prix",
-                  rating: "4.5/5",
-                  pros: ["Ultra-léger (700 g seulement)", "Ouverture intégrale, compartimentage malin", "Garantie 10 ans, large choix de couleurs"],
-                  cons: ["Pas de ceinture ventrale — moins confortable chargé", "Bretelles fines pour les grosses charges"],
-                  bestFor: "Voyageurs légers qui veulent un sac bien organisé sans se ruiner",
-                  ctaLabel: "Voir le prix sur Amazon →",
-                },
-                {
-                  name: "Quechua NH Escape 500",
-                  url: AFFILIATE_LINKS.amazonSearch("Quechua NH Escape 500 cabine"),
-                  badge: "Petit budget",
-                  badgeColor: "secondary" as const,
-                  price: "~60€",
-                  priceNote: "Prix Decathlon",
-                  rating: "4.3/5",
-                  pros: ["Prix imbattable pour un sac cabine de qualité", "Ouverture frontale, compartiment laptop", "Robuste et bien ventilé dans le dos"],
-                  cons: ["Design moins premium que l'Osprey", "Fermetures éclair un peu basiques"],
-                  bestFor: "Premier voyage ou budget limité — excellent rapport qualité-prix",
-                  ctaLabel: "Voir sur Decathlon →",
-                },
-              ]}
+              items={SACS_A_DOS.map((p) => ({
+                name: p.name,
+                url: p.url,
+                badge: p.badge,
+                badgeColor: p.badgeColor,
+                recommended: p.recommended,
+                price: p.price || "",
+                priceNote: p.priceNote,
+                rating: p.rating,
+                pros: p.pros,
+                cons: p.cons,
+                bestFor: p.bestFor,
+                ctaLabel: p.ctaLabel,
+              }))}
             />
 
             <div className="text-center my-4">
@@ -113,17 +87,17 @@ const MeilleurSacADosCabine = () => {
 
             <RecommendationCard
               type="best"
-              name="Osprey Farpoint 40 — Notre recommandation"
-              description="La référence absolue du sac à dos cabine de voyage. Format avion garanti, ouverture valise, bretelles escamotables et confort de portage au top. Le compagnon idéal pour le backpacking."
-              url={AFFILIATE_LINKS.amazonSearch("Osprey Farpoint 40")}
+              name="Osprey Farpoint 50L — Notre recommandation"
+              description="La référence absolue du sac à dos de voyage. Confort de portage exceptionnel, ouverture valise, bretelles escamotables. Le compagnon idéal pour le backpacking longue durée."
+              url={SACS_A_DOS[1].url}
               ctaType="equipement"
               ctaLabel="Voir le prix sur Amazon"
             />
             <RecommendationCard
               type="budget"
-              name="Cabin Zero Classic 44L — Le meilleur ultra-léger"
-              description="700 g seulement, ouverture intégrale, garantie 10 ans. Parfait pour les voyageurs minimalistes qui n'ont pas besoin de ceinture ventrale."
-              url={AFFILIATE_LINKS.amazonSearch("Cabin Zero Classic 44L")}
+              name="Cabin Max 40L — Le meilleur petit budget"
+              description="Format cabine parfait à moins de 50€. Simple, léger et efficace pour les voyageurs occasionnels."
+              url={SACS_A_DOS[0].url}
               ctaType="equipement"
               ctaLabel="Voir le prix sur Amazon"
             />

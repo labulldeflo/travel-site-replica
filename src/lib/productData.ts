@@ -1,0 +1,348 @@
+// Centralized product data from Google Sheet — all Amazon affiliate links
+
+export interface Product {
+  name: string;
+  amazonName: string;
+  url: string;
+  category: string;
+  price?: string;
+  priceNote?: string;
+  rating?: string;
+  badge?: string;
+  badgeColor?: 'default' | 'destructive' | 'outline' | 'secondary';
+  recommended?: boolean;
+  pros: string[];
+  cons: string[];
+  bestFor: string;
+  ctaLabel?: string;
+}
+
+// ═══════════════════════════════════════════
+//  SACS À DOS
+// ═══════════════════════════════════════════
+export const SACS_A_DOS: Product[] = [
+  {
+    name: "Cabin Max Bagage Cabine 40L",
+    amazonName: "Cabin Max Bagage Cabine 55x40x20",
+    url: "https://amzn.to/3NDamaO",
+    category: "sac-a-dos",
+    price: "~50€",
+    priceNote: "Petit budget",
+    rating: "4.4/5",
+    badge: "Petit budget",
+    badgeColor: "secondary",
+    pros: ["Format cabine parfait 55x40x20 cm", "Ultra-léger et prix imbattable", "Ouverture frontale pratique"],
+    cons: ["Confort de portage basique", "Pas de ceinture ventrale"],
+    bestFor: "Voyageurs occasionnels ou budget serré qui veulent un sac cabine simple et efficace",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "Osprey Farpoint 50L",
+    amazonName: "Osprey Farpoint Homme Sac de voyage",
+    url: "https://amzn.to/4sNnPvQ",
+    category: "sac-a-dos",
+    price: "~150€",
+    priceNote: "Référence voyage",
+    rating: "4.8/5",
+    badge: "Recommandé",
+    recommended: true,
+    pros: ["Confort de portage exceptionnel — ceinture ventrale rembourrée", "Ouverture frontale type valise, bretelles escamotables", "50L parfait pour les longs voyages (2+ semaines)"],
+    cons: ["Ne passe pas en cabine sur les low-cost", "Plus lourd qu'un 40L (~1,8 kg)"],
+    bestFor: "La référence pour le backpacking et les voyages itinérants de longue durée",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "Cabin Max Metz 30L",
+    amazonName: "Cabin Max Metz 30L",
+    url: "https://amzn.to/4rI55gf",
+    category: "sac-a-dos",
+    price: "~35€",
+    priceNote: "Format week-end",
+    rating: "4.3/5",
+    badge: "Week-end",
+    badgeColor: "outline",
+    pros: ["Format compact idéal pour city-trip et week-end", "Passe même en bagage sous le siège (low-cost)", "Prix mini"],
+    cons: ["Trop petit pour un voyage de plus de 3 jours", "Rembourrage dorsal minimal"],
+    bestFor: "City-trips, week-ends prolongés et voyageurs ultra-minimalistes",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+];
+
+// ═══════════════════════════════════════════
+//  VALISES CABINE
+// ═══════════════════════════════════════════
+export const VALISES_CABINE: Product[] = [
+  {
+    name: "Samsonite S'Cure Spinner S",
+    amazonName: "Samsonite S'Cure - Spinner S",
+    url: "https://amzn.to/4smVigQ",
+    category: "valise",
+    price: "~120€",
+    priceNote: "Qualité Samsonite",
+    rating: "4.7/5",
+    badge: "Recommandé",
+    recommended: true,
+    pros: ["Polypropylène ultra-résistant aux chocs", "Fermeture à 3 points sécurisée (pas de zip à forcer)", "4 roues doubles silencieuses, 34L de capacité"],
+    cons: ["Un peu plus lourde que la concurrence (2,9 kg)", "Pas de serrure TSA intégrée"],
+    bestFor: "Voyageurs qui veulent une valise solide et sécurisée pour des années",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "American Tourister Soundbox",
+    amazonName: "American Tourister Soundbox",
+    url: "https://amzn.to/4uBL6m4",
+    category: "valise",
+    price: "~90€",
+    priceNote: "Excellent rapport qualité-prix",
+    rating: "4.5/5",
+    badge: "Meilleur rapport qualité-prix",
+    badgeColor: "outline",
+    pros: ["Extensible (+3,5 cm de profondeur)", "Design fun avec large choix de coloris", "Serrure TSA intégrée, 4 roues pivotantes"],
+    cons: ["Souple = moins de protection pour objets fragiles", "Fermeture éclair classique"],
+    bestFor: "Voyageurs qui veulent flexibilité et style à petit prix",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+];
+
+// ═══════════════════════════════════════════
+//  ÉQUIPEMENT TECH
+// ═══════════════════════════════════════════
+export const EQUIPEMENT_TECH: Product[] = [
+  {
+    name: "Canon PowerShot SX740 HS",
+    amazonName: "Canon PowerShot SX740 HS",
+    url: "https://amzn.to/4dxjatr",
+    category: "tech",
+    price: "~400€",
+    priceNote: "Compact expert",
+    rating: "4.5/5",
+    badge: "Recommandé",
+    recommended: true,
+    pros: ["Zoom optique 40x — de 24 à 960mm !", "Vidéo 4K, stabilisation optique", "Ultra-compact : tient dans une poche"],
+    cons: ["Pas de viseur électronique", "Capteur petit (1/2.3\") — limité en basse lumière"],
+    bestFor: "Voyageurs qui veulent un zoom puissant dans un boîtier de poche",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "GoPro HERO12 Black",
+    amazonName: "GoPro HERO12 Black",
+    url: "https://amzn.to/4lEzESt",
+    category: "tech",
+    price: "~350€",
+    priceNote: "Action cam référence",
+    rating: "4.6/5",
+    badge: "Aventuriers",
+    badgeColor: "outline",
+    pros: ["Vidéo 5.3K, stabilisation HyperSmooth 6.0", "Étanche 10m sans caisson", "HDR, ralenti, timelapses — tout intégré"],
+    cons: ["Pas idéal pour la photo pure", "Autonomie limitée (~1h30 en 4K)"],
+    bestFor: "Sports, plongée, trek — tout ce qui bouge et éclabousse",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "JOBY GorillaPod 1K Kit",
+    amazonName: "JOBY GorillaPod 1K Kit",
+    url: "https://amzn.to/3Py5dS5",
+    category: "tech",
+    price: "~30€",
+    priceNote: "Accessoire indispensable",
+    rating: "4.5/5",
+    badge: "Petit budget",
+    badgeColor: "secondary",
+    pros: ["Pieds flexibles : s'accroche partout (branche, rampe…)", "Compatible smartphone + compact + GoPro", "Ultra-léger (170g) et compact"],
+    cons: ["Ne supporte pas les gros appareils (>1 kg)", "Stabilité limitée sur surface lisse"],
+    bestFor: "Photos de groupe, timelapses et selfies en voyage sans trimballer un trépied",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "TESSAN Adaptateur Universel USB-C",
+    amazonName: "TESSAN Adaptateur Prise Universelle",
+    url: "https://amzn.to/47GsXJW",
+    category: "tech",
+    price: "~20€",
+    priceNote: "Essentiel",
+    rating: "4.6/5",
+    badge: "Essentiel",
+    badgeColor: "secondary",
+    pros: ["Compatible 200+ pays (US, UK, EU, AU)", "3 ports USB-A + 1 USB-C intégrés", "Compact et léger — remplace tous vos adaptateurs"],
+    cons: ["Pas de convertisseur de tension (110V/220V)", "Un peu encombrant avec les 4 fiches"],
+    bestFor: "Tout voyageur international — l'accessoire à ne jamais oublier",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "UGREEN Zapix 22.5W Batterie Externe",
+    amazonName: "UGREEN Zapix 22.5W Batterie Externe",
+    url: "https://amzn.to/4seOOR0",
+    category: "tech",
+    price: "~30€",
+    priceNote: "20000mAh",
+    rating: "4.6/5",
+    badge: "Best-seller",
+    badgeColor: "outline",
+    pros: ["20000 mAh — recharge un iPhone 4 à 5 fois", "Charge rapide 22.5W (USB-C + USB-A)", "Affichage LED du niveau de charge"],
+    cons: ["Pèse ~350g", "Charge complète en ~6h"],
+    bestFor: "Longues journées sans prise — trek, transports, festivals",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+];
+
+// ═══════════════════════════════════════════
+//  ACCESSOIRES DE VOYAGE
+// ═══════════════════════════════════════════
+export const ACCESSOIRES_VOYAGE: Product[] = [
+  {
+    name: "FLOWZOOM Dream Coussin de Voyage",
+    amazonName: "FLOWZOOM Dream Coussin de Voyage",
+    url: "https://amzn.to/3PLtEeO",
+    category: "accessoire",
+    price: "~35€",
+    priceNote: "Confort premium",
+    rating: "4.5/5",
+    badge: "Recommandé",
+    recommended: true,
+    pros: ["Mousse à mémoire de forme ultra-confortable", "Housse lavable, compressible dans sa pochette", "Maintien cervical excellent — idéal pour l'avion"],
+    cons: ["Plus volumineux qu'un oreiller gonflable", "Prix un peu élevé pour un coussin"],
+    bestFor: "Vols long-courriers et bus de nuit — pour dormir (vraiment) en voyage",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "Maliton Trousse de Toilette Suspendue",
+    amazonName: "Maliton Trousse de Toilette",
+    url: "https://amzn.to/4uBUuGk",
+    category: "accessoire",
+    price: "~15€",
+    priceNote: "Très bon rapport qualité-prix",
+    rating: "4.4/5",
+    badge: "Best-seller",
+    badgeColor: "outline",
+    pros: ["Se suspend au crochet — gain de place énorme", "Compartiments multiples, poche transparente TSA", "Imperméable et facile à nettoyer"],
+    cons: ["Taille unique — peut être trop grande pour les minimalistes", "Crochet un peu fragile"],
+    bestFor: "Organisation parfaite de vos affaires de toilette en voyage",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "Eono Serviette en Microfibre",
+    amazonName: "Eono Serviette en Microfibre",
+    url: "https://amzn.to/4bT0VNR",
+    category: "accessoire",
+    price: "~12€",
+    priceNote: "Indispensable",
+    rating: "4.5/5",
+    badge: "Essentiel",
+    badgeColor: "secondary",
+    pros: ["Sèche 3x plus vite qu'une serviette classique", "Ultra-compacte — se roule dans sa pochette", "Antibactérienne, idéale pour la plage et la rando"],
+    cons: ["Toucher un peu différent du coton", "Les grandes tailles restent encombrantes"],
+    bestFor: "Backpackers, plage, piscine — tout voyageur qui veut gagner de la place",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "Cadenas TSA 2 Pièces",
+    amazonName: "Cadenas TSA 2 Pièce",
+    url: "https://amzn.to/4uF3LgM",
+    category: "accessoire",
+    price: "~10€",
+    priceNote: "Lot de 2",
+    rating: "4.3/5",
+    badge: "Petit budget",
+    badgeColor: "secondary",
+    pros: ["Approuvé TSA — les agents ouvrent sans forcer", "Combinaison 3 chiffres, pas de clé à perdre", "Lot de 2 : un pour le sac, un pour le casier"],
+    cons: ["Petit format — pas pour toutes les fermetures", "Combinaison à 3 chiffres seulement"],
+    bestFor: "Sécuriser sac à dos, valise et casiers d'auberge — indispensable partout",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "Alpine SleepDeep Bouchons d'Oreilles",
+    amazonName: "Alpine SleepDeep Bouchons d'Oreilles",
+    url: "https://amzn.to/4s0QiO5",
+    category: "accessoire",
+    price: "~20€",
+    priceNote: "Qualité premium",
+    rating: "4.4/5",
+    badge: "Confort",
+    badgeColor: "outline",
+    pros: ["Réduction sonore optimale — filtres AlpineAcousticFilters", "Confortables même pour dormir sur le côté", "Réutilisables et hypoallergéniques"],
+    cons: ["Prix plus élevé que les bouchons jetables", "Taille unique — pas idéal pour toutes les oreilles"],
+    bestFor: "Dortoirs d'auberge, avions et hôtels bruyants — sommeil garanti",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+];
+
+// ═══════════════════════════════════════════
+//  VÊTEMENTS VOYAGE
+// ═══════════════════════════════════════════
+export const VETEMENTS_VOYAGE: Product[] = [
+  {
+    name: "SAGUARO Chaussures Minimalistes",
+    amazonName: "SAGUARO Unisexe Chaussures Minimaliste",
+    url: "https://amzn.to/4lF5XAY",
+    category: "vetement",
+    price: "~35€",
+    priceNote: "Ultra-polyvalentes",
+    rating: "4.4/5",
+    badge: "Recommandé",
+    recommended: true,
+    pros: ["Ultra-légères et pliables — se glissent dans le sac", "Semelle Vibram-like, adhérence trail correcte", "Respirantes, sèchent vite après la pluie"],
+    cons: ["Protection limitée sur terrain rocheux", "Style minimaliste pas au goût de tous"],
+    bestFor: "Rando légère, ville et plage — la chaussure couteau-suisse du voyageur",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "FLARUT Sandales de Marche",
+    amazonName: "FLARUT Sandales de Marche",
+    url: "https://amzn.to/4bRPaaI",
+    category: "vetement",
+    price: "~30€",
+    priceNote: "Confort marche",
+    rating: "4.3/5",
+    badge: "Petit budget",
+    badgeColor: "secondary",
+    pros: ["Semelle épaisse et amortie — idéale pour marcher longtemps", "Séchage rapide, parfaites pour la plage", "Sangles ajustables, bon maintien du pied"],
+    cons: ["Un peu volumineuses dans le sac", "Style sportif uniquement"],
+    bestFor: "Asie du Sud-Est, plages et marche en ville par temps chaud",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "Merino.tech T-shirt Mérinos",
+    amazonName: "Merino.tech Tee Shirt",
+    url: "https://amzn.to/4uDAvXN",
+    category: "vetement",
+    price: "~45€",
+    priceNote: "Investissement durable",
+    rating: "4.5/5",
+    badge: "Best-seller",
+    badgeColor: "outline",
+    pros: ["Laine mérinos : anti-odeurs, thermorégulante", "Portez-le 3-4 jours sans le laver (vraiment !)", "Doux et léger — ne gratte pas du tout"],
+    cons: ["Prix élevé vs coton classique", "Fragile au lavage machine (cycle délicat)"],
+    bestFor: "Backpackers et voyageurs minimalistes — moins de linge = moins de poids",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "Columbia Veste Watertight II",
+    amazonName: "Columbia Veste Watertight II",
+    url: "https://amzn.to/4sU7xkI",
+    category: "vetement",
+    price: "~60€",
+    priceNote: "Imperméable légère",
+    rating: "4.5/5",
+    badge: "Essentiel",
+    badgeColor: "outline",
+    pros: ["Imperméable et coupe-vent — technologie Omni-Tech", "Se compresse dans sa propre poche", "Légère (~250g), coutures étanches"],
+    cons: ["Pas de doublure chaude — c'est une coquille", "Taille américaine — prendre une taille en dessous"],
+    bestFor: "Pluie soudaine, vent en montagne, soirées fraîches — toujours dans le sac",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+  {
+    name: "JustSun Short de Bain Polyvalent",
+    amazonName: "JustSun Short de Bain",
+    url: "https://amzn.to/4lEcADm",
+    category: "vetement",
+    price: "~20€",
+    priceNote: "Multi-usage",
+    rating: "4.3/5",
+    badge: "Petit budget",
+    badgeColor: "secondary",
+    pros: ["Short de bain + short de ville = 2 en 1", "Séchage ultra-rapide, poches zippées", "Look sobre qui passe partout"],
+    cons: ["Tissu fin — pas pour la randonnée", "Cordon de serrage basique"],
+    bestFor: "Plage, piscine et balade en ville — l'indispensable des pays chauds",
+    ctaLabel: "Voir le prix sur Amazon →",
+  },
+];

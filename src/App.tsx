@@ -149,6 +149,9 @@ const MeilleureEsimJapon = lazy(() => import("./pages/comparatifs/MeilleureEsimJ
 const MeilleureValiseCabine = lazy(() => import("./pages/comparatifs/MeilleureValiseCabine"));
 const MeilleurSacADosCabine = lazy(() => import("./pages/comparatifs/MeilleurSacADosCabine"));
 const MeilleurOreillerVoyage = lazy(() => import("./pages/comparatifs/MeilleurOreillerVoyage"));
+const MeilleursAccessoiresVoyage = lazy(() => import("./pages/comparatifs/MeilleursAccessoiresVoyage"));
+const MeilleurEquipementTechVoyage = lazy(() => import("./pages/comparatifs/MeilleurEquipementTechVoyage"));
+const MeilleursVetementsVoyage = lazy(() => import("./pages/comparatifs/MeilleursVetementsVoyage"));
 
 // BONS PLANS
 const BonsPlansVols = lazy(() => import("./pages/BonsPlansVols"));
@@ -938,6 +941,9 @@ const AppRoutes = () => {
       <Route path="/comparatifs/meilleure-valise-cabine" element={<MeilleureValiseCabine />} />
       <Route path="/comparatifs/meilleur-sac-a-dos-cabine" element={<MeilleurSacADosCabine />} />
       <Route path="/comparatifs/meilleur-oreiller-voyage" element={<MeilleurOreillerVoyage />} />
+      <Route path="/comparatifs/meilleurs-accessoires-voyage" element={<MeilleursAccessoiresVoyage />} />
+      <Route path="/comparatifs/meilleur-equipement-tech-voyage" element={<MeilleurEquipementTechVoyage />} />
+      <Route path="/comparatifs/meilleurs-vetements-voyage" element={<MeilleursVetementsVoyage />} />
 
       {/* ROUTE 404 (Doit être la dernière) */}
       <Route path="*" element={<NotFound />} />
