@@ -149,6 +149,9 @@ const MeilleureEsimJapon = lazy(() => import("./pages/comparatifs/MeilleureEsimJ
 const MeilleureValiseCabine = lazy(() => import("./pages/comparatifs/MeilleureValiseCabine"));
 const MeilleurSacADosCabine = lazy(() => import("./pages/comparatifs/MeilleurSacADosCabine"));
 const MeilleurOreillerVoyage = lazy(() => import("./pages/comparatifs/MeilleurOreillerVoyage"));
+const MeilleursAccessoiresVoyage = lazy(() => import("./pages/comparatifs/MeilleursAccessoiresVoyage"));
+const MeilleurEquipementTechVoyage = lazy(() => import("./pages/comparatifs/MeilleurEquipementTechVoyage"));
+const MeilleursVetementsVoyage = lazy(() => import("./pages/comparatifs/MeilleursVetementsVoyage"));
 
 // BONS PLANS
 const BonsPlansVols = lazy(() => import("./pages/BonsPlansVols"));
