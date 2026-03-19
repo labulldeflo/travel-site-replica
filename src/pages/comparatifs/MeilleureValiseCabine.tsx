@@ -87,17 +87,17 @@ const MeilleureValiseCabine = () => {
 
             <RecommendationCard
               type="best"
-              name="Samsonite Lite-Shock — Notre recommandation"
-              description="1,7 kg seulement, matériau Curv® quasi indestructible, serrure TSA. La valise cabine idéale pour ceux qui voyagent régulièrement et veulent un bagage qui dure des années."
-              url={AFFILIATE_LINKS.amazonSearch("Samsonite Lite-Shock cabine")}
+              name="Samsonite S'Cure — Notre recommandation"
+              description="Polypropylène ultra-résistant, fermeture 3 points sécurisée, 4 roues doubles. La valise cabine idéale pour les voyageurs qui veulent un bagage qui dure des années."
+              url={VALISES_CABINE[0].url}
               ctaType="equipement"
               ctaLabel="Voir le prix sur Amazon"
             />
             <RecommendationCard
               type="budget"
-              name="American Tourister Airconic — Le meilleur petit budget"
-              description="À ~100€, c'est la meilleure valise cabine pour les voyageurs occasionnels. Légère, solide et disponible dans plein de coloris."
-              url={AFFILIATE_LINKS.amazonSearch("American Tourister Airconic cabine")}
+              name="American Tourister Soundbox — Le meilleur rapport qualité-prix"
+              description="À ~90€, extensible, design fun et serrure TSA. Parfaite pour les voyageurs occasionnels qui veulent flexibilité et style."
+              url={VALISES_CABINE[1].url}
               ctaType="equipement"
               ctaLabel="Voir le prix sur Amazon"
             />
