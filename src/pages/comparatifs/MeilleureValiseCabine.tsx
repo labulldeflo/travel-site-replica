@@ -7,6 +7,7 @@ import { ComparisonTable, RecommendationCard, AffiliateDisclaimer, MoneyPageLink
 import { Link } from "react-router-dom";
 import { ArrowLeft, Luggage } from "lucide-react";
 import { AFFILIATE_LINKS } from "@/lib/affiliateData";
+import { VALISES_CABINE } from "@/lib/productData";
 
 const MeilleureValiseCabine = () => {
   const faqs = [
