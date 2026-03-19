@@ -7,6 +7,7 @@ import { ComparisonTable, RecommendationCard, AffiliateDisclaimer, MoneyPageLink
 import { Link } from "react-router-dom";
 import { ArrowLeft, Backpack } from "lucide-react";
 import { AFFILIATE_LINKS } from "@/lib/affiliateData";
+import { SACS_A_DOS } from "@/lib/productData";
 
 const MeilleurSacADosCabine = () => {
   const faqs = [
