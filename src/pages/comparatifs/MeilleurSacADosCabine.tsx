@@ -87,17 +87,17 @@ const MeilleurSacADosCabine = () => {
 
             <RecommendationCard
               type="best"
-              name="Osprey Farpoint 40 — Notre recommandation"
-              description="La référence absolue du sac à dos cabine de voyage. Format avion garanti, ouverture valise, bretelles escamotables et confort de portage au top. Le compagnon idéal pour le backpacking."
-              url={AFFILIATE_LINKS.amazonSearch("Osprey Farpoint 40")}
+              name="Osprey Farpoint 50L — Notre recommandation"
+              description="La référence absolue du sac à dos de voyage. Confort de portage exceptionnel, ouverture valise, bretelles escamotables. Le compagnon idéal pour le backpacking longue durée."
+              url={SACS_A_DOS[1].url}
               ctaType="equipement"
               ctaLabel="Voir le prix sur Amazon"
             />
             <RecommendationCard
               type="budget"
-              name="Cabin Zero Classic 44L — Le meilleur ultra-léger"
-              description="700 g seulement, ouverture intégrale, garantie 10 ans. Parfait pour les voyageurs minimalistes qui n'ont pas besoin de ceinture ventrale."
-              url={AFFILIATE_LINKS.amazonSearch("Cabin Zero Classic 44L")}
+              name="Cabin Max 40L — Le meilleur petit budget"
+              description="Format cabine parfait à moins de 50€. Simple, léger et efficace pour les voyageurs occasionnels."
+              url={SACS_A_DOS[0].url}
               ctaType="equipement"
               ctaLabel="Voir le prix sur Amazon"
             />
