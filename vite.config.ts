@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
   // 💡 AJOUT CLÉ POUR LE DÉPLOIEMENT (CORRECTION 500/404)
   // Utilise un chemin relatif pour garantir que les assets sont trouvés,
   // quel que soit le sous-dossier d'où le HTML est servi.
-  base: "./",
+  base: "/",
 
   server: {
     host: "::",
