@@ -25,9 +25,11 @@ const MeilleurEquipementTechVoyage = () => {
     price: p.price || "",
     priceNote: p.priceNote,
     rating: p.rating,
+    ratingCount: p.ratingCount,
     pros: p.pros,
     cons: p.cons,
     bestFor: p.bestFor,
+    preSaleText: p.preSaleText,
     ctaLabel: p.ctaLabel,
   }));
 
