@@ -1,4 +1,4 @@
-import { ExternalLink, Award, Wallet, Zap, AlertTriangle } from 'lucide-react';
+import { ExternalLink, Award, Wallet, Zap, AlertTriangle, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { trackAffiliateClick } from '@/lib/affiliateTracking';
 import { useLocation } from 'react-router-dom';
@@ -26,7 +26,7 @@ const typeConfig: Record<RecommendationType, {
 }> = {
   best: {
     icon: Award,
-    label: '⭐ Notre recommandation',
+    label: '🏆 Notre recommandation',
     borderColor: 'border-ocean',
     bgColor: 'bg-ocean/5',
     iconColor: 'text-ocean',
@@ -92,21 +92,35 @@ const RecommendationCard = ({
       <p className="text-base font-semibold text-foreground mb-1">{name}</p>
       <p className="text-sm text-muted-foreground mb-3">{description}</p>
       {url && type !== 'avoid' && (
-        <Button size="sm" className="bg-ocean hover:bg-ocean/90" asChild>
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            onClick={handleClick}
-            className="flex items-center gap-1.5"
+        <div className="flex flex-col gap-2">
+          <Button
+            size="default"
+            className="w-full sm:w-auto bg-[#FF9900] hover:bg-[#FF9900]/90 text-white font-semibold h-11 sm:h-10"
+            asChild
           >
-            {ctaLabel || `Voir ${name}`}
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </Button>
-      )}
-      {type !== 'avoid' && url && (
-        <span className="text-[10px] text-muted-foreground ml-3">Lien affilié</span>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              onClick={handleClick}
+              className="flex items-center justify-center gap-1.5"
+            >
+              {ctaLabel || `👉 Voir le prix et les avis sur Amazon`}
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </Button>
+          <div className="flex flex-wrap items-center gap-3 text-[10px] sm:text-[11px] text-muted-foreground">
+            <span className="flex items-center gap-1">
+              <ShieldCheck className="w-3 h-3 text-green-600" />
+              ✔️ Disponible sur Amazon
+            </span>
+            <span className="flex items-center gap-1">
+              <Zap className="w-3 h-3 text-sunset" />
+              ⚡ Stock limité selon les périodes
+            </span>
+            <span className="text-[10px] text-muted-foreground">Lien affilié</span>
+          </div>
+        </div>
       )}
     </div>
   );
