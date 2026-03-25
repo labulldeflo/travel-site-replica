@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -243,6 +244,8 @@ const Norvege = () => {
               </TabsContent>
             </Tabs>
           </section>
+
+          <OrganiserVoyageBlock destination="Norvège" showAssurance />
         </main>
         <Footer />
       </div>

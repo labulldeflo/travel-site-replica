@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import bruneiImg from '@/assets/destinations/brunei.jpg';
 
 const Brunei = () => {
@@ -275,6 +276,8 @@ const Brunei = () => {
             </Tabs>
           </div>
         </section>
+
+        <OrganiserVoyageBlock destination="Brunei" showEsim showAssurance />
       </main>
 
       <Footer />
