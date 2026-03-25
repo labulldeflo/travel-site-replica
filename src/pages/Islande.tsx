@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { OrganiserVoyageBlock } from '@/components/affiliate';
 import islandeImg from '@/assets/destinations/islande.jpg';
 
 const Islande = () => (
