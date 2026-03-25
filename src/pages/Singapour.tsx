@@ -284,6 +284,8 @@ const Singapour = () => {
             </Tabs>
           </div>
         </section>
+
+        <OrganiserVoyageBlock destination="Singapour" showEsim showAssurance />
       </main>
 
       <Footer />

@@ -276,6 +276,8 @@ const Brunei = () => {
             </Tabs>
           </div>
         </section>
+
+        <OrganiserVoyageBlock destination="Brunei" showEsim showAssurance />
       </main>
 
       <Footer />

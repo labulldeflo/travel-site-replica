@@ -244,6 +244,8 @@ const Norvege = () => {
               </TabsContent>
             </Tabs>
           </section>
+
+          <OrganiserVoyageBlock destination="Norvège" showAssurance />
         </main>
         <Footer />
       </div>

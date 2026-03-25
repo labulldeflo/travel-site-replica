@@ -39,6 +39,8 @@ const Irlande = () => (
           </Tabs>
         </div>
       </section>
+
+      <OrganiserVoyageBlock destination="Irlande" showAssurance />
     </main>
     <Footer />
   </div>
