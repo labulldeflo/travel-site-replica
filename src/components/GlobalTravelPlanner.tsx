@@ -1,6 +1,7 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Leaf, Sofa, Crown, Plane, Utensils, Hotel, MapPin, BookOpen, ArrowRight } from 'lucide-react';
+import { Leaf, Sofa, Crown, Plane, Utensils, Hotel, MapPin, Mail, Send, CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 // ============================================================
