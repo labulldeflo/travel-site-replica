@@ -1,4 +1,4 @@
-import { Globe, BookOpen, Users, Shield } from "lucide-react";
+import { Globe, BookOpen, Shield } from "lucide-react";
 
 const stats = [
   { icon: Globe, value: "+40", label: "Destinations" },
