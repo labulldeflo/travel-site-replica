@@ -510,6 +510,7 @@ const AppRoutes = () => {
       <Route path="/preparer-voyage" element={<PreparerVoyage />} />
       <Route path="/equipement-voyage" element={<EquipementVoyage />} />
       <Route path="/budget-voyage" element={<BudgetVoyagePilier />} />
+      <Route path="/planificateur-budget" element={<PlanificateurBudget />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/organiser-tour-monde-budget-limite" element={<OrganiserTourMondeBudget />} />
       <Route path="/blog/destinations-voyager-seule-50-ans" element={<DestinationsVoyagerSeule50Ans />} />
