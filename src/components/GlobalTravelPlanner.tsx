@@ -49,9 +49,20 @@ interface GlobalTravelPlannerProps {
   destination?: string;
 }
 
+const STORAGE_KEY = 'gtp_email_submitted';
+
 const GlobalTravelPlanner = ({ destination = 'votre voyage' }: GlobalTravelPlannerProps) => {
   const [days, setDays] = useState(10);
   const [style, setStyle] = useState<TravelStyle>('confort');
+  const [email, setEmail] = useState('');
+  const [alreadySubmitted, setAlreadySubmitted] = useState(false);
+  const [justSubmitted, setJustSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem(STORAGE_KEY) === 'true') {
+      setAlreadySubmitted(true);
+    }
+  }, []);
 
   const budgetKey = 'default';
   const dailyBudget = BUDGET_DATA[budgetKey][style];
