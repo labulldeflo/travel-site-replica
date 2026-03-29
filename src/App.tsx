@@ -24,6 +24,7 @@ const Premium = lazy(() => import("./pages/Premium"));
 const PreparerVoyage = lazy(() => import("./pages/PreparerVoyage"));
 const EquipementVoyage = lazy(() => import("./pages/EquipementVoyage"));
 const BudgetVoyagePilier = lazy(() => import("./pages/BudgetVoyagePilier"));
+const PlanificateurBudget = lazy(() => import("./pages/PlanificateurBudget"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const PolitiqueConfidentialite = lazy(() => import("./pages/PolitiqueConfidentialite"));
 
@@ -509,6 +510,7 @@ const AppRoutes = () => {
       <Route path="/preparer-voyage" element={<PreparerVoyage />} />
       <Route path="/equipement-voyage" element={<EquipementVoyage />} />
       <Route path="/budget-voyage" element={<BudgetVoyagePilier />} />
+      <Route path="/planificateur-budget" element={<PlanificateurBudget />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/organiser-tour-monde-budget-limite" element={<OrganiserTourMondeBudget />} />
       <Route path="/blog/destinations-voyager-seule-50-ans" element={<DestinationsVoyagerSeule50Ans />} />
