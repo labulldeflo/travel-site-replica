@@ -1,4 +1,4 @@
-import { Globe, BookOpen, Users, Shield } from 'lucide-react';
+import { Globe, BookOpen, Shield } from 'lucide-react';
 
 const stats = [
   {
@@ -12,12 +12,6 @@ const stats = [
     value: '+200',
     label: 'Articles et guides',
     description: 'Contenus vérifiés et mis à jour régulièrement',
-  },
-  {
-    icon: Users,
-    value: '10 000+',
-    label: 'Voyageurs aidés',
-    description: 'Checklist téléchargées et guides consultés',
   },
   {
     icon: Shield,
