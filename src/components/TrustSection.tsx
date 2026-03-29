@@ -14,12 +14,6 @@ const stats = [
     description: 'Contenus vérifiés et mis à jour régulièrement',
   },
   {
-    icon: Users,
-    value: '10 000+',
-    label: 'Voyageurs aidés',
-    description: 'Checklist téléchargées et guides consultés',
-  },
-  {
     icon: Shield,
     value: '100%',
     label: 'Indépendant',

@@ -3,7 +3,6 @@ import { Globe, BookOpen, Users, Shield } from "lucide-react";
 const stats = [
   { icon: Globe, value: "+40", label: "Destinations" },
   { icon: BookOpen, value: "+200", label: "Guides & articles" },
-  { icon: Users, value: "10 000+", label: "Voyageurs aidés" },
   { icon: Shield, value: "100%", label: "Indépendant" },
 ];
 
