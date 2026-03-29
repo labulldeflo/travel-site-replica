@@ -1,6 +1,7 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Leaf, Sofa, Crown, Plane, Utensils, Hotel, MapPin, BookOpen, ArrowRight } from 'lucide-react';
+import { Leaf, Sofa, Crown, Plane, Utensils, Hotel, MapPin, Mail, Send, CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 // ============================================================
@@ -48,9 +49,20 @@ interface GlobalTravelPlannerProps {
   destination?: string;
 }
 
+const STORAGE_KEY = 'gtp_email_submitted';
+
 const GlobalTravelPlanner = ({ destination = 'votre voyage' }: GlobalTravelPlannerProps) => {
   const [days, setDays] = useState(10);
   const [style, setStyle] = useState<TravelStyle>('confort');
+  const [email, setEmail] = useState('');
+  const [alreadySubmitted, setAlreadySubmitted] = useState(false);
+  const [justSubmitted, setJustSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem(STORAGE_KEY) === 'true') {
+      setAlreadySubmitted(true);
+    }
+  }, []);
 
   const budgetKey = 'default';
   const dailyBudget = BUDGET_DATA[budgetKey][style];
@@ -216,49 +228,76 @@ const GlobalTravelPlanner = ({ destination = 'votre voyage' }: GlobalTravelPlann
         </div>
       </div>
 
-      {/* CTA E-book */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="bg-gradient-to-br from-primary/10 via-card to-accent/10 rounded-2xl border border-primary/20 overflow-hidden shadow-lg"
-      >
-        <div className="p-6">
-          <div className="flex items-start gap-4">
-            <div className="w-16 h-20 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-              <BookOpen className="w-8 h-8 text-primary" />
+      {/* Email Capture / Success */}
+      {!alreadySubmitted && !justSubmitted ? (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-br from-primary/10 via-card to-accent/10 rounded-2xl border border-primary/20 overflow-hidden shadow-lg"
+        >
+          <div className="p-6 text-center">
+            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+              <Mail className="w-6 h-6 text-primary" />
             </div>
-            <div className="flex-1">
-              <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full mb-2">
-                🏆 Guide complet
-              </span>
-              <h3 className="text-lg font-bold text-foreground mb-1">
-                E-book : Voyager malin pour {destination}
-              </h3>
-              <p className="text-sm text-muted-foreground mb-3">
-                Itinéraires, bons plans, budget détaillé et astuces exclusives pour économiser jusqu'à 40%.
-              </p>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-sm text-muted-foreground line-through">19,90 €</span>
-                <span className="text-2xl font-bold text-primary">9,90 €</span>
-                <span className="text-xs font-semibold text-primary-foreground bg-primary px-2 py-0.5 rounded-full">
-                  -50%
-                </span>
-              </div>
-              <a
-                href="#"
-                className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground font-semibold py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors shadow-md text-sm"
+            <h3 className="text-lg font-bold text-foreground mb-1">
+              Recevez votre estimation détaillée
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Budget personnalisé + astuces pour économiser, directement dans votre boîte mail.
+            </p>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+                localStorage.setItem(STORAGE_KEY, 'true');
+                setJustSubmitted(true);
+              }}
+              className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto"
+            >
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="votre@email.com"
+                className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+              />
+              <button
+                type="submit"
+                className="flex items-center justify-center gap-2 bg-primary text-primary-foreground font-semibold py-3 px-5 rounded-lg hover:bg-primary/90 transition-colors shadow-md text-sm whitespace-nowrap"
               >
-                Acheter le guide complet
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <p className="text-[10px] text-muted-foreground text-center mt-2">
-                📥 Téléchargement immédiat • PDF • Satisfait ou remboursé
-              </p>
-            </div>
+                <Send className="w-4 h-4" />
+                Recevoir mon budget
+              </button>
+            </form>
+            <p className="text-[10px] text-muted-foreground mt-2">
+              📩 Gratuit • Pas de spam • Se désinscrire en 1 clic
+            </p>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      ) : (
+        <motion.div
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          className="bg-gradient-to-br from-primary/10 via-card to-accent/10 rounded-2xl border border-primary/20 overflow-hidden shadow-lg"
+        >
+          <div className="p-6 text-center">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <CheckCircle className="w-6 h-6 text-green-600" />
+            </div>
+            <h3 className="text-lg font-bold text-foreground mb-1">
+              C'est envoyé ! 🎉
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Profitez-en pour découvrir notre{' '}
+              <Link to="/premium" className="text-primary font-semibold underline underline-offset-2 hover:text-primary/80">
+                Guide Premium à -50%
+              </Link>
+            </p>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 };
