@@ -24,6 +24,7 @@ const Premium = lazy(() => import("./pages/Premium"));
 const PreparerVoyage = lazy(() => import("./pages/PreparerVoyage"));
 const EquipementVoyage = lazy(() => import("./pages/EquipementVoyage"));
 const BudgetVoyagePilier = lazy(() => import("./pages/BudgetVoyagePilier"));
+const PlanificateurBudget = lazy(() => import("./pages/PlanificateurBudget"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const PolitiqueConfidentialite = lazy(() => import("./pages/PolitiqueConfidentialite"));
 
