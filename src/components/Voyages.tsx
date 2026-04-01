@@ -90,8 +90,11 @@ const Voyages = () => {
                     <img 
                       src={destination.image} 
                       alt={`Guide voyage ${destination.title}`}
+                      width={400}
+                      height={192}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <span className="absolute top-3 left-3 px-3 py-1 bg-ocean/90 text-white text-xs font-semibold rounded-full">

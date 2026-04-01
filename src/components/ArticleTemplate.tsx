@@ -190,10 +190,19 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
       <main className="flex-grow pt-24">
         {/* Hero Section */}
         <header
-          className="relative h-[65vh] md:h-[75vh] bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-          aria-label={heroImageAlt}
+          className="relative h-[65vh] md:h-[75vh] overflow-hidden"
+          aria-label={heroImageAlt || title}
         >
+          <img
+            src={heroImage}
+            alt={heroImageAlt || `Guide voyage ${title}`}
+            width={1920}
+            height={1080}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10"></div>
           <div className="relative container mx-auto px-4 h-full flex items-end pb-16 z-20">
             <div className="text-white max-w-4xl">
