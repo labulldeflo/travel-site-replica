@@ -10,7 +10,7 @@ const HeroStats = () => {
   return (
     <section className="bg-muted border-b border-border">
       <div className="container mx-auto px-4 py-5">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <div className="grid grid-cols-3 gap-4 md:gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="flex items-center gap-3 justify-center">
               <stat.icon className="w-5 h-5 text-ocean shrink-0" />
