@@ -33,8 +33,7 @@ export default {
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          // Couleur plus foncée pour un contraste meilleur
-          foreground: "#404040", // gris foncé lisible sur fond clair
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
