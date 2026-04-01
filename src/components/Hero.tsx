@@ -26,7 +26,7 @@ const Hero = () => {
           Cap sur le Monde
         </h1>
 
-        <p className="text-base sm:text-lg font-elegant text-white/80 font-light mb-12 tracking-widest uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+        <p className="text-base sm:text-lg font-elegant text-white/90 font-light mb-12 tracking-widest uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
           Organisez vos voyages simplement
         </p>
 
