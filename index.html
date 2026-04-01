@@ -6,6 +6,19 @@
 
     <link rel="icon" type="image/png" href="./favicon.png" />
 
+    <!-- Preconnect to third-party domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="/src/assets/hero-coastal-travel.jpg" type="image/jpeg" fetchpriority="high" />
+
+    <!-- Preload main fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+
     <title>Cap sur le Monde – Guides de voyage et conseils pratiques</title>
     <meta
       name="description"
@@ -48,6 +61,13 @@
         });
       });
     </script>
+
+    <!-- Critical inline CSS for above-the-fold -->
+    <style>
+      body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#fdfcfa;color:#2d3748}
+      .hero-placeholder{min-height:60vh;background:#1a202c}
+      #root{min-height:100vh}
+    </style>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4646585897888857"
       crossorigin="anonymous"></script>

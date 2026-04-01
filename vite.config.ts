@@ -41,8 +41,15 @@ export default defineConfig(({ mode }) => ({
 
   // 💡 OPTIONNEL : Ajout d'options de build (Nettoyage du dossier)
   build: {
-    // Force la sortie des assets au même niveau que le HTML pour certains déploiements
-    // Assurez-vous que le dossier 'dist' est nettoyé avant chaque build
     emptyOutDir: true,
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          ui: ['framer-motion', 'lucide-react'],
+        },
+      },
+    },
   },
 }));

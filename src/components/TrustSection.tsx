@@ -34,7 +34,7 @@ const TrustSection = () => {
               Des guides créés à partir d'expériences réelles, testés et mis à jour pour chaque destination.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-3 gap-6 md:gap-8">
             {stats.map((stat, idx) => {
               const Icon = stat.icon;
               return (
