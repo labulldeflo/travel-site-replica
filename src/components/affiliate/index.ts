@@ -8,3 +8,4 @@ export { default as RecommendationCard } from './RecommendationCard';
 export { default as ContextualEmailCapture } from './ContextualEmailCapture';
 export { default as ReassuranceBlock } from './ReassuranceBlock';
 export { default as AffiliationHotel } from './AffiliationHotel';
+export { default as AssuranceComparisonTable } from './AssuranceComparisonTable';
