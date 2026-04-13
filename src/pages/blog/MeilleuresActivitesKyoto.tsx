@@ -23,7 +23,7 @@ const MeilleuresActivitesKyoto = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <SEO
+      <SEO hideH1={true}
         title="Les 20 Meilleures Activités à Kyoto (2025)"
         description="Découvrez les meilleures activités à Kyoto : temples dorés, forêt de bambous, quartier des geishas, cérémonie du thé. Guide complet avec prix et conseils."
         image={heroImg}

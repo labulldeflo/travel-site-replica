@@ -16,7 +16,7 @@ const PlanificateurVoyage = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Planificateur de Voyage – Organisez Votre Prochain Départ Étape par Étape"
         description="Guide complet pour planifier votre voyage de A à Z : budget, itinéraire, réservations, documents. Suivez nos étapes pour un départ serein et organisé."
         url="/ressources-gratuites/planificateur-voyage"

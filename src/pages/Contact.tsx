@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEO 
+      <SEO hideH1={true} 
         title="Contact - Cap sur le Monde"
         description="Contactez-nous pour toute question sur vos projets de voyage. Nous sommes là pour vous aider à planifier votre prochaine aventure."
         url="/contact"

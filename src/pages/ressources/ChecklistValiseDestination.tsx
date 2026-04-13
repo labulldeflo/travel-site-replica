@@ -15,7 +15,7 @@ const ChecklistValiseDestination = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Check-list Valise Selon la Destination – Quoi Emporter"
         description="Adaptez votre valise selon le climat et le type de voyage : tropical, froid, ville ou aventure. Guide complet pour ne rien oublier dans vos bagages."
         url="/ressources/checklist-valise-destination"

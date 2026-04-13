@@ -16,7 +16,7 @@ const ListeValiseVoyage = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Liste Valise Voyage – Que Mettre dans sa Valise selon la Destination"
         description="Liste complète pour faire sa valise selon la destination et la saison. Astuces de rangement, essentiels à ne pas oublier et conseils pratiques pour voyager léger."
         url="/ressources-gratuites/liste-valise-voyage"

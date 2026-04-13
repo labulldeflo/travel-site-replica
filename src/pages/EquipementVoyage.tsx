@@ -83,7 +83,7 @@ const sections = [
 const EquipementVoyage = () => {
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Meilleur équipement voyage 2025 : sacs, valises et accessoires testés"
         description="Quel sac à dos choisir ? Quelle valise cabine acheter ? Comparatifs et recommandations d'équipement voyage testés par des voyageurs expérimentés."
         url="/equipement-voyage"

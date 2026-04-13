@@ -15,7 +15,7 @@ const GuideAfrique = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Guide Voyage Afrique – Safari, Budget, Visa et Santé"
         description="Guide complet pour voyager en Afrique : safari, road trip, budget par pays, vaccins, visa et itinéraires recommandés. Préparez votre aventure africaine."
         url="/ressources/guide-afrique"

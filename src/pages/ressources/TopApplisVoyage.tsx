@@ -81,7 +81,7 @@ const TopApplisVoyage = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Top 15 Applis Voyage Indispensables – Guide Complet"
         description="Découvrez les meilleures applications pour voyager : navigation hors ligne, traduction, budget, hébergement et transport. Toutes testées et recommandées."
         url="/ressources/top-applis-voyage"

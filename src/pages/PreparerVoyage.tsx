@@ -28,7 +28,7 @@ const steps = [
 const PreparerVoyage = () => {
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Comment préparer son voyage : checklist complète 2025"
         description="Checklist voyage complète en 8 étapes : documents, budget, assurance, transport et équipement. Tout organiser avant de partir, même pour un premier voyage."
         url="/preparer-voyage"

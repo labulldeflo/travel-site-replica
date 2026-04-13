@@ -16,7 +16,7 @@ const ErreursVoyage = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Les Erreurs à Éviter en Voyage – Guide pour Ne Pas Gâcher Son Séjour"
         description="Découvrez les erreurs les plus fréquentes des voyageurs et comment les éviter. Budget, sécurité, itinéraire, santé : ne faites plus ces fautes classiques."
         url="/ressources-gratuites/erreurs-voyage"

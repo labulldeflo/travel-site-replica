@@ -23,7 +23,7 @@ const MeilleursHotelsTokyo = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <SEO
+      <SEO hideH1={true}
         title="Meilleurs Hôtels à Tokyo – Notre Sélection 2025"
         description="Où dormir à Tokyo ? Sélection des meilleurs hôtels par quartier et budget : luxe, milieu de gamme, budget. Conseils pour réserver au meilleur prix."
         image={heroImg}
