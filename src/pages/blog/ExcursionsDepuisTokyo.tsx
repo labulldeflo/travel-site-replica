@@ -19,7 +19,7 @@ const ExcursionsDepuisTokyo = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
+      <SEO hideH1={true}
         title="10 Excursions depuis Tokyo (Guide 2025)"
         description="Les meilleures excursions d'une journée depuis Tokyo : Mont Fuji, Kamakura, Nikko, Hakone. Itinéraires, prix, durées et conseils pratiques."
         image={heroImg}

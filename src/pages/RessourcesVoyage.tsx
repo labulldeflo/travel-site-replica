@@ -9,7 +9,7 @@ import { Plane, Hotel, MapPin, Smartphone, Shield, Backpack, Compass } from 'luc
 const RessourcesVoyage = () => {
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Ressources Voyage – Outils et Services Recommandés pour Voyager"
         description="Tous nos outils et services recommandés pour organiser votre voyage : comparateurs de vols, hébergement, activités, eSIM, assurance et équipement."
         url="/ressources-voyage"

@@ -15,7 +15,7 @@ const GuideEurope = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Guide Voyage Europe – Budget, Transport, Itinéraires"
         description="Guide pratique pour explorer l'Europe : budget par pays, transport en train et avion, meilleures périodes et itinéraires recommandés pour petit budget."
         url="/ressources/guide-europe"

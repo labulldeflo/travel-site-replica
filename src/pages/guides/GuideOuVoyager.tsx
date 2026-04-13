@@ -16,7 +16,7 @@ const GuideOuVoyager = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Où Voyager Selon la Saison – Guide des Meilleures Destinations par Mois"
         description="Découvrez les meilleures destinations de voyage mois par mois. Climat idéal, haute et basse saison, conseils pratiques pour choisir où et quand partir."
         url="/guides/ou-voyager"

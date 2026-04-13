@@ -16,7 +16,7 @@ const GuideTourDuMonde = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Guide Tour du Monde – Préparer, Budget, Itinéraire"
         description="Guide complet pour organiser votre tour du monde : budget détaillé, itinéraire, billets d'avion, assurance, visa et conseils pratiques étape par étape."
         url="/ressources/guide-tour-du-monde"

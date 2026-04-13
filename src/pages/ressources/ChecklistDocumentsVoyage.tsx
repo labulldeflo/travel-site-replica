@@ -16,7 +16,7 @@ const ChecklistDocumentsVoyage = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Check-list Documents de Voyage – Tous les Papiers à Préparer"
         description="Liste complète des documents indispensables pour voyager : passeport, visa, assurance, billets. Ne partez jamais sans avoir vérifié cette check-list."
         url="/ressources/checklist-documents-voyage"

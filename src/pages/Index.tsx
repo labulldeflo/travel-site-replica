@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <>
       <SEO 
-        title="Cap sur le Monde – Guides de voyage, budgets et équipement"
+        title="Guides de voyage, budgets et équipement 2026"
         description="Guides pratiques, budgets réels et équipements recommandés pour préparer vos voyages. +40 destinations avec itinéraires testés et conseils vérifiés."
         url="/"
         hideH1={true}

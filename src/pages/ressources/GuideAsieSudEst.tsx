@@ -25,7 +25,7 @@ const GuideAsieSudEst = () => {
 
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Guide Voyage Asie du Sud-Est – Budget, Visa, Itinéraires"
         description="Guide complet pour voyager en Asie du Sud-Est : budget par pays, formalités visa, meilleures périodes, transport et itinéraires recommandés."
         url="/ressources/guide-asie-sud-est"

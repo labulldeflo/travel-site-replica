@@ -47,7 +47,7 @@ const postes = [
 const BudgetVoyagePilier = () => {
   return (
     <>
-      <SEO
+      <SEO hideH1={true}
         title="Budget voyage 2025 : combien coûte vraiment un voyage par pays"
         description="Combien coûte un voyage en Thaïlande, au Japon ou au Portugal ? Budget détaillé par jour et par pays : hébergement, repas, transport, activités."
         url="/budget-voyage"
