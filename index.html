@@ -12,8 +12,7 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
 
-    <!-- Preload hero image -->
-    <link rel="preload" as="image" href="/src/assets/hero-coastal-travel.jpg" type="image/jpeg" fetchpriority="high" />
+    <!-- Hero image preloaded via eager loading in Hero component -->
 
     <!-- Preload main fonts -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" />
@@ -50,9 +49,6 @@
       #root{min-height:100vh}
     </style>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4646585897888857"
-      crossorigin="anonymous"></script>
-
     <script type="module" src="/src/main.tsx"></script>
   </head>
 
@@ -62,5 +58,14 @@
       <p>Guides complets, itinéraires et conseils pratiques pour préparer vos voyages à travers le monde.</p>
     </noscript>
     <div id="root"></div>
+    <script>
+      window.addEventListener('load', function () {
+        var ad = document.createElement('script');
+        ad.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4646585897888857";
+        ad.async = true;
+        ad.crossOrigin = "anonymous";
+        document.body.appendChild(ad);
+      });
+    </script>
   </body>
 </html>

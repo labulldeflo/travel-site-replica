@@ -11,7 +11,7 @@ import LoadingPage from "@/components/LoadingPage"; // Créer un composant simpl
 // --- 1. Définition des Composants Lazy-Loaded (Lazy Loading) ---
 
 // PAGES STATIQUES & GÉNÉRALES
-const Index = lazy(() => import("./pages/Index"));
+import Index from "./pages/Index";
 const Destinations = lazy(() => import("./pages/Destinations"));
 const Guides = lazy(() => import("./pages/Guides"));
 const Tests = lazy(() => import("./pages/Tests"));
