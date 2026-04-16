@@ -147,6 +147,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 // COMPARATIFS
 const MeilleureEsimJapon = lazy(() => import("./pages/comparatifs/MeilleureEsimJapon"));
+const MeilleureAssuranceVoyageJapon = lazy(() => import("./pages/comparatifs/MeilleureAssuranceVoyageJapon"));
 const MeilleureValiseCabine = lazy(() => import("./pages/comparatifs/MeilleureValiseCabine"));
 const MeilleurSacADosCabine = lazy(() => import("./pages/comparatifs/MeilleurSacADosCabine"));
 const MeilleurOreillerVoyage = lazy(() => import("./pages/comparatifs/MeilleurOreillerVoyage"));
@@ -940,6 +941,7 @@ const AppRoutes = () => {
 
       {/* ========== COMPARATIFS ========== */}
       <Route path="/comparatifs/meilleure-esim-japon" element={<MeilleureEsimJapon />} />
+      <Route path="/comparatifs/meilleure-assurance-voyage-japon" element={<MeilleureAssuranceVoyageJapon />} />
       <Route path="/comparatifs/meilleure-valise-cabine" element={<MeilleureValiseCabine />} />
       <Route path="/comparatifs/meilleur-sac-a-dos-cabine" element={<MeilleurSacADosCabine />} />
       <Route path="/comparatifs/meilleur-oreiller-voyage" element={<MeilleurOreillerVoyage />} />
