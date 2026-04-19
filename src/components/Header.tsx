@@ -127,6 +127,20 @@ const Header = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+
+            {/* Barre de recherche desktop */}
+            <form onSubmit={handleSearch} className="ml-2 relative" role="search">
+              <label htmlFor="header-search" className="sr-only">Rechercher</label>
+              <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+              <Input
+                id="header-search"
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Rechercher…"
+                className="h-9 w-44 xl:w-56 pl-8 text-sm"
+              />
+            </form>
           </div>
 
           {/* Mobile Menu Button */}
