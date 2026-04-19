@@ -9,6 +9,10 @@ import AffiliateWidget from "@/components/AffiliateWidget";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import FAQSection, { FAQItem } from "@/components/FAQSection";
+import BackToTop from "@/components/BackToTop";
+import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calculateReadingTime } from "@/lib/readingTime";
 
 // Fonction utilitaire pour parser le markdown simple (gras, italique)
 const parseSimpleMarkdown = (text: string): string => {
@@ -127,7 +131,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   keywords,
   author = "Cap sur le Monde",
   date = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }),
-  readingTime = "7 min",
+  readingTime,
   metaDescription,
   introduction,
   introText,
@@ -151,6 +155,19 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   const finalIntro = introduction || introText;
   const finalConclusion = conclusion || conclusionText;
   const seoDescription = metaDescription || subtitle || `${title} – Guide complet et conseils pratiques.`;
+
+  // Temps de lecture : utilise la valeur fournie, sinon calcul automatique (~200 mots/min)
+  const sectionsText = contentSections
+    .map((s) => (typeof s.content === "string" ? s.content : ""))
+    .join(" ");
+  const computedReadingTime =
+    readingTime ||
+    calculateReadingTime(
+      finalIntro,
+      sectionsText,
+      practicalTips.map((t) => t.content).join(" "),
+      finalConclusion,
+    );
 
   // Parse French date to ISO for schema.org
   const parseDate = (d: string) => {
@@ -188,6 +205,14 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
       <Header />
 
       <main className="flex-grow pt-24">
+        {/* Breadcrumb visible */}
+        <ArticleBreadcrumb
+          items={[
+            { label: category, to: destinationLink },
+            { label: title },
+          ]}
+        />
+
         {/* Hero Section */}
         <header
           className="relative h-[65vh] md:h-[75vh] overflow-hidden"
