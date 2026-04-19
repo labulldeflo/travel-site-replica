@@ -144,6 +144,7 @@ const MeilleuresChosesParis = lazy(() => import("./pages/blog/MeilleuresChosesPa
 const MeilleuresChosesBarcelone = lazy(() => import("./pages/blog/MeilleuresChosesBarcelone"));
 
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Recherche = lazy(() => import("./pages/Recherche"));
 
 // COMPARATIFS
 const MeilleureEsimJapon = lazy(() => import("./pages/comparatifs/MeilleureEsimJapon"));

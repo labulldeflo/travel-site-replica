@@ -152,6 +152,20 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 space-y-2 pb-4">
+            {/* Barre de recherche mobile */}
+            <form onSubmit={handleSearch} className="relative pb-2" role="search">
+              <label htmlFor="header-search-mobile" className="sr-only">Rechercher</label>
+              <Search className="absolute left-2.5 top-3.5 h-4 w-4 text-muted-foreground pointer-events-none" />
+              <Input
+                id="header-search-mobile"
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Rechercher un article…"
+                className="h-10 w-full pl-8 text-sm"
+              />
+            </form>
+
             {/* Destinations Mobile */}
             <div>
               <button
