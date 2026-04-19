@@ -441,9 +441,13 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
               </div>
             </aside>
           </div>
+
+          {/* Articles similaires (auto par catégorie) */}
+          <RelatedArticles category={category} />
         </section>
       </main>
 
+      <BackToTop />
       <Footer />
     </div>
   );
