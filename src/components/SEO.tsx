@@ -110,6 +110,7 @@ const SEO: React.FC<SEOProps> = ({
       <Helmet titleTemplate={`%s | ${SITE_NAME}`} defaultTitle={SITE_NAME}>
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:title" content={`${title} | ${SITE_NAME}`} />
         <meta property="og:description" content={description} />
