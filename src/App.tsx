@@ -67,6 +67,7 @@ const GuideCompletJapon = lazy(() => import("./pages/blog/GuideCompletJapon"));
 const ItineraireJapon7Jours = lazy(() => import("./pages/blog/ItineraireJapon7Jours"));
 const ItineraireJapon10Jours = lazy(() => import("./pages/blog/ItineraireJapon10Jours"));
 const ItineraireJapon2Semaines = lazy(() => import("./pages/blog/ItineraireJapon2Semaines"));
+const JaponPasCherAstuces = lazy(() => import("./pages/blog/JaponPasCherAstuces")); // ✅ AJOUTÉ
 const BudgetVoyageJapon = lazy(() => import("./pages/blog/BudgetVoyageJapon"));
 const QueFaireKyoto = lazy(() => import("./pages/blog/QueFaireKyoto"));
 const QueFaireOsaka = lazy(() => import("./pages/blog/QueFaireOsaka"));
@@ -490,8 +491,6 @@ const AppRoutes = () => {
   return (
     <Routes>
       {/* PAGES GÉNÉRALES */}
-      {/* NOTE: Index, Destinations, Guides, Tests, About, GuideGratuit doivent aussi être déclarés en Lazy Loading 
-                       en haut du fichier pour la cohérence! */}
       <Route path="/" element={<Index />} />
       <Route path="/destinations" element={<Destinations />} />
       <Route path="/guides" element={<Guides />} />
@@ -541,6 +540,7 @@ const AppRoutes = () => {
       <Route path="/blog/itineraire-japon-7-jours" element={<ItineraireJapon7Jours />} />
       <Route path="/blog/itineraire-japon-10-jours" element={<ItineraireJapon10Jours />} />
       <Route path="/blog/itineraire-japon-2-semaines" element={<ItineraireJapon2Semaines />} />
+      <Route path="/blog/japon-pas-cher-astuces-budget" element={<JaponPasCherAstuces />} /> {/* ✅ AJOUTÉ */}
       <Route path="/blog/budget-voyage-japon" element={<BudgetVoyageJapon />} />
       <Route path="/blog/que-faire-kyoto" element={<QueFaireKyoto />} />
       <Route path="/blog/que-faire-osaka" element={<QueFaireOsaka />} />
@@ -645,7 +645,6 @@ const AppRoutes = () => {
       <Route path="/destinations/timor-oriental" element={<DestinationsList.TimorOriental />} />
       <Route path="/destinations/japon" element={<DestinationsList.Japon />} />
       <Route path="/destinations/coree-du-sud" element={<DestinationsList.CoreeDuSud />} />
-
       <Route path="/destinations/france" element={<DestinationsList.France />} />
       <Route path="/destinations/italie" element={<DestinationsList.Italie />} />
       <Route path="/destinations/espagne" element={<DestinationsList.Espagne />} />
@@ -658,14 +657,12 @@ const AppRoutes = () => {
       <Route path="/destinations/irlande" element={<DestinationsList.Irlande />} />
       <Route path="/destinations/norvege" element={<DestinationsList.Norvege />} />
       <Route path="/destinations/hongrie" element={<DestinationsList.Hongrie />} />
-
       <Route path="/destinations/maroc" element={<DestinationsList.Maroc />} />
       <Route path="/destinations/egypte" element={<DestinationsList.Egypte />} />
       <Route path="/destinations/kenya" element={<DestinationsList.Kenya />} />
       <Route path="/destinations/tanzanie" element={<DestinationsList.Tanzanie />} />
       <Route path="/destinations/afrique-du-sud" element={<DestinationsList.AfriqueDuSud />} />
       <Route path="/destinations/madagascar" element={<DestinationsList.Madagascar />} />
-
       <Route path="/destinations/usa" element={<DestinationsList.USA />} />
       <Route path="/destinations/canada" element={<DestinationsList.Canada />} />
       <Route path="/destinations/mexique" element={<DestinationsList.Mexique />} />
@@ -675,7 +672,7 @@ const AppRoutes = () => {
       <Route path="/destinations/chili" element={<DestinationsList.Chili />} />
       <Route path="/destinations/colombie" element={<DestinationsList.Colombie />} />
 
-      {/* ========== GUIDES THÉMATIQUES GÉNÉRAUX ========== */}
+      {/* GUIDES THÉMATIQUES GÉNÉRAUX */}
       <Route path="/guides/budget" element={<GuideBudget />} />
       <Route path="/guides/couple" element={<GuideCouple />} />
       <Route path="/guides/photo" element={<GuidePhoto />} />
@@ -689,260 +686,164 @@ const AppRoutes = () => {
       <Route path="/guides/que-mettre-valise" element={<GuideQueMettreValise />} />
       <Route path="/guides/ou-voyager" element={<GuideOuVoyager />} />
 
-      {/* ========== GUIDES THÉMATIQUES PAR PAYS ========== */}
-      
-      {/* GUIDES - Vietnam */}
+      {/* GUIDES PAR PAYS */}
       <Route path="/guides/guide-complet-vietnam" element={<CountryGuides.GuideCompletVietnam />} />
       <Route path="/guides/budget-vietnam" element={<CountryGuides.BudgetVietnam />} />
       <Route path="/guides/street-food-vietnam" element={<CountryGuides.StreetFoodVietnam />} />
       <Route path="/guides/transport-vietnam" element={<CountryGuides.TransportVietnam />} />
       <Route path="/guides/vietnam-famille" element={<CountryGuides.VietnamFamille />} />
       <Route path="/guides/photo-vietnam" element={<CountryGuides.PhotoVietnam />} />
-
-      {/* GUIDES - Thaïlande */}
       <Route path="/guides/guide-complet-thailande" element={<CountryGuides.GuideCompletThailande />} />
       <Route path="/guides/budget-thailande" element={<CountryGuides.BudgetThailande />} />
       <Route path="/guides/street-food-thailande" element={<CountryGuides.StreetFoodThailande />} />
       <Route path="/guides/transport-thailande" element={<CountryGuides.TransportThailande />} />
       <Route path="/guides/thailande-famille" element={<CountryGuides.ThailandeFamille />} />
       <Route path="/guides/photo-thailande" element={<CountryGuides.PhotoThailande />} />
-
-      {/* GUIDES - Cambodge */}
       <Route path="/guides/guide-complet-cambodge" element={<CountryGuides.GuideCompletCambodge />} />
       <Route path="/guides/budget-cambodge" element={<CountryGuides.BudgetCambodge />} />
       <Route path="/guides/street-food-cambodge" element={<CountryGuides.StreetFoodCambodge />} />
       <Route path="/guides/transport-cambodge" element={<CountryGuides.TransportCambodge />} />
-
-      {/* GUIDES - Laos */}
       <Route path="/guides/guide-complet-laos" element={<CountryGuides.GuideCompletLaos />} />
       <Route path="/guides/budget-laos" element={<CountryGuides.BudgetLaos />} />
       <Route path="/guides/transport-laos" element={<CountryGuides.TransportLaos />} />
-
-      {/* GUIDES - Indonésie */}
       <Route path="/guides/guide-complet-indonesie" element={<CountryGuides.GuideCompletIndonesie />} />
       <Route path="/guides/budget-indonesie" element={<CountryGuides.BudgetIndonesie />} />
       <Route path="/guides/street-food-indonesie" element={<CountryGuides.StreetFoodIndonesie />} />
       <Route path="/guides/transport-indonesie" element={<CountryGuides.TransportIndonesie />} />
-
-      {/* GUIDES - Maroc */}
       <Route path="/guides/guide-complet-maroc" element={<CountryGuides.GuideCompletMaroc />} />
       <Route path="/guides/budget-maroc" element={<CountryGuides.BudgetMaroc />} />
       <Route path="/guides/street-food-maroc" element={<CountryGuides.StreetFoodMaroc />} />
       <Route path="/guides/transport-maroc" element={<CountryGuides.TransportMaroc />} />
-
-      {/* GUIDES - Portugal */}
       <Route path="/guides/guide-complet-portugal" element={<CountryGuides.GuideCompletPortugal />} />
       <Route path="/guides/budget-portugal" element={<CountryGuides.BudgetPortugal />} />
       <Route path="/guides/street-food-portugal" element={<CountryGuides.StreetFoodPortugal />} />
       <Route path="/guides/transport-portugal" element={<CountryGuides.TransportPortugal />} />
-
-      {/* GUIDES - Espagne */}
       <Route path="/guides/guide-complet-espagne" element={<CountryGuides.GuideCompletEspagne />} />
       <Route path="/guides/budget-espagne" element={<CountryGuides.BudgetEspagne />} />
       <Route path="/guides/street-food-espagne" element={<CountryGuides.StreetFoodEspagne />} />
       <Route path="/guides/transport-espagne" element={<CountryGuides.TransportEspagne />} />
-
-      {/* GUIDES - Italie */}
       <Route path="/guides/guide-complet-italie" element={<CountryGuides.GuideCompletItalie />} />
       <Route path="/guides/budget-italie" element={<CountryGuides.BudgetItalie />} />
       <Route path="/guides/street-food-italie" element={<CountryGuides.StreetFoodItalie />} />
       <Route path="/guides/transport-italie" element={<CountryGuides.TransportItalie />} />
 
-      {/* ========== ARTICLES PAR DESTINATION ========== */}
-      
-      {/* ARTICLES - Vietnam */}
+      {/* ARTICLES PAR DESTINATION */}
       <Route path="/destinations/vietnam/hanoi" element={<Articles.ArticleHanoi />} />
       <Route path="/destinations/vietnam/baie-d-halong" element={<Articles.ArticleHaLong />} />
       <Route path="/destinations/vietnam/hoi-an" element={<Articles.ArticleHoiAn />} />
       <Route path="/destinations/vietnam/ho-chi-minh" element={<Articles.ArticleHoChiMinh />} />
-      
-      {/* ARTICLES - Thaïlande */}
       <Route path="/destinations/thailande/bangkok" element={<Articles.ArticleBangkok />} />
       <Route path="/destinations/thailande/chiang-mai" element={<Articles.ArticleChiangMai />} />
       <Route path="/destinations/thailande/iles-sud" element={<Articles.ArticleIlesSudThailande />} />
-
-      {/* ARTICLES - Indonésie */}
       <Route path="/destinations/indonesie/bali" element={<Articles.ArticleBali />} />
       <Route path="/destinations/indonesie/java" element={<Articles.ArticleJava />} />
-
-      {/* ARTICLES - Japon */}
       <Route path="/destinations/japon/tokyo" element={<Articles.ArticleTokyo />} />
       <Route path="/destinations/japon/kyoto" element={<Articles.ArticleKyoto />} />
       <Route path="/destinations/japon/osaka" element={<Articles.ArticleOsaka />} />
-
-      {/* ARTICLES - Corée du Sud */}
       <Route path="/destinations/coree-du-sud/seoul" element={<Articles.ArticleSeoul />} />
       <Route path="/destinations/coree-du-sud/busan" element={<Articles.ArticleBusan />} />
-
-      {/* ARTICLES - Malaisie */}
       <Route path="/destinations/malaisie/kuala-lumpur" element={<Articles.ArticleKualaLumpur />} />
       <Route path="/destinations/malaisie/penang" element={<Articles.ArticlePenang />} />
       <Route path="/destinations/malaisie/borneo" element={<Articles.ArticleBorneo />} />
-
-      {/* ARTICLES - Laos */}
       <Route path="/destinations/laos/luang-prabang" element={<Articles.ArticleLuangPrabang />} />
       <Route path="/destinations/laos/vang-vieng" element={<Articles.ArticleVangVieng />} />
       <Route path="/destinations/laos/vientiane" element={<Articles.ArticleVientiane />} />
-
-      {/* ARTICLES - Cambodge */}
       <Route path="/destinations/cambodge/siem-reap" element={<Articles.ArticleSiemReap />} />
       <Route path="/destinations/cambodge/phnom-penh" element={<Articles.ArticlePhnomPenh />} />
       <Route path="/destinations/cambodge/sihanoukville" element={<Articles.ArticleSihanoukville />} />
-
-      {/* ARTICLES - Birmanie */}
       <Route path="/destinations/birmanie/yangon" element={<Articles.ArticleYangon />} />
       <Route path="/destinations/birmanie/bagan" element={<Articles.ArticleBagan />} />
       <Route path="/destinations/birmanie/mandalay" element={<Articles.ArticleMandalay />} />
-
-      {/* ARTICLES - Philippines */}
       <Route path="/destinations/philippines/manille" element={<Articles.ArticleManille />} />
       <Route path="/destinations/philippines/palawan" element={<Articles.ArticlePalawan />} />
       <Route path="/destinations/philippines/boracay" element={<Articles.ArticleBoracay />} />
-
-      {/* ARTICLES - Singapour */}
       <Route path="/destinations/singapour/singapour" element={<Articles.ArticleSingapour />} />
-
-      {/* ARTICLES - Brunei */}
       <Route path="/destinations/brunei/bandar-seri-begawan" element={<Articles.ArticleBrunei />} />
-
-      {/* ARTICLES - Timor Oriental */}
       <Route path="/destinations/timor-oriental/dili" element={<Articles.ArticleTimorOriental />} />
-
-      {/* ARTICLES - France */}
       <Route path="/destinations/france/paris" element={<Articles.ArticleParis />} />
       <Route path="/destinations/france/provence" element={<Articles.ArticleProvence />} />
       <Route path="/destinations/france/alpes" element={<Articles.ArticleAlpes />} />
       <Route path="/destinations/france/lyon" element={<Articles.ArticleLyon />} />
       <Route path="/destinations/france/cote-azur" element={<Articles.ArticleCoteDazur />} />
       <Route path="/destinations/france/alsace" element={<Articles.ArticleAlsace />} />
-
-      {/* ARTICLES - Italie */}
       <Route path="/destinations/italie/rome" element={<Articles.ArticleRome />} />
       <Route path="/destinations/italie/toscane" element={<Articles.ArticleToscane />} />
       <Route path="/destinations/italie/venise" element={<Articles.ArticleVenise />} />
-
-      {/* ARTICLES - Espagne */}
       <Route path="/destinations/espagne/barcelone" element={<Articles.ArticleBarcelone />} />
       <Route path="/destinations/espagne/madrid" element={<Articles.ArticleMadrid />} />
       <Route path="/destinations/espagne/andalousie" element={<Articles.ArticleAndalousie />} />
-
-      {/* ARTICLES - Croatie */}
       <Route path="/destinations/croatie/dubrovnik" element={<Articles.ArticleDubrovnik />} />
       <Route path="/destinations/croatie/split" element={<Articles.ArticleSplit />} />
       <Route path="/destinations/croatie/plitvice" element={<Articles.ArticlePlitvice />} />
-
-      {/* ARTICLES - Grèce */}
       <Route path="/destinations/grece/athenes" element={<Articles.ArticleAthenes />} />
       <Route path="/destinations/grece/santorin" element={<Articles.ArticleSantorin />} />
       <Route path="/destinations/grece/mykonos" element={<Articles.ArticleMykonos />} />
       <Route path="/destinations/grece/crete" element={<Articles.ArticleCrete />} />
-
-      {/* ARTICLES - Portugal */}
       <Route path="/destinations/portugal/lisbonne" element={<Articles.ArticleLisbonne />} />
       <Route path="/destinations/portugal/porto" element={<Articles.ArticlePorto />} />
       <Route path="/destinations/portugal/algarve" element={<Articles.ArticleAlgarve />} />
-
-      {/* ARTICLES - Autriche */}
       <Route path="/destinations/autriche/vienne" element={<Articles.ArticleVienne />} />
       <Route path="/destinations/autriche/salzbourg" element={<Articles.ArticleSalzbourg />} />
       <Route path="/destinations/autriche/tyrol" element={<Articles.ArticleTyrol />} />
-
-      {/* ARTICLES - Norvège */}
       <Route path="/destinations/norvege/oslo" element={<Articles.ArticleOslo />} />
       <Route path="/destinations/norvege/fjords" element={<Articles.ArticleFjords />} />
       <Route path="/destinations/norvege/bergen" element={<Articles.ArticleBergen />} />
-
-      {/* ARTICLES - Irlande */}
       <Route path="/destinations/irlande/dublin" element={<Articles.ArticleDublin />} />
       <Route path="/destinations/irlande/galway" element={<Articles.ArticleGalway />} />
-
-      {/* ARTICLES - Hongrie */}
       <Route path="/destinations/hongrie/budapest" element={<Articles.ArticleBudapest />} />
-
-      {/* ARTICLES - Suisse */}
       <Route path="/destinations/suisse/zurich" element={<Articles.ArticleZurich />} />
       <Route path="/destinations/suisse/geneve" element={<Articles.ArticleGeneve />} />
-
-      {/* ARTICLES - Islande */}
       <Route path="/destinations/islande/reykjavik" element={<Articles.ArticleIslande />} />
-
-      {/* ARTICLES - Maroc */}
       <Route path="/destinations/maroc/marrakech" element={<Articles.ArticleMarrakech />} />
       <Route path="/destinations/maroc/fes" element={<Articles.ArticleFes />} />
       <Route path="/destinations/maroc/sahara" element={<Articles.ArticleSahara />} />
       <Route path="/destinations/maroc/chefchaouen" element={<Articles.ArticleChefchaouen />} />
-
-      {/* ARTICLES - Égypte */}
       <Route path="/destinations/egypte/le-caire" element={<Articles.ArticleCaire />} />
       <Route path="/destinations/egypte/gizeh" element={<Articles.ArticleGizeh />} />
       <Route path="/destinations/egypte/louxor" element={<Articles.ArticleLuxor />} />
       <Route path="/destinations/egypte/alexandrie" element={<Articles.ArticleAlexandrie />} />
-
-      {/* ARTICLES - Kenya */}
       <Route path="/destinations/kenya/nairobi" element={<Articles.ArticleNairobi />} />
       <Route path="/destinations/kenya/masai-mara" element={<Articles.ArticleMasaiMara />} />
-
-      {/* ARTICLES - Tanzanie */}
       <Route path="/destinations/tanzanie/zanzibar" element={<Articles.ArticleZanzibar />} />
       <Route path="/destinations/tanzanie/kilimandjaro" element={<Articles.ArticleKilimandjaro />} />
-
-      {/* ARTICLES - Afrique du Sud */}
       <Route path="/destinations/afrique-du-sud/cape-town" element={<Articles.ArticleCapeTown />} />
-
-      {/* ARTICLES - Madagascar */}
       <Route path="/destinations/madagascar/antananarivo" element={<Articles.ArticleAntananarivo />} />
       <Route path="/destinations/madagascar/allee-baobabs" element={<Articles.ArticleAlleeBaobabs />} />
-
-      {/* ARTICLES - USA */}
       <Route path="/destinations/usa/new-york" element={<Articles.ArticleNewYork />} />
       <Route path="/destinations/usa/grand-canyon" element={<Articles.ArticleGrandCanyon />} />
       <Route path="/destinations/usa/las-vegas" element={<Articles.ArticleLasVegas />} />
       <Route path="/destinations/usa/los-angeles" element={<Articles.ArticleLosAngeles />} />
       <Route path="/destinations/usa/san-francisco" element={<Articles.ArticleSanFrancisco />} />
-
-      {/* ARTICLES - Canada */}
       <Route path="/destinations/canada/banff" element={<Articles.ArticleBanff />} />
       <Route path="/destinations/canada/vancouver" element={<Articles.ArticleVancouver />} />
       <Route path="/destinations/canada/montreal" element={<Articles.ArticleMontreal />} />
       <Route path="/destinations/canada/quebec" element={<Articles.ArticleQuebec />} />
       <Route path="/destinations/canada/toronto" element={<Articles.ArticleToronto />} />
-
-      {/* ARTICLES - Mexique */}
       <Route path="/destinations/mexique/mexico" element={<Articles.ArticleMexico />} />
       <Route path="/destinations/mexique/cancun" element={<Articles.ArticleCancun />} />
       <Route path="/destinations/mexique/oaxaca" element={<Articles.ArticleOaxaca />} />
-
-      {/* ARTICLES - Pérou */}
       <Route path="/destinations/perou/lima" element={<Articles.ArticleLima />} />
       <Route path="/destinations/perou/machu-picchu" element={<Articles.ArticleMachuPicchu />} />
       <Route path="/destinations/perou/arequipa" element={<Articles.ArticleArequipa />} />
       <Route path="/destinations/perou/titicaca" element={<Articles.ArticleTiticaca />} />
-
-      {/* ARTICLES - Brésil */}
       <Route path="/destinations/bresil/rio" element={<Articles.ArticleRio />} />
       <Route path="/destinations/bresil/sao-paulo" element={<Articles.ArticleSaoPaulo />} />
       <Route path="/destinations/bresil/amazonie" element={<Articles.ArticleAmazonie />} />
       <Route path="/destinations/bresil/salvador" element={<Articles.ArticleSalvador />} />
-
-      {/* ARTICLES - Argentine */}
       <Route path="/destinations/argentine/buenos-aires" element={<Articles.ArticleBuenosAires />} />
       <Route path="/destinations/argentine/mendoza" element={<Articles.ArticleMendoza />} />
       <Route path="/destinations/argentine/patagonie" element={<Articles.ArticlePatagonie />} />
       <Route path="/destinations/argentine/iguazu" element={<Articles.ArticleIguazu />} />
       <Route path="/destinations/argentine/salta" element={<Articles.ArticleSalta />} />
       <Route path="/destinations/argentine/peninsula-valdes" element={<Articles.ArticlePeninsulaValdes />} />
-
-      {/* ARTICLES - Chili */}
       <Route path="/destinations/chili/santiago" element={<Articles.ArticleSantiago />} />
       <Route path="/destinations/chili/atacama" element={<Articles.ArticleAtacama />} />
       <Route path="/destinations/chili/torres-del-paine" element={<Articles.ArticleTorresDelPaine />} />
-
-      {/* ARTICLES - Colombie */}
       <Route path="/destinations/colombie/bogota" element={<Articles.ArticleBogota />} />
       <Route path="/destinations/colombie/cartagene" element={<Articles.ArticleCartagene />} />
       <Route path="/destinations/colombie/medellin" element={<Articles.ArticleMedellin />} />
 
-      {/* ========== COMPARATIFS ========== */}
+      {/* COMPARATIFS */}
       <Route path="/comparatifs/meilleure-esim-japon" element={<MeilleureEsimJapon />} />
       <Route path="/comparatifs/meilleure-assurance-voyage-japon" element={<MeilleureAssuranceVoyageJapon />} />
       <Route path="/comparatifs/meilleure-valise-cabine" element={<MeilleureValiseCabine />} />
@@ -963,7 +864,6 @@ const AppRoutes = () => {
 
 // --- Composant Principal ---
 const App = () => {
-  // Script pour iframe auto-resize dans WordPress (Gardé tel quel, c'est spécifique)
   useEffect(() => {
     const sendHeight = () => {
       const height = document.documentElement.scrollHeight;
@@ -987,7 +887,6 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
-            {/* 3. Ajout de Suspense pour gérer l'attente du Lazy Loading */}
             <Suspense fallback={<LoadingPage />}>
               <AppRoutes />
             </Suspense>
