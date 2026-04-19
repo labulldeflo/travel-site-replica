@@ -267,7 +267,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                 </div>
                 <div className="flex items-center gap-2 text-sm text-white/90">
                   <Clock className="h-4 w-4" aria-hidden="true" />
-                  <span>{readingTime}</span>
+                  <span>{computedReadingTime}</span>
                 </div>
               </div>
             </div>
