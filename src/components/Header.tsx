@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Input } from '@/components/ui/input';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,9 +14,19 @@ import {
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
   const toggleSubmenu = (menu: string) => {
     setOpenSubmenu(openSubmenu === menu ? null : menu);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const q = searchQuery.trim();
+    if (!q) return;
+    setIsMenuOpen(false);
+    navigate(`/recherche?q=${encodeURIComponent(q)}`);
   };
 
   return (
@@ -116,6 +127,20 @@ const Header = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+
+            {/* Barre de recherche desktop */}
+            <form onSubmit={handleSearch} className="ml-2 relative" role="search">
+              <label htmlFor="header-search" className="sr-only">Rechercher</label>
+              <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+              <Input
+                id="header-search"
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Rechercher…"
+                className="h-9 w-44 xl:w-56 pl-8 text-sm"
+              />
+            </form>
           </div>
 
           {/* Mobile Menu Button */}
@@ -127,6 +152,20 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 space-y-2 pb-4">
+            {/* Barre de recherche mobile */}
+            <form onSubmit={handleSearch} className="relative pb-2" role="search">
+              <label htmlFor="header-search-mobile" className="sr-only">Rechercher</label>
+              <Search className="absolute left-2.5 top-3.5 h-4 w-4 text-muted-foreground pointer-events-none" />
+              <Input
+                id="header-search-mobile"
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Rechercher un article…"
+                className="h-10 w-full pl-8 text-sm"
+              />
+            </form>
+
             {/* Destinations Mobile */}
             <div>
               <button

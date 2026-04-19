@@ -144,6 +144,7 @@ const MeilleuresChosesParis = lazy(() => import("./pages/blog/MeilleuresChosesPa
 const MeilleuresChosesBarcelone = lazy(() => import("./pages/blog/MeilleuresChosesBarcelone"));
 
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Recherche = lazy(() => import("./pages/Recherche"));
 
 // COMPARATIFS
 const MeilleureEsimJapon = lazy(() => import("./pages/comparatifs/MeilleureEsimJapon"));
@@ -948,6 +949,9 @@ const AppRoutes = () => {
       <Route path="/comparatifs/meilleurs-accessoires-voyage" element={<MeilleursAccessoiresVoyage />} />
       <Route path="/comparatifs/meilleur-equipement-tech-voyage" element={<MeilleurEquipementTechVoyage />} />
       <Route path="/comparatifs/meilleurs-vetements-voyage" element={<MeilleursVetementsVoyage />} />
+
+      {/* Recherche */}
+      <Route path="/recherche" element={<Recherche />} />
 
       {/* ROUTE 404 (Doit être la dernière) */}
       <Route path="*" element={<NotFound />} />
