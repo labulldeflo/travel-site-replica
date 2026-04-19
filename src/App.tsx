@@ -950,6 +950,9 @@ const AppRoutes = () => {
       <Route path="/comparatifs/meilleur-equipement-tech-voyage" element={<MeilleurEquipementTechVoyage />} />
       <Route path="/comparatifs/meilleurs-vetements-voyage" element={<MeilleursVetementsVoyage />} />
 
+      {/* Recherche */}
+      <Route path="/recherche" element={<Recherche />} />
+
       {/* ROUTE 404 (Doit être la dernière) */}
       <Route path="*" element={<NotFound />} />
     </Routes>
