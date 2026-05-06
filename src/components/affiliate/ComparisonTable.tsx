@@ -9,6 +9,7 @@ export interface ComparisonItem {
   url: string;
   badge?: string;
   badgeColor?: 'default' | 'destructive' | 'outline' | 'secondary';
+  badgeClassName?: string;
   recommended?: boolean;
   price: string;
   priceNote?: string;
@@ -75,7 +76,7 @@ const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, des
                   {item.badge && !isRecommended && (
                     <Badge
                       variant={item.badgeColor || 'secondary'}
-                      className="text-[10px] sm:text-xs shrink-0"
+                      className={`text-[10px] sm:text-xs shrink-0 ${item.badgeClassName || ''}`}
                     >
                       {item.badge}
                     </Badge>
@@ -163,7 +164,7 @@ const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, des
                     <a
                       href={item.url}
                       target="_blank"
-                      rel="noopener noreferrer nofollow"
+                      rel="sponsored noopener noreferrer"
                       onClick={() => handleClick(item.name)}
                       className="flex items-center justify-center gap-1.5"
                     >

@@ -13,6 +13,7 @@ import BackToTop from "@/components/BackToTop";
 import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calculateReadingTime } from "@/lib/readingTime";
+import AutoTableOfContents, { buildTocFromTitles } from "@/components/AutoTableOfContents";
 
 // Fonction utilitaire pour parser le markdown simple (gras, italique)
 const parseSimpleMarkdown = (text: string): string => {
@@ -169,6 +170,17 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
       finalConclusion,
     );
 
+  // Build automatic Table of Contents from content sections + fixed sections
+  const tocTitles = [
+    ...contentSections.map((s) => s.title),
+    gastronomyTitle,
+    "Conseils Pratiques",
+    ...(faqs && faqs.length > 0 ? ["Questions fréquentes"] : []),
+  ];
+  const tocItems = buildTocFromTitles(tocTitles);
+  const slugifyId = (s: string) =>
+    s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
   // Parse French date to ISO for schema.org
   const parseDate = (d: string) => {
     try {
@@ -279,6 +291,9 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Article Content */}
             <article className="md:col-span-2 prose prose-lg max-w-none">
+              {/* Sommaire mobile (collapsible) */}
+              <AutoTableOfContents items={tocItems} variant="inline" />
+
               {/* Introduction */}
               <p 
                 className="text-lg leading-relaxed text-gray-700 first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left"
@@ -288,7 +303,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
               {/* Content Sections */}
               {contentSections.map((section, index) => (
                 <section key={index} className="mt-10">
-                  <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
+                  <h2 id={slugifyId(section.title)} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
                     <section.icon className="h-7 w-7 text-ocean" aria-hidden="true" />
                     {section.title}
                   </h2>
@@ -305,7 +320,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
 
               {/* Section Gastronomie */}
               <section className="mt-12 bg-gray-50 p-8 rounded-lg border border-gray-200">
-                <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
+                <h2 id={slugifyId(gastronomyTitle)} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
                   <Coffee className="h-7 w-7 text-ocean" aria-hidden="true" />
                   {gastronomyTitle}
                 </h2>
@@ -350,7 +365,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
 
               {/* Conseils Pratiques */}
               <section className="mt-12 pt-8 border-t">
-                <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-6 flex items-center gap-3">
+                <h2 id={slugifyId("Conseils Pratiques")} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-6 flex items-center gap-3">
                   <MapPin className="h-7 w-7 text-ocean" aria-hidden="true" />
                   Conseils Pratiques
                 </h2>
@@ -376,7 +391,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
               </section>
 
               {faqs && faqs.length > 0 && (
-                <div className="mt-10">
+                <div id={slugifyId("Questions fréquentes")} className="scroll-mt-24 mt-10">
                   <FAQSection faqs={faqs} />
                 </div>
               )}
@@ -420,8 +435,13 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
             </article>
 
             {/* Sidebar */}
-            <aside className="md:col-span-1">
-              <div className="bg-accent/50 p-6 rounded-lg sticky top-24">
+            <aside className="md:col-span-1 space-y-6">
+              {/* Sommaire desktop sticky */}
+              <div className="hidden md:block sticky top-24">
+                <AutoTableOfContents items={tocItems} variant="inline" />
+              </div>
+
+              <div className="bg-accent/50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                   <Tag className="h-5 w-5 text-primary" />
                   En Bref

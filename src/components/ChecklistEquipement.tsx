@@ -1,7 +1,8 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Printer, Download, CheckSquare } from "lucide-react";
+import { ExternalLink, Printer, Download, CheckSquare, Shield } from "lucide-react";
 import { AFFILIATE_LINKS } from "@/lib/affiliateData";
 
 interface ChecklistItem {
@@ -172,8 +173,8 @@ const ChecklistEquipement = () => {
                         <a
                           href={item.affiliateUrl}
                           target={item.affiliateUrl.startsWith("http") ? "_blank" : undefined}
-                          rel={item.affiliateUrl.startsWith("http") ? "noopener noreferrer nofollow" : undefined}
-                          className="hidden sm:inline-flex items-center gap-1 text-[11px] text-ocean/70 hover:text-ocean transition-colors shrink-0"
+                          rel={item.affiliateUrl.startsWith("http") ? "sponsored noopener noreferrer" : undefined}
+                          className="inline-flex items-center gap-1 text-[11px] text-ocean/70 hover:text-ocean transition-colors shrink-0"
                         >
                           {item.affiliateLabel}
                           <ExternalLink className="w-3 h-3" />
@@ -209,6 +210,28 @@ const ChecklistEquipement = () => {
         <p className="text-[10px] text-muted-foreground text-center mt-4 italic print:hidden">
           Liens affiliés · Sans surcoût pour vous
         </p>
+
+        {/* CTA Assurance final */}
+        <div className="mt-10 p-6 rounded-xl border-2 border-ocean/30 bg-ocean/5 print:hidden">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="w-12 h-12 bg-ocean/10 rounded-full flex items-center justify-center shrink-0">
+              <Shield className="w-6 h-6 text-ocean" />
+            </div>
+            <div className="flex-1 text-center sm:text-left">
+              <h3 className="font-bold text-foreground mb-1">
+                Vous avez tout votre matériel ?
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                N'oubliez pas votre assurance voyage — c'est l'équipement le plus important.
+              </p>
+            </div>
+            <Button asChild className="bg-ocean hover:bg-ocean/90 shrink-0">
+              <Link to="/guides/securite" onClick={() => window.scrollTo(0, 0)}>
+                Voir mon comparatif
+              </Link>
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );
