@@ -365,7 +365,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
 
               {/* Conseils Pratiques */}
               <section className="mt-12 pt-8 border-t">
-                <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-6 flex items-center gap-3">
+                <h2 id={slugifyId("Conseils Pratiques")} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-6 flex items-center gap-3">
                   <MapPin className="h-7 w-7 text-ocean" aria-hidden="true" />
                   Conseils Pratiques
                 </h2>
