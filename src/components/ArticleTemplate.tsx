@@ -320,7 +320,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
 
               {/* Section Gastronomie */}
               <section className="mt-12 bg-gray-50 p-8 rounded-lg border border-gray-200">
-                <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
+                <h2 id={slugifyId(gastronomyTitle)} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
                   <Coffee className="h-7 w-7 text-ocean" aria-hidden="true" />
                   {gastronomyTitle}
                 </h2>
