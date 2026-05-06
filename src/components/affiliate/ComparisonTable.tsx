@@ -9,6 +9,7 @@ export interface ComparisonItem {
   url: string;
   badge?: string;
   badgeColor?: 'default' | 'destructive' | 'outline' | 'secondary';
+  badgeClassName?: string;
   recommended?: boolean;
   price: string;
   priceNote?: string;
