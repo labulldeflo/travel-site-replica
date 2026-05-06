@@ -170,6 +170,17 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
       finalConclusion,
     );
 
+  // Build automatic Table of Contents from content sections + fixed sections
+  const tocTitles = [
+    ...contentSections.map((s) => s.title),
+    gastronomyTitle,
+    "Conseils Pratiques",
+    ...(faqs && faqs.length > 0 ? ["Questions fréquentes"] : []),
+  ];
+  const tocItems = buildTocFromTitles(tocTitles);
+  const slugifyId = (s: string) =>
+    s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
   // Parse French date to ISO for schema.org
   const parseDate = (d: string) => {
     try {
