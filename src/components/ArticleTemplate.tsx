@@ -435,8 +435,13 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
             </article>
 
             {/* Sidebar */}
-            <aside className="md:col-span-1">
-              <div className="bg-accent/50 p-6 rounded-lg sticky top-24">
+            <aside className="md:col-span-1 space-y-6">
+              {/* Sommaire desktop sticky */}
+              <div className="hidden md:block sticky top-24">
+                <AutoTableOfContents items={tocItems} variant="inline" />
+              </div>
+
+              <div className="bg-accent/50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                   <Tag className="h-5 w-5 text-primary" />
                   En Bref
