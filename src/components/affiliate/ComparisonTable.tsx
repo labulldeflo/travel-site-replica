@@ -164,7 +164,7 @@ const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, des
                     <a
                       href={item.url}
                       target="_blank"
-                      rel="noopener noreferrer nofollow"
+                      rel="sponsored noopener noreferrer"
                       onClick={() => handleClick(item.name)}
                       className="flex items-center justify-center gap-1.5"
                     >
