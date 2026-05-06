@@ -76,7 +76,7 @@ const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, des
                   {item.badge && !isRecommended && (
                     <Badge
                       variant={item.badgeColor || 'secondary'}
-                      className="text-[10px] sm:text-xs shrink-0"
+                      className={`text-[10px] sm:text-xs shrink-0 ${item.badgeClassName || ''}`}
                     >
                       {item.badge}
                     </Badge>
