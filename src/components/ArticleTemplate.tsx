@@ -391,7 +391,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
               </section>
 
               {faqs && faqs.length > 0 && (
-                <div className="mt-10">
+                <div id={slugifyId("Questions fréquentes")} className="scroll-mt-24 mt-10">
                   <FAQSection faqs={faqs} />
                 </div>
               )}
