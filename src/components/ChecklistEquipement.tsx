@@ -1,7 +1,8 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Printer, Download, CheckSquare } from "lucide-react";
+import { ExternalLink, Printer, Download, CheckSquare, Shield } from "lucide-react";
 import { AFFILIATE_LINKS } from "@/lib/affiliateData";
 
 interface ChecklistItem {
