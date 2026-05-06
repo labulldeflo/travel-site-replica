@@ -94,6 +94,28 @@ const ArticleBali = () => {
         { label: "Transport en Indonésie", url: "/guides/transport-indonesie" },
         { label: "Bons plans cartes SIM", url: "/bons-plans/cartes-sim" }
       ]}
+      faqs={[
+        {
+          question: "Quelle est la meilleure période pour partir à Bali ?",
+          answer: "La saison sèche, d'avril à octobre, est idéale pour profiter des plages et des randonnées."
+        },
+        {
+          question: "Faut-il un visa pour entrer en Indonésie ?",
+          answer: "Oui, la plupart des voyageurs doivent obtenir un Visa on Arrival (VoA) qui peut être prolongé une fois pour un séjour total de 60 jours."
+        },
+        {
+          question: "Le 'Bali Belly' est-il un risque réel ?",
+          answer: "Oui, les troubles digestifs sont fréquents ; il est crucial de ne boire que de l'eau capsulée et d'avoir une assurance voyage solide comme Chapka ou ACS pour couvrir d'éventuels frais médicaux."
+        },
+        {
+          question: "Peut-on louer un scooter sans permis international ?",
+          answer: "C'est fortement déconseillé, car en cas d'accident, votre assurance pourrait refuser de vous couvrir si vous n'êtes pas en règle avec la loi locale."
+        },
+        {
+          question: "Quel budget prévoir pour 3 semaines à Bali ?",
+          answer: "Tout dépend de votre confort, mais prévoyez en moyenne 30 € à 50 € par jour et par personne pour un voyage équilibré entre guesthouses de charme et activités."
+        }
+      ]}
     />
   );
 };
