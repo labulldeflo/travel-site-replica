@@ -93,8 +93,9 @@ const GuideSecurite = () => {
               {
                 name: "ACS Ami",
                 url: "https://www.acs-ami.com/fr/?part=capsurlm",
-                badge: "Petit budget",
+                badge: "Petit Budget",
                 badgeColor: "secondary" as const,
+                badgeClassName: "bg-green-600 hover:bg-green-600 text-white border-0",
                 price: "Dès 22€/mois",
                 priceNote: "~0,70€/jour",
                 rating: "4.4/5",
