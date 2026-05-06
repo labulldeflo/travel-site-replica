@@ -173,8 +173,8 @@ const ChecklistEquipement = () => {
                         <a
                           href={item.affiliateUrl}
                           target={item.affiliateUrl.startsWith("http") ? "_blank" : undefined}
-                          rel={item.affiliateUrl.startsWith("http") ? "noopener noreferrer nofollow" : undefined}
-                          className="hidden sm:inline-flex items-center gap-1 text-[11px] text-ocean/70 hover:text-ocean transition-colors shrink-0"
+                          rel={item.affiliateUrl.startsWith("http") ? "sponsored noopener noreferrer" : undefined}
+                          className="inline-flex items-center gap-1 text-[11px] text-ocean/70 hover:text-ocean transition-colors shrink-0"
                         >
                           {item.affiliateLabel}
                           <ExternalLink className="w-3 h-3" />
