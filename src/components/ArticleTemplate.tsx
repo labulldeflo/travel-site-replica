@@ -13,6 +13,7 @@ import BackToTop from "@/components/BackToTop";
 import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calculateReadingTime } from "@/lib/readingTime";
+import AutoTableOfContents, { buildTocFromTitles } from "@/components/AutoTableOfContents";
 
 // Fonction utilitaire pour parser le markdown simple (gras, italique)
 const parseSimpleMarkdown = (text: string): string => {
