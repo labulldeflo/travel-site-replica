@@ -120,6 +120,10 @@ const GuideSecurite = () => {
             ]}
           />
 
+          <p className="text-xs text-muted-foreground italic mt-3 mb-4 text-center">
+            Note : Les tarifs sont mis à jour pour 2026. Certains liens sont affiliés, ce qui me permet de faire vivre ce blog sans surcoût pour vous.
+          </p>
+
           <div className="text-center my-4">
             <a
               href="https://www.chapkadirecte.com"
