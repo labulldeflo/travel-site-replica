@@ -291,6 +291,9 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Article Content */}
             <article className="md:col-span-2 prose prose-lg max-w-none">
+              {/* Sommaire mobile (collapsible) */}
+              <AutoTableOfContents items={tocItems} variant="inline" />
+
               {/* Introduction */}
               <p 
                 className="text-lg leading-relaxed text-gray-700 first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left"
