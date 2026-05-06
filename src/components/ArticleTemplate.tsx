@@ -303,7 +303,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
               {/* Content Sections */}
               {contentSections.map((section, index) => (
                 <section key={index} className="mt-10">
-                  <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
+                  <h2 id={slugifyId(section.title)} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
                     <section.icon className="h-7 w-7 text-ocean" aria-hidden="true" />
                     {section.title}
                   </h2>
