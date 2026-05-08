@@ -24,6 +24,7 @@ export const ARTICLES_INDEX: ArticleIndexEntry[] = [
   { title: "Itinéraire Japon 7 jours", url: "/blog/itineraire-japon-7-jours", category: "Japon" },
   { title: "Itinéraire Japon 10 jours", url: "/blog/itineraire-japon-10-jours", category: "Japon" },
   { title: "Itinéraire Japon 2 semaines : Tokyo, Kyoto, Osaka", url: "/blog/itineraire-japon-2-semaines", category: "Japon", keywords: ["itinéraire", "2 semaines", "backpacker", "Tokyo", "Kyoto", "Osaka"] },
+  { title: "Road Trip Europe 2026 : voyager loin sans se ruiner", url: "/blog/road-trip-europe-2026", category: "Europe", keywords: ["road trip", "europe", "2026", "van", "interrail", "budget", "Islande", "Portugal", "Albanie", "Bretagne", "Dolomites"] },
   { title: "Budget voyage Japon", url: "/blog/budget-voyage-japon", category: "Japon" },
   { title: "Quand partir au Japon", url: "/blog/quand-partir-japon", category: "Japon" },
   { title: "Meilleure assurance voyage Japon", url: "/comparatifs/meilleure-assurance-voyage-japon", category: "Japon" },
