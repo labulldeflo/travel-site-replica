@@ -38,7 +38,7 @@ const defaultItems: AssuranceItem[] = [
   {
     name: 'ACS Ami',
     url: 'https://www.acs-ami.com',
-    badge: 'Meilleur budget',
+    badge: 'Spécial Europe / France',
     highlighted: false,
     price: 'Dès 22 €/mois',
     pointsForts: [

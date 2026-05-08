@@ -21,6 +21,16 @@ export const AFFILIATE_LINKS = {
   // Assurance
   chapka: 'https://www.chapkadirecte.com',
   heymondo: 'https://www.heymondo.fr',
+
+  // Location de voiture
+  discoverCars: (destination?: string) =>
+    destination
+      ? `https://www.discovercars.com/?a_aid=capsurlemonde&destination=${encodeURIComponent(destination)}`
+      : 'https://www.discovercars.com/?a_aid=capsurlemonde',
+
+  // Équipement camping / road trip
+  decathlonSearch: (keyword: string) =>
+    `https://www.decathlon.fr/search?Ntt=${encodeURIComponent(keyword)}`,
   
   // Équipement (Amazon avec tag)
   amazonSearch: (keyword: string) => `https://www.amazon.fr/s?k=${encodeURIComponent(keyword)}&tag=capsurlemonde-21`,
