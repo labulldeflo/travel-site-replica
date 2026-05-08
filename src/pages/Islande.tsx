@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { OrganiserVoyageBlock } from '@/components/affiliate';
+import { OrganiserVoyageBlock, DiscoverCarsEurope } from '@/components/affiliate';
 import islandeImg from '@/assets/destinations/islande.jpg';
 
 const Islande = () => (
@@ -37,6 +37,15 @@ const Islande = () => (
               </div></CardContent></Card>
             </TabsContent>
           </Tabs>
+        </div>
+      </section>
+
+      <section className="py-4">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <DiscoverCarsEurope
+            title="🚗 Road trip en Islande & en Europe en 2026"
+            subtitle="L'Islande se découvre en voiture. Comparez les loueurs locaux et profitez-en pour préparer aussi vos road trips de printemps en France et en Europe du Sud."
+          />
         </div>
       </section>
 

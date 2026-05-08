@@ -10,3 +10,4 @@ export { default as ReassuranceBlock } from './ReassuranceBlock';
 export { default as AffiliationHotel } from './AffiliationHotel';
 export { default as AssuranceComparisonTable } from './AssuranceComparisonTable';
 export { default as ActivityGrid } from './ActivityGrid';
+export { default as DiscoverCarsEurope } from './DiscoverCarsEurope';

@@ -64,6 +64,18 @@ const categories: ChecklistCategory[] = [
       { name: "Pochette anti-RFID", affiliateLabel: "Voir chez Amazon", affiliateUrl: AFFILIATE_LINKS.amazonSearch("pochette anti RFID voyage") },
     ],
   },
+  {
+    title: "🚐 Road Trip & Camping (France / Europe)",
+    items: [
+      { name: "Tente 2 secondes (2-3 places)", affiliateLabel: "Voir chez Decathlon", affiliateUrl: AFFILIATE_LINKS.decathlonSearch("tente 2 seconds 3 places") },
+      { name: "Sac de couchage 10°C", affiliateLabel: "Voir chez Decathlon", affiliateUrl: AFFILIATE_LINKS.decathlonSearch("sac de couchage 10 degres") },
+      { name: "Matelas auto-gonflant", affiliateLabel: "Voir chez Decathlon", affiliateUrl: AFFILIATE_LINKS.decathlonSearch("matelas autogonflant camping") },
+      { name: "Réchaud à gaz compact", affiliateLabel: "Voir chez Decathlon", affiliateUrl: AFFILIATE_LINKS.decathlonSearch("rechaud gaz camping compact") },
+      { name: "Glacière électrique 12V", affiliateLabel: "Voir chez Decathlon", affiliateUrl: AFFILIATE_LINKS.decathlonSearch("glaciere electrique 12v") },
+      { name: "Lampe frontale rechargeable", affiliateLabel: "Voir chez Decathlon", affiliateUrl: AFFILIATE_LINKS.decathlonSearch("lampe frontale rechargeable") },
+      { name: "Chaussures de randonnée légères", affiliateLabel: "Voir chez Decathlon", affiliateUrl: AFFILIATE_LINKS.decathlonSearch("chaussures randonnee legeres") },
+    ],
+  },
 ];
 
 const ChecklistEquipement = () => {
