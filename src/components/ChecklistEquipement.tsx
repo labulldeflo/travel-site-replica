@@ -60,7 +60,7 @@ const categories: ChecklistCategory[] = [
     items: [
       { name: "Passeport (validité 6 mois+)", affiliateLabel: "", affiliateUrl: "" },
       { name: "Photocopies documents (cloud + papier)", affiliateLabel: "", affiliateUrl: "" },
-      { name: "Assurance voyage", affiliateLabel: "Comparer", affiliateUrl: "/guides/securice" },
+      { name: "Assurance voyage", affiliateLabel: "Comparer", affiliateUrl: "/guides/securite" },
       { name: "Pochette anti-RFID", affiliateLabel: "Voir chez Amazon", affiliateUrl: AFFILIATE_LINKS.amazonSearch("pochette anti RFID voyage") },
     ],
   },
