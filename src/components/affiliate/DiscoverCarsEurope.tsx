@@ -43,7 +43,7 @@ const DiscoverCarsEurope = ({
       provider: "DiscoverCars",
       destination: region,
       page: location.pathname,
-      position: "discovercars-europe-block",
+      position: "inline",
     });
   };
 
