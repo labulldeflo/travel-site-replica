@@ -327,6 +327,26 @@ const BudgetRoadTripIslande2026 = () => {
           content: "Pas de pourboire en Islande, le service est toujours inclus.",
         },
       ]}
+      gastronomyTitle="Goûter local — sans exploser le budget"
+      gastronomyIntro="Trois bouchées qui valent leur prix, même en pleine inflation islandaise."
+      gastronomyItems={[
+        { title: "🌭 Hot-dog Bæjarins Beztu (Reykjavík)", description: "Le hot-dog le plus célèbre d'Islande, à 750 ISK. Sauce remoulade + oignons frits + moutarde sucrée." },
+        { title: "🥣 Soupe d'agneau de Café Loki", description: "Plat-signature islandais, pain et rab inclus pour 2 990 ISK. Réchauffe après une journée pluvieuse." },
+        { title: "🐟 Fish & chips au Pakkhús (Höfn)", description: "Cabillaud du jour, frites maison. 4 890 ISK, le restau qui vaut son prix." },
+        { title: "🍫 Chocolat Nói Síríus (Bonus)", description: "Le chocolat-souvenir préféré des Islandais, 329 ISK la tablette de 100g." },
+        { title: "🥨 Snúður à la cannelle", description: "Brioche torsadée vendue 99 ISK au Bónus, parfait petit-déj de van." },
+        { title: "🥛 Skyr Ísey nature", description: "Yaourt épais islandais, 359 ISK les 500g. Indispensable du frigo van." },
+      ]}
+      sidebarInfos={[
+        { label: "Devise", value: "ISK (148 ISK ≈ 1 €)" },
+        { label: "Décalage horaire", value: "−1h vs Paris" },
+        { label: "Langue", value: "Islandais (anglais partout)" },
+        { label: "Visa", value: "Aucun (Schengen)" },
+        { label: "Vol Paris → KEF", value: "≈ 3h30, dès 98 € AR avec Play" },
+        { label: "Meilleure saison budget", value: "Mars-mai & septembre-octobre" },
+      ]}
+      affiliateCity="Reykjavik"
+      affiliateCountryCode="is"
     />
   );
 };
