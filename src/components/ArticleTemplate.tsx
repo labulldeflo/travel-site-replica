@@ -291,8 +291,10 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Article Content */}
             <article className="md:col-span-2 prose prose-lg max-w-none">
-              {/* Sommaire mobile (collapsible) */}
-              <AutoTableOfContents items={tocItems} variant="inline" />
+              {/* Sommaire mobile uniquement (le desktop est dans la sidebar sticky) */}
+              <div className="md:hidden">
+                <AutoTableOfContents items={tocItems} variant="inline" />
+              </div>
 
               {/* Introduction */}
               <p 
