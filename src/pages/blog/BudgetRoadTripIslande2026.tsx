@@ -320,7 +320,7 @@ const BudgetRoadTripIslande2026 = () => {
         },
         {
           title: "Eau",
-          content: "Eau du robinet 100 % potable, partout. N'achetez jamais de bouteille (250 ISK = ${fmtEur(250)} pour rien).",
+          content: `Eau du robinet 100 % potable, partout. N'achetez jamais de bouteille (250 ISK = ${fmtEur(250)} pour rien).`,
         },
         {
           title: "Pourboire",
