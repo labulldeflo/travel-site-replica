@@ -338,12 +338,12 @@ const BudgetRoadTripIslande2026 = () => {
         { title: "🥛 Skyr Ísey nature", description: "Yaourt épais islandais, 359 ISK les 500g. Indispensable du frigo van." },
       ]}
       sidebarInfos={[
-        { label: "Devise", value: "ISK (148 ISK ≈ 1 €)" },
-        { label: "Décalage horaire", value: "−1h vs Paris" },
-        { label: "Langue", value: "Islandais (anglais partout)" },
-        { label: "Visa", value: "Aucun (Schengen)" },
-        { label: "Vol Paris → KEF", value: "≈ 3h30, dès 98 € AR avec Play" },
-        { label: "Meilleure saison budget", value: "Mars-mai & septembre-octobre" },
+        { icon: DollarSign, iconColor: "text-emerald-600", label: "Devise", value: "ISK (148 ISK ≈ 1 €)" },
+        { icon: DollarSign, iconColor: "text-ocean", label: "Décalage", value: "−1h vs Paris" },
+        { icon: DollarSign, iconColor: "text-ocean", label: "Langue", value: "Islandais (anglais partout)" },
+        { icon: ShieldCheck, iconColor: "text-blue-600", label: "Visa", value: "Aucun (Schengen)" },
+        { icon: Car, iconColor: "text-ocean", label: "Vol Paris → KEF", value: "≈ 3h30, dès 98 € AR (Play)" },
+        { icon: Calculator, iconColor: "text-emerald-600", label: "Saison budget", value: "Mars-mai & sept-oct" },
       ]}
       affiliateCity="Reykjavik"
       affiliateCountryCode="is"
