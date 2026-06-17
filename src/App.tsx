@@ -68,6 +68,7 @@ const ItineraireJapon7Jours = lazy(() => import("./pages/blog/ItineraireJapon7Jo
 const ItineraireJapon10Jours = lazy(() => import("./pages/blog/ItineraireJapon10Jours"));
 const ItineraireJapon2Semaines = lazy(() => import("./pages/blog/ItineraireJapon2Semaines"));
 const RoadTripEurope2026 = lazy(() => import("./pages/blog/RoadTripEurope2026"));
+const BudgetRoadTripIslande2026 = lazy(() => import("./pages/blog/BudgetRoadTripIslande2026"));
 const JaponPasCherAstuces = lazy(() => import("./pages/blog/JaponPasCherAstuces")); // ✅ AJOUTÉ
 const BudgetVoyageJapon = lazy(() => import("./pages/blog/BudgetVoyageJapon"));
 const QueFaireKyoto = lazy(() => import("./pages/blog/QueFaireKyoto"));
@@ -542,6 +543,7 @@ const AppRoutes = () => {
       <Route path="/blog/itineraire-japon-10-jours" element={<ItineraireJapon10Jours />} />
       <Route path="/blog/itineraire-japon-2-semaines" element={<ItineraireJapon2Semaines />} />
       <Route path="/blog/road-trip-europe-2026" element={<RoadTripEurope2026 />} />
+      <Route path="/blog/budget-road-trip-islande-2026" element={<BudgetRoadTripIslande2026 />} />
       <Route path="/blog/japon-pas-cher-astuces-budget" element={<JaponPasCherAstuces />} /> {/* ✅ AJOUTÉ */}
       <Route path="/blog/budget-voyage-japon" element={<BudgetVoyageJapon />} />
       <Route path="/blog/que-faire-kyoto" element={<QueFaireKyoto />} />
