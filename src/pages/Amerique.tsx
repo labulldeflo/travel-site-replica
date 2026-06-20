@@ -170,10 +170,15 @@ const Amerique = () => {
   return (
     <>
       <SEO 
-        title="Road Trip en Amérique : Nos conseils et préparatifs essentiels"
-        description="Découvrez les Amériques : USA, Canada, Pérou, Brésil, Argentine. Parcs nationaux, villes cosmopolites et nature sauvage."
+        title="Voyage en Amérique 2026 : Destinations, Budget & Itinéraires"
+        description="Guide complet pour voyager en Amérique en 2026 : USA, Canada, Mexique, Pérou, Brésil, Argentine. Budgets détaillés, meilleures périodes, itinéraires et conseils pratiques."
         url="/amerique"
         hideH1={true}
+        breadcrumbs={[
+          { name: "Accueil", url: "/" },
+          { name: "Destinations", url: "/destinations" },
+          { name: "Amérique", url: "/amerique" },
+        ]}
       />
       <div className="min-h-screen flex flex-col">
         <Header />
