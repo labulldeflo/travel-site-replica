@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import FAQSection from "@/components/FAQSection";
 
 // --- Importations d'Images ---
 import usaImg from "@/assets/destinations/usa.jpg";
