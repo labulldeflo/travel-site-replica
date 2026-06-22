@@ -198,10 +198,7 @@ const GuidePlanification = () => {
 
           {/* FAQ avec JSON-LD */}
           <div className="mb-8">
-            <FAQSection
-              title="Questions fréquentes sur la planification d'un voyage"
-              faqs={faqs}
-            />
+            <FAQSection faqs={faqs} />
           </div>
 
           {/* Internal Links */}
