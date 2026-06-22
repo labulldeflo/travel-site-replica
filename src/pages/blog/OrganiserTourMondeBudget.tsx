@@ -5,8 +5,8 @@ import tourMondeBudgetImg from "@/assets/blog/tour-monde-budget.jpg";
 const OrganiserTourMondeBudget = () => {
   return (
     <ArticleTemplate
-      title="Organiser un Tour du Monde avec un Petit Budget : Guide Complet 2026"
-      subtitle="Méthode pas à pas, budget réaliste, itinéraires optimisés et astuces d'expert pour partir 6 à 12 mois avec moins de 15 000 €"
+      title="Tour du Monde Budget : Organiser son Voyage avec moins de 15 000 €"
+      subtitle="Méthode pas à pas, budget réaliste, itinéraires optimisés et astuces d'expert pour partir 6 à 12 mois sans se ruiner"
       category="Organisation & Budget"
       keywords={["tour du monde budget", "organiser tour du monde", "tour du monde pas cher", "budget tour du monde", "itinéraire tour du monde", "partir 1 an"]}
       author="Cap sur le Monde"
@@ -14,7 +14,7 @@ const OrganiserTourMondeBudget = () => {
       readingTime="22 min"
       heroImage={tourMondeBudgetImg}
       heroImageAlt="Voyageur avec son sac à dos contemplant un paysage montagneux — préparation tour du monde"
-      metaDescription="Guide expert pour organiser un tour du monde avec un petit budget en 2026 : méthode complète, budget réaliste 12 000-18 000 €, itinéraires, équipement, assurance, astuces économies."
+      metaDescription="Organiser un tour du monde avec un petit budget en 2026 : méthode complète, budget réaliste 12 000-18 000 €, billet TDM ou vols séparés, itinéraires 6 à 12 mois, équipement, assurance et astuces économies."
       introduction="Faire le tour du monde n'a jamais été aussi accessible qu'en 2026 — à condition de bien s'y prendre. Si vous tapez « tour du monde budget » sur Google, vous trouverez des fourchettes allant de 8 000 € à 50 000 € : autant dire que les chiffres ne veulent rien dire sans méthode. Ce guide pilier est le résultat de dizaines de retours de voyageurs au long cours et d'une analyse fine des prix actualisés pour 2026. Vous y trouverez la méthode complète pour partir 6 à 12 mois avec un budget maîtrisé (objectif : 12 000-18 000 € pour un an, vols inclus), un découpage poste par poste, des itinéraires optimisés selon votre durée, l'équipement vraiment indispensable, le choix de l'assurance, les techniques pour gagner de l'argent en route, et les pièges à éviter absolument. Que vous prépariez un break sabbatique, un congé sans solde, une transition de carrière ou simplement le voyage d'une vie, ce guide vous donnera toutes les clés."
       contentSections={[
         {

@@ -2,10 +2,10 @@ import { ArrowLeft, Map, Calendar, List, Globe, ExternalLink, Compass, HelpCircl
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import FAQSection from '@/components/FAQSection';
 
 const GuidePlanification = () => {
   const tools = [
@@ -25,24 +25,27 @@ const GuidePlanification = () => {
   ];
 
   const faqs = [
-    { q: "Combien de temps faut-il pour bien planifier un voyage ?", a: "Comptez 2 à 4 mois pour un voyage long-courrier (visa, vaccins, réservations). Pour un voyage en Europe, 1 à 2 mois suffisent. Commencez par les éléments à délai (passeport, visa, vaccins) puis affinez l'itinéraire progressivement." },
-    { q: "Faut-il tout réserver à l'avance ou garder de la flexibilité ?", a: "L'idéal est un mix : réservez les vols, les premières et dernières nuits, et les activités très demandées. Gardez 30 à 40% de votre planning flexible pour les découvertes spontanées et les recommandations des locaux." },
-    { q: "Comment créer un itinéraire équilibré ?", a: "Alternez journées actives et journées repos. Ne prévoyez pas plus de 2-3 activités par jour. Regroupez les lieux proches géographiquement et incluez des temps de déplacement réalistes. Prévoyez une journée « tampon » par semaine." },
-    { q: "Quel est le meilleur outil pour organiser son itinéraire ?", a: "Google Maps reste le plus polyvalent (cartes personnalisées, distances, offline). Wanderlog est excellent pour la planification collaborative. TripIt est idéal pour centraliser toutes vos réservations automatiquement depuis vos emails de confirmation." },
-    { q: "Comment gérer les imprévus pendant le voyage ?", a: "Gardez toujours un plan B pour chaque journée (activité alternative, restaurant de secours). Conservez les numéros d'urgence (assurance, ambassade) facilement accessibles. Une bonne assurance voyage et 10% de budget en réserve couvrent la plupart des situations." },
+    { question: "Comment planifier un voyage étape par étape ?", answer: "Suivez 5 étapes : 1) choisir destination + dates selon climat et budget, 2) réserver vols et premières nuits 2-3 mois avant, 3) bâtir l'itinéraire jour par jour, 4) réserver visa, assurance et activités très demandées, 5) préparer documents et valise la dernière semaine. Notre guide détaille chaque étape avec une timeline complète." },
+    { question: "Combien de temps faut-il pour organiser un voyage ?", answer: "Comptez 2 à 4 mois pour un voyage long-courrier (passeport, visa, vaccins, réservations) et 1 à 2 mois pour un séjour en Europe. Anticipez d'abord les éléments à délai contraint (visa Inde, Chine, Russie : jusqu'à 6 semaines) puis affinez l'itinéraire progressivement." },
+    { question: "Faut-il tout réserver à l'avance ou rester flexible ?", answer: "Réservez les vols, la première et la dernière nuit, ainsi que les activités très demandées (Machu Picchu, Alhambra, croisière Halong). Gardez 30 à 40 % du planning libre pour les découvertes spontanées et les recommandations des locaux : c'est souvent là que naissent les meilleurs souvenirs." },
+    { question: "Comment créer un itinéraire équilibré ?", answer: "Alternez journées actives et journées repos, ne prévoyez pas plus de 2-3 activités par jour, regroupez les lieux proches géographiquement et incluez des temps de déplacement réalistes (Google Maps surestime souvent en Asie ou en Amérique latine). Prévoyez une journée tampon par semaine." },
+    { question: "Quel est le meilleur outil pour planifier son itinéraire ?", answer: "Google Maps reste le plus polyvalent (cartes personnalisées, distances, mode offline). Wanderlog est excellent pour la planification collaborative à plusieurs. TripIt centralise automatiquement toutes vos réservations depuis vos emails. Rome2Rio est imbattable pour comparer les modes de transport entre deux points." },
+    { question: "Quel budget prévoir pour organiser un voyage ?", answer: "Le budget dépend de la destination, du niveau de confort et de la durée. Comptez 25-40 €/jour en backpacker en Asie du Sud-Est, 60-100 €/jour en confort moyen en Europe, 150-250 €/jour en Japon ou Islande. Ajoutez les vols (300-1 200 € selon la destination) et 10 % de marge pour les imprévus. Consultez notre guide budget voyage pour la méthode complète." },
+    { question: "Comment gérer les imprévus pendant le voyage ?", answer: "Prévoyez un plan B pour chaque journée (activité alternative, restaurant de secours), gardez les numéros d'urgence (assurance, ambassade, banque) accessibles hors ligne et conservez 10 % du budget en réserve. Une bonne assurance voyage longue durée (Chapka, Heymondo) couvre les principaux risques médicaux et logistiques." },
+    { question: "Comment planifier un voyage en famille avec enfants ?", answer: "Privilégiez les vols directs ou avec une seule escale, réduisez le rythme (1 activité majeure par jour), choisissez des hébergements avec piscine ou jardin pour les pauses, et prévoyez des excursions de 2-4 h maximum. Asie du Sud-Est, Portugal, Italie et Japon sont parmi les destinations les plus adaptées aux familles." },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Comment planifier son voyage de A à Z : Le guide ultime"
-        description="Guide complet pour planifier votre voyage : créer un itinéraire équilibré, choisir vos dates, timeline de préparation et outils de planification recommandés."
+        title="Planifier un Voyage : Méthode Complète Étape par Étape 2026"
+        description="Comment planifier un voyage de A à Z : choisir ses dates, créer un itinéraire équilibré, timeline de préparation, outils recommandés et FAQ. Méthode éprouvée pour organiser un voyage réussi."
         url="/guides/planification"
         hideH1={true}
         breadcrumbs={[
           { name: "Accueil", url: "/" },
           { name: "Guides", url: "/guides" },
-          { name: "Guide Planification", url: "/guides/planification" },
+          { name: "Planifier un voyage", url: "/guides/planification" },
         ]}
       />
       <Header />
@@ -59,10 +62,10 @@ const GuidePlanification = () => {
               <Map className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-5xl font-script font-bold text-foreground mb-4">
-              Guide Planification Voyage 2025
+              Planifier un Voyage : Méthode Complète 2026
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Un voyage bien planifié, c'est un voyage réussi. Ce guide vous accompagne étape par étape dans l'organisation de votre prochain voyage, du choix de la destination aux derniers préparatifs avant le départ. Suivez notre méthode éprouvée pour ne rien oublier.
+              Un voyage bien planifié, c'est un voyage réussi. Ce guide vous accompagne étape par étape pour organiser un voyage à l'étranger : choix des dates, construction d'un itinéraire équilibré, timeline de préparation, outils incontournables et réponses aux questions les plus fréquentes. Suivez notre méthode éprouvée pour ne rien oublier.
             </p>
           </div>
 
@@ -193,21 +196,10 @@ const GuidePlanification = () => {
             </div>
           </div>
 
-          {/* FAQ */}
-          <Card className="p-8 mb-8">
-            <h2 className="text-2xl font-elegant font-semibold text-foreground mb-6 flex items-center">
-              <HelpCircle className="w-6 h-6 mr-2 text-ocean" />
-              Questions fréquentes
-            </h2>
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`faq-${idx}`}>
-                  <AccordionTrigger className="text-left font-medium text-foreground">{faq.q}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </Card>
+          {/* FAQ avec JSON-LD */}
+          <div className="mb-8">
+            <FAQSection faqs={faqs} />
+          </div>
 
           {/* Internal Links */}
           <Card className="p-8 bg-muted/20">
@@ -217,14 +209,17 @@ const GuidePlanification = () => {
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
               {[
-                { label: "Guide Budget Voyage", url: "/guides/budget" },
-                { label: "Guide Vols et Transport", url: "/guides/vol" },
+                { label: "Méthode budget voyage complète", url: "/guides/budget-voyage" },
+                { label: "Préparer son voyage de A à Z", url: "/guides/preparer-voyage" },
+                { label: "Que mettre dans sa valise", url: "/guides/que-mettre-valise" },
                 { label: "Guide Sécurité et Assurance", url: "/guides/securite" },
-                { label: "Guide Photo Voyage", url: "/guides/photo" },
+                { label: "Guide Vols et Transport", url: "/guides/vol" },
                 { label: "Checklist Documents Voyage", url: "/guide-gratuit" },
                 { label: "Bons Plans Hébergement", url: "/bons-plans/hebergement" },
                 { label: "Toutes nos destinations", url: "/destinations" },
-                { label: "Organiser un tour du monde", url: "/blog/organiser-tour-du-monde-budget" },
+                { label: "Voyage Vietnam : guide complet", url: "/destinations/vietnam" },
+                { label: "Organiser un tour du monde", url: "/blog/organiser-tour-monde-budget-limite" },
+                { label: "Planificateur de budget interactif", url: "/planificateur-budget" },
               ].map((link, idx) => (
                 <Link key={idx} to={link.url} className="flex items-center gap-2 p-3 rounded-lg border border-border hover:border-ocean/40 hover:bg-background transition-all text-foreground hover:text-ocean">
                   <span className="text-ocean">→</span>

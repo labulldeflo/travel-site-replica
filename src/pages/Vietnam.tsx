@@ -88,8 +88,8 @@ const Vietnam = () => {
   return (
     <>
       <SEO 
-        title="Vietnam – Guide Voyage Complet 2025 : Itinéraires, Budget et Conseils"
-        description="Guide complet du Vietnam : Hanoï, Baie d'Ha Long, Hoi An, Hô-Chi-Minh-Ville. Itinéraires 10 à 21 jours, budget détaillé, meilleure période, conseils pratiques et street food."
+        title="Voyage Vietnam 2026 : Itinéraires, Budget et Quand Partir"
+        description="Préparer son voyage au Vietnam en 2026 : itinéraires 10/15/21 jours, budget jour par jour, meilleure période par région, visa, transports, street food et guides Hanoï, Halong, Hoi An, HCMV."
         image={vietnamImg}
         url="/destinations/vietnam"
         hideH1={true}
@@ -112,7 +112,7 @@ const Vietnam = () => {
           <div className="relative container mx-auto px-4 h-full flex items-center">
             <div className="text-white max-w-3xl">
               <h1 className="text-4xl md:text-6xl font-elegant font-bold mb-6">
-                Vietnam : Guide Voyage Complet 2025
+                Voyage Vietnam : Guide Complet 2026
               </h1>
               <p className="text-xl md:text-2xl text-white/90 mb-8">
                 Des rizières en terrasses du Nord aux plages tropicales du Sud, le Vietnam séduit par sa diversité, sa gastronomie légendaire et l'hospitalité de ses habitants.
@@ -499,7 +499,21 @@ const Vietnam = () => {
           </div>
         </section>
 
-        {/* Liens internes */}
+        {/* Liens internes - Préparation */}
+        <section className="py-10 bg-background">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-2xl font-elegant font-bold mb-6">Préparer votre voyage au Vietnam</h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button variant="outline" asChild><Link to="/guides/planification">📅 Planifier son voyage</Link></Button>
+              <Button variant="outline" asChild><Link to="/guides/preparer-voyage">🧭 Préparer son voyage de A à Z</Link></Button>
+              <Button variant="outline" asChild><Link to="/guides/budget-voyage">💰 Méthode budget voyage</Link></Button>
+              <Button variant="outline" asChild><Link to="/blog/organiser-tour-monde-budget-limite">🌍 Organiser un tour du monde</Link></Button>
+              <Button variant="outline" asChild><Link to="/guides/que-mettre-valise">🧳 Que mettre dans sa valise</Link></Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Liens internes - Asie du Sud-Est */}
         <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-4 max-w-4xl text-center">
             <h2 className="text-2xl font-elegant font-bold mb-6">Explorer d'autres destinations en Asie du Sud-Est</h2>
