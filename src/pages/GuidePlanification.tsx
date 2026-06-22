@@ -1,4 +1,4 @@
-import { ArrowLeft, Map, Calendar, List, Globe, ExternalLink, Compass, Smartphone } from 'lucide-react';
+import { ArrowLeft, Map, Calendar, List, Globe, ExternalLink, Compass, HelpCircle, CheckCircle, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
