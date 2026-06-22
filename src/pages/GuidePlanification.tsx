@@ -1,11 +1,11 @@
-import { ArrowLeft, Map, Calendar, List, Globe, ExternalLink, Compass, HelpCircle, CheckCircle, Smartphone } from 'lucide-react';
+import { ArrowLeft, Map, Calendar, List, Globe, ExternalLink, Compass, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import FAQSection from '@/components/FAQSection';
 
 const GuidePlanification = () => {
   const tools = [
