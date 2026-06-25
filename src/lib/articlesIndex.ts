@@ -44,8 +44,11 @@ export const ARTICLES_INDEX: ArticleIndexEntry[] = [
   { title: "Hô Chi Minh-Ville", url: "/destinations/vietnam/ho-chi-minh", category: "Vietnam" },
   { title: "Hoi An : la lanterne du Vietnam", url: "/destinations/vietnam/hoi-an", category: "Vietnam" },
   { title: "Baie d'Halong", url: "/destinations/vietnam/halong", category: "Vietnam" },
-  { title: "Itinéraire Vietnam 10 jours", url: "/blog/itineraire-vietnam-10-jours", category: "Vietnam" },
-  { title: "Budget voyage Vietnam", url: "/blog/budget-voyage-vietnam", category: "Vietnam" },
+  { title: "Itinéraire Vietnam 10 jours", url: "/blog/itineraire-vietnam-10-jours", category: "Vietnam", keywords: ["itinéraire", "vietnam", "10 jours"] },
+  { title: "Itinéraire Vietnam 15 jours 2026 : programme complet", url: "/blog/itineraire-vietnam-15-jours", category: "Vietnam", keywords: ["itinéraire", "vietnam", "15 jours", "2 semaines", "2026", "Hanoi", "Sapa", "Halong", "Hoi An", "Saigon"] },
+  { title: "Budget voyage Vietnam", url: "/blog/budget-voyage-vietnam", category: "Vietnam", keywords: ["budget", "vietnam"] },
+  { title: "Quand partir au Vietnam", url: "/blog/quand-partir-vietnam", category: "Vietnam", keywords: ["climat", "saison", "vietnam"] },
+  { title: "Guide complet Vietnam 2026", url: "/guides/guide-complet-vietnam", category: "Vietnam", keywords: ["guide", "vietnam", "2026"] },
 
   // ===== CAMBODGE / LAOS / INDONÉSIE =====
   { title: "Siem Reap & Angkor", url: "/destinations/cambodge/siem-reap", category: "Cambodge" },
