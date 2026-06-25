@@ -4,9 +4,9 @@ import GuideTemplate from '@/components/GuideTemplate';
 const GuideCompletVietnam = () => {
   return (
     <GuideTemplate
-      title="Guide Complet Vietnam 2025"
+      title="Guide Complet Vietnam 2026 : Itinéraires, Budget et Conseils"
       description="Votre ressource indispensable pour organiser votre voyage au Vietnam, étape par étape"
-      metaDescription="Guide complet Vietnam 2025 : itinéraires, budget, visa, meilleures périodes et conseils pratiques pour un voyage réussi du Nord au Sud."
+      metaDescription="Guide complet Vietnam 2026 : itinéraires 7/15/21 jours, budget réel, visa, meilleures périodes, transports et conseils pratiques du Nord au Sud."
       country="Vietnam"
       countrySlug="vietnam"
       icon={Building}
