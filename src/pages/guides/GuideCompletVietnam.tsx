@@ -124,23 +124,32 @@ const GuideCompletVietnam = () => {
         }
       ]}
       internalLinks={[
+        { label: "Itinéraire Vietnam 10 jours", url: "/blog/itineraire-vietnam-10-jours" },
+        { label: "Itinéraire Vietnam 15 jours (nouveau)", url: "/blog/itineraire-vietnam-15-jours" },
+        { label: "Budget voyage Vietnam 2026", url: "/blog/budget-voyage-vietnam" },
+        { label: "Quand partir au Vietnam", url: "/blog/quand-partir-vietnam" },
+        { label: "Que faire à Hanoï", url: "/destinations/vietnam/hanoi" },
         { label: "Budget détaillé Vietnam", url: "/guides/budget-vietnam" },
         { label: "Transport au Vietnam", url: "/guides/transport-vietnam" },
         { label: "Street Food Vietnam", url: "/guides/street-food-vietnam" },
         { label: "Photo Vietnam : les meilleurs spots", url: "/guides/photo-vietnam" },
-        { label: "Destination Hanoï", url: "/destinations/vietnam/hanoi" },
         { label: "Destination Hoi An", url: "/destinations/vietnam/hoi-an" },
         { label: "Destination Ho Chi Minh", url: "/destinations/vietnam/ho-chi-minh" },
-        { label: "Tous nos guides de voyage", url: "/guides" },
+        { label: "Guide planification de voyage", url: "/guides/planification" },
+        { label: "Organiser un tour du monde", url: "/blog/organiser-tour-monde-budget-limite" },
         { label: "Nos tests d'équipement voyage", url: "/tests" },
-        { label: "Guide Budget : maîtriser ses dépenses", url: "/guides/budget" }
       ]}
       faqs={[
-        { question: "Combien de temps faut-il pour visiter le Vietnam ?", answer: "Minimum 2 semaines pour un aperçu nord-sud (Hanoï, Halong, Hué, Hoi An, Saigon). 3 semaines permettent d'ajouter Sapa, le delta du Mékong et des étapes relaxantes. 4 semaines offrent un rythme confortable avec les régions moins touristiques (Ha Giang, Phong Nha)." },
-        { question: "Faut-il un visa pour le Vietnam en 2025 ?", answer: "Les Français bénéficient d'une exemption de visa pour un séjour de 45 jours maximum. Au-delà, un e-visa (25$) permet un séjour de 90 jours. Le passeport doit être valide 6 mois après l'entrée. L'e-visa se fait en ligne en 3 jours ouvrables." },
-        { question: "Est-il facile de voyager seul(e) au Vietnam ?", answer: "Oui, le Vietnam est très accueillant pour les voyageurs solo. Les Vietnamiens sont curieux et chaleureux. Les auberges de jeunesse facilitent les rencontres. La barrière de la langue peut être un défi hors des zones touristiques — téléchargez Google Traduction hors ligne." },
-        { question: "Quels vaccins sont recommandés pour le Vietnam ?", answer: "Aucun vaccin n'est obligatoire mais les vaccins recommandés sont : hépatite A et B, typhoïde, encéphalite japonaise (si séjour rural prolongé) et rage (si zones reculées). Le traitement antipaludéen est conseillé pour certaines régions rurales du centre et du sud." },
-        { question: "Nord ou Sud du Vietnam : que choisir ?", answer: "Le Nord (Hanoï, Sapa, Halong) offre des paysages montagneux spectaculaires et une culture plus traditionnelle. Le Sud (Saigon, delta du Mékong) est plus tropical et dynamique. Le Centre (Hué, Hoi An) combine histoire impériale et plages magnifiques. L'idéal est de combiner les trois." }
+        { question: "Combien de temps faut-il pour visiter le Vietnam ?", answer: "Minimum 2 semaines pour un aperçu nord-sud (Hanoï, Halong, Hué, Hoi An, Saigon). 3 semaines permettent d'ajouter Sapa, le delta du Mékong et des étapes relaxantes. 4 semaines offrent un rythme confortable avec les régions moins touristiques (Ha Giang, Phong Nha). 10 jours restent possibles mais imposent de choisir entre Sapa et le delta — voir notre itinéraire 10 jours ou 15 jours." },
+        { question: "Faut-il un visa pour le Vietnam en 2026 ?", answer: "Les Français bénéficient d'une exemption de visa pour un séjour de 45 jours maximum (reconduite en 2026). Au-delà, un e-visa (25 $) permet un séjour de 90 jours. Le passeport doit être valide 6 mois après l'entrée. L'e-visa se fait en ligne en 3 jours ouvrables sur le site officiel evisa.xuatnhapcanh.gov.vn." },
+        { question: "Quel budget pour 2 semaines au Vietnam en 2026 ?", answer: "Backpacker : 545 € hors vol international. Confort (hôtels 3*, vols internes, croisière Halong) : 1 060 €. Premium : 2 075 €. Le vol Paris-Hanoï coûte 650-900 € selon la saison. Voir notre itinéraire 15 jours pour le détail poste par poste." },
+        { question: "Est-il facile de voyager seul(e) au Vietnam ?", answer: "Oui, le Vietnam est très accueillant pour les voyageurs solo. Les Vietnamiens sont curieux et chaleureux. Les auberges de jeunesse facilitent les rencontres. La barrière de la langue peut être un défi hors des zones touristiques — téléchargez Google Traduction hors ligne et l'application Grab pour les transports." },
+        { question: "Quels vaccins sont recommandés pour le Vietnam ?", answer: "Aucun vaccin n'est obligatoire mais les vaccins recommandés sont : hépatite A et B, typhoïde, encéphalite japonaise (si séjour rural prolongé) et rage (si zones reculées). Le traitement antipaludéen est conseillé pour certaines régions rurales du centre et du sud. Consultez un centre de vaccination international 4-6 semaines avant le départ." },
+        { question: "Nord ou Sud du Vietnam : que choisir ?", answer: "Le Nord (Hanoï, Sapa, Halong) offre des paysages montagneux spectaculaires et une culture plus traditionnelle. Le Sud (Saigon, delta du Mékong) est plus tropical et dynamique. Le Centre (Hué, Hoi An) combine histoire impériale et plages magnifiques. L'idéal est de combiner les trois sur 15 jours." },
+        { question: "Quelle est la meilleure période pour visiter le Vietnam ?", answer: "Octobre-novembre et mars-avril sont les fenêtres optimales pour un itinéraire nord-sud : temps sec partout, températures modérées. Évitez septembre-octobre sur le Centre (typhons) et juin-août (chaleur étouffante + mousson)." },
+        { question: "Le Vietnam est-il sûr en 2026 ?", answer: "Oui, le Vietnam reste l'un des pays les plus sûrs d'Asie du Sud-Est. La criminalité violente est très rare. Les seuls vrais risques sont les vols à l'arraché (sacs, téléphones) à Saigon, les arnaques de taxi (utilisez Grab) et le trafic routier. Une assurance voyage avec rapatriement est indispensable." },
+        { question: "Quelle assurance voyage pour le Vietnam ?", answer: "Pour un séjour de 2-3 semaines, choisissez une assurance avec rapatriement, frais médicaux (minimum 100 000 €) et couverture scooter (essentielle si vous comptez en louer un). Chapka Cap Aventure ou ACS conviennent parfaitement. Comptez 35-60 € pour 15 jours." },
+        { question: "Peut-on payer par carte bancaire partout au Vietnam ?", answer: "Les hôtels, restaurants touristiques et grandes enseignes acceptent la CB (Visa/Mastercard, attention aux frais de 3 %). Mais une grande partie du pays fonctionne en cash (VND). Retirez à des distributeurs Vietcombank, BIDV ou ACB (frais modérés). Évitez Citibank (frais élevés)." },
       ]}
     />
   );
