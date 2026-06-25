@@ -522,6 +522,7 @@ const AppRoutes = () => {
 
       {/* Blog - Itinéraires, Budget, Quand Partir (Asie du Sud-Est) */}
       <Route path="/blog/itineraire-vietnam-10-jours" element={<ItineraireVietnam10Jours />} />
+      <Route path="/blog/itineraire-vietnam-15-jours" element={<ItineraireVietnam15Jours />} />
       <Route path="/blog/budget-voyage-vietnam" element={<BudgetVoyageVietnam />} />
       <Route path="/blog/quand-partir-vietnam" element={<QuandPartirVietnam />} />
       <Route path="/blog/itineraire-thailande-10-jours" element={<ItineraireThailande10Jours />} />
