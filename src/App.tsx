@@ -46,6 +46,7 @@ const DestinationsVoyagerSeule50Ans = lazy(() => import("./pages/blog/Destinatio
 
 // Blog - Itinéraires, Budget, Quand Partir (Asie du Sud-Est)
 const ItineraireVietnam10Jours = lazy(() => import("./pages/blog/ItineraireVietnam10Jours"));
+const ItineraireVietnam15Jours = lazy(() => import("./pages/blog/ItineraireVietnam15Jours"));
 const BudgetVoyageVietnam = lazy(() => import("./pages/blog/BudgetVoyageVietnam"));
 const QuandPartirVietnam = lazy(() => import("./pages/blog/QuandPartirVietnam"));
 const ItineraireThailande10Jours = lazy(() => import("./pages/blog/ItineraireThailande10Jours"));
