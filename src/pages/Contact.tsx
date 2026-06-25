@@ -21,7 +21,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Intégrer avec Systeme.io ou service d'envoi d'email
-    console.log("Form submitted:", formData);
+    // Note: do not log formData — it contains PII (name, email, message).
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
