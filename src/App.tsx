@@ -23,6 +23,11 @@ const Blog = lazy(() => import("./pages/Blog"));
 const Premium = lazy(() => import("./pages/Premium"));
 const PreparerVoyage = lazy(() => import("./pages/PreparerVoyage"));
 const EquipementVoyage = lazy(() => import("./pages/EquipementVoyage"));
+const MeilleurAdaptateurUniversel = lazy(() => import("./pages/comparatifs/MeilleurAdaptateurUniversel"));
+const MeilleureBatterieExterneVoyage = lazy(() => import("./pages/comparatifs/MeilleureBatterieExterneVoyage"));
+const VisaVietnamFormalites = lazy(() => import("./pages/blog/VisaVietnamFormalites"));
+const ApplicationsIndispensablesVoyage = lazy(() => import("./pages/blog/ApplicationsIndispensablesVoyage"));
+const ErreursAEviterVoyage = lazy(() => import("./pages/blog/ErreursAEviterVoyage"));
 const BudgetVoyagePilier = lazy(() => import("./pages/BudgetVoyagePilier"));
 const PlanificateurBudget = lazy(() => import("./pages/PlanificateurBudget"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
@@ -858,6 +863,11 @@ const AppRoutes = () => {
       <Route path="/comparatifs/meilleurs-accessoires-voyage" element={<MeilleursAccessoiresVoyage />} />
       <Route path="/comparatifs/meilleur-equipement-tech-voyage" element={<MeilleurEquipementTechVoyage />} />
       <Route path="/comparatifs/meilleurs-vetements-voyage" element={<MeilleursVetementsVoyage />} />
+      <Route path="/comparatifs/meilleur-adaptateur-universel" element={<MeilleurAdaptateurUniversel />} />
+      <Route path="/comparatifs/meilleure-batterie-externe-voyage" element={<MeilleureBatterieExterneVoyage />} />
+      <Route path="/blog/visa-vietnam-formalites" element={<VisaVietnamFormalites />} />
+      <Route path="/blog/applications-indispensables-voyage" element={<ApplicationsIndispensablesVoyage />} />
+      <Route path="/blog/erreurs-a-eviter-voyage" element={<ErreursAEviterVoyage />} />
 
       {/* Recherche */}
       <Route path="/recherche" element={<Recherche />} />
