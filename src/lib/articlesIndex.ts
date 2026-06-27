@@ -49,6 +49,15 @@ export const ARTICLES_INDEX: ArticleIndexEntry[] = [
   { title: "Budget voyage Vietnam", url: "/blog/budget-voyage-vietnam", category: "Vietnam", keywords: ["budget", "vietnam"] },
   { title: "Quand partir au Vietnam", url: "/blog/quand-partir-vietnam", category: "Vietnam", keywords: ["climat", "saison", "vietnam"] },
   { title: "Guide complet Vietnam 2026", url: "/guides/guide-complet-vietnam", category: "Vietnam", keywords: ["guide", "vietnam", "2026"] },
+  { title: "Visa Vietnam 2026 : formalités et e-visa", url: "/blog/visa-vietnam-formalites", category: "Vietnam", keywords: ["visa", "formalités", "e-visa", "vietnam", "exemption", "45 jours"] },
+
+  // ===== PRÉPARER SON VOYAGE =====
+  { title: "20 applications indispensables pour voyager 2026", url: "/blog/applications-indispensables-voyage", category: "Préparer", keywords: ["applications", "apps", "voyage", "google maps", "wise", "holafly", "esim"] },
+  { title: "10 erreurs à éviter en voyage", url: "/blog/erreurs-a-eviter-voyage", category: "Préparer", keywords: ["erreurs", "conseils", "voyage", "débutant", "préparer"] },
+
+  // ===== ÉQUIPEMENT (money pages) =====
+  { title: "Meilleur adaptateur universel voyage 2026", url: "/comparatifs/meilleur-adaptateur-universel", category: "Équipement", keywords: ["adaptateur", "universel", "voyage", "tessan", "epicka", "skross"] },
+  { title: "Meilleure batterie externe voyage 2026", url: "/comparatifs/meilleure-batterie-externe-voyage", category: "Équipement", keywords: ["batterie", "externe", "powerbank", "anker", "ugreen", "20000mah"] },
 
   // ===== CAMBODGE / LAOS / INDONÉSIE =====
   { title: "Siem Reap & Angkor", url: "/destinations/cambodge/siem-reap", category: "Cambodge" },
