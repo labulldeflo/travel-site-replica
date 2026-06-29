@@ -24,6 +24,11 @@ const Premium = lazy(() => import("./pages/Premium"));
 const PreparerVoyage = lazy(() => import("./pages/PreparerVoyage"));
 const EquipementVoyage = lazy(() => import("./pages/EquipementVoyage"));
 const MeilleurAdaptateurUniversel = lazy(() => import("./pages/comparatifs/MeilleurAdaptateurUniversel"));
+const MeilleureAssuranceVoyage = lazy(() => import("./pages/comparatifs/MeilleureAssuranceVoyage"));
+const MeilleureEsimInternationale = lazy(() => import("./pages/comparatifs/MeilleureEsimInternationale"));
+const MeilleureCarteBancaireVoyage = lazy(() => import("./pages/comparatifs/MeilleureCarteBancaireVoyage"));
+const MeilleurVpnVoyage = lazy(() => import("./pages/comparatifs/MeilleurVpnVoyage"));
+const MeilleureLocationVoitureEtranger = lazy(() => import("./pages/comparatifs/MeilleureLocationVoitureEtranger"));
 const MeilleureBatterieExterneVoyage = lazy(() => import("./pages/comparatifs/MeilleureBatterieExterneVoyage"));
 const VisaVietnamFormalites = lazy(() => import("./pages/blog/VisaVietnamFormalites"));
 const ApplicationsIndispensablesVoyage = lazy(() => import("./pages/blog/ApplicationsIndispensablesVoyage"));
@@ -867,6 +872,11 @@ const AppRoutes = () => {
       <Route path="/comparatifs/meilleure-batterie-externe-voyage" element={<MeilleureBatterieExterneVoyage />} />
       <Route path="/blog/visa-vietnam-formalites" element={<VisaVietnamFormalites />} />
       <Route path="/blog/applications-indispensables-voyage" element={<ApplicationsIndispensablesVoyage />} />
+      <Route path="/comparatifs/meilleure-assurance-voyage" element={<MeilleureAssuranceVoyage />} />
+      <Route path="/comparatifs/meilleure-esim-internationale" element={<MeilleureEsimInternationale />} />
+      <Route path="/comparatifs/meilleure-carte-bancaire-voyage" element={<MeilleureCarteBancaireVoyage />} />
+      <Route path="/comparatifs/meilleur-vpn-voyage" element={<MeilleurVpnVoyage />} />
+      <Route path="/comparatifs/meilleure-location-voiture-etranger" element={<MeilleureLocationVoitureEtranger />} />
       <Route path="/blog/erreurs-a-eviter-voyage" element={<ErreursAEviterVoyage />} />
 
       {/* Recherche */}

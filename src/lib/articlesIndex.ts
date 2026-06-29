@@ -58,6 +58,11 @@ export const ARTICLES_INDEX: ArticleIndexEntry[] = [
   // ===== ÉQUIPEMENT (money pages) =====
   { title: "Meilleur adaptateur universel voyage 2026", url: "/comparatifs/meilleur-adaptateur-universel", category: "Équipement", keywords: ["adaptateur", "universel", "voyage", "tessan", "epicka", "skross"] },
   { title: "Meilleure batterie externe voyage 2026", url: "/comparatifs/meilleure-batterie-externe-voyage", category: "Équipement", keywords: ["batterie", "externe", "powerbank", "anker", "ugreen", "20000mah"] },
+  { title: "Meilleure assurance voyage 2026 : comparatif complet", url: "/comparatifs/meilleure-assurance-voyage", category: "Préparer", keywords: ["assurance", "voyage", "chapka", "acs", "safetywing", "heymondo"] },
+  { title: "Meilleure eSIM internationale 2026", url: "/comparatifs/meilleure-esim-internationale", category: "Préparer", keywords: ["esim", "internationale", "holafly", "airalo", "saily", "internet voyage"] },
+  { title: "Meilleure carte bancaire pour voyager 2026", url: "/comparatifs/meilleure-carte-bancaire-voyage", category: "Préparer", keywords: ["carte bancaire", "wise", "revolut", "n26", "bunq", "boursorama"] },
+  { title: "Meilleur VPN voyage 2026", url: "/comparatifs/meilleur-vpn-voyage", category: "Préparer", keywords: ["vpn", "nordvpn", "surfshark", "expressvpn", "protonvpn", "chine"] },
+  { title: "Meilleure location de voiture à l'étranger 2026", url: "/comparatifs/meilleure-location-voiture-etranger", category: "Préparer", keywords: ["location voiture", "discovercars", "rentalcars", "sunny cars", "road trip"] },
 
   // ===== CAMBODGE / LAOS / INDONÉSIE =====
   { title: "Siem Reap & Angkor", url: "/destinations/cambodge/siem-reap", category: "Cambodge" },
