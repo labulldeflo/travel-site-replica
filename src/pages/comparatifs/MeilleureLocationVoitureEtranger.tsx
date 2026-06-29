@@ -179,7 +179,7 @@ const MeilleureLocationVoitureEtranger = () => {
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">4. Sixt — Le premium allemand</h2>
             <p className="mb-4">Loueur direct (pas comparateur) avec flotte premium : Mercedes, BMW, Audi en standard. Idéal pour les voyages business ou pour ceux qui veulent garantir le modèle (vs catégorie "Économique ou similaire").</p>
 
-            <h2 className="text-3xl function-elegant font-bold mt-12 mb-6">5. Hertz / Enterprise (USA) — Le direct américain</h2>
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">5. Hertz / Enterprise (USA) — Le direct américain</h2>
             <p className="mb-4">Aux USA et Canada, louer en direct chez les majors est souvent plus simple : programme fidélité (Hertz Gold), comptoirs dédiés, possibilité de rendre dans 8000+ points. Comparez quand même les prix sur DiscoverCars.</p>
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Comment choisir : 7 critères clés</h2>
