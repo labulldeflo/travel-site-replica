@@ -872,6 +872,11 @@ const AppRoutes = () => {
       <Route path="/comparatifs/meilleure-batterie-externe-voyage" element={<MeilleureBatterieExterneVoyage />} />
       <Route path="/blog/visa-vietnam-formalites" element={<VisaVietnamFormalites />} />
       <Route path="/blog/applications-indispensables-voyage" element={<ApplicationsIndispensablesVoyage />} />
+      <Route path="/comparatifs/meilleure-assurance-voyage" element={<MeilleureAssuranceVoyage />} />
+      <Route path="/comparatifs/meilleure-esim-internationale" element={<MeilleureEsimInternationale />} />
+      <Route path="/comparatifs/meilleure-carte-bancaire-voyage" element={<MeilleureCarteBancaireVoyage />} />
+      <Route path="/comparatifs/meilleur-vpn-voyage" element={<MeilleurVpnVoyage />} />
+      <Route path="/comparatifs/meilleure-location-voiture-etranger" element={<MeilleureLocationVoitureEtranger />} />
       <Route path="/blog/erreurs-a-eviter-voyage" element={<ErreursAEviterVoyage />} />
 
       {/* Recherche */}
