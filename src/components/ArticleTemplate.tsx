@@ -1,5 +1,18 @@
 import React from "react";
-import { Calendar, User, Tag, Clock, Coffee, DollarSign, MapPin, Compass, LucideIcon } from "lucide-react";
+import {
+  Calendar,
+  User,
+  Tag,
+  Clock,
+  Coffee,
+  MapPin,
+  LucideIcon,
+  ShieldCheck,
+  Smartphone,
+  Backpack,
+  ListChecks,
+  Star,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,23 +21,22 @@ import Footer from "@/components/Footer";
 import AffiliateWidget from "@/components/AffiliateWidget";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
-import FAQSection, { FAQItem } from "@/components/FAQSection";
-import BackToTop from "@/components/BackToTop";
-import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
-import RelatedArticles from "@/components/RelatedArticles";
-import { calculateReadingTime } from "@/lib/readingTime";
-import AutoTableOfContents, { buildTocFromTitles } from "@/components/AutoTableOfContents";
 
-// Fonction utilitaire pour parser le markdown simple (gras, italique)
 const parseSimpleMarkdown = (text: string): string => {
   if (!text) return "";
   return text
-    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>") // **gras**
-    .replace(/\*([^*]+)\*/g, "<em>$1</em>"); // *italique*
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*([^*]+)\*/g, "<em>$1</em>");
 };
-// =================================================================
-// --- Types pour le Template ---
-// =================================================================
+
+const slugify = (text: string): string =>
+  text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
 interface MetaItemProps {
   Icon: LucideIcon;
   label: string;
@@ -56,7 +68,6 @@ interface SidebarInfo {
 }
 
 interface ArticleTemplateProps {
-  // Hero Section
   heroImage: string;
   heroImageAlt?: string;
   title: string;
@@ -66,51 +77,30 @@ interface ArticleTemplateProps {
   author?: string;
   date?: string;
   readingTime?: string;
-
-  // SEO
-  metaDescription?: string;
-
-  // Content Sections
   introduction?: string;
   introText?: string;
   contentSections: ContentSection[];
-  
-  // Gastronomie
   gastronomyTitle?: string;
   gastronomyIntro?: string;
   gastronomyItems: GastronomyItem[];
   gastronomyConclusion?: string;
-
-  // Practical Tips
   practicalTips: PracticalTip[];
-  
-  // Conclusion
   conclusion?: string;
   conclusionText?: string;
-
-  // Sidebar
   sidebarInfos: SidebarInfo[];
-
-  // Affiliate
   affiliateCity: string;
   affiliateCountryCode: string;
-
-  // CTA Links
   relatedArticles?: Array<{ title: string; url: string }>;
   destinationLink?: string;
   ctaTitle?: string;
-
-  // FAQ
-  faqs?: FAQItem[];
-
-  // Internal Links
-  internalLinks?: Array<{ label: string; url: string }>;
 }
 
-// =================================================================
-// --- Composant Utilitaire : Article Meta Info ---
-// =================================================================
-const ArticleMetaItem: React.FC<MetaItemProps> = ({ Icon, label, value, iconColor }) => (
+const ArticleMetaItem: React.FC<MetaItemProps> = ({
+  Icon,
+  label,
+  value,
+  iconColor,
+}) => (
   <div className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-sm border">
     <Icon className={`h-5 w-5 ${iconColor} flex-shrink-0`} aria-hidden="true" />
     <div>
@@ -120,9 +110,6 @@ const ArticleMetaItem: React.FC<MetaItemProps> = ({ Icon, label, value, iconColo
   </div>
 );
 
-// =================================================================
-// --- Template Principal d'Article ---
-// =================================================================
 const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   heroImage,
   heroImageAlt = "",
@@ -131,9 +118,12 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   category,
   keywords,
   author = "Cap sur le Monde",
-  date = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }),
-  readingTime,
-  metaDescription,
+  date = new Date().toLocaleDateString("fr-FR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }),
+  readingTime = "7 min",
   introduction,
   introText,
   contentSections,
@@ -150,328 +140,419 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   relatedArticles,
   destinationLink,
   ctaTitle,
-  faqs,
-  internalLinks,
 }) => {
   const finalIntro = introduction || introText;
   const finalConclusion = conclusion || conclusionText;
-  const seoDescription = metaDescription || subtitle || `${title} – Guide complet et conseils pratiques.`;
 
-  // Temps de lecture : utilise la valeur fournie, sinon calcul automatique (~200 mots/min)
-  const sectionsText = contentSections
-    .map((s) => (typeof s.content === "string" ? s.content : ""))
-    .join(" ");
-  const computedReadingTime =
-    readingTime ||
-    calculateReadingTime(
-      finalIntro,
-      sectionsText,
-      practicalTips.map((t) => t.content).join(" "),
-      finalConclusion,
-    );
+  const seoDescription =
+    subtitle.length > 155 ? `${subtitle.slice(0, 152)}...` : subtitle;
 
-  // Build automatic Table of Contents from content sections + fixed sections
-  const tocTitles = [
-    ...contentSections.map((s) => s.title),
-    gastronomyTitle,
-    "Conseils Pratiques",
-    ...(faqs && faqs.length > 0 ? ["Questions fréquentes"] : []),
+  const seoImageAlt = heroImageAlt || `${title} - guide voyage ${category}`;
+
+  const tableOfContents = [
+    ...contentSections.map((section) => ({
+      title: section.title,
+      id: slugify(section.title),
+    })),
+    { title: gastronomyTitle, id: "gastronomie" },
+    { title: "Conseils pratiques", id: "conseils-pratiques" },
   ];
-  const tocItems = buildTocFromTitles(tocTitles);
-  const slugifyId = (s: string) =>
-    s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-
-  // Parse French date to ISO for schema.org
-  const parseDate = (d: string) => {
-    try {
-      const months: Record<string, string> = {
-        janvier: "01", février: "02", mars: "03", avril: "04", mai: "05", juin: "06",
-        juillet: "07", août: "08", septembre: "09", octobre: "10", novembre: "11", décembre: "12",
-      };
-      const parts = d.match(/(\d+)\s+(\w+)\s+(\d{4})/);
-      if (parts) {
-        return `${parts[3]}-${months[parts[2].toLowerCase()] || "01"}-${parts[1].padStart(2, "0")}`;
-      }
-    } catch {}
-    return undefined;
-  };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <SEO
-        title={title}
-        description={seoDescription}
-        image={typeof heroImage === "string" ? heroImage : undefined}
-        hideH1={true}
-        ogType="article"
-        articleMeta={{
-          author: author,
-          datePublished: parseDate(date),
-        }}
-        breadcrumbs={[
-          { name: "Accueil", url: "/" },
-          { name: "Destinations", url: "/destinations" },
-          { name: title, url: "" },
-        ]}
+  title={title}
+  description={seoDescription}
+  image={heroImage}
+  url={destinationLink}
+  type="article"
+  author={author}
+  breadcrumbs={[
+    { name: "Accueil", url: "/" },
+    { name: category, url: destinationLink || "/" },
+    { name: title, url: destinationLink || "/" },
+  ]}
+  faqs={[
+    {
+      question: `Quand préparer son voyage à ${affiliateCity} ?`,
+      answer:
+        "L’idéal est de commencer plusieurs semaines à l’avance pour comparer les hébergements, vérifier les formalités, prévoir l’assurance et organiser les activités principales.",
+    },
+    {
+      question: "Faut-il prendre une assurance voyage ?",
+      answer:
+        "C’est fortement recommandé dès qu’un voyage implique des frais importants, un départ à l’étranger ou des réservations non remboursables.",
+    },
+    {
+      question: "Une eSIM est-elle utile en voyage ?",
+      answer:
+        "Oui, surtout hors de France. Elle permet d’avoir Internet rapidement sans dépendre uniquement du Wi-Fi public.",
+    },
+  ]}
       />
-      <Header />
 
-      <main className="flex-grow pt-24">
-        {/* Breadcrumb visible */}
-        <ArticleBreadcrumb
-          items={[
-            { label: category, to: destinationLink },
-            { label: title },
-          ]}
-        />
+      <div className="min-h-screen flex flex-col">
+        <Header />
 
-        {/* Hero Section */}
-        <header
-          className="relative h-[65vh] md:h-[75vh] overflow-hidden"
-          aria-label={heroImageAlt || title}
-        >
-          <img
-            src={heroImage}
-            alt={heroImageAlt || `Guide voyage ${title}`}
-            width={1920}
-            height={1080}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10"></div>
-          <div className="relative container mx-auto px-4 h-full flex items-end pb-16 z-20">
-            <div className="text-white max-w-4xl">
-              {/* Tags et Métadonnées */}
-              <div className="flex flex-wrap gap-3 text-sm mb-4 opacity-90">
-                <Badge className="bg-ocean/70 hover:bg-ocean/80 text-white font-medium">
-                  <Tag className="h-3 w-3 mr-1" aria-hidden="true" />
-                  {category}
-                </Badge>
-                {keywords.map((keyword, index) => (
-                  <Badge
-                    key={index}
-                    variant="outline"
-                    className="text-white border-white/50 bg-transparent hover:bg-white/10"
-                  >
-                    {keyword}
+        <main className="flex-grow pt-24">
+          <header
+            className="relative h-[65vh] md:h-[75vh] bg-cover bg-center"
+            style={{ backgroundImage: `url(${heroImage})` }}
+            aria-label={seoImageAlt}
+          >
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10" />
+
+            <div className="relative container mx-auto px-4 h-full flex items-end pb-16 z-20">
+              <div className="text-white max-w-4xl">
+                <div className="flex flex-wrap gap-3 text-sm mb-4 opacity-90">
+                  <Badge className="bg-ocean/70 hover:bg-ocean/80 text-white font-medium">
+                    <Tag className="h-3 w-3 mr-1" aria-hidden="true" />
+                    {category}
                   </Badge>
-                ))}
-              </div>
 
-              <h1 id="article-title" className="text-4xl md:text-6xl font-elegant font-extrabold mb-4 drop-shadow-lg">
-                {title}
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 drop-shadow">
-                {subtitle}
-              </p>
+                  {keywords.map((keyword, index) => (
+                    <Badge
+                      key={index}
+                      variant="outline"
+                      className="text-white border-white/50 bg-transparent hover:bg-white/10"
+                    >
+                      {keyword}
+                    </Badge>
+                  ))}
+                </div>
 
-              {/* Infos rapides sous le titre */}
-              <div className="flex items-center space-x-6 mt-6 pt-4 border-t border-white/30">
-                <div className="flex items-center gap-2 text-sm text-white/90">
-                  <User className="h-4 w-4" aria-hidden="true" />
-                  <span>{author}</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-white/90">
-                  <Calendar className="h-4 w-4" aria-hidden="true" />
-                  <span>{date}</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-white/90">
-                  <Clock className="h-4 w-4" aria-hidden="true" />
-                  <span>{computedReadingTime}</span>
+                <h1
+                  id="article-title"
+                  className="text-4xl md:text-6xl font-elegant font-extrabold mb-4 drop-shadow-lg"
+                >
+                  {title}
+                </h1>
+
+                <p className="text-xl md:text-2xl text-white/90 drop-shadow">
+                  {subtitle}
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4 mt-6 pt-4 border-t border-white/30">
+                  <div className="flex items-center gap-2 text-sm text-white/90">
+                    <User className="h-4 w-4" aria-hidden="true" />
+                    <span>{author}</span>
+                  </div>
+
+                  <div className="flex items-center gap-2 text-sm text-white/90">
+                    <Calendar className="h-4 w-4" aria-hidden="true" />
+                    <span>{date}</span>
+                  </div>
+
+                  <div className="flex items-center gap-2 text-sm text-white/90">
+                    <Clock className="h-4 w-4" aria-hidden="true" />
+                    <span>{readingTime}</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </header>
+          </header>
 
-        {/* Main Content + Sidebar */}
-        <section className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Article Content */}
-            <article className="md:col-span-2 prose prose-lg max-w-none">
-              {/* Sommaire mobile uniquement (le desktop est dans la sidebar sticky) */}
-              <div className="md:hidden">
-                <AutoTableOfContents items={tocItems} variant="inline" />
-              </div>
-
-              {/* Introduction */}
-              <p 
-                className="text-lg leading-relaxed text-gray-700 first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left"
-                dangerouslySetInnerHTML={{ __html: parseSimpleMarkdown(finalIntro || "") }}
-              />
-
-              {/* Content Sections */}
-              {contentSections.map((section, index) => (
-                <section key={index} className="mt-10">
-                  <h2 id={slugifyId(section.title)} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
-                    <section.icon className="h-7 w-7 text-ocean" aria-hidden="true" />
-                    {section.title}
-                  </h2>
-                  {typeof section.content === 'string' ? (
-                    <div 
-                      className="text-gray-700 leading-relaxed space-y-4"
-                      dangerouslySetInnerHTML={{ __html: section.content }}
-                    />
-                  ) : (
-                    section.content
-                  )}
-                </section>
-              ))}
-
-              {/* Section Gastronomie */}
-              <section className="mt-12 bg-gray-50 p-8 rounded-lg border border-gray-200">
-                <h2 id={slugifyId(gastronomyTitle)} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
-                  <Coffee className="h-7 w-7 text-ocean" aria-hidden="true" />
-                  {gastronomyTitle}
-                </h2>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {gastronomyIntro}
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {gastronomyItems.map((item, index) => (
-                    <Card key={index} className="bg-white shadow-sm hover:shadow-md transition-shadow">
-                      <CardContent className="p-4">
-                        <h3 className="font-bold text-ocean mb-2">{item.title}</h3>
-                        <p className="text-sm text-gray-600">{item.description}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-
-                {gastronomyConclusion && (
-                  <p className="mt-6 text-gray-700 leading-relaxed">
-                    {gastronomyConclusion}
-                  </p>
+          <section className="container mx-auto px-4 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <article className="md:col-span-2 prose prose-lg max-w-none">
+                {finalIntro && (
+                  <p
+                    className="text-lg leading-relaxed text-gray-700 first-letter:text-5xl first-letter:font-bold first-letter:text-ocean first-letter:mr-2 first-letter:float-left"
+                    dangerouslySetInnerHTML={{
+                      __html: parseSimpleMarkdown(finalIntro),
+                    }}
+                  />
                 )}
 
-                {destinationLink && !destinationLink.includes('/france') && (
-                  <div className="mt-6 text-center">
-                    <Button asChild className="bg-ocean hover:bg-ocean/90">
-                      <Link to="/ressources-gratuites">📥 Télécharge nos guides gratuits</Link>
+                <section className="not-prose mt-8 p-6 rounded-xl border bg-sand/30">
+                  <h2 className="text-2xl font-elegant font-bold text-cyan-700 mb-4 flex items-center gap-2">
+                    <Star className="h-6 w-6 text-ocean" />
+                    Nos recommandations avant de partir
+                  </h2>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <Button asChild variant="outline" className="h-auto py-4">
+                      <Link to="/meilleure-assurance-voyage">
+                        <ShieldCheck className="h-5 w-5 mr-2" />
+                        Assurance voyage
+                      </Link>
+                    </Button>
+
+                    <Button asChild variant="outline" className="h-auto py-4">
+                      <Link to="/meilleure-esim-internationale">
+                        <Smartphone className="h-5 w-5 mr-2" />
+                        eSIM internationale
+                      </Link>
+                    </Button>
+
+                    <Button asChild variant="outline" className="h-auto py-4">
+                      <Link to="/equipement-voyage">
+                        <Backpack className="h-5 w-5 mr-2" />
+                        Équipement voyage
+                      </Link>
                     </Button>
                   </div>
-                )}
-              </section>
+                </section>
 
-              {/* Affiliate Widget */}
-              <AffiliateWidget
-                title={`Hébergements à ${affiliateCity}`}
-                description={`Trouvez les meilleurs hôtels et logements pour votre séjour à ${affiliateCity} avec Booking.com`}
-                link={`https://www.booking.com/city/${affiliateCountryCode}/${affiliateCity.toLowerCase()}.html`}
-                badge="Meilleure offre"
-                variant="card"
-              />
+                <section className="not-prose mt-8 p-6 bg-white rounded-xl border shadow-sm">
+                  <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <ListChecks className="h-5 w-5 text-ocean" />
+                    Sommaire
+                  </h2>
 
-              {/* Conseils Pratiques */}
-              <section className="mt-12 pt-8 border-t">
-                <h2 id={slugifyId("Conseils Pratiques")} className="scroll-mt-24 text-3xl font-elegant font-bold text-cyan-600 mb-6 flex items-center gap-3">
-                  <MapPin className="h-7 w-7 text-ocean" aria-hidden="true" />
-                  Conseils Pratiques
-                </h2>
+                  <ul className="space-y-2">
+                    {tableOfContents.map((item) => (
+                      <li key={item.id}>
+                        <a
+                          href={`#${item.id}`}
+                          className="text-ocean hover:underline"
+                        >
+                          {item.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
 
-                <div className="space-y-6">
-                  {practicalTips.map((tip, index) => (
-                    <div key={index}>
-                      <h3 className="font-bold text-ocean text-xl mb-2">{tip.title}</h3>
-                      <div 
-                        className="text-gray-700 leading-relaxed"
-                        dangerouslySetInnerHTML={{ __html: tip.content }}
+                {contentSections.map((section, index) => (
+                  <section
+                    key={index}
+                    id={slugify(section.title)}
+                    className="mt-10 scroll-mt-28"
+                  >
+                    <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
+                      <section.icon
+                        className="h-7 w-7 text-ocean"
+                        aria-hidden="true"
                       />
-                    </div>
-                  ))}
-                </div>
-              </section>
+                      {section.title}
+                    </h2>
 
-              <section className="mt-10 p-6 bg-sand/30 rounded-lg border-l-4 border-ocean">
-                <p 
-                  className="text-lg text-gray-800 italic leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: parseSimpleMarkdown(finalConclusion || "") }}
-                />
-              </section>
-
-              {faqs && faqs.length > 0 && (
-                <div id={slugifyId("Questions fréquentes")} className="scroll-mt-24 mt-10">
-                  <FAQSection faqs={faqs} />
-                </div>
-              )}
-
-              {/* CTA Bottom */}
-              <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                {relatedArticles?.map((article, index) => (
-                  <Button key={index} asChild variant="outline" className="flex-1">
-                    <Link to={article.url} onClick={() => window.scrollTo(0, 0)}>{article.title}</Link>
-                  </Button>
+                    {typeof section.content === "string" ? (
+                      <div
+                        className="text-gray-700 leading-relaxed space-y-4"
+                        dangerouslySetInnerHTML={{ __html: section.content }}
+                      />
+                    ) : (
+                      section.content
+                    )}
+                  </section>
                 ))}
-                {destinationLink && (
-                  <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">
-                    <Link to={destinationLink} onClick={() => window.scrollTo(0, 0)}>{ctaTitle || "Voir toutes les destinations"}</Link>
-                  </Button>
-                )}
-              </div>
 
-              {/* Internal Links */}
-              {internalLinks && internalLinks.length > 0 && (
-                <div className="mt-10 p-6 bg-muted/30 rounded-lg border border-border">
-                  <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                    <Compass className="h-5 w-5 text-ocean" />
-                    À lire aussi sur Cap sur le Monde
-                  </h3>
-                  <div className="grid gap-2 sm:grid-cols-2">
-                    {internalLinks.map((link, idx) => (
-                      <Link
-                        key={idx}
-                        to={link.url}
-                        onClick={() => window.scrollTo(0, 0)}
-                        className="flex items-center gap-2 p-2 rounded-md hover:bg-background transition-all text-muted-foreground hover:text-ocean text-sm"
+                <section
+                  id="gastronomie"
+                  className="mt-12 bg-gray-50 p-8 rounded-lg border border-gray-200 scroll-mt-28"
+                >
+                  <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-4 flex items-center gap-3">
+                    <Coffee className="h-7 w-7 text-ocean" aria-hidden="true" />
+                    {gastronomyTitle}
+                  </h2>
+
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    {gastronomyIntro}
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {gastronomyItems.map((item, index) => (
+                      <Card
+                        key={index}
+                        className="bg-white shadow-sm hover:shadow-md transition-shadow"
                       >
-                        <span className="text-ocean">→</span>
-                        <span>{link.label}</span>
+                        <CardContent className="p-4">
+                          <h3 className="font-bold text-ocean mb-2">
+                            {item.title}
+                          </h3>
+                          <p className="text-sm text-gray-600">
+                            {item.description}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+
+                  {gastronomyConclusion && (
+                    <p className="mt-6 text-gray-700 leading-relaxed">
+                      {gastronomyConclusion}
+                    </p>
+                  )}
+
+                  {destinationLink && !destinationLink.includes("/france") && (
+                    <div className="mt-6 text-center">
+                      <Button asChild className="bg-ocean hover:bg-ocean/90">
+                        <Link to="/ressources-gratuites">
+                          Télécharger les guides gratuits
+                        </Link>
+                      </Button>
+                    </div>
+                  )}
+                </section>
+
+                <div className="not-prose mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <AffiliateWidget
+                    title={`Hébergements à ${affiliateCity}`}
+                    description={`Trouvez les meilleurs hôtels et logements pour votre séjour à ${affiliateCity} avec Booking.com.`}
+                    link={`https://www.booking.com/city/${affiliateCountryCode}/${affiliateCity.toLowerCase()}.html`}
+                    badge="Hôtels"
+                    variant="card"
+                  />
+
+                  <AffiliateWidget
+                    title="Assurance voyage"
+                    description="Comparez les meilleures assurances avant votre départ pour voyager avec plus de sécurité."
+                    link="/meilleure-assurance-voyage"
+                    badge="Recommandé"
+                    variant="card"
+                  />
+
+                  <AffiliateWidget
+                    title="eSIM internationale"
+                    description="Restez connecté dès votre arrivée sans changer de carte SIM physique."
+                    link="/meilleure-esim-internationale"
+                    badge="Bon plan"
+                    variant="card"
+                  />
+
+                  <AffiliateWidget
+                    title="Équipement indispensable"
+                    description="Découvrez les accessoires utiles pour préparer votre voyage : valise, sac, adaptateur, batterie externe."
+                    link="/equipement-voyage"
+                    badge="Amazon"
+                    variant="card"
+                  />
+                </div>
+
+                <section
+                  id="conseils-pratiques"
+                  className="mt-12 pt-8 border-t scroll-mt-28"
+                >
+                  <h2 className="text-3xl font-elegant font-bold text-cyan-600 mb-6 flex items-center gap-3">
+                    <MapPin className="h-7 w-7 text-ocean" aria-hidden="true" />
+                    Conseils pratiques
+                  </h2>
+
+                  <div className="space-y-6">
+                    {practicalTips.map((tip, index) => (
+                      <div key={index}>
+                        <h3 className="font-bold text-ocean text-xl mb-2">
+                          {tip.title}
+                        </h3>
+                        <div
+                          className="text-gray-700 leading-relaxed"
+                          dangerouslySetInnerHTML={{ __html: tip.content }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                <section className="not-prose mt-12 p-6 rounded-xl bg-white border shadow-sm">
+                  <h2 className="text-2xl font-elegant font-bold text-cyan-700 mb-4">
+                    Questions fréquentes
+                  </h2>
+
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-bold text-gray-800">
+                        Quand préparer son voyage à {affiliateCity} ?
+                      </h3>
+                      <p className="text-gray-700">
+                        L’idéal est de commencer plusieurs semaines à l’avance
+                        pour comparer les hébergements, vérifier les formalités,
+                        prévoir l’assurance et organiser les activités principales.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-bold text-gray-800">
+                        Faut-il prendre une assurance voyage ?
+                      </h3>
+                      <p className="text-gray-700">
+                        C’est fortement recommandé dès qu’un voyage implique des
+                        frais importants, un départ à l’étranger ou des réservations
+                        non remboursables.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="font-bold text-gray-800">
+                        Une eSIM est-elle utile en voyage ?
+                      </h3>
+                      <p className="text-gray-700">
+                        Oui, surtout hors de France. Elle permet d’avoir Internet
+                        rapidement sans dépendre uniquement du Wi-Fi public.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                {finalConclusion && (
+                  <section className="mt-10 p-6 bg-sand/30 rounded-lg border-l-4 border-ocean">
+                    <p
+                      className="text-lg text-gray-800 italic leading-relaxed"
+                      dangerouslySetInnerHTML={{
+                        __html: parseSimpleMarkdown(finalConclusion),
+                      }}
+                    />
+                  </section>
+                )}
+
+                <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                  {relatedArticles?.map((article, index) => (
+                    <Button
+                      key={index}
+                      asChild
+                      variant="outline"
+                      className="flex-1"
+                    >
+                      <Link
+                        to={article.url}
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
+                        {article.title}
                       </Link>
+                    </Button>
+                  ))}
+
+                  {destinationLink && (
+                    <Button asChild className="flex-1 bg-ocean hover:bg-ocean/90">
+                      <Link
+                        to={destinationLink}
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
+                        {ctaTitle || "Voir toutes les destinations"}
+                      </Link>
+                    </Button>
+                  )}
+                </div>
+              </article>
+
+              <aside className="md:col-span-1">
+                <div className="bg-accent/50 p-6 rounded-lg sticky top-24">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Tag className="h-5 w-5 text-primary" />
+                    En bref
+                  </h3>
+
+                  <div className="space-y-4">
+                    {sidebarInfos.map((info, index) => (
+                      <ArticleMetaItem
+                        key={index}
+                        Icon={info.icon}
+                        label={info.label}
+                        value={info.value}
+                        iconColor={info.iconColor}
+                      />
                     ))}
                   </div>
                 </div>
-              )}
-            </article>
+              </aside>
+            </div>
+          </section>
+        </main>
 
-            {/* Sidebar */}
-            <aside className="md:col-span-1 space-y-6">
-              {/* Sommaire desktop sticky */}
-              <div className="hidden md:block sticky top-24">
-                <AutoTableOfContents items={tocItems} variant="inline" />
-              </div>
-
-              <div className="bg-accent/50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <Tag className="h-5 w-5 text-primary" />
-                  En Bref
-                </h3>
-
-                <div className="space-y-4">
-                  {sidebarInfos.map((info, index) => (
-                    <ArticleMetaItem
-                      key={index}
-                      Icon={info.icon}
-                      label={info.label}
-                      value={info.value}
-                      iconColor={info.iconColor}
-                    />
-                  ))}
-                </div>
-              </div>
-            </aside>
-          </div>
-
-          {/* Articles similaires (auto par catégorie) */}
-          <RelatedArticles category={category} />
-        </section>
-      </main>
-
-      <BackToTop />
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
