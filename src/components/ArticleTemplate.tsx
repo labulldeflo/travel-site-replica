@@ -79,6 +79,10 @@ interface ArticleTemplateProps {
   readingTime?: string;
   introduction?: string;
   introText?: string;
+  /** Description meta personnalisée (sinon générée depuis le subtitle). */
+  metaDescription?: string;
+  /** Encadré "À retenir" en haut d'article. Généré automatiquement si absent. */
+  keyTakeaways?: string[];
   contentSections: ContentSection[];
   gastronomyTitle?: string;
   gastronomyIntro?: string;
@@ -93,6 +97,12 @@ interface ArticleTemplateProps {
   relatedArticles?: Array<{ title: string; url: string }>;
   destinationLink?: string;
   ctaTitle?: string;
+  /** FAQ personnalisées (sinon FAQ génériques). */
+  faqs?: Array<{ question: string; answer: string }>;
+  /** Liens internes contextuels (maillage SEO). */
+  internalLinks?: Array<{ label: string; url: string }>;
+  /** Accepte les props supplémentaires historiques sans erreur TS. */
+  [key: string]: unknown;
 }
 
 const ArticleMetaItem: React.FC<MetaItemProps> = ({
