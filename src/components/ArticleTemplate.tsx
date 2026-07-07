@@ -296,6 +296,31 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                   />
                 )}
 
+                {/* Encadré "À retenir" : synthèse rapide en haut d'article (SEO + Google AI Overviews). */}
+                {finalTakeaways.length > 0 && (
+                  <aside
+                    className="not-prose mt-8 p-6 rounded-xl border-l-4 border-ocean bg-ocean/5"
+                    aria-labelledby="a-retenir-title"
+                  >
+                    <h2
+                      id="a-retenir-title"
+                      className="text-xl font-elegant font-bold text-cyan-700 mb-3 flex items-center gap-2"
+                    >
+                      <ListChecks className="h-5 w-5 text-ocean" aria-hidden="true" />
+                      À retenir
+                    </h2>
+                    <ul className="space-y-2 text-gray-800">
+                      {finalTakeaways.map((point, i) => (
+                        <li key={i} className="flex gap-2">
+                          <span className="text-ocean font-bold" aria-hidden="true">•</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </aside>
+                )}
+
+
                 <section className="not-prose mt-8 p-6 rounded-xl border bg-sand/30">
                   <h2 className="text-2xl font-elegant font-bold text-cyan-700 mb-4 flex items-center gap-2">
                     <Star className="h-6 w-6 text-ocean" />
