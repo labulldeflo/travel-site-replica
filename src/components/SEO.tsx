@@ -14,18 +14,25 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: "website" | "article";
+  /** Alias legacy toléré (équivalent de `type`). */
+  ogType?: string;
   author?: string;
   datePublished?: string;
   dateModified?: string;
   breadcrumbs?: Array<{ name: string; url: string }>;
   faqs?: FAQItem[];
-  /** Masque l'ajout d'un H1 supplémentaire (utile lorsque la page fournit déjà son propre H1). */
   hideH1?: boolean;
-  /** Marque la page comme homepage pour ajuster les schémas (Organization/WebSite). */
   isHomePage?: boolean;
-  /** Empêche l'indexation par les moteurs. */
   noindex?: boolean;
+  /** H1 alternatif (utilisé par certaines pages internes). */
+  h1?: string;
+  /** Métadonnées article legacy (auteur/date). */
+  articleMeta?: { author?: string; datePublished?: string; dateModified?: string };
+  /** Alias legacy pour la description. */
+  metaDescription?: string;
   children?: React.ReactNode;
+  /** Accepte les props supplémentaires historiques sans erreur TS. */
+  [key: string]: unknown;
 }
 
 const SEO: React.FC<SEOProps> = ({
