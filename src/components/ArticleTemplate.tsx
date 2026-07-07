@@ -136,6 +136,8 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   readingTime = "7 min",
   introduction,
   introText,
+  metaDescription,
+  keyTakeaways,
   contentSections,
   gastronomyTitle = "Spécialités Locales",
   gastronomyIntro = "Ne manquez pas ces délices culinaires lors de votre visite.",
@@ -150,14 +152,49 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   relatedArticles,
   destinationLink,
   ctaTitle,
+  faqs,
+  internalLinks,
 }) => {
   const finalIntro = introduction || introText;
   const finalConclusion = conclusion || conclusionText;
 
+  // Description meta prioritaire, sinon fallback sur le subtitle tronqué à 155 caractères (limite SERP Google).
   const seoDescription =
-    subtitle.length > 155 ? `${subtitle.slice(0, 152)}...` : subtitle;
+    metaDescription ||
+    (subtitle.length > 155 ? `${subtitle.slice(0, 152)}...` : subtitle);
 
   const seoImageAlt = heroImageAlt || `${title} - guide voyage ${category}`;
+
+  // Génération automatique de l'encadré "À retenir" si non fourni : combine subtitle et mots-clés principaux.
+  const finalTakeaways: string[] =
+    keyTakeaways && keyTakeaways.length > 0
+      ? keyTakeaways
+      : [
+          subtitle,
+          `Destination : ${affiliateCity}${category ? ` (${category})` : ""}`,
+          `Points clés : ${keywords.slice(0, 3).join(", ")}`,
+          `Temps de lecture estimé : ${readingTime}`,
+        ].filter(Boolean);
+
+  // FAQ par défaut si non fournie explicitement par la page.
+  const defaultFaqs = [
+    {
+      question: `Quand préparer son voyage à ${affiliateCity} ?`,
+      answer:
+        "L’idéal est de commencer plusieurs semaines à l’avance pour comparer les hébergements, vérifier les formalités, prévoir l’assurance et organiser les activités principales.",
+    },
+    {
+      question: "Faut-il prendre une assurance voyage ?",
+      answer:
+        "C’est fortement recommandé dès qu’un voyage implique des frais importants, un départ à l’étranger ou des réservations non remboursables.",
+    },
+    {
+      question: "Une eSIM est-elle utile en voyage ?",
+      answer:
+        "Oui, surtout hors de France. Elle permet d’avoir Internet rapidement sans dépendre uniquement du Wi-Fi public.",
+    },
+  ];
+  const finalFaqs = faqs && faqs.length > 0 ? faqs : defaultFaqs;
 
   const tableOfContents = [
     ...contentSections.map((section) => ({
@@ -167,6 +204,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
     { title: gastronomyTitle, id: "gastronomie" },
     { title: "Conseils pratiques", id: "conseils-pratiques" },
   ];
+
 
   return (
     <>
