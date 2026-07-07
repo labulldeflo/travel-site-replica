@@ -220,23 +220,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
     { name: category, url: destinationLink || "/" },
     { name: title, url: destinationLink || "/" },
   ]}
-  faqs={[
-    {
-      question: `Quand préparer son voyage à ${affiliateCity} ?`,
-      answer:
-        "L’idéal est de commencer plusieurs semaines à l’avance pour comparer les hébergements, vérifier les formalités, prévoir l’assurance et organiser les activités principales.",
-    },
-    {
-      question: "Faut-il prendre une assurance voyage ?",
-      answer:
-        "C’est fortement recommandé dès qu’un voyage implique des frais importants, un départ à l’étranger ou des réservations non remboursables.",
-    },
-    {
-      question: "Une eSIM est-elle utile en voyage ?",
-      answer:
-        "Oui, surtout hors de France. Elle permet d’avoir Internet rapidement sans dépendre uniquement du Wi-Fi public.",
-    },
-  ]}
+  faqs={finalFaqs}
       />
 
       <div className="min-h-screen flex flex-col">
