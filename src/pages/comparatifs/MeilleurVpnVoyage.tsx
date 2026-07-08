@@ -6,6 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { AffiliateDisclaimer } from "@/components/affiliate";
+import SummaryTable from "@/components/SummaryTable";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Lock, Check, X, Star, ShieldAlert } from "lucide-react";
 
@@ -72,56 +73,27 @@ const MeilleurVpnVoyage = () => {
             </section>
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Le top 5 des VPN voyage 2026</h2>
-            <div className="overflow-x-auto my-8">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-ocean text-white">
-                    <th className="p-3 text-left">VPN</th>
-                    <th className="p-3">Idéal pour</th>
-                    <th className="p-3">Serveurs</th>
-                    <th className="p-3">Prix /mois</th>
-                    <th className="p-3">Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b bg-green-50">
-                    <td className="p-3 font-bold">NordVPN</td>
-                    <td className="p-3">Polyvalent, vitesse</td>
-                    <td className="p-3">5500+</td>
-                    <td className="p-3">2,99€</td>
-                    <td className="p-3">★★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Surfshark</td>
-                    <td className="p-3">Famille, prix</td>
-                    <td className="p-3">3200+</td>
-                    <td className="p-3">2,29€</td>
-                    <td className="p-3">★★★★½</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">ExpressVPN</td>
-                    <td className="p-3">Chine, fiabilité</td>
-                    <td className="p-3">3000+</td>
-                    <td className="p-3">6,67$</td>
-                    <td className="p-3">★★★★½</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">ProtonVPN</td>
-                    <td className="p-3">Confidentialité, gratuit</td>
-                    <td className="p-3">2900+</td>
-                    <td className="p-3">4,99€</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-bold">CyberGhost</td>
-                    <td className="p-3">Débutants, streaming</td>
-                    <td className="p-3">9700+</td>
-                    <td className="p-3">2,19€</td>
-                    <td className="p-3">★★★½</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="my-8">
+              <SummaryTable
+                caption="Comparatif des 5 meilleurs VPN pour voyager en 2026 : usage idéal, nombre de serveurs, prix mensuel et note globale."
+                ariaLabel="Comparatif des meilleurs VPN voyage 2026"
+                columns={[
+                  { key: "vpn", header: "VPN" },
+                  { key: "ideal", header: "Idéal pour" },
+                  { key: "serveurs", header: "Serveurs", align: "center" },
+                  { key: "prix", header: "Prix /mois", align: "center" },
+                  { key: "note", header: "Note", align: "center" },
+                ]}
+                rows={[
+                  { vpn: <strong>NordVPN</strong>, ideal: "Polyvalent, vitesse", serveurs: "5500+", prix: "2,99€", note: "★★★★★" },
+                  { vpn: <strong>Surfshark</strong>, ideal: "Famille, prix", serveurs: "3200+", prix: "2,29€", note: "★★★★½" },
+                  { vpn: <strong>ExpressVPN</strong>, ideal: "Chine, fiabilité", serveurs: "3000+", prix: "6,67$", note: "★★★★½" },
+                  { vpn: <strong>ProtonVPN</strong>, ideal: "Confidentialité, gratuit", serveurs: "2900+", prix: "4,99€", note: "★★★★" },
+                  { vpn: <strong>CyberGhost</strong>, ideal: "Débutants, streaming", serveurs: "9700+", prix: "2,19€", note: "★★★½" },
+                ]}
+              />
             </div>
+
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">1. NordVPN — Le leader incontesté</h2>
             <p className="mb-4">Panaméen depuis 2012, NordVPN est le VPN le plus utilisé au monde avec 15M+ d'utilisateurs. Son protocole propriétaire NordLynx (basé sur WireGuard) en fait l'un des plus rapides du marché.</p>
