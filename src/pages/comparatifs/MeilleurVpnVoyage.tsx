@@ -6,6 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { AffiliateDisclaimer } from "@/components/affiliate";
+import SummaryTable from "@/components/SummaryTable";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Lock, Check, X, Star, ShieldAlert } from "lucide-react";
 
