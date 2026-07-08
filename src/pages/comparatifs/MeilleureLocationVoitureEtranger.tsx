@@ -77,56 +77,28 @@ const MeilleureLocationVoitureEtranger = () => {
             </section>
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Le top 5 des plateformes de location</h2>
-            <div className="overflow-x-auto my-8">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-ocean text-white">
-                    <th className="p-3 text-left">Plateforme</th>
-                    <th className="p-3">Idéal pour</th>
-                    <th className="p-3">Annulation</th>
-                    <th className="p-3">Couverture</th>
-                    <th className="p-3">Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b bg-green-50">
-                    <td className="p-3 font-bold">DiscoverCars</td>
-                    <td className="p-3">International, prix bas</td>
-                    <td className="p-3">Gratuite 48h</td>
-                    <td className="p-3">145 pays</td>
-                    <td className="p-3">★★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Rentalcars</td>
-                    <td className="p-3">Polyvalent, fidélité</td>
-                    <td className="p-3">Gratuite 48h</td>
-                    <td className="p-3">60 000 agences</td>
-                    <td className="p-3">★★★★½</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Sunny Cars</td>
-                    <td className="p-3">Europe, tout inclus</td>
-                    <td className="p-3">Gratuite 24h</td>
-                    <td className="p-3">130 pays</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Sixt</td>
-                    <td className="p-3">Premium, business</td>
-                    <td className="p-3">Selon tarif</td>
-                    <td className="p-3">110 pays</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-bold">Hertz / Enterprise</td>
-                    <td className="p-3">USA, Canada direct</td>
-                    <td className="p-3">Selon tarif</td>
-                    <td className="p-3">160+ pays</td>
-                    <td className="p-3">★★★½</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="my-8">
+              <SummaryTable
+                caption="Comparatif des 5 meilleures plateformes de location de voiture à l'étranger en 2026 : usage idéal, politique d'annulation, couverture géographique et note globale."
+                ariaLabel="Comparatif des meilleures plateformes de location de voiture à l'étranger 2026"
+                columns={[
+                  { key: "plateforme", header: "Plateforme" },
+                  { key: "ideal", header: "Idéal pour" },
+                  { key: "annulation", header: "Annulation", align: "center" },
+                  { key: "couverture", header: "Couverture", align: "center" },
+                  { key: "note", header: "Note", align: "center" },
+                ]}
+                rows={[
+                  { plateforme: <strong>DiscoverCars</strong>, ideal: "International, prix bas", annulation: "Gratuite 48h", couverture: "145 pays", note: "★★★★★" },
+                  { plateforme: <strong>Rentalcars</strong>, ideal: "Polyvalent, fidélité", annulation: "Gratuite 48h", couverture: "60 000 agences", note: "★★★★½" },
+                  { plateforme: <strong>Sunny Cars</strong>, ideal: "Europe, tout inclus", annulation: "Gratuite 24h", couverture: "130 pays", note: "★★★★" },
+                  { plateforme: <strong>Sixt</strong>, ideal: "Premium, business", annulation: "Selon tarif", couverture: "110 pays", note: "★★★★" },
+                  { plateforme: <strong>Hertz / Enterprise</strong>, ideal: "USA, Canada direct", annulation: "Selon tarif", couverture: "160+ pays", note: "★★★½" },
+                ]}
+              />
             </div>
+
+
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">1. DiscoverCars — Le comparateur leader</h2>
             <p className="mb-4">Plateforme lettone fondée en 2013, devenue le n°1 de la comparaison internationale. 500+ loueurs comparés, 8 millions de clients/an, note Trustpilot 4,5/5. Notre choix prioritaire pour 90% des destinations.</p>
