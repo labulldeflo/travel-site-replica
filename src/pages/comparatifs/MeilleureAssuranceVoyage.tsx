@@ -6,6 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { AffiliateDisclaimer } from "@/components/affiliate";
+import SummaryTable from "@/components/SummaryTable";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Shield, Check, X, Star, AlertTriangle } from "lucide-react";
 
@@ -72,56 +73,57 @@ const MeilleureAssuranceVoyage = () => {
             </section>
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Notre verdict 2026 : le top 5</h2>
-            <div className="overflow-x-auto my-8">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-ocean text-white">
-                    <th className="p-3 text-left">Assurance</th>
-                    <th className="p-3">Idéal pour</th>
-                    <th className="p-3">Frais médicaux</th>
-                    <th className="p-3">Prix /mois</th>
-                    <th className="p-3">Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b bg-green-50">
-                    <td className="p-3 font-bold">Chapka Cap Aventure</td>
-                    <td className="p-3">Tour du monde, longs séjours</td>
-                    <td className="p-3">Illimités</td>
-                    <td className="p-3">~50€</td>
-                    <td className="p-3">★★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">ACS Globe Traveller</td>
-                    <td className="p-3">Europe / petit budget</td>
-                    <td className="p-3">150 000€</td>
-                    <td className="p-3">~25€</td>
-                    <td className="p-3">★★★★½</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">SafetyWing</td>
-                    <td className="p-3">Digital nomads, flexibilité</td>
-                    <td className="p-3">250 000$</td>
-                    <td className="p-3">~42€ (4 sem.)</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Heymondo</td>
-                    <td className="p-3">Voyages courts, app mobile</td>
-                    <td className="p-3">5 000 000€</td>
-                    <td className="p-3">~35€</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-bold">Allianz Travel</td>
-                    <td className="p-3">Familles, annulation</td>
-                    <td className="p-3">75 000€</td>
-                    <td className="p-3">~40€</td>
-                    <td className="p-3">★★★½</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="my-8">
+              <SummaryTable
+                caption="Comparatif des 5 meilleures assurances voyage en 2026 : profil idéal, plafond frais médicaux, prix mensuel et note globale."
+                ariaLabel="Comparatif des meilleures assurances voyage 2026"
+                columns={[
+                  { key: "assurance", header: "Assurance" },
+                  { key: "ideal", header: "Idéal pour" },
+                  { key: "frais", header: "Frais médicaux", align: "center" },
+                  { key: "prix", header: "Prix /mois", align: "center" },
+                  { key: "note", header: "Note", align: "center" },
+                ]}
+                rows={[
+                  {
+                    assurance: <strong>Chapka Cap Aventure</strong>,
+                    ideal: "Tour du monde, longs séjours",
+                    frais: "Illimités",
+                    prix: "~50€",
+                    note: "★★★★★",
+                  },
+                  {
+                    assurance: <strong>ACS Globe Traveller</strong>,
+                    ideal: "Europe / petit budget",
+                    frais: "150 000€",
+                    prix: "~25€",
+                    note: "★★★★½",
+                  },
+                  {
+                    assurance: <strong>SafetyWing</strong>,
+                    ideal: "Digital nomads, flexibilité",
+                    frais: "250 000$",
+                    prix: "~42€ (4 sem.)",
+                    note: "★★★★",
+                  },
+                  {
+                    assurance: <strong>Heymondo</strong>,
+                    ideal: "Voyages courts, app mobile",
+                    frais: "5 000 000€",
+                    prix: "~35€",
+                    note: "★★★★",
+                  },
+                  {
+                    assurance: <strong>Allianz Travel</strong>,
+                    ideal: "Familles, annulation",
+                    frais: "75 000€",
+                    prix: "~40€",
+                    note: "★★★½",
+                  },
+                ]}
+              />
             </div>
+
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">1. Chapka Cap Aventure — Le leader français</h2>
             <p className="mb-4">Filiale du courtier français spécialiste depuis 2002, Chapka est la référence pour les voyages longs et les destinations à risque. Plus de 100 000 assurés par an, notation Trustpilot 4,5/5.</p>

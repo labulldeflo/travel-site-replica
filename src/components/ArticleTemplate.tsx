@@ -79,6 +79,10 @@ interface ArticleTemplateProps {
   readingTime?: string;
   introduction?: string;
   introText?: string;
+  /** Description meta personnalisée (sinon générée depuis le subtitle). */
+  metaDescription?: string;
+  /** Encadré "À retenir" en haut d'article. Généré automatiquement si absent. */
+  keyTakeaways?: string[];
   contentSections: ContentSection[];
   gastronomyTitle?: string;
   gastronomyIntro?: string;
@@ -93,6 +97,12 @@ interface ArticleTemplateProps {
   relatedArticles?: Array<{ title: string; url: string }>;
   destinationLink?: string;
   ctaTitle?: string;
+  /** FAQ personnalisées (sinon FAQ génériques). */
+  faqs?: Array<{ question: string; answer: string }>;
+  /** Liens internes contextuels (maillage SEO). */
+  internalLinks?: Array<{ label: string; url: string }>;
+  /** Accepte les props supplémentaires historiques sans erreur TS. */
+  [key: string]: unknown;
 }
 
 const ArticleMetaItem: React.FC<MetaItemProps> = ({
@@ -126,6 +136,8 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   readingTime = "7 min",
   introduction,
   introText,
+  metaDescription,
+  keyTakeaways,
   contentSections,
   gastronomyTitle = "Spécialités Locales",
   gastronomyIntro = "Ne manquez pas ces délices culinaires lors de votre visite.",
@@ -140,39 +152,32 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
   relatedArticles,
   destinationLink,
   ctaTitle,
+  faqs,
+  internalLinks,
 }) => {
   const finalIntro = introduction || introText;
   const finalConclusion = conclusion || conclusionText;
 
+  // Description meta prioritaire, sinon fallback sur le subtitle tronqué à 155 caractères (limite SERP Google).
   const seoDescription =
-    subtitle.length > 155 ? `${subtitle.slice(0, 152)}...` : subtitle;
+    metaDescription ||
+    (subtitle.length > 155 ? `${subtitle.slice(0, 152)}...` : subtitle);
 
   const seoImageAlt = heroImageAlt || `${title} - guide voyage ${category}`;
 
-  const tableOfContents = [
-    ...contentSections.map((section) => ({
-      title: section.title,
-      id: slugify(section.title),
-    })),
-    { title: gastronomyTitle, id: "gastronomie" },
-    { title: "Conseils pratiques", id: "conseils-pratiques" },
-  ];
+  // Génération automatique de l'encadré "À retenir" si non fourni : combine subtitle et mots-clés principaux.
+  const finalTakeaways: string[] =
+    keyTakeaways && keyTakeaways.length > 0
+      ? keyTakeaways
+      : [
+          subtitle,
+          `Destination : ${affiliateCity}${category ? ` (${category})` : ""}`,
+          `Points clés : ${keywords.slice(0, 3).join(", ")}`,
+          `Temps de lecture estimé : ${readingTime}`,
+        ].filter(Boolean);
 
-  return (
-    <>
-      <SEO
-  title={title}
-  description={seoDescription}
-  image={heroImage}
-  url={destinationLink}
-  type="article"
-  author={author}
-  breadcrumbs={[
-    { name: "Accueil", url: "/" },
-    { name: category, url: destinationLink || "/" },
-    { name: title, url: destinationLink || "/" },
-  ]}
-  faqs={[
+  // FAQ par défaut si non fournie explicitement par la page.
+  const defaultFaqs = [
     {
       question: `Quand préparer son voyage à ${affiliateCity} ?`,
       answer:
@@ -188,7 +193,34 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
       answer:
         "Oui, surtout hors de France. Elle permet d’avoir Internet rapidement sans dépendre uniquement du Wi-Fi public.",
     },
+  ];
+  const finalFaqs = faqs && faqs.length > 0 ? faqs : defaultFaqs;
+
+  const tableOfContents = [
+    ...contentSections.map((section) => ({
+      title: section.title,
+      id: slugify(section.title),
+    })),
+    { title: gastronomyTitle, id: "gastronomie" },
+    { title: "Conseils pratiques", id: "conseils-pratiques" },
+  ];
+
+
+  return (
+    <>
+      <SEO
+  title={title}
+  description={seoDescription}
+  image={heroImage}
+  url={destinationLink}
+  type="article"
+  author={author}
+  breadcrumbs={[
+    { name: "Accueil", url: "/" },
+    { name: category, url: destinationLink || "/" },
+    { name: title, url: destinationLink || "/" },
   ]}
+  faqs={finalFaqs}
       />
 
       <div className="min-h-screen flex flex-col">
@@ -263,6 +295,31 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                     }}
                   />
                 )}
+
+                {/* Encadré "À retenir" : synthèse rapide en haut d'article (SEO + Google AI Overviews). */}
+                {finalTakeaways.length > 0 && (
+                  <aside
+                    className="not-prose mt-8 p-6 rounded-xl border-l-4 border-ocean bg-ocean/5"
+                    aria-labelledby="a-retenir-title"
+                  >
+                    <h2
+                      id="a-retenir-title"
+                      className="text-xl font-elegant font-bold text-cyan-700 mb-3 flex items-center gap-2"
+                    >
+                      <ListChecks className="h-5 w-5 text-ocean" aria-hidden="true" />
+                      À retenir
+                    </h2>
+                    <ul className="space-y-2 text-gray-800">
+                      {finalTakeaways.map((point, i) => (
+                        <li key={i} className="flex gap-2">
+                          <span className="text-ocean font-bold" aria-hidden="true">•</span>
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </aside>
+                )}
+
 
                 <section className="not-prose mt-8 p-6 rounded-xl border bg-sand/30">
                   <h2 className="text-2xl font-elegant font-bold text-cyan-700 mb-4 flex items-center gap-2">

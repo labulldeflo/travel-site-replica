@@ -6,6 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { AffiliateDisclaimer } from "@/components/affiliate";
+import SummaryTable from "@/components/SummaryTable";
 import { Link } from "react-router-dom";
 import { ArrowLeft, CreditCard, Check, X, Star, Banknote } from "lucide-react";
 
@@ -67,56 +68,27 @@ const MeilleureCarteBancaireVoyage = () => {
             </section>
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Le top 5 des cartes voyage</h2>
-            <div className="overflow-x-auto my-8">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-ocean text-white">
-                    <th className="p-3 text-left">Carte</th>
-                    <th className="p-3">Frais paiement</th>
-                    <th className="p-3">Retrait gratuit</th>
-                    <th className="p-3">Prix /mois</th>
-                    <th className="p-3">Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b bg-green-50">
-                    <td className="p-3 font-bold">Wise</td>
-                    <td className="p-3">0% (taux réel)</td>
-                    <td className="p-3">200€/mois</td>
-                    <td className="p-3">Gratuit</td>
-                    <td className="p-3">★★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Revolut Standard</td>
-                    <td className="p-3">0% (lun-ven)</td>
-                    <td className="p-3">200€/mois</td>
-                    <td className="p-3">Gratuit</td>
-                    <td className="p-3">★★★★½</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">N26 You</td>
-                    <td className="p-3">0%</td>
-                    <td className="p-3">Illimité</td>
-                    <td className="p-3">9,90€</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Bunq Pro</td>
-                    <td className="p-3">0%</td>
-                    <td className="p-3">6 retraits/mois</td>
-                    <td className="p-3">3,99€</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-bold">Boursorama Ultim</td>
-                    <td className="p-3">0% (zone €)</td>
-                    <td className="p-3">1/mois hors UE</td>
-                    <td className="p-3">Gratuit</td>
-                    <td className="p-3">★★★½</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="my-8">
+              <SummaryTable
+                caption="Comparatif des 5 meilleures cartes bancaires pour voyager en 2026 : frais de paiement à l'étranger, plafond de retrait gratuit, prix mensuel et note globale."
+                ariaLabel="Comparatif des meilleures cartes bancaires voyage 2026"
+                columns={[
+                  { key: "carte", header: "Carte" },
+                  { key: "frais", header: "Frais paiement", align: "center" },
+                  { key: "retrait", header: "Retrait gratuit", align: "center" },
+                  { key: "prix", header: "Prix /mois", align: "center" },
+                  { key: "note", header: "Note", align: "center" },
+                ]}
+                rows={[
+                  { carte: <strong>Wise</strong>, frais: "0% (taux réel)", retrait: "200€/mois", prix: "Gratuit", note: "★★★★★" },
+                  { carte: <strong>Revolut Standard</strong>, frais: "0% (lun-ven)", retrait: "200€/mois", prix: "Gratuit", note: "★★★★½" },
+                  { carte: <strong>N26 You</strong>, frais: "0%", retrait: "Illimité", prix: "9,90€", note: "★★★★" },
+                  { carte: <strong>Bunq Pro</strong>, frais: "0%", retrait: "6 retraits/mois", prix: "3,99€", note: "★★★★" },
+                  { carte: <strong>Boursorama Ultim</strong>, frais: "0% (zone €)", retrait: "1/mois hors UE", prix: "Gratuit", note: "★★★½" },
+                ]}
+              />
             </div>
+
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">1. Wise — Le roi du taux de change</h2>
             <p className="mb-4">Fintech britannique fondée en 2011, Wise (ex-TransferWise) reste imbattable sur les taux de change. 16 millions d'utilisateurs, taux interbancaire pur sans marge cachée.</p>

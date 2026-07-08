@@ -6,6 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import ArticleBreadcrumb from "@/components/ArticleBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { AffiliateDisclaimer } from "@/components/affiliate";
+import SummaryTable from "@/components/SummaryTable";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Wifi, Check, X, Star, Globe } from "lucide-react";
 
@@ -67,56 +68,27 @@ const MeilleureEsimInternationale = () => {
             </section>
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Le top 5 des eSIM internationales</h2>
-            <div className="overflow-x-auto my-8">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-ocean text-white">
-                    <th className="p-3 text-left">eSIM</th>
-                    <th className="p-3">Idéal pour</th>
-                    <th className="p-3">Data</th>
-                    <th className="p-3">Prix 15j</th>
-                    <th className="p-3">Note</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b bg-green-50">
-                    <td className="p-3 font-bold">Holafly</td>
-                    <td className="p-3">Voyage 1 pays, simplicité</td>
-                    <td className="p-3">Illimitée</td>
-                    <td className="p-3">29€</td>
-                    <td className="p-3">★★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Airalo</td>
-                    <td className="p-3">Multi-pays, budget</td>
-                    <td className="p-3">1-20 GB</td>
-                    <td className="p-3">8-25$</td>
-                    <td className="p-3">★★★★½</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Saily</td>
-                    <td className="p-3">Sécurité (NordVPN)</td>
-                    <td className="p-3">3-20 GB</td>
-                    <td className="p-3">12-30$</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr className="border-b">
-                    <td className="p-3 font-bold">Nomad eSIM</td>
-                    <td className="p-3">Hotspot, premium</td>
-                    <td className="p-3">5 GB - illim.</td>
-                    <td className="p-3">19-45€</td>
-                    <td className="p-3">★★★★</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3 font-bold">Ubigi</td>
-                    <td className="p-3">Voyage business</td>
-                    <td className="p-3">3-50 GB</td>
-                    <td className="p-3">22-60€</td>
-                    <td className="p-3">★★★½</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="my-8">
+              <SummaryTable
+                caption="Comparatif des 5 meilleures eSIM internationales en 2026 : usage idéal, volume de data, prix pour 15 jours et note globale."
+                ariaLabel="Comparatif des meilleures eSIM internationales 2026"
+                columns={[
+                  { key: "esim", header: "eSIM" },
+                  { key: "ideal", header: "Idéal pour" },
+                  { key: "data", header: "Data", align: "center" },
+                  { key: "prix", header: "Prix 15j", align: "center" },
+                  { key: "note", header: "Note", align: "center" },
+                ]}
+                rows={[
+                  { esim: <strong>Holafly</strong>, ideal: "Voyage 1 pays, simplicité", data: "Illimitée", prix: "29€", note: "★★★★★" },
+                  { esim: <strong>Airalo</strong>, ideal: "Multi-pays, budget", data: "1-20 GB", prix: "8-25$", note: "★★★★½" },
+                  { esim: <strong>Saily</strong>, ideal: "Sécurité (NordVPN)", data: "3-20 GB", prix: "12-30$", note: "★★★★" },
+                  { esim: <strong>Nomad eSIM</strong>, ideal: "Hotspot, premium", data: "5 GB - illim.", prix: "19-45€", note: "★★★★" },
+                  { esim: <strong>Ubigi</strong>, ideal: "Voyage business", data: "3-50 GB", prix: "22-60€", note: "★★★½" },
+                ]}
+              />
             </div>
+
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">1. Holafly — Le leader simplicité + data illimitée</h2>
             <p className="mb-4">Lancé en Espagne en 2018, Holafly s'est imposé grâce à son offre data illimitée et son service client 24/7 en français. Plus de 4 millions de clients, note Trustpilot 4,7/5.</p>
