@@ -56,7 +56,7 @@ serve(async (req) => {
     // Sanitize firstName
     const safeName = (firstName || '').replace(/[<>"'&]/g, '').slice(0, 100);
 
-    console.log('Processing newsletter signup for:', email);
+    console.log('Processing newsletter signup');
 
     // 1. Add subscriber to Systeme.io
     const systemeResponse = await fetch('https://api.systeme.io/api/contacts', {
