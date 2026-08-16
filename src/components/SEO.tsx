@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+
 const SITE_NAME = "Cap sur le Monde";
 const SITE_URL = "https://cap-sur-le-monde.com";
 
@@ -40,14 +41,26 @@ const SEO: React.FC<SEOProps> = ({
   description,
   image,
   url,
-  type = "website",
-  author = SITE_NAME,
+  type,
+  ogType,
+  author,
   datePublished,
   dateModified,
+  articleMeta,
   breadcrumbs,
   faqs,
+  noindex = false,
   children,
 }) => {
+  // Compatibilité avec les anciennes pages du site : plusieurs utilisent encore
+  // ogType="article" et articleMeta au lieu des props modernes.
+  const effectiveType: "website" | "article" =
+    type === "article" || ogType === "article" ? "article" : "website";
+  const effectiveAuthor = articleMeta?.author || author || SITE_NAME;
+  const effectiveDatePublished = articleMeta?.datePublished || datePublished;
+  const effectiveDateModified =
+    articleMeta?.dateModified || dateModified || effectiveDatePublished;
+
   const pageUrl = url?.startsWith("http")
     ? url
     : `${SITE_URL}${url || "/"}`;
@@ -73,7 +86,7 @@ const SEO: React.FC<SEOProps> = ({
   };
 
   const articleSchema =
-    type === "article"
+    effectiveType === "article"
       ? {
           "@context": "https://schema.org",
           "@type": "Article",
@@ -82,14 +95,14 @@ const SEO: React.FC<SEOProps> = ({
           image: imageUrl ? [imageUrl] : undefined,
           author: {
             "@type": "Organization",
-            name: author,
+            name: effectiveAuthor,
           },
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,
           },
-          datePublished,
-          dateModified: dateModified || datePublished,
+          datePublished: effectiveDatePublished,
+          dateModified: effectiveDateModified,
           mainEntityOfPage: {
             "@type": "WebPage",
             "@id": pageUrl,
@@ -142,15 +155,22 @@ const SEO: React.FC<SEOProps> = ({
       <title>{title}</title>
 
       <meta name="description" content={description} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
       <link rel="canonical" href={pageUrl} />
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:type" content={type === "article" ? "article" : "website"} />
+      <meta property="og:type" content={effectiveType} />
       {imageUrl && <meta property="og:image" content={imageUrl} />}
+
+      {effectiveType === "article" && effectiveDatePublished && (
+        <meta property="article:published_time" content={effectiveDatePublished} />
+      )}
+      {effectiveType === "article" && effectiveDateModified && (
+        <meta property="article:modified_time" content={effectiveDateModified} />
+      )}
 
       <meta
         name="twitter:card"
@@ -160,9 +180,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:description" content={description} />
       {imageUrl && <meta name="twitter:image" content={imageUrl} />}
 
-      <script type="application/ld+json">
-        {JSON.stringify(schemas)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(schemas)}</script>
 
       {children}
     </Helmet>
