@@ -1,8 +1,8 @@
-// Affiliate click tracking utility — sends events to GA4
+// Partner / affiliate click tracking utility — sends events to GA4
 // Consistent naming convention for all events
 
 export type AffiliateClickEvent = {
-  ctaType: 'hotel' | 'assurance' | 'esim' | 'activites' | 'equipement' | 'vol' | 'comparison' | 'email';
+  ctaType: 'hotel' | 'assurance' | 'esim' | 'activites' | 'equipement' | 'vol' | 'location' | 'comparison' | 'email';
   provider: string;
   destination?: string;
   page: string;
@@ -23,8 +23,8 @@ const gtagEvent = (eventName: string, params: Record<string, string | number>) =
 };
 
 /**
- * Track affiliate CTA clicks — fires GA4 `affiliate_click`
- * Dimensions: cta_type, provider, destination, page_path, position
+ * Track an active affiliate CTA click — fires GA4 `affiliate_click`.
+ * Use this only when the corresponding affiliate program is actually active.
  */
 export const trackAffiliateClick = (event: AffiliateClickEvent) => {
   gtagEvent('affiliate_click', {
@@ -62,7 +62,7 @@ export const trackCTAView = (ctaType: string, page: string) => {
 };
 
 /**
- * Track outbound link click — fires GA4 `outbound_click`
+ * Track a non-affiliate outbound link click — fires GA4 `outbound_click`
  */
 export const trackOutboundClick = (url: string, page: string) => {
   gtagEvent('outbound_click', {
