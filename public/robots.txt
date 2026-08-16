@@ -14,3 +14,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.cap-sur-le-monde.com/sitemap.xml
+Sitemap: https://www.cap-sur-le-monde.com/sitemap-priority.xml
