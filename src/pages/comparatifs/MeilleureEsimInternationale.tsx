@@ -8,31 +8,68 @@ import RelatedArticles from "@/components/RelatedArticles";
 import { AffiliateDisclaimer } from "@/components/affiliate";
 import SummaryTable from "@/components/SummaryTable";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Wifi, Check, X, Star, Globe } from "lucide-react";
+import { ArrowLeft, Wifi, Check, X, Star, Globe, Info } from "lucide-react";
 
 const MeilleureEsimInternationale = () => {
   const faqs = [
-    { question: "Qu'est-ce qu'une eSIM et comment ça marche ?", answer: "Une eSIM (embedded SIM) est une carte SIM virtuelle intégrée à votre smartphone. Pas de carte physique à insérer : vous scannez un QR code et un forfait data est activé en 5 minutes. Compatible iPhone XS+, Samsung S20+, Google Pixel 4+. Idéale pour le voyage : pas de risque de perte, conservation de votre numéro français." },
-    { question: "Quelle est la meilleure eSIM internationale en 2026 ?", answer: "Holafly reste leader pour la simplicité et la data illimitée (29€ pour 15 jours dans 170+ pays). Airalo est le plus économique pour les courts séjours (4,50$ pour 1GB). Saily (par NordVPN) offre le meilleur rapport vitesse/prix depuis 2025. Nomad eSIM est l'alternative premium avec hotspot illimité." },
-    { question: "Holafly vs Airalo : lequel choisir ?", answer: "Holafly = data illimitée + simplicité (mais 1 seul pays/zone). Airalo = forfaits par GB moins chers + plus de flexibilité multi-pays. Pour un voyage 2 semaines dans 1 pays : Holafly. Pour un tour d'Asie 3 mois : Airalo Discover Global (10GB / 180 jours / 130 pays)." },
-    { question: "Mon iPhone est-il compatible eSIM ?", answer: "Tous les iPhones depuis le XS (2018) sont compatibles. Les iPhone 14 vendus aux USA n'ont QUE l'eSIM. Pour vérifier : Réglages > Données cellulaires > Ajouter une eSIM. Sur Android : Samsung Galaxy S20+, Google Pixel 4+, Oppo Find X3+, Xiaomi 12T+." },
-    { question: "Combien coûte une eSIM voyage en 2026 ?", answer: "Asie 15 jours : 19-29€ (illimité Holafly) ou 8$ (5GB Airalo). Europe 7 jours : 9-19€. USA 1 mois : 30-47€. Tour du monde 3 mois : 70-100€ avec eSIM globale. Comparé au roaming Orange/SFR (5-15€/jour), l'économie est de 70-95%." },
-    { question: "L'eSIM fonctionne-t-elle vraiment partout ?", answer: "Oui dans 190+ pays selon le fournisseur. Quelques exceptions : Cuba, Corée du Nord, certaines régions de Chine (Holafly utilise un réseau hors GFW pour contourner la censure). Toujours vérifier la couverture spécifique avant achat. La vitesse 4G/5G dépend du partenaire local." },
-    { question: "Peut-on garder son numéro français avec une eSIM ?", answer: "Oui, c'est l'avantage majeur. Votre carte SIM physique reste active pour appels/SMS français (banques, double authentification). L'eSIM gère uniquement la data internet. Sur iPhone : Réglages > Données cellulaires > Activer la double SIM. Configurez l'eSIM en data par défaut." },
-    { question: "L'eSIM permet-elle d'appeler et d'envoyer des SMS ?", answer: "Cela dépend du forfait. La plupart des eSIM voyage proposent UNIQUEMENT de la data. Pour appeler, utilisez WhatsApp, FaceTime, ou Skype via la data. Holafly propose un numéro local sur certains pays (USA, Espagne). Airalo Discover Global inclut un numéro virtuel en option." },
-    { question: "Comment installer une eSIM en 5 minutes ?", answer: "1) Achetez votre eSIM en ligne (Holafly, Airalo). 2) Recevez un QR code par email. 3) Réglages > Données cellulaires > Ajouter une eSIM > Scanner le QR code. 4) Activez le forfait à votre arrivée (option : activer à date). 5) Désactivez le roaming sur votre SIM française. Connexion automatique au réseau local." },
-    { question: "Et si l'eSIM ne fonctionne pas à l'arrivée ?", answer: "1) Vérifiez l'activation manuelle dans l'app du fournisseur. 2) Activez puis désactivez le mode avion. 3) Sélectionnez manuellement le réseau (Réglages > Opérateur). 4) Contactez le support 24/7 (chat Holafly, ticket Airalo). 99% des problèmes se règlent en 5 minutes. Garantie satisfait ou remboursé sous 30 jours chez les leaders." },
+    {
+      question: "Quelle est la meilleure eSIM internationale en 2026 ?",
+      answer:
+        "Il n'existe pas une eSIM meilleure pour tous les voyages. Holafly convient surtout aux voyageurs qui privilégient les offres de données illimitées. Airalo propose des forfaits locaux, régionaux et mondiaux, avec des options standard ou illimitées selon les destinations. Saily mise sur une installation simple dans l'application et une couverture de plus de 200 destinations. Nomad et Ubigi sont aussi à comparer lorsque le partage de connexion est important.",
+    },
+    {
+      question: "Holafly ou Airalo : lequel choisir ?",
+      answer:
+        "Holafly est particulièrement intéressant si vous voulez éviter de surveiller votre consommation de données et qu'un forfait illimité est disponible pour votre destination. Airalo offre davantage de formats de forfaits, notamment locaux, régionaux et mondiaux, et propose désormais également des options illimitées. Comparez toujours le pays couvert, la durée, le volume de données et les règles de hotspot avant l'achat.",
+    },
+    {
+      question: "Une eSIM voyage permet-elle de garder son numéro français ?",
+      answer:
+        "Oui, si votre téléphone gère plusieurs lignes simultanément. Vous pouvez généralement conserver votre SIM française pour les appels ou SMS et utiliser l'eSIM voyage pour les données mobiles. Pensez à désactiver l'itinérance des données sur votre ligne française pour éviter les frais inattendus.",
+    },
+    {
+      question: "Les eSIM voyage incluent-elles les appels et SMS ?",
+      answer:
+        "Pas toujours. Beaucoup d'offres sont uniquement data. Airalo affiche aussi des forfaits comprenant données, appels et SMS sur certaines offres. Les caractéristiques varient selon le fournisseur et la destination : vérifiez le détail du forfait avant de payer.",
+    },
+    {
+      question: "Peut-on partager la connexion d'une eSIM avec un ordinateur ?",
+      answer:
+        "Souvent oui, mais les règles dépendent du fournisseur, du forfait, du téléphone et du réseau local. Ubigi indique autoriser le hotspot sur ses forfaits et Nomad indique que le tethering fonctionne avec la plupart de ses eSIM. Chez les autres fournisseurs, vérifiez la fiche du forfait avant l'achat.",
+    },
+    {
+      question: "Combien de data prévoir pour un voyage ?",
+      answer:
+        "Pour de la messagerie, des cartes, des recherches et un peu de réseaux sociaux, quelques gigaoctets peuvent suffire sur une semaine. Le streaming vidéo, les appels vidéo et le partage de connexion consomment beaucoup plus. Si vous ne voulez pas surveiller votre consommation, comparez les offres illimitées disponibles pour votre destination.",
+    },
+    {
+      question: "Quand installer et activer son eSIM ?",
+      answer:
+        "L'idéal est d'acheter et d'installer l'eSIM avant le départ, lorsque vous disposez encore d'une connexion Wi-Fi fiable. L'activation du forfait dépend ensuite des règles du fournisseur : certains forfaits démarrent à la connexion au réseau de destination, d'autres à l'installation ou à une étape d'activation. Lisez les instructions du forfait avant de voyager.",
+    },
+    {
+      question: "Comment vérifier si mon téléphone est compatible eSIM ?",
+      answer:
+        "La compatibilité dépend du modèle, du pays d'achat et parfois de l'opérateur. Vérifiez la fiche technique du fabricant et recherchez dans les réglages une option permettant d'ajouter une eSIM ou un forfait mobile. Le téléphone doit également être désimlocké pour utiliser une eSIM d'un autre fournisseur.",
+    },
+    {
+      question: "Que faire si l'eSIM ne se connecte pas à l'arrivée ?",
+      answer:
+        "Vérifiez que l'eSIM est activée pour les données mobiles, que l'itinérance des données est autorisée sur cette ligne si le fournisseur l'exige, puis redémarrez le téléphone ou activez brièvement le mode avion. Si le problème persiste, suivez les réglages APN ou de sélection de réseau fournis par l'opérateur et contactez son support.",
+    },
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Meilleure eSIM internationale 2026 : Holafly, Airalo, Saily comparés"
-        description="Comparatif complet des meilleures eSIM voyage 2026. Holafly vs Airalo vs Saily : prix, couverture, vitesse. Guide pour choisir votre eSIM internationale."
+        title="Meilleure eSIM internationale 2026 : comparatif Holafly, Airalo, Saily"
+        description="Comparatif eSIM voyage 2026 : Holafly, Airalo, Saily, Nomad et Ubigi. Couverture, data illimitée, hotspot, appels/SMS et critères pour choisir."
         url="/comparatifs/meilleure-esim-internationale"
-        ogType="article"
-        hideH1
-        articleMeta={{ author: "Cap sur le Monde", datePublished: "2026-06-29" }}
+        type="article"
+        author="Cap sur le Monde"
+        datePublished="2026-06-29"
+        dateModified="2026-08-16"
+        faqs={faqs}
         breadcrumbs={[
           { name: "Accueil", url: "/" },
           { name: "Comparatifs", url: "/comparatifs" },
@@ -40,15 +77,25 @@ const MeilleureEsimInternationale = () => {
         ]}
       />
       <Header />
+
       <main className="flex-grow pt-24">
-        <ArticleBreadcrumb items={[{ label: "Comparatifs", to: "/comparatifs" }, { label: "Meilleure eSIM internationale" }]} />
+        <ArticleBreadcrumb
+          items={[
+            { label: "Comparatifs", to: "/comparatifs" },
+            { label: "Meilleure eSIM internationale" },
+          ]}
+        />
+
         <div className="container mx-auto px-4 py-12">
-          <Link to="/preparer-voyage" className="inline-flex items-center text-ocean hover:underline mb-8">
+          <Link
+            to="/preparer-voyage"
+            className="inline-flex items-center text-ocean hover:underline mb-8"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" /> Retour Préparer son voyage
           </Link>
 
           <article className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <header className="text-center mb-10">
               <div className="w-20 h-20 bg-gradient-ocean rounded-full flex items-center justify-center mx-auto mb-6">
                 <Wifi className="w-10 h-10 text-white" />
               </div>
@@ -56,128 +103,306 @@ const MeilleureEsimInternationale = () => {
                 Meilleure eSIM internationale 2026
               </h1>
               <p className="text-xl text-muted-foreground">
-                Comparatif des 5 leaders pour rester connecté partout sans exploser votre forfait.
+                Holafly, Airalo, Saily, Nomad et Ubigi comparés selon la couverture,
+                les données, le hotspot et la simplicité d'utilisation.
               </p>
-            </div>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Informations vérifiées le 16 août 2026 sur les sites officiels des fournisseurs.
+              </p>
+            </header>
 
             <AffiliateDisclaimer />
 
-            <section className="my-12 p-6 bg-ocean/10 border-l-4 border-ocean rounded">
-              <h2 className="font-bold text-lg mb-2 flex items-center gap-2"><Globe className="w-5 h-5" /> Pourquoi l'eSIM est devenue incontournable</h2>
-              <p>Le roaming Orange/SFR coûte 10-15€/jour hors UE. Une eSIM Holafly = data illimitée 15 jours pour 29€. Économie moyenne sur un voyage Asie 2 semaines : <strong>150 à 200€</strong>. Activation en 5 minutes, pas de carte physique à perdre, votre numéro français reste actif.</p>
+            <section className="my-10 p-6 bg-ocean/10 border-l-4 border-ocean rounded">
+              <h2 className="font-bold text-xl mb-3 flex items-center gap-2">
+                <Globe className="w-5 h-5" /> Quelle eSIM choisir en 2026 ?
+              </h2>
+              <p className="mb-3">
+                <strong>Pour de la data illimitée :</strong> Holafly reste une option à comparer en priorité,
+                mais Airalo propose lui aussi des forfaits illimités sur certaines offres.
+                Pour un voyage multi-pays, comparez surtout les forfaits régionaux et mondiaux d'Airalo,
+                Ubigi et Holafly Plans. Saily est intéressant pour une installation simple dans l'application.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Les prix, réseaux partenaires, limites de partage de connexion et conditions d'activation
+                changent selon le pays et la durée. Vérifiez toujours la fiche du forfait juste avant l'achat.
+              </p>
             </section>
 
-            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Le top 5 des eSIM internationales</h2>
+            <section className="my-10 p-6 border rounded-lg bg-background">
+              <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
+                <Info className="w-5 h-5 text-ocean" /> Notre méthode de comparaison
+              </h2>
+              <p className="mb-3">
+                Nous comparons les informations publiées par les fournisseurs : couverture annoncée,
+                type de forfait, présence d'illimité, hotspot, appels/SMS, assistance et simplicité d'activation.
+                Nous évitons de figer un prix unique, car le tarif dépend généralement de la destination,
+                de la durée et du volume de données.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Ce comparatif ne prétend pas remplacer un test réseau local : la vitesse réelle dépend du téléphone,
+                du réseau partenaire, de la couverture et de la congestion sur place.
+              </p>
+            </section>
+
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">
+              Comparatif des meilleures eSIM internationales
+            </h2>
+
             <div className="my-8">
               <SummaryTable
-                caption="Comparatif des 5 meilleures eSIM internationales en 2026 : usage idéal, volume de data, prix pour 15 jours et note globale."
+                caption="Comparatif 2026 des principales eSIM internationales : usage idéal, type de forfait, couverture annoncée et hotspot."
                 ariaLabel="Comparatif des meilleures eSIM internationales 2026"
                 columns={[
                   { key: "esim", header: "eSIM" },
                   { key: "ideal", header: "Idéal pour" },
-                  { key: "data", header: "Data", align: "center" },
-                  { key: "prix", header: "Prix 15j", align: "center" },
-                  { key: "note", header: "Note", align: "center" },
+                  { key: "offre", header: "Type d'offre", align: "center" },
+                  { key: "couverture", header: "Couverture annoncée", align: "center" },
+                  { key: "hotspot", header: "Hotspot", align: "center" },
                 ]}
                 rows={[
-                  { esim: <strong>Holafly</strong>, ideal: "Voyage 1 pays, simplicité", data: "Illimitée", prix: "29€", note: "★★★★★" },
-                  { esim: <strong>Airalo</strong>, ideal: "Multi-pays, budget", data: "1-20 GB", prix: "8-25$", note: "★★★★½" },
-                  { esim: <strong>Saily</strong>, ideal: "Sécurité (NordVPN)", data: "3-20 GB", prix: "12-30$", note: "★★★★" },
-                  { esim: <strong>Nomad eSIM</strong>, ideal: "Hotspot, premium", data: "5 GB - illim.", prix: "19-45€", note: "★★★★" },
-                  { esim: <strong>Ubigi</strong>, ideal: "Voyage business", data: "3-50 GB", prix: "22-60€", note: "★★★½" },
+                  {
+                    esim: <strong>Holafly</strong>,
+                    ideal: "Data illimitée, longs usages data",
+                    offre: "Illimité + forfaits internationaux",
+                    couverture: "+160 destinations sur Holafly Plans",
+                    hotspot: "Selon forfait",
+                  },
+                  {
+                    esim: <strong>Airalo</strong>,
+                    ideal: "Choix local, régional ou mondial",
+                    offre: "Standard + illimité",
+                    couverture: "170 pays/réseaux sur l'offre globale",
+                    hotspot: "Selon forfait",
+                  },
+                  {
+                    esim: <strong>Saily</strong>,
+                    ideal: "Installation simple et support 24/7",
+                    offre: "Data prépayée",
+                    couverture: "+200 destinations",
+                    hotspot: "À vérifier selon forfait",
+                  },
+                  {
+                    esim: <strong>Nomad</strong>,
+                    ideal: "Voyageurs utilisant un ordinateur",
+                    offre: "Principalement data",
+                    couverture: "Selon forfait",
+                    hotspot: "Oui, généralement",
+                  },
+                  {
+                    esim: <strong>Ubigi</strong>,
+                    ideal: "Multi-pays et partage de connexion",
+                    offre: "1 Go à illimité selon destination",
+                    couverture: "+200 destinations",
+                    hotspot: "Oui",
+                  },
                 ]}
               />
             </div>
 
+            <p className="text-sm text-muted-foreground mb-10">
+              Les chiffres de couverture ci-dessus correspondent aux informations annoncées par les fournisseurs
+              au 16 août 2026 et peuvent évoluer.
+            </p>
 
-            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">1. Holafly — Le leader simplicité + data illimitée</h2>
-            <p className="mb-4">Lancé en Espagne en 2018, Holafly s'est imposé grâce à son offre data illimitée et son service client 24/7 en français. Plus de 4 millions de clients, note Trustpilot 4,7/5.</p>
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">
+              1. Holafly — Pour privilégier la data illimitée
+            </h2>
+            <p className="mb-4">
+              Holafly propose des eSIM voyage par destination et des forfaits internationaux récurrents.
+              Son Unlimited Plan annonce des données illimitées, un partage de connexion disponible et une
+              couverture dans plus de 160 destinations. Les caractéristiques des eSIM par pays peuvent toutefois
+              être différentes : il faut contrôler la fiche exacte de la destination.
+            </p>
             <div className="grid md:grid-cols-2 gap-4 my-6">
               <div className="p-4 border border-green-200 bg-green-50 rounded">
-                <h3 className="font-bold flex items-center gap-2 mb-2"><Check className="w-5 h-5 text-green-600" /> Avantages</h3>
+                <h3 className="font-bold flex items-center gap-2 mb-2">
+                  <Check className="w-5 h-5 text-green-600" /> Avantages
+                </h3>
                 <ul className="space-y-1 text-sm">
-                  <li>• Data ILLIMITÉE sans bridage majeur</li>
-                  <li>• Support 24/7 en français (chat)</li>
-                  <li>• 170+ pays couverts</li>
-                  <li>• Fonctionne en Chine (contourne GFW)</li>
+                  <li>• Offres de données illimitées disponibles</li>
+                  <li>• Forfait mondial récurrent pour les longs voyages</li>
+                  <li>• Assistance annoncée 24h/24 et 7j/7</li>
+                  <li>• Hotspot inclus sur le forfait mondial Unlimited Plan</li>
                 </ul>
               </div>
               <div className="p-4 border border-red-200 bg-red-50 rounded">
-                <h3 className="font-bold flex items-center gap-2 mb-2"><X className="w-5 h-5 text-red-600" /> Inconvénients</h3>
+                <h3 className="font-bold flex items-center gap-2 mb-2">
+                  <X className="w-5 h-5 text-red-600" /> Points à vérifier
+                </h3>
                 <ul className="space-y-1 text-sm">
-                  <li>• Plus cher au GB que la concurrence</li>
-                  <li>• Hotspot limité sur certains forfaits</li>
-                  <li>• 1 seul pays/zone par forfait</li>
+                  <li>• Prix variable selon destination et durée</li>
+                  <li>• Hotspot et appels/SMS différents selon la formule</li>
+                  <li>• Une offre illimitée peut rester soumise aux règles d'usage du réseau partenaire</li>
                 </ul>
               </div>
             </div>
-            <a href="https://esim.holafly.com/" target="_blank" rel="sponsored noopener noreferrer" className="inline-block px-6 py-3 bg-ocean text-white rounded font-bold hover:bg-ocean/90">Voir Holafly →</a>
+            <a
+              href="https://esim.holafly.com/fr/"
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+              className="inline-block px-6 py-3 bg-ocean text-white rounded font-bold hover:bg-ocean/90"
+            >
+              Voir les offres Holafly →
+            </a>
 
-            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">2. Airalo — Le moins cher pour multi-pays</h2>
-            <p className="mb-4">Marketplace eSIM fondé en 2019, Airalo agrège des forfaits de plus de 200 opérateurs locaux. Prix au GB imbattable, parfait pour les voyageurs qui changent souvent de pays.</p>
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">
+              2. Airalo — Le plus flexible sur les formats de forfaits
+            </h2>
+            <p className="mb-4">
+              Airalo propose des eSIM locales, régionales et mondiales. Son offre globale affiche une couverture
+              sur 170 pays et réseaux et le catalogue comprend désormais des forfaits standard et illimités.
+              Certaines offres incluent uniquement la data, tandis que d'autres peuvent aussi proposer appels et SMS.
+            </p>
             <div className="grid md:grid-cols-2 gap-4 my-6">
               <div className="p-4 border border-green-200 bg-green-50 rounded">
-                <h3 className="font-bold flex items-center gap-2 mb-2"><Check className="w-5 h-5 text-green-600" /> Avantages</h3>
+                <h3 className="font-bold flex items-center gap-2 mb-2">
+                  <Check className="w-5 h-5 text-green-600" /> Avantages
+                </h3>
                 <ul className="space-y-1 text-sm">
-                  <li>• Le moins cher au GB</li>
-                  <li>• Forfaits régionaux (Asie, Europe)</li>
-                  <li>• Forfait Discover Global 130 pays</li>
-                  <li>• App intuitive iOS/Android</li>
+                  <li>• Choix local, régional et mondial</li>
+                  <li>• Forfaits standard et illimités disponibles</li>
+                  <li>• Certaines offres combinent data, appels et SMS</li>
+                  <li>• Intéressant pour comparer plusieurs volumes de données</li>
                 </ul>
               </div>
               <div className="p-4 border border-red-200 bg-red-50 rounded">
-                <h3 className="font-bold flex items-center gap-2 mb-2"><X className="w-5 h-5 text-red-600" /> Inconvénients</h3>
+                <h3 className="font-bold flex items-center gap-2 mb-2">
+                  <X className="w-5 h-5 text-red-600" /> Points à vérifier
+                </h3>
                 <ul className="space-y-1 text-sm">
-                  <li>• Data limitée, pas d'illimité</li>
-                  <li>• Support uniquement par ticket</li>
-                  <li>• Vitesse variable selon partenaire</li>
+                  <li>• Les conditions changent fortement d'un forfait à l'autre</li>
+                  <li>• Le réseau partenaire dépend de la destination</li>
+                  <li>• La date de début de validité doit être vérifiée avant installation</li>
                 </ul>
               </div>
             </div>
-            <a href="https://www.airalo.com/" target="_blank" rel="sponsored noopener noreferrer" className="inline-block px-6 py-3 bg-ocean text-white rounded font-bold hover:bg-ocean/90">Voir Airalo →</a>
+            <a
+              href="https://www.airalo.com/fr/"
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+              className="inline-block px-6 py-3 bg-ocean text-white rounded font-bold hover:bg-ocean/90"
+            >
+              Voir les offres Airalo →
+            </a>
 
-            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">3. Saily — La nouvelle référence sécurité</h2>
-            <p className="mb-4">Lancé en 2024 par Nord Security (NordVPN), Saily combine eSIM et protection des données. Idéal pour les digital nomads soucieux de sécurité sur réseaux étrangers.</p>
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">
+              3. Saily — Une installation simple dans l'application
+            </h2>
+            <p className="mb-4">
+              Saily est un service eSIM prépayé créé par Nord Security. Le fournisseur annonce des forfaits data
+              dans plus de 200 destinations, une installation directement depuis l'application et une assistance
+              disponible 24h/24 et 7j/7. Les offres présentées par Saily sont principalement orientées données mobiles.
+            </p>
+            <a
+              href="https://saily.com/fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border border-ocean text-ocean rounded font-bold hover:bg-ocean/5"
+            >
+              Voir Saily →
+            </a>
 
-            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">4. Nomad eSIM — Le premium hotspot</h2>
-            <p className="mb-4">Forfaits haut de gamme avec partage de connexion illimité, parfait pour ceux qui télétravaillent depuis un laptop. Plus cher mais qualité réseau supérieure.</p>
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">
+              4. Nomad — Intéressant pour le partage de connexion
+            </h2>
+            <p className="mb-4">
+              Nomad indique que le tethering fonctionne avec la plupart de ses eSIM, ce qui peut être utile pour
+              connecter un ordinateur ou une tablette. Le fournisseur précise cependant que la stabilité dépend
+              du téléphone et du réseau local. Ses eSIM sont optimisées pour les services data et ne remplacent
+              pas nécessairement une ligne classique pour les appels et SMS.
+            </p>
+            <a
+              href="https://www.getnomad.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border border-ocean text-ocean rounded font-bold hover:bg-ocean/5"
+            >
+              Voir Nomad →
+            </a>
 
-            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">5. Ubigi — Le choix business</h2>
-            <p className="mb-4">Filiale du groupe Transatel, Ubigi excelle pour les voyageurs d'affaires : gros volumes de data, facturation entreprise, support pro.</p>
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">
+              5. Ubigi — Solide pour les voyages multi-pays et le hotspot
+            </h2>
+            <p className="mb-4">
+              Ubigi annonce des forfaits dans plus de 200 destinations, des options locales, régionales et mondiales,
+              ainsi que le partage de connexion sur ses forfaits. La 5G est disponible dans de nombreuses destinations
+              lorsque l'appareil et le réseau partenaire la prennent en charge.
+            </p>
+            <a
+              href="https://cellulardata.ubigi.com/fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 border border-ocean text-ocean rounded font-bold hover:bg-ocean/5"
+            >
+              Voir Ubigi →
+            </a>
 
-            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Comment choisir son eSIM : 5 critères</h2>
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">
+              Comment choisir son eSIM : 6 critères
+            </h2>
             <ol className="space-y-3 list-decimal pl-6 my-6">
-              <li><strong>Couverture pays</strong> : vérifier la liste exacte avant achat</li>
-              <li><strong>Volume data</strong> : 1 GB/jour suffit en usage normal, 2 GB si vidéo</li>
-              <li><strong>Vitesse</strong> : 4G minimum, 5G dispo dans grandes villes</li>
-              <li><strong>Hotspot</strong> : indispensable si voyage avec laptop</li>
-              <li><strong>Support client</strong> : 24/7 en français = Holafly seul</li>
+              <li><strong>Destination exacte :</strong> vérifiez le pays, la région et le réseau partenaire.</li>
+              <li><strong>Volume de data :</strong> forfait fixe ou illimité selon votre usage.</li>
+              <li><strong>Durée de validité :</strong> elle doit couvrir tout le séjour sans démarrer trop tôt.</li>
+              <li><strong>Hotspot :</strong> indispensable si vous partagez la connexion avec un ordinateur.</li>
+              <li><strong>Appels et SMS :</strong> beaucoup d'eSIM voyage sont uniquement data.</li>
+              <li><strong>Activation et support :</strong> lisez la procédure avant de quitter votre connexion Wi-Fi.</li>
             </ol>
 
-            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Recommandations par profil</h2>
+            <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">
+              Notre choix selon votre profil
+            </h2>
             <div className="grid md:grid-cols-2 gap-4 my-6">
               <div className="p-5 bg-blue-50 rounded border border-blue-200">
-                <h3 className="font-bold mb-2 flex items-center gap-2"><Star className="w-5 h-5 text-ocean" /> Voyage 2 semaines Asie</h3>
-                <p className="text-sm"><strong>Holafly</strong> data illimitée 29€</p>
+                <h3 className="font-bold mb-2 flex items-center gap-2">
+                  <Star className="w-5 h-5 text-ocean" /> Vous consommez beaucoup de data
+                </h3>
+                <p className="text-sm">
+                  Comparez d'abord <strong>Holafly</strong> et les offres illimitées <strong>Airalo</strong> disponibles pour votre destination.
+                </p>
               </div>
               <div className="p-5 bg-blue-50 rounded border border-blue-200">
-                <h3 className="font-bold mb-2 flex items-center gap-2"><Star className="w-5 h-5 text-ocean" /> Tour du monde 3 mois</h3>
-                <p className="text-sm"><strong>Airalo Discover Global</strong> ~70$</p>
+                <h3 className="font-bold mb-2 flex items-center gap-2">
+                  <Star className="w-5 h-5 text-ocean" /> Vous changez souvent de pays
+                </h3>
+                <p className="text-sm">
+                  Regardez les forfaits régionaux ou mondiaux d'<strong>Airalo</strong>, <strong>Ubigi</strong> et Holafly Plans.
+                </p>
               </div>
               <div className="p-5 bg-blue-50 rounded border border-blue-200">
-                <h3 className="font-bold mb-2 flex items-center gap-2"><Star className="w-5 h-5 text-ocean" /> Digital nomad</h3>
-                <p className="text-sm"><strong>Nomad eSIM</strong> hotspot illimité</p>
+                <h3 className="font-bold mb-2 flex items-center gap-2">
+                  <Star className="w-5 h-5 text-ocean" /> Vous travaillez depuis un ordinateur
+                </h3>
+                <p className="text-sm">
+                  <strong>Ubigi</strong> autorise le hotspot et <strong>Nomad</strong> le prend généralement en charge.
+                </p>
               </div>
               <div className="p-5 bg-blue-50 rounded border border-blue-200">
-                <h3 className="font-bold mb-2 flex items-center gap-2"><Star className="w-5 h-5 text-ocean" /> Sécurité maximale</h3>
-                <p className="text-sm"><strong>Saily</strong> by NordVPN</p>
+                <h3 className="font-bold mb-2 flex items-center gap-2">
+                  <Star className="w-5 h-5 text-ocean" /> Vous voulez une installation simple
+                </h3>
+                <p className="text-sm">
+                  <strong>Saily</strong> permet l'installation directement depuis son application et propose une assistance 24/7.
+                </p>
               </div>
             </div>
+
+            <section className="my-12 p-6 bg-muted/40 rounded-lg">
+              <h2 className="text-2xl font-bold mb-4">Sources officielles consultées</h2>
+              <ul className="space-y-2 text-sm">
+                <li><a className="text-ocean hover:underline" href="https://esim.holafly.com/fr/esim-plans/" target="_blank" rel="noopener noreferrer">Holafly Plans : couverture, data et hotspot</a></li>
+                <li><a className="text-ocean hover:underline" href="https://www.airalo.com/fr/discover-esim" target="_blank" rel="noopener noreferrer">Airalo Discover : forfaits globaux, standard et illimités</a></li>
+                <li><a className="text-ocean hover:underline" href="https://support.saily.com/hc/fr/articles/27276323644572-Qu-est-ce-que-Saily" target="_blank" rel="noopener noreferrer">Saily : fonctionnement, couverture et assistance</a></li>
+                <li><a className="text-ocean hover:underline" href="https://www.getnomad.app/help-center" target="_blank" rel="noopener noreferrer">Nomad : aide sur le tethering et les eSIM data</a></li>
+                <li><a className="text-ocean hover:underline" href="https://cellulardata.ubigi.com/fr/" target="_blank" rel="noopener noreferrer">Ubigi : couverture, 5G et partage de connexion</a></li>
+              </ul>
+            </section>
 
             <h2 className="text-3xl font-elegant font-bold mt-12 mb-6">Pour aller plus loin</h2>
             <ul className="space-y-2 list-disc pl-6">
               <li><Link className="text-ocean hover:underline" to="/comparatifs/meilleure-esim-japon">eSIM spéciale Japon</Link></li>
-              <li><Link className="text-ocean hover:underline" to="/blog/applications-indispensables-voyage">20 applications voyage indispensables</Link></li>
+              <li><Link className="text-ocean hover:underline" to="/blog/applications-indispensables-voyage">Applications voyage indispensables</Link></li>
               <li><Link className="text-ocean hover:underline" to="/comparatifs/meilleure-assurance-voyage">Meilleure assurance voyage</Link></li>
               <li><Link className="text-ocean hover:underline" to="/comparatifs/meilleure-carte-bancaire-voyage">Meilleure carte bancaire voyage</Link></li>
               <li><Link className="text-ocean hover:underline" to="/comparatifs/meilleur-vpn-voyage">Meilleur VPN voyage</Link></li>
@@ -189,6 +414,7 @@ const MeilleureEsimInternationale = () => {
           </article>
         </div>
       </main>
+
       <Footer />
     </div>
   );
