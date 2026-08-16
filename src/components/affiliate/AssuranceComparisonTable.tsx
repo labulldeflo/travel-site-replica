@@ -1,6 +1,7 @@
 import { ExternalLink, CheckCircle, Shield } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { AFFILIATE_LINKS, AFFILIATE_STATUS, affiliateRel } from '@/lib/affiliateData';
 
 export interface AssuranceItem {
   name: string;
@@ -11,6 +12,8 @@ export interface AssuranceItem {
   pointsForts: string[];
   bestFor?: string;
   ctaLabel?: string;
+  /** Set to true only when `url` is a validated affiliate link. */
+  isAffiliate?: boolean;
 }
 
 interface AssuranceComparisonTableProps {
@@ -23,65 +26,69 @@ interface AssuranceComparisonTableProps {
 const defaultItems: AssuranceItem[] = [
   {
     name: 'Chapka',
-    url: 'https://www.chapkadirecte.com',
-    badge: 'Le plus populaire',
+    url: AFFILIATE_LINKS.chapka,
+    badge: 'Longs voyages',
     highlighted: true,
-    price: 'Dès 32 €/mois',
+    price: 'Selon devis',
     pointsForts: [
-      'Spécialiste français reconnu',
-      'Couverture monde entier sans franchise',
-      'Idéal pour les tours du monde et longs séjours',
+      'Formules adaptées aux voyages internationaux',
+      'Garanties à comparer selon la destination',
+      'Contrats dédiés à plusieurs profils de voyageurs',
     ],
-    bestFor: 'Tours du monde, PVT, longs voyages',
-    ctaLabel: 'Obtenir un devis Chapka',
+    bestFor: 'Voyages internationaux et longs séjours selon la formule',
+    ctaLabel: 'Vérifier Chapka',
+    isAffiliate: AFFILIATE_STATUS.chapka,
   },
   {
-    name: 'ACS Ami',
-    url: 'https://www.acs-ami.com',
-    badge: 'Spécial Europe / France',
+    name: 'ACS',
+    url: AFFILIATE_LINKS.acs,
+    badge: 'Plusieurs formules',
     highlighted: false,
-    price: 'Dès 22 €/mois',
+    price: 'Selon devis',
     pointsForts: [
-      'Tarifs très compétitifs',
-      'Bonne couverture médicale de base',
-      'Adapté aux séjours longue durée',
+      'Plusieurs niveaux de couverture selon le contrat',
+      'Solutions pour séjours internationaux',
+      'Conditions à vérifier selon le profil',
     ],
-    bestFor: 'Petits budgets, expatriés, séjours longue durée',
-    ctaLabel: 'Obtenir un devis ACS',
+    bestFor: 'Séjours internationaux selon la formule choisie',
+    ctaLabel: 'Vérifier ACS',
+    isAffiliate: AFFILIATE_STATUS.acs,
   },
   {
     name: 'World Nomads',
     url: 'https://www.worldnomads.com',
-    badge: 'Aventure',
+    badge: 'Voyages aventure',
     highlighted: false,
-    price: 'Dès 45 €/mois',
+    price: 'Selon devis',
     pointsForts: [
-      'Couverture sports d\'aventure incluse',
-      'Souscription possible en cours de voyage',
-      'Flexibilité maximale sur la durée',
+      'Formules orientées voyage',
+      'Garanties variables selon le pays de résidence',
+      'Conditions à vérifier avant souscription',
     ],
-    bestFor: 'Voyageurs aventuriers, sports extrêmes',
-    ctaLabel: 'Obtenir un devis World Nomads',
+    bestFor: 'Voyageurs recherchant une couverture adaptée à leurs activités',
+    ctaLabel: 'Vérifier World Nomads',
+    isAffiliate: false,
   },
 ];
 
 const AssuranceComparisonTable = ({
-  title = '🛡️ Comparatif Assurances Voyage 2025',
-  subtitle = 'Notre sélection des meilleures assurances testées et approuvées par notre équipe.',
+  title = '🛡️ Comparatif assurances voyage',
+  subtitle = 'Comparez les garanties, exclusions et conditions avant de souscrire.',
   items = defaultItems,
   className = '',
 }: AssuranceComparisonTableProps) => {
+  const hasAffiliateLink = items.some((item) => item.isAffiliate === true);
+
   return (
     <div className={`not-prose my-8 sm:my-10 ${className}`}>
       <h3 className="text-xl sm:text-2xl font-elegant font-bold text-foreground mb-1">{title}</h3>
       {subtitle && <p className="text-sm text-muted-foreground mb-6">{subtitle}</p>}
 
-      {/* Table header — desktop only */}
       <div className="hidden md:grid md:grid-cols-[2fr_3fr_1fr_auto] gap-4 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground border-b border-border mb-2">
         <span>Assureur</span>
         <span>Points forts</span>
-        <span>Prix indicatif</span>
-        <span className="text-right">Lien Devis</span>
+        <span>Tarif</span>
+        <span className="text-right">Lien</span>
       </div>
 
       <div className="space-y-4">
@@ -94,7 +101,6 @@ const AssuranceComparisonTable = ({
                 : 'border-border bg-card hover:shadow-soft'
             }`}
           >
-            {/* Mobile layout */}
             <div className="flex flex-col gap-3 p-4 sm:p-5 md:hidden">
               <div className="flex items-center gap-2">
                 <Shield className={`w-5 h-5 ${item.highlighted ? 'text-ocean' : 'text-muted-foreground'}`} />
@@ -127,14 +133,16 @@ const AssuranceComparisonTable = ({
                 }`}
                 asChild
               >
-                <a href={item.url} target="_blank" rel="sponsored noopener noreferrer" className="flex items-center justify-center gap-1.5">
-                  {item.ctaLabel || 'Demander un devis'}
+                <a href={item.url} target="_blank" rel={affiliateRel(item.isAffiliate)} className="flex items-center justify-center gap-1.5">
+                  {item.ctaLabel || 'Voir le site officiel'}
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </Button>
+              <p className="text-[10px] text-muted-foreground">
+                {item.isAffiliate ? 'Lien affilié' : 'Lien direct · aucune commission actuellement'}
+              </p>
             </div>
 
-            {/* Desktop layout */}
             <div className="hidden md:grid md:grid-cols-[2fr_3fr_1fr_auto] gap-4 items-center p-5">
               <div className="flex items-center gap-2">
                 <Shield className={`w-5 h-5 ${item.highlighted ? 'text-ocean' : 'text-muted-foreground'}`} />
@@ -170,8 +178,8 @@ const AssuranceComparisonTable = ({
                 }`}
                 asChild
               >
-                <a href={item.url} target="_blank" rel="sponsored noopener noreferrer" className="flex items-center gap-1.5">
-                  {item.ctaLabel || 'Demander un devis'}
+                <a href={item.url} target="_blank" rel={affiliateRel(item.isAffiliate)} className="flex items-center gap-1.5">
+                  {item.ctaLabel || 'Voir le site officiel'}
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </Button>
@@ -181,7 +189,9 @@ const AssuranceComparisonTable = ({
       </div>
 
       <p className="text-[10px] text-muted-foreground text-right mt-3">
-        Liens affiliés · Sans surcoût pour vous · Prix indicatifs susceptibles de varier
+        {hasAffiliateLink
+          ? 'Certains liens sont affiliés · sans surcoût pour vous'
+          : 'Liens directs vers les sites officiels · aucune commission actuellement'}
       </p>
     </div>
   );

@@ -1,7 +1,8 @@
-import { ExternalLink, CheckCircle, XCircle, Star, ShieldCheck, Zap } from 'lucide-react';
+import { ExternalLink, CheckCircle, XCircle, Star } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { trackAffiliateClick } from '@/lib/affiliateTracking';
+import { affiliateRel } from '@/lib/affiliateData';
+import { trackAffiliateClick, trackOutboundClick } from '@/lib/affiliateTracking';
 import { useLocation } from 'react-router-dom';
 
 export interface ComparisonItem {
@@ -20,6 +21,8 @@ export interface ComparisonItem {
   bestFor: string;
   preSaleText?: string;
   ctaLabel?: string;
+  /** Set to true only when this item's URL is a validated affiliate link. */
+  isAffiliate?: boolean;
 }
 
 interface ComparisonTableProps {
@@ -27,22 +30,28 @@ interface ComparisonTableProps {
   subtitle?: string;
   priceDisclaimer?: string;
   items: ComparisonItem[];
-  ctaType: 'hotel' | 'assurance' | 'esim' | 'activites' | 'equipement' | 'vol';
+  ctaType: 'hotel' | 'assurance' | 'esim' | 'activites' | 'equipement' | 'vol' | 'location';
   destination?: string;
   className?: string;
 }
 
 const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, destination, className = '' }: ComparisonTableProps) => {
   const location = useLocation();
+  const hasAffiliateLink = items.some((item) => item.isAffiliate === true);
 
-  const handleClick = (provider: string) => {
-    trackAffiliateClick({
-      ctaType,
-      provider,
-      destination,
-      page: location.pathname,
-      position: 'comparison-table',
-    });
+  const handleClick = (item: ComparisonItem) => {
+    if (item.isAffiliate) {
+      trackAffiliateClick({
+        ctaType,
+        provider: item.name,
+        destination,
+        page: location.pathname,
+        position: 'comparison-table',
+      });
+      return;
+    }
+
+    trackOutboundClick(item.url, location.pathname);
   };
 
   return (
@@ -62,14 +71,12 @@ const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, des
                   : 'border-border bg-background hover:shadow-soft p-4 sm:p-5'
               }`}
             >
-              {/* Recommended banner */}
               {isRecommended && (
                 <div className="flex items-center gap-1.5 mb-3 -mt-1">
                   <span className="text-xs font-bold text-ocean uppercase tracking-wider">🏆 Notre recommandation</span>
                 </div>
               )}
 
-              {/* Header: name, badge, rating, price */}
               <div className="flex items-start justify-between gap-2 mb-3">
                 <div className="flex flex-wrap items-center gap-2 min-w-0">
                   <h4 className={`font-bold text-foreground ${isRecommended ? 'text-lg sm:text-xl' : 'text-base sm:text-lg'}`}>{item.name}</h4>
@@ -90,30 +97,27 @@ const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, des
                 </div>
               </div>
 
-              {/* Social proof rating */}
-              <div className="flex items-center gap-1.5 mb-3">
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, idx) => (
-                    <Star
-                      key={idx}
-                      className={`w-3.5 h-3.5 ${
-                        idx < Math.floor(parseFloat(item.rating || '4') )
-                          ? 'fill-sunset text-sunset'
-                          : 'fill-muted text-muted'
-                      }`}
-                    />
-                  ))}
+              {item.rating && (
+                <div className="flex items-center gap-1.5 mb-3">
+                  <div className="flex items-center gap-0.5">
+                    {[...Array(5)].map((_, idx) => (
+                      <Star
+                        key={idx}
+                        className={`w-3.5 h-3.5 ${
+                          idx < Math.floor(parseFloat(item.rating || '0'))
+                            ? 'fill-sunset text-sunset'
+                            : 'fill-muted text-muted'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-xs font-medium text-foreground">{item.rating}</span>
+                  {item.ratingCount && (
+                    <span className="text-[10px] text-muted-foreground">({item.ratingCount})</span>
+                  )}
                 </div>
-                <span className="text-xs font-medium text-foreground">{item.rating}</span>
-                {item.ratingCount && (
-                  <span className="text-[10px] text-muted-foreground">({item.ratingCount})</span>
-                )}
-                {!item.ratingCount && (
-                  <span className="text-[10px] text-muted-foreground italic">Très bien noté par les voyageurs</span>
-                )}
-              </div>
+              )}
 
-              {/* Pros / Cons */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3">
                 <div>
                   <p className="text-[10px] sm:text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1.5">Avantages</p>
@@ -139,14 +143,12 @@ const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, des
                 </div>
               </div>
 
-              {/* Pre-sale text */}
               {item.preSaleText && (
                 <p className={`text-xs sm:text-sm font-medium mb-3 ${isRecommended ? 'text-ocean' : 'text-foreground/80'}`}>
                   {item.preSaleText}
                 </p>
               )}
 
-              {/* Footer: best for + CTA + urgency */}
               <div className="flex flex-col gap-3 pt-3 border-t border-border/50">
                 <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-foreground">Idéal pour :</span> {item.bestFor}
@@ -156,45 +158,43 @@ const ComparisonTable = ({ title, subtitle, priceDisclaimer, items, ctaType, des
                     size={isRecommended ? 'default' : 'sm'}
                     className={`w-full sm:w-auto text-xs sm:text-sm font-semibold ${
                       isRecommended
-                        ? 'bg-[#FF9900] hover:bg-[#FF9900]/90 text-white h-11 sm:h-10'
-                        : 'bg-[#FF9900] hover:bg-[#FF9900]/90 text-white h-9 sm:h-9'
+                        ? 'bg-ocean hover:bg-ocean/90 text-white h-11 sm:h-10'
+                        : 'bg-ocean/90 hover:bg-ocean text-white h-9 sm:h-9'
                     }`}
                     asChild
                   >
                     <a
                       href={item.url}
                       target="_blank"
-                      rel="sponsored noopener noreferrer"
-                      onClick={() => handleClick(item.name)}
+                      rel={affiliateRel(item.isAffiliate)}
+                      onClick={() => handleClick(item)}
                       className="flex items-center justify-center gap-1.5"
                     >
-                      {item.ctaLabel || `👉 Voir le prix et les avis sur Amazon`}
+                      {item.ctaLabel || 'Voir le site officiel'}
                       <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </a>
                   </Button>
                 </div>
-                {/* Urgency / availability */}
-                <div className="flex flex-wrap items-center gap-3 text-[10px] sm:text-[11px] text-muted-foreground">
-                  <span className="flex items-center gap-1">
-                    <ShieldCheck className="w-3 h-3 text-green-600" />
-                    ✔️ Disponible sur Amazon
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Zap className="w-3 h-3 text-sunset" />
-                    ⚡ Stock limité selon les périodes
-                  </span>
-                </div>
+                <p className="text-[10px] sm:text-[11px] text-muted-foreground">
+                  {item.isAffiliate
+                    ? 'Lien affilié · Commission possible sans surcoût pour vous'
+                    : 'Lien direct · aucune commission actuellement'}
+                </p>
               </div>
             </div>
           );
         })}
       </div>
 
-      <div className="flex items-center justify-between mt-3">
+      <div className="flex items-center justify-between mt-3 gap-4">
         {priceDisclaimer && (
           <p className="text-[10px] text-muted-foreground italic">{priceDisclaimer}</p>
         )}
-        <p className="text-[10px] text-muted-foreground ml-auto">Liens affiliés · Sans surcoût pour vous</p>
+        <p className="text-[10px] text-muted-foreground ml-auto">
+          {hasAffiliateLink
+            ? 'Certains liens sont affiliés · sans surcoût pour vous'
+            : 'Liens directs vers les sites officiels · aucune commission actuellement'}
+        </p>
       </div>
     </div>
   );

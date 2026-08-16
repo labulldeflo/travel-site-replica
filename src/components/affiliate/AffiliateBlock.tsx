@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import type { AffiliateBlockItem } from '@/lib/affiliateData';
+import { affiliateRel, type AffiliateBlockItem } from '@/lib/affiliateData';
 
 interface AffiliateBlockProps {
   title: string;
@@ -15,6 +15,8 @@ interface AffiliateBlockProps {
 }
 
 const AffiliateBlock = ({ title, subtitle, items, internalLink, variant = 'full' }: AffiliateBlockProps) => {
+  const hasAffiliateLink = items.some((item) => item.affiliate === true);
+
   if (variant === 'inline') {
     return (
       <div className="border border-border rounded-lg p-4 bg-muted/20 my-6">
@@ -22,7 +24,12 @@ const AffiliateBlock = ({ title, subtitle, items, internalLink, variant = 'full'
         <div className="flex flex-wrap gap-2">
           {items.map((item, i) => (
             <Button key={i} size="sm" variant="outline" asChild>
-              <a href={item.url} target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-1.5">
+              <a
+                href={item.url}
+                target="_blank"
+                rel={affiliateRel(item.affiliate)}
+                className="flex items-center gap-1.5"
+              >
                 {item.name}
                 <ExternalLink className="w-3 h-3" />
               </a>
@@ -47,7 +54,7 @@ const AffiliateBlock = ({ title, subtitle, items, internalLink, variant = 'full'
                 key={i}
                 href={item.url}
                 target="_blank"
-                rel="noopener noreferrer nofollow"
+                rel={affiliateRel(item.affiliate)}
                 className="flex items-center justify-between p-3 rounded-lg border border-border hover:border-ocean/40 hover:bg-muted/30 transition-all group"
               >
                 <div className="flex items-center gap-3">
@@ -68,7 +75,6 @@ const AffiliateBlock = ({ title, subtitle, items, internalLink, variant = 'full'
     );
   }
 
-  // variant === 'full'
   return (
     <Card className="my-8 overflow-hidden">
       <CardHeader className="bg-muted/30 border-b border-border">
@@ -90,7 +96,12 @@ const AffiliateBlock = ({ title, subtitle, items, internalLink, variant = 'full'
                 <p className="text-sm text-muted-foreground">{item.description}</p>
               </div>
               <Button size="sm" className="ml-4 bg-ocean hover:bg-ocean/90 shrink-0" asChild>
-                <a href={item.url} target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-1.5">
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel={affiliateRel(item.affiliate)}
+                  className="flex items-center gap-1.5"
+                >
                   Voir <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </Button>
@@ -105,7 +116,9 @@ const AffiliateBlock = ({ title, subtitle, items, internalLink, variant = 'full'
           </div>
         )}
         <p className="text-xs text-muted-foreground text-center mt-4">
-          Lien affilié • Commission sans surcoût pour vous
+          {hasAffiliateLink
+            ? 'Certains liens sont affiliés • Commission possible sans surcoût pour vous'
+            : 'Liens directs vers les sites officiels • aucune commission actuellement'}
         </p>
       </CardContent>
     </Card>

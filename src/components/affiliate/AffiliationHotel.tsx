@@ -1,6 +1,7 @@
 import { ExternalLink, BadgeCheck } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { affiliateRel } from '@/lib/affiliateData';
 
 interface AffiliationHotelProps {
   name: string;
@@ -9,6 +10,8 @@ interface AffiliationHotelProps {
   rating?: number;
   affiliateUrl: string;
   ctaLabel?: string;
+  /** Set to true only when the supplied URL is a validated affiliate link. */
+  isAffiliate?: boolean;
   /** Affiche le badge "Testé & Approuvé" (par défaut: true) */
   testedBadge?: boolean;
 }
@@ -19,7 +22,8 @@ const AffiliationHotel = ({
   review,
   rating,
   affiliateUrl,
-  ctaLabel = 'Vérifier les disponibilités sur Booking',
+  ctaLabel = 'Vérifier les disponibilités',
+  isAffiliate = false,
   testedBadge = true,
 }: AffiliationHotelProps) => {
   return (
@@ -56,7 +60,7 @@ const AffiliationHotel = ({
             <a
               href={affiliateUrl}
               target="_blank"
-              rel="sponsored noopener noreferrer"
+              rel={affiliateRel(isAffiliate)}
               className="flex items-center justify-center gap-2"
             >
               {ctaLabel}
@@ -64,7 +68,9 @@ const AffiliationHotel = ({
             </a>
           </Button>
           <p className="text-xs text-muted-foreground mt-2 text-center sm:text-left">
-            Lien affilié · Sans surcoût pour vous
+            {isAffiliate
+              ? 'Lien affilié · Commission possible sans surcoût pour vous'
+              : 'Lien direct vers le site de réservation · aucune commission actuellement'}
           </p>
         </div>
       </div>

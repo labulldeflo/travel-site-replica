@@ -1,4 +1,4 @@
-import { AFFILIATE_BLOCKS } from '@/lib/affiliateData';
+import { AFFILIATE_BLOCKS, AFFILIATE_MODE } from '@/lib/affiliateData';
 import AffiliateBlock from './AffiliateBlock';
 
 interface OrganiserVoyageBlockProps {
@@ -30,7 +30,7 @@ const OrganiserVoyageBlock = ({
         🧳 Organiser votre voyage{titleSuffix}
       </h2>
       <p className="text-muted-foreground mb-6 text-sm">
-        Nos outils et partenaires recommandés pour préparer votre séjour.
+        Nos outils et plateformes recommandés pour préparer votre séjour.
       </p>
       <div className="grid gap-4 md:grid-cols-2">
         {showVols && <AffiliateBlock {...AFFILIATE_BLOCKS.vols} variant={variant} />}
@@ -41,7 +41,9 @@ const OrganiserVoyageBlock = ({
         {showEquipement && <AffiliateBlock {...AFFILIATE_BLOCKS.equipement} variant={variant} />}
       </div>
       <p className="text-xs text-muted-foreground text-center mt-4">
-        Certains liens sont des liens affiliés • Nous touchons une petite commission sans surcoût pour vous
+        {AFFILIATE_MODE
+          ? 'Certains liens sont affiliés • commission possible sans surcoût pour vous'
+          : 'Les liens sont actuellement directs • aucune commission n’est perçue'}
       </p>
     </div>
   );

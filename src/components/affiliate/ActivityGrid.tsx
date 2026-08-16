@@ -1,6 +1,7 @@
 import { Clock, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { affiliateRel } from '@/lib/affiliateData';
 
 export interface ActivityCardItem {
   title: string;
@@ -10,6 +11,8 @@ export interface ActivityCardItem {
   badge?: string;
   url: string;
   ctaLabel?: string;
+  /** Set to true only when the URL is a validated affiliate link. */
+  isAffiliate?: boolean;
 }
 
 interface ActivityGridProps {
@@ -25,6 +28,8 @@ const ActivityGrid = ({
   items,
   className = '',
 }: ActivityGridProps) => {
+  const hasAffiliateLink = items.some((item) => item.isAffiliate === true);
+
   return (
     <section className={`not-prose my-8 sm:my-10 ${className}`}>
       <h3 className="text-xl sm:text-2xl font-elegant font-bold text-foreground mb-1">{title}</h3>
@@ -36,7 +41,6 @@ const ActivityGrid = ({
             key={i}
             className="group flex flex-col rounded-xl border border-border bg-card p-5 hover:shadow-md hover:border-ocean/30 transition-all"
           >
-            {/* Icon + badge */}
             <div className="flex items-start justify-between mb-4">
               <div className="w-11 h-11 rounded-lg bg-ocean/10 flex items-center justify-center text-ocean shrink-0">
                 {item.icon}
@@ -48,12 +52,10 @@ const ActivityGrid = ({
               )}
             </div>
 
-            {/* Title */}
             <h4 className="font-semibold text-foreground mb-2 group-hover:text-ocean transition-colors">
               {item.title}
             </h4>
 
-            {/* Meta: duration + price */}
             <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4 mt-auto">
               <span className="flex items-center gap-1">
                 <Clock className="w-3.5 h-3.5" />
@@ -64,7 +66,6 @@ const ActivityGrid = ({
               </span>
             </div>
 
-            {/* CTA */}
             <Button
               size="sm"
               className="w-full bg-ocean hover:bg-ocean/90 font-semibold"
@@ -73,10 +74,10 @@ const ActivityGrid = ({
               <a
                 href={item.url}
                 target="_blank"
-                rel="sponsored noopener noreferrer"
+                rel={affiliateRel(item.isAffiliate)}
                 className="flex items-center justify-center gap-1.5"
               >
-                {item.ctaLabel || 'Réserver mon créneau'}
+                {item.ctaLabel || 'Voir les disponibilités'}
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </Button>
@@ -85,7 +86,9 @@ const ActivityGrid = ({
       </div>
 
       <p className="text-[10px] text-muted-foreground text-right mt-3">
-        Liens affiliés · Sans surcoût pour vous
+        {hasAffiliateLink
+          ? 'Certains liens sont affiliés · sans surcoût pour vous'
+          : 'Liens directs · aucune commission actuellement'}
       </p>
     </section>
   );
