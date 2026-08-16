@@ -14,10 +14,30 @@ export const AFFILIATE_STATUS = {
   viator: false,
   airalo: false,
   holafly: false,
+  saily: false,
+  nomad: false,
+  ubigi: false,
   chapka: false,
   acs: false,
   heymondo: false,
+  safetyWing: false,
+  worldNomads: false,
+  wise: false,
+  revolut: false,
+  n26: false,
+  bunq: false,
+  boursoBank: false,
+  nordvpn: false,
+  surfshark: false,
+  expressvpn: false,
+  protonvpn: false,
+  cyberghost: false,
   discoverCars: false,
+  rentalcars: false,
+  sunnyCars: false,
+  sixt: false,
+  enterprise: false,
+  hertz: false,
   amazon: false,
 } as const;
 
@@ -72,6 +92,69 @@ const LEGACY_AFFILIATE_PARAMS = [
   { host: 'acs-ami.com', param: 'part', active: AFFILIATE_STATUS.acs },
 ] as const;
 
+const PARTNER_HOST_STATUS = [
+  { host: 'skyscanner.fr', active: AFFILIATE_STATUS.skyscanner },
+  { host: 'kiwi.com', active: AFFILIATE_STATUS.kiwi },
+  { host: 'booking.com', active: AFFILIATE_STATUS.booking },
+  { host: 'agoda.com', active: AFFILIATE_STATUS.agoda },
+  { host: 'hostelworld.com', active: AFFILIATE_STATUS.hostelworld },
+  { host: 'getyourguide.fr', active: AFFILIATE_STATUS.getYourGuide },
+  { host: 'getyourguide.com', active: AFFILIATE_STATUS.getYourGuide },
+  { host: 'viator.com', active: AFFILIATE_STATUS.viator },
+  { host: 'airalo.com', active: AFFILIATE_STATUS.airalo },
+  { host: 'holafly.com', active: AFFILIATE_STATUS.holafly },
+  { host: 'saily.com', active: AFFILIATE_STATUS.saily },
+  { host: 'getnomad.app', active: AFFILIATE_STATUS.nomad },
+  { host: 'nomad.com', active: AFFILIATE_STATUS.nomad },
+  { host: 'cellulardata.ubigi.com', active: AFFILIATE_STATUS.ubigi },
+  { host: 'ubigi.com', active: AFFILIATE_STATUS.ubigi },
+  { host: 'chapkadirecte.com', active: AFFILIATE_STATUS.chapka },
+  { host: 'chapkadirect.fr', active: AFFILIATE_STATUS.chapka },
+  { host: 'acs-ami.com', active: AFFILIATE_STATUS.acs },
+  { host: 'heymondo.fr', active: AFFILIATE_STATUS.heymondo },
+  { host: 'safetywing.com', active: AFFILIATE_STATUS.safetyWing },
+  { host: 'worldnomads.com', active: AFFILIATE_STATUS.worldNomads },
+  { host: 'wise.com', active: AFFILIATE_STATUS.wise },
+  { host: 'revolut.com', active: AFFILIATE_STATUS.revolut },
+  { host: 'n26.com', active: AFFILIATE_STATUS.n26 },
+  { host: 'bunq.com', active: AFFILIATE_STATUS.bunq },
+  { host: 'boursobank.com', active: AFFILIATE_STATUS.boursoBank },
+  { host: 'nordvpn.com', active: AFFILIATE_STATUS.nordvpn },
+  { host: 'surfshark.com', active: AFFILIATE_STATUS.surfshark },
+  { host: 'expressvpn.com', active: AFFILIATE_STATUS.expressvpn },
+  { host: 'protonvpn.com', active: AFFILIATE_STATUS.protonvpn },
+  { host: 'cyberghostvpn.com', active: AFFILIATE_STATUS.cyberghost },
+  { host: 'discovercars.com', active: AFFILIATE_STATUS.discoverCars },
+  { host: 'rentalcars.com', active: AFFILIATE_STATUS.rentalcars },
+  { host: 'sunnycars.com', active: AFFILIATE_STATUS.sunnyCars },
+  { host: 'sixt.com', active: AFFILIATE_STATUS.sixt },
+  { host: 'sixt.fr', active: AFFILIATE_STATUS.sixt },
+  { host: 'enterprise.com', active: AFFILIATE_STATUS.enterprise },
+  { host: 'hertz.com', active: AFFILIATE_STATUS.hertz },
+  { host: 'amazon.fr', active: AFFILIATE_STATUS.amazon },
+] as const;
+
+const hostMatches = (hostname: string, host: string) =>
+  hostname === host || hostname.endsWith(`.${host}`);
+
+/**
+ * Returns the affiliate state for a known partner URL.
+ * `null` means the URL is not one of the managed partner hosts.
+ */
+export const getPartnerAffiliateState = (href: string): boolean | null => {
+  try {
+    const base = typeof window !== 'undefined'
+      ? window.location.origin
+      : 'https://www.cap-sur-le-monde.com';
+    const url = new URL(href, base);
+    const hostname = url.hostname.toLowerCase();
+    const match = PARTNER_HOST_STATUS.find(({ host }) => hostMatches(hostname, host));
+    return match ? match.active : null;
+  } catch {
+    return null;
+  }
+};
+
 /**
  * Removes legacy affiliate IDs from known partners while their program is inactive.
  * This protects old hard-coded links that may still exist in historical pages.
@@ -88,8 +171,7 @@ export const sanitizeInactiveAffiliateUrl = (href: string): string => {
     const hostname = url.hostname.toLowerCase();
 
     LEGACY_AFFILIATE_PARAMS.forEach(({ host, param, active }) => {
-      const matchesHost = hostname === host || hostname.endsWith(`.${host}`);
-      if (matchesHost && !active) {
+      if (hostMatches(hostname, host) && !active) {
         url.searchParams.delete(param);
       }
     });
