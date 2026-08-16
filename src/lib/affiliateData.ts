@@ -65,6 +65,41 @@ export const AFFILIATE_LINKS = {
 export const affiliateRel = (isAffiliate = false) =>
   isAffiliate ? 'sponsored noopener noreferrer' : 'noopener noreferrer';
 
+const LEGACY_AFFILIATE_PARAMS = [
+  { host: 'booking.com', param: 'aid', active: AFFILIATE_STATUS.booking },
+  { host: 'discovercars.com', param: 'a_aid', active: AFFILIATE_STATUS.discoverCars },
+  { host: 'amazon.fr', param: 'tag', active: AFFILIATE_STATUS.amazon },
+  { host: 'acs-ami.com', param: 'part', active: AFFILIATE_STATUS.acs },
+] as const;
+
+/**
+ * Removes legacy affiliate IDs from known partners while their program is inactive.
+ * This protects old hard-coded links that may still exist in historical pages.
+ */
+export const sanitizeInactiveAffiliateUrl = (href: string): string => {
+  try {
+    const base = typeof window !== 'undefined'
+      ? window.location.origin
+      : 'https://www.cap-sur-le-monde.com';
+    const url = new URL(href, base);
+
+    if (url.protocol !== 'http:' && url.protocol !== 'https:') return href;
+
+    const hostname = url.hostname.toLowerCase();
+
+    LEGACY_AFFILIATE_PARAMS.forEach(({ host, param, active }) => {
+      const matchesHost = hostname === host || hostname.endsWith(`.${host}`);
+      if (matchesHost && !active) {
+        url.searchParams.delete(param);
+      }
+    });
+
+    return url.toString();
+  } catch {
+    return href;
+  }
+};
+
 export interface AffiliateBlockItem {
   name: string;
   description: string;
