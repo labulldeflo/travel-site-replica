@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 const SITE_NAME = "Cap sur le Monde";
-const SITE_URL = "https://cap-sur-le-monde.com";
+const SITE_URL = "https://www.cap-sur-le-monde.com";
 
 interface FAQItem {
   question: string;
