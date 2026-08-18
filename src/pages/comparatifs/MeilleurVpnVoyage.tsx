@@ -236,9 +236,9 @@ const MeilleurVpnVoyage = () => {
               </div>
             </div>
             <a
-              href="https://nordvpn.com/fr/"
+              href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=154945&url_id=1172"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="sponsored nofollow noopener noreferrer"
               className="inline-block px-6 py-3 bg-ocean text-white rounded font-bold hover:bg-ocean/90"
             >
               Voir NordVPN →
