@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import LoadingPage from "@/components/LoadingPage"; // Créer un composant simple de chargement
 
@@ -873,6 +873,8 @@ const AppRoutes = () => {
       <Route path="/blog/visa-vietnam-formalites" element={<VisaVietnamFormalites />} />
       <Route path="/blog/applications-indispensables-voyage" element={<ApplicationsIndispensablesVoyage />} />
       <Route path="/comparatifs/meilleure-assurance-voyage" element={<MeilleureAssuranceVoyage />} />
+      {/* Redirection permanente de l'ancienne URL */}
+      <Route path="/meilleure-assurance-voyage" element={<Navigate to="/comparatifs/meilleure-assurance-voyage" replace />} />
       <Route path="/comparatifs/meilleure-esim-internationale" element={<MeilleureEsimInternationale />} />
       <Route path="/comparatifs/meilleure-carte-bancaire-voyage" element={<MeilleureCarteBancaireVoyage />} />
       <Route path="/comparatifs/meilleur-vpn-voyage" element={<MeilleurVpnVoyage />} />

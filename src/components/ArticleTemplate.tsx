@@ -329,7 +329,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <Button asChild variant="outline" className="h-auto py-4">
-                      <Link to="/meilleure-assurance-voyage">
+                      <Link to="/comparatifs/meilleure-assurance-voyage">
                         <ShieldCheck className="h-5 w-5 mr-2" />
                         Assurance voyage
                       </Link>
@@ -456,7 +456,7 @@ const ArticleTemplate: React.FC<ArticleTemplateProps> = ({
                   <AffiliateWidget
                     title="Assurance voyage"
                     description="Comparez les meilleures assurances avant votre départ pour voyager avec plus de sécurité."
-                    link="/meilleure-assurance-voyage"
+                    link="/comparatifs/meilleure-assurance-voyage"
                     badge="Recommandé"
                     variant="card"
                   />
