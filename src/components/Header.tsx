@@ -99,7 +99,7 @@ const Header = () => {
                       <Link to="/budget-voyage" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">💰 Budget par pays</Link>
                       <Link to="/guides/planification" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">🗺️ Itinéraires</Link>
                       <Link to="/guides/vol" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">✈️ Vols & Transports</Link>
-                      <Link to="/guides/securite" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">🛡️ Assurance voyage</Link>
+                      <Link to="/comparatifs/meilleure-assurance-voyage" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm">🛡️ Assurance voyage</Link>
                       <Link to="/guides" className="block px-3 py-2 hover:bg-sand/20 rounded-md text-sm font-medium text-ocean">Tous les guides →</Link>
                     </div>
                   </NavigationMenuContent>
@@ -205,7 +205,7 @@ const Header = () => {
                   <Link to="/preparer-voyage" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Checklist complète</Link>
                   <Link to="/budget-voyage" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Budget par pays</Link>
                   <Link to="/guides/planification" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Itinéraires</Link>
-                  <Link to="/guides/securite" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Assurance voyage</Link>
+                  <Link to="/comparatifs/meilleure-assurance-voyage" className="block py-1.5 text-sm hover:text-ocean" onClick={() => setIsMenuOpen(false)}>Assurance voyage</Link>
                   <Link to="/guides" className="block py-1.5 text-sm text-ocean font-medium" onClick={() => setIsMenuOpen(false)}>Tous les guides →</Link>
                 </div>
               )}
