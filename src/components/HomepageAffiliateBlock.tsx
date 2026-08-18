@@ -24,7 +24,7 @@ const services = [
     icon: Shield,
     title: 'Assurance',
     description: 'Comparatif assurances voyage',
-    link: '/guides/securite',
+    link: '/comparatifs/meilleure-assurance-voyage',
   },
   {
     icon: Wifi,
