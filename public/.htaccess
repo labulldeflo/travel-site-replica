@@ -15,6 +15,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
 RewriteRule ^ %1 [R=301,L]
 
+# Legacy URL -> new comparatif URL
+RewriteRule ^meilleure-assurance-voyage/?$ /comparatifs/meilleure-assurance-voyage [R=301,L]
+
 # Redirect /index.htm to root
 RewriteRule ^index\.htm$ / [R=301,L]
 
